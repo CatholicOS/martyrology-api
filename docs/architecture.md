@@ -91,21 +91,14 @@ with attributes: book, year, nature (typical edition / revised typical edition /
 approved vernacular edition / translation), scope (universal or territory), locale,
 promulgation decree and date, predecessor/successor.
 
-**Naming the registry** is an open committee question, because "Common Roman
-Martyrology Editio Typica Data Repository" collides acronymically with the existing
-[CRMETDR](https://github.com/CatholicOS/crmetdr) (Roman Missal). Options on the table:
-
-1. **A unified registry for the editions of all liturgical books** — *Common
-   Liturgical Books Data Repository* (**CLBDR**): one registry of books
-   (missale-romanum, martyrologium-romanum, the lectionary, the Liturgy of the Hours…)
-   and their editions and approved translations. This dissolves the collision
-   permanently, avoids one repository per book, and could absorb the CRMETDR, which
-   currently holds no data yet. *Recommended.*
-2. A per-book sibling following the Latin title — *Common Martyrologium Romanum
-   Editio Typica Data Repository* (**CMRETDR**) — distinct from CRMETDR but one
-   letter-transposition away from it, which invites confusion.
-3. A descriptive slug outside the acronym pattern (e.g. `martyrologium-editiones`)
-   while keeping a "Common … Data Repository" long name.
+**The registry exists**: the [Common Liturgical Books Data Repository
+(CLBDR)](https://github.com/CatholicOS/clbdr) — a unified registry of all the
+liturgical books of the Roman Rite and their editions, which absorbed the former
+CRMETDR (whose Missal edition keys are preserved unchanged) and dissolved the
+per-book acronym collisions. The martyrology edition line above, with natures,
+promulgation data, succession and the vernacular BCP47 pattern
+(`martyrologium_romanum_2004_it_IT`), lives there; this API resolves editions against
+it.
 
 ## API surface (sketch)
 
