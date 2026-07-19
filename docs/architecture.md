@@ -41,6 +41,72 @@ one directory per edition). Deployment options, in order of preference:
 Option 1 is the recommended default: no submodule friction for public contributors,
 no risk of accidentally vendoring private content into the public tree.
 
+## Edition resolution: serving the right texts per date and territory
+
+A request for the martyrology of a *historical* date should serve the texts that were
+actually in force on that date, in the place that matters to the requester: January 1st
+1750 reads from the 1749 Benedict XIV edition; January 1st 1920 reads from the
+1913/1914 typical edition (in English, from its contemporary translation); January 1st
+2025 in Italy reads from the CEI 2004 edition.
+
+The resolution rule is simple and mechanical once editions are first-class data:
+
+1. every edition carries a **promulgation date** (from its decree) and an implicit
+   **in-force window** — from promulgation until superseded by its successor for the
+   same scope;
+2. a request context is **(date, territory, locale)**; territory defaults to the
+   universal Latin Church, and may be a nation (ISO 3166-1) or, in future, a
+   circumscription or institute (CECDR / CICLSALDR keys) with a proprium;
+3. the API picks the newest edition in scope whose promulgation precedes the requested
+   date; explicit `?edition=` always overrides. Requests before the first typical
+   edition (1584, Gregory XIII) return the editions list with an explanatory error.
+
+Because every edition's texts are keyed by the same CRMEDR canonical IDs, resolution
+changes *which texts and which day-structure* are served, never the identity model:
+entries present in one edition and absent in another (already modeled in the registry
+notes) simply appear or not, exactly as the printed books differ.
+
+One historical liturgical nuance, recorded for later: before the 1970 reforms the
+martyrology was read at Prime *pridie* — the following day's entries were announced.
+Whether a historical-date endpoint should optionally reflect that reading practice
+(as opposed to the day's own entries) is left as a presentation-layer question.
+
+### The editions registry
+
+Edition identity must live in its own public registry, not in this API. The natural
+scheme extends the keys the CLEDR already uses for the Missal
+(`missale_romanum_1970`, `missale_romanum_2002`, …):
+
+```
+martyrologium_romanum_1584    Gregory XIII, first typical edition
+martyrologium_romanum_1749    Benedict XIV
+martyrologium_romanum_1914    Pius X era typical edition
+martyrologium_romanum_2001    editio typica (prima)
+martyrologium_romanum_2004    editio typica altera  ← CRMEDR anchor
+martyrologium_romanum_cei_2004        approved vernacular edition (scope: IT)
+martyrologium_romanum_en_1916_unofficial   translation, not an edition (attribute-flagged)
+```
+
+with attributes: book, year, nature (typical edition / revised typical edition /
+approved vernacular edition / translation), scope (universal or territory), locale,
+promulgation decree and date, predecessor/successor.
+
+**Naming the registry** is an open committee question, because "Common Roman
+Martyrology Editio Typica Data Repository" collides acronymically with the existing
+[CRMETDR](https://github.com/CatholicOS/crmetdr) (Roman Missal). Options on the table:
+
+1. **A unified registry for the editions of all liturgical books** — *Common
+   Liturgical Books Data Repository* (**CLBDR**): one registry of books
+   (missale-romanum, martyrologium-romanum, the lectionary, the Liturgy of the Hours…)
+   and their editions and approved translations. This dissolves the collision
+   permanently, avoids one repository per book, and could absorb the CRMETDR, which
+   currently holds no data yet. *Recommended.*
+2. A per-book sibling following the Latin title — *Common Martyrologium Romanum
+   Editio Typica Data Repository* (**CMRETDR**) — distinct from CRMETDR but one
+   letter-transposition away from it, which invites confusion.
+3. A descriptive slug outside the acronym pattern (e.g. `martyrologium-editiones`)
+   while keeping a "Common … Data Repository" long name.
+
 ## API surface (sketch)
 
 ```
@@ -77,6 +143,12 @@ Design notes:
    consistency with the LitCal ecosystem.
 2. Whether the public-domain 1914/1749 texts get digitized into this repository
    directly or into a public sibling data repository (`martyrology-texts-historical`).
+   Feasibility notes from the source PDFs: the 1749 Latin scan (539 pp.) carries a
+   clean OCR text layer with day headers intact; the 1914 English scan (488 pp.) has a
+   text layer with spaces stripped (words run together), so it needs re-OCR or word
+   re-segmentation. Digitized historical texts will need alignment to CRMEDR IDs where
+   an eulogy continues across editions, and edition-local entries (saints later removed,
+   pre-reform structure) will pose identity questions for the committee.
 3. Caching/versioning: editions are immutable once published, so aggressive caching
    with edition-versioned URLs is natural.
 4. Whether the API also serves the CRMEDR registry itself (making it the runtime face
