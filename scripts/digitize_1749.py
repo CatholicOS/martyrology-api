@@ -131,6 +131,16 @@ def main():
                 break
             day['elogia'].append(p)
         split_conclusio(day)
+        # merge continuation fragments: a paragraph following one that does
+        # not end with sentence-final punctuation is the same elogium, split
+        # by the OCR (e.g. across a quotation or a page break)
+        joined = []
+        for p in day['elogia']:
+            if joined and not joined[-1].rstrip().endswith(('.', '!', '?')):
+                joined[-1] = joined[-1].rstrip() + ' ' + p
+            else:
+                joined.append(p)
+        day['elogia'] = joined
         days[(mon, d)] = day
 
     out_dir = repo_root / 'data' / 'editions' / 'martyrologium_romanum_1749'
