@@ -65,10 +65,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0102-fratres-tomis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1229-martinianus": {
    "method": "cross-day",
    "score": 3.14
@@ -105,10 +101,6 @@
    "method": "same-day",
    "score": 1.76
   },
-  "mr:0103-martyres-cilicia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0103-theopemptus-et-theona": {
    "method": "same-day",
    "score": 2.93
@@ -122,10 +114,6 @@
    "score": null
   },
   "mr:0104-titi": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0104-martyres-romae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -213,10 +201,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0107-martyres-incivitate": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0107-julianus": {
    "method": "coined-deprecated",
    "score": null
@@ -284,10 +268,6 @@
   "mr:0903-vitalianus": {
    "method": "cross-day",
    "score": 2.18
-  },
-  "mr:0109-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0109-marciana": {
    "method": "coined-deprecated",
@@ -384,10 +364,6 @@
   "mr:0112-arcadius": {
    "method": "same-day",
    "score": 1.65
-  },
-  "mr:0112-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0112-zoticus": {
    "method": "coined-deprecated",
@@ -565,17 +541,9 @@
    "method": "same-day",
    "score": 1.59
   },
-  "mr:0117-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0118-prisca": {
    "method": "same-day",
    "score": 2.02
-  },
-  "mr:0118-martyres-ponto": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0118-athenogenes": {
    "method": "coined-deprecated",
@@ -601,10 +569,6 @@
    "method": "same-day",
    "score": 1.76
   },
-  "mr:0119-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0119-canutus": {
    "method": "coined-deprecated",
    "score": null
@@ -612,10 +576,6 @@
   "mr:0119-germanicus": {
    "method": "same-day",
    "score": 1.81
-  },
-  "mr:0119-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0119-pontianus": {
    "method": "same-day",
@@ -673,10 +633,6 @@
    "method": "same-day",
    "score": 1.83
   },
-  "mr:0122-martyres-ebreduni": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0122-gaudentius": {
    "method": "same-day",
    "score": 2.43
@@ -733,14 +689,6 @@
    "method": "same-day",
    "score": 2.26
   },
-  "mr:0124-martyres-neocaesareae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0124-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0124-exsuperantius": {
    "method": "same-day",
    "score": 2.52
@@ -768,10 +716,6 @@
   "mr:0125-agileus": {
    "method": "same-day",
    "score": 0.76
-  },
-  "mr:0125-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0125-bretannion": {
    "method": "same-day",
@@ -813,10 +757,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0127-martyres-ibidem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0127-vitalianus": {
    "method": "same-day",
    "score": 2.06
@@ -845,10 +785,6 @@
    "method": "cross-day",
    "score": 1.96
   },
-  "mr:0128-martyres-thebaide": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0128-iulianus": {
    "method": "same-day",
    "score": 1.96
@@ -864,10 +800,6 @@
   "mr:0129-valerius": {
    "method": "same-day",
    "score": 2.33
-  },
-  "mr:0129-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0129-constantius": {
    "method": "same-day",
@@ -949,10 +881,6 @@
    "method": "same-day",
    "score": 1.96
   },
-  "mr:0131-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0131-tryphaena": {
    "method": "coined-deprecated",
    "score": null
@@ -1017,10 +945,6 @@
    "method": "same-day",
    "score": 1.37
   },
-  "mr:0202-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0202-flosculus": {
    "method": "same-day",
    "score": 3.23
@@ -1049,10 +973,6 @@
    "method": "same-day",
    "score": 1.72
   },
-  "mr:0203-martyres-itemin": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0203-teridius-et-remedius": {
    "method": "same-day",
    "score": 1.9
@@ -1076,10 +996,6 @@
   "mr:0204-philea": {
    "method": "same-day",
    "score": 2.24
-  },
-  "mr:0204-martyres-foro": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0204-ioannes-de-brito": {
    "method": "same-day",
@@ -1201,14 +1117,6 @@
    "method": "same-day",
    "score": 1.45
   },
-  "mr:0208-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0208-martyres-armenia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0208-martyres-monachi-dii-constantinopolitani": {
    "method": "same-day",
    "score": 2.68
@@ -1257,10 +1165,6 @@
    "method": "same-day",
    "score": 1.84
   },
-  "mr:0209-martyres-solis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0209-nicephorus": {
    "method": "coined-deprecated",
    "score": null
@@ -1305,14 +1209,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0211-martyres-hadrianopoli": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0211-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0211-plurimi-martyres-numidia": {
    "method": "same-day",
    "score": 1.77
@@ -1352,10 +1248,6 @@
   "mr:0212-martyres-carthagine": {
    "method": "same-day",
    "score": 1.74
-  },
-  "mr:0212-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0212-eulalia": {
    "method": "coined-deprecated",
@@ -1417,14 +1309,6 @@
    "method": "same-day",
    "score": 2.14
   },
-  "mr:0214-martyres-interamnae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0214-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0214-dionysius-et-ammonius": {
    "method": "coined-deprecated",
    "score": null
@@ -1446,10 +1330,6 @@
    "score": 2.93
   },
   "mr:0215-crato": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0215-martyres-interamnae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -1493,10 +1373,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0217-martyres-concordiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0217-theodulus": {
    "method": "coined-deprecated",
    "score": null
@@ -1513,14 +1389,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0218-martyres-ostia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0218-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0218-flavianus": {
    "method": "coined-deprecated",
    "score": null
@@ -1530,10 +1398,6 @@
    "score": 2.2
   },
   "mr:0219-gabinus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0219-martyres-africa": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -1565,10 +1429,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0220-martyres-cypro": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0220-leo": {
    "method": "same-day",
    "score": 1.11
@@ -1582,10 +1442,6 @@
    "score": null
   },
   "mr:0221-novem-martyres-sicilia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0221-martyres-adrumeti": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -1709,14 +1565,6 @@
    "method": "same-day",
    "score": 0.87
   },
-  "mr:0225-martyres-aegypto": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0225-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0218-tarasius": {
    "method": "cross-day",
    "score": 2.2
@@ -1761,10 +1609,6 @@
    "method": "same-day",
    "score": 1.5
   },
-  "mr:0227-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0227-iulianus-et-eunus": {
    "method": "same-day",
    "score": 2.44
@@ -1784,10 +1628,6 @@
   "mr:0227-baldomerus": {
    "method": "same-day",
    "score": 2.88
-  },
-  "mr:0228-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0228-caerealis-pupulus-cajiet": {
    "method": "coined-deprecated",
@@ -1810,14 +1650,6 @@
    "score": null
   },
   "mr:0301-sexaginta-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0301-martyres-itemnatalis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0301-martyres-massiliae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -1853,14 +1685,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0302-martyres-caesareae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0302-martyres-portu": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0302-ceadda": {
    "method": "same-day",
    "score": 1.64
@@ -1868,10 +1692,6 @@
   "mr:0303-marinus": {
    "method": "same-day",
    "score": 1.67
-  },
-  "mr:0303-martyres-calagurri": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0514-felix-et-fortunatus": {
    "method": "cross-day",
@@ -1989,10 +1809,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0308-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0308-apollonius-et-philemon": {
    "method": "same-day",
    "score": 2.07
@@ -2041,10 +1857,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0310-martyres-corinthi": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0310-victor": {
    "method": "same-day",
    "score": 3.24
@@ -2069,10 +1881,6 @@
    "method": "same-day",
    "score": 2.35
   },
-  "mr:0311-martyres-carthagine": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0311-candidus-piperio": {
    "method": "coined-deprecated",
    "score": null
@@ -2082,10 +1890,6 @@
    "score": 2.43
   },
   "mr:0311-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0311-martyres-itemsanctorum": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -2140,10 +1944,6 @@
   "mr:0313-macedonius": {
    "method": "same-day",
    "score": 3.07
-  },
-  "mr:0313-martyres-nicaeae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0313-sabinus": {
    "method": "same-day",
@@ -2297,10 +2097,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0318-martyres-ibidem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0318-eduardus": {
    "method": "same-day",
    "score": 2.26
@@ -2316,10 +2112,6 @@
   "mr:0319-ioseph": {
    "method": "same-day",
    "score": 1.88
-  },
-  "mr:0319-martyres-surrenti": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0319-pancharius-romanus": {
    "method": "coined-deprecated",
@@ -2376,10 +2168,6 @@
   "mr:0321-alexandrini": {
    "method": "same-day",
    "score": 2.93
-  },
-  "mr:0321-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0321-serapion": {
    "method": "same-day",
@@ -2465,10 +2253,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0324-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0324-timolaus-et-socii": {
    "method": "same-day",
    "score": 2.19
@@ -2533,10 +2317,6 @@
    "method": "same-day",
    "score": 1.88
   },
-  "mr:0326-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0407-theodorus": {
    "method": "cross-day",
    "score": 3.11
@@ -2573,10 +2353,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0327-martyres-perside": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0327-rupertus": {
    "method": "same-day",
    "score": 1.66
@@ -2593,10 +2369,6 @@
    "method": "same-day",
    "score": 2.98
   },
-  "mr:0328-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0328-gunthramnus": {
    "method": "same-day",
    "score": 2.14
@@ -2604,10 +2376,6 @@
   "mr:0328-cyrillus": {
    "method": "cross-day",
    "score": 2.54
-  },
-  "mr:0329-monachi-perside": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0329-armogastus-et-socii": {
    "method": "same-day",
@@ -2665,10 +2433,6 @@
    "method": "same-day",
    "score": 1.56
   },
-  "mr:0401-martyres-armenia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0818-macarius": {
    "method": "cross-day",
    "score": 2.42
@@ -2724,10 +2488,6 @@
   "mr:0403-ulpianus": {
    "method": "same-day",
    "score": 2.52
-  },
-  "mr:0403-virgines-thessalonicae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0403-nicetas": {
    "method": "same-day",
@@ -2830,10 +2590,6 @@
    "score": 3.1
   },
   "mr:0408-aedesius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0408-martyres-africa": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -3025,10 +2781,6 @@
    "method": "same-day",
    "score": 1.72
   },
-  "mr:0415-martyres-perside": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1208-eutychianus": {
    "method": "cross-day",
    "score": 2.3
@@ -3117,10 +2869,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0418-martyres-messanae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0418-perfectus": {
    "method": "same-day",
    "score": 2.52
@@ -3141,17 +2889,9 @@
    "method": "same-day",
    "score": 1.59
   },
-  "mr:0419-martyres-melitinae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1028-vincentius-et-socii": {
    "method": "cross-day",
    "score": 2.21
-  },
-  "mr:0419-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0419-paphnutius": {
    "method": "coined-deprecated",
@@ -3172,10 +2912,6 @@
   "mr:0420-sulpicius-et-servitianus": {
    "method": "same-day",
    "score": 1.86
-  },
-  "mr:0420-martyres-nicomediae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0420-marcellinus": {
    "method": "same-day",
@@ -3200,10 +2936,6 @@
   "mr:0417-simeon": {
    "method": "cross-day",
    "score": 2.41
-  },
-  "mr:0421-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0421-apollonius": {
    "method": "same-day",
@@ -3281,10 +3013,6 @@
    "method": "same-day",
    "score": 2.33
   },
-  "mr:0424-martyres-nicomediae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0424-mellitus": {
    "method": "same-day",
    "score": 1.52
@@ -3320,10 +3048,6 @@
   "mr:0425-stephanus": {
    "method": "same-day",
    "score": 2.34
-  },
-  "mr:0425-martyres-syracusis": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0425-erminus": {
    "method": "same-day",
@@ -3404,10 +3128,6 @@
   "mr:0428-maximus-et-socii": {
    "method": "same-day",
    "score": 1.73
-  },
-  "mr:0428-martyres-prusae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0428-eusebius-et-socii": {
    "method": "same-day",
@@ -3529,10 +3249,6 @@
    "method": "same-day",
    "score": 1.8
   },
-  "mr:0501-martyres-oscae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0501-sigismundus": {
    "method": "same-day",
    "score": 1.62
@@ -3561,10 +3277,6 @@
    "method": "same-day",
    "score": 1.73
   },
-  "mr:0502-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0502-vindemialis": {
    "method": "same-day",
    "score": 1.92
@@ -3582,10 +3294,6 @@
    "score": 1.99
   },
   "mr:0503-sostenaeus-et-uguccio": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0503-martyres-constantinopoli": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -3633,10 +3341,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0504-martyres-interritorio": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0504-godehardus": {
    "method": "coined-deprecated",
    "score": null
@@ -3665,10 +3369,6 @@
    "method": "same-day",
    "score": 2.66
   },
-  "mr:0505-martyres-thessalonicae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0505-maximus": {
    "method": "same-day",
    "score": 1.92
@@ -3694,10 +3394,6 @@
    "score": 1.54
   },
   "mr:0506-evodius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0506-martyres-africa": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -3841,10 +3537,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0510-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0510-alphius-et-socii": {
    "method": "same-day",
    "score": 2.76
@@ -3858,10 +3550,6 @@
    "score": 2.52
   },
   "mr:0510-isidorus-agricola": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0510-martyres-mediolani": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -3884,10 +3572,6 @@
   "mr:0511-anthimus": {
    "method": "same-day",
    "score": 1.95
-  },
-  "mr:0511-martyres-camerini": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0511-gengulfus": {
    "method": "same-day",
@@ -4021,10 +3705,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0516-martyres-isauria": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0516-felix-et-gennadius": {
    "method": "same-day",
    "score": 3.11
@@ -4058,14 +3738,6 @@
    "score": 1.51
   },
   "mr:0517-paschalis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0517-martyres-novioduni": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0517-martyres-chalcedone": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -4185,25 +3857,9 @@
    "method": "cross-day",
    "score": 3.27
   },
-  "mr:0521-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0521-martyres-caesareae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0521-hospicius": {
    "method": "same-day",
    "score": 1.64
-  },
-  "mr:0522-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0522-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0522-basiliscus": {
    "method": "same-day",
@@ -4240,10 +3896,6 @@
   "mr:0523-desiderius": {
    "method": "same-day",
    "score": 2.35
-  },
-  "mr:0523-martyres-hispania": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0526-desiderius": {
    "method": "cross-day",
@@ -4288,14 +3940,6 @@
   "mr:0524-zoellus": {
    "method": "same-day",
    "score": 1.82
-  },
-  "mr:0524-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0524-martyres-itemsanctarum": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0524-robustianus": {
    "method": "coined-deprecated",
@@ -4418,10 +4062,6 @@
    "score": 2.18
   },
   "mr:0528-augustinus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0528-martyres-sardinia": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -4561,10 +4201,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0601-martyres-perusiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0601-proculus": {
    "method": "same-day",
    "score": 2.5
@@ -4613,10 +4249,6 @@
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0603-martyres-aretii": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0603-marty": {
    "method": "coined-deprecated",
    "score": null
@@ -4645,19 +4277,11 @@
    "method": "same-day",
    "score": 2.49
   },
-  "mr:0604-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0604-quirinus": {
    "method": "same-day",
    "score": 2.34
   },
   "mr:0604-clateus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0604-martyres-pannonia": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -4689,10 +4313,6 @@
    "method": "same-day",
    "score": 1.76
   },
-  "mr:0605-martyres-perusiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0605-sancius": {
    "method": "same-day",
    "score": 1.61
@@ -4714,10 +4334,6 @@
    "score": 2.62
   },
   "mr:0606-viginti-martyres-tarsi": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0606-martyres-novioduni": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -4785,10 +4401,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0609-martyres-nomenti": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0609-vincentius": {
    "method": "same-day",
    "score": 2.1
@@ -4833,10 +4445,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0610-martyres-hispania": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0610-in-africa-sanct": {
    "method": "coined-deprecated",
    "score": null
@@ -4870,10 +4478,6 @@
    "score": 1.89
   },
   "mr:0612-joannis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0612-martyres-romae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -4945,10 +4549,6 @@
    "method": "same-day",
    "score": 2.2
   },
-  "mr:0615-martyres-silarum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0615-hesychius": {
    "method": "same-day",
    "score": 3.09
@@ -4960,10 +4560,6 @@
   "mr:0615-benildis": {
    "method": "same-day",
    "score": 2.39
-  },
-  "mr:0615-virgines-sibapoli": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0615-germana": {
    "method": "same-day",
@@ -5016,10 +4612,6 @@
   "mr:0617-nicandrus-et-marcianus": {
    "method": "same-day",
    "score": 1.72
-  },
-  "mr:0617-martyres-chalcedone": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0617-himerius": {
    "method": "coined-deprecated",
@@ -5085,10 +4677,6 @@
    "method": "same-day",
    "score": 1.99
   },
-  "mr:0619-martyres-aretii": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0619-bonifatius": {
    "method": "coined-deprecated",
    "score": null
@@ -5102,10 +4690,6 @@
    "score": null
   },
   "mr:0620-novatus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0620-martyres-tomis": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -5130,14 +4714,6 @@
    "score": 3.12
   },
   "mr:0621-terentius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0621-martyres-syracusis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0621-martyres-africa": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -5205,10 +4781,6 @@
    "method": "same-day",
    "score": 3.24
   },
-  "mr:0623-martyres-philadelphiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0623-iosephus-cafasso": {
    "method": "same-day",
    "score": 2.38
@@ -5264,10 +4836,6 @@
   "mr:0625-adalbertus": {
    "method": "same-day",
    "score": 1.78
-  },
-  "mr:0626-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0626-vigilius": {
    "method": "same-day",
@@ -5377,10 +4945,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0630-martyres-ipsodie": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0630-basilides": {
    "method": "same-day",
    "score": 2.87
@@ -5408,14 +4972,6 @@
   "mr:0701-martinus": {
    "method": "same-day",
    "score": 2.63
-  },
-  "mr:0701-martyres-sinuessae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0701-martyres-britannia": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0701-gallus": {
    "method": "coined-deprecated",
@@ -5465,10 +5021,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0703-martyres-clusii": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0201-tryphon": {
    "method": "cross-day",
    "score": 2.21
@@ -5509,10 +5061,6 @@
    "method": "same-day",
    "score": 2.77
   },
-  "mr:0704-martyres-sirmii": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0704-namphanio": {
    "method": "coined-deprecated",
    "score": null
@@ -5538,14 +5086,6 @@
    "score": 1.98
   },
   "mr:0705-domitius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0705-martyres-sicilia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0705-martyres-tomis": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -5590,14 +5130,6 @@
    "score": 1.72
   },
   "mr:0707-episcoporum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0707-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0707-martyres-dyrrachii": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -5673,10 +5205,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0709-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0709-brictius": {
    "method": "coined-deprecated",
    "score": null
@@ -5725,10 +5253,6 @@
    "method": "same-day",
    "score": 1.83
   },
-  "mr:0711-martyres-nicopoli": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0711-sidronius": {
    "method": "coined-deprecated",
    "score": null
@@ -5736,10 +5260,6 @@
   "mr:0711-marcianus": {
    "method": "same-day",
    "score": 3.31
-  },
-  "mr:0711-martyres-brixiae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0712-ioannes-gualberti": {
    "method": "same-day",
@@ -6013,10 +5533,6 @@
    "method": "cross-day",
    "score": 2.34
   },
-  "mr:0719-virgines-hispali": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0719-aurea": {
    "method": "same-day",
    "score": 2.49
@@ -6050,10 +5566,6 @@
    "score": 2.66
   },
   "mr:0720-paulus-cordubae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0720-martyres-damasci": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6157,14 +5669,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0723-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0723-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0723-plurimi-martyres-bulgaria": {
    "method": "coined-deprecated",
    "score": null
@@ -6189,14 +5693,6 @@
    "method": "same-day",
    "score": 2.01
   },
-  "mr:0724-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0724-martyres-lycia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0725-iacobus": {
    "method": "same-day",
    "score": 1.63
@@ -6210,10 +5706,6 @@
    "score": 2.89
   },
   "mr:0725-paulus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0725-martyres-furconii": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6232,10 +5724,6 @@
   "mr:0726-erastus": {
    "method": "same-day",
    "score": 2.08
-  },
-  "mr:0726-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0726-hyacinthus": {
    "method": "coined-deprecated",
@@ -6256,10 +5744,6 @@
   "mr:0727-pantaleon": {
    "method": "same-day",
    "score": 1.93
-  },
-  "mr:0727-martyres-vigiliis": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0727-georgius": {
    "method": "same-day",
@@ -6288,10 +5772,6 @@
   "mr:0727-anthusa": {
    "method": "same-day",
    "score": 2.31
-  },
-  "mr:0728-martyres-mediolani": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0728-victor-i": {
    "method": "same-day",
@@ -6417,22 +5897,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0801-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0801-virgines-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0801-martyres-philadelphiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0801-martyres-perge": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0801-felix": {
    "method": "same-day",
    "score": 1.95
@@ -6541,10 +6005,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0805-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0807-afra": {
    "method": "cross-day",
    "score": 2.44
@@ -6565,19 +6025,11 @@
    "method": "same-day",
    "score": 0.86
   },
-  "mr:0806-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0806-dominicus-bononiae": {
    "method": "coined-deprecated",
    "score": null
   },
   "mr:0806-petrus-de-cardegna": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0806-martyres-compluti": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6593,15 +6045,7 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:0807-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0807-faustus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0807-martyres-novocomi": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6625,10 +6069,6 @@
    "method": "same-day",
    "score": 2.32
   },
-  "mr:0808-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0808-hormisda": {
    "method": "coined-deprecated",
    "score": null
@@ -6648,14 +6088,6 @@
   "mr:0809-laurentius": {
    "method": "same-day",
    "score": 1.92
-  },
-  "mr:0809-martyres-tuscia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0809-martyres-veronae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0809-numidico": {
    "method": "coined-deprecated",
@@ -6686,10 +6118,6 @@
    "score": 3.04
   },
   "mr:0810-bergomi-sanctat-asteriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0810-virgines-carthagine": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6738,10 +6166,6 @@
    "score": null
   },
   "mr:0812-hilaria": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0812-martyres-syria": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6885,10 +6309,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0817-martyres-carthagine": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0817-myron": {
    "method": "same-day",
    "score": 3.11
@@ -6900,10 +6320,6 @@
   "mr:0815-straton-et-socii": {
    "method": "cross-day",
    "score": 2.48
-  },
-  "mr:0817-martyres-ptolemaide": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0817-eusebius": {
    "method": "same-day",
@@ -6918,10 +6334,6 @@
    "score": 1.81
   },
   "mr:0818-joannis-et-crispus-presbyteri": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0818-martyres-ibidem": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7002,10 +6414,6 @@
    "score": null
   },
   "mr:0820-triginta-martyres-thracia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0820-martyres-itemsanctorum": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7093,19 +6501,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0822-martyres-portu": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0822-agathonicus-zoticus-et-sociorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0822-martyres-rhemis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0822-martyres-hispania": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7124,10 +6520,6 @@
   "mr:0823-cyriacus-et-archelaus": {
    "method": "same-day",
    "score": 1.6
-  },
-  "mr:0823-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0823-claudius-et-socii": {
    "method": "same-day",
@@ -7261,10 +6653,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0826-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0826-secundus": {
    "method": "coined-deprecated",
    "score": null
@@ -7306,10 +6694,6 @@
    "score": 1.13
   },
   "mr:0827-rufi": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0827-martyres-ibidem": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7365,10 +6749,6 @@
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0828-martyres-salerni": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0828-alexander": {
    "method": "same-day",
    "score": 2.21
@@ -7400,10 +6780,6 @@
   "mr:0920-hypatius-et-asianus": {
    "method": "cross-day",
    "score": 2.33
-  },
-  "mr:0829-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0829-adelphus": {
    "method": "same-day",
@@ -7464,10 +6840,6 @@
   "mr:0831-paulinus": {
    "method": "same-day",
    "score": 1.65
-  },
-  "mr:0831-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0831-theodotus-rufina-et-ammia": {
    "method": "coined-deprecated",
@@ -7553,10 +6925,6 @@
    "method": "same-day",
    "score": 2.19
   },
-  "mr:0902-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0902-zeno": {
    "method": "same-day",
    "score": 2.35
@@ -7581,25 +6949,13 @@
    "method": "same-day",
    "score": 2.23
   },
-  "mr:0903-martyres-capuae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0903-aigulphus-et-socii": {
    "method": "same-day",
    "score": 2.32
   },
-  "mr:0903-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0903-sandalius": {
    "method": "same-day",
    "score": 3.26
-  },
-  "mr:0903-virgines-aquilejae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0903-basilissa": {
    "method": "same-day",
@@ -7641,19 +6997,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0904-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0904-marcellus-cabillone": {
    "method": "coined-deprecated",
    "score": null
   },
   "mr:0904-thamelis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0904-martyres-itemsanctorum": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7693,10 +7041,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0905-milites-melitinae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0905-bertinus": {
    "method": "same-day",
    "score": 2.13
@@ -7716,14 +7060,6 @@
   "mr:0906-donatianus-et-socii": {
    "method": "same-day",
    "score": 2.52
-  },
-  "mr:0906-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0906-martyres-cappadocia": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0906-eleutherius": {
    "method": "same-day",
@@ -7777,17 +7113,9 @@
    "method": "same-day",
    "score": 1.5
   },
-  "mr:0908-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0908-faustus-et-socii": {
    "method": "same-day",
    "score": 1.6
-  },
-  "mr:0908-martyres-gazae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0908-nestor": {
    "method": "coined-deprecated",
@@ -7821,10 +7149,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0909-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0909-audomarus": {
    "method": "coined-deprecated",
    "score": null
@@ -7841,18 +7165,6 @@
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0910-martyres-chalcedone": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0910-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0910-virgines-bithynia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0910-petrus": {
    "method": "coined-deprecated",
    "score": null
@@ -7868,10 +7180,6 @@
   "mr:0910-pulcheria": {
    "method": "same-day",
    "score": 2.14
-  },
-  "mr:0911-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1009-diodorus-et-socii": {
    "method": "cross-day",
@@ -7902,10 +7210,6 @@
    "score": 2.94
   },
   "mr:0912-juventius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0912-martyres-lugduni": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -7957,10 +7261,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0914-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0915-octava-nativitatis-beatae-mariae": {
    "method": "coined-deprecated",
    "score": null
@@ -7976,10 +7276,6 @@
   "mr:0915-valerianus": {
    "method": "same-day",
    "score": 1.83
-  },
-  "mr:0915-martyres-hadrianopoli": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0915-porphyrius": {
    "method": "coined-deprecated",
@@ -8012,10 +7308,6 @@
   "mr:0916-euphemia": {
    "method": "same-day",
    "score": 2.1
-  },
-  "mr:0916-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0916-martinus-primus": {
    "method": "coined-deprecated",
@@ -8057,23 +7349,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0917-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0917-lambertus": {
    "method": "same-day",
    "score": 1.62
   },
   "mr:0917-petrus-de-arbues-caesaraugustae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0917-martyres-britania": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0917-martyres-novioduni": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -8113,10 +7393,6 @@
    "method": "same-day",
    "score": 1.74
   },
-  "mr:0918-martyres-itemsanctarum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0918-eumenius": {
    "method": "same-day",
    "score": 2.24
@@ -8128,10 +7404,6 @@
   "mr:0919-peleus-et-nilus": {
    "method": "same-day",
    "score": 1.0
-  },
-  "mr:0919-martyres-nuceriae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0919-trophimus": {
    "method": "same-day",
@@ -8168,10 +7440,6 @@
   "mr:0920-eustachius": {
    "method": "same-day",
    "score": 1.85
-  },
-  "mr:0920-martyres-cyzici": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0920-dorymedon": {
    "method": "same-day",
@@ -8273,10 +7541,6 @@
    "method": "same-day",
    "score": 1.88
   },
-  "mr:0923-martyres-hispania": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0923-andreas-et-socii": {
    "method": "same-day",
    "score": 2.45
@@ -8353,10 +7617,6 @@
    "method": "same-day",
    "score": 2.32
   },
-  "mr:0926-martyres-nicomediae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0926-callistratus": {
    "method": "coined-deprecated",
    "score": null
@@ -8373,10 +7633,6 @@
    "method": "same-day",
    "score": 1.83
   },
-  "mr:0927-martyres-aegeae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0927-vincentius-de-paul": {
    "method": "same-day",
    "score": 1.74
@@ -8390,10 +7646,6 @@
    "score": null
   },
   "mr:0927-epicharidis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0927-martyres-tuderti": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -8461,10 +7713,6 @@
    "method": "same-day",
    "score": 1.95
   },
-  "mr:0929-martyres-perside": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0929-ripsime-et-socii": {
    "method": "same-day",
    "score": 2.77
@@ -8489,10 +7737,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0930-martyres-solodori": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0930-antoninus": {
    "method": "same-day",
    "score": 2.72
@@ -8510,10 +7754,6 @@
    "score": null
   },
   "mr:1001-areta": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1001-martyres-tomis": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -8609,14 +7849,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1004-presbyteri-et-diaconi-caji": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1004-martyres-aegypto": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1004-petronius": {
    "method": "same-day",
    "score": 2.09
@@ -8628,10 +7860,6 @@
   "mr:1027-thrasea": {
    "method": "cross-day",
    "score": 2.78
-  },
-  "mr:1005-martyres-antisiodori": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1005-martyres-treviris": {
    "method": "same-day",
@@ -8660,10 +7888,6 @@
   "mr:1006-romanus": {
    "method": "same-day",
    "score": 2.33
-  },
-  "mr:1006-martyres-capuae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1006-treviris-commemoratio-innumerabilium": {
    "method": "coined-deprecated",
@@ -8821,10 +8045,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1011-martyres-tarsi": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1011-nicasius-et-socii": {
    "method": "same-day",
    "score": 2.55
@@ -8862,10 +8082,6 @@
    "score": 2.08
   },
   "mr:1011-aemilianus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1012-martyres-romae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -9101,10 +8317,6 @@
    "method": "same-day",
    "score": 1.61
   },
-  "mr:1019-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1019-varus": {
    "method": "same-day",
    "score": 1.33
@@ -9144,10 +8356,6 @@
   "mr:1020-andreas": {
    "method": "same-day",
    "score": 2.25
-  },
-  "mr:1020-virgines-coloniae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1020-sindulphus": {
    "method": "same-day",
@@ -9192,10 +8400,6 @@
   "mr:1022-philippus": {
    "method": "same-day",
    "score": 1.93
-  },
-  "mr:1022-martyres-itemsanctorum": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1022-philippus-firmum": {
    "method": "coined-deprecated",
@@ -9265,10 +8469,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1024-martyres-venusiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1024-evergislus": {
    "method": "same-day",
    "score": 2.52
@@ -9300,10 +8500,6 @@
   "mr:1025-maurus": {
    "method": "same-day",
    "score": 1.49
-  },
-  "mr:1025-martyres-turribus": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1025-martyrius": {
    "method": "same-day",
@@ -9357,10 +8553,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1027-martyres-cappadocia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0720-frumentius": {
    "method": "cross-day",
    "score": 3.16
@@ -9376,10 +8568,6 @@
   "mr:1028-simon-et-iudas": {
    "method": "same-day",
    "score": 1.58
-  },
-  "mr:1028-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1028-cyrilla": {
    "method": "coined-deprecated",
@@ -9505,10 +8693,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1101-martyres-perside": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1101-caesarius-tarracinae": {
    "method": "coined-deprecated",
    "score": null
@@ -9572,10 +8756,6 @@
   "mr:1102-acindynus-et-socii": {
    "method": "same-day",
    "score": 2.79
-  },
-  "mr:1102-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1102-eustochius": {
    "method": "coined-deprecated",
@@ -9693,14 +8873,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1105-martyres-tarracinae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1105-martyres-emessae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1105-theotimus-et-socii": {
    "method": "same-day",
    "score": 2.06
@@ -9765,10 +8937,6 @@
    "method": "same-day",
    "score": 2.14
   },
-  "mr:1107-martyres-amphipoli": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1107-melasippus-antonius-et-carina": {
    "method": "coined-deprecated",
    "score": null
@@ -9786,10 +8954,6 @@
    "score": 2.21
   },
   "mr:1108-octava-omnium-sanctorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1108-martyres-romae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -9845,25 +9009,13 @@
    "method": "same-day",
    "score": 1.8
   },
-  "mr:1110-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1110-leo": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1110-martyres-iconii": {
    "method": "coined-deprecated",
    "score": null
   },
   "mr:1110-demetrianus": {
    "method": "same-day",
    "score": 2.24
-  },
-  "mr:1110-martyres-interritorio": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1110-probus": {
    "method": "same-day",
@@ -9886,10 +9038,6 @@
    "score": 1.57
   },
   "mr:1111-menna-agyptius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1111-martyres-ravennae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -9950,10 +9098,6 @@
    "score": 1.75
   },
   "mr:1113-didacus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1113-martyres-ravennae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -10060,14 +9204,6 @@
   "mr:1116-margarita": {
    "method": "same-day",
    "score": 1.57
-  },
-  "mr:1116-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1116-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1116-eucherius": {
    "method": "same-day",
@@ -10181,10 +9317,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1120-martyres-messanae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1120-octavius-et-socii": {
    "method": "same-day",
    "score": 2.35
@@ -10234,10 +9366,6 @@
    "score": null
   },
   "mr:1121-apud-ostia-tiberina": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1121-martyres-hispania": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -10337,10 +9465,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1126-martyres-faustus-presbyter": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1126-bellinus": {
    "method": "same-day",
    "score": 2.71
@@ -10425,10 +9549,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1129-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1129-saturninus": {
    "method": "same-day",
    "score": 2.26
@@ -10472,10 +9592,6 @@
   "mr:1201-nahum": {
    "method": "same-day",
    "score": 2.14
-  },
-  "mr:1201-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1201-lucius-rogatus-cassianus": {
    "method": "coined-deprecated",
@@ -10525,15 +9641,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1202-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1202-pontianus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1202-martyres-africa": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -10561,17 +9669,9 @@
    "method": "same-day",
    "score": 1.96
   },
-  "mr:1203-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1203-cassianus": {
    "method": "same-day",
    "score": 1.89
-  },
-  "mr:1203-martyres-itemin": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0226-agricola": {
    "method": "cross-day",
@@ -10681,10 +9781,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1207-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1207-servus": {
    "method": "coined-deprecated",
    "score": null
@@ -10721,10 +9817,6 @@
    "method": "same-day",
    "score": 2.04
   },
-  "mr:1208-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0214-zeno": {
    "method": "cross-day",
    "score": 2.27
@@ -10732,10 +9824,6 @@
   "mr:0828-restitutus": {
    "method": "cross-day",
    "score": 3.25
-  },
-  "mr:1209-martyres-itemin": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1209-leocadia": {
    "method": "same-day",
@@ -10770,18 +9858,6 @@
    "score": null
   },
   "mr:1210-paulus-apostolus": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1210-martyres-eodem": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1210-martyres-alexandriae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1210-martyres-leontinos": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -10845,10 +9921,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1212-martyres-treviris": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1213-lucia": {
    "method": "same-day",
    "score": 1.56
@@ -10889,10 +9961,6 @@
    "method": "same-day",
    "score": 2.21
   },
-  "mr:1214-martyres-antiochiae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1214-justus-et-abundius": {
    "method": "coined-deprecated",
    "score": null
@@ -10917,10 +9985,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1215-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1215-faustinus-lucius-candidus": {
    "method": "coined-deprecated",
    "score": null
@@ -10942,10 +10006,6 @@
    "score": null
   },
   "mr:1216-trium-puerorum": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1216-martyres-ravennae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -10997,19 +10057,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1218-martyres-philippis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1218-martyres-laodiceae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1218-moysetis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1218-martyres-itemin": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -11026,14 +10074,6 @@
    "score": null
   },
   "mr:1219-nemesius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1219-martyres-nicaeae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1219-martyres-nicomediae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -11069,10 +10109,6 @@
    "method": "same-day",
    "score": 2.03
   },
-  "mr:1220-martyres-arabia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:0601-ammon-et-socii": {
    "method": "cross-day",
    "score": 3.33
@@ -11105,10 +10141,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1221-martyres-tuscia": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1221-themistocles": {
    "method": "same-day",
    "score": 2.88
@@ -11120,10 +10152,6 @@
   "mr:1222-chaeremon": {
    "method": "same-day",
    "score": 1.86
-  },
-  "mr:1222-martyres-ostia": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1222-ischyrion": {
    "method": "same-day",
@@ -11165,10 +10193,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1224-martyres-tripoli": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1224-euthymius": {
    "method": "coined-deprecated",
    "score": null
@@ -11189,13 +10213,9 @@
    "method": "same-day",
    "score": 1.66
   },
-  "mr:1225-martyres-anno": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1225-nativitas-domini": {
    "method": "same-day",
-   "score": 1.56
+   "score": null
   },
   "mr:1225-quodsequitur-legitur-in": {
    "method": "coined-deprecated",
@@ -11257,15 +10277,7 @@
    "method": "same-day",
    "score": 2.15
   },
-  "mr:1228-martyres-ancyrae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1228-in-africa-natalis": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1228-martyres-nicomediae": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -11289,14 +10301,6 @@
    "method": "same-day",
    "score": 2.09
   },
-  "mr:1229-martyres-romae": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:1229-martyres-africa": {
-   "method": "coined-deprecated",
-   "score": null
-  },
   "mr:1229-marcellus": {
    "method": "same-day",
    "score": 2.16
@@ -11308,10 +10312,6 @@
   "mr:1230-felix-i": {
    "method": "same-day",
    "score": 2.08
-  },
-  "mr:1230-martyres-spoleti": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:1230-mansuetus-severus-appianus": {
    "method": "coined-deprecated",
@@ -11372,6 +10372,1002 @@
   "mr:1231-catharina-laboure": {
    "method": "same-day",
    "score": 2.29
+  },
+  "mr:0102-argeus-et-socii": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0103-zosimus-et-athanasius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0104-priscus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0107-felix-et-ianuarius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0109-epictetus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0112-zoticus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0117-diodorus-et-marianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0118-moseus-et-ammonius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0119-marius-et-socii": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0119-paulus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0122-vincentius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0124-mardonius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0124-thyrsus-et-proiectus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0125-donatus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0127-datius-et-reatrus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0128-leonida": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0129-papias-et-maurus": {
+   "method": "same-day",
+   "score": 2.67
+  },
+  "mr:0131-tharsicius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0202-fortunatius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0203-felix-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0204-aquilinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0208-paulus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0208-dionysius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0209-ammonius-et-alexander": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0211-lucius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0211-saturninus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0212-modestus-et-ammonius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0214-proculus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0214-bassus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0215-saturninus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0217-donatus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0218-maximus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0218-lucius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0219-publius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0220-potamius-et-nemesius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0221-verulus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0225-victorinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0225-donatus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0227-alexander-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0228-macarius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0301-leo-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0301-hermes-et-hadrianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0302-lucius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0302-paulus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0303-hemiterius-et-cheledonius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0308-cyrillus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0310-codratus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0311-heraclius-et-zosimus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0311-gorgonius-et-firmus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0313-theuseta": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0318-trophimus-et-eucarpius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0319-quinctus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0321-philemon-et-domninus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0324-marcus-et-timotheus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0326-petrus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0327-zanita-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0328-rogatus-et-successus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0329-iona-et-barachisius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0401-quinctianus-et-irenaeus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0401-agapis-et-chionia": {
+   "method": "cross-day",
+   "score": 2.67
+  },
+  "mr:0408-ianuarius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0415-maximus-et-olympias": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0418-eleutherius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0419-hermogenes-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0419-socrates-et-dionysius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0420-victor-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0421-arator-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0424-eusebius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0425-evodius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0428-patricius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0501-orentius-et-patientia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0502-saturninus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0503-alexander-et-antonina": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0504-sacerdos": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0505-irenaeus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0506-heliodorus-et-venustus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0510-quartus-et-quinctus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0510-nazarius-et-celsus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0511-anastasius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0516-aquilinus-et-victorianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0517-heradius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0517-solocho": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0521-synesius-et-theopompus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0521-nicostratus-et-antiochus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0522-faustinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0522-castus-et-aemilius": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0523-epitacius-et-basileus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0524-meletius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0524-susanna-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0528-aemilius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0601-felinus-et-gratinianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0603-pergentinus-et-laurentinus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0604-aretius-et-dacianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0604-rutilus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0605-florentius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0606-amantius-et-alexander": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0609-primus-et-felicianus": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0610-crispulus-et-restitutus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0612-basilides-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0615-vitus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0615-lybes-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0617-manuel-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0619-gaudentius-et-culmatius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0620-paulus-et-cyriacus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0621-rufinus-et-martia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0621-cyriacus-et-apollinaris": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0623-zeno": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0626-ioannes-et-paulus": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0630-caius-et-leo": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0701-castus-et-secundinus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0622-iulius-et-aaron": {
+   "method": "cross-day",
+   "score": 3.0
+  },
+  "mr:0703-irenaeus-et-mustiola": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0704-innocentius-et-sebastia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0705-agathon-et-triphina": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0705-marinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0707-claudius-et-nicostratus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0707-peregrinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0709-patermuthius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0711-ianuarius-et-pelagia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0711-savinus-et-cyprianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0717-iusta-et-rufina": {
+   "method": "cross-day",
+   "score": 3.0
+  },
+  "mr:0720-sabinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0723-apollonius-et-eugenius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0723-trophimus-et-theophilus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0724-meneus-et-capito": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0724-niceta-et-aquilina": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0725-florentius-et-felix": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0726-symphronius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0727-maurus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0728-nazarius-et-celsus": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0801-bonus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0801-fides-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0801-cyrillus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0801-leontius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0805-cantidius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0806-felicissimus-et-agapitus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0806-iustus-et-pastor": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0807-petrus-et-iulianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0807-carpophorus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0808-eleutherius-et-leonida": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0809-secundianus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0809-firmus-et-rusticus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0810-bassa-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0812-macarius-et-iulianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0817-liberatus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0817-paulus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0818-herma-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0820-severus-et-memnon": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0822-martialis-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0822-maurus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0822-fabricianus-et-philibertus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0823-restitutus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0826-irenaeus-et-abundius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0827-rufus-et-carpophorus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0828-fortunatus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0829-nicaea-et-paulus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0831-robustianus-et-marcus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0902-diomedes-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0903-aristaeus-et-antoninus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0903-zeno-et-chariton": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0903-euphemia-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0904-castus-et-maximus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0904-theodorus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0905-eudoxius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0906-faustus-et-macarius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0906-cottidus-et-eugenius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0908-ammon-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0908-eusebius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0909-rufinus-et-rufinianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0910-sosthenes-et-victor": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0910-apellius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0910-menodora-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0911-protus-et-hyacinthus": {
+   "method": "same-day",
+   "score": null
+  },
+  "mr:0912-sacerdos": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0914-crescentianus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0915-maximus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0916-lucia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0917-narcissus-et-crescention": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0917-socrates-et-stephanus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0917-valerianus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0918-sophia-et-irene": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0919-felix-et-constantia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0920-fausta-et-evilasius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0923-xantippa-et-polyxena": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0926-cyprianus-et-iustina": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0926-cosmas-et-damianus": {
+   "method": "cross-day",
+   "score": 2.67
+  },
+  "mr:0927-fidentius-et-terentius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0929-dada": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:0930-ursus-et-victor": {
+   "method": "same-day",
+   "score": 3.0
+  },
+  "mr:1001-priscus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1004-caius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1004-marcus-et-marcianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1005-firmatus-et-flaviana": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1006-marcellus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1011-zenais-et-philonilla": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1012-evagrius-et-priscianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1019-beronicus-et-pelagia": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1020-martha-et-saula": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1022-alexander-et-heraclius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1024-felix-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1025-protus-et-ianuarius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1027-capitolina": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1028-anastasia-et-cyrillus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1101-ioannes-et-iacobus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1102-publius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1105-felix-et-eusebius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1105-galatio-et-episteme": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1107-auctus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1108-simpronianus-et-socii": {
+   "method": "same-day",
+   "score": 4.67
+  },
+  "mr:1110-tryphon-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1110-tryphenna-et-tryphosa": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1110-tiberius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1111-valentinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1113-valentinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1116-rufinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1116-elpidius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1120-ampelus-et-caius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1121-honorius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1126-faustus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1129-saturninus-et-sisinius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1201-diodorus-et-marianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1202-eusebius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1202-severus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1203-claudius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1203-claudius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1207-polycarpus-et-theodorus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1208-nemesius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1209-petrus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1210-carpophorus-et-abundius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1210-menna-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1210-mercurius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1212-maxentius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1214-drusus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1215-irenaeus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1216-valentinus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1017-rufus-et-zosimus": {
+   "method": "cross-day",
+   "score": 3.0
+  },
+  "mr:1218-quinctus-et-simplicius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1218-victurus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1219-darius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1219-cyriacus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1220-eugenius-et-macarius": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1221-ioannes-et-festus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1222-demetrius-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1224-lucianus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1228-eutychius-et-domitianus": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1228-indis-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1229-callistus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1229-dominicus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
+  },
+  "mr:1230-sabinus-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
   }
  }
 }

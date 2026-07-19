@@ -21,6 +21,11 @@ Pipeline (v2 — see docs and the CRMEDR canonicalization report):
 Outputs: rewritten MM.json (elogia as ID-keyed objects), alignment.json, and
 deprecated_ids.json (commit into crmedr/data/).
 
+NOTE: step 3's coining under-extracts named martyrs when a genitive class-word
+(Martyrum, fratrum) sits between the sanctity marker and the names, mis-slugging
+multi-martyr eulogies with the place name. `remediate_group_slugs.py` corrects that
+in a post pass (2026-07-20); its improved extraction should be folded back here.
+
 Requires the PRIVATE CatholicOS/martyrology-texts repository; without it the
 matcher degrades to stem evidence and cross-day matching is disabled.
 
