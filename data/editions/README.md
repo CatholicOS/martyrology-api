@@ -23,6 +23,6 @@ Historical editions are **day-keyed**, not ID-keyed: aligning each historical eu
 | Folder | Edition | Source | Quality |
 | --- | --- | --- | --- |
 | `martyrologium_romanum_1749/` | Benedict XIV revision, 1749 (public domain) | scan with OCR text layer, parsed mechanically | **raw, uncorrected OCR**: 365/365 days, 2,938 elogia, every day with titulus and conclusio; OCR artifacts remain in the texts (stray intra-word spaces, occasional misreads). Proofreading welcome. |
-| `martyrologium_romanum_1914_en_unofficial/` | Unofficial English translation, 1914 (public domain) | scan re-OCRed with tesseract | **raw, uncorrected OCR** — same caveats. |
+| `martyrologium_romanum_1914_en_unofficial/` | Unofficial English translation, 1914 (public domain) | scan re-OCRed with tesseract at 300dpi (the embedded text layer had spaces stripped) | **raw, uncorrected OCR**: 365/365 days, 3,031 elogia; day assignment is sequential per month, cross-validated against fuzzy decoding of the blackletter ordinal words (zero disagreements). The `titulus` is reconstructed in clean form ("The Sixteenth Day of April") since the printed blackletter headings OCR poorly; this translation carries no Et-alibi closing formula. OCR artifacts remain (drop-cap first words of each day are often garbled). Proofreading welcome. |
 
 Corrections are welcome as pull requests; the digitization scripts are in [`scripts/`](../../scripts/).
