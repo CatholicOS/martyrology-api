@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from . import __version__
 from .auth import Authenticator
 from .authz import Authz
+from .caching import CacheHeadersMiddleware
 from .config import Settings
 from .problems import install_problem_handlers
 from .registry import Registry
@@ -13,6 +14,7 @@ from .store import Store
 def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings()
     app = FastAPI(title="Roman Martyrology API", version=__version__)
+    app.add_middleware(CacheHeadersMiddleware)
     install_problem_handlers(app)
     registry = Registry.load(settings.crmedr_path, settings.clbdr_path)
     app.state.settings = settings
