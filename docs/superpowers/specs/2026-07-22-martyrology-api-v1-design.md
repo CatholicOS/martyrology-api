@@ -215,7 +215,7 @@ DELETE /api/v1/editions/{edition_id}/elogia/{id}      remove eulogy from this ed
 
 ### Mechanics
 
-- Writes go through the **GitHub REST API** (contents + pulls endpoints) — no server-side git working tree. Public-domain editions target this repository; 2004-family editions target the private `martyrology-texts` repository. The server holds a deploy token with rights on both; OpenFGA decides who may trigger which write.
+- In production deployments, writes go through the **GitHub REST API** (contents + pulls endpoints) — no server-side git working tree. Public-domain editions target this repository; 2004-family editions target the private `martyrology-texts` repository. The server holds a deploy token with rights on both; OpenFGA decides who may trigger which write. Development and tests use the `LocalGitBackend` over local bare repositories instead (§5).
 - Each write lands as a commit on branch `curation/{zitadel-username}/{topic}` (created on first write, `topic` supplied by the client or defaulted to the date). Commits carry the curator's name/email from their Zitadel profile as author.
 - Write responses return `{ branch, commit_sha, pr_url }`; a PR is opened lazily on first commit to a branch. **Merge = publish**: deployments sync merged data; the live API never serves unmerged drafts by default.
 - A curator can read their own draft state back by sending `X-Curation-Branch: curation/<user>/<topic>` on any read endpoint (requires `can_edit` on the edition; ignored otherwise).

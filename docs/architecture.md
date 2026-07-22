@@ -108,9 +108,8 @@ Superseded by the approved design spec:
 
 ## Open questions
 
-1. Implementation stack: PHP mirroring the LitCal API (shared hosting, shared
-   conventions) vs. a lighter static-plus-functions approach; leaning PHP for
-   consistency with the LitCal ecosystem.
+1. Implementation stack: decided — Python 3.12 + FastAPI (see the design spec,
+   [superpowers/specs/2026-07-22-martyrology-api-v1-design.md](superpowers/specs/2026-07-22-martyrology-api-v1-design.md)).
 2. Whether the public-domain 1914/1749 texts get digitized into this repository
    directly or into a public sibling data repository (`martyrology-texts-historical`).
    Feasibility notes from the source PDFs: the 1749 Latin scan (539 pp.) carries a

@@ -79,6 +79,9 @@ Each should become its own issue before being picked up.
   `ConflictError` with a message-agnostic `str(exc)`; a real 422 (e.g.
   malformed base64, path too long) currently reads to the caller exactly
   like a stale-sha conflict.
+- **`create_edition` scaffolds via 13 sequential commits** (one for
+  `edition.json`, one per month); a batch write on `VcsBackend` would make
+  it one commit + one PR instead (protocol change, deferred).
 
 ## Misc
 
