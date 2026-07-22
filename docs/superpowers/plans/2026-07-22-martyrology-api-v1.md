@@ -10,7 +10,8 @@
 
 ## Global Constraints
 
-- Python `>=3.12`; FastAPI + pydantic v2; all HTTP out-calls via `httpx` with injectable transport.
+- Python `>=3.12`; FastAPI + pydantic v2; all HTTP out-calls via **`httpx2`** with injectable transport. (Amended during execution: starlette 1.3.1 deprecates the legacy `httpx` 0.x for its TestClient in favor of `httpx2`, which exposes the same API names — everywhere the task text says `import httpx`, write `import httpx2 as httpx`; the dependency in `pyproject.toml` is `httpx2>=2.0`.)
+- All commands run through the project venv: `.venv/bin/python -m pytest`, `.venv/bin/pip` — not the system/user Python.
 - Base path prefix: `/api/v1`. Errors: RFC 9457 `application/problem+json` everywhere.
 - Canonical IDs: `mr:MMDD-slug` (regex `^mr:(\d{4})-([a-z0-9-]+)$`).
 - On-disk month files: `{edition_dir}/{MM}.json` with zero-padded file names; **day-structured** shape keys days as *unpadded strings* (`"1"`…`"31"`), **flat** shape keys are canonical IDs.
