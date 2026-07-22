@@ -101,6 +101,10 @@ async def get_elogia(rest: str, request: Request,
     months = await _draft_months(request, identity, resolution.edition_id, req.month)
     if months is None:
         months = store.month(resolution.edition_id, req.month)
+    else:
+        # A genuine draft month is on the response: it must never be
+        # shared-cached, since it reflects a specific curator's branch.
+        request.state.cache_private = True
 
     if req.day is None:
         contents = {f"{d:02d}": _day_content(v) for d, v in sorted(months.items())}

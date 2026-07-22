@@ -99,18 +99,39 @@ def test_draft_read_via_header(client):
     client.patch("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
                  json={"text": "Draft only."}, headers=AUTH)
     # published read unchanged (store serves the fixture files on disk)
-    pub = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
-    assert pub["elogia"][0]["text"] != "Draft only."
+    pub = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01")
+    assert pub.json()["elogia"][0]["text"] != "Draft only."
+    assert pub.headers["cache-control"] != "private, max-age=0"
     # draft read sees the branch
     draft = client.get(
         "/api/v1/elogia/edition/martyrologium_romanum_1749/01/01",
-        headers=AUTH | {"X-Curation-Branch": "curation/jdoe/edits"}).json()
-    assert draft["elogia"][0]["text"] == "Draft only."
-    # anonymous caller: header ignored
+        headers=AUTH | {"X-Curation-Branch": "curation/jdoe/edits"})
+    assert draft.json()["elogia"][0]["text"] == "Draft only."
+    # C1: draft reads must never be shared-cached
+    assert draft.headers["cache-control"] == "private, max-age=0"
+    # anonymous caller: header ignored, and stays public
     anon = client.get(
         "/api/v1/elogia/edition/martyrologium_romanum_1749/01/01",
-        headers={"X-Curation-Branch": "curation/jdoe/edits"}).json()
-    assert anon["elogia"][0]["text"] != "Draft only."
+        headers={"X-Curation-Branch": "curation/jdoe/edits"})
+    assert anon.json()["elogia"][0]["text"] != "Draft only."
+    assert anon.headers["cache-control"] != "private, max-age=0"
+
+
+def test_put_elogium_happy_path(client):
+    r = client.put("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0101-basilius",
+                   json={"text": "Basilii Magni.", "day": 1, "position": 1},
+                   headers=AUTH)
+    assert r.status_code == 200
+    b = r.json()
+    assert b["branch"] == "curation/jdoe/edits"
+    assert len(b["commit_sha"]) == 40
+
+
+def test_put_elogium_invalid_day_is_422(client):
+    r = client.put("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0101-basilius",
+                   json={"text": "x", "day": 45}, headers=AUTH)
+    assert r.status_code == 422
+    assert r.json()["type"].endswith("invalid-payload")
 
 
 def test_put_month_validation_error(client):

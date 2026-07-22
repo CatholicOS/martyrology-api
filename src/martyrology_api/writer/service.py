@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 from ..auth import Identity
 from ..config import Settings
+from ..grammar import DAYS_IN_MONTH
 from ..problems import ApiProblem
 from ..registry import Registry, anchor_day
 from ..store import DayData, detect_shape, parse_month_file
@@ -197,6 +198,10 @@ class CurationService:
         if day is None:
             raise ApiProblem(422, "A 'day' is required for day-structured editions",
                              type_slug="day-required")
+        if not 1 <= day <= DAYS_IN_MONTH[am]:
+            raise ApiProblem(422, "Invalid day", type_slug="invalid-payload",
+                             errors=[f"day {day} is out of range for month "
+                                     f"{am:02d} (anchor month of '{cid}')"])
         raw, sha = self._read_month_raw(edition_id, am, branch)
         obj = raw.setdefault(str(day), {"titulus": None, "elogia": {}, "conclusio": None})
         elogia = {k: v for k, v in obj.get("elogia", {}).items() if k != cid}
