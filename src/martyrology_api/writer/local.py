@@ -62,6 +62,8 @@ class LocalGitBackend:
             wc = Path(tmp) / "wc"
             self._git(Path(tmp), "clone", "--branch", branch, "--single-branch", str(bare), str(wc))
             target = wc / path
+            if not target.resolve().is_relative_to(wc.resolve()):
+                raise ValueError("path escapes repository")
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(content)
             self._git(wc, "add", path)
@@ -79,7 +81,15 @@ class LocalGitBackend:
                 "--author",
                 f"{author_name} <{author_email}>",
             )
-            self._git(wc, "push", "origin", branch)
+            try:
+                self._git(wc, "push", "origin", branch)
+            except subprocess.CalledProcessError as exc:
+                stderr = (exc.stderr or b"").decode(errors="replace")
+                if any(
+                    marker in stderr for marker in ("non-fast-forward", "fetch first", "[rejected]")
+                ):
+                    raise ConflictError(f"{path} on {branch}: concurrent update") from exc
+                raise
             return self._git(wc, "rev-parse", "HEAD").stdout.decode().strip()
 
     def open_pr(self, repo: str, branch: str, title: str) -> str:

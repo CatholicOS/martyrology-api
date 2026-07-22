@@ -16,6 +16,7 @@ class GitHubBackend:
             base_url=api_url,
             transport=transport,
             headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
+            timeout=httpx.Timeout(30.0),
         )
 
     def _default_branch(self, repo: str) -> str:
@@ -75,8 +76,12 @@ class GitHubBackend:
         if sha is not None:
             payload["sha"] = sha
         r = self._client.put(f"/repos/{repo}/contents/{path}", json=payload)
-        if r.status_code in (409, 422):
+        if r.status_code == 409:
             raise ConflictError(f"{path} on {branch}: {r.json().get('message')}")
+        if r.status_code == 422:
+            message = r.json().get("message") or ""
+            if "sha" in message.lower():
+                raise ConflictError(f"{path} on {branch}: {message}")
         r.raise_for_status()
         return r.json()["commit"]["sha"]
 

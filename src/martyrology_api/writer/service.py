@@ -162,6 +162,7 @@ class CurationService:
         present with value None REMOVES that key from the metadata,
         rather than being skipped as a plain dict.update would do -- this
         is how a curator clears e.g. a stored `note`."""
+        self._require_registered(edition_id)
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         got = self.backend.read_file(
@@ -196,6 +197,7 @@ class CurationService:
         topic: str | None,
         if_match: str | None,
     ) -> WriteReceipt:
+        self._require_registered(edition_id)
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         validate_or_raise(raw, month, self._shape(edition_id, branch), self.registry)
@@ -219,6 +221,7 @@ class CurationService:
         topic: str | None,
         if_match: str | None,
     ) -> WriteReceipt:
+        self._require_registered(edition_id)
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         if self._shape(edition_id, branch) != "day-structured":
@@ -340,6 +343,14 @@ class CurationService:
         topic: str | None,
         if_match: str | None,
     ) -> WriteReceipt:
+        self._require_registered(edition_id)
+        if cid not in self.registry.entries:
+            raise ApiProblem(
+                422,
+                "Unknown canonical id",
+                type_slug="invalid-payload",
+                errors=[f"'{cid}' is not in the CRMEDR registry"],
+            )
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         month, raw, sha, day_key = self._locate(edition_id, cid, branch)
@@ -360,6 +371,14 @@ class CurationService:
     def delete_elogium(
         self, identity: Identity, edition_id: str, cid: str, topic: str | None, if_match: str | None
     ) -> WriteReceipt:
+        self._require_registered(edition_id)
+        if cid not in self.registry.entries:
+            raise ApiProblem(
+                422,
+                "Unknown canonical id",
+                type_slug="invalid-payload",
+                errors=[f"'{cid}' is not in the CRMEDR registry"],
+            )
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         month, raw, sha, day_key = self._locate(edition_id, cid, branch)

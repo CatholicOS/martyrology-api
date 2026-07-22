@@ -20,6 +20,7 @@ router = APIRouter(prefix="/editions")
 
 MONTH = Path(pattern=r"^\d{2}$")
 DAY = Path(pattern=r"^\d{2}$")
+EDITION = Path(pattern=r"^[a-z0-9_]+$")
 
 TOPIC_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
 
@@ -49,7 +50,9 @@ def _service(request: Request):
 
 def require_relation(relation: str):
     async def dep(
-        request: Request, edition_id: str, identity: Identity | None = Depends(get_identity)
+        request: Request,
+        identity: Identity | None = Depends(get_identity),
+        edition_id: str = EDITION,
     ) -> Identity:
         if identity is None:
             raise ApiProblem(401, "Authentication required", type_slug="authentication-required")
@@ -81,9 +84,9 @@ def _out(receipt: WriteReceipt) -> WriteReceiptOut:
 @router.put("/{edition_id}/elogia/{canonical_id}")
 async def put_elogium(
     request: Request,
-    edition_id: str,
     canonical_id: str,
     body: ElogiumPutIn,
+    edition_id: str = EDITION,
     topic: str | None = Depends(valid_topic),
     if_match: str | None = Header(default=None),
     identity: Identity = Depends(require_relation("can_edit")),
@@ -106,9 +109,9 @@ async def put_elogium(
 @router.patch("/{edition_id}/elogia/{canonical_id}")
 async def patch_elogium(
     request: Request,
-    edition_id: str,
     canonical_id: str,
     body: ElogiumPatchIn,
+    edition_id: str = EDITION,
     topic: str | None = Depends(valid_topic),
     if_match: str | None = Header(default=None),
     identity: Identity = Depends(require_relation("can_edit")),
@@ -123,8 +126,8 @@ async def patch_elogium(
 @router.delete("/{edition_id}/elogia/{canonical_id}")
 async def delete_elogium(
     request: Request,
-    edition_id: str,
     canonical_id: str,
+    edition_id: str = EDITION,
     topic: str | None = Depends(valid_topic),
     if_match: str | None = Header(default=None),
     identity: Identity = Depends(require_relation("can_edit")),
@@ -139,8 +142,8 @@ async def delete_elogium(
 @router.put("/{edition_id}", status_code=201)
 async def put_edition(
     request: Request,
-    edition_id: str,
     body: EditionCreateIn,
+    edition_id: str = EDITION,
     topic: str | None = Depends(valid_topic),
     identity: Identity = Depends(require_relation("can_admin")),
 ):
@@ -154,8 +157,8 @@ async def put_edition(
 @router.patch("/{edition_id}")
 async def patch_edition(
     request: Request,
-    edition_id: str,
     body: EditionPatchIn,
+    edition_id: str = EDITION,
     topic: str | None = Depends(valid_topic),
     identity: Identity = Depends(require_relation("can_admin")),
 ):
@@ -168,7 +171,7 @@ async def patch_edition(
 @router.put("/{edition_id}/{month}")
 async def put_month(
     request: Request,
-    edition_id: str,
+    edition_id: str = EDITION,
     month: str = MONTH,
     body: dict = Body(...),
     topic: str | None = Depends(valid_topic),
@@ -185,7 +188,7 @@ async def put_month(
 @router.patch("/{edition_id}/{month}/{day}")
 async def patch_day(
     request: Request,
-    edition_id: str,
+    edition_id: str = EDITION,
     month: str = MONTH,
     day: str = DAY,
     body: DayPatchIn = Body(...),

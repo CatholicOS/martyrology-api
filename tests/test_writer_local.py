@@ -126,6 +126,48 @@ def test_write_new_file_and_conflict(git_root):
         )  # sha now stale
 
 
+def test_write_file_rejects_path_escaping_repo(git_root):
+    b = LocalGitBackend(git_root)
+    with pytest.raises(ValueError):
+        b.write_file(
+            REPO,
+            "curation/jdoe/edits",
+            "../outside.json",
+            b"{}",
+            "curation: escape attempt",
+            "J",
+            "j@x",
+        )
+
+
+def test_write_file_translates_rejected_push_to_conflict_error(git_root, monkeypatch):
+    b = LocalGitBackend(git_root)
+    orig_git = b._git
+
+    def fake_git(cwd, *args, check=True):
+        if args and args[0] == "push":
+            raise subprocess.CalledProcessError(
+                1,
+                ["git", *args],
+                output=b"",
+                stderr=b"! [rejected]  curation/jdoe/edits -> curation/jdoe/edits "
+                b"(non-fast-forward)\nerror: failed to push some refs; fetch first\n",
+            )
+        return orig_git(cwd, *args, check=check)
+
+    monkeypatch.setattr(b, "_git", fake_git)
+    with pytest.raises(ConflictError):
+        b.write_file(
+            REPO,
+            "curation/jdoe/edits",
+            "data/editions/martyrologium_romanum_1749/01.json",
+            b'{"1": {"titulus": "T3", "elogia": {}, "conclusio": "c"}}',
+            "curation: concurrent edit",
+            "J",
+            "j@x",
+        )
+
+
 def test_open_pr_local(git_root):
     b = LocalGitBackend(git_root)
     assert b.open_pr(REPO, "curation/jdoe/edits", "title") == f"local://{REPO}/curation/jdoe/edits"

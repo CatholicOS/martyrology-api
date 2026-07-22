@@ -122,6 +122,33 @@ def test_patch_elogium_day_structured(service):
     assert raw["1"]["elogia"]["mr:0102-concordius"].endswith("emend.")
 
 
+def test_patch_elogium_unregistered_edition_is_422(service):
+    with pytest.raises(ApiProblem) as ei:
+        service.patch_elogium(
+            IDENT, "not_registered_x", "mr:0102-concordius", "x", topic=None, if_match=None
+        )
+    assert ei.value.status == 422
+    assert ei.value.type_slug == "unknown-edition"
+
+
+@pytest.mark.parametrize("cid", ["not-even-canonical", "mr:9999-nobody"])
+def test_patch_elogium_invalid_canonical_id_is_422(service, cid):
+    with pytest.raises(ApiProblem) as ei:
+        service.patch_elogium(
+            IDENT, "martyrologium_romanum_1749", cid, "x", topic=None, if_match=None
+        )
+    assert ei.value.status == 422
+    assert ei.value.type_slug == "invalid-payload"
+
+
+@pytest.mark.parametrize("cid", ["not-even-canonical", "mr:9999-nobody"])
+def test_delete_elogium_invalid_canonical_id_is_422(service, cid):
+    with pytest.raises(ApiProblem) as ei:
+        service.delete_elogium(IDENT, "martyrologium_romanum_1749", cid, topic=None, if_match=None)
+    assert ei.value.status == 422
+    assert ei.value.type_slug == "invalid-payload"
+
+
 def test_put_elogium_with_position(service):
     service.put_elogium(
         IDENT,

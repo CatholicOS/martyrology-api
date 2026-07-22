@@ -46,6 +46,10 @@ class FakeGitHub:
             path = p.removeprefix(f"/repos/{REPO}/contents/")
             body = json.loads(request.content)
             branch = body["branch"]
+            if path == "data/bad-base64.json":
+                return httpx.Response(
+                    422, json={"message": "Invalid request. Content is not valid Base64."}
+                )
             existing = self.files.get((branch, path))
             if existing is not None and body.get("sha") != f"blob-{branch}-{path}":
                 return httpx.Response(409, json={"message": "sha mismatch"})
@@ -107,6 +111,18 @@ def test_write_new_and_update_and_conflict(gh):
             "j@x",
             expected_sha="stale-sha",
         )
+
+
+def test_write_422_non_sha_mismatch_is_not_conflict_error(gh):
+    fake, b = gh
+    b.ensure_branch(REPO, "curation/jdoe/edits")
+    with pytest.raises(httpx.HTTPStatusError):
+        b.write_file(REPO, "curation/jdoe/edits", "data/bad-base64.json", b"{}", "msg", "J", "j@x")
+
+
+def test_client_has_explicit_timeout():
+    backend = GitHubBackend("tok")
+    assert backend._client.timeout == httpx.Timeout(30.0)
 
 
 def test_open_pr_idempotent(gh):

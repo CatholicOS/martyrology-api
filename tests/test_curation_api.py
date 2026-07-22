@@ -237,6 +237,30 @@ def test_delete_elogium(client):
     assert r2.status_code == 404
 
 
+def test_bad_edition_id_is_rejected_before_service(client):
+    # A literal invalid slug fails the EDITION path pattern -> 422, without
+    # ever reaching the authz check or the service.
+    r = client.patch(
+        "/api/v1/editions/bad-id!/elogia/mr:0102-concordius",
+        json={"text": "x"},
+        headers=AUTH,
+    )
+    assert r.status_code == 400
+    assert r.json()["type"].endswith("malformed-request")
+
+
+def test_path_traversal_edition_id_does_not_reach_service(client):
+    # A %2F-encoded traversal attempt never resolves to a matching route
+    # segment at all (it decodes to a literal "/"), so it 404s at the
+    # router level rather than reaching the curation service.
+    r = client.patch(
+        "/api/v1/editions/..%2F..%2Fevil/elogia/mr:0102-concordius",
+        json={"text": "x"},
+        headers=AUTH,
+    )
+    assert r.status_code in (400, 404, 422)
+
+
 def test_invalid_topic_is_422(client):
     r = client.patch(
         "/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
