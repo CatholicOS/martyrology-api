@@ -30,7 +30,7 @@ jobs:
         run: pyright
 
       - name: pytest
-        run: pytest -q --cov --cov-branch --cov-report=term-missing --cov-report=xml
+        run: pytest -q --cov --cov-branch --cov-report=term-missing --cov-report=xml --junitxml=junit.xml
 
       - name: Coverage summary
         if: always()
@@ -44,3 +44,10 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: CatholicOS/martyrology-api
           files: coverage.xml
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3 # v1.2.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: junit.xml
