@@ -13,12 +13,14 @@ class ApiProblem(Exception):
         title: str,
         detail: str | None = None,
         type_slug: str = "about:blank",
+        headers: dict[str, str] | None = None,
         **extensions,
     ):
         self.status = status
         self.title = title
         self.detail = detail
         self.type_slug = type_slug
+        self.headers = headers
         self.extensions = extensions
         super().__init__(title)
 
@@ -34,7 +36,9 @@ def problem_response(exc: ApiProblem) -> JSONResponse:
     if exc.detail:
         body["detail"] = exc.detail
     body.update(exc.extensions)
-    return JSONResponse(body, status_code=exc.status, media_type="application/problem+json")
+    return JSONResponse(
+        body, status_code=exc.status, media_type="application/problem+json", headers=exc.headers
+    )
 
 
 def install_problem_handlers(app: FastAPI) -> None:
@@ -53,7 +57,13 @@ def install_problem_handlers(app: FastAPI) -> None:
     @app.exception_handler(StarletteHTTPException)
     async def _http_exception(request: Request, exc: StarletteHTTPException):
         return problem_response(
-            ApiProblem(exc.status_code, "HTTP error", detail=exc.detail, type_slug="http-error")
+            ApiProblem(
+                exc.status_code,
+                "HTTP error",
+                detail=exc.detail,
+                type_slug="http-error",
+                headers=dict(exc.headers) if exc.headers else None,
+            )
         )
 
     @app.exception_handler(Exception)

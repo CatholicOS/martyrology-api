@@ -32,7 +32,11 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
         headers = dict(response.headers)
         headers.pop("content-length", None)
         headers.update(
-            {"etag": etag, "cache-control": cc, "vary": "Authorization, Accept-Language"}
+            {
+                "etag": etag,
+                "cache-control": cc,
+                "vary": "Authorization, Accept-Language, X-Curation-Branch",
+            }
         )
         if request.headers.get("if-none-match") == etag:
             return Response(
@@ -40,7 +44,7 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
                 headers={
                     "etag": etag,
                     "cache-control": cc,
-                    "vary": "Authorization, Accept-Language",
+                    "vary": "Authorization, Accept-Language, X-Curation-Branch",
                 },
             )
         return Response(content=body, status_code=200, headers=headers)

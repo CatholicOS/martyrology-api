@@ -38,3 +38,29 @@ async def test_fails_closed_on_error_and_unconfigured():
 
 def test_user_ref():
     assert user_ref(Identity(subject="u123", username="jdoe")) == "user:u123"
+
+
+def malformed_json_transport():
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, content=b"not json")
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_malformed_json_response_is_false():
+    a = Authz("https://fga.example", "store1", "model1", transport=malformed_json_transport())
+    assert await a.check("user:u", "can_edit", "x") is False
+
+
+def truthy_non_true_transport():
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"allowed": "yes"})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_truthy_non_true_allowed_is_false():
+    a = Authz("https://fga.example", "store1", "model1", transport=truthy_non_true_transport())
+    assert await a.check("user:u", "can_edit", "x") is False

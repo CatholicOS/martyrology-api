@@ -35,4 +35,8 @@ class Authz:
             return False
         if resp.status_code != 200:
             return False
-        return bool(resp.json().get("allowed"))
+        try:
+            body = resp.json()
+        except ValueError:
+            return False
+        return body.get("allowed") is True

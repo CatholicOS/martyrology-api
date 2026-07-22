@@ -27,6 +27,7 @@ def test_subjects_locale_fallback(crmedr_path, clbdr_path):
     assert reg.subjects("la")["mr:0101-circumcisio-domini"] == "Circumcisio Domini"
     assert reg.subjects("en")["mr:0102-concordius"] == "Saint Concordius"
     assert reg.subjects("de") == {}
+    assert reg.subjects("LA") == reg.subjects("la")
 
 
 def test_locales_lists_loaded_i18n_files(crmedr_path, clbdr_path):

@@ -50,25 +50,42 @@ class Authenticator:
         hit = self._cache.get(token)
         if hit and hit[1] > time.monotonic():
             return hit[0]
-        async with httpx.AsyncClient(transport=self._transport) as client:
-            resp = await client.post(
-                f"{self.issuer}/oauth/v2/introspect",
-                data={"token": token},
-                auth=(self.client_id, self.client_secret),
-            )
+        try:
+            async with httpx.AsyncClient(transport=self._transport) as client:
+                resp = await client.post(
+                    f"{self.issuer}/oauth/v2/introspect",
+                    data={"token": token},
+                    auth=(self.client_id, self.client_secret),
+                )
+        except httpx.HTTPError:
+            # Transport-level failure (connection refused, timeout, ...) —
+            # not a definitive answer, so don't cache it.
+            return None
         if resp.status_code != 200:
             # Don't cache failures from the introspection endpoint itself
             # (outage, rate limit, etc.) — only cache a definitive answer.
             return None
-        body = resp.json()
+        try:
+            body = resp.json()
+        except ValueError:
+            # Malformed response body — not a definitive answer either.
+            return None
         ident: Identity | None = None
         if body.get("active"):
-            ident = Identity(
-                subject=body["sub"],
-                username=body.get("username") or body.get("preferred_username") or body["sub"],
-                email=body.get("email"),
-                name=body.get("name"),
-            )
+            sub = body.get("sub")
+            if sub:
+                ident = Identity(
+                    subject=sub,
+                    username=body.get("username") or body.get("preferred_username") or sub,
+                    email=body.get("email"),
+                    name=body.get("name"),
+                )
+            else:
+                # Active but no subject: malformed introspection response.
+                # This IS a definitive-shaped response for caching purposes
+                # of "not active", but treat it conservatively and don't
+                # cache a malformed answer.
+                return None
         self._insert_cache(token, ident)
         return ident
 

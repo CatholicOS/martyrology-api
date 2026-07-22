@@ -25,7 +25,7 @@ def test_edition_path_is_immutable(client):
     r = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01")
     assert r.headers["cache-control"] == "public, max-age=31536000, immutable"
     assert "etag" in r.headers
-    assert "Authorization" in r.headers["vary"]
+    assert r.headers["vary"] == "Authorization, Accept-Language, X-Curation-Branch"
 
 
 def test_resolver_path_is_daily(client):

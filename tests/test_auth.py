@@ -67,6 +67,55 @@ async def test_non_200_introspection_is_not_cached_and_is_retried():
     assert CALLS["n"] == 2
 
 
+def transport_error():
+    def handler(request: httpx.Request) -> httpx.Response:
+        CALLS["n"] += 1
+        raise httpx.ConnectError("connection refused", request=request)
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_transport_error_is_not_cached_and_is_retried():
+    CALLS["n"] = 0
+    a = Authenticator("https://zitadel.example", "cid", "sec", transport=transport_error())
+    assert await a.identity("tokTransportErr") is None
+    assert await a.identity("tokTransportErr") is None
+    assert CALLS["n"] == 2
+
+
+def mock_transport_malformed_json():
+    def handler(request: httpx.Request) -> httpx.Response:
+        CALLS["n"] += 1
+        return httpx.Response(200, content=b"not json")
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_malformed_json_response_is_none():
+    a = Authenticator(
+        "https://zitadel.example", "cid", "sec", transport=mock_transport_malformed_json()
+    )
+    assert await a.identity("tokBadJson") is None
+
+
+def mock_transport_active_no_sub():
+    def handler(request: httpx.Request) -> httpx.Response:
+        CALLS["n"] += 1
+        return httpx.Response(200, json={"active": True, "username": "jdoe"})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_active_without_sub_is_none():
+    a = Authenticator(
+        "https://zitadel.example", "cid", "sec", transport=mock_transport_active_no_sub()
+    )
+    assert await a.identity("tokNoSub") is None
+
+
 @pytest.mark.asyncio
 async def test_cache_stays_bounded():
     a = Authenticator(

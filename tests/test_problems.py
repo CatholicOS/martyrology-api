@@ -40,6 +40,15 @@ def test_validation_errors_are_problems():
     assert r.headers["content-type"].startswith("application/problem+json")
 
 
+def test_405_preserves_allow_header():
+    app = make_app()
+    client = TestClient(app)
+    r = client.post("/boom")
+    assert r.status_code == 405
+    assert r.headers["content-type"].startswith("application/problem+json")
+    assert "allow" in r.headers
+
+
 def test_unrouted_path_is_problem_json():
     client = TestClient(make_app())
     r = client.get("/no-such-route")

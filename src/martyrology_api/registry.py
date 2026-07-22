@@ -66,7 +66,7 @@ class Registry:
         self._i18n = i18n
 
     def subjects(self, locale: str) -> dict[str, str]:
-        return self._i18n.get(locale.split("-")[0], {})
+        return self._i18n.get(locale.split("-")[0].lower(), {})
 
     def locales(self) -> list[str]:
         return sorted(self._i18n)
