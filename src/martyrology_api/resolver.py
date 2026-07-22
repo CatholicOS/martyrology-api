@@ -33,36 +33,51 @@ def _primary(lang: str) -> str:
     return lang.split("-")[0].lower()
 
 
+def _scoped_candidates(registry: Registry, nation: str | None) -> list[EditionMeta]:
+    candidates = list(registry.editions.values())
+    if nation:
+        national = [e for e in candidates if e.scope == nation]
+        return national or [e for e in candidates if e.scope == "universal"]
+    return [e for e in candidates if e.scope == "universal"]
+
+
+def _apply_locale(registry: Registry, candidates: list[EditionMeta],
+                  locale: str | None) -> list[EditionMeta]:
+    if not locale:
+        return candidates
+    wanted = [e for e in candidates if _primary(e.language) == _primary(locale)]
+    if wanted:
+        return wanted
+    # Widen, but never past universal scope: a locale request for
+    # nation X must never resolve to an edition scoped to nation Y.
+    universal = [e for e in registry.editions.values() if e.scope == "universal"]
+    wanted_universal = [e for e in universal if _primary(e.language) == _primary(locale)]
+    if wanted_universal:
+        return wanted_universal
+    # Fall back to universal-scoped "la" editions
+    return [e for e in universal if _primary(e.language) == "la"]
+
+
 def resolve(registry: Registry, available: set[str],
             nation: str | None = None, year: int | None = None,
             locale: str | None = None) -> Resolution:
-    candidates = list(registry.editions.values())
-
-    if nation:
-        national = [e for e in candidates if e.scope == nation]
-        candidates = national or [e for e in candidates if e.scope == "universal"]
-    else:
-        candidates = [e for e in candidates if e.scope == "universal"]
-
-    if locale:
-        wanted = [e for e in candidates if _primary(e.language) == _primary(locale)]
-        if wanted:
-            candidates = wanted
-        else:
-            # Widen, but never past universal scope: a locale request for
-            # nation X must never resolve to an edition scoped to nation Y.
-            universal = [e for e in registry.editions.values() if e.scope == "universal"]
-            wanted_universal = [e for e in universal if _primary(e.language) == _primary(locale)]
-            if wanted_universal:
-                candidates = wanted_universal
-            else:
-                # Fall back to universal-scoped "la" editions
-                candidates = [e for e in universal if _primary(e.language) == "la"]
+    candidates = _scoped_candidates(registry, nation)
+    candidates = _apply_locale(registry, candidates, locale)
 
     if year is not None:
-        candidates = [e for e in candidates if e.promulgated_year <= year]
-        if not candidates:
+        year_filtered = [e for e in candidates if e.promulgated_year <= year]
+        if not year_filtered and nation:
+            # The national candidate set was emptied by the year filter;
+            # national editions are preferred but not required, so retry
+            # against universal-scoped candidates. `nation` is still
+            # recorded in resolved_from below.
+            universal_candidates = _apply_locale(
+                registry, [e for e in registry.editions.values() if e.scope == "universal"],
+                locale)
+            year_filtered = [e for e in universal_candidates if e.promulgated_year <= year]
+        if not year_filtered:
             raise PreFirstEditionError(year)
+        candidates = year_filtered
 
     def rank(e: EditionMeta):
         return (e.promulgated_year, e.nature != "translatio", e.id)

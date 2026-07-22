@@ -55,21 +55,8 @@ def resolve_request(request: Request, req: ElogiaRequest,
         al = request.headers.get("accept-language")
         if al:
             locale = al.split(",")[0].split(";")[0].strip() or None
-    try:
-        return resolve(request.app.state.registry, request.app.state.store.available(),
-                       nation=req.nation, year=req.year, locale=locale)
-    except EditionUnavailableError:
-        raise
-    except ApiProblem:
-        # If year+nation resolution fails, try year alone (fall back to universal)
-        if req.nation and req.year:
-            res = resolve(request.app.state.registry, request.app.state.store.available(),
-                          nation=None, year=req.year, locale=locale)
-            # Restore nation in resolved_from since it was requested
-            resolved_from = dict(res.resolved_from) if res.resolved_from else {}
-            resolved_from["nation"] = req.nation
-            return Resolution(edition_id=res.edition_id, resolved_from=resolved_from)
-        raise
+    return resolve(request.app.state.registry, request.app.state.store.available(),
+                   nation=req.nation, year=req.year, locale=locale)
 
 
 @router.get("/elogia/{rest:path}")

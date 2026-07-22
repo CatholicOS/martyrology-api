@@ -65,6 +65,12 @@ def test_tie_break_prefers_non_translation(reg):
     assert r.edition_id == "martyrologium_romanum_2004"
 
 
+def test_nation_with_year_falls_back_to_universal(reg):
+    r = resolve(reg, AVAILABLE, nation="IT", year=1970)
+    assert r.edition_id == "martyrologium_romanum_1749"
+    assert r.resolved_from == {"nation": "IT", "year": 1970}
+
+
 def test_locale_fallback_never_leaks_foreign_scope(reg):
     from martyrology_api.registry import EditionMeta
     reg.editions["martyrologium_romanum_2005_la_DE"] = EditionMeta(
