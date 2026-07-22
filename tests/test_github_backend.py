@@ -21,6 +21,8 @@ class FakeGitHub:
         assert request.headers["authorization"] == "Bearer tok"
         if m == "GET" and p == f"/repos/{REPO}":
             return httpx.Response(200, json={"default_branch": "main"})
+        if m == "GET" and p == f"/repos/{REPO}/git/ref/heads/locked":
+            return httpx.Response(403, json={"message": "forbidden"})
         if m == "GET" and p.startswith(f"/repos/{REPO}/git/ref/heads/"):
             br = p.rsplit("/", 1)[-1]
             if br in self.branches:
@@ -77,6 +79,12 @@ def test_ensure_branch_creates_from_default(gh):
     b.ensure_branch(REPO, "curation/jdoe/edits")
     assert fake.branches["curation/jdoe/edits"] == "c0ffee"
     b.ensure_branch(REPO, "curation/jdoe/edits")  # idempotent
+
+
+def test_ensure_branch_raises_on_unexpected_status(gh):
+    _, b = gh
+    with pytest.raises(httpx.HTTPStatusError):
+        b.ensure_branch(REPO, "locked")
 
 
 def test_write_new_and_update_and_conflict(gh):

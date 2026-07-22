@@ -114,8 +114,9 @@ async def patch_edition(request: Request, edition_id: str, body: EditionPatchIn,
                         topic: str | None = Depends(valid_topic),
                         identity: Identity = Depends(require_relation("can_admin"))):
     svc = _service(request)
+    payload = {k: getattr(body, k) for k in body.model_fields_set}
     receipt = await run_in_threadpool(
-        svc.patch_edition, identity, edition_id, body.model_dump(), topic)
+        svc.patch_edition, identity, edition_id, payload, topic)
     return _out(receipt)
 
 

@@ -104,8 +104,9 @@ class CurationService:
     def create_edition(self, identity: Identity, edition_id: str, shape: str,
                        note: str | None, topic: str | None) -> WriteReceipt:
         self._require_registered(edition_id)
+        repo = self.repo_for(edition_id)
         default_meta = self.backend.read_file(
-            self.repo_for(edition_id), "main", self.edition_meta_path(edition_id))
+            repo, self.backend.default_branch(repo), self.edition_meta_path(edition_id))
         if default_meta is not None:
             raise ApiProblem(409, "Edition already exists",
                              type_slug="already-exists")
@@ -123,6 +124,12 @@ class CurationService:
 
     def patch_edition(self, identity: Identity, edition_id: str,
                       fields: dict, topic: str | None) -> WriteReceipt:
+        """Apply `fields` onto edition.json metadata verbatim: only keys
+        actually present in `fields` are touched (the router passes just
+        the client's explicitly-set fields, via model_fields_set). A key
+        present with value None REMOVES that key from the metadata,
+        rather than being skipped as a plain dict.update would do -- this
+        is how a curator clears e.g. a stored `note`."""
         branch = self.branch_for(identity, topic)
         self.backend.ensure_branch(self.repo_for(edition_id), branch)
         got = self.backend.read_file(self.repo_for(edition_id), branch,
@@ -131,7 +138,11 @@ class CurationService:
             raise ApiProblem(404, "Edition has no data here",
                              type_slug="unknown-edition-data")
         meta = json.loads(got[0])
-        meta.update({k: v for k, v in fields.items() if v is not None})
+        for k, v in fields.items():
+            if v is None:
+                meta.pop(k, None)
+            else:
+                meta[k] = v
         return self._commit(identity, edition_id,
                             self.edition_meta_path(edition_id), meta,
                             "update edition metadata", topic, got[1])
@@ -253,6 +264,14 @@ class CurationService:
     # -- draft reads -------------------------------------------------------
 
     def read_month_draft(self, edition_id: str, month: int,
-                         branch: str) -> dict[int, DayData]:
-        raw, _ = self._read_month_raw(edition_id, month, branch)
+                         branch: str) -> dict[int, DayData] | None:
+        """Parse the draft month file on `branch`, or None when that month
+        file does not exist on the branch at all (distinct from a
+        present-but-empty `{}` file, which parses normally to no days) --
+        callers should fall back to published data on None."""
+        got = self.backend.read_file(self.repo_for(edition_id), branch,
+                                     self.month_path(edition_id, month))
+        if got is None:
+            return None
+        raw = json.loads(got[0])
         return parse_month_file(raw, month, detect_shape(raw), self.registry)

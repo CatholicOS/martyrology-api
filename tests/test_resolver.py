@@ -71,6 +71,14 @@ def test_nation_with_year_falls_back_to_universal(reg):
     assert r.resolved_from == {"nation": "IT", "year": 1970}
 
 
+def test_locale_year_falls_back_to_universal_latin(reg):
+    # locale=en has only 1914/2004 English translations, both promulgated
+    # after 1900; the locale filter must not block the year fallback to
+    # the universal-scope Latin line (mirroring the nation fallback).
+    r = resolve(reg, AVAILABLE, year=1900, locale="en")
+    assert r.edition_id == "martyrologium_romanum_1749"
+
+
 def test_translations_never_win_without_locale(reg):
     from martyrology_api.registry import EditionMeta
     reg.editions["martyrologium_romanum_2010_en_unofficial"] = EditionMeta(

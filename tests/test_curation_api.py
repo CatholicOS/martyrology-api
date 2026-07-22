@@ -1,14 +1,10 @@
 import json
-import os
 import subprocess
 from pathlib import Path
 
 import pytest
-from fastapi.testclient import TestClient
 
-from martyrology_api.app import create_app
 from martyrology_api.auth import Identity
-from martyrology_api.config import Settings
 
 PUB = "CatholicOS/martyrology-api"
 
@@ -52,7 +48,7 @@ class Grants:
 
 
 @pytest.fixture
-def client(tmp_path, crmedr_path, clbdr_path, data_paths):
+def client(tmp_path, make_client):
     root = tmp_path / "gitroot"
     seed_repo(root, PUB, {
         "data/editions/martyrologium_romanum_1749/edition.json":
@@ -61,19 +57,24 @@ def client(tmp_path, crmedr_path, clbdr_path, data_paths):
             "1": {"titulus": "t1", "elogia": {"mr:0102-concordius": "Spoleti."},
                   "conclusio": "c"}})})
     seed_repo(root, "CatholicOS/martyrology-texts", {})
-    settings = Settings(
-        _env_file=None,
-        data_path=os.pathsep.join(str(p) for p in data_paths),
-        crmedr_path=crmedr_path, clbdr_path=clbdr_path,
-        local_git_root=str(root))
-    app = create_app(settings)
-    app.state.authenticator = StaticAuth()
-    app.state.authz = Grants({("can_edit", "martyrologium_romanum_1749"),
-                              ("can_admin", "martyrologium_romanum_1914_en_unofficial")})
-    return TestClient(app)
+    c = make_client(local_git_root=str(root))
+    c.app.state.authenticator = StaticAuth()
+    c.app.state.authz = Grants({("can_edit", "martyrologium_romanum_1749"),
+                                ("can_admin", "martyrologium_romanum_1914_en_unofficial")})
+    return c
 
 
 AUTH = {"Authorization": "Bearer good"}
+
+
+def test_curation_unconfigured_is_503(make_client):
+    c = make_client()  # no local_git_root, no github_token
+    c.app.state.authenticator = StaticAuth()
+    c.app.state.authz = Grants({("can_edit", "martyrologium_romanum_1749")})
+    r = c.patch("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
+               json={"text": "x"}, headers=AUTH)
+    assert r.status_code == 503
+    assert r.json()["type"].endswith("curation-unconfigured")
 
 
 def test_write_requires_auth(client):
@@ -134,6 +135,22 @@ def test_put_elogium_invalid_day_is_422(client):
     assert r.json()["type"].endswith("invalid-payload")
 
 
+def test_draft_falls_back_to_published_when_month_file_absent(client):
+    # Create the curation branch via a write that only touches month 01;
+    # month 02 is never written on this branch (it was never seeded on
+    # main either), so it must fall back to the published fixture data
+    # instead of appearing empty.
+    client.patch("/api/v1/editions/martyrologium_romanum_1749/01/01",
+                 json={"titulus": "X"}, headers=AUTH)
+    pub = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/02")
+    draft = client.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_1749/02",
+        headers=AUTH | {"X-Curation-Branch": "curation/jdoe/edits"})
+    assert pub.status_code == 200 and draft.status_code == 200
+    assert pub.json()["days"] != {}
+    assert draft.json()["days"] == pub.json()["days"]
+
+
 def test_put_month_validation_error(client):
     r = client.put("/api/v1/editions/martyrologium_romanum_1749/01",
                    json={"1": {"elogia": {"mr:9999-nobody": "x"}}}, headers=AUTH)
@@ -183,3 +200,20 @@ def test_create_edition_needs_admin(client):
     r2 = client.put("/api/v1/editions/martyrologium_romanum_1749",
                     json={"shape": "day-structured"}, headers=AUTH)
     assert r2.status_code == 403  # only can_edit, not can_admin, on 1749
+
+
+def test_patch_edition_explicit_null_removes_key(client):
+    edition_id = "martyrologium_romanum_1914_en_unofficial"
+    client.put(f"/api/v1/editions/{edition_id}",
+              json={"shape": "day-structured", "note": "orig"}, headers=AUTH)
+    r = client.patch(f"/api/v1/editions/{edition_id}",
+                     json={"note": "temp"}, headers=AUTH)
+    assert r.status_code == 200
+    r2 = client.patch(f"/api/v1/editions/{edition_id}",
+                      json={"note": None}, headers=AUTH)
+    assert r2.status_code == 200
+    svc = client.app.state.curation
+    raw = json.loads(svc.backend.read_file(
+        "CatholicOS/martyrology-api", "curation/jdoe/edits",
+        svc.edition_meta_path(edition_id))[0])
+    assert "note" not in raw

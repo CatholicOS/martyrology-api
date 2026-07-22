@@ -182,7 +182,7 @@ async def get_elogium(canonical_id: str, request: Request, editions: str | None 
             day_printed=p.day_printed, entry=p.entry, asterisk=p.asterisk,
             unnumbered=p.unnumbered, text=text)
     subject = {loc: registry.subjects(loc)[canonical_id]
-               for loc in ("la", "en", "it")
+               for loc in registry.locales()
                if canonical_id in registry.subjects(loc)}
     return EulogyOut(id=canonical_id, subject=subject,
                      anchor_day=f"{entry.month:02d}-{entry.day:02d}",

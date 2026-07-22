@@ -1,18 +1,9 @@
 import pytest
-from fastapi.testclient import TestClient
-
-from martyrology_api.app import create_app
-from martyrology_api.config import Settings
 
 
 @pytest.fixture
-def client(crmedr_path, clbdr_path, data_paths):
-    import os
-    settings = Settings(
-        _env_file=None,
-        data_path=os.pathsep.join(str(p) for p in data_paths),
-        crmedr_path=crmedr_path, clbdr_path=clbdr_path)
-    return TestClient(create_app(settings))
+def client(make_client):
+    return make_client()
 
 
 def test_editions_discovery(client):

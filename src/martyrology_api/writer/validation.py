@@ -31,7 +31,7 @@ def validate_month_payload(raw: dict, month: int, shape: str,
 
     seen: dict[str, str] = {}
     for day_key, obj in raw.items():
-        if not re.fullmatch(r"[1-9]\d?", day_key) or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(month, 0):
+        if not re.fullmatch(r"[1-9][0-9]?", day_key) or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(month, 0):
             errors.append(f"invalid day key '{day_key}' for month {month:02d} (unpadded 1-31)")
             continue
         if not isinstance(obj, dict):

@@ -71,17 +71,27 @@ def resolve(registry: Registry, available: set[str],
 
     if year is not None:
         year_filtered = [e for e in candidates if e.promulgated_year <= year]
-        if not year_filtered and nation:
-            # The national candidate set was emptied by the year filter;
-            # national editions are preferred but not required, so retry
-            # against universal-scoped candidates. `nation` is still
-            # recorded in resolved_from below.
-            universal_candidates = _apply_locale(
-                registry, [e for e in registry.editions.values() if e.scope == "universal"],
-                locale)
-            if not locale:
-                universal_candidates = [e for e in universal_candidates
-                                        if e.nature != "translatio"]
+        if not year_filtered and (nation or locale):
+            universal_all = [e for e in registry.editions.values()
+                             if e.scope == "universal"]
+            if nation:
+                # The national candidate set was emptied by the year filter;
+                # national editions are preferred but not required, so retry
+                # against universal-scoped candidates. `nation` is still
+                # recorded in resolved_from below.
+                universal_candidates = _apply_locale(registry, universal_all, locale)
+                if not locale:
+                    universal_candidates = [e for e in universal_candidates
+                                            if e.nature != "translatio"]
+            else:
+                # A pure locale search (no nation) was emptied by the year
+                # filter: the only matches for that locale are too recent.
+                # Locale is a preference, not a requirement, so fall back to
+                # the universal-scope Latin line under the same year filter
+                # (mirrors the nation fallback above).
+                universal_candidates = [e for e in universal_all
+                                        if _primary(e.language) == "la"
+                                        and e.nature != "translatio"]
             year_filtered = [e for e in universal_candidates if e.promulgated_year <= year]
         if not year_filtered:
             raise PreFirstEditionError(year)

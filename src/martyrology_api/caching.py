@@ -15,7 +15,7 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
         body = b""
         async for chunk in response.body_iterator:
             body += chunk
-        etag = '"' + hashlib.md5(body).hexdigest() + '"'
+        etag = '"' + hashlib.md5(body, usedforsecurity=False).hexdigest() + '"'
 
         if getattr(request.state, "cache_private", False):
             cc = "private, max-age=0"

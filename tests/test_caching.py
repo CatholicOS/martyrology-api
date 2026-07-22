@@ -1,11 +1,6 @@
-import os
-
 import pytest
-from fastapi.testclient import TestClient
 
-from martyrology_api.app import create_app
 from martyrology_api.auth import Identity
-from martyrology_api.config import Settings
 
 
 class StaticAuth:
@@ -19,15 +14,11 @@ class GrantAll:
 
 
 @pytest.fixture
-def client(crmedr_path, clbdr_path, data_paths):
-    settings = Settings(
-        _env_file=None,
-        data_path=os.pathsep.join(str(p) for p in data_paths),
-        crmedr_path=crmedr_path, clbdr_path=clbdr_path)
-    app = create_app(settings)
-    app.state.authenticator = StaticAuth()
-    app.state.authz = GrantAll()
-    return TestClient(app)
+def client(make_client):
+    c = make_client()
+    c.app.state.authenticator = StaticAuth()
+    c.app.state.authz = GrantAll()
+    return c
 
 
 def test_edition_path_is_immutable(client):

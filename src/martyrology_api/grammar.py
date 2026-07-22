@@ -37,16 +37,20 @@ def parse_elogia_path(path: str) -> ElogiaRequest:
             raise _bad("edition/ must be followed by a CLBDR edition id")
         req.edition, segs = segs[1], segs[2:]
 
-    if segs and re.fullmatch(r"\d{4}", segs[0]) and segs[0][0] != "0":
+    if segs and re.fullmatch(r"[1-9]\d{3}", segs[0]):
         if req.edition:
             raise _bad("a year segment cannot follow an explicit edition")
         req.year, segs = int(segs[0]), segs[1:]
 
     if not segs:
         raise _bad("a two-digit month segment is required")
-    if not re.fullmatch(r"\d{2}", segs[0]) or not 1 <= int(segs[0]) <= 12:
-        raise _bad(f"invalid month segment '{segs[0]}' (expected 01-12)")
-    req.month, segs = int(segs[0]), segs[1:]
+    seg = segs[0]
+    if not re.fullmatch(r"\d{2}", seg) or not 1 <= int(seg) <= 12:
+        if seg.isdigit() and len(seg) >= 3:
+            raise _bad(f"invalid segment '{seg}' (expected a 4-digit year not "
+                       "starting with 0, or a 2-digit month 01-12)")
+        raise _bad(f"invalid month segment '{seg}' (expected 01-12)")
+    req.month, segs = int(seg), segs[1:]
 
     if segs:
         if not re.fullmatch(r"\d{2}", segs[0]) or \

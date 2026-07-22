@@ -24,6 +24,12 @@ def test_subjects_locale_fallback(crmedr_path, clbdr_path):
     assert reg.subjects("de") == {}
 
 
+def test_locales_lists_loaded_i18n_files(crmedr_path, clbdr_path):
+    reg = Registry.load(crmedr_path, clbdr_path)
+    assert reg.locales() == sorted(reg.locales())
+    assert {"la", "en"} <= set(reg.locales())
+
+
 def test_ids_for_day_ordering(crmedr_path, clbdr_path):
     reg = Registry.load(crmedr_path, clbdr_path)
     ids = [e.id for e in reg.ids_for_day(1, 1)]

@@ -18,10 +18,15 @@ class GitHubBackend:
         r.raise_for_status()
         return r.json()["default_branch"]
 
+    def default_branch(self, repo: str) -> str:
+        return self._default_branch(repo)
+
     def ensure_branch(self, repo: str, branch: str) -> None:
         r = self._client.get(f"/repos/{repo}/git/ref/heads/{branch}")
         if r.status_code == 200:
             return
+        if r.status_code != 404:
+            r.raise_for_status()
         default = self._default_branch(repo)
         base = self._client.get(f"/repos/{repo}/git/ref/heads/{default}")
         base.raise_for_status()

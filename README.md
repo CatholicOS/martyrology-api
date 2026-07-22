@@ -32,6 +32,8 @@ pytest                       # runs against tests/fixtures; real-data smoke test
                              # activate when ../crmedr and ../clbdr are checked out
 ```
 
+Note: the bare `/elogia/01/01` path resolves (by default) to the 2004 editio typica altera, which is not attached in a public-only clone and so returns an honest 404 — use an explicit `edition/martyrologium_romanum_1749/...` path or a year path (e.g. `1970/01/01`) to reach the public-domain sample editions instead.
+
 The API surface, response model, auth and curation design are specified in
 [docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md](docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md).
 

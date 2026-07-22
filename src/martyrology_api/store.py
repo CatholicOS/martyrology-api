@@ -87,16 +87,13 @@ class Store:
             if not base.is_dir():
                 continue
             for d in sorted(base.iterdir()):
-                if d.is_dir() and any(d.glob("[0-1][0-9].json")):
+                if d.is_dir() and any((d / f"{m:02d}.json").exists() for m in range(1, 13)):
                     self._dirs.setdefault(d.name, d)
         self._months: dict[tuple[str, int], dict[int, DayData]] = {}
         self._shapes: dict[str, str] = {}
 
     def available(self) -> set[str]:
         return set(self._dirs)
-
-    def dir_for(self, edition_id: str) -> Path | None:
-        return self._dirs.get(edition_id)
 
     def _load_month(self, edition_id: str, month: int) -> dict[int, DayData]:
         key = (edition_id, month)

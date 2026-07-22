@@ -23,6 +23,9 @@ class LocalGitBackend:
         out = self._git(self._bare(repo), "symbolic-ref", "HEAD").stdout
         return out.decode().strip().removeprefix("refs/heads/")
 
+    def default_branch(self, repo: str) -> str:
+        return self._default_branch(repo)
+
     def ensure_branch(self, repo: str, branch: str) -> None:
         bare = self._bare(repo)
         exists = self._git(bare, "show-ref", "--verify", "--quiet",

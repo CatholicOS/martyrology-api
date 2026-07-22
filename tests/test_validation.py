@@ -62,3 +62,9 @@ def test_padded_and_exotic_day_keys_rejected(reg):
     # Exotic digit "²" should produce clean error string, never raise ValueError
     errs2 = validate_month_payload({"²": {"elogia": {}}}, 1, "day-structured", reg)
     assert len(errs2) == 1  # clean error string, no ValueError raised
+
+    # Unicode decimal digit mixed with ASCII ("1١" == Arabic-Indic digit one)
+    # must be rejected outright: Python's int() would happily parse it
+    # (int("1١") == 11), so the day-key regex must be pure ASCII.
+    errs3 = validate_month_payload({"1١": {"elogia": {}}}, 1, "day-structured", reg)
+    assert len(errs3) == 1 and "invalid day key" in errs3[0]

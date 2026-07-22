@@ -65,6 +65,9 @@ class Registry:
     def subjects(self, locale: str) -> dict[str, str]:
         return self._i18n.get(locale.split("-")[0], {})
 
+    def locales(self) -> list[str]:
+        return sorted(self._i18n)
+
     def ids_for_day(self, month: int, day: int) -> list[IdEntry]:
         found = [e for e in self.entries.values()
                  if not e.deprecated and e.month == month and e.day == day]

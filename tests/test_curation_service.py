@@ -152,6 +152,34 @@ def test_create_edition(service):
     assert ei.value.status == 422
 
 
+def test_create_edition_probes_actual_default_branch(tmp_path, crmedr_path, clbdr_path):
+    # A repo whose default branch is NOT "main": create_edition's
+    # already-exists check must probe the real default branch, not a
+    # hardcoded "main", or it will silently miss an existing edition.
+    root = tmp_path / "gitroot-trunk"
+    bare = root / f"{PUB}.git"
+    bare.mkdir(parents=True)
+    run(["git", "init", "--bare", "-b", "trunk", "."], bare)
+    seed = root / "seed"
+    run(["git", "clone", str(bare), str(seed)], root)
+    f = seed / "data/editions/martyrologium_romanum_1914_en_unofficial/edition.json"
+    f.parent.mkdir(parents=True)
+    f.write_text('{"shape": "day-structured"}')
+    run(["git", "add", "-A"], seed)
+    run(["git", "-c", "user.name=s", "-c", "user.email=s@x", "-c", "commit.gpgsign=false",
+         "commit", "-m", "seed"], seed)
+    run(["git", "push", "origin", "trunk"], seed)
+
+    settings = Settings(_env_file=None, crmedr_path=crmedr_path,
+                        clbdr_path=clbdr_path, local_git_root=str(root))
+    registry = Registry.load(crmedr_path, clbdr_path)
+    svc = CurationService(LocalGitBackend(root), registry, settings)
+    with pytest.raises(ApiProblem) as ei:
+        svc.create_edition(IDENT, "martyrologium_romanum_1914_en_unofficial",
+                           shape="day-structured", note=None, topic=None)
+    assert ei.value.status == 409
+
+
 def test_read_month_draft(service):
     service.patch_elogium(IDENT, "martyrologium_romanum_1749",
                           "mr:0102-argeus-et-socii", "Draft text.",
