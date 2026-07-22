@@ -63,6 +63,11 @@ def resolve(registry: Registry, available: set[str],
             locale: str | None = None) -> Resolution:
     candidates = _scoped_candidates(registry, nation)
     candidates = _apply_locale(registry, candidates, locale)
+    if not locale:
+        # Translations are only eligible for resolution when the requested
+        # locale actively selects their language; without a locale they must
+        # never outrank a non-translation edition.
+        candidates = [e for e in candidates if e.nature != "translatio"]
 
     if year is not None:
         year_filtered = [e for e in candidates if e.promulgated_year <= year]
@@ -74,6 +79,9 @@ def resolve(registry: Registry, available: set[str],
             universal_candidates = _apply_locale(
                 registry, [e for e in registry.editions.values() if e.scope == "universal"],
                 locale)
+            if not locale:
+                universal_candidates = [e for e in universal_candidates
+                                        if e.nature != "translatio"]
             year_filtered = [e for e in universal_candidates if e.promulgated_year <= year]
         if not year_filtered:
             raise PreFirstEditionError(year)

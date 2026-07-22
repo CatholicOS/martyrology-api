@@ -71,6 +71,14 @@ def test_nation_with_year_falls_back_to_universal(reg):
     assert r.resolved_from == {"nation": "IT", "year": 1970}
 
 
+def test_translations_never_win_without_locale(reg):
+    avail = AVAILABLE | {"martyrologium_romanum_2004_en_unofficial"}
+    r = resolve(reg, avail)
+    assert r.edition_id == "martyrologium_romanum_2004"
+    r2 = resolve(reg, avail, year=2010)
+    assert r2.edition_id == "martyrologium_romanum_2004"
+
+
 def test_locale_fallback_never_leaks_foreign_scope(reg):
     from martyrology_api.registry import EditionMeta
     reg.editions["martyrologium_romanum_2005_la_DE"] = EditionMeta(

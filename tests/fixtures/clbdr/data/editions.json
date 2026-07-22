@@ -4,6 +4,7 @@
     {"id": "missale_romanum_1570", "book": "book:missale-romanum", "nature": "editio_typica", "language": "la", "scope": "universal", "promulgated": "1570-07-14"},
     {"id": "martyrologium_romanum_1584", "book": "book:martyrologium-romanum", "nature": "editio_typica", "language": "la", "scope": "universal", "promulgated": "1584", "successor": "martyrologium_romanum_1749"},
     {"id": "martyrologium_romanum_1749", "book": "book:martyrologium-romanum", "nature": "editio_typica_recognita", "language": "la", "scope": "universal", "promulgated": "1749", "predecessor": "martyrologium_romanum_1584", "successor": "martyrologium_romanum_2004"},
+    {"id": "martyrologium_romanum_1914_en_unofficial", "book": "book:martyrologium-romanum", "nature": "translatio", "language": "en", "scope": "universal", "promulgated": "1914"},
     {"id": "martyrologium_romanum_2004", "book": "book:martyrologium-romanum", "nature": "editio_typica_altera", "language": "la", "scope": "universal", "promulgated": "2004", "decree": "Congregatio de Cultu Divino, 29 iunii 2004", "predecessor": "martyrologium_romanum_1749"},
     {"id": "martyrologium_romanum_2004_it_IT", "book": "book:martyrologium-romanum", "nature": "editio_vernacula", "language": "it-IT", "scope": "IT", "promulgated": "2004", "translation_of": "martyrologium_romanum_2004"},
     {"id": "martyrologium_romanum_2004_en_unofficial", "book": "book:martyrologium-romanum", "nature": "translatio", "language": "en", "scope": "universal", "promulgated": "2004", "translation_of": "martyrologium_romanum_2004"}
