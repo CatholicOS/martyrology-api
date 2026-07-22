@@ -49,9 +49,15 @@ def resolve(registry: Registry, available: set[str],
         if wanted:
             candidates = wanted
         else:
-            # Fall back to "la" across all editions
-            all_candidates = list(registry.editions.values())
-            candidates = [e for e in all_candidates if _primary(e.language) == "la"]
+            # Widen, but never past universal scope: a locale request for
+            # nation X must never resolve to an edition scoped to nation Y.
+            universal = [e for e in registry.editions.values() if e.scope == "universal"]
+            wanted_universal = [e for e in universal if _primary(e.language) == _primary(locale)]
+            if wanted_universal:
+                candidates = wanted_universal
+            else:
+                # Fall back to universal-scoped "la" editions
+                candidates = [e for e in universal if _primary(e.language) == "la"]
 
     if year is not None:
         candidates = [e for e in candidates if e.promulgated_year <= year]

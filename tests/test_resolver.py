@@ -63,3 +63,12 @@ def test_tie_break_prefers_non_translation(reg):
     # locale la, year 2004: 2004 (la) wins over en translation (filtered by locale anyway)
     r = resolve(reg, AVAILABLE, year=2004, locale="la")
     assert r.edition_id == "martyrologium_romanum_2004"
+
+
+def test_locale_fallback_never_leaks_foreign_scope(reg):
+    from martyrology_api.registry import EditionMeta
+    reg.editions["martyrologium_romanum_2005_la_DE"] = EditionMeta(
+        id="martyrologium_romanum_2005_la_DE", nature="editio_vernacula",
+        language="la", scope="DE", promulgated="2005", promulgated_year=2005)
+    r = resolve(reg, AVAILABLE, nation="IT", locale="la")
+    assert r.edition_id == "martyrologium_romanum_2004"
