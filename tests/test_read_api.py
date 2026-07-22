@@ -22,7 +22,8 @@ def test_day_universal_default(client):
     assert b["metadata"]["edition"] == "martyrologium_romanum_2004"
     assert b["metadata"]["resolved_from"] == {}
     assert [e["id"] for e in b["elogia"]] == ["mr:0101-maria-dei-genetrix", "mr:0101-basilius"]
-    assert b["elogia"][0]["text"].startswith("In octava")
+    assert b["elogia"][0]["text"] is None
+    assert b["metadata"]["access"] == "restricted-texts"
     assert b["titulus"] is None
 
 

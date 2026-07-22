@@ -1,6 +1,8 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Depends, Request
 
+from ..auth import Identity, get_identity
 from ..grammar import ElogiaRequest, parse_elogia_path
+from ..licensing import is_restricted, redact, texts_allowed
 from ..models import (DayContentOut, DayOut, EditionMetadataOut,
                       EditionPlacementOut, ElogiumOut, EulogyOut, MetadataOut,
                       MonthOut)
@@ -60,8 +62,9 @@ def resolve_request(request: Request, req: ElogiaRequest,
 
 
 @router.get("/elogia/{rest:path}")
-def get_elogia(rest: str, request: Request,
-               locale: str | None = None, edition: str | None = None):
+async def get_elogia(rest: str, request: Request,
+                     locale: str | None = None, edition: str | None = None,
+                     identity: Identity | None = Depends(get_identity)):
     req = parse_elogia_path(rest)
     resolution = resolve_request(request, req, locale, edition)
     store = request.app.state.store
@@ -70,11 +73,22 @@ def get_elogia(rest: str, request: Request,
                            resolved_from=resolution.resolved_from,
                            month=req.month, day=req.day)
 
+    allowed = await texts_allowed(request, identity, resolution.edition_id)
+    settings = request.app.state.settings
+    if is_restricted(resolution.edition_id, settings):
+        if allowed:
+            request.state.cache_private = True
+        else:
+            metadata.access = "restricted-texts"
+            metadata.access_info = settings.access_info_url
+
     if req.day is None:
         days = store.month(resolution.edition_id, req.month)
-        return MonthOut(metadata=metadata,
-                        days={f"{d:02d}": _day_content(v)
-                              for d, v in sorted(days.items())})
+        contents = {f"{d:02d}": _day_content(v) for d, v in sorted(days.items())}
+        if not allowed:
+            for c in contents.values():
+                redact(c.elogia)
+        return MonthOut(metadata=metadata, days=contents)
 
     day_data = store.day(resolution.edition_id, req.month, req.day)
     if day_data is None:
@@ -85,6 +99,8 @@ def get_elogia(rest: str, request: Request,
 
     if req.slug is None:
         c = _day_content(day_data)
+        if not allowed:
+            redact(c.elogia)
         return DayOut(metadata=metadata, titulus=c.titulus,
                       elogia=c.elogia, conclusio=c.conclusio)
 
@@ -95,12 +111,16 @@ def get_elogia(rest: str, request: Request,
                                 f"{req.month:02d}-{req.day:02d} in "
                                 f"'{resolution.edition_id}'.",
                          type_slug="unknown-eulogy")
+    elogia = [elogium_out(hit)]
+    if not allowed:
+        redact(elogia)
     return DayOut(metadata=metadata, titulus=day_data.titulus,
-                  elogia=[elogium_out(hit)], conclusio=day_data.conclusio)
+                  elogia=elogia, conclusio=day_data.conclusio)
 
 
 @router.get("/elogium/{canonical_id}")
-def get_elogium(canonical_id: str, request: Request, editions: str | None = None):
+async def get_elogium(canonical_id: str, request: Request, editions: str | None = None,
+                      identity: Identity | None = Depends(get_identity)):
     registry = request.app.state.registry
     store = request.app.state.store
     if not is_canonical_id(canonical_id) or canonical_id not in registry.entries:
@@ -109,11 +129,16 @@ def get_elogium(canonical_id: str, request: Request, editions: str | None = None
                          type_slug="unknown-id")
     entry = registry.entries[canonical_id]
     wanted = set(editions.split(",")) if editions else None
-    placements = {p.edition_id: EditionPlacementOut(day_printed=p.day_printed,
-                                                    entry=p.entry, asterisk=p.asterisk,
-                                                    unnumbered=p.unnumbered, text=p.text)
-                  for p in store.placements(canonical_id)
-                  if wanted is None or p.edition_id in wanted}
+    placements = {}
+    for p in store.placements(canonical_id):
+        if wanted is not None and p.edition_id not in wanted:
+            continue
+        text = p.text
+        if not await texts_allowed(request, identity, p.edition_id):
+            text = None
+        placements[p.edition_id] = EditionPlacementOut(
+            day_printed=p.day_printed, entry=p.entry, asterisk=p.asterisk,
+            unnumbered=p.unnumbered, text=text)
     subject = {loc: registry.subjects(loc)[canonical_id]
                for loc in ("la", "en", "it")
                if canonical_id in registry.subjects(loc)}
