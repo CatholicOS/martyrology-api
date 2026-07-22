@@ -1,3 +1,5 @@
+from typing import Literal
+
 from pydantic import BaseModel
 
 
@@ -103,3 +105,34 @@ class CatalogEntryOut(BaseModel):
 
 class CatalogOut(BaseModel):
     elogia: list[CatalogEntryOut]
+
+
+class WriteReceiptOut(BaseModel):
+    branch: str
+    commit_sha: str
+    pr_url: str
+
+
+class EditionCreateIn(BaseModel):
+    shape: Literal["day-structured", "flat"] = "day-structured"
+    note: str | None = None
+
+
+class EditionPatchIn(BaseModel):
+    note: str | None = None
+
+
+class DayPatchIn(BaseModel):
+    titulus: str | None = None
+    conclusio: str | None = None
+    order: list[str] | None = None
+
+
+class ElogiumPutIn(BaseModel):
+    text: str
+    day: int | None = None
+    position: int | None = None
+
+
+class ElogiumPatchIn(BaseModel):
+    text: str

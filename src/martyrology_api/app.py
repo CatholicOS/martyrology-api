@@ -1,3 +1,5 @@
+from pathlib import Path as _Path
+
 from fastapi import FastAPI
 
 from . import __version__
@@ -7,8 +9,10 @@ from .caching import CacheHeadersMiddleware
 from .config import Settings
 from .problems import install_problem_handlers
 from .registry import Registry
-from .routers import discovery, read
+from .routers import curation, discovery, read
 from .store import Store
+from .writer.local import LocalGitBackend
+from .writer.service import CurationService
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -26,6 +30,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.authz = Authz(settings.openfga_api_url,
                             settings.openfga_store_id,
                             settings.openfga_model_id)
+    if settings.local_git_root:
+        backend = LocalGitBackend(_Path(settings.local_git_root))
+    else:
+        backend = None  # GitHubBackend arrives in Task 17
+    app.state.curation = (CurationService(backend, registry, settings)
+                          if backend is not None else None)
     app.include_router(discovery.router, prefix="/api/v1")
+    app.include_router(curation.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
     return app

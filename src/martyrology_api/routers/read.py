@@ -1,13 +1,15 @@
 from fastapi import APIRouter, Depends, Request
+from starlette.concurrency import run_in_threadpool
 
 from ..auth import Identity, get_identity
+from ..authz import user_ref
 from ..grammar import ElogiaRequest, parse_elogia_path
 from ..licensing import is_restricted, redact, texts_allowed
 from ..models import (DayContentOut, DayOut, EditionMetadataOut,
                       EditionPlacementOut, ElogiumOut, EulogyOut, MetadataOut,
                       MonthOut)
 from ..problems import ApiProblem
-from ..registry import is_canonical_id
+from ..registry import is_canonical_id, slug_of
 from ..resolver import EditionUnavailableError, Resolution, resolve
 from ..store import DayData, Elogium
 
@@ -61,6 +63,20 @@ def resolve_request(request: Request, req: ElogiaRequest,
                    nation=req.nation, year=req.year, locale=locale)
 
 
+async def _draft_months(request: Request, identity: Identity | None,
+                        edition_id: str, month: int) -> dict[int, DayData] | None:
+    branch = request.headers.get("x-curation-branch")
+    if not branch or identity is None:
+        return None
+    svc = getattr(request.app.state, "curation", None)
+    if svc is None:
+        return None
+    if not await request.app.state.authz.check(
+            user_ref(identity), "can_edit", edition_id):
+        return None
+    return await run_in_threadpool(svc.read_month_draft, edition_id, month, branch)
+
+
 @router.get("/elogia/{rest:path}")
 async def get_elogia(rest: str, request: Request,
                      locale: str | None = None, edition: str | None = None,
@@ -82,15 +98,18 @@ async def get_elogia(rest: str, request: Request,
             metadata.access = "restricted-texts"
             metadata.access_info = settings.access_info_url
 
+    months = await _draft_months(request, identity, resolution.edition_id, req.month)
+    if months is None:
+        months = store.month(resolution.edition_id, req.month)
+
     if req.day is None:
-        days = store.month(resolution.edition_id, req.month)
-        contents = {f"{d:02d}": _day_content(v) for d, v in sorted(days.items())}
+        contents = {f"{d:02d}": _day_content(v) for d, v in sorted(months.items())}
         if not allowed:
             for c in contents.values():
                 redact(c.elogia)
         return MonthOut(metadata=metadata, days=contents)
 
-    day_data = store.day(resolution.edition_id, req.month, req.day)
+    day_data = months.get(req.day)
     if day_data is None:
         raise ApiProblem(404, "No entries for this day",
                          detail=f"Edition '{resolution.edition_id}' has no entries "
@@ -104,7 +123,7 @@ async def get_elogia(rest: str, request: Request,
         return DayOut(metadata=metadata, titulus=c.titulus,
                       elogia=c.elogia, conclusio=c.conclusio)
 
-    hit = store.find_by_slug(resolution.edition_id, req.month, req.day, req.slug)
+    hit = next((e for e in day_data.elogia if slug_of(e.id) == req.slug), None)
     if hit is None:
         raise ApiProblem(404, "Eulogy not on this day",
                          detail=f"No eulogy '{req.slug}' printed under "
