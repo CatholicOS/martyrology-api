@@ -11,6 +11,7 @@ from .problems import install_problem_handlers
 from .registry import Registry
 from .routers import curation, discovery, read
 from .store import Store
+from .writer.github import GitHubBackend
 from .writer.local import LocalGitBackend
 from .writer.service import CurationService
 
@@ -32,8 +33,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                             settings.openfga_model_id)
     if settings.local_git_root:
         backend = LocalGitBackend(_Path(settings.local_git_root))
+    elif settings.github_token:
+        backend = GitHubBackend(settings.github_token)
     else:
-        backend = None  # GitHubBackend arrives in Task 17
+        backend = None
     app.state.curation = (CurationService(backend, registry, settings)
                           if backend is not None else None)
     app.include_router(discovery.router, prefix="/api/v1")
