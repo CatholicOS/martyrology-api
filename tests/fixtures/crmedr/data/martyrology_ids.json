@@ -1,0 +1,14 @@
+{
+  "$comment": "test fixture",
+  "anchor_edition": "martyrologium_romanum_2004",
+  "entries": [
+    {"id": "mr:0101-maria-dei-genetrix", "month": 1, "day": 1, "entry": 1, "asterisk": false, "country": null, "unnumbered": true},
+    {"id": "mr:0101-basilius", "month": 1, "day": 1, "entry": 2, "asterisk": true, "country": null, "unnumbered": false},
+    {"id": "mr:0102-concordius", "month": 1, "day": 2, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
+    {"id": "mr:0102-argeus-et-socii", "month": 1, "day": 2, "entry": 2, "asterisk": false, "country": "TR", "unnumbered": false},
+    {"id": "mr:0228-romanus", "month": 2, "day": 28, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
+    {"id": "mr:0229-oswaldus", "month": 2, "day": 29, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
+    {"id": "mr:0304-nullus-entry", "month": 3, "day": 4, "entry": null, "asterisk": false, "country": null, "unnumbered": false},
+    {"id": "mr:0304-primus", "month": 3, "day": 4, "entry": 1, "asterisk": false, "country": null, "unnumbered": false}
+  ]
+}

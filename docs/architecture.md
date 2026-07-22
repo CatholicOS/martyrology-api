@@ -100,40 +100,16 @@ promulgation data, succession and the vernacular BCP47 pattern
 (`martyrologium_romanum_2004_it_IT`), lives there; this API resolves editions against
 it.
 
-## API surface (sketch)
+## API surface
 
-```
-GET /martyrology/{YYYY-MM-DD}?edition=2004_la&locale=la
-GET /martyrology/today?edition=cei_it
-        → the day's eulogies in order: unnumbered headers first, numbered entries,
-          with per-entry {id, entry, asterisk, unnumbered, text}
-GET /eulogy/mr:0101-basilius?editions=2004_la,cei_it,1914_la
-        → one eulogy across editions, with per-edition placement metadata
-GET /editions
-        → available editions and their visibility/licensing status
-GET /calendars/…   (future)
-        → proper-eulogy overlays per nation/diocese/institute, mirroring the
-          LitCal API's calendar path structure
-```
-
-Design notes:
-
-- **Leap day**: `/martyrology/2025-02-28` serves the four leap-day eulogies after the
-  Feb 28 entries (as printed in common years); `/martyrology/2024-02-29` serves them
-  under Feb 29 — both from the same four 0229-anchored IDs.
-- **Cross-edition divergences** surface naturally: the CRMEDR notes (CEI-only entries,
-  placement differences like mr:0610-marcus-antonius-durando) become per-edition
-  presence/placement metadata, so a day's reading differs per edition exactly as the
-  printed books differ.
-- **Curation endpoints** (authenticated; Zitadel/OpenFGA via cdcf-infra): draft-ID
-  review status, text correction proposals, proper-eulogy submission — the write-side
-  of the committee workflow.
+Superseded by the approved design spec:
+[superpowers/specs/2026-07-22-martyrology-api-v1-design.md](superpowers/specs/2026-07-22-martyrology-api-v1-design.md)
+(implemented in `src/martyrology_api/`).
 
 ## Open questions
 
-1. Implementation stack: PHP mirroring the LitCal API (shared hosting, shared
-   conventions) vs. a lighter static-plus-functions approach; leaning PHP for
-   consistency with the LitCal ecosystem.
+1. Implementation stack: decided — Python 3.12 + FastAPI (see the design spec,
+   [superpowers/specs/2026-07-22-martyrology-api-v1-design.md](superpowers/specs/2026-07-22-martyrology-api-v1-design.md)).
 2. Whether the public-domain 1914/1749 texts get digitized into this repository
    directly or into a public sibling data repository (`martyrology-texts-historical`).
    Feasibility notes from the source PDFs: the 1749 Latin scan (539 pp.) carries a
