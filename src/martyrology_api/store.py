@@ -29,7 +29,7 @@ class DayData:
 class Placement:
     edition_id: str
     day_printed: str
-    entry: int
+    entry: int | None
     asterisk: bool
     unnumbered: bool
     text: str | None
