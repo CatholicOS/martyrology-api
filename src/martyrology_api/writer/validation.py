@@ -1,3 +1,5 @@
+import re
+
 from ..grammar import DAYS_IN_MONTH
 from ..problems import ApiProblem
 from ..registry import Registry, anchor_day, is_canonical_id
@@ -29,8 +31,8 @@ def validate_month_payload(raw: dict, month: int, shape: str,
 
     seen: dict[str, str] = {}
     for day_key, obj in raw.items():
-        if not day_key.isdigit() or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(month, 0):
-            errors.append(f"invalid day key '{day_key}' for month {month:02d}")
+        if not re.fullmatch(r"[1-9]\d?", day_key) or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(month, 0):
+            errors.append(f"invalid day key '{day_key}' for month {month:02d} (unpadded 1-31)")
             continue
         if not isinstance(obj, dict):
             errors.append(f"day '{day_key}' must be an object")

@@ -51,3 +51,14 @@ def test_validate_or_raise(reg):
         validate_or_raise({"mr:9999-nobody": "x"}, 1, "flat", reg)
     assert ei.value.status == 422
     assert ei.value.extensions["errors"]
+
+
+def test_padded_and_exotic_day_keys_rejected(reg):
+    # Zero-padded day key "01" should be rejected (unpadded only)
+    errs = validate_month_payload(
+        {"01": {"elogia": {"mr:0101-basilius": "x"}}}, 1, "day-structured", reg)
+    assert len(errs) == 1 and "unpadded" in errs[0]
+
+    # Exotic digit "²" should produce clean error string, never raise ValueError
+    errs2 = validate_month_payload({"²": {"elogia": {}}}, 1, "day-structured", reg)
+    assert len(errs2) == 1  # clean error string, no ValueError raised
