@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - uses: actions/setup-python@v5
         with:
@@ -35,3 +37,10 @@ jobs:
         run: |
           echo '## Coverage' >> "$GITHUB_STEP_SUMMARY"
           coverage report --format=markdown >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: CatholicOS/martyrology-api
+          files: coverage.xml
