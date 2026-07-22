@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from . import __version__
+from .auth import Authenticator
 from .config import Settings
 from .problems import install_problem_handlers
 from .registry import Registry
@@ -16,6 +17,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
+    app.state.authenticator = Authenticator(
+        settings.zitadel_issuer, settings.zitadel_client_id,
+        settings.zitadel_client_secret)
     app.include_router(discovery.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
     return app
