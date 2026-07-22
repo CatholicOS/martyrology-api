@@ -468,7 +468,10 @@ match_meta = {}  # old_id -> (method, score)
 
 def occupied(cid, m, d):
     """True if cid is already a key in that day's 1749 elogia (1:1 constraint)."""
-    return cid in months[m][str(d)]["elogia"]
+    day = months.get(m, {}).get(str(d))
+    if day is None:
+        return False
+    return cid in day["elogia"]
 
 
 # Non-group entries the buggy pipeline swept into martyres-* slugs.

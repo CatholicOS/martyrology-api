@@ -18,7 +18,7 @@ from ..writer.service import WriteReceipt
 
 router = APIRouter(prefix="/editions")
 
-MONTH = Path(pattern=r"^\d{2}$")
+MONTH = Path(pattern=r"^(0[1-9]|1[0-2])$")
 DAY = Path(pattern=r"^\d{2}$")
 EDITION = Path(pattern=r"^[a-z0-9_]+$")
 

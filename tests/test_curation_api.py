@@ -213,6 +213,17 @@ def test_put_month_validation_error(client):
     assert r.json()["errors"]
 
 
+def test_put_month_out_of_range_month_segment(client):
+    for bad_month in ("00", "13"):
+        r = client.put(
+            f"/api/v1/editions/martyrologium_romanum_1749/{bad_month}",
+            json={"1": {"elogia": {"mr:0101-basilius": "x"}}},
+            headers=AUTH,
+        )
+        assert r.status_code == 400
+        assert r.headers["content-type"].startswith("application/problem+json")
+
+
 def test_patch_day(client):
     r = client.patch(
         "/api/v1/editions/martyrologium_romanum_1749/01/01",
