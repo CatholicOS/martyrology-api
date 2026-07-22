@@ -126,3 +126,12 @@ def test_errors(client):
     assert client.get("/api/v1/elogium/mr:9999-nobody").status_code == 404
     r = client.get("/api/v1/elogia/nation/IT/1600/01/01")  # -> 1584, textless
     assert r.status_code == 404 and r.json()["edition"] == "martyrologium_romanum_1584"
+
+
+def test_root_service_document(client):
+    r = client.get("/")
+    assert r.status_code == 200
+    b = r.json()
+    assert b["name"] == "Roman Martyrology API"
+    assert b["links"]["editions"] == "/api/v1/editions"
+    assert b["links"]["docs"] == "/docs"
