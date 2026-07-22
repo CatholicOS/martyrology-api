@@ -4,7 +4,7 @@ from . import __version__
 from .config import Settings
 from .problems import install_problem_handlers
 from .registry import Registry
-from .routers import read
+from .routers import discovery, read
 from .store import Store
 
 
@@ -16,5 +16,6 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
+    app.include_router(discovery.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
     return app
