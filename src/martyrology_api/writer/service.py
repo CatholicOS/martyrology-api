@@ -1,4 +1,5 @@
 import json
+import re
 from dataclasses import dataclass
 
 from ..auth import Identity
@@ -9,6 +10,17 @@ from ..registry import Registry, anchor_day
 from ..store import DayData, detect_shape, parse_month_file
 from .base import ConflictError, VcsBackend
 from .validation import validate_or_raise
+
+
+_USERNAME_SANITIZE_RE = re.compile(r"[^A-Za-z0-9._-]")
+
+
+def _sanitize_username(username: str) -> str:
+    """Make a username safe for use as a git ref path component: replace
+    anything outside [A-Za-z0-9._-] with '-', then strip leading '-'/'.'
+    (git refs may not start with those, and this also defeats attempts to
+    smuggle '../' traversal or absolute paths through the username)."""
+    return _USERNAME_SANITIZE_RE.sub("-", username).lstrip("-.")
 
 
 @dataclass
@@ -40,7 +52,7 @@ class CurationService:
         return f"{self.settings.repo_data_prefix}/{edition_id}/edition.json"
 
     def branch_for(self, identity: Identity, topic: str | None) -> str:
-        return f"curation/{identity.username}/{topic or 'edits'}"
+        return f"curation/{_sanitize_username(identity.username)}/{topic or 'edits'}"
 
     def _require_registered(self, edition_id: str) -> None:
         if edition_id not in self.registry.editions:

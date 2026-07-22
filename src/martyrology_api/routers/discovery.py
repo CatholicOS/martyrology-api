@@ -2,7 +2,7 @@ from fastapi import APIRouter, Request
 
 from ..config import Settings
 from ..models import (AvailabilityOut, CatalogEntryOut, CatalogOut, EditionOut,
-                      EditionsOut, GovernanceOut)
+                      EditionsOut, GovernanceOut, promulgation_dict, scope_dict)
 from ..problems import ApiProblem
 from ..registry import EditionMeta
 
@@ -34,12 +34,10 @@ def _edition_out(e: EditionMeta, available: set[str], settings: Settings) -> Edi
         note = f"Copyrighted texts; an approved API key is required. See {settings.access_info_url}"
     elif status == "unavailable":
         note = "Registered in the CLBDR but no texts are attached in this deployment."
-    scope = ({"type": "universal"} if e.scope == "universal"
-             else {"type": "nation", "nation": e.scope})
     return EditionOut(
-        edition_id=e.id, year=e.promulgated_year, nature=e.nature, scope=scope,
-        locale=e.language,
-        promulgation={"decree": e.decree, "date": e.promulgated},
+        edition_id=e.id, year=e.promulgated_year, nature=e.nature,
+        scope=scope_dict(e.scope), locale=e.language,
+        promulgation=promulgation_dict(e.decree, e.promulgated),
         predecessor=e.predecessor, successor=e.successor,
         governance=governance_for(e.scope),
         availability=AvailabilityOut(status=status, note=note))

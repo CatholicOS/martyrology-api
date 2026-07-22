@@ -3,12 +3,29 @@ from typing import Literal
 from pydantic import BaseModel
 
 
+def scope_dict(scope: str) -> dict:
+    """The wire shape of an edition's scope: {"type": "universal"} or
+    {"type": "nation", "nation": <ISO code>}. Shared by discovery's
+    EditionOut.scope and read's EditionMetadataOut.scope so the two never
+    drift apart."""
+    return ({"type": "universal"} if scope == "universal"
+            else {"type": "nation", "nation": scope})
+
+
+def promulgation_dict(decree: str | None, promulgated: str) -> dict:
+    """The wire shape of an edition's promulgation: {"decree": ..., "date": ...}.
+    Shared by discovery's EditionOut.promulgation and read's
+    EditionMetadataOut.promulgation."""
+    return {"decree": decree, "date": promulgated}
+
+
 class EditionMetadataOut(BaseModel):
+    book: str = "martyrologium_romanum"
+    year: int
     nature: str
-    language: str
-    scope: str
-    promulgated: str
-    decree: str | None = None
+    scope: dict
+    locale: str
+    promulgation: dict
     predecessor: str | None = None
     successor: str | None = None
     translation_of: str | None = None

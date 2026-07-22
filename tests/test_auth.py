@@ -48,3 +48,29 @@ async def test_cache_avoids_second_call():
 async def test_disabled_when_no_issuer():
     a = Authenticator("", "", "")
     assert await a.identity("anything") is None
+
+
+def mock_transport_status(status: int):
+    def handler(request: httpx.Request) -> httpx.Response:
+        CALLS["n"] += 1
+        return httpx.Response(status, json={"active": False})
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_non_200_introspection_is_not_cached_and_is_retried():
+    CALLS["n"] = 0
+    a = Authenticator("https://zitadel.example", "cid", "sec",
+                      transport=mock_transport_status(500))
+    assert await a.identity("tokErr") is None
+    assert await a.identity("tokErr") is None
+    assert CALLS["n"] == 2
+
+
+@pytest.mark.asyncio
+async def test_cache_stays_bounded():
+    a = Authenticator("https://zitadel.example", "cid", "sec", cache_max=3,
+                      transport=mock_transport(True))
+    for i in range(10):
+        await a.identity(f"tok-bound-{i}")
+    assert len(a._cache) <= 3

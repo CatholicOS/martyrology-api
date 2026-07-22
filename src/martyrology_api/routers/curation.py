@@ -1,3 +1,5 @@
+import re
+
 from fastapi import APIRouter, Body, Depends, Header, Path, Request
 from starlette.concurrency import run_in_threadpool
 
@@ -12,6 +14,17 @@ router = APIRouter(prefix="/editions")
 
 MONTH = Path(pattern=r"^\d{2}$")
 DAY = Path(pattern=r"^\d{2}$")
+
+TOPIC_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
+
+
+def valid_topic(topic: str | None = None) -> str | None:
+    if topic is not None and not TOPIC_RE.fullmatch(topic):
+        raise ApiProblem(422, "Invalid topic",
+                         detail=f"'{topic}' is not a valid topic slug "
+                                "(expected ^[a-z0-9][a-z0-9._-]{0,63}$).",
+                         type_slug="invalid-topic")
+    return topic
 
 
 def _service(request: Request):
@@ -52,7 +65,7 @@ def _out(receipt: WriteReceipt) -> WriteReceiptOut:
 @router.put("/{edition_id}/elogia/{canonical_id}")
 async def put_elogium(request: Request, edition_id: str, canonical_id: str,
                       body: ElogiumPutIn,
-                      topic: str | None = None,
+                      topic: str | None = Depends(valid_topic),
                       if_match: str | None = Header(default=None),
                       identity: Identity = Depends(require_relation("can_edit"))):
     svc = _service(request)
@@ -65,7 +78,7 @@ async def put_elogium(request: Request, edition_id: str, canonical_id: str,
 @router.patch("/{edition_id}/elogia/{canonical_id}")
 async def patch_elogium(request: Request, edition_id: str, canonical_id: str,
                         body: ElogiumPatchIn,
-                        topic: str | None = None,
+                        topic: str | None = Depends(valid_topic),
                         if_match: str | None = Header(default=None),
                         identity: Identity = Depends(require_relation("can_edit"))):
     svc = _service(request)
@@ -77,7 +90,7 @@ async def patch_elogium(request: Request, edition_id: str, canonical_id: str,
 
 @router.delete("/{edition_id}/elogia/{canonical_id}")
 async def delete_elogium(request: Request, edition_id: str, canonical_id: str,
-                         topic: str | None = None,
+                         topic: str | None = Depends(valid_topic),
                          if_match: str | None = Header(default=None),
                          identity: Identity = Depends(require_relation("can_edit"))):
     svc = _service(request)
@@ -88,7 +101,7 @@ async def delete_elogium(request: Request, edition_id: str, canonical_id: str,
 
 @router.put("/{edition_id}", status_code=201)
 async def put_edition(request: Request, edition_id: str, body: EditionCreateIn,
-                      topic: str | None = None,
+                      topic: str | None = Depends(valid_topic),
                       identity: Identity = Depends(require_relation("can_admin"))):
     svc = _service(request)
     receipt = await run_in_threadpool(
@@ -98,7 +111,7 @@ async def put_edition(request: Request, edition_id: str, body: EditionCreateIn,
 
 @router.patch("/{edition_id}")
 async def patch_edition(request: Request, edition_id: str, body: EditionPatchIn,
-                        topic: str | None = None,
+                        topic: str | None = Depends(valid_topic),
                         identity: Identity = Depends(require_relation("can_admin"))):
     svc = _service(request)
     receipt = await run_in_threadpool(
@@ -109,7 +122,7 @@ async def patch_edition(request: Request, edition_id: str, body: EditionPatchIn,
 @router.put("/{edition_id}/{month}")
 async def put_month(request: Request, edition_id: str,
                     month: str = MONTH, body: dict = Body(...),
-                    topic: str | None = None,
+                    topic: str | None = Depends(valid_topic),
                     if_match: str | None = Header(default=None),
                     identity: Identity = Depends(require_relation("can_edit"))):
     svc = _service(request)
@@ -122,7 +135,7 @@ async def put_month(request: Request, edition_id: str,
 async def patch_day(request: Request, edition_id: str,
                     month: str = MONTH, day: str = DAY,
                     body: DayPatchIn = Body(...),
-                    topic: str | None = None,
+                    topic: str | None = Depends(valid_topic),
                     if_match: str | None = Header(default=None),
                     identity: Identity = Depends(require_relation("can_edit"))):
     svc = _service(request)

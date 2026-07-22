@@ -54,6 +54,27 @@ def test_explicit_edition_path(client):
     assert b["metadata"]["resolved_from"] is None
 
 
+def test_edition_metadata_matches_discovery_vocabulary(client):
+    b = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
+    em = b["metadata"]["edition_metadata"]
+    assert em["book"] == "martyrologium_romanum"
+    assert em["year"] == 1749
+    assert em["nature"] == "editio_typica_recognita"
+    assert em["scope"] == {"type": "universal"}
+    assert em["locale"] == "la"
+    assert em["promulgation"] == {"decree": None, "date": "1749"}
+    assert em["predecessor"] == "martyrologium_romanum_1584"
+    assert em["successor"] == "martyrologium_romanum_2004"
+    assert em["translation_of"] is None
+
+    d = client.get("/api/v1/editions").json()
+    disc = next(e for e in d["editions"] if e["edition_id"] == "martyrologium_romanum_1749")
+    assert em["scope"] == disc["scope"]
+    assert em["promulgation"] == disc["promulgation"]
+    assert em["year"] == disc["year"]
+    assert em["locale"] == disc["locale"]
+
+
 def test_edition_query_overrides(client):
     b = client.get("/api/v1/elogia/01/01?edition=martyrologium_romanum_1749").json()
     assert b["metadata"]["edition"] == "martyrologium_romanum_1749"

@@ -158,6 +158,24 @@ def test_delete_elogium(client):
     assert r2.status_code == 404
 
 
+def test_invalid_topic_is_422(client):
+    r = client.patch("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
+                     json={"text": "x"}, headers=AUTH,
+                     params={"topic": "../../evil"})
+    assert r.status_code == 422
+    assert r.json()["type"].endswith("invalid-topic")
+
+
+def test_branch_header_traversal_is_ignored(client):
+    client.patch("/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
+                 json={"text": "Draft only."}, headers=AUTH)
+    r = client.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_1749/01/01",
+        headers=AUTH | {"X-Curation-Branch": "curation/x/../../evil"})
+    assert r.status_code == 200
+    assert r.json()["elogia"][0]["text"] != "Draft only."
+
+
 def test_create_edition_needs_admin(client):
     r = client.put("/api/v1/editions/martyrologium_romanum_1914_en_unofficial",
                    json={"shape": "day-structured"}, headers=AUTH)

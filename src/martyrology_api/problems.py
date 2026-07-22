@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 PROBLEM_TYPE_BASE = "https://romanmartyrology.com/problems/"
 
@@ -40,3 +41,15 @@ def install_problem_handlers(app: FastAPI) -> None:
         return problem_response(
             ApiProblem(400, "Malformed request", detail=str(exc.errors()),
                        type_slug="malformed-request"))
+
+    @app.exception_handler(StarletteHTTPException)
+    async def _http_exception(request: Request, exc: StarletteHTTPException):
+        return problem_response(
+            ApiProblem(exc.status_code, "HTTP error", detail=exc.detail,
+                       type_slug="http-error"))
+
+    @app.exception_handler(Exception)
+    async def _unhandled_exception(request: Request, exc: Exception):
+        # Never leak internals (tracebacks, exception messages) to clients.
+        return problem_response(
+            ApiProblem(500, "Internal server error", type_slug="internal-error"))

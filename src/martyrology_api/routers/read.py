@@ -1,3 +1,5 @@
+import re
+
 from fastapi import APIRouter, Depends, Request
 from starlette.concurrency import run_in_threadpool
 
@@ -7,7 +9,7 @@ from ..grammar import ElogiaRequest, parse_elogia_path
 from ..licensing import is_restricted, redact, texts_allowed
 from ..models import (DayContentOut, DayOut, EditionMetadataOut,
                       EditionPlacementOut, ElogiumOut, EulogyOut, MetadataOut,
-                      MonthOut)
+                      MonthOut, promulgation_dict, scope_dict)
 from ..problems import ApiProblem
 from ..registry import is_canonical_id, slug_of
 from ..resolver import EditionUnavailableError, Resolution, resolve
@@ -15,13 +17,25 @@ from ..store import DayData, Elogium
 
 router = APIRouter()
 
+BRANCH_HEADER_RE = re.compile(r"^curation/[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$")
+
+
+def _valid_branch_header(branch: str | None) -> str | None:
+    """Accept the X-Curation-Branch header only when it is a well-formed
+    curation branch name; otherwise treat it as absent (never trust it as
+    a path/ref component)."""
+    if not branch or ".." in branch or not BRANCH_HEADER_RE.match(branch):
+        return None
+    return branch
+
 
 def _edition_meta_out(request: Request, edition_id: str) -> EditionMetadataOut:
     e = request.app.state.registry.editions[edition_id]
-    return EditionMetadataOut(nature=e.nature, language=e.language, scope=e.scope,
-                              promulgated=e.promulgated, decree=e.decree,
-                              predecessor=e.predecessor, successor=e.successor,
-                              translation_of=e.translation_of)
+    return EditionMetadataOut(
+        year=e.promulgated_year, nature=e.nature, scope=scope_dict(e.scope),
+        locale=e.language, promulgation=promulgation_dict(e.decree, e.promulgated),
+        predecessor=e.predecessor, successor=e.successor,
+        translation_of=e.translation_of)
 
 
 def elogium_out(e: Elogium) -> ElogiumOut:
@@ -65,7 +79,7 @@ def resolve_request(request: Request, req: ElogiaRequest,
 
 async def _draft_months(request: Request, identity: Identity | None,
                         edition_id: str, month: int) -> dict[int, DayData] | None:
-    branch = request.headers.get("x-curation-branch")
+    branch = _valid_branch_header(request.headers.get("x-curation-branch"))
     if not branch or identity is None:
         return None
     svc = getattr(request.app.state, "curation", None)
