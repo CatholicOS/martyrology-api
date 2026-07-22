@@ -123,6 +123,7 @@ async def get_elogium(canonical_id: str, request: Request, editions: str | None 
                       identity: Identity | None = Depends(get_identity)):
     registry = request.app.state.registry
     store = request.app.state.store
+    settings = request.app.state.settings
     if not is_canonical_id(canonical_id) or canonical_id not in registry.entries:
         raise ApiProblem(404, "Unknown canonical id",
                          detail=f"'{canonical_id}' is not in the CRMEDR registry.",
@@ -134,8 +135,12 @@ async def get_elogium(canonical_id: str, request: Request, editions: str | None 
         if wanted is not None and p.edition_id not in wanted:
             continue
         text = p.text
-        if not await texts_allowed(request, identity, p.edition_id):
+        allowed = await texts_allowed(request, identity, p.edition_id)
+        if not allowed:
             text = None
+        if is_restricted(p.edition_id, settings):
+            if allowed:
+                request.state.cache_private = True
         placements[p.edition_id] = EditionPlacementOut(
             day_printed=p.day_printed, entry=p.entry, asterisk=p.asterisk,
             unnumbered=p.unnumbered, text=text)
