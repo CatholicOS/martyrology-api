@@ -7,9 +7,11 @@ from starlette.responses import Response
 class CacheHeadersMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request, call_next):
         response = await call_next(request)
-        if (request.method != "GET"
-                or not request.url.path.startswith("/api/v1")
-                or response.status_code != 200):
+        if (
+            request.method != "GET"
+            or not request.url.path.startswith("/api/v1")
+            or response.status_code != 200
+        ):
             return response
 
         body = b""
@@ -26,10 +28,16 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
 
         headers = dict(response.headers)
         headers.pop("content-length", None)
-        headers.update({"etag": etag, "cache-control": cc,
-                        "vary": "Authorization, Accept-Language"})
+        headers.update(
+            {"etag": etag, "cache-control": cc, "vary": "Authorization, Accept-Language"}
+        )
         if request.headers.get("if-none-match") == etag:
-            return Response(status_code=304,
-                            headers={"etag": etag, "cache-control": cc,
-                                     "vary": "Authorization, Accept-Language"})
+            return Response(
+                status_code=304,
+                headers={
+                    "etag": etag,
+                    "cache-control": cc,
+                    "vary": "Authorization, Accept-Language",
+                },
+            )
         return Response(content=body, status_code=200, headers=headers)

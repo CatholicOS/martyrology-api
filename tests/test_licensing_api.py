@@ -31,8 +31,10 @@ def test_anonymous_restricted_is_redacted_200(client):
     assert b["metadata"]["access"] == "restricted-texts"
     assert b["metadata"]["access_info"]
     assert all(e["text"] is None for e in b["elogia"])
-    assert [e["id"] for e in b["elogia"]] == ["mr:0101-maria-dei-genetrix",
-                                              "mr:0101-basilius"]  # skeleton stays public
+    assert [e["id"] for e in b["elogia"]] == [
+        "mr:0101-maria-dei-genetrix",
+        "mr:0101-basilius",
+    ]  # skeleton stays public
 
 
 def test_public_edition_untouched(client):
@@ -49,8 +51,9 @@ def test_authorized_gets_texts(client):
 
 
 def test_authorized_but_ungranted_edition_still_redacted(client):
-    b = client.get("/api/v1/elogia/nation/IT/01/01",
-                   headers={"Authorization": "Bearer good"}).json()
+    b = client.get(
+        "/api/v1/elogia/nation/IT/01/01", headers={"Authorization": "Bearer good"}
+    ).json()
     assert b["metadata"]["edition"] == "martyrologium_romanum_2004_it_IT"
     assert b["metadata"]["access"] == "restricted-texts"
 
@@ -71,5 +74,4 @@ def test_elogium_redacts_per_edition(client):
 def test_month_redaction(client):
     b = client.get("/api/v1/elogia/01").json()
     assert b["metadata"]["access"] == "restricted-texts"
-    assert all(e["text"] is None
-               for day in b["days"].values() for e in day["elogia"])
+    assert all(e["text"] is None for day in b["days"].values() for e in day["elogia"])

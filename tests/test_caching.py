@@ -39,8 +39,7 @@ def test_authorized_restricted_is_private(client):
 
 
 def test_authorized_restricted_elogium_is_private(client):
-    r = client.get("/api/v1/elogium/mr:0102-concordius",
-                   headers={"Authorization": "Bearer good"})
+    r = client.get("/api/v1/elogium/mr:0102-concordius", headers={"Authorization": "Bearer good"})
     assert r.status_code == 200
     assert r.headers["cache-control"] == "private, max-age=0"
 
@@ -48,8 +47,9 @@ def test_authorized_restricted_elogium_is_private(client):
 def test_304_on_if_none_match(client):
     r1 = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01")
     etag = r1.headers["etag"]
-    r2 = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01",
-                    headers={"If-None-Match": etag})
+    r2 = client.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_1749/01/01", headers={"If-None-Match": etag}
+    )
     assert r2.status_code == 304
     assert r2.headers["etag"] == etag
 

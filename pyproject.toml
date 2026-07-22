@@ -12,7 +12,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+dev = [
+  "pytest>=8",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.5",
+  "pyright>=1.1",
+  "openapi-spec-validator>=0.7",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -28,3 +34,24 @@ asyncio_mode = "auto"
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+typeCheckingMode = "basic"
+include = ["src", "tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI's dependency-injection pattern requires calling Depends()/Body()/
+# require_relation() in argument defaults; this is idiomatic FastAPI (see
+# their own docs) and not a real mutable-default-argument hazard.
+"src/martyrology_api/routers/*.py" = ["B008"]
+# `%s % "|".join(MONTHS)` builds a *regex pattern* here, and the pattern
+# already contains literal `{n,m}` quantifiers; converting to an f-string
+# would require escaping every brace and risks silently corrupting the
+# regex used to parse the (privately sourced) 1749 source PDF.
+"scripts/digitize_1749.py" = ["UP031"]

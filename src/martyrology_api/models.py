@@ -8,8 +8,7 @@ def scope_dict(scope: str) -> dict:
     {"type": "nation", "nation": <ISO code>}. Shared by discovery's
     EditionOut.scope and read's EditionMetadataOut.scope so the two never
     drift apart."""
-    return ({"type": "universal"} if scope == "universal"
-            else {"type": "nation", "nation": scope})
+    return {"type": "universal"} if scope == "universal" else {"type": "nation", "nation": scope}
 
 
 def promulgation_dict(decree: str | None, promulgated: str) -> dict:

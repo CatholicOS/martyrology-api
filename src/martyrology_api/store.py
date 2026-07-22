@@ -45,10 +45,14 @@ def _elogium(cid: str, text: str | None, position: int, registry: Registry) -> E
     am, ad = anchor_day(cid)
     reg = registry.entries.get(cid)
     return Elogium(
-        id=cid, text=text, entry=position,
+        id=cid,
+        text=text,
+        entry=position,
         asterisk=reg.asterisk if reg else False,
         unnumbered=reg.unnumbered if reg else False,
-        anchor_month=am, anchor_day=ad)
+        anchor_month=am,
+        anchor_day=ad,
+    )
 
 
 def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> dict[int, DayData]:
@@ -56,10 +60,17 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
     if shape == "day-structured":
         for day_key, obj in raw.items():
             day = int(day_key)
-            elogia = [_elogium(cid, text, i + 1, registry)
-                      for i, (cid, text) in enumerate(obj.get("elogia", {}).items())]
-            days[day] = DayData(month=month, day=day, titulus=obj.get("titulus"),
-                                elogia=elogia, conclusio=obj.get("conclusio"))
+            elogia = [
+                _elogium(cid, text, i + 1, registry)
+                for i, (cid, text) in enumerate(obj.get("elogia", {}).items())
+            ]
+            days[day] = DayData(
+                month=month,
+                day=day,
+                titulus=obj.get("titulus"),
+                elogia=elogia,
+                conclusio=obj.get("conclusio"),
+            )
     else:  # flat: membership/order/metadata from the registry, texts from the map
         by_day: dict[int, list] = {}
         for e in registry.entries.values():
@@ -67,15 +78,26 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
                 continue
             by_day.setdefault(e.day, []).append(e)
         for day, entries in by_day.items():
-            entries.sort(key=lambda e: (not e.unnumbered,
-                                         e.entry if e.entry is not None else float("inf"),
-                                         e.id))
-            elogia = [Elogium(id=e.id, text=raw[e.id], entry=e.entry,
-                              asterisk=e.asterisk, unnumbered=e.unnumbered,
-                              anchor_month=e.month, anchor_day=e.day)
-                      for e in entries]
-            days[day] = DayData(month=month, day=day, titulus=None,
-                                elogia=elogia, conclusio=None)
+            entries.sort(
+                key=lambda e: (
+                    not e.unnumbered,
+                    e.entry if e.entry is not None else float("inf"),
+                    e.id,
+                )
+            )
+            elogia = [
+                Elogium(
+                    id=e.id,
+                    text=raw[e.id],
+                    entry=e.entry,
+                    asterisk=e.asterisk,
+                    unnumbered=e.unnumbered,
+                    anchor_month=e.month,
+                    anchor_day=e.day,
+                )
+                for e in entries
+            ]
+            days[day] = DayData(month=month, day=day, titulus=None, elogia=elogia, conclusio=None)
     return days
 
 
@@ -138,13 +160,26 @@ class Store:
         for edition_id in sorted(self._dirs):
             months = [am] + [m for m in range(1, 13) if m != am]
             for m in months:
-                found = next((("%02d-%02d" % (m, dd.day), e)
-                              for dd in self._load_month(edition_id, m).values()
-                              for e in dd.elogia if e.id == canonical_id), None)
+                found = next(
+                    (
+                        (f"{m:02d}-{dd.day:02d}", e)
+                        for dd in self._load_month(edition_id, m).values()
+                        for e in dd.elogia
+                        if e.id == canonical_id
+                    ),
+                    None,
+                )
                 if found:
                     printed, e = found
-                    out.append(Placement(edition_id=edition_id, day_printed=printed,
-                                         entry=e.entry, asterisk=e.asterisk,
-                                         unnumbered=e.unnumbered, text=e.text))
+                    out.append(
+                        Placement(
+                            edition_id=edition_id,
+                            day_printed=printed,
+                            entry=e.entry,
+                            asterisk=e.asterisk,
+                            unnumbered=e.unnumbered,
+                            text=e.text,
+                        )
+                    )
                     break
         return out

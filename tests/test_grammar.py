@@ -33,12 +33,27 @@ def test_leap_day_ok():
     assert parse_elogia_path("02/29").day == 29
 
 
-@pytest.mark.parametrize("bad", [
-    "", "13", "1", "001", "01/32", "02/30", "04/31", "01/02/UPPER",
-    "nation/it/01", "nation/ITA/01", "edition/x/1970/01",  # year after edition forbidden
-    "1970", "nation/IT", "edition/martyrologium_romanum_1749",  # month required
-    "01/02/argeus-et-socii/extra", "0170/01",
-])
+@pytest.mark.parametrize(
+    "bad",
+    [
+        "",
+        "13",
+        "1",
+        "001",
+        "01/32",
+        "02/30",
+        "04/31",
+        "01/02/UPPER",
+        "nation/it/01",
+        "nation/ITA/01",
+        "edition/x/1970/01",  # year after edition forbidden
+        "1970",
+        "nation/IT",
+        "edition/martyrologium_romanum_1749",  # month required
+        "01/02/argeus-et-socii/extra",
+        "0170/01",
+    ],
+)
 def test_bad_paths(bad):
     with pytest.raises(ApiProblem) as ei:
         parse_elogia_path(bad)

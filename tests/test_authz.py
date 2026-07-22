@@ -9,17 +9,18 @@ def transport(allowed: bool, status: int = 200):
     def handler(request: httpx.Request) -> httpx.Response:
         assert request.url.path == "/stores/store1/check"
         import json
+
         body = json.loads(request.content)
         assert body["tuple_key"]["object"].startswith("edition:")
         return httpx.Response(status, json={"allowed": allowed})
+
     return httpx.MockTransport(handler)
 
 
 @pytest.mark.asyncio
 async def test_allowed():
     a = Authz("https://fga.example", "store1", "model1", transport=transport(True))
-    assert await a.check("user:u123", "can_read_texts",
-                         "martyrologium_romanum_2004") is True
+    assert await a.check("user:u123", "can_read_texts", "martyrologium_romanum_2004") is True
 
 
 @pytest.mark.asyncio
@@ -30,8 +31,7 @@ async def test_denied():
 
 @pytest.mark.asyncio
 async def test_fails_closed_on_error_and_unconfigured():
-    a = Authz("https://fga.example", "store1", "model1",
-              transport=transport(True, status=500))
+    a = Authz("https://fga.example", "store1", "model1", transport=transport(True, status=500))
     assert await a.check("user:u", "can_edit", "x") is False
     assert await Authz("", "", "").check("user:u", "can_edit", "x") is False
 

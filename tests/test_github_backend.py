@@ -38,9 +38,10 @@ class FakeGitHub:
             content = self.files.get((ref, path))
             if content is None:
                 return httpx.Response(404, json={})
-            return httpx.Response(200, json={
-                "content": base64.b64encode(content).decode(),
-                "sha": f"blob-{ref}-{path}"})
+            return httpx.Response(
+                200,
+                json={"content": base64.b64encode(content).decode(), "sha": f"blob-{ref}-{path}"},
+            )
         if m == "PUT" and p.startswith(f"/repos/{REPO}/contents/"):
             path = p.removeprefix(f"/repos/{REPO}/contents/")
             body = json.loads(request.content)
@@ -49,8 +50,9 @@ class FakeGitHub:
             if existing is not None and body.get("sha") != f"blob-{branch}-{path}":
                 return httpx.Response(409, json={"message": "sha mismatch"})
             self.files[(branch, path)] = base64.b64decode(body["content"])
-            return httpx.Response(200, json={"commit": {"sha": "abc123"},
-                                             "content": {"sha": "newblob"}})
+            return httpx.Response(
+                200, json={"commit": {"sha": "abc123"}, "content": {"sha": "newblob"}}
+            )
         if m == "GET" and p == f"/repos/{REPO}/pulls":
             return httpx.Response(200, json=self.prs)
         if m == "POST" and p == f"/repos/{REPO}/pulls":
@@ -90,15 +92,21 @@ def test_ensure_branch_raises_on_unexpected_status(gh):
 def test_write_new_and_update_and_conflict(gh):
     fake, b = gh
     b.ensure_branch(REPO, "curation/jdoe/edits")
-    sha = b.write_file(REPO, "curation/jdoe/edits", "data/y.json", b"{}",
-                       "msg", "J", "j@x")
+    sha = b.write_file(REPO, "curation/jdoe/edits", "data/y.json", b"{}", "msg", "J", "j@x")
     assert sha == "abc123"
     # update with correct current sha (auto-fetched)
-    b.write_file(REPO, "curation/jdoe/edits", "data/y.json", b'{"b": 2}',
-                 "msg2", "J", "j@x")
+    b.write_file(REPO, "curation/jdoe/edits", "data/y.json", b'{"b": 2}', "msg2", "J", "j@x")
     with pytest.raises(ConflictError):
-        b.write_file(REPO, "curation/jdoe/edits", "data/y.json", b'{"c": 3}',
-                     "msg3", "J", "j@x", expected_sha="stale-sha")
+        b.write_file(
+            REPO,
+            "curation/jdoe/edits",
+            "data/y.json",
+            b'{"c": 3}',
+            "msg3",
+            "J",
+            "j@x",
+            expected_sha="stale-sha",
+        )
 
 
 def test_open_pr_idempotent(gh):

@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 import pytest
@@ -13,14 +12,15 @@ CLBDR = ROOT.parent / "clbdr"
 
 pytestmark = pytest.mark.skipif(
     not (CRMEDR.is_dir() and CLBDR.is_dir() and (ROOT / "data/editions").is_dir()),
-    reason="real registries/data not present")
+    reason="real registries/data not present",
+)
 
 
 @pytest.fixture(scope="module")
 def client():
-    settings = Settings(_env_file=None,
-                        data_path=str(ROOT / "data/editions"),
-                        crmedr_path=CRMEDR, clbdr_path=CLBDR)
+    settings = Settings(
+        _env_file=None, data_path=str(ROOT / "data/editions"), crmedr_path=CRMEDR, clbdr_path=CLBDR
+    )
     return TestClient(create_app(settings))
 
 
@@ -47,7 +47,8 @@ def test_year_resolver_hits_1749(client):
 
 def test_full_year_no_crashes(client):
     from martyrology_api.grammar import DAYS_IN_MONTH
-    for month, ndays in DAYS_IN_MONTH.items():
+
+    for month in DAYS_IN_MONTH:
         r = client.get(f"/api/v1/elogia/edition/martyrologium_romanum_1749/{month:02d}")
         assert r.status_code == 200, f"month {month}"
         assert len(r.json()["days"]) > 25

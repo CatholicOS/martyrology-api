@@ -12,8 +12,16 @@ class VcsBackend(Protocol):
 
     def read_file(self, repo: str, branch: str, path: str) -> tuple[bytes, str] | None: ...
 
-    def write_file(self, repo: str, branch: str, path: str, content: bytes,
-                   message: str, author_name: str, author_email: str,
-                   expected_sha: str | None = None) -> str: ...
+    def write_file(
+        self,
+        repo: str,
+        branch: str,
+        path: str,
+        content: bytes,
+        message: str,
+        author_name: str,
+        author_email: str,
+        expected_sha: str | None = None,
+    ) -> str: ...
 
     def open_pr(self, repo: str, branch: str, title: str) -> str: ...

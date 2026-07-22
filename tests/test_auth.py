@@ -1,5 +1,3 @@
-import json
-
 import httpx2 as httpx
 import pytest
 
@@ -12,33 +10,35 @@ def mock_transport(active: bool):
     def handler(request: httpx.Request) -> httpx.Response:
         CALLS["n"] += 1
         assert request.url.path.endswith("/oauth/v2/introspect")
-        body = {"active": active, "sub": "u123", "username": "jdoe",
-                "email": "j@example.org", "name": "J. Doe"}
+        body = {
+            "active": active,
+            "sub": "u123",
+            "username": "jdoe",
+            "email": "j@example.org",
+            "name": "J. Doe",
+        }
         return httpx.Response(200, json=body)
+
     return httpx.MockTransport(handler)
 
 
 @pytest.mark.asyncio
 async def test_active_token_yields_identity():
-    a = Authenticator("https://zitadel.example", "cid", "sec",
-                      transport=mock_transport(True))
+    a = Authenticator("https://zitadel.example", "cid", "sec", transport=mock_transport(True))
     ident = await a.identity("tok1")
-    assert ident == Identity(subject="u123", username="jdoe",
-                             email="j@example.org", name="J. Doe")
+    assert ident == Identity(subject="u123", username="jdoe", email="j@example.org", name="J. Doe")
 
 
 @pytest.mark.asyncio
 async def test_inactive_token_is_none():
-    a = Authenticator("https://zitadel.example", "cid", "sec",
-                      transport=mock_transport(False))
+    a = Authenticator("https://zitadel.example", "cid", "sec", transport=mock_transport(False))
     assert await a.identity("tok2") is None
 
 
 @pytest.mark.asyncio
 async def test_cache_avoids_second_call():
     CALLS["n"] = 0
-    a = Authenticator("https://zitadel.example", "cid", "sec",
-                      transport=mock_transport(True))
+    a = Authenticator("https://zitadel.example", "cid", "sec", transport=mock_transport(True))
     await a.identity("tok3")
     await a.identity("tok3")
     assert CALLS["n"] == 1
@@ -54,14 +54,14 @@ def mock_transport_status(status: int):
     def handler(request: httpx.Request) -> httpx.Response:
         CALLS["n"] += 1
         return httpx.Response(status, json={"active": False})
+
     return httpx.MockTransport(handler)
 
 
 @pytest.mark.asyncio
 async def test_non_200_introspection_is_not_cached_and_is_retried():
     CALLS["n"] = 0
-    a = Authenticator("https://zitadel.example", "cid", "sec",
-                      transport=mock_transport_status(500))
+    a = Authenticator("https://zitadel.example", "cid", "sec", transport=mock_transport_status(500))
     assert await a.identity("tokErr") is None
     assert await a.identity("tokErr") is None
     assert CALLS["n"] == 2
@@ -69,8 +69,9 @@ async def test_non_200_introspection_is_not_cached_and_is_retried():
 
 @pytest.mark.asyncio
 async def test_cache_stays_bounded():
-    a = Authenticator("https://zitadel.example", "cid", "sec", cache_max=3,
-                      transport=mock_transport(True))
+    a = Authenticator(
+        "https://zitadel.example", "cid", "sec", cache_max=3, transport=mock_transport(True)
+    )
     for i in range(10):
         await a.identity(f"tok-bound-{i}")
     assert len(a._cache) <= 3

@@ -16,9 +16,15 @@ class Identity:
 
 
 class Authenticator:
-    def __init__(self, issuer: str, client_id: str, client_secret: str,
-                 cache_ttl: int = 300, cache_max: int = 10_000,
-                 transport: httpx.AsyncBaseTransport | None = None):
+    def __init__(
+        self,
+        issuer: str,
+        client_id: str,
+        client_secret: str,
+        cache_ttl: int = 300,
+        cache_max: int = 10_000,
+        transport: httpx.AsyncBaseTransport | None = None,
+    ):
         self.issuer = issuer.rstrip("/")
         self.client_id = client_id
         self.client_secret = client_secret
@@ -48,7 +54,8 @@ class Authenticator:
             resp = await client.post(
                 f"{self.issuer}/oauth/v2/introspect",
                 data={"token": token},
-                auth=(self.client_id, self.client_secret))
+                auth=(self.client_id, self.client_secret),
+            )
         if resp.status_code != 200:
             # Don't cache failures from the introspection endpoint itself
             # (outage, rate limit, etc.) — only cache a definitive answer.
@@ -58,9 +65,10 @@ class Authenticator:
         if body.get("active"):
             ident = Identity(
                 subject=body["sub"],
-                username=body.get("username") or body.get("preferred_username")
-                         or body["sub"],
-                email=body.get("email"), name=body.get("name"))
+                username=body.get("username") or body.get("preferred_username") or body["sub"],
+                email=body.get("email"),
+                name=body.get("name"),
+            )
         self._insert_cache(token, ident)
         return ident
 
@@ -71,11 +79,13 @@ async def get_identity(request: Request) -> Identity | None:
         return None
     scheme, _, token = header.partition(" ")
     if scheme.lower() != "bearer" or not token:
-        raise ApiProblem(401, "Invalid Authorization header",
-                         detail="Expected 'Authorization: Bearer <token>'.",
-                         type_slug="invalid-token")
+        raise ApiProblem(
+            401,
+            "Invalid Authorization header",
+            detail="Expected 'Authorization: Bearer <token>'.",
+            type_slug="invalid-token",
+        )
     ident = await request.app.state.authenticator.identity(token.strip())
     if ident is None:
-        raise ApiProblem(401, "Invalid or expired token",
-                         type_slug="invalid-token")
+        raise ApiProblem(401, "Invalid or expired token", type_slug="invalid-token")
     return ident

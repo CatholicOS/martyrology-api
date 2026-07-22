@@ -8,9 +8,11 @@ def make_store(crmedr_path, clbdr_path, data_paths) -> Store:
 
 def test_available_and_shape(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
-    assert s.available() == {"martyrologium_romanum_1749",
-                             "martyrologium_romanum_2004",
-                             "martyrologium_romanum_2004_it_IT"}
+    assert s.available() == {
+        "martyrologium_romanum_1749",
+        "martyrologium_romanum_2004",
+        "martyrologium_romanum_2004_it_IT",
+    }
     assert s.shape("martyrologium_romanum_1749") == "day-structured"
     assert s.shape("martyrologium_romanum_2004") == "flat"
 
@@ -22,7 +24,11 @@ def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
     ids = [e.id for e in d.elogia]
     assert ids == ["mr:0101-circumcisio-domini", "mr:0102-concordius"]
     conc = d.elogia[1]
-    assert (conc.entry, conc.anchor_month, conc.anchor_day) == (2, 1, 2)  # printed position 2, anchored 01-02
+    assert (conc.entry, conc.anchor_month, conc.anchor_day) == (
+        2,
+        1,
+        2,
+    )  # printed position 2, anchored 01-02
     assert d.conclusio.startswith("Et alibi")
 
 
@@ -60,7 +66,9 @@ def test_find_by_slug_on_printed_day(crmedr_path, clbdr_path, data_paths):
     hit = s.find_by_slug("martyrologium_romanum_1749", 1, 1, "concordius")
     assert hit is not None and hit.id == "mr:0102-concordius"
     assert s.find_by_slug("martyrologium_romanum_1749", 1, 2, "concordius") is None
-    assert s.find_by_slug("martyrologium_romanum_2004", 1, 2, "concordius").id == "mr:0102-concordius"
+    assert (
+        s.find_by_slug("martyrologium_romanum_2004", 1, 2, "concordius").id == "mr:0102-concordius"
+    )
 
 
 def test_placements_cross_edition(crmedr_path, clbdr_path, data_paths):

@@ -83,8 +83,7 @@ def test_cross_day_slug_on_printed_day(client):
 
 
 def test_accept_language_influences_resolution(client):
-    b = client.get("/api/v1/elogia/nation/IT/01/01",
-                   headers={"Accept-Language": "la"}).json()
+    b = client.get("/api/v1/elogia/nation/IT/01/01", headers={"Accept-Language": "la"}).json()
     assert b["metadata"]["edition"] == "martyrologium_romanum_2004"
 
 
@@ -98,16 +97,15 @@ def test_elogium_cross_edition(client):
 
 
 def test_elogium_editions_filter(client):
-    b = client.get("/api/v1/elogium/mr:0102-concordius"
-                   "?editions=martyrologium_romanum_1749").json()
+    b = client.get("/api/v1/elogium/mr:0102-concordius?editions=martyrologium_romanum_1749").json()
     assert list(b["editions"]) == ["martyrologium_romanum_1749"]
 
 
 def test_errors(client):
     assert client.get("/api/v1/elogia/13/01").status_code == 400
     assert client.get("/api/v1/elogia/edition/nope_1000/01/01").status_code == 404
-    assert client.get("/api/v1/elogia/03/05").status_code == 404          # no data
-    assert client.get("/api/v1/elogia/1500/01/01").status_code == 404     # pre-1584
+    assert client.get("/api/v1/elogia/03/05").status_code == 404  # no data
+    assert client.get("/api/v1/elogia/1500/01/01").status_code == 404  # pre-1584
     assert client.get("/api/v1/elogium/mr:9999-nobody").status_code == 404
-    r = client.get("/api/v1/elogia/nation/IT/1600/01/01")                 # -> 1584, textless
+    r = client.get("/api/v1/elogia/nation/IT/1600/01/01")  # -> 1584, textless
     assert r.status_code == 404 and r.json()["edition"] == "martyrologium_romanum_1584"

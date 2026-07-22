@@ -55,9 +55,12 @@ class EditionMeta:
 
 
 class Registry:
-    def __init__(self, entries: dict[str, IdEntry],
-                 editions: dict[str, EditionMeta],
-                 i18n: dict[str, dict[str, str]]):
+    def __init__(
+        self,
+        entries: dict[str, IdEntry],
+        editions: dict[str, EditionMeta],
+        i18n: dict[str, dict[str, str]],
+    ):
         self.entries = entries
         self.editions = editions
         self._i18n = i18n
@@ -69,11 +72,19 @@ class Registry:
         return sorted(self._i18n)
 
     def ids_for_day(self, month: int, day: int) -> list[IdEntry]:
-        found = [e for e in self.entries.values()
-                 if not e.deprecated and e.month == month and e.day == day]
-        return sorted(found, key=lambda e: (not e.unnumbered,
-                                             e.entry if e.entry is not None else float("inf"),
-                                             e.id))
+        found = [
+            e
+            for e in self.entries.values()
+            if not e.deprecated and e.month == month and e.day == day
+        ]
+        return sorted(
+            found,
+            key=lambda e: (
+                not e.unnumbered,
+                e.entry if e.entry is not None else float("inf"),
+                e.id,
+            ),
+        )
 
     @classmethod
     def load(cls, crmedr_path: Path, clbdr_path: Path) -> "Registry":
@@ -81,15 +92,25 @@ class Registry:
         entries: dict[str, IdEntry] = {}
         for e in raw["entries"]:
             entries[e["id"]] = IdEntry(
-                id=e["id"], month=e["month"], day=e["day"], entry=e["entry"],
-                asterisk=e.get("asterisk", False), country=e.get("country"),
-                unnumbered=e.get("unnumbered", False))
+                id=e["id"],
+                month=e["month"],
+                day=e["day"],
+                entry=e["entry"],
+                asterisk=e.get("asterisk", False),
+                country=e.get("country"),
+                unnumbered=e.get("unnumbered", False),
+            )
         dep_raw = json.loads((crmedr_path / "data/deprecated_ids.json").read_text())
         dep_subjects_la: dict[str, str] = {}
         for e in dep_raw:
             entries[e["id"]] = IdEntry(
-                id=e["id"], month=e["month"], day=e["day"], entry=e["entry"],
-                deprecated=True, attested_in=e.get("attested_in"))
+                id=e["id"],
+                month=e["month"],
+                day=e["day"],
+                entry=e["entry"],
+                deprecated=True,
+                attested_in=e.get("attested_in"),
+            )
             if e.get("subject_la"):
                 dep_subjects_la[e["id"]] = e["subject_la"]
 
@@ -106,10 +127,16 @@ class Registry:
             if e.get("book") != MARTYROLOGY_BOOK:
                 continue
             editions[e["id"]] = EditionMeta(
-                id=e["id"], nature=e["nature"], language=e["language"],
-                scope=e["scope"], promulgated=str(e["promulgated"]),
+                id=e["id"],
+                nature=e["nature"],
+                language=e["language"],
+                scope=e["scope"],
+                promulgated=str(e["promulgated"]),
                 promulgated_year=int(str(e["promulgated"])[:4]),
-                decree=e.get("decree"), predecessor=e.get("predecessor"),
-                successor=e.get("successor"), translation_of=e.get("translation_of"),
-                note=e.get("note"))
+                decree=e.get("decree"),
+                predecessor=e.get("predecessor"),
+                successor=e.get("successor"),
+                translation_of=e.get("translation_of"),
+                note=e.get("note"),
+            )
         return cls(entries, editions, i18n)

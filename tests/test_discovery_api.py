@@ -16,8 +16,11 @@ def test_editions_discovery(client):
     assert e2004["governance"]["type"] == "dicastery"
     assert e2004["promulgation"]["decree"].startswith("Congregatio")
     it = eds["martyrologium_romanum_2004_it_IT"]
-    assert it["governance"] == {"governing_body": "Conferenza Episcopale Italiana",
-                                "type": "bishops_conference", "nation": "IT"}
+    assert it["governance"] == {
+        "governing_body": "Conferenza Episcopale Italiana",
+        "type": "bishops_conference",
+        "nation": "IT",
+    }
     assert it["scope"] == {"type": "nation", "nation": "IT"}
     assert eds["martyrologium_romanum_1584"]["availability"]["status"] == "unavailable"
     assert eds["martyrologium_romanum_1749"]["availability"]["status"] == "public"

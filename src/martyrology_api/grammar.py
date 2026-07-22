@@ -3,8 +3,20 @@ from dataclasses import dataclass
 
 from .problems import ApiProblem
 
-DAYS_IN_MONTH = {1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30,
-                 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+DAYS_IN_MONTH = {
+    1: 31,
+    2: 29,
+    3: 31,
+    4: 30,
+    5: 31,
+    6: 30,
+    7: 31,
+    8: 31,
+    9: 30,
+    10: 31,
+    11: 30,
+    12: 31,
+}
 SLUG_RE = re.compile(r"^[a-z0-9-]+$")
 NATION_RE = re.compile(r"^[A-Z]{2}$")
 
@@ -20,8 +32,7 @@ class ElogiaRequest:
 
 
 def _bad(detail: str) -> ApiProblem:
-    return ApiProblem(400, "Malformed elogia path", detail=detail,
-                      type_slug="malformed-path")
+    return ApiProblem(400, "Malformed elogia path", detail=detail, type_slug="malformed-path")
 
 
 def parse_elogia_path(path: str) -> ElogiaRequest:
@@ -47,14 +58,15 @@ def parse_elogia_path(path: str) -> ElogiaRequest:
     seg = segs[0]
     if not re.fullmatch(r"\d{2}", seg) or not 1 <= int(seg) <= 12:
         if seg.isdigit() and len(seg) >= 3:
-            raise _bad(f"invalid segment '{seg}' (expected a 4-digit year not "
-                       "starting with 0, or a 2-digit month 01-12)")
+            raise _bad(
+                f"invalid segment '{seg}' (expected a 4-digit year not "
+                "starting with 0, or a 2-digit month 01-12)"
+            )
         raise _bad(f"invalid month segment '{seg}' (expected 01-12)")
     req.month, segs = int(seg), segs[1:]
 
     if segs:
-        if not re.fullmatch(r"\d{2}", segs[0]) or \
-                not 1 <= int(segs[0]) <= DAYS_IN_MONTH[req.month]:
+        if not re.fullmatch(r"\d{2}", segs[0]) or not 1 <= int(segs[0]) <= DAYS_IN_MONTH[req.month]:
             raise _bad(f"invalid day segment '{segs[0]}' for month {req.month:02d}")
         req.day, segs = int(segs[0]), segs[1:]
 

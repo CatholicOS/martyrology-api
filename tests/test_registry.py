@@ -13,7 +13,12 @@ def test_editions_filtered_to_martyrology(crmedr_path, clbdr_path):
     reg = Registry.load(crmedr_path, clbdr_path)
     assert "missale_romanum_1570" not in reg.editions
     e = reg.editions["martyrologium_romanum_2004_it_IT"]
-    assert (e.nature, e.scope, e.language, e.promulgated_year) == ("editio_vernacula", "IT", "it-IT", 2004)
+    assert (e.nature, e.scope, e.language, e.promulgated_year) == (
+        "editio_vernacula",
+        "IT",
+        "it-IT",
+        2004,
+    )
     assert reg.editions["martyrologium_romanum_1584"].promulgated_year == 1584
 
 

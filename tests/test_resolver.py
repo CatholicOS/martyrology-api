@@ -1,8 +1,7 @@
 import pytest
 
 from martyrology_api.registry import Registry
-from martyrology_api.resolver import (EditionUnavailableError,
-                                      PreFirstEditionError, resolve)
+from martyrology_api.resolver import EditionUnavailableError, PreFirstEditionError, resolve
 
 
 @pytest.fixture
@@ -10,8 +9,11 @@ def reg(crmedr_path, clbdr_path):
     return Registry.load(crmedr_path, clbdr_path)
 
 
-AVAILABLE = {"martyrologium_romanum_1749", "martyrologium_romanum_2004",
-             "martyrologium_romanum_2004_it_IT"}
+AVAILABLE = {
+    "martyrologium_romanum_1749",
+    "martyrologium_romanum_2004",
+    "martyrologium_romanum_2004_it_IT",
+}
 
 
 def test_universal_default_is_2004(reg):
@@ -81,10 +83,16 @@ def test_locale_year_falls_back_to_universal_latin(reg):
 
 def test_translations_never_win_without_locale(reg):
     from martyrology_api.registry import EditionMeta
+
     reg.editions["martyrologium_romanum_2010_en_unofficial"] = EditionMeta(
-        id="martyrologium_romanum_2010_en_unofficial", nature="translatio",
-        language="en", scope="universal", promulgated="2010",
-        promulgated_year=2010, translation_of="martyrologium_romanum_2004")
+        id="martyrologium_romanum_2010_en_unofficial",
+        nature="translatio",
+        language="en",
+        scope="universal",
+        promulgated="2010",
+        promulgated_year=2010,
+        translation_of="martyrologium_romanum_2004",
+    )
     avail = AVAILABLE | {"martyrologium_romanum_2010_en_unofficial"}
     r = resolve(reg, avail)
     assert r.edition_id == "martyrologium_romanum_2004"
@@ -94,8 +102,14 @@ def test_translations_never_win_without_locale(reg):
 
 def test_locale_fallback_never_leaks_foreign_scope(reg):
     from martyrology_api.registry import EditionMeta
+
     reg.editions["martyrologium_romanum_2005_la_DE"] = EditionMeta(
-        id="martyrologium_romanum_2005_la_DE", nature="editio_vernacula",
-        language="la", scope="DE", promulgated="2005", promulgated_year=2005)
+        id="martyrologium_romanum_2005_la_DE",
+        nature="editio_vernacula",
+        language="la",
+        scope="DE",
+        promulgated="2005",
+        promulgated_year=2005,
+    )
     r = resolve(reg, AVAILABLE, nation="IT", locale="la")
     assert r.edition_id == "martyrologium_romanum_2004"

@@ -16,8 +16,7 @@ class LocalGitBackend:
         return p
 
     def _git(self, cwd: Path, *args: str, check: bool = True):
-        return subprocess.run(["git", *args], cwd=cwd, check=check,
-                              capture_output=True, text=False)
+        return subprocess.run(["git", *args], cwd=cwd, check=check, capture_output=True, text=False)
 
     def _default_branch(self, repo: str) -> str:
         out = self._git(self._bare(repo), "symbolic-ref", "HEAD").stdout
@@ -28,8 +27,9 @@ class LocalGitBackend:
 
     def ensure_branch(self, repo: str, branch: str) -> None:
         bare = self._bare(repo)
-        exists = self._git(bare, "show-ref", "--verify", "--quiet",
-                           f"refs/heads/{branch}", check=False)
+        exists = self._git(
+            bare, "show-ref", "--verify", "--quiet", f"refs/heads/{branch}", check=False
+        )
         if exists.returncode != 0:
             self._git(bare, "branch", branch, self._default_branch(repo))
 
@@ -41,9 +41,17 @@ class LocalGitBackend:
         sha = self._git(bare, "rev-parse", f"{branch}:{path}").stdout.decode().strip()
         return show.stdout, sha
 
-    def write_file(self, repo: str, branch: str, path: str, content: bytes,
-                   message: str, author_name: str, author_email: str,
-                   expected_sha: str | None = None) -> str:
+    def write_file(
+        self,
+        repo: str,
+        branch: str,
+        path: str,
+        content: bytes,
+        message: str,
+        author_name: str,
+        author_email: str,
+        expected_sha: str | None = None,
+    ) -> str:
         self.ensure_branch(repo, branch)
         if expected_sha is not None:
             current = self.read_file(repo, branch, path)
@@ -52,17 +60,25 @@ class LocalGitBackend:
         bare = self._bare(repo)
         with tempfile.TemporaryDirectory() as tmp:
             wc = Path(tmp) / "wc"
-            self._git(Path(tmp), "clone", "--branch", branch, "--single-branch",
-                      str(bare), str(wc))
+            self._git(Path(tmp), "clone", "--branch", branch, "--single-branch", str(bare), str(wc))
             target = wc / path
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(content)
             self._git(wc, "add", path)
-            self._git(wc, "-c", f"user.name={author_name}",
-                      "-c", f"user.email={author_email}",
-                      "-c", "commit.gpgsign=false",
-                      "commit", "-m", message,
-                      "--author", f"{author_name} <{author_email}>")
+            self._git(
+                wc,
+                "-c",
+                f"user.name={author_name}",
+                "-c",
+                f"user.email={author_email}",
+                "-c",
+                "commit.gpgsign=false",
+                "commit",
+                "-m",
+                message,
+                "--author",
+                f"{author_name} <{author_email}>",
+            )
             self._git(wc, "push", "origin", branch)
             return self._git(wc, "rev-parse", "HEAD").stdout.decode().strip()
 

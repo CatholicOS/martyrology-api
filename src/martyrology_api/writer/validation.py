@@ -17,21 +17,24 @@ def _check_id(cid: str, registry: Registry, errors: list[str]) -> bool:
     return True
 
 
-def validate_month_payload(raw: dict, month: int, shape: str,
-                           registry: Registry) -> list[str]:
+def validate_month_payload(raw: dict, month: int, shape: str, registry: Registry) -> list[str]:
     errors: list[str] = []
     if shape == "flat":
         for cid, text in raw.items():
             if _check_id(cid, registry, errors) and anchor_day(cid)[0] != month:
-                errors.append(f"'{cid}' is anchored to month {anchor_day(cid)[0]:02d}, "
-                              f"not {month:02d} (flat editions follow registry placement)")
+                errors.append(
+                    f"'{cid}' is anchored to month {anchor_day(cid)[0]:02d}, "
+                    f"not {month:02d} (flat editions follow registry placement)"
+                )
             if not isinstance(text, str) or not text.strip():
                 errors.append(f"text for '{cid}' must be a non-empty string")
         return errors
 
     seen: dict[str, str] = {}
     for day_key, obj in raw.items():
-        if not re.fullmatch(r"[1-9][0-9]?", day_key) or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(month, 0):
+        if not re.fullmatch(r"[1-9][0-9]?", day_key) or not 1 <= int(day_key) <= DAYS_IN_MONTH.get(
+            month, 0
+        ):
             errors.append(f"invalid day key '{day_key}' for month {month:02d} (unpadded 1-31)")
             continue
         if not isinstance(obj, dict):
@@ -60,6 +63,10 @@ def validate_month_payload(raw: dict, month: int, shape: str,
 def validate_or_raise(raw: dict, month: int, shape: str, registry: Registry) -> None:
     errors = validate_month_payload(raw, month, shape, registry)
     if errors:
-        raise ApiProblem(422, "Invalid month payload",
-                         detail=f"{len(errors)} validation error(s)",
-                         type_slug="invalid-payload", errors=errors)
+        raise ApiProblem(
+            422,
+            "Invalid month payload",
+            detail=f"{len(errors)} validation error(s)",
+            type_slug="invalid-payload",
+            errors=errors,
+        )

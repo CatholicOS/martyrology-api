@@ -38,14 +38,18 @@ def make_client(crmedr_path, clbdr_path, data_paths):
     keyword overrides (e.g. local_git_root=...) to customize. Auth/authz
     stubbing stays per-test-file: set `client.app.state.authenticator`
     and `.authz` on the returned TestClient as needed."""
+
     def _make(**settings_overrides) -> TestClient:
         kwargs = dict(
             _env_file=None,
             data_path=os.pathsep.join(str(p) for p in data_paths),
-            crmedr_path=crmedr_path, clbdr_path=clbdr_path)
+            crmedr_path=crmedr_path,
+            clbdr_path=clbdr_path,
+        )
         kwargs.update(settings_overrides)
         settings = Settings(**kwargs)
         return TestClient(create_app(settings))
+
     return _make
 
 

@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
+
 from martyrology_api.problems import ApiProblem, install_problem_handlers
 
 
