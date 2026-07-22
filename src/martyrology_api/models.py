@@ -41,7 +41,7 @@ class MetadataOut(BaseModel):
 
 
 class ElogiumOut(BaseModel):
-    id: str
+    id: str | None
     entry: int | None
     asterisk: bool
     unnumbered: bool
@@ -103,6 +103,7 @@ class EditionOut(BaseModel):
     successor: str | None = None
     governance: GovernanceOut
     availability: AvailabilityOut
+    aligned: bool | None = None
 
 
 class EditionsOut(BaseModel):

@@ -13,6 +13,7 @@ from ..models import (
 )
 from ..problems import ApiProblem
 from ..registry import EditionMeta
+from ..store import Store
 
 router = APIRouter()
 
@@ -38,7 +39,9 @@ def availability_status(edition_id: str, available: set[str], settings: Settings
     return "public" if edition_id in available else "unavailable"
 
 
-def _edition_out(e: EditionMeta, available: set[str], settings: Settings) -> EditionOut:
+def _edition_out(
+    e: EditionMeta, available: set[str], settings: Settings, store: Store
+) -> EditionOut:
     status = availability_status(e.id, available, settings)
     note = None
     if status == "restricted-texts":
@@ -56,16 +59,18 @@ def _edition_out(e: EditionMeta, available: set[str], settings: Settings) -> Edi
         successor=e.successor,
         governance=governance_for(e.scope),
         availability=AvailabilityOut(status=status, note=note),
+        aligned=store.aligned(e.id),
     )
 
 
 @router.get("/editions")
 def get_editions(request: Request) -> EditionsOut:
     registry = request.app.state.registry
-    available = request.app.state.store.available()
+    store = request.app.state.store
+    available = store.available()
     settings = request.app.state.settings
     eds = sorted(registry.editions.values(), key=lambda e: (e.promulgated_year, e.id))
-    return EditionsOut(editions=[_edition_out(e, available, settings) for e in eds])
+    return EditionsOut(editions=[_edition_out(e, available, settings, store) for e in eds])
 
 
 @router.get("/elogia")

@@ -7,7 +7,7 @@ from .registry import Registry, anchor_day, slug_of
 
 @dataclass
 class Elogium:
-    id: str
+    id: str | None
     text: str | None
     entry: int | None
     asterisk: bool
@@ -60,10 +60,26 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
     if shape == "day-structured":
         for day_key, obj in raw.items():
             day = int(day_key)
-            elogia = [
-                _elogium(cid, text, i + 1, registry)
-                for i, (cid, text) in enumerate(obj.get("elogia", {}).items())
-            ]
+            raw_elogia = obj.get("elogia", {})
+            if isinstance(raw_elogia, list):
+                # Unaligned digitization: no canonical IDs assigned yet.
+                elogia = [
+                    Elogium(
+                        id=None,
+                        text=item,
+                        entry=i + 1,
+                        asterisk=False,
+                        unnumbered=False,
+                        anchor_month=month,
+                        anchor_day=day,
+                    )
+                    for i, item in enumerate(raw_elogia)
+                ]
+            else:
+                elogia = [
+                    _elogium(cid, text, i + 1, registry)
+                    for i, (cid, text) in enumerate(raw_elogia.items())
+                ]
             days[day] = DayData(
                 month=month,
                 day=day,
@@ -113,6 +129,7 @@ class Store:
                     self._dirs.setdefault(d.name, d)
         self._months: dict[tuple[str, int], dict[int, DayData]] = {}
         self._shapes: dict[str, str] = {}
+        self._unaligned_editions: set[str] = set()
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -127,8 +144,12 @@ class Store:
             f = d / f"{month:02d}.json"
             if f.exists():
                 raw = json.loads(f.read_text())
-                self._shapes.setdefault(edition_id, detect_shape(raw))
-                result = parse_month_file(raw, month, self._shapes[edition_id], self.registry)
+                shape = self._shapes.setdefault(edition_id, detect_shape(raw))
+                if shape == "day-structured" and any(
+                    isinstance(obj.get("elogia"), list) for obj in raw.values()
+                ):
+                    self._unaligned_editions.add(edition_id)
+                result = parse_month_file(raw, month, shape, self.registry)
         self._months[key] = result
         return result
 
@@ -138,6 +159,17 @@ class Store:
                 if self._load_month(edition_id, m):
                     break
         return self._shapes.get(edition_id, "day-structured")
+
+    def aligned(self, edition_id: str) -> bool | None:
+        """True when every loaded month of this edition has canonical-ID
+        elogia; False when any loaded month still carries unaligned (list)
+        elogia; None when the edition has no texts on disk in this
+        deployment."""
+        if edition_id not in self._dirs:
+            return None
+        for m in range(1, 13):
+            self._load_month(edition_id, m)
+        return edition_id not in self._unaligned_editions
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
@@ -150,7 +182,7 @@ class Store:
         if d is None:
             return None
         for e in d.elogia:
-            if slug_of(e.id) == slug:
+            if e.id is not None and slug_of(e.id) == slug:
                 return e
         return None
 
