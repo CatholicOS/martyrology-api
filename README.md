@@ -30,6 +30,7 @@ uvicorn martyrology_api.app:create_app --factory --reload
 #   docs at http://localhost:8000/docs
 pytest                       # runs against tests/fixtures; real-data smoke tests
                              # activate when ../crmedr and ../clbdr are checked out
+pytest --cov --cov-branch --cov-report=term-missing  # with coverage report
 ```
 
 Note: the bare `/elogia/01/01` path resolves (by default) to the 2004 editio typica altera, which is not attached in a public-only clone and so returns an honest 404 — use an explicit `edition/martyrologium_romanum_1749/...` path or a year path (e.g. `1970/01/01`) to reach the public-domain sample editions instead.

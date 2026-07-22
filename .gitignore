@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .venv/
 .env
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
