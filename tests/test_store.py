@@ -10,6 +10,7 @@ def test_available_and_shape(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
     assert s.available() == {
         "martyrologium_romanum_1749",
+        "martyrologium_romanum_1914_en_unofficial",
         "martyrologium_romanum_2004",
         "martyrologium_romanum_2004_it_IT",
     }
@@ -84,6 +85,37 @@ def test_placements_cross_edition(crmedr_path, clbdr_path, data_paths):
     assert p["martyrologium_romanum_2004_it_IT"].day_printed == "01-02"
     text_2004 = p["martyrologium_romanum_2004"].text
     assert text_2004 is not None and text_2004.startswith("Spoleti")
+
+
+def test_unaligned_day_returns_null_ids(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    d = s.day("martyrologium_romanum_1914_en_unofficial", 1, 2)
+    assert d is not None
+    assert len(d.elogia) == 2
+    assert [e.id for e in d.elogia] == [None, None]
+    assert [e.entry for e in d.elogia] == [1, 2]
+    assert d.elogia[0].text == "At Spoleto, St. Concordius, priest and martyr."
+    assert d.elogia[1].text == "At Rome, many holy martyrs."
+    assert (d.elogia[0].anchor_month, d.elogia[0].anchor_day) == (1, 2)
+
+
+def test_unaligned_edition_find_by_slug_returns_none(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    assert s.find_by_slug("martyrologium_romanum_1914_en_unofficial", 1, 2, "concordius") is None
+
+
+def test_placements_unaffected_by_unaligned_edition(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    p = {pl.edition_id: pl for pl in s.placements("mr:0102-concordius")}
+    assert "martyrologium_romanum_1914_en_unofficial" not in p
+    assert p["martyrologium_romanum_1749"].day_printed == "01-01"
+
+
+def test_aligned(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    assert s.aligned("martyrologium_romanum_1749") is True
+    assert s.aligned("martyrologium_romanum_1914_en_unofficial") is False
+    assert s.aligned("martyrologium_romanum_1584") is None
 
 
 def test_flat_parse_with_null_entry(crmedr_path, clbdr_path):

@@ -82,6 +82,23 @@ def test_cross_day_slug_on_printed_day(client):
     assert r2.json()["type"].endswith("unknown-eulogy")
 
 
+def test_unaligned_edition_day_returns_null_ids(client):
+    r = client.get("/api/v1/elogia/edition/martyrologium_romanum_1914_en_unofficial/01/02")
+    assert r.status_code == 200
+    b = r.json()
+    assert [e["id"] for e in b["elogia"]] == [None, None]
+    assert b["elogia"][0]["text"] == "At Spoleto, St. Concordius, priest and martyr."
+    assert b["elogia"][1]["text"] == "At Rome, many holy martyrs."
+
+
+def test_unaligned_edition_slug_path_is_404_not_500(client):
+    r = client.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_1914_en_unofficial/01/02/concordius"
+    )
+    assert r.status_code == 404
+    assert r.json()["type"].endswith("unknown-eulogy")
+
+
 def test_accept_language_influences_resolution(client):
     b = client.get("/api/v1/elogia/nation/IT/01/01", headers={"Accept-Language": "la"}).json()
     assert b["metadata"]["edition"] == "martyrologium_romanum_2004"

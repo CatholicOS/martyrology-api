@@ -28,6 +28,17 @@ Each should become its own issue before being picked up.
   `self._dirs.setdefault(d.name, d)` across multiple `data_paths` base dirs,
   so the first path listed silently wins on a naming collision — there is no
   test locking in that precedence, so it could regress unnoticed.
+- **Curation on unaligned editions is unhandled, not yet rejected.**
+  Unaligned (array-`elogia`) editions like
+  `martyrologium_romanum_1914_en_unofficial` are now servable read-only with
+  `id: null` elogia, but curation writes (`PUT`/`PATCH` day or elogium
+  payloads) assume canonical-ID-keyed month files and would currently either
+  corrupt an unaligned month file or fail in an unhelpful way rather than a
+  clear "this edition isn't aligned yet" error. Month-payload validation
+  should reject curation writes to unaligned editions outright; alignment
+  remains a registry-side act (coining/matching canonical IDs, as CRMEDR's
+  `alignment.json` does for the 1749 edition) that must happen before
+  curation can apply to an edition.
 
 ## Catalog / discovery
 

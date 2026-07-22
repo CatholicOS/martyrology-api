@@ -26,6 +26,14 @@ def test_editions_discovery(client):
     assert eds["martyrologium_romanum_1749"]["availability"]["status"] == "public"
 
 
+def test_editions_aligned_flag(client):
+    r = client.get("/api/v1/editions")
+    eds = {e["edition_id"]: e for e in r.json()["editions"]}
+    assert eds["martyrologium_romanum_1749"]["aligned"] is True
+    assert eds["martyrologium_romanum_1914_en_unofficial"]["aligned"] is False
+    assert eds["martyrologium_romanum_1584"]["aligned"] is None
+
+
 def test_catalog_default(client):
     r = client.get("/api/v1/elogia")
     assert r.status_code == 200

@@ -178,7 +178,7 @@ async def get_elogia(
             redact(c.elogia)
         return DayOut(metadata=metadata, titulus=c.titulus, elogia=c.elogia, conclusio=c.conclusio)
 
-    hit = next((e for e in day_data.elogia if slug_of(e.id) == req.slug), None)
+    hit = next((e for e in day_data.elogia if e.id is not None and slug_of(e.id) == req.slug), None)
     if hit is None:
         raise ApiProblem(
             404,
