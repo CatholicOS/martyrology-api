@@ -1,5 +1,8 @@
 # Roman Martyrology API
 
+[![CI](https://github.com/CatholicOS/martyrology-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CatholicOS/martyrology-api/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/CatholicOS/martyrology-api/graph/badge.svg?token=5O0XYBCPCV)](https://codecov.io/gh/CatholicOS/martyrology-api)
+
 A companion API to the [Liturgical Calendar API](https://github.com/Liturgical-Calendar/LiturgicalCalendarAPI), serving the eulogies (elogia) of the Roman Martyrology for any given liturgical day — a project of the [Catholic Digital Commons Foundation](https://github.com/CatholicOS), curated by a **CDCF Project Committee**. (The canonicalized identifiers and data standards this API builds on — [CRMEDR](https://github.com/CatholicOS/crmedr), [CLBDR](https://github.com/CatholicOS/clbdr), [CECDR](https://github.com/CatholicOS/cecdr), [CICLSALDR](https://github.com/CatholicOS/ciclsaldr) — are curated separately by the Catholic Engineering Task Force.)
 
 ## The copyright problem, and the architecture that solves it
