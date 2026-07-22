@@ -65,7 +65,7 @@ def get_catalog(request: Request, locale: str = "la",
                          type_slug="unknown-edition")
     subjects = registry.subjects(locale)
     items = []
-    for e in sorted(registry.entries.values(), key=lambda x: (x.month, x.day, x.entry)):
+    for e in sorted(registry.entries.values(), key=lambda x: (x.month, x.day, x.entry if x.entry is not None else float('inf'), x.id)):
         item = CatalogEntryOut(id=e.id, subject=subjects.get(e.id),
                                anchor_day=f"{e.month:02d}-{e.day:02d}",
                                deprecated=e.deprecated)

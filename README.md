@@ -18,6 +18,23 @@ See [docs/architecture.md](docs/architecture.md) for the data contract, the depl
 
 Design phase. The data layer exists (CRMEDR registry public; texts extracted and keyed privately); the API surface and implementation stack are being defined. Contributions and discussion are welcome on the issues.
 
+## Running the API
+
+```bash
+pip install -e '.[dev]'
+cp .env.example .env        # defaults serve the public-domain editions
+uvicorn martyrology_api.app:create_app --factory --reload
+# then e.g.:
+#   GET http://localhost:8000/api/v1/editions
+#   GET http://localhost:8000/api/v1/elogia/edition/martyrologium_romanum_1749/01/02
+#   docs at http://localhost:8000/docs
+pytest                       # runs against tests/fixtures; real-data smoke tests
+                             # activate when ../crmedr and ../clbdr are checked out
+```
+
+The API surface, response model, auth and curation design are specified in
+[docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md](docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md).
+
 ## Licensing
 
 The code in this repository is licensed under Apache-2.0. The eulogy texts of the 2004 editions are **not** part of this repository and are not redistributable; should an agreement with the rights holders be reached, texts could be served publicly without changing this architecture.
