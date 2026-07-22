@@ -63,4 +63,5 @@ def test_bad_paths(bad):
 def test_ambiguous_numeric_segment_error_mentions_year_and_month():
     with pytest.raises(ApiProblem) as ei:
         parse_elogia_path("0170/01")
+    assert ei.value.detail is not None
     assert "4-digit year" in ei.value.detail and "2-digit month" in ei.value.detail

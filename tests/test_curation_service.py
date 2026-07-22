@@ -85,7 +85,10 @@ def service(tmp_path, crmedr_path, clbdr_path):
         },
     )
     settings = Settings(
-        _env_file=None, crmedr_path=crmedr_path, clbdr_path=clbdr_path, local_git_root=str(root)
+        _env_file=None,  # pyright: ignore[reportCallIssue]
+        crmedr_path=crmedr_path,
+        clbdr_path=clbdr_path,
+        local_git_root=str(root),
     )
     registry = Registry.load(crmedr_path, clbdr_path)
     return CurationService(LocalGitBackend(root), registry, settings)
@@ -274,7 +277,10 @@ def test_create_edition_probes_actual_default_branch(tmp_path, crmedr_path, clbd
     run(["git", "push", "origin", "trunk"], seed)
 
     settings = Settings(
-        _env_file=None, crmedr_path=crmedr_path, clbdr_path=clbdr_path, local_git_root=str(root)
+        _env_file=None,  # pyright: ignore[reportCallIssue]
+        crmedr_path=crmedr_path,
+        clbdr_path=clbdr_path,
+        local_git_root=str(root),
     )
     registry = Registry.load(crmedr_path, clbdr_path)
     svc = CurationService(LocalGitBackend(root), registry, settings)

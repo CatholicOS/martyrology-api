@@ -23,7 +23,7 @@ class Authz:
     async def check(self, user: str, relation: str, edition_id: str) -> bool:
         if not self.api_url or not self.store_id:
             return False
-        body = {
+        body: dict[str, object] = {
             "tuple_key": {"user": user, "relation": relation, "object": f"edition:{edition_id}"}
         }
         if self.model_id:

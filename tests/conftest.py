@@ -40,14 +40,13 @@ def make_client(crmedr_path, clbdr_path, data_paths):
     and `.authz` on the returned TestClient as needed."""
 
     def _make(**settings_overrides) -> TestClient:
-        kwargs = dict(
-            _env_file=None,
+        kwargs: dict[str, object] = dict(
             data_path=os.pathsep.join(str(p) for p in data_paths),
             crmedr_path=crmedr_path,
             clbdr_path=clbdr_path,
         )
         kwargs.update(settings_overrides)
-        settings = Settings(**kwargs)
+        settings = Settings(_env_file=None, **kwargs)  # pyright: ignore[reportCallIssue]
         return TestClient(create_app(settings))
 
     return _make

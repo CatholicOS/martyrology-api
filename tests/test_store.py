@@ -20,7 +20,8 @@ def test_available_and_shape(crmedr_path, clbdr_path, data_paths):
 def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
     d = s.day("martyrologium_romanum_1749", 1, 1)
-    assert d.titulus.startswith("1 Januarii")
+    assert d is not None
+    assert d.titulus is not None and d.titulus.startswith("1 Januarii")
     ids = [e.id for e in d.elogia]
     assert ids == ["mr:0101-circumcisio-domini", "mr:0102-concordius"]
     conc = d.elogia[1]
@@ -29,12 +30,13 @@ def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
         1,
         2,
     )  # printed position 2, anchored 01-02
-    assert d.conclusio.startswith("Et alibi")
+    assert d.conclusio is not None and d.conclusio.startswith("Et alibi")
 
 
 def test_flat_day_uses_registry_placement(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
     d = s.day("martyrologium_romanum_2004", 1, 1)
+    assert d is not None
     assert d.titulus is None and d.conclusio is None
     ids = [e.id for e in d.elogia]
     assert ids == ["mr:0101-maria-dei-genetrix", "mr:0101-basilius"]
@@ -45,13 +47,17 @@ def test_flat_day_uses_registry_placement(crmedr_path, clbdr_path, data_paths):
 def test_flat_day_omits_ids_without_text(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
     d = s.day("martyrologium_romanum_2004_it_IT", 1, 1)
+    assert d is not None
     assert [e.id for e in d.elogia] == ["mr:0101-maria-dei-genetrix"]  # basilius has no it text
 
 
 def test_leap_day(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
-    assert [e.id for e in s.day("martyrologium_romanum_2004", 2, 29).elogia] == ["mr:0229-oswaldus"]
-    assert [e.id for e in s.day("martyrologium_romanum_1749", 2, 29).elogia] == ["mr:0229-oswaldus"]
+    d_2004 = s.day("martyrologium_romanum_2004", 2, 29)
+    d_1749 = s.day("martyrologium_romanum_1749", 2, 29)
+    assert d_2004 is not None and d_1749 is not None
+    assert [e.id for e in d_2004.elogia] == ["mr:0229-oswaldus"]
+    assert [e.id for e in d_1749.elogia] == ["mr:0229-oswaldus"]
 
 
 def test_missing_day_and_edition(crmedr_path, clbdr_path, data_paths):
@@ -66,9 +72,8 @@ def test_find_by_slug_on_printed_day(crmedr_path, clbdr_path, data_paths):
     hit = s.find_by_slug("martyrologium_romanum_1749", 1, 1, "concordius")
     assert hit is not None and hit.id == "mr:0102-concordius"
     assert s.find_by_slug("martyrologium_romanum_1749", 1, 2, "concordius") is None
-    assert (
-        s.find_by_slug("martyrologium_romanum_2004", 1, 2, "concordius").id == "mr:0102-concordius"
-    )
+    hit_2004 = s.find_by_slug("martyrologium_romanum_2004", 1, 2, "concordius")
+    assert hit_2004 is not None and hit_2004.id == "mr:0102-concordius"
 
 
 def test_placements_cross_edition(crmedr_path, clbdr_path, data_paths):
@@ -77,7 +82,8 @@ def test_placements_cross_edition(crmedr_path, clbdr_path, data_paths):
     assert p["martyrologium_romanum_1749"].day_printed == "01-01"
     assert p["martyrologium_romanum_2004"].day_printed == "01-02"
     assert p["martyrologium_romanum_2004_it_IT"].day_printed == "01-02"
-    assert p["martyrologium_romanum_2004"].text.startswith("Spoleti")
+    text_2004 = p["martyrologium_romanum_2004"].text
+    assert text_2004 is not None and text_2004.startswith("Spoleti")
 
 
 def test_flat_parse_with_null_entry(crmedr_path, clbdr_path):

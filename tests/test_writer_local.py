@@ -66,12 +66,16 @@ def test_ensure_branch_and_write(git_root):
         "j@example.org",
     )
     assert len(commit) == 40
-    content, _ = b.read_file(
+    read = b.read_file(
         REPO, "curation/jdoe/edits", "data/editions/martyrologium_romanum_1749/01.json"
     )
+    assert read is not None
+    content, _ = read
     assert b'"titulus": "T2"' in content
     # main untouched
-    content_main, _ = b.read_file(REPO, "main", "data/editions/martyrologium_romanum_1749/01.json")
+    read_main = b.read_file(REPO, "main", "data/editions/martyrologium_romanum_1749/01.json")
+    assert read_main is not None
+    content_main, _ = read_main
     assert b'"titulus": "t"' in content_main
     # author recorded
     log = subprocess.run(
@@ -96,7 +100,9 @@ def test_write_new_file_and_conflict(git_root):
     b.write_file(
         REPO, "curation/jdoe/edits", "data/new.json", b"{}", "curation: new file", "J", "j@x"
     )
-    _, sha = b.read_file(REPO, "curation/jdoe/edits", "data/new.json")
+    read_new = b.read_file(REPO, "curation/jdoe/edits", "data/new.json")
+    assert read_new is not None
+    _, sha = read_new
     b.write_file(
         REPO,
         "curation/jdoe/edits",

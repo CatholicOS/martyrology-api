@@ -19,7 +19,10 @@ pytestmark = pytest.mark.skipif(
 @pytest.fixture(scope="module")
 def client():
     settings = Settings(
-        _env_file=None, data_path=str(ROOT / "data/editions"), crmedr_path=CRMEDR, clbdr_path=CLBDR
+        _env_file=None,  # pyright: ignore[reportCallIssue]
+        data_path=str(ROOT / "data/editions"),
+        crmedr_path=CRMEDR,
+        clbdr_path=CLBDR,
     )
     return TestClient(create_app(settings))
 

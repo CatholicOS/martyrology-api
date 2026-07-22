@@ -1,7 +1,8 @@
 import hashlib
+from typing import cast
 
 from starlette.middleware.base import BaseHTTPMiddleware
-from starlette.responses import Response
+from starlette.responses import Response, StreamingResponse
 
 
 class CacheHeadersMiddleware(BaseHTTPMiddleware):
@@ -14,9 +15,11 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
         ):
             return response
 
+        # BaseHTTPMiddleware.call_next always returns a StreamingResponse
+        # under the hood, but its declared return type is the base Response.
         body = b""
-        async for chunk in response.body_iterator:
-            body += chunk
+        async for chunk in cast(StreamingResponse, response).body_iterator:
+            body += chunk.encode() if isinstance(chunk, str) else bytes(chunk)
         etag = '"' + hashlib.md5(body, usedforsecurity=False).hexdigest() + '"'
 
         if getattr(request.state, "cache_private", False):

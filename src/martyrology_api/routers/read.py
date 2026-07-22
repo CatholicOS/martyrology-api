@@ -127,6 +127,7 @@ async def get_elogia(
     identity: Identity | None = Depends(get_identity),
 ):
     req = parse_elogia_path(rest)
+    assert req.month is not None  # parse_elogia_path always sets month or raises
     resolution = resolve_request(request, req, locale, edition)
     store = request.app.state.store
     metadata = MetadataOut(
