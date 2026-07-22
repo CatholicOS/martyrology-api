@@ -26,7 +26,7 @@ class MetadataOut(BaseModel):
 
 class ElogiumOut(BaseModel):
     id: str
-    entry: int
+    entry: int | None
     asterisk: bool
     unnumbered: bool
     anchor_day: str
@@ -50,7 +50,7 @@ class MonthOut(BaseModel):
 
 class EditionPlacementOut(BaseModel):
     day_printed: str
-    entry: int
+    entry: int | None
     asterisk: bool
     unnumbered: bool
     text: str | None

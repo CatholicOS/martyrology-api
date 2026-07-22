@@ -31,7 +31,7 @@ class IdEntry:
     id: str
     month: int
     day: int
-    entry: int
+    entry: int | None
     asterisk: bool = False
     country: str | None = None
     unnumbered: bool = False
@@ -68,7 +68,9 @@ class Registry:
     def ids_for_day(self, month: int, day: int) -> list[IdEntry]:
         found = [e for e in self.entries.values()
                  if not e.deprecated and e.month == month and e.day == day]
-        return sorted(found, key=lambda e: (not e.unnumbered, e.entry))
+        return sorted(found, key=lambda e: (not e.unnumbered,
+                                             e.entry if e.entry is not None else float("inf"),
+                                             e.id))
 
     @classmethod
     def load(cls, crmedr_path: Path, clbdr_path: Path) -> "Registry":

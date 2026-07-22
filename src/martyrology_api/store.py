@@ -9,7 +9,7 @@ from .registry import Registry, anchor_day, slug_of
 class Elogium:
     id: str
     text: str | None
-    entry: int
+    entry: int | None
     asterisk: bool
     unnumbered: bool
     anchor_month: int
@@ -67,7 +67,9 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
                 continue
             by_day.setdefault(e.day, []).append(e)
         for day, entries in by_day.items():
-            entries.sort(key=lambda e: (not e.unnumbered, e.entry))
+            entries.sort(key=lambda e: (not e.unnumbered,
+                                         e.entry if e.entry is not None else float("inf"),
+                                         e.id))
             elogia = [Elogium(id=e.id, text=raw[e.id], entry=e.entry,
                               asterisk=e.asterisk, unnumbered=e.unnumbered,
                               anchor_month=e.month, anchor_day=e.day)

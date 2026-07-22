@@ -31,6 +31,12 @@ def test_ids_for_day_ordering(crmedr_path, clbdr_path):
     assert all(not e.deprecated for e in reg.ids_for_day(1, 1))
 
 
+def test_ids_for_day_with_null_entry(crmedr_path, clbdr_path):
+    reg = Registry.load(crmedr_path, clbdr_path)
+    ids = [e.id for e in reg.ids_for_day(3, 4)]
+    assert ids == ["mr:0304-primus", "mr:0304-nullus-entry"]  # null entry sorts last
+
+
 def test_id_helpers():
     assert anchor_day("mr:0102-concordius") == (1, 2)
     assert slug_of("mr:0102-argeus-et-socii") == "argeus-et-socii"

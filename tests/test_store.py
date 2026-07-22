@@ -1,5 +1,5 @@
 from martyrology_api.registry import Registry
-from martyrology_api.store import Store, detect_shape
+from martyrology_api.store import Store, detect_shape, parse_month_file
 
 
 def make_store(crmedr_path, clbdr_path, data_paths) -> Store:
@@ -70,6 +70,14 @@ def test_placements_cross_edition(crmedr_path, clbdr_path, data_paths):
     assert p["martyrologium_romanum_2004"].day_printed == "01-02"
     assert p["martyrologium_romanum_2004_it_IT"].day_printed == "01-02"
     assert p["martyrologium_romanum_2004"].text.startswith("Spoleti")
+
+
+def test_flat_parse_with_null_entry(crmedr_path, clbdr_path):
+    reg = Registry.load(crmedr_path, clbdr_path)
+    raw = {"mr:0304-nullus-entry": "Textus sine numero.", "mr:0304-primus": "Textus primus."}
+    days = parse_month_file(raw, 3, "flat", reg)
+    assert [e.id for e in days[4].elogia] == ["mr:0304-primus", "mr:0304-nullus-entry"]
+    assert days[4].elogia[1].entry is None
 
 
 def test_detect_shape():
