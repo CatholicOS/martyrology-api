@@ -1,0 +1,17 @@
+{
+  "1": {
+    "titulus": "1 Januarii. Kalendis Januarii.",
+    "elogia": {
+      "mr:0101-circumcisio-domini": "Circumcisio Domini nostri Jesu Christi.",
+      "mr:0102-concordius": "Spoleti sancti Concordii, Presbyteri et Martyris."
+    },
+    "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum. R. Deo gratias."
+  },
+  "2": {
+    "titulus": "2 Januarii. Quarto Nonas Januarii.",
+    "elogia": {
+      "mr:0102-argeus-et-socii": "Tomis sanctorum Argei et sociorum Martyrum."
+    },
+    "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum. R. Deo gratias."
+  }
+}
