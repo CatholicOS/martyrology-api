@@ -43,4 +43,21 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(discovery.router, prefix="/api/v1")
     app.include_router(curation.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
+
+    @app.get("/", tags=["service"])
+    def service_document() -> dict:
+        return {
+            "name": "Roman Martyrology API",
+            "version": __version__,
+            "description": "Eulogies (elogia) of the Roman Martyrology, "
+            "across current and historical editions",
+            "links": {
+                "openapi": "/openapi.json",
+                "docs": "/docs",
+                "editions": "/api/v1/editions",
+                "elogia_catalog": "/api/v1/elogia",
+                "repository": "https://github.com/CatholicOS/martyrology-api",
+            },
+        }
+
     return app
