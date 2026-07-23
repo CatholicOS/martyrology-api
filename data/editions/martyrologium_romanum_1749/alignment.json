@@ -3149,9 +3149,9 @@
    "method": "same-day",
    "score": 3.45
   },
-  "mr:0428-laurentius": {
+  "mr:0428-ludovicus-maria-grignion-de-montfort": {
    "method": "same-day",
-   "score": 1.99
+   "score": null
   },
   "mr:0429-petrus": {
    "method": "coined-deprecated",
@@ -5446,7 +5446,7 @@
    "score": null
   },
   "mr:0716-maria-magdalena-postel": {
-   "method": "coined-deprecated",
+   "method": "same-day",
    "score": null
   },
   "mr:0717-alexius": {
@@ -7378,7 +7378,7 @@
    "score": 1.61
   },
   "mr:0917-hildegardis": {
-   "method": "coined-deprecated",
+   "method": "same-day",
    "score": null
   },
   "mr:0918-iosephus-de-cupertino": {
@@ -8489,9 +8489,9 @@
    "method": "same-day",
    "score": 1.98
   },
-  "mr:1025-antonius": {
-   "method": "same-day",
-   "score": 1.88
+  "mr:1025-marcellinus": {
+   "method": "coined-deprecated",
+   "score": null
   },
   "mr:1025-fronto": {
    "method": "same-day",
