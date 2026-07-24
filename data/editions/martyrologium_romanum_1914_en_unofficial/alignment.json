@@ -9841,10 +9841,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1025-maurus": {
-   "method": "same-day",
-   "score": 1.64
-  },
   "mr:1025-crispinus-et-crispinianus": {
    "method": "same-day",
    "score": 2.13

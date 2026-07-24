@@ -1,0 +1,24 @@
+{
+ "$comment": "Typographical errors present in the printed 1914 source (The Roman Martyrology, 1914, unofficial English translation) that this digitized edition silently corrects in the elogium text. These are errors in the source print itself, distinct from OCR/scan artifacts (which are simply fixed). Each entry records the affected elogium ID, the source's literal reading, and the correction applied.",
+ "edition": "martyrologium_romanum_1914_en_unofficial",
+ "errata": [
+  {
+   "id": "mr:0903-basilissa",
+   "source": "Basillissa",
+   "correction": "Basilissa",
+   "note": "doubled l in the saint's name"
+  },
+  {
+   "id": "mr:0904-rosalia",
+   "source": "Charlemange",
+   "correction": "Charlemagne",
+   "note": "misspelling of Charlemagne"
+  },
+  {
+   "id": "mr:1203-cassianus",
+   "source": "abondoned",
+   "correction": "abandoned",
+   "note": "misspelling of abandoned"
+  }
+ ]
+}
