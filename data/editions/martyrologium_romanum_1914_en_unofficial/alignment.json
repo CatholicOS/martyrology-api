@@ -2493,7 +2493,7 @@
    "method": "same-day",
    "score": 2.1
   },
-  "mr:0323-itemcoronae-sanctonim-martyrum": {
+  "mr:0323-domitius-et-socii": {
    "method": "same-day",
    "score": 1.25
   },
@@ -7337,7 +7337,7 @@
    "method": "same-day",
    "score": 1.95
   },
-  "mr:0818-clara-v": {
+  "mr:0818-clara": {
    "method": "same-day",
    "score": 1.63
   },
@@ -7381,7 +7381,7 @@
    "method": "same-day",
    "score": 1.61
   },
-  "mr:0820-pius-x": {
+  "mr:0820-bernardus": {
    "method": "same-day",
    "score": 1.83
   },

@@ -2225,7 +2225,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0323-itemcoronae-sanctonim-martyrum": {
+  "mr:0323-domitius-et-socii": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -2337,7 +2337,7 @@
    "method": "same-day",
    "score": 1.56
   },
-  "mr:0326-b": {
+  "mr:0326-braulius": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6353,7 +6353,7 @@
    "method": "same-day",
    "score": 1.66
   },
-  "mr:0818-clara-v": {
+  "mr:0818-clara": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -6401,7 +6401,7 @@
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0820-pius-x": {
+  "mr:0820-bernardus": {
    "method": "same-day",
    "score": 1.82
   },
@@ -7074,10 +7074,6 @@
    "score": null
   },
   "mr:0907-eupsychius": {
-   "method": "coined-deprecated",
-   "score": null
-  },
-  "mr:0907-sed-iterum-comprehensus": {
    "method": "coined-deprecated",
    "score": null
   },
