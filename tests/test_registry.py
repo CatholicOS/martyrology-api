@@ -7,6 +7,7 @@ def test_load_entries_and_deprecated(crmedr_path, clbdr_path):
     dep = reg.entries["mr:0101-circumcisio-domini"]
     assert dep.deprecated is True
     assert dep.attested_in == "martyrologium_romanum_1749"
+    assert dep.country == "IT"
 
 
 def test_editions_filtered_to_martyrology(crmedr_path, clbdr_path):
@@ -22,7 +23,7 @@ def test_editions_filtered_to_martyrology(crmedr_path, clbdr_path):
     assert reg.editions["martyrologium_romanum_1584"].promulgated_year == 1584
 
 
-def test_subjects_locale_fallback(crmedr_path, clbdr_path):
+def test_subjects_locale(crmedr_path, clbdr_path):
     reg = Registry.load(crmedr_path, clbdr_path)
     assert reg.subjects("la")["mr:0101-circumcisio-domini"] == "Circumcisio Domini"
     assert reg.subjects("en")["mr:0102-concordius"] == "Saint Concordius"

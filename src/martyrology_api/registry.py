@@ -101,7 +101,6 @@ class Registry:
                 unnumbered=e.get("unnumbered", False),
             )
         dep_raw = json.loads((crmedr_path / "data/deprecated_ids.json").read_text())
-        dep_subjects_la: dict[str, str] = {}
         for e in dep_raw:
             entries[e["id"]] = IdEntry(
                 id=e["id"],
@@ -110,16 +109,13 @@ class Registry:
                 entry=e["entry"],
                 deprecated=True,
                 attested_in=e.get("attested_in"),
+                country=e.get("country"),
             )
-            if e.get("subject_la"):
-                dep_subjects_la[e["id"]] = e["subject_la"]
 
         i18n: dict[str, dict[str, str]] = {}
         for f in sorted((crmedr_path / "i18n").glob("*.json")):
             i18n[f.stem] = json.loads(f.read_text())
         i18n.setdefault("la", {})
-        for cid, subj in dep_subjects_la.items():
-            i18n["la"].setdefault(cid, subj)
 
         ed_raw = json.loads((clbdr_path / "data/editions.json").read_text())
         editions: dict[str, EditionMeta] = {}
