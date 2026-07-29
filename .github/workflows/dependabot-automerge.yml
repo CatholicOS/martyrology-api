@@ -17,9 +17,47 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge for minor and patch updates
-        if: steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
-        run: gh pr merge --auto --squash "$PR_URL"
+      # Decide whether to auto-merge:
+      #   * minor / patch updates in any ecosystem  -> auto-merge
+      #   * major updates to official GitHub actions -> auto-merge
+      #     (every bumped dependency under actions/ or github/)
+      #   * everything else (incl. third-party action majors and
+      #     project-dependency majors)              -> manual review
+      - name: Decide and enable auto-merge
         env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          ECOSYSTEM: ${{ steps.metadata.outputs.package-ecosystem }}
+          DEP_NAMES: ${{ steps.metadata.outputs.dependency-names }}
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          case "$UPDATE_TYPE" in
+            version-update:semver-minor | version-update:semver-patch)
+              echo "Minor/patch update — enabling auto-merge."
+              gh pr merge --auto --squash "$PR_URL"
+              exit 0
+              ;;
+          esac
+
+          if [ "$UPDATE_TYPE" = "version-update:semver-major" ] \
+            && { [ "$ECOSYSTEM" = "github_actions" ] || [ "$ECOSYSTEM" = "github-actions" ]; } \
+            && [ -n "$DEP_NAMES" ]; then
+            all_official=true
+            IFS=',' read -ra names <<< "$DEP_NAMES"
+            for raw in "${names[@]}"; do
+              name="$(echo "$raw" | xargs)"
+              case "$name" in
+                actions/* | github/*) : ;;
+                *) all_official=false ;;
+              esac
+            done
+            if [ "$all_official" = true ]; then
+              echo "Major update to official GitHub action(s) — enabling auto-merge."
+              gh pr merge --auto --squash "$PR_URL"
+              exit 0
+            fi
+          fi
+
+          echo "Update requires manual review — not auto-merging ($UPDATE_TYPE, $ECOSYSTEM: $DEP_NAMES)."

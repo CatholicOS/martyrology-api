@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "pip"
+  - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -8,7 +8,7 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      python-minor-and-patch:
+      uv-minor-and-patch:
         applies-to: version-updates
         update-types:
           - "minor"
@@ -24,10 +24,26 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      actions-all:
+      # Actions published by GitHub itself (actions/*, github/*).
+      # All update types are grouped here — including majors — so the
+      # auto-merge workflow can merge them without manual review.
+      github-official-actions:
+        applies-to: version-updates
+        patterns:
+          - "actions/*"
+          - "github/*"
+      # Third-party actions: only minor/patch are grouped and auto-merged.
+      # Major bumps match no group and arrive as individual PRs for review.
+      third-party-actions:
         applies-to: version-updates
         patterns:
           - "*"
+        exclude-patterns:
+          - "actions/*"
+          - "github/*"
+        update-types:
+          - "minor"
+          - "patch"
     labels:
       - "dependencies"
       - "github-actions"
