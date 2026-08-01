@@ -166,32 +166,44 @@ CHECKSUM_ACTUAL="$(sha256sum "$BUNDLE" | awk '{print $1}')"
 # and the guard never fires. Capturing to a variable first makes tar always
 # run to completion before anything is screened.
 #
-# BUNDLE_NAMES (plain `tar -t`) is one member name per line, verbatim, and
-# is grepped whole-line — not split into fields — so a name containing a
-# space is still screened as a unit. GNU tar itself strips a leading "/"
-# or "../" from member names by default on extraction, so this check is
-# mostly defense-in-depth over tar's own behavior; it exists because not
-# every tar implementation does that, and because relying on it silently
-# would be exactly the kind of assumption this script exists to avoid.
+# Both listings are taken with -P ("absolute names"), which tells tar to
+# report what the archive actually stores rather than what tar would
+# choose to install. Without it GNU tar silently rewrites the listing
+# before this script can look at it — most importantly it collapses a hard
+# link target of "/etc/passwd" or "../../etc/passwd" down to a harmless
+# "etc/passwd" — so the screen would be checking tar's sanitized rendering
+# instead of the bundle's real contents, i.e. depending on exactly the
+# behavior these checks exist not to depend on. -P is deliberately NOT
+# passed to the extraction below: there, tar's sanitization is a wanted
+# last line of defense, and turning it off would let an absolute member
+# name write outside the release tree.
 #
-# BUNDLE_MEMBERS (`tar -tv`) is the verbose listing, needed separately
+# BUNDLE_NAMES (plain `tar -P -t`) is one member name per line, verbatim,
+# and is grepped whole-line — not split into fields — so a name containing
+# a space is still screened as a unit. GNU tar strips a leading "/" or
+# "../" from member names when it extracts (that part is unaffected by -P
+# here, since extraction runs without it), so this check is defense in
+# depth over tar's own behavior; it exists because not every tar
+# implementation does that, and because relying on it silently would be
+# exactly the kind of assumption this script exists to avoid.
+#
+# BUNDLE_MEMBERS (`tar -P -tv`) is the verbose listing, needed separately
 # because `tar -t` never prints where a symlink or hardlink points — only
-# its own name — and a symlink's target gets no sanitization from tar at
-# all, on extraction or otherwise. GNU tar does eagerly normalize hard
-# link targets (both here and at extraction), but that is this tar
-# implementation's behavior, not a guarantee this script can rely on, so
-# both link kinds are screened the same way regardless. The verbose
-# listing renders a symlink as "name -> target" and a hardlink as
-# "name link to target"; the check below matches either rendering and
+# its own name. A symlink's target gets no sanitization from tar at all,
+# on extraction or otherwise; a hardlink's does, but only as this tar
+# implementation's behavior, not a guarantee, and -P is what keeps that
+# rewriting out of the listing so the real target is what gets screened.
+# The verbose listing renders a symlink as "name -> target" and a hardlink
+# as "name link to target"; the check below matches either rendering and
 # reads the text right after it directly, rather than splitting the line
 # into whitespace fields, so a target containing a space is still
 # screened correctly. The escape patterns themselves catch an absolute
 # target, a "../" anywhere in it, and also a bare ".." (or a component
 # ending in "..", e.g. "a/..") with nothing after it — not just one
 # followed by a slash — since that also walks up a directory.
-BUNDLE_NAMES="$(tar -tzf "$BUNDLE")" \
+BUNDLE_NAMES="$(tar -P -tzf "$BUNDLE")" \
     || die "failed to list bundle contents: $BUNDLE (corrupt or truncated?)"
-BUNDLE_MEMBERS="$(tar -tvzf "$BUNDLE")" \
+BUNDLE_MEMBERS="$(tar -P -tvzf "$BUNDLE")" \
     || die "failed to list bundle contents: $BUNDLE (corrupt or truncated?)"
 
 if grep -Eq '^/|(^|/)\.\.(/|$)' <<<"$BUNDLE_NAMES"; then
@@ -219,6 +231,9 @@ fi
 echo "Installing $VERSION to $RELEASE"
 rm -rf "$RELEASE"
 mkdir -p "$RELEASE"
+# No -P here, unlike the listings above: extraction keeps tar's own
+# stripping of leading "/" and "../" as a last line of defense behind the
+# screen that has already run.
 tar -xzf "$BUNDLE" -C "$RELEASE"
 
 echo "Building venv (offline)"
@@ -243,13 +258,34 @@ SMOKE_PORT="$("$RELEASE/venv/bin/python" -c \
     'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')"
 SMOKE_LOG="$(mktemp)"
 SMOKE_PID=""
+
 # Armed right after the temp file is created, before the background
 # process even starts, so SMOKE_LOG cannot leak if something between here
 # and the `&` below exits the script; $SMOKE_PID is expanded when the trap
-# actually fires, so it picks up the real pid once one exists. Also covers
-# INT/TERM, not just EXIT, so a signal during the smoke phase still kills
-# the smoke uvicorn and removes the log instead of orphaning both.
-trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT INT TERM
+# actually fires, so it picks up the real pid once one exists.
+#
+# INT/TERM are registered separately from EXIT, and their handler ends in
+# an explicit `exit 143`, for the same reason the rollback trap below
+# splits them: a bash trap for a signal does NOT terminate the script. It
+# runs and then returns control to wherever execution was, so a single
+# `trap '<cleanup>' EXIT INT TERM` would clean up on a TERM and then carry
+# straight on into the flip, the systemctl restart and the prune — turning
+# a cancelled deploy into an apparently successful one. Only the EXIT case
+# ends the script on its own. With no trap installed at all, bash's
+# default disposition would already have exited 143 here, so this wiring
+# has to reproduce that explicitly rather than weaken it.
+#
+# The handler's first line clears all three traps so it cannot run twice
+# on a signal (once for the signal, once for the EXIT that follows). The
+# body is idempotent, so that is belt-and-braces rather than load-bearing,
+# but it is stated rather than assumed.
+smoke_cleanup() {
+    trap - EXIT INT TERM
+    kill "$SMOKE_PID" 2>/dev/null || true
+    rm -f "$SMOKE_LOG"
+}
+trap smoke_cleanup EXIT
+trap 'smoke_cleanup; exit 143' INT TERM
 
 MARTYROLOGY_MANIFEST_PATH="$RELEASE/manifest.json" \
 MARTYROLOGY_DATA_PATH="$RELEASE/data/editions:$RELEASE/data/texts" \
@@ -270,9 +306,11 @@ EDITIONS="$(curl -fsS "http://127.0.0.1:${SMOKE_PORT}/healthz" \
 [ "$EDITIONS" -gt 0 ] || die "smoke check served zero editions; $VERSION was not activated"
 echo "Smoke check passed: $EDITIONS editions"
 
-kill "$SMOKE_PID" 2>/dev/null || true
-rm -f "$SMOKE_LOG"
-trap - EXIT INT TERM
+# Same handler on the success path, so the teardown has exactly one
+# definition and cannot drift from what the traps run; it clears its own
+# traps first, which is also the disarm this phase needs before the
+# rollback trap below is armed.
+smoke_cleanup
 
 if [ -L "$APP_DIR/current" ]; then
     PREVIOUS="$(readlink "$APP_DIR/current")"

@@ -1,6 +1,5 @@
 import hashlib
 import io
-import re
 import signal
 import subprocess
 import tarfile
@@ -122,25 +121,6 @@ def _bundle_with_hardlink(app: Path, version: str, *, target: str) -> Path:
     return payload
 
 
-def _extract_link_regex() -> str:
-    """Pulls the ERE used by the link-target screen directly out of
-    deploy.sh's current source, so a white-box test of that regex cannot
-    silently drift from what the script actually runs."""
-    text = SCRIPT.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    marker = 'die "bundle contains a link pointing outside the release tree"'
-    marker_idx = next(i for i, line in enumerate(lines) if marker in line)
-    grep_line = lines[marker_idx - 1]
-    match = re.search(r"grep -Eq '(.+)' <<<", grep_line)
-    assert match, f"could not find the link-screen grep line before: {grep_line!r}"
-    return match.group(1)
-
-
-def _grep_matches(pattern: str, text: str) -> bool:
-    result = subprocess.run(["grep", "-Eq", pattern], input=text, text=True)
-    return result.returncode == 0
-
-
 def _extract_rollback_harness_pieces() -> tuple[str, str, str]:
     """Pulls the rollback_on_failure() function body and its two
     trap-arming lines directly out of deploy.sh's current source, for
@@ -181,6 +161,59 @@ def _build_signal_harness(tmp_path: Path) -> Path:
         'echo "harness: sleep completed without a signal" >&2\n'
         "ROLLBACK_ARMED=0\n"
         "trap - EXIT INT TERM\n"
+        "exit 0\n",
+        encoding="utf-8",
+    )
+    return harness
+
+
+def _extract_smoke_harness_pieces() -> tuple[str, list[str]]:
+    """Pulls the smoke_cleanup() function body and every trap line that
+    arms it out of deploy.sh's current source, for splicing into the
+    smoke-phase signal harness below.
+
+    The trap lines are matched loosely (any `trap ...` line mentioning
+    smoke_cleanup, in source order) rather than by exact text, on purpose:
+    that way a regression that keeps the handler but rewires the traps --
+    e.g. back to a single `trap smoke_cleanup EXIT INT TERM`, or dropping
+    the `exit 143` from the signal handler -- still splices cleanly into
+    the harness and is caught by the harness's *behavioral* assertion,
+    instead of failing early on a text lookup that proves nothing about
+    what the script does at runtime.
+    """
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(i for i, line in enumerate(lines) if line == "smoke_cleanup() {")
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i] == "}")
+    function_text = "\n".join(lines[start_idx : end_idx + 1])
+
+    trap_lines = [
+        line.strip()
+        for line in lines
+        if line.strip().startswith("trap ") and "smoke_cleanup" in line
+    ]
+    assert trap_lines, "found no trap line arming smoke_cleanup in deploy.sh"
+    return function_text, trap_lines
+
+
+def _build_smoke_signal_harness(tmp_path: Path) -> Path:
+    function_text, trap_lines = _extract_smoke_harness_pieces()
+    harness = tmp_path / "smoke-harness.sh"
+    harness.write_text(
+        "#!/usr/bin/env bash\n"
+        "set -euo pipefail\n"
+        'SMOKE_LOG="$(mktemp)"\n'
+        'SMOKE_PID=""\n'
+        'echo "$SMOKE_LOG"\n'
+        "\n"
+        f"{function_text}\n"
+        "\n" + "\n".join(trap_lines) + "\n"
+        "\n"
+        "sleep 2\n"
+        # Stands in for everything deploy.sh does after a passing smoke
+        # check: the flip, the systemctl restart, the prune, exit 0.
+        'echo "harness: CONTINUED PAST SMOKE PHASE" >&2\n'
+        "smoke_cleanup\n"
         "exit 0\n",
         encoding="utf-8",
     )
@@ -413,52 +446,31 @@ def test_accepts_a_hardlink_member_that_stays_inside_the_release_tree(tmp_path: 
     assert "dry-run" in result.stdout
 
 
-def test_link_screen_regex_rejects_an_absolute_hardlink_target():
-    """White-box test, not a full script/tar integration test -- and
-    deliberately so, per investigation:
+def test_rejects_a_hardlink_member_with_an_absolute_target(tmp_path: Path):
+    # Real end-to-end test through the actual script, made possible by the
+    # `-P` on deploy.sh's two *listing* captures. Without -P, GNU tar
+    # rewrites a hard link target of "/etc/passwd" down to a harmless
+    # "etc/passwd" in its own listing output before the screen can look at
+    # it -- so the guard was silently depending on tar's sanitization, and
+    # this case could previously only be tested white-box against the
+    # regex. With -P the listing shows "... link to /etc/passwd" verbatim
+    # and the real script rejects the real bundle.
+    app = _app_dir(tmp_path)
+    _bundle_with_hardlink(app, "1.0.0", target="/etc/passwd")
+    result = _run(app, "--dry-run", "1.0.0")
+    assert result.returncode != 0
+    assert "link pointing outside the release tree" in result.stderr
 
-    GNU tar (1.35, as installed here; confirmed via `tar --version`)
-    proactively normalizes a hard link's target during `tar -tv` listing
-    itself, stripping any leading "/" and fully collapsing every ".."
-    component before the line is ever displayed. Verified empirically: a
-    hardlink target of "/etc/passwd", "../../etc/passwd", and even
-    "safe/../../etc/passwd" (a non-leading traversal) all list as plain
-    "etc/passwd", each with a `tar: Removing leading ...` warning on
-    stderr. Running the actual martyrology-api deploy.sh --dry-run against
-    a real archive built this way confirmed it: the bundle is accepted
-    (exit 0) both before and after the round-3 fix, because the
-    dangerous-looking text never reaches the screen in the first place on
-    this tar implementation.
 
-    That means no real archive built with this system's tar can
-    discriminate old vs. new code here the way the other regression tests
-    in this file do -- there is no "current form fails, fixed form
-    passes" to demonstrate through the real script. Instead, this pulls
-    the actual link-screening regex out of deploy.sh's current source
-    (see _extract_link_regex) and runs it, via the real `grep -E` binary
-    deploy.sh itself uses, against a hand-written listing line in the
-    "name link to target" form a hardlink-to-/etc/passwd member would take
-    under a tar implementation that does not normalize hard link targets
-    (bsdtar/libarchive-based tars are known to differ here), or a future
-    GNU tar release that stops doing so. This proves the regex extension
-    itself is correct on its own terms; it does not prove today's real
-    script rejects today's real archives built with today's tar, because
-    -- on this tar implementation -- there is nothing dangerous left for
-    it to reject by the time it looks.
-
-    Paired with test_accepts_a_hardlink_member_that_stays_inside_the_release_tree
-    (real integration, positive control) to also confirm the widened regex
-    does not reject a benign hardlink.
-    """
-    regex = _extract_link_regex()
-    dangerous_line = (
-        "hrw-r--r-- 0/0               0 1970-01-01 01:00 evil-hardlink link to /etc/passwd"
-    )
-    safe_line = (
-        "hrw-r--r-- 0/0               0 1970-01-01 01:00 sibling-hardlink link to manifest.json"
-    )
-    assert _grep_matches(regex, dangerous_line)
-    assert not _grep_matches(regex, safe_line)
+def test_rejects_a_hardlink_member_with_a_parent_relative_target(tmp_path: Path):
+    # Companion to the absolute case: GNU tar collapses "../../etc/passwd"
+    # to "etc/passwd" in a non-`-P` listing too, so this is likewise only
+    # reachable end-to-end because the listings are taken with -P.
+    app = _app_dir(tmp_path)
+    _bundle_with_hardlink(app, "1.0.0", target="../../etc/passwd")
+    result = _run(app, "--dry-run", "1.0.0")
+    assert result.returncode != 0
+    assert "link pointing outside the release tree" in result.stderr
 
 
 def test_rejects_a_corrupt_bundle_with_a_clear_message(tmp_path: Path):
@@ -525,3 +537,58 @@ def test_signal_during_flip_window_rolls_back_instead_of_exiting_zero(tmp_path: 
     )
     assert "activation of harness-test failed" in stderr
     assert "rolling back" in stderr
+
+
+def test_signal_during_smoke_phase_stops_the_deploy_instead_of_continuing(tmp_path: Path):
+    """Regression test for: a bash trap for a signal does not terminate the
+    script, it returns control to where execution was.
+
+    With the smoke phase's cleanup registered as one
+    `trap '<cleanup>' EXIT INT TERM`, a SIGTERM landing anywhere in the
+    smoke window ran the cleanup and then carried straight on -- past the
+    smoke phase, into the flip, the systemctl restart and the prune --
+    finishing a cancelled deploy and exiting 0. With no trap installed at
+    all (the state before that wiring was added) bash's default
+    disposition exited 143, so the trap had actively turned a loud failure
+    into a silent success. The fix registers INT/TERM separately with a
+    handler that ends in an explicit `exit 143`.
+
+    Same harness technique, and same limits, as
+    test_signal_during_flip_window_rolls_back_instead_of_exiting_zero:
+    reaching the real smoke phase needs a working venv (uvicorn, the
+    app's data files), which is not available here, so this splices the
+    actual smoke_cleanup() body and every trap line arming it -- extracted
+    from deploy.sh at test-run time, not hand-duplicated -- into a
+    standalone script whose `sleep 2` stands in for the smoke window
+    (wait_healthy's `sleep 1` loop, or the curl|python editions pipeline
+    that follows it), and whose "CONTINUED PAST SMOKE PHASE" line stands
+    in for everything deploy.sh does after a passing smoke check.
+
+    What it covers: that a TERM in the smoke window terminates the script
+    with a non-zero status and never reaches the post-smoke work, and that
+    the smoke log is still cleaned up on that path. What it does not
+    cover: killing a real uvicorn child (SMOKE_PID is empty in the
+    harness, so the `kill` is exercised only as a no-op), or the real
+    flip/restart that the "CONTINUED PAST" marker stands for.
+    """
+    harness = _build_smoke_signal_harness(tmp_path)
+    proc = subprocess.Popen(
+        ["bash", str(harness)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+    time.sleep(0.3)
+    proc.send_signal(signal.SIGTERM)
+    stdout, stderr = proc.communicate(timeout=5)
+
+    assert "CONTINUED PAST SMOKE PHASE" not in stderr, (
+        "the signal handler ran but execution continued past the smoke phase; "
+        f"stdout={stdout!r} stderr={stderr!r}"
+    )
+    assert proc.returncode == 143, (
+        f"expected exit 143 after SIGTERM, got {proc.returncode}; "
+        f"stdout={stdout!r} stderr={stderr!r}"
+    )
+    smoke_log = Path(stdout.strip().splitlines()[0])
+    assert not smoke_log.exists(), f"smoke log {smoke_log} was left behind after the signal"
