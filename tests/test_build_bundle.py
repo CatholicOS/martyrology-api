@@ -3,6 +3,8 @@ import json
 import tarfile
 from pathlib import Path
 
+import pytest
+
 from martyrology_api import manifest as runtime_manifest
 from martyrology_api.manifest import Manifest
 
@@ -67,12 +69,22 @@ def test_assemble_writes_a_tarball_with_a_manifest_at_the_root(tmp_path: Path):
     root = _staging(tmp_path)
     out = tmp_path / "out"
     out.mkdir()
+    build_bundle.write_manifest(root, "0.1.0", "a" * 40, COMMITS)
     tarball = build_bundle.assemble(root, out, "1.2.3")
     assert tarball.name == "martyrology-1.2.3-linux-x86_64-cp312.tar.gz"
     with tarfile.open(tarball) as archive:
         names = archive.getnames()
     assert "manifest.json" in names
     assert "data/crmedr/ids.json" in names
+
+
+def test_assemble_refuses_a_staging_tree_with_no_manifest(tmp_path: Path):
+    """A bundle with no manifest has no provenance, yet would pass deploy.sh's
+    manifest check and serve with an empty audit trail. Fail the build instead."""
+    out = tmp_path / "out"
+    out.mkdir()
+    with pytest.raises(FileNotFoundError):
+        build_bundle.assemble(_staging(tmp_path), out, "1.2.3")
 
 
 def test_assemble_manifest_does_not_hash_itself(tmp_path: Path):

@@ -73,11 +73,12 @@ def write_manifest(
 
 
 def assemble(staging: Path, out_dir: Path, version: str) -> Path:
-    """Tar the staged tree. If the caller has not already written a manifest
-    (main() does, with real commit data), write a minimal placeholder one so
-    the tarball is never missing manifest.json."""
+    """Tar the staged tree. Refuses to build a bundle with no manifest: a
+    tarball without provenance would pass deploy.sh's manifest check and
+    serve happily with an empty audit trail, which is the one failure this
+    design exists to prevent. Call write_manifest() first."""
     if not (staging / "manifest.json").exists():
-        write_manifest(staging, version, "", {})
+        raise FileNotFoundError("write_manifest() must run before assemble()")
     tarball = out_dir / BUNDLE_NAME.format(version=version)
     with tarfile.open(tarball, "w:gz") as archive:
         for path in sorted(staging.rglob("*")):
