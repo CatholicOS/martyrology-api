@@ -7,6 +7,8 @@ from .auth import Authenticator
 from .authz import Authz
 from .caching import CacheHeadersMiddleware
 from .config import Settings
+from .manifest import load_manifest
+from .models import HealthOut
 from .problems import install_problem_handlers
 from .registry import Registry
 from .routers import curation, discovery, read
@@ -59,5 +61,19 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "repository": "https://github.com/CatholicOS/martyrology-api",
             },
         }
+
+    @app.get("/healthz", tags=["service"], response_model=HealthOut)
+    def healthz() -> HealthOut:
+        manifest = load_manifest(settings.manifest_file)
+        commits: dict[str, str | None] = {"crmedr": None, "clbdr": None, "texts": None}
+        if manifest is not None:
+            for key in commits:
+                commits[key] = manifest.data.get(key)
+        return HealthOut(
+            status="ok",
+            version=__version__,
+            data=commits,
+            editions=sorted(app.state.store.available()),
+        )
 
     return app
