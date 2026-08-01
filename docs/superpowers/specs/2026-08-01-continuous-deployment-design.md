@@ -228,19 +228,32 @@ Plesk may rearrange things underneath it.
 ```
 /opt/martyrology/
   bin/deploy.sh                    installed by the setup script
+  config/runtime.env               deploy-readable 0644, non-secret settings
   incoming/                        scp target
   releases/<version>/{venv,data,manifest.json}
   current -> releases/<version>
-/etc/martyrology/api.env           root:root 0600
+/etc/martyrology/api.env           root:root 0600, secrets only
 ```
 
-### Secrets remain unreadable to the deploy identity
+### Two environment files, split by secrecy
 
-`/etc/martyrology/api.env` is `root:root 0600`. systemd reads `EnvironmentFile=`
-as root before dropping privileges, so the service gets its secrets while
-`martyrology-deploy` cannot read them. This mirrors step 4 of
-`setup-vps-sync-user.sh`, which restores `ubuntu` ownership and mode 0600 on
-`.env.production` after the recursive chown.
+systemd accepts multiple `EnvironmentFile=` lines, so the service's configuration
+is split by who is allowed to read it:
+
+- **`/etc/martyrology/api.env`** — `root:root 0600`. Zitadel, OpenFGA and
+  `MARTYROLOGY_GITHUB_TOKEN`. systemd reads `EnvironmentFile=` as root before
+  dropping privileges, so the service gets its secrets while `martyrology-deploy`
+  cannot read them. This mirrors step 4 of `setup-vps-sync-user.sh`, which
+  restores `ubuntu` ownership and mode 0600 on `.env.production` after the
+  recursive chown.
+- **`/opt/martyrology/config/runtime.env`** — owned by the deploy user, 0644.
+  `MARTYROLOGY_PORT`, `MARTYROLOGY_MANIFEST_PATH` and the three data paths. All
+  point through the stable `current` symlink, so this file is written once at
+  provisioning and never changes.
+
+The split is load-bearing, not cosmetic: `deploy.sh` must know the live port to
+poll `/healthz` after restarting (§5.8), and it must not be able to read secrets
+to do so.
 
 ### Sudoers drop-in
 
@@ -296,6 +309,7 @@ fixed, known entrypoint, and only after its hash matches.
 ```ini
 [Service]
 User=martyrology
+EnvironmentFile=/opt/martyrology/config/runtime.env
 EnvironmentFile=/etc/martyrology/api.env
 ExecStart=/opt/martyrology/current/venv/bin/uvicorn \
     martyrology_api.app:create_app --factory --host 127.0.0.1 --port ${MARTYROLOGY_PORT}
@@ -317,8 +331,8 @@ ss -ltnp | sort -t: -k2 -n
 ```
 
 The port appears in exactly two places — `MARTYROLOGY_PORT` in
-`/etc/martyrology/api.env`, and the nginx directive below. That coupling is
-manual and must be kept in sync by hand; it is recorded in the runbook.
+`/opt/martyrology/config/runtime.env`, and the nginx directive below. That
+coupling is manual and must be kept in sync by hand; it is recorded in the runbook.
 
 ### Plesk nginx directives
 
@@ -390,9 +404,10 @@ Environments can scope `APP_DIR` and the port per environment later, if wanted).
 3. Generate the deploy keypair: `ssh-keygen -t ed25519 -C "martyrology-api deploy" -f ./deploy-key`.
 4. Append the public half to `/home/martyrology-deploy/.ssh/authorized_keys`.
 5. Capture the host key: `ssh-keyscan -t ed25519,rsa <host>`.
-6. Populate `/etc/martyrology/api.env` (secrets plus `MARTYROLOGY_PORT`,
-   `MARTYROLOGY_MANIFEST_PATH`, and the three data paths under
-   `/opt/martyrology/current/data/`).
+6. Populate `/etc/martyrology/api.env` with the Zitadel, OpenFGA and GitHub-token
+   secrets. The setup script has already written `/opt/martyrology/config/runtime.env`
+   with `MARTYROLOGY_PORT`, `MARTYROLOGY_MANIFEST_PATH` and the three data paths
+   under `/opt/martyrology/current/data/`.
 7. Choose and verify the port with `ss -ltnp`; add the nginx directives in Plesk.
 8. Set the repository secrets and variables listed in §3.
 9. Add `martyrology-texts` to the organisation's Dependabot private-repository
