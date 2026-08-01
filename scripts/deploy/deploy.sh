@@ -7,8 +7,11 @@
 # scripts/deploy/setup-vps-deploy-user.sh; deliberately NOT refreshed from
 # the bundle, so updating it stays an operator action.
 #
-# Nothing from the payload is ever executed. The bundle is checksum-verified
-# and screened for path traversal before a single byte is extracted.
+# The bundle's own wheels are installed and its venv's python/uvicorn are
+# invoked, but only the fixed entrypoints below are ever run, and only after
+# the checksum matches and every tar member name and link target has been
+# screened for path traversal. Nothing else in the payload is ever executed,
+# and nothing runs before those checks pass.
 
 set -euo pipefail
 
@@ -23,13 +26,90 @@ die() {
     exit 1
 }
 
-DRY_RUN=0
-if [ "${1:-}" = "--dry-run" ]; then
-    DRY_RUN=1
-    shift
-fi
+wait_healthy() {
+    local port="$1"
+    local deadline=$((SECONDS + HEALTH_TIMEOUT))
+    while [ "$SECONDS" -lt "$deadline" ]; do
+        if curl -fsS "http://127.0.0.1:${port}/healthz" >/dev/null 2>&1; then
+            return 0
+        fi
+        sleep 1
+    done
+    return 1
+}
 
-VERSION="${1:-}"
+# Reads the live port from runtime.env without ever raising on a missing
+# file or an unset variable, so callers (including the rollback trap) can
+# treat "unknown port" as an ordinary failure rather than a script abort.
+get_live_port() {
+    [ -f "$RUNTIME_ENV" ] || return 1
+    local port=""
+    # shellcheck source=/dev/null
+    port="$(. "$RUNTIME_ENV" && printf '%s' "${MARTYROLOGY_PORT:-}")"
+    [ -n "$port" ] || return 1
+    printf '%s' "$port"
+}
+
+# Armed immediately after `current` is flipped to the new release and
+# disarmed only once the live health check passes, so any failure in
+# between — a failed restart, a missing runtime.env, an unset
+# MARTYROLOGY_PORT, an unhealthy service — restores the previous release
+# instead of leaving the flip half-done. set -e can exit the script at any
+# of those points; the EXIT trap still fires and this still runs.
+ROLLBACK_ARMED=0
+PREVIOUS=""
+
+rollback_on_failure() {
+    local status=$?
+    trap - EXIT
+    if [ "$ROLLBACK_ARMED" -ne 1 ] || [ "$status" -eq 0 ]; then
+        exit "$status"
+    fi
+    echo "ERROR: activation of $VERSION failed (exit $status); rolling back" >&2
+    if [ -z "$PREVIOUS" ]; then
+        echo "No previous release to roll back to" >&2
+        exit "$status"
+    fi
+    if [ ! -d "$PREVIOUS" ]; then
+        echo "ERROR: previous release $PREVIOUS no longer exists; cannot roll back" >&2
+        exit "$status"
+    fi
+    ln -sfn "$PREVIOUS" "$APP_DIR/current.new"
+    mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
+    if ! sudo /usr/bin/systemctl restart "$SERVICE"; then
+        echo "ERROR: failed to restart $SERVICE while rolling back to $PREVIOUS" >&2
+        exit "$status"
+    fi
+    local rollback_port=""
+    rollback_port="$(get_live_port || true)"
+    if [ -n "$rollback_port" ] && wait_healthy "$rollback_port"; then
+        echo "Rolled back to $PREVIOUS and it is healthy on port $rollback_port" >&2
+    else
+        echo "ERROR: rolled back to $PREVIOUS but it did not become healthy" >&2
+    fi
+    exit "$status"
+}
+
+# Accept --dry-run in any position and a single positional <version>;
+# anything else is rejected rather than silently ignored (a stray
+# "deploy.sh <version> --dry-run" must not fall through to a real deploy).
+DRY_RUN=0
+VERSION=""
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --dry-run)
+            DRY_RUN=1
+            ;;
+        -*)
+            die "usage: deploy.sh [--dry-run] <version>"
+            ;;
+        *)
+            [ -z "$VERSION" ] || die "usage: deploy.sh [--dry-run] <version>"
+            VERSION="$1"
+            ;;
+    esac
+    shift
+done
 [ -n "$VERSION" ] || die "usage: deploy.sh [--dry-run] <version>"
 
 # Anchored, no metacharacters: the version becomes part of a path and of a
@@ -40,11 +120,38 @@ BUNDLE="$APP_DIR/incoming/martyrology-${VERSION}-linux-x86_64-cp312.tar.gz"
 [ -f "$BUNDLE" ] || die "bundle not found: $BUNDLE"
 [ -f "$BUNDLE.sha256" ] || die "checksum not found: $BUNDLE.sha256"
 
-(cd "$(dirname "$BUNDLE")" && sha256sum -c "$(basename "$BUNDLE").sha256" >/dev/null 2>&1) \
-    || die "checksum mismatch for $BUNDLE"
+# Verify the digest directly against the bundle's own bytes, and assert the
+# checksum file actually names this bundle — `sha256sum -c` only checks that
+# the digest matches whatever filename is written in the .sha256 file, so a
+# checksum file naming an unrelated file would otherwise verify cleanly
+# without ever hashing the tarball.
+BUNDLE_BASENAME="$(basename "$BUNDLE")"
+CHECKSUM_EXPECTED="$(awk '{print $1}' "$BUNDLE.sha256")"
+CHECKSUM_NAMED="$(awk '{print $2}' "$BUNDLE.sha256" | sed 's|^\*||')"
+[ "$CHECKSUM_NAMED" = "$BUNDLE_BASENAME" ] \
+    || die "checksum file names $CHECKSUM_NAMED, not $BUNDLE_BASENAME"
+CHECKSUM_ACTUAL="$(sha256sum "$BUNDLE" | awk '{print $1}')"
+[ "$CHECKSUM_EXPECTED" = "$CHECKSUM_ACTUAL" ] || die "checksum mismatch for $BUNDLE"
 
-if tar -tzf "$BUNDLE" | grep -Eq '^/|(^|/)\.\.(/|$)'; then
+# Capture the full verbose listing once so it can be screened twice (member
+# names, then link targets) without piping tar's output into grep: grep -q
+# exits as soon as it finds a match, which closes the pipe out from under a
+# still-writing tar and makes it exit on SIGPIPE — under `pipefail` that
+# turns the whole pipeline non-zero, so `if pipeline; then die; fi` sees a
+# FALSE condition and the guard never fires. Capturing to a variable first
+# lets tar always run to completion before anything is screened.
+BUNDLE_MEMBERS="$(tar -tvzf "$BUNDLE")"
+
+if grep -Eq '^/|(^|/)\.\.(/|$)' <<<"$(awk '{print $NF}' <<<"$BUNDLE_MEMBERS")"; then
     die "bundle contains absolute or parent-relative paths"
+fi
+
+# tar -t prints member names, not link targets, so a symlink (or hardlink)
+# member can carry an absolute or parent-escaping target that the name-only
+# screen above never sees. The verbose listing renders links as
+# "name -> target"; reject any whose target escapes the release tree.
+if grep -Eq '(^| )l?[rwx-]{9}.* -> (/|.*\.\./)' <<<"$BUNDLE_MEMBERS"; then
+    die "bundle contains a link pointing outside the release tree"
 fi
 
 RELEASE="$APP_DIR/releases/$VERSION"
@@ -54,6 +161,13 @@ if [ "$DRY_RUN" -eq 1 ]; then
     exit 0
 fi
 
+# Refuse to redeploy the version that is already live: rm -rf below would
+# tear down the active release before a replacement is verified, and a
+# rollback afterwards would just relink the same now-empty directory.
+if [ -L "$APP_DIR/current" ] && [ "$(readlink "$APP_DIR/current")" = "$RELEASE" ]; then
+    die "$VERSION is the currently active release; deactivate or bump the version before redeploying"
+fi
+
 echo "Installing $VERSION to $RELEASE"
 rm -rf "$RELEASE"
 mkdir -p "$RELEASE"
@@ -61,7 +175,6 @@ tar -xzf "$BUNDLE" -C "$RELEASE"
 
 echo "Building venv (offline)"
 python3.12 -m venv "$RELEASE/venv"
-"$RELEASE/venv/bin/pip" install --quiet --upgrade pip
 "$RELEASE/venv/bin/pip" install --quiet --no-index \
     --find-links "$RELEASE/wheels" martyrology-api
 
@@ -77,34 +190,23 @@ if load_manifest(Path(sys.argv[1])) is None:
     sys.exit("manifest.json is absent, malformed, or an unsupported bundle_format")
 PY
 
-wait_healthy() {
-    local port="$1"
-    local deadline=$((SECONDS + HEALTH_TIMEOUT))
-    while [ "$SECONDS" -lt "$deadline" ]; do
-        if curl -fsS "http://127.0.0.1:${port}/healthz" >/dev/null 2>&1; then
-            return 0
-        fi
-        sleep 1
-    done
-    return 1
-}
-
 echo "Smoke-checking the new release before activating it"
 SMOKE_PORT="$("$RELEASE/venv/bin/python" -c \
     'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')"
+SMOKE_LOG="$(mktemp)"
 
 MARTYROLOGY_MANIFEST_PATH="$RELEASE/manifest.json" \
 MARTYROLOGY_DATA_PATH="$RELEASE/data/editions:$RELEASE/data/texts" \
 MARTYROLOGY_CRMEDR_PATH="$RELEASE/data/crmedr" \
 MARTYROLOGY_CLBDR_PATH="$RELEASE/data/clbdr" \
     "$RELEASE/venv/bin/uvicorn" martyrology_api.app:create_app --factory \
-    --host 127.0.0.1 --port "$SMOKE_PORT" >"$RELEASE/smoke.log" 2>&1 &
+    --host 127.0.0.1 --port "$SMOKE_PORT" >"$SMOKE_LOG" 2>&1 &
 SMOKE_PID=$!
-trap 'kill "$SMOKE_PID" 2>/dev/null || true' EXIT
+trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT
 
 if ! wait_healthy "$SMOKE_PORT"; then
     kill "$SMOKE_PID" 2>/dev/null || true
-    cat "$RELEASE/smoke.log" >&2
+    cat "$SMOKE_LOG" >&2
     die "smoke check failed; $VERSION was not activated"
 fi
 
@@ -114,9 +216,9 @@ EDITIONS="$(curl -fsS "http://127.0.0.1:${SMOKE_PORT}/healthz" \
 echo "Smoke check passed: $EDITIONS editions"
 
 kill "$SMOKE_PID" 2>/dev/null || true
+rm -f "$SMOKE_LOG"
 trap - EXIT
 
-PREVIOUS=""
 if [ -L "$APP_DIR/current" ]; then
     PREVIOUS="$(readlink "$APP_DIR/current")"
 fi
@@ -124,25 +226,19 @@ fi
 echo "Activating $VERSION"
 ln -sfn "$RELEASE" "$APP_DIR/current.new"
 mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
+
+ROLLBACK_ARMED=1
+trap rollback_on_failure EXIT
+
 sudo /usr/bin/systemctl restart "$SERVICE"
 
-# shellcheck source=/dev/null
-LIVE_PORT="$(. "$RUNTIME_ENV" && echo "$MARTYROLOGY_PORT")"
-
-if ! wait_healthy "$LIVE_PORT"; then
-    echo "ERROR: $VERSION is unhealthy on port $LIVE_PORT; rolling back" >&2
-    if [ -n "$PREVIOUS" ]; then
-        ln -sfn "$PREVIOUS" "$APP_DIR/current.new"
-        mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
-        sudo /usr/bin/systemctl restart "$SERVICE"
-        echo "Rolled back to $PREVIOUS" >&2
-    else
-        echo "No previous release to roll back to" >&2
-    fi
-    exit 1
-fi
+LIVE_PORT="$(get_live_port)" || die "could not determine MARTYROLOGY_PORT from $RUNTIME_ENV"
+wait_healthy "$LIVE_PORT" || die "$VERSION is unhealthy on port $LIVE_PORT"
 
 echo "$VERSION is live and healthy on port $LIVE_PORT"
+
+ROLLBACK_ARMED=0
+trap - EXIT
 
 rm -f "$BUNDLE" "$BUNDLE.sha256"
 CURRENT_TARGET="$(readlink "$APP_DIR/current")"
