@@ -67,6 +67,28 @@ def _bundle_with_absolute_member(app: Path, version: str) -> Path:
     return payload
 
 
+def _bundle_with_raw_member(
+    app: Path, version: str, *, name: str, symlink_target: str | None = None
+) -> Path:
+    # Builds a TarInfo directly and calls addfile(), bypassing tarfile's own
+    # arcname normalization (see _bundle_with_absolute_member above) so the
+    # member name is stored exactly as given — leading "/", leading "../",
+    # and embedded spaces included — the same way a hand-crafted malicious
+    # archive would produce it.
+    payload = app / "incoming" / f"martyrology-{version}-linux-x86_64-cp312.tar.gz"
+    with tarfile.open(payload, "w:gz") as archive:
+        info = tarfile.TarInfo(name=name)
+        if symlink_target is not None:
+            info.type = tarfile.SYMTYPE
+            info.linkname = symlink_target
+            archive.addfile(info)
+        else:
+            info.size = 2
+            archive.addfile(info, io.BytesIO(b"{}"))
+    _write_checksum(payload)
+    return payload
+
+
 def _bundle_with_symlink(app: Path, version: str, *, target: str) -> Path:
     payload = app / "incoming" / f"martyrology-{version}-linux-x86_64-cp312.tar.gz"
     source = app / "manifest.json"
@@ -158,17 +180,58 @@ def test_rejects_an_absolute_path_member(tmp_path: Path):
 
 
 def test_rejects_a_symlink_member_escaping_the_release_tree(tmp_path: Path):
-    # The target has a space, so the name/target screen above (which reads
-    # only the last whitespace-delimited field of each listing line) sees
-    # just "copy" and misses it; the dedicated link-target regex, which
-    # matches on the text right after " -> " instead of a split field, still
-    # catches it. This is the case that makes the dedicated symlink check
-    # more than a duplicate of the name-based one.
+    # The member's own name ("escape-link") is innocuous; only its target
+    # escapes, and a target with a space in it at that. The name-only screen
+    # (plain `tar -t`) never sees link targets at all, by design, so it
+    # cannot catch this regardless of whitespace; only the dedicated
+    # verbose-listing check, which reads the text after " -> " directly
+    # rather than splitting the line into fields, can.
     app = _app_dir(tmp_path)
     _bundle_with_symlink(app, "1.0.0", target="/etc/passwd copy")
     result = _run(app, "--dry-run", "1.0.0")
     assert result.returncode != 0
     assert "link pointing outside the release tree" in result.stderr
+
+
+def test_rejects_a_symlink_whose_own_name_traverses(tmp_path: Path):
+    # Regression test for the round-1 regression: the fix that captured
+    # `tar -tvzf`'s *verbose* listing and screened `awk '{print $NF}'` over
+    # it never screened a link's own member name at all, only its target —
+    # for a symlink listing line ("name -> target"), $NF is the target, not
+    # the name. A single-member archive isolates this from the link-target
+    # check, which would otherwise also fire (on the target) and mask the
+    # gap in the name check.
+    app = _app_dir(tmp_path)
+    _bundle_with_raw_member(
+        app,
+        "1.0.0",
+        name="../../evil-name",
+        symlink_target="benign-relative",
+    )
+    result = _run(app, "--dry-run", "1.0.0")
+    assert result.returncode != 0
+    assert "absolute or parent-relative paths" in result.stderr
+
+
+def test_rejects_a_traversal_member_with_a_space_in_its_name(tmp_path: Path):
+    # Regression test: with the round-1 $NF-based screen, a name containing
+    # a space was only screened by its last token ("sh"), missing the
+    # leading "../../" entirely.
+    app = _app_dir(tmp_path)
+    _bundle_with_raw_member(app, "1.0.0", name="../../etc/cron.d/evil sh")
+    result = _run(app, "--dry-run", "1.0.0")
+    assert result.returncode != 0
+    assert "absolute or parent-relative paths" in result.stderr
+
+
+def test_rejects_an_absolute_member_with_a_space_in_its_name(tmp_path: Path):
+    # Regression test: same $NF-splitting gap as above, for an absolute
+    # path ("/etc/passwd x" was only screened as "x").
+    app = _app_dir(tmp_path)
+    _bundle_with_raw_member(app, "1.0.0", name="/etc/passwd x")
+    result = _run(app, "--dry-run", "1.0.0")
+    assert result.returncode != 0
+    assert "absolute or parent-relative paths" in result.stderr
 
 
 def test_accepts_a_symlink_member_that_stays_inside_the_release_tree(tmp_path: Path):

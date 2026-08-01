@@ -53,15 +53,23 @@ get_live_port() {
 # Armed immediately after `current` is flipped to the new release and
 # disarmed only once the live health check passes, so any failure in
 # between — a failed restart, a missing runtime.env, an unset
-# MARTYROLOGY_PORT, an unhealthy service — restores the previous release
-# instead of leaving the flip half-done. set -e can exit the script at any
-# of those points; the EXIT trap still fires and this still runs.
+# MARTYROLOGY_PORT, an unhealthy service, or a signal — restores the
+# previous release instead of leaving the flip half-done. set -e can exit
+# the script at any of those points, and EXIT traps do not fire on their
+# own for a signal, so the trap is registered for EXIT, INT, and TERM
+# alike; this function still runs either way.
+#
+# Runs under `set -e`, so every step that could itself fail (the relink,
+# the restart) is explicitly guarded: an unguarded failure here would abort
+# the trap mid-rollback, losing both the original failure's exit status and
+# the diagnostic explaining what happened. Every path below ends by
+# reaching the final `exit "$status"`.
 ROLLBACK_ARMED=0
 PREVIOUS=""
 
 rollback_on_failure() {
     local status=$?
-    trap - EXIT
+    trap - EXIT INT TERM
     if [ "$ROLLBACK_ARMED" -ne 1 ] || [ "$status" -eq 0 ]; then
         exit "$status"
     fi
@@ -74,8 +82,14 @@ rollback_on_failure() {
         echo "ERROR: previous release $PREVIOUS no longer exists; cannot roll back" >&2
         exit "$status"
     fi
-    ln -sfn "$PREVIOUS" "$APP_DIR/current.new"
-    mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
+    if ! ln -sfn "$PREVIOUS" "$APP_DIR/current.new"; then
+        echo "ERROR: failed to prepare rollback symlink for $PREVIOUS" >&2
+        exit "$status"
+    fi
+    if ! mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"; then
+        echo "ERROR: failed to activate rollback symlink for $PREVIOUS" >&2
+        exit "$status"
+    fi
     if ! sudo /usr/bin/systemctl restart "$SERVICE"; then
         echo "ERROR: failed to restart $SERVICE while rolling back to $PREVIOUS" >&2
         exit "$status"
@@ -133,23 +147,35 @@ CHECKSUM_NAMED="$(awk '{print $2}' "$BUNDLE.sha256" | sed 's|^\*||')"
 CHECKSUM_ACTUAL="$(sha256sum "$BUNDLE" | awk '{print $1}')"
 [ "$CHECKSUM_EXPECTED" = "$CHECKSUM_ACTUAL" ] || die "checksum mismatch for $BUNDLE"
 
-# Capture the full verbose listing once so it can be screened twice (member
-# names, then link targets) without piping tar's output into grep: grep -q
-# exits as soon as it finds a match, which closes the pipe out from under a
-# still-writing tar and makes it exit on SIGPIPE — under `pipefail` that
-# turns the whole pipeline non-zero, so `if pipeline; then die; fi` sees a
-# FALSE condition and the guard never fires. Capturing to a variable first
-# lets tar always run to completion before anything is screened.
+# Two separate captures, neither piped into grep: grep -q exits as soon as
+# it finds a match, which closes the pipe out from under a still-writing
+# tar and makes it exit on SIGPIPE — under `pipefail` that turns the whole
+# pipeline non-zero, so `if pipeline; then die; fi` sees a FALSE condition
+# and the guard never fires. Capturing to a variable first makes tar always
+# run to completion before anything is screened.
+#
+# BUNDLE_NAMES (plain `tar -t`) is one member name per line, verbatim, and
+# is grepped whole-line — not split into fields — so a name containing a
+# space is still screened as a unit. GNU tar itself strips a leading "/"
+# or "../" from member names by default on extraction, so this check is
+# mostly defense-in-depth over tar's own behavior; it exists because not
+# every tar implementation does that, and because relying on it silently
+# would be exactly the kind of assumption this script exists to avoid.
+#
+# BUNDLE_MEMBERS (`tar -tv`) is the verbose listing, needed separately
+# because `tar -t` never prints where a symlink points — only its own
+# name — and a symlink's target gets no sanitization from tar at all, on
+# extraction or otherwise. It renders links as "name -> target"; the
+# second check below reads the text after " -> " directly rather than
+# splitting the line into whitespace fields, so a target containing a
+# space is still screened correctly.
+BUNDLE_NAMES="$(tar -tzf "$BUNDLE")"
 BUNDLE_MEMBERS="$(tar -tvzf "$BUNDLE")"
 
-if grep -Eq '^/|(^|/)\.\.(/|$)' <<<"$(awk '{print $NF}' <<<"$BUNDLE_MEMBERS")"; then
+if grep -Eq '^/|(^|/)\.\.(/|$)' <<<"$BUNDLE_NAMES"; then
     die "bundle contains absolute or parent-relative paths"
 fi
 
-# tar -t prints member names, not link targets, so a symlink (or hardlink)
-# member can carry an absolute or parent-escaping target that the name-only
-# screen above never sees. The verbose listing renders links as
-# "name -> target"; reject any whose target escapes the release tree.
 if grep -Eq '(^| )l?[rwx-]{9}.* -> (/|.*\.\./)' <<<"$BUNDLE_MEMBERS"; then
     die "bundle contains a link pointing outside the release tree"
 fi
@@ -194,6 +220,12 @@ echo "Smoke-checking the new release before activating it"
 SMOKE_PORT="$("$RELEASE/venv/bin/python" -c \
     'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')"
 SMOKE_LOG="$(mktemp)"
+SMOKE_PID=""
+# Armed right after the temp file is created, before the background
+# process even starts, so SMOKE_LOG cannot leak if something between here
+# and the `&` below exits the script; $SMOKE_PID is expanded when the trap
+# actually fires, so it picks up the real pid once one exists.
+trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT
 
 MARTYROLOGY_MANIFEST_PATH="$RELEASE/manifest.json" \
 MARTYROLOGY_DATA_PATH="$RELEASE/data/editions:$RELEASE/data/texts" \
@@ -202,7 +234,6 @@ MARTYROLOGY_CLBDR_PATH="$RELEASE/data/clbdr" \
     "$RELEASE/venv/bin/uvicorn" martyrology_api.app:create_app --factory \
     --host 127.0.0.1 --port "$SMOKE_PORT" >"$SMOKE_LOG" 2>&1 &
 SMOKE_PID=$!
-trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT
 
 if ! wait_healthy "$SMOKE_PORT"; then
     kill "$SMOKE_PID" 2>/dev/null || true
@@ -228,7 +259,7 @@ ln -sfn "$RELEASE" "$APP_DIR/current.new"
 mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
 
 ROLLBACK_ARMED=1
-trap rollback_on_failure EXIT
+trap rollback_on_failure EXIT INT TERM
 
 sudo /usr/bin/systemctl restart "$SERVICE"
 
@@ -238,7 +269,7 @@ wait_healthy "$LIVE_PORT" || die "$VERSION is unhealthy on port $LIVE_PORT"
 echo "$VERSION is live and healthy on port $LIVE_PORT"
 
 ROLLBACK_ARMED=0
-trap - EXIT
+trap - EXIT INT TERM
 
 rm -f "$BUNDLE" "$BUNDLE.sha256"
 CURRENT_TARGET="$(readlink "$APP_DIR/current")"
