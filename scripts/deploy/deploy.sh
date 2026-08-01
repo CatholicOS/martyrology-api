@@ -59,6 +59,18 @@ get_live_port() {
 # own for a signal, so the trap is registered for EXIT, INT, and TERM
 # alike; this function still runs either way.
 #
+# INT/TERM are wired to call this with an explicit "143" argument instead
+# of relying on the bare EXIT trap's `$?`: bash only runs a signal trap
+# once the current foreground command finishes, and does not retroactively
+# set $? to a signal-derived value — if the signal arrives while a plain
+# external command (e.g. the `sleep 1` inside wait_healthy) is running and
+# that command then completes normally on its own, $? is that command's
+# own (successful) exit status, not the signal. A SIGTERM delivered to
+# this process alone (a CI cancellation, an ssh disconnect) would then
+# read as status 0 and skip rollback entirely, leaving `current` flipped
+# to an unverified release while reporting success. Giving INT/TERM their
+# own explicit, non-zero status means a signal can never present as 0.
+#
 # Runs under `set -e`, so every step that could itself fail (the relink,
 # the restart) is explicitly guarded: an unguarded failure here would abort
 # the trap mid-rollback, losing both the original failure's exit status and
@@ -68,7 +80,7 @@ ROLLBACK_ARMED=0
 PREVIOUS=""
 
 rollback_on_failure() {
-    local status=$?
+    local status="${1:-$?}"
     trap - EXIT INT TERM
     if [ "$ROLLBACK_ARMED" -ne 1 ] || [ "$status" -eq 0 ]; then
         exit "$status"
@@ -163,20 +175,30 @@ CHECKSUM_ACTUAL="$(sha256sum "$BUNDLE" | awk '{print $1}')"
 # would be exactly the kind of assumption this script exists to avoid.
 #
 # BUNDLE_MEMBERS (`tar -tv`) is the verbose listing, needed separately
-# because `tar -t` never prints where a symlink points — only its own
-# name — and a symlink's target gets no sanitization from tar at all, on
-# extraction or otherwise. It renders links as "name -> target"; the
-# second check below reads the text after " -> " directly rather than
-# splitting the line into whitespace fields, so a target containing a
-# space is still screened correctly.
-BUNDLE_NAMES="$(tar -tzf "$BUNDLE")"
-BUNDLE_MEMBERS="$(tar -tvzf "$BUNDLE")"
+# because `tar -t` never prints where a symlink or hardlink points — only
+# its own name — and a symlink's target gets no sanitization from tar at
+# all, on extraction or otherwise. GNU tar does eagerly normalize hard
+# link targets (both here and at extraction), but that is this tar
+# implementation's behavior, not a guarantee this script can rely on, so
+# both link kinds are screened the same way regardless. The verbose
+# listing renders a symlink as "name -> target" and a hardlink as
+# "name link to target"; the check below matches either rendering and
+# reads the text right after it directly, rather than splitting the line
+# into whitespace fields, so a target containing a space is still
+# screened correctly. The escape patterns themselves catch an absolute
+# target, a "../" anywhere in it, and also a bare ".." (or a component
+# ending in "..", e.g. "a/..") with nothing after it — not just one
+# followed by a slash — since that also walks up a directory.
+BUNDLE_NAMES="$(tar -tzf "$BUNDLE")" \
+    || die "failed to list bundle contents: $BUNDLE (corrupt or truncated?)"
+BUNDLE_MEMBERS="$(tar -tvzf "$BUNDLE")" \
+    || die "failed to list bundle contents: $BUNDLE (corrupt or truncated?)"
 
 if grep -Eq '^/|(^|/)\.\.(/|$)' <<<"$BUNDLE_NAMES"; then
     die "bundle contains absolute or parent-relative paths"
 fi
 
-if grep -Eq '(^| )l?[rwx-]{9}.* -> (/|.*\.\./)' <<<"$BUNDLE_MEMBERS"; then
+if grep -Eq '(^| )[hl]?[rwx-]{9}.* (->|link to) (/|.*\.\.(/|$))' <<<"$BUNDLE_MEMBERS"; then
     die "bundle contains a link pointing outside the release tree"
 fi
 
@@ -224,8 +246,10 @@ SMOKE_PID=""
 # Armed right after the temp file is created, before the background
 # process even starts, so SMOKE_LOG cannot leak if something between here
 # and the `&` below exits the script; $SMOKE_PID is expanded when the trap
-# actually fires, so it picks up the real pid once one exists.
-trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT
+# actually fires, so it picks up the real pid once one exists. Also covers
+# INT/TERM, not just EXIT, so a signal during the smoke phase still kills
+# the smoke uvicorn and removes the log instead of orphaning both.
+trap 'kill "$SMOKE_PID" 2>/dev/null || true; rm -f "$SMOKE_LOG"' EXIT INT TERM
 
 MARTYROLOGY_MANIFEST_PATH="$RELEASE/manifest.json" \
 MARTYROLOGY_DATA_PATH="$RELEASE/data/editions:$RELEASE/data/texts" \
@@ -248,7 +272,7 @@ echo "Smoke check passed: $EDITIONS editions"
 
 kill "$SMOKE_PID" 2>/dev/null || true
 rm -f "$SMOKE_LOG"
-trap - EXIT
+trap - EXIT INT TERM
 
 if [ -L "$APP_DIR/current" ]; then
     PREVIOUS="$(readlink "$APP_DIR/current")"
@@ -259,7 +283,8 @@ ln -sfn "$RELEASE" "$APP_DIR/current.new"
 mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
 
 ROLLBACK_ARMED=1
-trap rollback_on_failure EXIT INT TERM
+trap rollback_on_failure EXIT
+trap 'rollback_on_failure 143' INT TERM
 
 sudo /usr/bin/systemctl restart "$SERVICE"
 
