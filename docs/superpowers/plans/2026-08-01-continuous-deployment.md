@@ -40,6 +40,7 @@
 | `tests/test_deploy_script.py` | Subprocess tests for `deploy.sh` rejection paths and `--dry-run`. |
 | `scripts/deploy/setup-vps-deploy-user.sh` | One-time root provisioning of users, dirs, sudoers, units, runtime.env. |
 | `.github/workflows/deploy.yml` | Release → build → scp → ssh deploy. |
+| `.github/workflows/token-expiry-watch.yml` | Weekly check that SUBMODULE_TOKEN still works and is not near expiry. |
 | `.gitmodules` | Three HTTPS submodule pins. |
 
 **Modified:**
@@ -1403,11 +1404,127 @@ Expected: no output, exit 0.
 Run: `pytest -q --cov --cov-branch --cov-report=term-missing && ruff check src tests scripts && ruff format --check src tests scripts && pyright`
 Expected: all pass, coverage at or above 90.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 7: Add the token expiry watch**
+
+`SUBMODULE_TOKEN` is a fine-grained PAT with a hard expiry. When it lapses,
+`actions/checkout` fails at the submodule step — and because deploys only fire on
+published releases, that surfaces at the worst possible moment. This workflow
+reads the expiry off the token itself rather than from a hardcoded date, so it
+stays correct across rotations, and doubles as a liveness check: a revoked token
+fails the API call and raises the same alarm.
+
+Create `.github/workflows/token-expiry-watch.yml`:
+
+```yaml
+name: Token expiry watch
+
+# SUBMODULE_TOKEN gates the release workflow's private-submodule checkout.
+# GitHub returns a fine-grained PAT's expiry in the
+# GitHub-Authentication-Token-Expiration response header, so this reads the
+# real expiry off the token instead of tracking a date by hand.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check SUBMODULE_TOKEN health and expiry
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUBMODULE_TOKEN: ${{ secrets.SUBMODULE_TOKEN }}
+          REPO: ${{ github.repository }}
+          WATCHED: CatholicOS/martyrology-texts
+          WARN_DAYS: "30"
+        run: |
+          set -euo pipefail
+
+          open_issue() {
+            local title="$1" body="$2"
+            if gh issue list --repo "$REPO" --state open --search "in:title $title" \
+                 --json title --jq '.[].title' | grep -Fxq "$title"; then
+              echo "Issue already open: $title"
+              return 0
+            fi
+            gh issue create --repo "$REPO" --title "$title" --body "$body" --label dependencies
+          }
+
+          status="$(curl -sS -o /dev/null -D headers.txt -w '%{http_code}' \
+            -H "Authorization: Bearer $SUBMODULE_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$WATCHED")"
+
+          if [ "$status" != "200" ]; then
+            open_issue "SUBMODULE_TOKEN is not working (HTTP $status)" \
+              "The scheduled token check could not read \`$WATCHED\` (HTTP $status).
+
+          The release workflow's \`actions/checkout\` step will fail at the
+          \`vendor/texts\` submodule until this is fixed. Likely causes: the PAT
+          expired, was revoked, or its organization approval was withdrawn.
+
+          Fix: mint a new fine-grained PAT (resource owner \`CatholicOS\`,
+          Contents: Read-only on \`$WATCHED\`), approve it in the org's pending
+          requests, then \`gh secret set SUBMODULE_TOKEN --repo $REPO --app actions\`."
+            exit 1
+          fi
+
+          expiry="$(grep -i '^github-authentication-token-expiration:' headers.txt \
+            | sed 's/^[^:]*: *//' | tr -d '\r' || true)"
+
+          if [ -z "$expiry" ]; then
+            echo "::notice::Token reports no expiration date; nothing to warn about."
+            exit 0
+          fi
+
+          expiry_epoch="$(date -d "$expiry" +%s)"
+          days_left=$(( (expiry_epoch - $(date +%s)) / 86400 ))
+          echo "SUBMODULE_TOKEN expires $expiry ($days_left days)"
+
+          if [ "$days_left" -le "$WARN_DAYS" ]; then
+            open_issue "SUBMODULE_TOKEN expires in $days_left days ($expiry)" \
+              "\`SUBMODULE_TOKEN\` expires on **$expiry** — $days_left days from now.
+
+          When it lapses, the release workflow fails at the \`vendor/texts\`
+          submodule checkout, and because deploys only run on published releases
+          you will discover it mid-release.
+
+          Renew: mint a fine-grained PAT (resource owner \`CatholicOS\`,
+          Contents: Read-only on \`$WATCHED\`), approve it in the org's pending
+          requests, then \`gh secret set SUBMODULE_TOKEN --repo $REPO --app actions\`.
+
+          Longer term, an org-owned GitHub App installation token removes this
+          expiry cycle entirely (see the deployment spec, §3)."
+          fi
+```
+
+Two behaviors to know about, both documented here rather than discovered later.
+The issue title embeds the expiry date, so a renewed token produces a distinct
+title next cycle instead of being deduplicated against the stale one. And GitHub
+disables scheduled workflows in repositories with no activity for 60 days — an
+inactive repo would silently stop warning, so if this repo ever goes quiet the
+watch stops with it.
+
+- [ ] **Step 8: Validate the watch workflow YAML**
+
+Run: `python -c "import yaml; yaml.safe_load(open('.github/workflows/token-expiry-watch.yml'))"`
+Expected: no output, exit 0.
+
+Note: scheduled workflows only run from the default branch, so this stays dormant
+until the branch merges to `main`. Use `workflow_dispatch` to test it before then.
+
+- [ ] **Step 9: Commit**
 
 ```bash
-git add .github/workflows/deploy.yml .github/workflows/ci.yml
-git commit -S -m "Add release deploy workflow and shellcheck CI job"
+git add .github/workflows/deploy.yml .github/workflows/ci.yml \
+        .github/workflows/token-expiry-watch.yml
+git commit -S -m "Add release deploy workflow, shellcheck CI job and token expiry watch"
 ```
 
 ---
