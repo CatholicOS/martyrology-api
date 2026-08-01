@@ -1,0 +1,9 @@
+[submodule "vendor/crmedr"]
+	path = vendor/crmedr
+	url = https://github.com/CatholicOS/crmedr.git
+[submodule "vendor/clbdr"]
+	path = vendor/clbdr
+	url = https://github.com/CatholicOS/clbdr.git
+[submodule "vendor/texts"]
+	path = vendor/texts
+	url = https://github.com/CatholicOS/martyrology-texts.git
