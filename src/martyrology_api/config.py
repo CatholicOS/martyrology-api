@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     openfga_api_url: str = ""
     openfga_store_id: str = ""
     openfga_model_id: str = ""
+    openfga_api_token: str = ""
 
     github_token: str = ""
     public_repo: str = "CatholicOS/martyrology-api"
@@ -50,4 +51,4 @@ class Settings(BaseSettings):
 
     @property
     def authz_enabled(self) -> bool:
-        return bool(self.openfga_api_url and self.openfga_store_id)
+        return bool(self.openfga_api_url and self.openfga_store_id and self.openfga_api_token)

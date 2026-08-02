@@ -64,3 +64,75 @@ def truthy_non_true_transport():
 async def test_truthy_non_true_allowed_is_false():
     a = Authz("https://fga.example", "store1", "model1", transport=truthy_non_true_transport())
     assert await a.check("user:u", "can_edit", "x") is False
+
+
+def header_capturing_transport(seen: dict):
+    def handler(request: httpx.Request) -> httpx.Response:
+        seen["auth"] = request.headers.get("authorization")
+        seen["path"] = request.url.path
+        import json
+
+        seen["body"] = json.loads(request.content)
+        return httpx.Response(200, json={"allowed": True})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_check_sends_bearer_token():
+    seen: dict = {}
+    a = Authz(
+        "https://fga.example",
+        "store1",
+        "model1",
+        api_token="k3y",
+        transport=header_capturing_transport(seen),
+    )
+    assert await a.check("user:u", "can_edit", "ed1") is True
+    assert seen["auth"] == "Bearer k3y"
+
+
+@pytest.mark.asyncio
+async def test_check_omits_header_when_no_token():
+    seen: dict = {}
+    a = Authz(
+        "https://fga.example",
+        "store1",
+        "model1",
+        transport=header_capturing_transport(seen),
+    )
+    assert await a.check("user:u", "can_edit", "ed1") is True
+    assert seen["auth"] is None
+
+
+@pytest.mark.asyncio
+async def test_check_object_takes_a_full_object_ref():
+    seen: dict = {}
+    a = Authz(
+        "https://fga.example",
+        "store1",
+        "model1",
+        api_token="k",
+        transport=header_capturing_transport(seen),
+    )
+    assert await a.check_object("user:u", "admin", "governance_body:cei") is True
+    assert seen["body"]["tuple_key"]["object"] == "governance_body:cei"
+
+
+@pytest.mark.asyncio
+async def test_check_still_prefixes_edition():
+    seen: dict = {}
+    a = Authz(
+        "https://fga.example",
+        "store1",
+        "model1",
+        api_token="k",
+        transport=header_capturing_transport(seen),
+    )
+    await a.check("user:u", "can_edit", "martyrologium_romanum_2004")
+    assert seen["body"]["tuple_key"]["object"] == "edition:martyrologium_romanum_2004"
+
+
+@pytest.mark.asyncio
+async def test_check_object_fails_closed_when_unconfigured():
+    assert await Authz("", "", "").check_object("user:u", "admin", "governance_body:cei") is False

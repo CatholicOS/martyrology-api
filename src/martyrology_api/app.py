@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path as _Path
 
 from fastapi import FastAPI
@@ -31,8 +32,17 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         settings.zitadel_issuer, settings.zitadel_client_id, settings.zitadel_client_secret
     )
     app.state.authz = Authz(
-        settings.openfga_api_url, settings.openfga_store_id, settings.openfga_model_id
+        settings.openfga_api_url,
+        settings.openfga_store_id,
+        settings.openfga_model_id,
+        settings.openfga_api_token,
     )
+    if settings.openfga_api_url and not settings.openfga_api_token:
+        logging.getLogger(__name__).warning(
+            "MARTYROLOGY_OPENFGA_API_URL is set but MARTYROLOGY_OPENFGA_API_TOKEN is empty; "
+            "an OpenFGA running with preshared authentication will reject every check, "
+            "denying all curation writes and redacting all restricted texts."
+        )
     if settings.local_git_root:
         backend = LocalGitBackend(_Path(settings.local_git_root))
     elif settings.github_token:
