@@ -241,6 +241,32 @@ if [ -L "$APP_DIR/current" ] && [ "$(readlink "$APP_DIR/current")" = "$RELEASE" 
     die "$VERSION is the currently active release; deactivate or bump the version before redeploying"
 fi
 
+# $APP_DIR, releases/ and incoming/ get their modes from
+# setup-vps-deploy-user.sh, which asserts them once — at provisioning time.
+# Nothing re-asserted them afterwards, so a later `chmod 0755 /opt/martyrology`
+# (an operator debugging a permission problem, a restore that did not preserve
+# modes, a Plesk tool tidying up) went unnoticed by every subsequent deploy: the
+# per-release normalisation below would keep reporting a correctly locked-down
+# release tree while the directory above it published that tree — and the
+# uploaded bundle in incoming/ — to every other uid on this shared host.
+#
+# Non-recursive on purpose. The contents of releases/ are covered by
+# normalise_release_permissions() and the contents of incoming/ by the `chmod
+# 600` on the bundle above; what is unowned by any other check is these three
+# directories' own modes. Each is tested separately so the message names the one
+# to fix rather than pointing at the tree in general.
+#
+# `find -L` so a symlinked $APP_DIR is judged by the mode of the directory it
+# resolves to rather than by the link's own inert 0777; a broken link makes find
+# write to stderr, which is captured into the same variable and therefore fails
+# loudly instead of reading as "no other bits found".
+for GUARDED_DIR in "$APP_DIR" "$APP_DIR/releases" "$APP_DIR/incoming"; do
+    [ -d "$GUARDED_DIR" ] || die "required directory is missing: $GUARDED_DIR"
+    WORLD_ACCESSIBLE="$(find -L "$GUARDED_DIR" -maxdepth 0 -perm /0007 2>&1)" || true
+    [ -z "$WORLD_ACCESSIBLE" ] || die \
+        "$GUARDED_DIR is accessible to every local account; expected no 'other' permission bits (run setup-vps-deploy-user.sh)"
+done
+
 echo "Installing $VERSION to $RELEASE"
 rm -rf "$RELEASE"
 mkdir -p "$RELEASE"
@@ -260,6 +286,14 @@ python3.12 -m venv "$RELEASE/venv"
 # setgid bit propagated — none of which is guaranteed, so normalise all three
 # here rather than discover it when systemd fails to exec.
 #
+# A function rather than a straight-line block because it has to run more than
+# once: everything written into $RELEASE *after* the first call — most
+# realistically __pycache__ from the smoke check, which runs the app out of
+# this very tree — would otherwise never be normalised and never be checked.
+# One definition, called at both points, so the fix and its proof cannot drift
+# apart between the two. It is idempotent by construction: chgrp/chmod restate
+# the wanted end state rather than adjusting relative to the current one.
+#
 # What must NOT happen is the obvious `a+rX`: data/texts holds the licensed
 # martyrology-texts corpus, and this is a shared Plesk host where every other
 # subscription runs its own non-chrooted uid. A world-readable release tree
@@ -271,43 +305,50 @@ python3.12 -m venv "$RELEASE/venv"
 # membership check is what makes a missing membership loud there rather than
 # here. Capital X (not lowercase x) only sets the execute bit on directories
 # and on files that already have an execute bit somewhere, so it does not make
-# every JSON data file executable. Both run once, after the tree is complete,
-# not per-file or in a loop.
-chgrp -R "$SERVICE_GROUP" "$RELEASE"
-chmod -R u+rwX,g+rX,o-rwx "$RELEASE"
+# every JSON data file executable. Both run once per call, after the tree is
+# complete, not per-file or in a loop.
+normalise_release_permissions() {
+    chgrp -R "$SERVICE_GROUP" "$RELEASE"
+    chmod -R u+rwX,g+rX,o-rwx "$RELEASE"
 
-# The two lines above are the fix; this proves they stuck, without
-# impersonating the service account (this script has no sudo grant for that —
-# see the provisioning script's own `sudo -u martyrology test -x/-r` check,
-# which runs as root at provisioning time, not here). It asserts both halves,
-# and neither can mask the other: group bits present *and* every "other" bit
-# absent *and* the group actually being $SERVICE_GROUP. A tree left
-# world-readable fails it just as loudly as one the service account cannot
-# read — which is the point, since the world-readable case is the one that
-# leaks the corpus while looking like a healthy deploy.
-#
-# Symlinks are excluded because on Linux a symlink's own mode is inert (always
-# lrwxrwxrwx, and chmod -R does not follow them); access is decided by the
-# target, which find visits in its own right. Without this exclusion every venv
-# symlink would trip the "other bits set" arm and the check would fail always,
-# for no real reason — a check that always fires teaches operators to ignore it.
-#
-# find descends fully here because u+rwX above guarantees this user can
-# traverse everything it owns, so nothing is skipped unexamined. `|| true` on
-# the capture is deliberate: it exists so a nonzero exit from find (e.g. a
-# permission error on something this user somehow does not own) still reaches
-# the is-empty check below instead of tripping `set -e` and discarding the
-# diagnostic before it can be printed — the stderr text is captured into the
-# same variable, so such a failure reports rather than passes.
-UNREADABLE="$(find "$RELEASE" ! -type l \( \
-    \( -type d ! -perm -0050 \) -o \
-    \( -type f ! -perm -0040 \) -o \
-    -perm /0007 -o \
-    ! -group "$SERVICE_GROUP" \) 2>&1)" || true
-if [ -n "$UNREADABLE" ]; then
-    echo "$UNREADABLE" >&2
-    die "release tree is not group-readable by $SERVICE_GROUP with all other-access denied"
-fi
+    # The two lines above are the fix; this proves they stuck, without
+    # impersonating the service account (this script has no sudo grant for
+    # that — see the provisioning script's own `sudo -u martyrology test -x/-r`
+    # check, which runs as root at provisioning time, not here). It asserts
+    # both halves, and neither can mask the other: group bits present *and*
+    # every "other" bit absent *and* the group actually being $SERVICE_GROUP. A
+    # tree left world-readable fails it just as loudly as one the service
+    # account cannot read — which is the point, since the world-readable case
+    # is the one that leaks the corpus while looking like a healthy deploy.
+    #
+    # Symlinks are excluded because on Linux a symlink's own mode is inert
+    # (always lrwxrwxrwx, and chmod -R does not follow them); access is decided
+    # by the target, which find visits in its own right. Without this exclusion
+    # every venv symlink would trip the "other bits set" arm and the check
+    # would fail always, for no real reason — a check that always fires teaches
+    # operators to ignore it.
+    #
+    # find descends fully here because u+rwX above guarantees this user can
+    # traverse everything it owns, so nothing is skipped unexamined. `|| true`
+    # on the capture is deliberate: it exists so a nonzero exit from find (e.g.
+    # a permission error on something this user somehow does not own) still
+    # reaches the is-empty check below instead of tripping `set -e` and
+    # discarding the diagnostic before it can be printed — the stderr text is
+    # captured into the same variable, so such a failure reports rather than
+    # passes. UNREADABLE is deliberately not `local`: the tests splice this
+    # block out of the script verbatim and run it at top level.
+    UNREADABLE="$(find "$RELEASE" ! -type l \( \
+        \( -type d ! -perm -0050 \) -o \
+        \( -type f ! -perm -0040 \) -o \
+        -perm /0007 -o \
+        ! -group "$SERVICE_GROUP" \) 2>&1)" || true
+    if [ -n "$UNREADABLE" ]; then
+        echo "$UNREADABLE" >&2
+        die "release tree is not group-readable by $SERVICE_GROUP with all other-access denied"
+    fi
+}
+
+normalise_release_permissions
 
 # Validate the manifest with the reader the app itself uses, so a bundle whose
 # manifest this release cannot parse is rejected before it is ever activated.
@@ -343,14 +384,21 @@ SMOKE_PID=""
 # default disposition would already have exited 143 here, so this wiring
 # has to reproduce that explicitly rather than weaken it.
 #
-# The handler's first line clears all three traps so it cannot run twice
-# on a signal (once for the signal, once for the EXIT that follows). The
-# body is idempotent, so that is belt-and-braces rather than load-bearing,
-# but it is stated rather than assumed.
+# The handler clears all three traps LAST, not first. Clearing first left a
+# window — between the `trap -` and the `kill`/`rm` — in which the traps
+# were already gone but the cleanup had not happened yet, so a signal
+# landing there got bash's default disposition and killed the script on the
+# spot, orphaning the smoke uvicorn and leaving $SMOKE_LOG in /tmp. Small,
+# but it is the one window in this phase where a signal loses the cleanup
+# entirely. Clearing last means a signal arriving mid-body is still trapped
+# and the handler simply runs again; the body is idempotent (`kill … ||
+# true`, `rm -f`), so a double run is harmless, whereas a missed run is
+# not. The clear still happens before the function returns, so it remains
+# the disarm the success path below relies on.
 smoke_cleanup() {
-    trap - EXIT INT TERM
     kill "$SMOKE_PID" 2>/dev/null || true
     rm -f "$SMOKE_LOG"
+    trap - EXIT INT TERM
 }
 trap smoke_cleanup EXIT
 trap 'smoke_cleanup; exit 143' INT TERM
@@ -376,9 +424,18 @@ echo "Smoke check passed: $EDITIONS editions"
 
 # Same handler on the success path, so the teardown has exactly one
 # definition and cannot drift from what the traps run; it clears its own
-# traps first, which is also the disarm this phase needs before the
-# rollback trap below is armed.
+# traps as its last act, which is also the disarm this phase needs before
+# the rollback trap below is armed.
 smoke_cleanup
+
+# Second call, and the reason this is a function. The smoke check ran the app
+# out of $RELEASE, so python may have written __pycache__ directories and .pyc
+# files into it since the first normalisation — created with this process's
+# umask, not with the modes just asserted. Re-normalise and re-assert now that
+# the smoke uvicorn is dead and nothing else will write here, so what gets
+# activated below is the tree that was checked, not the tree as it was several
+# steps ago.
+normalise_release_permissions
 
 if [ -L "$APP_DIR/current" ]; then
     PREVIOUS="$(readlink "$APP_DIR/current")"
@@ -411,7 +468,35 @@ sudo /usr/bin/systemctl restart "$SERVICE"
 LIVE_PORT="$(get_live_port)" || die "could not determine MARTYROLOGY_PORT from $RUNTIME_ENV"
 wait_healthy "$LIVE_PORT" || die "$VERSION is unhealthy on port $LIVE_PORT"
 
-echo "$VERSION is live and healthy on port $LIVE_PORT"
+# wait_healthy only proves that *something* is answering /healthz on that port.
+# If the restart did not actually swap processes — systemd reporting success
+# while the old unit kept running, a restart racing an already-running
+# instance, a `current` flip that silently did not take — the previous release
+# answers, the poll passes, and the deploy reports success for a version that
+# was never activated. So assert the served version is the one just installed,
+# and do it BEFORE the rollback trap is disarmed below, so a mismatch takes the
+# rollback path (via die → EXIT trap) rather than merely printing.
+#
+# The version is read the same way the smoke check reads its editions count:
+# with the release's own python, which is the only JSON parser this script can
+# rely on being present. A here-string rather than a pipe, so a parser that
+# exits early can never SIGPIPE the writer and turn a failed check into a
+# passed one under `pipefail`.
+#
+# $VERSION may arrive as "0.1.0" (the workflow passes the bare pyproject
+# version) or as "v0.1.0" (a manual invocation; the argument regex accepts
+# both), while HealthOut.version is always the bare form — so strip one leading
+# "v" before comparing rather than comparing two different spellings.
+LIVE_HEALTH="$(curl -fsS "http://127.0.0.1:${LIVE_PORT}/healthz")" \
+    || die "$VERSION answered the health poll on port $LIVE_PORT but /healthz could not be re-read"
+SERVED_VERSION="$("$RELEASE/venv/bin/python" -c \
+    'import json,sys; print(json.load(sys.stdin).get("version", ""))' <<<"$LIVE_HEALTH")" \
+    || die "$VERSION is live on port $LIVE_PORT but /healthz did not parse as JSON"
+EXPECTED_VERSION="${VERSION#v}"
+[ "$SERVED_VERSION" = "$EXPECTED_VERSION" ] || die \
+    "port $LIVE_PORT is serving version '$SERVED_VERSION', not the just-deployed '$EXPECTED_VERSION'; the restart did not swap processes"
+
+echo "$VERSION is live and healthy on port $LIVE_PORT (serving version $SERVED_VERSION)"
 
 ROLLBACK_ARMED=0
 trap - EXIT INT TERM

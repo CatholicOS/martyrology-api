@@ -216,12 +216,19 @@ jobs:
             echo "ERROR: VPS_USERNAME / VPS_HOST / APP_DIR is empty."
             exit 1
           fi
+          # scp's remote destination is not a local path: it is handed to the
+          # remote end as a shell word and expanded there, exactly like the
+          # command in the "Activate release" step below. So it needs the same
+          # quoting dialect — printf %q renders $APP_DIR as a single literal
+          # word for the remote bash, instead of letting whitespace or a shell
+          # metacharacter in it re-split the destination there.
+          REMOTE_APP_DIR="$(printf '%q' "$APP_DIR")"
           for attempt in 1 2 3; do
             echo "Upload attempt $attempt..."
             if scp -i ~/.ssh/deploy_key \
               -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
               "$BUNDLE" "$BUNDLE.sha256" \
-              "${VPS_USERNAME}@${VPS_HOST}:${APP_DIR}/incoming/"; then
+              "${VPS_USERNAME}@${VPS_HOST}:${REMOTE_APP_DIR}/incoming/"; then
               echo "Upload succeeded on attempt $attempt"
               exit 0
             fi

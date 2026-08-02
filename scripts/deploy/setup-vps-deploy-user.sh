@@ -108,6 +108,22 @@ chown -R "$DEPLOY_USER:$SERVICE_GROUP" "$APP_DIR"
 # is correct: on Linux a symlink's own mode is inert.
 chmod -R u+rwX,g+rX,o-rwx "$APP_DIR/releases"
 
+# And the same for incoming/, which the earlier version of this script left
+# alone. A bundle scp'd there by a pre-fix deploy that then failed keeps the
+# 0644 the deploy user's ssh umask gave it — deploy.sh only removes the bundle
+# on its success path — and the half-two `find` check below would then abort
+# provisioning with a message naming the file, i.e. detect the leftover without
+# doing anything about it. Retracting it here means the check runs against a
+# tree that has actually been fixed, rather than the operator being told to go
+# and fix it by hand.
+#
+# `go-rwx`, not `g+rX`: releases/ is shared with the service account through
+# the martyrology group, but incoming/ holds the *bundle*, which is a second
+# copy of the licensed corpus in tarball form. Only the deploy user ever needs
+# it — the service account reads the extracted release — so the group bits come
+# off here too, and the check further down asserts exactly that.
+chmod -R u+rwX,go-rwx "$APP_DIR/incoming"
+
 # 0750, not 0755: the service account reaches the release tree through the
 # shared martyrology group, and no other local uid has any business here.
 chmod 0750 "$APP_DIR"

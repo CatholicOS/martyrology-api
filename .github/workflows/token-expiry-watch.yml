@@ -41,9 +41,17 @@ jobs:
             # and `:`, which GitHub's search syntax isn't guaranteed to treat
             # literally, so open issues are listed and matched in the shell
             # instead.
+            # The match itself is a here-string, not `printf … | grep -Fxq`,
+            # for the same reason and the same defect class: `grep -q` exits on
+            # its first match, which SIGPIPEs a `printf` still writing the rest
+            # of the payload once it exceeds the 64 KiB pipe buffer — under
+            # `pipefail` the whole pipeline then reads non-zero, the `if` takes
+            # the false branch, and a duplicate issue is filed precisely when
+            # the repo has enough open issues for it to matter. A here-string
+            # has no writer to signal.
             local existing
             existing="$(gh issue list --repo "$REPO" --state open --json title --jq '.[].title')"
-            if printf '%s\n' "$existing" | grep -Fxq "$title"; then
+            if grep -Fxq "$title" <<<"$existing"; then
               echo "Issue already open: $title"
               return 0
             fi

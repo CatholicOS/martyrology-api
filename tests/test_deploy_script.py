@@ -1,9 +1,14 @@
+import contextlib
 import hashlib
 import io
 import signal
 import subprocess
+import sys
 import tarfile
+import threading
 import time
+from collections.abc import Iterator
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "deploy" / "deploy.sh"
@@ -144,11 +149,18 @@ def _extract_permission_selfcheck() -> str:
     """Pulls the UNREADABLE=... / if / echo / die / fi block that follows the
     chgrp/chmod pair out of deploy.sh's current source. The `find` invocation
     spans several lines, so the block runs from the `UNREADABLE=` line to the
-    first `fi` after it."""
+    first `fi` after it.
+
+    Matched with lstrip() because the block now lives inside
+    normalise_release_permissions() and is therefore indented; the extracted
+    text is spliced into a `bash -c` script where leading whitespace is
+    immaterial, so it is kept verbatim rather than dedented."""
     text = SCRIPT.read_text(encoding="utf-8")
     lines = text.splitlines()
     start_idx = next(
-        i for i, line in enumerate(lines) if line.startswith('UNREADABLE="$(find "$RELEASE"')
+        i
+        for i, line in enumerate(lines)
+        if line.lstrip().startswith('UNREADABLE="$(find "$RELEASE"')
     )
     end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i].strip() == "fi")
     return "\n".join(lines[start_idx : end_idx + 1])
@@ -264,6 +276,138 @@ def _build_smoke_signal_harness(tmp_path: Path) -> Path:
         encoding="utf-8",
     )
     return harness
+
+
+def _build_smoke_teardown_window_harness(tmp_path: Path) -> tuple[Path, Path]:
+    """Harness for the teardown's own signal window: the stretch of
+    smoke_cleanup() between the `trap -` and the `kill`/`rm`.
+
+    That window is sub-millisecond in the real script, so it is widened here
+    rather than raced: `kill` is overridden by a shell function (functions take
+    precedence over builtins in bash) that first touches a marker file the test
+    polls for, then blocks in `command sleep`. The test delivers its second
+    signal while the teardown is inside that block.
+
+    With `trap -` first, the traps are already gone by then, the signal gets
+    bash's default disposition, and the process dies before `rm -f` ever
+    runs -- leaving the temp log behind. With `trap -` last, the signal is
+    still trapped, bash defers it to the end of the current foreground command
+    and re-runs the idempotent handler, which cleans up.
+    """
+    function_text, trap_lines = _extract_smoke_harness_pieces()
+    marker = tmp_path / "in-cleanup"
+    harness = tmp_path / "smoke-window-harness.sh"
+    harness.write_text(
+        "#!/usr/bin/env bash\n"
+        "set -euo pipefail\n"
+        'SMOKE_LOG="$(mktemp)"\n'
+        'SMOKE_PID=""\n'
+        'echo "$SMOKE_LOG"\n'
+        "kill() {\n"
+        f'    : >"{marker}"\n'
+        "    command sleep 1\n"
+        "    return 0\n"
+        "}\n"
+        "\n"
+        f"{function_text}\n"
+        "\n" + "\n".join(trap_lines) + "\n"
+        "\n"
+        "sleep 1\n"
+        'echo "harness: CONTINUED PAST SMOKE PHASE" >&2\n'
+        "smoke_cleanup\n"
+        "exit 0\n",
+        encoding="utf-8",
+    )
+    return harness, marker
+
+
+def _extract_normalise_function() -> str:
+    """Pulls normalise_release_permissions() -- the chgrp/chmod pair plus the
+    self-check that proves they stuck -- out of deploy.sh's current source."""
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(
+        i for i, line in enumerate(lines) if line == "normalise_release_permissions() {"
+    )
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i] == "}")
+    return "\n".join(lines[start_idx : end_idx + 1])
+
+
+def _extract_app_dir_guard() -> str:
+    """Pulls the `for GUARDED_DIR in ...; done` loop that asserts $APP_DIR,
+    releases/ and incoming/ carry no "other" bits."""
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(i for i, line in enumerate(lines) if line.startswith("for GUARDED_DIR in "))
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i].strip() == "done")
+    return "\n".join(lines[start_idx : end_idx + 1])
+
+
+def _extract_version_assertion() -> str:
+    """Pulls the post-restart served-version assertion (LIVE_HEALTH= through
+    the SERVED_VERSION comparison) out of deploy.sh's current source."""
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(i for i, line in enumerate(lines) if line.startswith('LIVE_HEALTH="$(curl'))
+    end_idx = next(
+        i
+        for i in range(start_idx + 1, len(lines))
+        if lines[i].startswith('echo "$VERSION is live and healthy')
+    )
+    return "\n".join(lines[start_idx:end_idx]).rstrip()
+
+
+@contextlib.contextmanager
+def _healthz_server(payload: str) -> Iterator[int]:
+    """A throwaway HTTP server answering every GET with `payload`, standing in
+    for the restarted unit's /healthz. Yields the ephemeral port it bound."""
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_GET(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler's name
+            body = payload.encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, fmt: str, *args: object) -> None:
+            pass
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        yield server.server_port
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+
+def _release_with_python(tmp_path: Path) -> Path:
+    """A $RELEASE stub whose venv/bin/python is this interpreter -- enough for
+    the served-version assertion, which uses the release's own python as its
+    JSON parser."""
+    release = tmp_path / "release"
+    (release / "venv" / "bin").mkdir(parents=True)
+    (release / "venv" / "bin" / "python").symlink_to(sys.executable)
+    return release
+
+
+def _run_version_assertion(
+    tmp_path: Path, *, version: str, served: str
+) -> subprocess.CompletedProcess[str]:
+    release = _release_with_python(tmp_path)
+    block = _extract_version_assertion()
+    die_fn = _extract_die_function()
+    with _healthz_server(served) as port:
+        script = (
+            "set -euo pipefail\n"
+            f"VERSION={version}\nLIVE_PORT={port}\nRELEASE={release}\n"
+            f'{die_fn}\n{block}\necho "REACHED END" >&2\n'
+        )
+        return subprocess.run(["bash", "-c", script], capture_output=True, text=True)
 
 
 def _run(app: Path, *args: str) -> subprocess.CompletedProcess[str]:
@@ -875,3 +1019,556 @@ def test_signal_during_smoke_phase_stops_the_deploy_instead_of_continuing(tmp_pa
     )
     smoke_log = Path(stdout.strip().splitlines()[0])
     assert not smoke_log.exists(), f"smoke log {smoke_log} was left behind after the signal"
+
+
+def test_permission_normalisation_is_reapplied_after_the_smoke_check(tmp_path: Path):
+    """The chgrp/chmod/self-check trio used to be a straight-line block that
+    ran once, immediately after `pip install`. The smoke check that follows it
+    then runs the app *out of that same tree*, so python can write
+    `__pycache__` directories and `.pyc` files into it afterwards, with this
+    process's umask rather than with the modes just asserted -- and what got
+    symlinked into `current` was therefore not the tree that was checked.
+
+    Two halves, because the fix has two parts and each can be reverted on its
+    own:
+
+    Structural -- that a `normalise_release_permissions` call actually sits
+    between the smoke check's result and the `ln -sfn` flip. Deleting the
+    second call site (leaving the function defined and called once) is exactly
+    what the original defect was, and nothing behavioural in this suite can see
+    it, because the real smoke check needs a working venv and uvicorn.
+
+    Behavioural -- that the extracted function really is re-runnable and really
+    does catch a tree dirtied after a first, passing normalisation: the
+    self-check alone is run against the dirtied tree first (it must fail, so
+    the check is proven to be what notices), then the whole function (it must
+    fix and pass). If the check were toothless the first run would pass and
+    this test would fail.
+    """
+    lines = SCRIPT.read_text(encoding="utf-8").splitlines()
+    smoke_idx = next(i for i, line in enumerate(lines) if line.startswith('EDITIONS="$(curl'))
+    flip_idx = next(i for i, line in enumerate(lines) if line.startswith('ln -sfn "$RELEASE"'))
+    assert any(
+        line.strip() == "normalise_release_permissions" for line in lines[smoke_idx:flip_idx]
+    ), (
+        "deploy.sh must re-normalise and re-assert $RELEASE's permissions after the "
+        "smoke check has run the app out of that tree and before `current` is flipped"
+    )
+
+    normalise_fn = _extract_normalise_function()
+    selfcheck = _extract_permission_selfcheck()
+    die_fn = _extract_die_function()
+    group = _own_group()
+
+    release = tmp_path / "release"
+    (release / "data").mkdir(parents=True)
+    (release / "data" / "01.json").write_text("{}", encoding="utf-8")
+
+    preamble = f"RELEASE={release}\nSERVICE_GROUP={group}\n{die_fn}\n"
+
+    first = subprocess.run(
+        ["bash", "-c", f'{preamble}{normalise_fn}\nnormalise_release_permissions\necho "OK" >&2\n'],
+        capture_output=True,
+        text=True,
+    )
+    assert first.returncode == 0, first.stderr
+
+    # Exactly what the smoke check leaves behind: a __pycache__ directory and a
+    # .pyc, created with a permissive umask after the tree was normalised.
+    pycache = release / "__pycache__"
+    pycache.mkdir()
+    pyc = pycache / "app.cpython-312.pyc"
+    pyc.write_bytes(b"\x00")
+    pyc.chmod(0o644)
+    pycache.chmod(0o755)
+
+    stale = subprocess.run(
+        ["bash", "-c", f'{preamble}{selfcheck}\necho "REACHED END" >&2\n'],
+        capture_output=True,
+        text=True,
+    )
+    assert stale.returncode != 0, (
+        "the self-check must notice a tree dirtied after the first normalisation; "
+        f"stderr={stale.stderr!r}"
+    )
+    assert "other-access denied" in stale.stderr
+    assert "REACHED END" not in stale.stderr
+
+    second = subprocess.run(
+        [
+            "bash",
+            "-c",
+            f'{preamble}{normalise_fn}\nnormalise_release_permissions\necho "REACHED END" >&2\n',
+        ],
+        capture_output=True,
+        text=True,
+    )
+    assert second.returncode == 0, second.stderr
+    assert "REACHED END" in second.stderr
+    for path in (pycache, pyc):
+        assert path.stat().st_mode & 0o007 == 0, (
+            f"{path} must deny all other access after re-normalisation, "
+            f"got {path.stat().st_mode & 0o777:04o}"
+        )
+
+
+def _run_app_dir_guard(app: Path) -> subprocess.CompletedProcess[str]:
+    """Runs deploy.sh's literal $APP_DIR/releases/incoming mode guard against a
+    tree. `REACHED END` afterwards so a guard that fails to abort is caught
+    rather than read as a pass."""
+    die_fn = _extract_die_function()
+    guard = _extract_app_dir_guard()
+    script = f'APP_DIR={app}\n{die_fn}\n{guard}\necho "REACHED END" >&2\n'
+    return subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+
+def _provisioned_app_dir(tmp_path: Path) -> Path:
+    """$APP_DIR as setup-vps-deploy-user.sh leaves it: 0750 top and releases/,
+    0700 incoming/."""
+    app = tmp_path / "app"
+    (app / "releases").mkdir(parents=True)
+    (app / "incoming").mkdir()
+    app.chmod(0o750)
+    (app / "releases").chmod(0o2750)
+    (app / "incoming").chmod(0o700)
+    return app
+
+
+def test_app_dir_guard_passes_on_a_correctly_provisioned_tree(tmp_path: Path):
+    """Positive control: the guard has to be satisfiable by the modes the
+    provisioning script actually sets, including releases/'s setgid bit, or it
+    would fail every deploy and teach operators to ignore it."""
+    result = _run_app_dir_guard(_provisioned_app_dir(tmp_path))
+
+    assert result.returncode == 0, result.stderr
+    assert "REACHED END" in result.stderr
+
+
+def test_app_dir_guard_fails_loudly_on_a_world_accessible_directory(tmp_path: Path):
+    """The modes of $APP_DIR, releases/ and incoming/ were asserted once, at
+    provisioning time, and never again. A later `chmod 0755 /opt/martyrology`
+    -- an operator debugging a permission problem, a restore that did not
+    preserve modes -- therefore went unnoticed by every subsequent deploy,
+    which kept reporting a correctly locked-down *release* tree while the
+    directory above it published that tree, and the bundle in incoming/, to
+    every other uid on this shared Plesk host.
+
+    Each of the three is loosened in turn, so a guard that checks only one (or
+    that names the wrong one) fails here. `stat` reports the mode actually set,
+    to make a test failure diagnosable.
+    """
+    for relative in ("", "releases", "incoming"):
+        app = _provisioned_app_dir(tmp_path / f"case-{relative or 'top'}")
+        target = app / relative if relative else app
+        target.chmod(0o755)
+
+        result = _run_app_dir_guard(app)
+
+        assert result.returncode != 0, (
+            f"{target} at 0755 must abort the deploy; stderr={result.stderr!r}"
+        )
+        assert str(target) in result.stderr, (
+            f"the failure must name the path to fix; stderr={result.stderr!r}"
+        )
+        assert "REACHED END" not in result.stderr
+
+
+def test_app_dir_guard_fails_loudly_on_a_missing_directory(tmp_path: Path):
+    """`find` on a path that does not exist finds nothing, so a guard that
+    only looked at find's *stdout* would read an unprovisioned tree as "no
+    other bits" and let the deploy proceed -- a failure reporting success,
+    which is the shape of defect this file exists to prevent.
+
+    Two independent things stop that, and this asserts the outcome rather than
+    which of them fired: the explicit `-d` test, and folding find's stderr into
+    the same variable that is checked for emptiness. Dropping either alone
+    still fails loudly; dropping both is what this test catches."""
+    app = _provisioned_app_dir(tmp_path)
+    (app / "incoming").rmdir()
+
+    result = _run_app_dir_guard(app)
+
+    assert result.returncode != 0, result.stderr
+    assert str(app / "incoming") in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_smoke_teardown_cleans_up_when_a_signal_lands_inside_it(tmp_path: Path):
+    """Regression test for moving `trap - EXIT INT TERM` to the END of
+    smoke_cleanup().
+
+    With it first, there was a window inside the handler -- after the traps
+    were cleared, before the `kill`/`rm` -- in which a signal got bash's
+    default disposition and killed the script outright, orphaning the smoke
+    uvicorn and leaving its temp log in /tmp. The body is idempotent
+    (`kill … || true`, `rm -f`), so clearing last costs at most a harmless
+    second run and closes the window.
+
+    The real window is sub-millisecond, so the harness widens it rather than
+    racing it: it splices the actual smoke_cleanup() body and its trap lines
+    out of deploy.sh (same extraction as the smoke-signal test above) and
+    overrides `kill` with a shell function that marks its entry and then
+    blocks. The test sends one signal to enter the teardown and a second while
+    it is inside that block.
+
+    What it covers: that a signal delivered mid-teardown still ends with the
+    temp log removed and a non-zero exit. What it does not cover -- same limits
+    as the other harness tests -- killing a real uvicorn child, or any of the
+    venv/systemd-dependent work the real script does around this phase.
+    """
+    harness, marker = _build_smoke_teardown_window_harness(tmp_path)
+    proc = subprocess.Popen(
+        ["bash", str(harness)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+    try:
+        time.sleep(0.2)
+        proc.send_signal(signal.SIGTERM)
+
+        deadline = time.monotonic() + 10
+        while not marker.exists() and time.monotonic() < deadline:
+            if proc.poll() is not None:
+                break
+            time.sleep(0.02)
+        assert marker.exists(), "the harness never entered smoke_cleanup"
+
+        proc.send_signal(signal.SIGTERM)
+        stdout, stderr = proc.communicate(timeout=20)
+    finally:
+        if proc.poll() is None:  # pragma: no cover - only on an unexpected hang
+            proc.kill()
+            proc.communicate()
+
+    assert "CONTINUED PAST SMOKE PHASE" not in stderr, (
+        f"execution continued past the smoke phase; stdout={stdout!r} stderr={stderr!r}"
+    )
+    assert proc.returncode != 0, (
+        f"expected a non-zero exit after SIGTERM, got {proc.returncode}; "
+        f"stdout={stdout!r} stderr={stderr!r}"
+    )
+    smoke_log = Path(stdout.strip().splitlines()[0])
+    assert not smoke_log.exists(), (
+        f"smoke log {smoke_log} was left behind by a signal delivered inside the teardown"
+    )
+
+
+def test_served_version_assertion_accepts_the_deployed_version(tmp_path: Path):
+    """Positive control for the post-restart served-version check: a unit that
+    really did swap to the new release reports it, and the deploy proceeds."""
+    result = _run_version_assertion(tmp_path, version="0.1.0", served='{"version": "0.1.0"}')
+
+    assert result.returncode == 0, result.stderr
+    assert "REACHED END" in result.stderr
+
+
+def test_served_version_assertion_strips_a_leading_v(tmp_path: Path):
+    """The workflow passes the bare pyproject version, but the argument regex
+    also accepts `v0.1.0` for a manual invocation, while HealthOut.version is
+    always bare. Without the `${VERSION#v}` strip, every manual `deploy.sh
+    v0.1.0` would roll back a perfectly good release."""
+    result = _run_version_assertion(tmp_path, version="v0.1.0", served='{"version": "0.1.0"}')
+
+    assert result.returncode == 0, result.stderr
+    assert "REACHED END" in result.stderr
+
+
+def test_served_version_assertion_rejects_a_stale_version(tmp_path: Path):
+    """The defect this closes: `wait_healthy` only proves *something* answers
+    /healthz on that port. A restart that did not actually swap processes --
+    systemd reporting success while the old unit kept running, a flip that
+    silently did not take -- leaves the previous release answering, and the
+    deploy reported success for a version that was never activated. Failing
+    here, before the rollback trap is disarmed, routes it to the rollback path
+    instead."""
+    result = _run_version_assertion(tmp_path, version="0.2.0", served='{"version": "0.1.0"}')
+
+    assert result.returncode != 0, result.stderr
+    assert "0.1.0" in result.stderr and "0.2.0" in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_served_version_assertion_fails_on_unparseable_healthz(tmp_path: Path):
+    """A /healthz that answers 200 with something that is not JSON must abort
+    rather than compare against an empty string and, worse, match an empty
+    $VERSION. The parse failure is its own diagnostic."""
+    result = _run_version_assertion(tmp_path, version="0.1.0", served="<html>nope</html>")
+
+    assert result.returncode != 0, result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+SETUP_SCRIPT = (
+    Path(__file__).resolve().parents[1] / "scripts" / "deploy" / "setup-vps-deploy-user.sh"
+)
+
+
+def _extract_setup_line(exact_text: str) -> str:
+    line = next(
+        line
+        for line in SETUP_SCRIPT.read_text(encoding="utf-8").splitlines()
+        if line.strip() == exact_text
+    )
+    return line.strip()
+
+
+def _extract_setup_world_check() -> str:
+    """Pulls setup-vps-deploy-user.sh's "half two" block -- the find over the
+    whole of $APP_DIR that refuses to finish provisioning while anything under
+    it is reachable by an unrelated local account."""
+    lines = SETUP_SCRIPT.read_text(encoding="utf-8").splitlines()
+    start_idx = next(
+        i for i, line in enumerate(lines) if line.startswith('WORLD_ACCESSIBLE="$(find "$APP_DIR"')
+    )
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i].strip() == "fi")
+    return "\n".join(lines[start_idx : end_idx + 1])
+
+
+def _stale_incoming_tree(tmp_path: Path) -> tuple[Path, Path]:
+    """$APP_DIR as a pre-fix failed deploy leaves it: correct directory modes
+    throughout, but a 0644 bundle still sitting in incoming/ because deploy.sh
+    only removes it on the success path."""
+    app = tmp_path / "app"
+    (app / "releases").mkdir(parents=True)
+    (app / "incoming").mkdir()
+    bundle = app / "incoming" / "martyrology-1.0.0-linux-x86_64-cp312.tar.gz"
+    bundle.write_bytes(b"corpus")
+    bundle.chmod(0o644)
+    (app / "incoming" / f"{bundle.name}.sha256").write_text("x\n", encoding="utf-8")
+    (app / "incoming" / f"{bundle.name}.sha256").chmod(0o644)
+    (app / "incoming").chmod(0o700)
+    (app / "releases").chmod(0o2750)
+    app.chmod(0o750)
+    return app, bundle
+
+
+def test_provisioning_remediates_a_stale_world_readable_bundle_in_incoming(tmp_path: Path):
+    """setup-vps-deploy-user.sh retracted world bits recursively from
+    releases/ but not from incoming/, so a bundle left there by a pre-fix
+    failed deploy kept the 0644 the deploy user's ssh umask gave it. The
+    script's own half-two `find` then *detected* it and aborted provisioning
+    with a message naming the file -- telling the operator to go and fix by
+    hand something the script was already in the business of fixing.
+
+    Both halves are asserted, in the order the script runs them, and the check
+    is deliberately left untouched: the fix is the remediation, not a weaker
+    check. First that the check really does fire on the stale tree (otherwise
+    the second half would prove nothing), then that the spliced `chmod -R` line
+    fixes it in place and the same check passes afterwards.
+
+    `go-rwx`, not releases/'s `g+rX`: the bundle is a second copy of the
+    licensed corpus in tarball form and only the deploy user ever needs it, so
+    the group bits must come off too -- which the mode assertions below pin.
+    """
+    check = _extract_setup_world_check()
+    app, bundle = _stale_incoming_tree(tmp_path)
+
+    before = subprocess.run(
+        ["bash", "-c", f'APP_DIR={app}\n{check}\necho "REACHED END" >&2\n'],
+        capture_output=True,
+        text=True,
+    )
+    assert before.returncode != 0, (
+        f"a 0644 bundle in incoming/ must abort provisioning; stderr={before.stderr!r}"
+    )
+    assert str(bundle) in before.stderr
+    assert "REACHED END" not in before.stderr
+
+    chmod_line = _extract_setup_line('chmod -R u+rwX,go-rwx "$APP_DIR/incoming"')
+    after = subprocess.run(
+        ["bash", "-c", f'APP_DIR={app}\n{chmod_line}\n{check}\necho "REACHED END" >&2\n'],
+        capture_output=True,
+        text=True,
+    )
+    assert after.returncode == 0, after.stderr
+    assert "REACHED END" in after.stderr
+
+    assert bundle.stat().st_mode & 0o077 == 0, (
+        "the stale bundle must end up owner-only, not merely non-world-readable: "
+        f"got {bundle.stat().st_mode & 0o777:04o}"
+    )
+    assert bundle.stat().st_mode & 0o600 == 0o600, "the deploy user must still be able to read it"
+    assert (app / "incoming").stat().st_mode & 0o777 == 0o700, "incoming/ itself must stay 0700"
+
+
+TOKEN_WATCH_WORKFLOW = (
+    Path(__file__).resolve().parents[1] / ".github" / "workflows" / "token-expiry-watch.yml"
+)
+
+
+def _extract_open_issue_function() -> str:
+    """Pulls open_issue() out of the token-expiry watch workflow's `run:`
+    block. Read as raw text and dedented rather than parsed as YAML, so the
+    test needs no YAML dependency and sees exactly the bytes the workflow
+    ships."""
+    lines = TOKEN_WATCH_WORKFLOW.read_text(encoding="utf-8").splitlines()
+    start_idx = next(i for i, line in enumerate(lines) if line.strip() == "open_issue() {")
+    indent = len(lines[start_idx]) - len(lines[start_idx].lstrip())
+    end_idx = next(
+        i
+        for i in range(start_idx + 1, len(lines))
+        if lines[i].strip() == "}" and len(lines[i]) - len(lines[i].lstrip()) == indent
+    )
+    return "\n".join(
+        line[indent:] if line.strip() else "" for line in lines[start_idx : end_idx + 1]
+    )
+
+
+def test_token_watch_dedup_survives_a_payload_larger_than_the_pipe_buffer(tmp_path: Path):
+    """Regression test for replacing `printf '%s\\n' "$existing" | grep -Fxq`
+    with a here-string -- the same defect class already screened for in
+    deploy.sh's tar listings.
+
+    `grep -q` exits the moment it matches. If the writer still has data to
+    push, and the payload is larger than the 64 KiB pipe buffer, the writer is
+    still blocked in write() when the reader goes away and takes SIGPIPE. Under
+    `pipefail` the pipeline then reports non-zero, the `if` reads FALSE, and the
+    workflow files a duplicate issue -- precisely in the repository that has
+    enough open issues for the payload to get that big. A here-string has no
+    writer to signal.
+
+    The harness stubs `gh` so `issue list` emits the matching title FIRST (so
+    grep exits at once, with the maximum left to write) followed by well over
+    64 KiB of filler titles, and so `issue create` announces itself loudly. The
+    real open_issue() body is spliced out of the workflow, not re-typed.
+    """
+    open_issue = _extract_open_issue_function()
+    harness = tmp_path / "dedup-harness.sh"
+    harness.write_text(
+        "#!/usr/bin/env bash\n"
+        "set -euo pipefail\n"
+        'REPO="owner/repo"\n'
+        'TITLE="SUBMODULE_TOKEN expires soon (2026-09-01)"\n'
+        "gh() {\n"
+        '    if [ "${2:-}" = "list" ]; then\n'
+        '        printf "%s\\n" "$TITLE"\n'
+        "        for i in $(seq 1 8000); do\n"
+        '            printf "filler issue title number %06d padded out a bit further\\n" "$i"\n'
+        "        done\n"
+        "        return 0\n"
+        "    fi\n"
+        '    echo "CREATED DUPLICATE ISSUE" >&2\n'
+        "}\n"
+        "\n"
+        f"{open_issue}\n"
+        "\n"
+        'open_issue "$TITLE" "body"\n',
+        encoding="utf-8",
+    )
+
+    result = subprocess.run(["bash", str(harness)], capture_output=True, text=True, timeout=120)
+
+    assert "CREATED DUPLICATE ISSUE" not in result.stderr, (
+        "an already-open issue was re-filed: the dedup match lost to SIGPIPE on a "
+        f"payload larger than the pipe buffer; stdout={result.stdout!r} stderr={result.stderr!r}"
+    )
+    assert "Issue already open" in result.stdout, result.stdout
+    assert result.returncode == 0, result.stderr
+
+
+DEPLOY_WORKFLOW = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "deploy.yml"
+
+
+def _extract_scp_destination_pieces() -> tuple[str, str]:
+    """Pulls the upload step's scp destination expression and the
+    REMOTE_APP_DIR assignment that must precede it out of deploy.yml.
+
+    The assignment is found by searching *backwards* from the destination, so a
+    revert that drops it from the upload step is not silently satisfied by the
+    identical line in the "Activate release" step further down the file."""
+    lines = DEPLOY_WORKFLOW.read_text(encoding="utf-8").splitlines()
+    dest_idx = next(i for i, line in enumerate(lines) if line.strip().endswith('/incoming/"; then'))
+    assign_idx = next(
+        i for i in range(dest_idx, -1, -1) if lines[i].strip().startswith("REMOTE_APP_DIR=")
+    )
+    destination = lines[dest_idx].strip().removesuffix("; then")
+    return lines[assign_idx].strip(), destination
+
+
+def test_scp_destination_is_quoted_for_the_remote_shell(tmp_path: Path):
+    """scp's destination is not a local path: everything after the colon is
+    handed to the remote end and expanded by the remote shell, exactly like the
+    ssh command in the "Activate release" step. The ssh step was already
+    `printf %q`-safe; the scp destination interpolated $APP_DIR raw, so an
+    APP_DIR containing whitespace was re-split remotely and the bundle landed
+    somewhere other than where the deploy script then looked for it.
+
+    Simulated rather than asserted textually: the two real lines are spliced
+    out of the workflow, run with an APP_DIR containing a space, and the
+    resulting remote path is then word-split by a second bash -- standing in
+    for the remote shell. It must come back as exactly one word.
+    """
+    assignment, destination = _extract_scp_destination_pieces()
+    harness = tmp_path / "scp-dest-harness.sh"
+    harness.write_text(
+        "#!/usr/bin/env bash\n"
+        "set -euo pipefail\n"
+        "APP_DIR='/opt/mar ty'\n"
+        "VPS_USERNAME=deployer\n"
+        "VPS_HOST=vps.example\n"
+        f"{assignment}\n"
+        f"DEST={destination}\n"
+        'printf "%s" "${DEST#*:}"\n',
+        encoding="utf-8",
+    )
+    remote_path = subprocess.run(
+        ["bash", str(harness)], capture_output=True, text=True, check=True
+    ).stdout
+
+    words = subprocess.run(
+        ["bash", "-c", f'for w in {remote_path}; do printf "[%s]\\n" "$w"; done'],
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.splitlines()
+
+    assert words == ["[/opt/mar ty/incoming/]"], (
+        "the remote shell must see the destination as one literal word; "
+        f"got {words!r} from {remote_path!r}"
+    )
+
+
+def test_normalise_function_still_aborts_the_deploy_when_its_self_check_fails(tmp_path: Path):
+    """The self-check moved inside a function when it was made re-runnable, and
+    that move is exactly the kind that can turn a hard stop into a soft one: a
+    `return` where an `exit` was meant, or a caller that swallows the status,
+    would leave the deploy running on a tree that failed its own check --
+    a failure reporting success, which is the recurring defect in this script's
+    history.
+
+    `chgrp` and `chmod` are stubbed to no-ops (shell functions take precedence
+    over external commands) so the tree stays as built and the check has
+    something to catch; the real function body is spliced out of deploy.sh
+    unchanged. What is asserted is the *control flow*: the diagnostic is
+    printed, the process exits non-zero, and nothing after the call runs.
+    """
+    normalise_fn = _extract_normalise_function()
+    die_fn = _extract_die_function()
+
+    release = tmp_path / "release"
+    (release / "data").mkdir(parents=True)
+    corpus = release / "data" / "01.json"
+    corpus.write_text("{}", encoding="utf-8")
+    corpus.chmod(0o644)
+    (release / "data").chmod(0o755)
+    release.chmod(0o755)
+
+    script = (
+        "set -euo pipefail\n"
+        f"RELEASE={release}\nSERVICE_GROUP={_own_group()}\n"
+        "chgrp() { return 0; }\n"
+        "chmod() { return 0; }\n"
+        f"{die_fn}\n{normalise_fn}\n"
+        "normalise_release_permissions\n"
+        'echo "REACHED END" >&2\n'
+    )
+    result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+    assert result.returncode != 0, (
+        f"a failing self-check must abort the deploy, not return to the caller; "
+        f"stderr={result.stderr!r}"
+    )
+    assert "other-access denied" in result.stderr
+    assert str(corpus) in result.stderr
+    assert "REACHED END" not in result.stderr
