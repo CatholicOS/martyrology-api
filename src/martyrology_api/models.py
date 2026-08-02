@@ -124,6 +124,13 @@ class CatalogOut(BaseModel):
     elogia: list[CatalogEntryOut]
 
 
+class HealthOut(BaseModel):
+    status: Literal["ok"]
+    version: str
+    data: dict[str, str | None]
+    editions: list[str]
+
+
 class WriteReceiptOut(BaseModel):
     branch: str
     commit_sha: str

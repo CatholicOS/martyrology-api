@@ -103,3 +103,18 @@ Each should become its own issue before being picked up.
   `GET /elogia/...`. This is a documented limitation, not a bug, but it
   means a curator reviewing a draft cross-edition placement via the
   by-canonical-id endpoint always sees published data.
+
+## Deployment
+
+Parked after the continuous-deployment branch's final review. The seven code
+items recorded here — the unquoted `scp` destination, the unremediated stale
+bundle in `incoming/`, the un-rechecked post-normalisation `$RELEASE`, the
+`$RELEASE`-only permission self-check, the smoke-teardown signal window, the
+`printf | grep -Fxq` dedup, and the missing served-version assertion after
+restart — have since been applied, each with a covering test in
+`tests/test_deploy_script.py`. Only the platform-behaviour item below remains
+open.
+
+- **Scheduled workflows only run from the default branch**, and GitHub disables
+  them after 60 days of repository inactivity — so the token-expiry watch stops
+  warning in exactly the scenario where it would matter most.

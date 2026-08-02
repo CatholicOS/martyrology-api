@@ -1,0 +1,121 @@
+name: Token expiry watch
+
+# SUBMODULE_TOKEN gates the release workflow's private-submodule checkout.
+# GitHub returns a fine-grained PAT's expiry in the
+# GitHub-Authentication-Token-Expiration response header, so this reads the
+# real expiry off the token instead of tracking a date by hand.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check SUBMODULE_TOKEN health and expiry
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUBMODULE_TOKEN: ${{ secrets.SUBMODULE_TOKEN }}
+          REPO: ${{ github.repository }}
+          WATCHED: CatholicOS/martyrology-texts
+          WARN_DAYS: "30"
+        run: |
+          set -euo pipefail
+
+          open_issue() {
+            local title="$1" body="$2"
+            # Two separate steps, not one piped command: `grep -q` exits as
+            # soon as it finds a match, which can SIGPIPE a still-writing
+            # `gh issue list` — under `pipefail` that makes the pipeline
+            # non-zero, so `if pipeline; then …` reads false and a duplicate
+            # issue gets created anyway. Capturing to a variable first (same
+            # pattern as deploy.sh's tar-listing checks) makes `gh` always
+            # run to completion before anything screens its output.
+            # Also: no `--search "in:title …"` — the title contains `(`, `)`
+            # and `:`, which GitHub's search syntax isn't guaranteed to treat
+            # literally, so open issues are listed and matched in the shell
+            # instead.
+            # The match itself is a here-string, not `printf … | grep -Fxq`,
+            # for the same reason and the same defect class: `grep -q` exits on
+            # its first match, which SIGPIPEs a `printf` still writing the rest
+            # of the payload once it exceeds the 64 KiB pipe buffer — under
+            # `pipefail` the whole pipeline then reads non-zero, the `if` takes
+            # the false branch, and a duplicate issue is filed precisely when
+            # the repo has enough open issues for it to matter. A here-string
+            # has no writer to signal.
+            # --limit 500 because `gh issue list` defaults to 30: once the repo
+            # has more than 30 open issues, the existing warning can fall off
+            # the end of the list, the dedup match fails, and a duplicate is
+            # filed every week for the whole warning window.
+            local existing
+            existing="$(gh issue list --repo "$REPO" --state open --limit 500 --json title --jq '.[].title')"
+            if grep -Fxq "$title" <<<"$existing"; then
+              echo "Issue already open: $title"
+              return 0
+            fi
+            gh issue create --repo "$REPO" --title "$title" --body "$body" --label dependencies
+          }
+
+          # SUBMODULE_TOKEN is passed to curl via --config on stdin rather
+          # than as a -H argv value, so it never appears in the runner's
+          # process listing (argv is readable via /proc by other processes
+          # on the same host; a curl config file passed over a pipe is not).
+          status="$(
+            printf 'header = "Authorization: Bearer %s"\nheader = "Accept: application/vnd.github+json"\nurl = "https://api.github.com/repos/%s"\n' \
+              "$SUBMODULE_TOKEN" "$WATCHED" \
+            | curl -sS -o /dev/null -D headers.txt -w '%{http_code}' --config -
+          )"
+
+          if [ "$status" != "200" ]; then
+            open_issue "SUBMODULE_TOKEN is not working (HTTP $status)" \
+              "The scheduled token check could not read \`$WATCHED\` (HTTP $status).
+
+          The release workflow's \`actions/checkout\` step will fail at the
+          \`vendor/texts\` submodule until this is fixed. Likely causes: the PAT
+          expired, was revoked, or its organization approval was withdrawn.
+
+          Fix: mint a new fine-grained PAT (resource owner \`CatholicOS\`,
+          Contents: Read-only on \`$WATCHED\`), approve it in the org's pending
+          requests, then \`gh secret set SUBMODULE_TOKEN --repo $REPO --app actions\`."
+            exit 1
+          fi
+
+          expiry="$(grep -i '^github-authentication-token-expiration:' headers.txt \
+            | sed 's/^[^:]*: *//' | tr -d '\r' || true)"
+
+          if [ -z "$expiry" ]; then
+            echo "::notice::Token reports no expiration date; nothing to warn about."
+            exit 0
+          fi
+
+          expiry_epoch="$(date -d "$expiry" +%s)"
+          days_left=$(( (expiry_epoch - $(date +%s)) / 86400 ))
+          echo "SUBMODULE_TOKEN expires $expiry ($days_left days)"
+
+          if [ "$days_left" -le "$WARN_DAYS" ]; then
+            # $expiry, not $days_left, is the title's identifier: days_left
+            # decreases every weekly run (30, 23, 16, ...) so a title built
+            # from it would never match its own prior issue and duplicates
+            # would pile up across the warning window. $expiry is stable
+            # until the token is actually rotated, which is what dedup here
+            # is meant to key on.
+            open_issue "SUBMODULE_TOKEN expires soon ($expiry)" \
+              "\`SUBMODULE_TOKEN\` expires on **$expiry** — $days_left days from now.
+
+          When it lapses, the release workflow fails at the \`vendor/texts\`
+          submodule checkout, and because deploys only run on published releases
+          you will discover it mid-release.
+
+          Renew: mint a fine-grained PAT (resource owner \`CatholicOS\`,
+          Contents: Read-only on \`$WATCHED\`), approve it in the org's pending
+          requests, then \`gh secret set SUBMODULE_TOKEN --repo $REPO --app actions\`.
+
+          Longer term, an org-owned GitHub App installation token removes this
+          expiry cycle entirely (see the deployment spec, §3)."
+          fi

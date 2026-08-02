@@ -1,0 +1,294 @@
+name: Deploy
+
+# Builds a release bundle (api wheel + offline wheelhouse + the three pinned
+# data trees + manifest.json), ships it to the VPS, and activates it.
+#
+# Every ${{ ... }} interpolation is a repo secret/var (trusted). The two
+# github.event.release.tag_name uses are bound to an `env:` name and referenced
+# as a shell variable, never interpolated into a command line.
+#
+# See docs/superpowers/specs/2026-08-01-continuous-deployment-design.md
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-martyrology
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Pinned, never ubuntu-latest: the VPS is Ubuntu 24.04 / glibc 2.39 and the
+    # wheelhouse ABI must match it.
+    runs-on: ubuntu-24.04
+    # contents: write is required by the final "Attach manifest to the release"
+    # step's `gh release upload`. Without it that step 403s after activation
+    # has already succeeded, marking a successful deploy as a failed run.
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          submodules: recursive
+          token: ${{ secrets.SUBMODULE_TOKEN }}
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Resolve version
+        id: version
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          VERSION="$(python -c 'import tomllib; print(tomllib.load(open("pyproject.toml","rb"))["project"]["version"])')"
+
+          # deploy.sh accepts only ^v?[0-9]+(\.[0-9]+)*$ — the version becomes
+          # part of a path and of a filename on the VPS. A PEP 440 prerelease or
+          # postrelease ("0.2.0rc1", "1.0.0.post1") would otherwise build a full
+          # bundle, upload it, and be refused on the remote at the very last
+          # step, after the corpus has already been shipped. Refuse it here.
+          # A bash conditional, not `printf | grep`: no pipeline means no way
+          # for `pipefail` plus an early-exiting reader to turn this check's
+          # result into something other than what it matched.
+          if [[ ! "$VERSION" =~ ^[0-9]+(\.[0-9]+)*$ ]]; then
+            echo "::error::pyproject.toml version '${VERSION}' is not deployable: deploy.sh accepts only digits and dots (e.g. 0.2.0). Prerelease and postrelease versions (rc, a, b, .dev, .post) cannot be deployed."
+            exit 1
+          fi
+
+          # The bundle is named, installed and recorded in manifest.json from
+          # pyproject.toml, never from the tag. Publishing v0.2.0 without
+          # bumping pyproject.toml therefore builds and deploys 0.1.0: on a
+          # host already running 0.1.0, deploy.sh refuses it as the active
+          # release and the release silently never ships, while the manifest
+          # attached to v0.2.0 claims api_version 0.1.0. Fail here instead.
+          # workflow_dispatch has no tag and is deliberately exempt.
+          if [ "$EVENT_NAME" = "release" ]; then
+            if [ -z "${RELEASE_TAG:-}" ]; then
+              echo "::error::release event carried no tag_name"
+              exit 1
+            fi
+            if [ "${RELEASE_TAG#v}" != "$VERSION" ]; then
+              echo "::error::Release tag ${RELEASE_TAG} does not match the pyproject.toml version ${VERSION}. Bump pyproject.toml (or retag the release) and publish again."
+              exit 1
+            fi
+          fi
+
+          echo "value=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Building martyrology-api $VERSION"
+
+      - name: Build wheel and offline wheelhouse
+        run: |
+          # Pinned deliberately. `uv export` output is an input to the
+          # wheelhouse, so an unpinned uv could change what gets bundled
+          # between two runs of the same commit — which is precisely the
+          # determinism tracking uv.lock exists to provide. Bump this
+          # deliberately, after exercising `uv build` and `uv export` locally.
+          pip install uv==0.12.1
+          mkdir -p staging/wheels
+          uv build --wheel --out-dir dist
+          uv export --frozen --no-dev --no-emit-project --format requirements-txt -o requirements.txt
+          pip wheel -r requirements.txt -w staging/wheels
+          cp dist/*.whl staging/wheels/
+
+      - name: Stage data trees
+        run: |
+          mkdir -p staging/data
+          cp -a data/editions staging/data/editions
+          # Store.__init__ (src/martyrology_api/store.py) walks the *children*
+          # of each MARTYROLOGY_DATA_PATH entry looking for one holding
+          # MM.json files, i.e. it expects a directory-of-editions, not the
+          # vendor/texts repo root. crmedr and clbdr are NOT like this — they
+          # are consumed whole (Registry.load reads <root>/data/*.json and
+          # <root>/i18n/) — so only texts is unwrapped here.
+          cp -a vendor/texts/data/editions staging/data/texts
+          cp -a vendor/crmedr staging/data/crmedr
+          cp -a vendor/clbdr staging/data/clbdr
+          rm -rf staging/data/*/.git
+
+      - name: Verify staged data shape
+        run: |
+          set -euo pipefail
+          fail() { echo "::error::$1"; exit 1; }
+
+          # staging/data/texts must be a directory-of-editions: at least one
+          # child directory containing 01.json. A glob that matches nothing
+          # must fail loudly, not pass vacuously, so this counts matches
+          # explicitly rather than trusting an unexpanded glob literal.
+          shopt -s nullglob
+          texts_editions=(staging/data/texts/*/01.json)
+          shopt -u nullglob
+          [ "${#texts_editions[@]}" -gt 0 ] \
+            || fail "staging/data/texts has no <edition>/01.json; texts staging is wrong (vendor/texts copied whole instead of vendor/texts/data/editions?)"
+
+          # staging/data/editions is the public tree from this repo, and has
+          # the same directory-of-editions shape. It is checked for exactly the
+          # reason texts is: its presence is what made the earlier disappearance
+          # of the private corpus survive a green build, because the app came up
+          # healthy serving editions alone. An unchecked tree is a tree that can
+          # vanish silently, so it gets the same explicit count.
+          shopt -s nullglob
+          public_editions=(staging/data/editions/*/01.json)
+          shopt -u nullglob
+          [ "${#public_editions[@]}" -gt 0 ] \
+            || fail "staging/data/editions has no <edition>/01.json; the public editions tree is missing or mis-shaped"
+
+          [ -f staging/data/crmedr/data/martyrology_ids.json ] \
+            || fail "staging/data/crmedr/data/martyrology_ids.json is missing"
+
+          [ -f staging/data/clbdr/data/editions.json ] \
+            || fail "staging/data/clbdr/data/editions.json is missing"
+
+          shopt -s nullglob
+          wheels=(staging/wheels/*.whl)
+          shopt -u nullglob
+          [ "${#wheels[@]}" -gt 0 ] \
+            || fail "staging/wheels contains no .whl files"
+
+          echo "Staged data shape OK: ${#texts_editions[@]} text edition(s), ${#public_editions[@]} public edition(s), ${#wheels[@]} wheel(s)."
+
+      - name: Assemble bundle
+        id: bundle
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          mkdir -p out
+          BUNDLE="$(python scripts/deploy/build_bundle.py \
+            --version "$VERSION" --api-version "$VERSION" \
+            --staging staging --out out --repo-root .)"
+          NAME="$(basename "$BUNDLE")"
+          # Generated from inside out/ so field 2 of the checksum file is the
+          # bundle's bare basename. deploy.sh does not run `sha256sum -c`: it
+          # parses the file, asserts field 2 equals the bundle's basename, and
+          # compares the digest itself (deploy.sh:163-172). A checksum written
+          # from the repo root would name "out/<bundle>" and be refused there.
+          (cd out && sha256sum "$NAME" > "$NAME.sha256")
+          echo "path=$BUNDLE" >> "$GITHUB_OUTPUT"
+          ls -la out
+
+      - name: Setup SSH
+        env:
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_HOST_KEY: ${{ vars.VPS_HOST_KEY }}
+        run: |
+          if [ -z "$VPS_SSH_KEY" ] || [ -z "$VPS_HOST_KEY" ]; then
+            echo "ERROR: secrets.VPS_SSH_KEY or vars.VPS_HOST_KEY is empty."
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "$VPS_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "$VPS_HOST_KEY" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Verify the pinned host key covers the target
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+        run: |
+          if ! ssh-keygen -F "$VPS_HOST" -f ~/.ssh/known_hosts >/dev/null; then
+            echo "ERROR: vars.VPS_HOST_KEY has no key for $VPS_HOST."
+            exit 1
+          fi
+
+      - name: Sanity-check the pinned key against DNS SSHFP records
+        continue-on-error: true
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_HOST_KEY: ${{ vars.VPS_HOST_KEY }}
+        run: |
+          # Non-fatal drift detector, mirroring cdcf-website's deploy workflow.
+          # The pinned key is the trust anchor; DNS is only corroboration, so a
+          # mismatch warns rather than blocks (DNS may simply lag a rotation).
+          PIN_FPS=$(printf '%s\n' "$VPS_HOST_KEY" \
+            | awk '$1 ~ /^(ssh-|ecdsa-)/ || $2 ~ /^(ssh-|ecdsa-)/' \
+            | ssh-keygen -l -f - 2>/dev/null \
+            | awk '{print $2}' | sed 's/^SHA256://' | sort -u)
+          if [ -z "$PIN_FPS" ]; then
+            echo "::warning::Could not derive fingerprints from VPS_HOST_KEY; skipping drift check."
+            exit 0
+          fi
+          DNS_FPS=$(dig +short SSHFP "$VPS_HOST" 2>/dev/null | awk '{print toupper($3)}' | sort -u)
+          if [ -z "$DNS_FPS" ]; then
+            echo "::warning::No SSHFP records published for $VPS_HOST; skipping drift check."
+            exit 0
+          fi
+          for fp in $PIN_FPS; do
+            echo "$DNS_FPS" | grep -qi "$fp" \
+              || echo "::warning::Pinned key $fp not advertised in SSHFP for $VPS_HOST. Either DNS lags reality or VPS_HOST_KEY is stale."
+          done
+
+      - name: Upload bundle
+        env:
+          VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          APP_DIR: ${{ vars.APP_DIR }}
+          BUNDLE: ${{ steps.bundle.outputs.path }}
+        run: |
+          if [ -z "$VPS_USERNAME" ] || [ -z "$VPS_HOST" ] || [ -z "$APP_DIR" ]; then
+            echo "ERROR: VPS_USERNAME / VPS_HOST / APP_DIR is empty."
+            exit 1
+          fi
+          # scp's remote destination is not a local path: it is handed to the
+          # remote end as a shell word and expanded there, exactly like the
+          # command in the "Activate release" step below. So it needs the same
+          # quoting dialect — printf %q renders $APP_DIR as a single literal
+          # word for the remote bash, instead of letting whitespace or a shell
+          # metacharacter in it re-split the destination there.
+          REMOTE_APP_DIR="$(printf '%q' "$APP_DIR")"
+          for attempt in 1 2 3; do
+            echo "Upload attempt $attempt..."
+            if scp -i ~/.ssh/deploy_key \
+              -o StrictHostKeyChecking=yes \
+              -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
+              "$BUNDLE" "$BUNDLE.sha256" \
+              "${VPS_USERNAME}@${VPS_HOST}:${REMOTE_APP_DIR}/incoming/"; then
+              echo "Upload succeeded on attempt $attempt"
+              exit 0
+            fi
+            [ "$attempt" -lt 3 ] && echo "Retrying in 15s..." && sleep 15
+          done
+          echo "All upload attempts failed"
+          exit 1
+
+      - name: Activate release
+        env:
+          VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          APP_DIR: ${{ vars.APP_DIR }}
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          set -euo pipefail
+          if [ -z "$VPS_USERNAME" ] || [ -z "$VPS_HOST" ] || [ -z "$APP_DIR" ]; then
+            echo "ERROR: VPS_USERNAME / VPS_HOST / APP_DIR is empty."
+            exit 1
+          fi
+          # deploy.sh defaults APP_DIR to /opt/martyrology when it is unset, and
+          # nothing here used to export it — so pointing vars.APP_DIR anywhere
+          # else uploaded the bundle to one directory and looked for it in
+          # another, failing every deploy with "bundle not found". Pass it
+          # explicitly. printf %q quotes each value for the remote bash, so a
+          # path or version containing a space or a shell metacharacter is
+          # passed as one literal word rather than being re-split there.
+          REMOTE_APP_DIR="$(printf '%q' "$APP_DIR")"
+          REMOTE_VERSION="$(printf '%q' "$VERSION")"
+          ssh -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
+            "${VPS_USERNAME}@${VPS_HOST}" \
+            "APP_DIR=${REMOTE_APP_DIR} bash ${REMOTE_APP_DIR}/bin/deploy.sh ${REMOTE_VERSION}"
+
+      - name: Attach manifest to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" staging/manifest.json --clobber

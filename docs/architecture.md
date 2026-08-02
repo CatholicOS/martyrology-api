@@ -29,17 +29,11 @@
 ### Attaching the private data
 
 The API reads text-data directories from a configurable path (`MARTYROLOGY_DATA_PATH`,
-one directory per edition). Deployment options, in order of preference:
-
-1. **Deploy-time clone** of `martyrology-texts` via a read-only deploy key or GitHub
-   Actions secret, into a directory outside the public repo working tree;
-2. **Git submodule** referencing the private repository (clones without access simply
-   skip it — the API detects absence and serves public editions only);
-3. a database loaded from the private repo by a migration script (if/when the API
-   outgrows flat files).
-
-Option 1 is the recommended default: no submodule friction for public contributors,
-no risk of accidentally vendoring private content into the public tree.
+one directory per edition). The deployment architecture is specified in
+[docs/superpowers/specs/2026-08-01-continuous-deployment-design.md](superpowers/specs/2026-08-01-continuous-deployment-design.md):
+the three data trees are pinned as git submodules under `vendor/`, assembled by
+CI into a release bundle with a manifest, and installed on the VPS by a deploy
+script that smoke-checks before activating and rolls back on failure.
 
 ## Edition resolution: serving the right texts per date and territory
 

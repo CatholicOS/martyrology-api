@@ -16,6 +16,7 @@ class Settings(BaseSettings):
         "martyrologium_romanum_2004_en_unofficial"
     )
     access_info_url: str = "https://github.com/CatholicOS/martyrology-api#licensing"
+    manifest_path: str = ""  # deployment manifest.json; empty outside a bundle
 
     zitadel_issuer: str = ""
     zitadel_client_id: str = ""
@@ -38,6 +39,10 @@ class Settings(BaseSettings):
     @property
     def restricted_set(self) -> set[str]:
         return {e.strip() for e in self.restricted_editions.split(",") if e.strip()}
+
+    @property
+    def manifest_file(self) -> Path | None:
+        return Path(self.manifest_path) if self.manifest_path else None
 
     @property
     def auth_enabled(self) -> bool:
