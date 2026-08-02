@@ -25,6 +25,11 @@ jobs:
     # Pinned, never ubuntu-latest: the VPS is Ubuntu 24.04 / glibc 2.39 and the
     # wheelhouse ABI must match it.
     runs-on: ubuntu-24.04
+    # contents: write is required by the final "Attach manifest to the release"
+    # step's `gh release upload`. Without it that step 403s after activation
+    # has already succeeded, marking a successful deploy as a failed run.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -48,7 +53,7 @@ jobs:
           pip install uv
           mkdir -p staging/wheels
           uv build --wheel --out-dir dist
-          uv export --no-dev --no-emit-project --format requirements-txt -o requirements.txt
+          uv export --frozen --no-dev --no-emit-project --format requirements-txt -o requirements.txt
           pip wheel -r requirements.txt -w staging/wheels
           cp dist/*.whl staging/wheels/
 
@@ -56,10 +61,45 @@ jobs:
         run: |
           mkdir -p staging/data
           cp -a data/editions staging/data/editions
-          cp -a vendor/texts staging/data/texts
+          # Store.__init__ (src/martyrology_api/store.py) walks the *children*
+          # of each MARTYROLOGY_DATA_PATH entry looking for one holding
+          # MM.json files, i.e. it expects a directory-of-editions, not the
+          # vendor/texts repo root. crmedr and clbdr are NOT like this — they
+          # are consumed whole (Registry.load reads <root>/data/*.json and
+          # <root>/i18n/) — so only texts is unwrapped here.
+          cp -a vendor/texts/data/editions staging/data/texts
           cp -a vendor/crmedr staging/data/crmedr
           cp -a vendor/clbdr staging/data/clbdr
           rm -rf staging/data/*/.git
+
+      - name: Verify staged data shape
+        run: |
+          set -euo pipefail
+          fail() { echo "::error::$1"; exit 1; }
+
+          # staging/data/texts must be a directory-of-editions: at least one
+          # child directory containing 01.json. A glob that matches nothing
+          # must fail loudly, not pass vacuously, so this counts matches
+          # explicitly rather than trusting an unexpanded glob literal.
+          shopt -s nullglob
+          texts_editions=(staging/data/texts/*/01.json)
+          shopt -u nullglob
+          [ "${#texts_editions[@]}" -gt 0 ] \
+            || fail "staging/data/texts has no <edition>/01.json; texts staging is wrong (vendor/texts copied whole instead of vendor/texts/data/editions?)"
+
+          [ -f staging/data/crmedr/data/martyrology_ids.json ] \
+            || fail "staging/data/crmedr/data/martyrology_ids.json is missing"
+
+          [ -f staging/data/clbdr/data/editions.json ] \
+            || fail "staging/data/clbdr/data/editions.json is missing"
+
+          shopt -s nullglob
+          wheels=(staging/wheels/*.whl)
+          shopt -u nullglob
+          [ "${#wheels[@]}" -gt 0 ] \
+            || fail "staging/wheels contains no .whl files"
+
+          echo "Staged data shape OK: ${#texts_editions[@]} text edition(s), ${#wheels[@]} wheel(s)."
 
       - name: Assemble bundle
         id: bundle

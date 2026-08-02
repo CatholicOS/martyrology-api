@@ -30,18 +30,35 @@ jobs:
 
           open_issue() {
             local title="$1" body="$2"
-            if gh issue list --repo "$REPO" --state open --search "in:title $title" \
-                 --json title --jq '.[].title' | grep -Fxq "$title"; then
+            # Two separate steps, not one piped command: `grep -q` exits as
+            # soon as it finds a match, which can SIGPIPE a still-writing
+            # `gh issue list` — under `pipefail` that makes the pipeline
+            # non-zero, so `if pipeline; then …` reads false and a duplicate
+            # issue gets created anyway. Capturing to a variable first (same
+            # pattern as deploy.sh's tar-listing checks) makes `gh` always
+            # run to completion before anything screens its output.
+            # Also: no `--search "in:title …"` — the title contains `(`, `)`
+            # and `:`, which GitHub's search syntax isn't guaranteed to treat
+            # literally, so open issues are listed and matched in the shell
+            # instead.
+            local existing
+            existing="$(gh issue list --repo "$REPO" --state open --json title --jq '.[].title')"
+            if printf '%s\n' "$existing" | grep -Fxq "$title"; then
               echo "Issue already open: $title"
               return 0
             fi
             gh issue create --repo "$REPO" --title "$title" --body "$body" --label dependencies
           }
 
-          status="$(curl -sS -o /dev/null -D headers.txt -w '%{http_code}' \
-            -H "Authorization: Bearer $SUBMODULE_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$WATCHED")"
+          # SUBMODULE_TOKEN is passed to curl via --config on stdin rather
+          # than as a -H argv value, so it never appears in the runner's
+          # process listing (argv is readable via /proc by other processes
+          # on the same host; a curl config file passed over a pipe is not).
+          status="$(
+            printf 'header = "Authorization: Bearer %s"\nheader = "Accept: application/vnd.github+json"\nurl = "https://api.github.com/repos/%s"\n' \
+              "$SUBMODULE_TOKEN" "$WATCHED" \
+            | curl -sS -o /dev/null -D headers.txt -w '%{http_code}' --config -
+          )"
 
           if [ "$status" != "200" ]; then
             open_issue "SUBMODULE_TOKEN is not working (HTTP $status)" \
@@ -70,7 +87,13 @@ jobs:
           echo "SUBMODULE_TOKEN expires $expiry ($days_left days)"
 
           if [ "$days_left" -le "$WARN_DAYS" ]; then
-            open_issue "SUBMODULE_TOKEN expires in $days_left days ($expiry)" \
+            # $expiry, not $days_left, is the title's identifier: days_left
+            # decreases every weekly run (30, 23, 16, ...) so a title built
+            # from it would never match its own prior issue and duplicates
+            # would pile up across the warning window. $expiry is stable
+            # until the token is actually rotated, which is what dedup here
+            # is meant to key on.
+            open_issue "SUBMODULE_TOKEN expires soon ($expiry)" \
               "\`SUBMODULE_TOKEN\` expires on **$expiry** — $days_left days from now.
 
           When it lapses, the release workflow fails at the \`vendor/texts\`
