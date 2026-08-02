@@ -29,7 +29,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
     app.state.authenticator = Authenticator(
-        settings.zitadel_issuer, settings.zitadel_client_id, settings.zitadel_client_secret
+        settings.zitadel_issuer,
+        settings.zitadel_client_id,
+        settings.zitadel_client_secret,
+        settings.zitadel_project_id,
     )
     app.state.authz = Authz(
         settings.openfga_api_url,

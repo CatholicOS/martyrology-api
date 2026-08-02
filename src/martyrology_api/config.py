@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     zitadel_issuer: str = ""
     zitadel_client_id: str = ""
     zitadel_client_secret: str = ""
+    zitadel_project_id: str = ""
 
     openfga_api_url: str = ""
     openfga_store_id: str = ""
