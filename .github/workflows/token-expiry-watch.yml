@@ -49,8 +49,12 @@ jobs:
             # the false branch, and a duplicate issue is filed precisely when
             # the repo has enough open issues for it to matter. A here-string
             # has no writer to signal.
+            # --limit 500 because `gh issue list` defaults to 30: once the repo
+            # has more than 30 open issues, the existing warning can fall off
+            # the end of the list, the dedup match fails, and a duplicate is
+            # filed every week for the whole warning window.
             local existing
-            existing="$(gh issue list --repo "$REPO" --state open --json title --jq '.[].title')"
+            existing="$(gh issue list --repo "$REPO" --state open --limit 500 --json title --jq '.[].title')"
             if grep -Fxq "$title" <<<"$existing"; then
               echo "Issue already open: $title"
               return 0

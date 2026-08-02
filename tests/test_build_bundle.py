@@ -78,6 +78,42 @@ def test_assemble_writes_a_tarball_with_a_manifest_at_the_root(tmp_path: Path):
     assert "data/crmedr/ids.json" in names
 
 
+def test_assemble_writes_each_member_exactly_once(tmp_path: Path):
+    """Regression test for the duplicated-member bug.
+
+    `tarfile.add()` recurses by default, so adding `data/` pulled in its whole
+    subtree and the `rglob` walk then added each of those files again — on this
+    staging tree, 10 members for 6 unique paths, with `data/crmedr/ids.json`
+    appearing three times. On a real bundle (full corpus plus wheelhouse) that
+    multiplies the artifact size and makes extraction rewrite every file
+    repeatedly, with the last copy silently winning. `recursive=False` on the
+    add() call is what keeps this true; remove it and this test fails.
+
+    The staging tree deliberately has nested directories (`data/crmedr/`), since
+    a flat tree could not reproduce the bug at all.
+    """
+    root = _staging(tmp_path)
+    out = tmp_path / "out"
+    out.mkdir()
+    build_bundle.write_manifest(root, "0.1.0", "a" * 40, COMMITS)
+    tarball = build_bundle.assemble(root, out, "1.2.3")
+    with tarfile.open(tarball) as archive:
+        names = archive.getnames()
+    assert len(names) == len(set(names)), (
+        f"tarball contains duplicate members: {sorted(n for n in set(names) if names.count(n) > 1)}"
+    )
+    # And nothing was dropped in the process: directories carry the modes
+    # deploy.sh normalises, so they must still be present as their own members.
+    assert set(names) == {
+        "manifest.json",
+        "data",
+        "data/crmedr",
+        "data/crmedr/ids.json",
+        "wheels",
+        "wheels/fake.whl",
+    }
+
+
 def test_assemble_refuses_a_staging_tree_with_no_manifest(tmp_path: Path):
     """A bundle with no manifest has no provenance, yet would pass deploy.sh's
     manifest check and serve with an empty audit trail. Fail the build instead."""

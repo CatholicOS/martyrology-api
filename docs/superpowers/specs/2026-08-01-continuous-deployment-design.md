@@ -1,7 +1,10 @@
 # Continuous Deployment Design
 
 **Date:** 2026-08-01
-**Status:** Approved, pending implementation
+**Status:** Implemented and merged; the VPS is provisioned (deploy and service
+users, the `martyrology` group, `/opt/martyrology`, the sudoers drop-in, the
+systemd unit, the nginx reverse proxy on `api.romanmartyrology.com`, and TLS
+issued). Only the first release deploy is outstanding.
 **Supersedes:** the three-option deployment list in `docs/architecture.md`
 
 ## Problem
@@ -122,7 +125,7 @@ vendor/clbdr` succeeds for everyone, and the graceful-degradation guarantee
 
 Artifact name: `martyrology-<version>-linux-x86_64-cp312.tar.gz`
 
-```
+```text
 manifest.json
 wheels/            martyrology_api-<version>-py3-none-any.whl
                    + every resolved runtime dependency as a wheel
@@ -239,7 +242,7 @@ Plesk may rearrange things underneath it.
 Everything under `/opt/martyrology` is owned `martyrology-deploy:martyrology`,
 and no path anywhere in it carries an "other" bit.
 
-```
+```text
 /opt/martyrology/                  martyrology-deploy:martyrology  0750
   bin/                             0750
   bin/deploy.sh                    0750, installed by the setup script
@@ -292,7 +295,7 @@ to do so.
 
 `/etc/sudoers.d/martyrology-deploy`:
 
-```
+```text
 martyrology-deploy ALL=(root) NOPASSWD: /usr/bin/systemctl restart martyrology-api.service, \
                                         /usr/bin/systemctl is-active martyrology-api.service
 ```

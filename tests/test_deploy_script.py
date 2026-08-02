@@ -1,4 +1,5 @@
 import contextlib
+import grp
 import hashlib
 import io
 import signal
@@ -10,6 +11,8 @@ import time
 from collections.abc import Iterator
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+
+import pytest
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "deploy" / "deploy.sh"
 
@@ -169,7 +172,10 @@ def _extract_permission_selfcheck() -> str:
 def _extract_permission_selfcheck_block() -> tuple[str, str]:
     """The two pieces the permission tests below splice: the literal chmod
     line from deploy.sh, and the self-check block that follows it."""
-    return _extract_line('chmod -R u+rwX,g+rX,o-rwx "$RELEASE"'), _extract_permission_selfcheck()
+    return (
+        _extract_line('chmod -R u+rwX,g+rX,o-rwx,a-s "$RELEASE"'),
+        _extract_permission_selfcheck(),
+    )
 
 
 def _own_group() -> str:
@@ -199,6 +205,26 @@ def _extract_rollback_harness_pieces() -> tuple[str, str, str]:
     return function_text, exit_trap_line.strip(), signal_trap_line.strip()
 
 
+HARNESS_READY = "HARNESS ARMED"
+
+
+def _wait_for_ready(proc: "subprocess.Popen[str]") -> None:
+    """Block until the harness says its traps are armed.
+
+    Replaces a fixed `time.sleep(0.3)` before the SIGTERM. That sleep was a
+    race: under load (a parallel test run, a busy CI box) the signal could
+    land before the traps existed, so bash's default disposition killed the
+    harness outright and the test failed for a reason that has nothing to do
+    with what it is testing. Worse, the same sleep sets the *upper* bound too
+    -- there is no arrival time that is both certainly-after-arming and
+    certainly-before the harness's `sleep 2` elapses. Reading the marker
+    removes both ends of that guess.
+    """
+    assert proc.stdout is not None
+    line = proc.stdout.readline()
+    assert HARNESS_READY in line, f"harness never reported readiness; first stdout line: {line!r}"
+
+
 def _build_signal_harness(tmp_path: Path) -> Path:
     function_text, exit_trap_line, signal_trap_line = _extract_rollback_harness_pieces()
     harness = tmp_path / "harness.sh"
@@ -214,6 +240,11 @@ def _build_signal_harness(tmp_path: Path) -> Path:
         "ROLLBACK_ARMED=1\n"
         f"{exit_trap_line}\n"
         f"{signal_trap_line}\n"
+        "\n"
+        # Emitted immediately after the traps are armed, and before the sleep
+        # that stands in for the flip window, so the test can signal at a
+        # point it knows is inside that window rather than guessing at one.
+        f'echo "{HARNESS_READY}"\n'
         "\n"
         "sleep 2\n"
         'echo "harness: sleep completed without a signal" >&2\n'
@@ -740,7 +771,7 @@ def test_chmod_grants_group_access_and_denies_every_other_account(tmp_path: Path
     while a file that already had an owner execute bit does gain the group
     execute bit, and directories become group-traversable.
     """
-    chmod_line = _extract_line('chmod -R u+rwX,g+rX,o-rwx "$RELEASE"')
+    chmod_line = _extract_line('chmod -R u+rwX,g+rX,o-rwx,a-s "$RELEASE"')
 
     release = tmp_path / "release"
     (release / "sub").mkdir(parents=True)
@@ -851,17 +882,145 @@ def test_permission_selfcheck_fails_loudly_on_a_world_readable_tree(tmp_path: Pa
     assert "REACHED END" not in result.stderr
 
 
+def test_permission_selfcheck_fails_loudly_on_a_setuid_or_setgid_entry(tmp_path: Path):
+    """Tar restores member modes verbatim, and those modes come from the CI
+    runner, so a setuid or setgid bit that reached the staging tree lands
+    intact in a release tree the whole service group can read -- and, for
+    anything carrying an execute bit, run. A setgid *directory* is worse
+    still: it keeps re-applying itself to everything written under it after
+    the normalisation has already been asserted.
+
+    The chmod's `a-s` is the fix; this is the arm that proves it stuck. The
+    tree here is otherwise textbook-correct (group-readable, no other bits,
+    right group), so `-perm /6000` is the only thing that can fire.
+    """
+    release = tmp_path / "release"
+    (release / "data").mkdir(parents=True)
+    setuid_file = release / "data" / "helper"
+    setuid_file.write_text("#!/bin/sh\n", encoding="utf-8")
+    subprocess.run(
+        ["bash", "-c", f'chmod -R u+rwX,g+rX,o-rwx "{release}"'],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    setuid_file.chmod(setuid_file.stat().st_mode | 0o4000)
+
+    result = _run_selfcheck(release, _own_group())
+
+    assert result.returncode != 0, result.stderr
+    assert str(setuid_file) in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_chmod_clears_setuid_and_setgid_from_the_release_tree(tmp_path: Path):
+    """The positive half of the arm above: the real chmod line, run against a
+    tree carrying a setuid file, a setgid file and a setgid directory, must
+    leave none of the three -- while still granting the group access the
+    service account needs. Splices deploy.sh's literal chmod line, so dropping
+    `a-s` from it fails here.
+    """
+    chmod_line = _extract_line('chmod -R u+rwX,g+rX,o-rwx,a-s "$RELEASE"')
+
+    release = tmp_path / "release"
+    setgid_dir = release / "data"
+    setgid_dir.mkdir(parents=True)
+    setuid_file = setgid_dir / "helper"
+    setgid_file = setgid_dir / "other"
+    setuid_file.write_text("#!/bin/sh\n", encoding="utf-8")
+    setgid_file.write_text("{}", encoding="utf-8")
+    setuid_file.chmod(0o4755)
+    setgid_file.chmod(0o2644)
+    setgid_dir.chmod(0o2755)
+
+    result = subprocess.run(
+        ["bash", "-c", f"RELEASE={release}\n{chmod_line}\n"],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stderr
+
+    for path in (setgid_dir, setuid_file, setgid_file):
+        mode = path.stat().st_mode
+        assert mode & 0o6000 == 0, f"{path} kept a setuid/setgid bit: {mode & 0o7777:04o}"
+        assert mode & 0o040 == 0o040, f"{path} lost group read: {mode & 0o7777:04o}"
+
+
+def test_permission_selfcheck_passes_on_a_release_created_under_a_setgid_parent(
+    tmp_path: Path,
+):
+    """The production shape, and the way the `a-s`/`-perm /6000` pair could
+    have turned into a check that fires on every deploy.
+
+    `$APP_DIR/releases` is deliberately 2750 (setgid) so each release
+    directory deploy.sh mkdir's under it inherits the `martyrology` group --
+    and inherits the setgid bit along with it, as does every directory tar
+    creates inside. So the very first real deploy arrives at the self-check
+    with a tree full of setgid directories. The chmod's `a-s` is what clears
+    them before the check looks; if it were dropped while the `-perm /6000`
+    arm stayed, every deploy would fail here.
+
+    Group ownership does not depend on the inherited bit: the chgrp -R
+    immediately above the chmod sets it outright, and runs again after the
+    smoke check, so stripping setgid costs nothing.
+    """
+    chmod_line, selfcheck = _extract_permission_selfcheck_block()
+    die_fn = _extract_die_function()
+
+    releases = tmp_path / "releases"
+    releases.mkdir()
+    releases.chmod(0o2750)
+    assert releases.stat().st_mode & 0o2000, "setgid did not stick; test cannot prove anything"
+
+    release = releases / "1.0.0"
+    (release / "data").mkdir(parents=True)
+    (release / "data" / "01.json").write_text("{}", encoding="utf-8")
+    assert (release / "data").stat().st_mode & 0o2000, (
+        "the release subtree did not inherit setgid from its parent; "
+        "this test is not exercising the production shape"
+    )
+
+    script = (
+        f"RELEASE={release}\nSERVICE_GROUP={_own_group()}\n"
+        f'{die_fn}\n{chmod_line}\n{selfcheck}\necho "REACHED END" >&2\n'
+    )
+    result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+    assert result.returncode == 0, result.stderr
+    assert "REACHED END" in result.stderr
+    assert releases.stat().st_mode & 0o2000, (
+        "the chmod is rooted at $RELEASE and must not have touched releases/'s setgid bit, "
+        "which is what makes new release directories inherit the service group"
+    )
+
+
+def _a_group_the_tree_is_not_in(path: Path) -> str:
+    """A group name that is definitely NOT the group owning `path`.
+
+    Derived at runtime rather than hard-coded to `root`: the previous version
+    of this test used `root` as its stand-in non-service group, which quietly
+    inverts into a false pass the moment the suite runs somewhere root is the
+    process's primary group (a container, a CI image running as uid 0) -- the
+    tree would then genuinely be in `root` and the `! -group` arm it exists to
+    exercise would never fire, while the test still went green for the wrong
+    reason. Skips instead of guessing if the host has only one group defined.
+    """
+    tree_gid = path.stat().st_gid
+    for entry in grp.getgrall():
+        if entry.gr_gid != tree_gid:
+            return entry.gr_name
+    pytest.skip("host defines no group other than the one owning the test tree")
+
+
 def test_permission_selfcheck_fails_loudly_when_the_tree_is_not_in_the_service_group(
     tmp_path: Path,
 ):
     """Group bits are only worth anything if the group is the one the
-    service account is in. `root` stands in for "some group that is not
-    $SERVICE_GROUP": it exists on every Linux host and the tree is
-    certainly not in it, so the ! -group arm must fire. Without this arm a
-    tree left in the deploy user's own primary group -- what happens if
-    releases/'s setgid bit is lost and the chgrp is dropped -- would sail
-    through with textbook-correct 0750/0640 modes and be unreadable to the
-    service account at runtime.
+    service account is in, so the `! -group` arm must fire whenever the tree
+    is in some other group. Without it a tree left in the deploy user's own
+    primary group -- what happens if releases/'s setgid bit is lost and the
+    chgrp is dropped -- would sail through with textbook-correct 0750/0640
+    modes and be unreadable to the service account at runtime.
     """
     release = tmp_path / "release"
     (release / "data").mkdir(parents=True)
@@ -872,8 +1031,7 @@ def test_permission_selfcheck_fails_loudly_when_the_tree_is_not_in_the_service_g
         text=True,
         check=True,
     )
-
-    result = _run_selfcheck(release, "root")
+    result = _run_selfcheck(release, _a_group_the_tree_is_not_in(release))
 
     assert result.returncode != 0, result.stderr
     assert "not group-readable" in result.stderr
@@ -955,7 +1113,7 @@ def test_signal_during_flip_window_rolls_back_instead_of_exiting_zero(tmp_path: 
         stderr=subprocess.PIPE,
         text=True,
     )
-    time.sleep(0.3)
+    _wait_for_ready(proc)
     proc.send_signal(signal.SIGTERM)
     stdout, stderr = proc.communicate(timeout=5)
     assert proc.returncode != 0, (

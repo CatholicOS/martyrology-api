@@ -82,7 +82,14 @@ def assemble(staging: Path, out_dir: Path, version: str) -> Path:
     tarball = out_dir / BUNDLE_NAME.format(version=version)
     with tarfile.open(tarball, "w:gz") as archive:
         for path in sorted(staging.rglob("*")):
-            archive.add(path, arcname=path.relative_to(staging).as_posix())
+            # recursive=False is load-bearing: tarfile.add() recurses by
+            # default, so adding a directory would add its whole subtree and
+            # then rglob would yield each of those files again and add them a
+            # second (or third) time. rglob already walks the tree, so every
+            # entry — directories included, since their modes are what
+            # deploy.sh later normalises — is added exactly once, in sorted
+            # order.
+            archive.add(path, arcname=path.relative_to(staging).as_posix(), recursive=False)
     return tarball
 
 

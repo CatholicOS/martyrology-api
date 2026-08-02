@@ -309,7 +309,20 @@ python3.12 -m venv "$RELEASE/venv"
 # complete, not per-file or in a loop.
 normalise_release_permissions() {
     chgrp -R "$SERVICE_GROUP" "$RELEASE"
-    chmod -R u+rwX,g+rX,o-rwx "$RELEASE"
+    # `a-s` clears setuid/setgid. Tar member modes come from the CI runner and
+    # tar restores them verbatim, so a setuid or setgid bit that got into the
+    # staging tree survives extraction into a tree the service group can read
+    # and, for anything with an execute bit, run. Nothing in a release bundle
+    # has any business being setuid or setgid, so strip both here rather than
+    # trust the runner's modes. Scope is $RELEASE only: the deliberate setgid
+    # on $APP_DIR/releases (2750), which is what makes each new release
+    # directory inherit the $SERVICE_GROUP, is set by setup-vps-deploy-user.sh
+    # and lives one level above this path — untouched by a chmod rooted here.
+    # $RELEASE and the directories tar creates inside it *do* inherit that
+    # setgid bit, and `a-s` clears it from them. That costs nothing: the
+    # chgrp -R above sets the group outright, and runs again after the smoke
+    # check, so nothing here depends on inheritance to get the group right.
+    chmod -R u+rwX,g+rX,o-rwx,a-s "$RELEASE"
 
     # The two lines above are the fix; this proves they stuck, without
     # impersonating the service account (this script has no sudo grant for
@@ -337,10 +350,16 @@ normalise_release_permissions() {
     # captured into the same variable, so such a failure reports rather than
     # passes. UNREADABLE is deliberately not `local`: the tests splice this
     # block out of the script verbatim and run it at top level.
+    # The `-perm /6000` arm is the proof for the `a-s` above: any setuid or
+    # setgid bit still standing here means the chmod did not take, and a
+    # setgid directory in particular would keep re-applying itself to
+    # everything written under it afterwards. Fail loudly rather than
+    # activate it.
     UNREADABLE="$(find "$RELEASE" ! -type l \( \
         \( -type d ! -perm -0050 \) -o \
         \( -type f ! -perm -0040 \) -o \
         -perm /0007 -o \
+        -perm /6000 -o \
         ! -group "$SERVICE_GROUP" \) 2>&1)" || true
     if [ -n "$UNREADABLE" ]; then
         echo "$UNREADABLE" >&2

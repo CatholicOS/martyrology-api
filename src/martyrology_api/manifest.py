@@ -5,6 +5,16 @@ from pydantic import BaseModel, ValidationError
 
 BUNDLE_FORMAT = 1
 
+# Every data repository a bundle must account for. This is the reader-side
+# counterpart to the deploy workflow's "Verify staged data shape" step, and it
+# guards the one failure this project has actually hit: a data tree silently
+# vanishing from the bundle while the app still came up healthy serving the
+# remaining editions, so nothing anywhere reported a problem.
+#
+# Membership, not equality: a fourth data repository added later must not make
+# every existing release unreadable by an older reader.
+REQUIRED_DATA_KEYS = frozenset({"texts", "crmedr", "clbdr"})
+
 
 class Manifest(BaseModel):
     """The deployment manifest written into every release bundle.
@@ -26,7 +36,8 @@ def load_manifest(path: Path | None) -> Manifest | None:
     """Read a deployment manifest, or None when it is absent or unusable.
 
     Absence is the ordinary development case: no bundle, no manifest. A
-    malformed manifest, or one written by a future bundle format, is also
+    malformed manifest, one written by a future bundle format, or one whose
+    `data` mapping does not account for all of REQUIRED_DATA_KEYS, is also
     reported as absent rather than raised. /healthz is what the deploy
     script polls to decide whether to roll back, so it must keep answering
     even when the manifest is the thing that is broken.
@@ -42,5 +53,7 @@ def load_manifest(path: Path | None) -> Manifest | None:
     except ValidationError:
         return None
     if manifest.bundle_format != BUNDLE_FORMAT:
+        return None
+    if not REQUIRED_DATA_KEYS.issubset(manifest.data):
         return None
     return manifest

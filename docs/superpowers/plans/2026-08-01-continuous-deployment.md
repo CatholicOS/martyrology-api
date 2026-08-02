@@ -27,7 +27,7 @@
 > Two further defects were introduced by fix rounds and caught by scoped re-review:
 > the SIGPIPE fix broke the name screen via `awk '{print $NF}'`, and adding
 > `INT TERM` to two traps made signalled deploys exit 0 with `current` left flipped.
-
+>
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Ship `martyrology-api` to the Plesk-managed VPS automatically on every published GitHub release, bundling the private text corpus and the two public registries into one verifiable, rollback-able artifact.

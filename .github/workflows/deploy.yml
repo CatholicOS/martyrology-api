@@ -51,6 +51,19 @@ jobs:
           set -euo pipefail
           VERSION="$(python -c 'import tomllib; print(tomllib.load(open("pyproject.toml","rb"))["project"]["version"])')"
 
+          # deploy.sh accepts only ^v?[0-9]+(\.[0-9]+)*$ — the version becomes
+          # part of a path and of a filename on the VPS. A PEP 440 prerelease or
+          # postrelease ("0.2.0rc1", "1.0.0.post1") would otherwise build a full
+          # bundle, upload it, and be refused on the remote at the very last
+          # step, after the corpus has already been shipped. Refuse it here.
+          # A bash conditional, not `printf | grep`: no pipeline means no way
+          # for `pipefail` plus an early-exiting reader to turn this check's
+          # result into something other than what it matched.
+          if [[ ! "$VERSION" =~ ^[0-9]+(\.[0-9]+)*$ ]]; then
+            echo "::error::pyproject.toml version '${VERSION}' is not deployable: deploy.sh accepts only digits and dots (e.g. 0.2.0). Prerelease and postrelease versions (rc, a, b, .dev, .post) cannot be deployed."
+            exit 1
+          fi
+
           # The bundle is named, installed and recorded in manifest.json from
           # pyproject.toml, never from the tag. Publishing v0.2.0 without
           # bumping pyproject.toml therefore builds and deploys 0.1.0: on a
@@ -74,7 +87,12 @@ jobs:
 
       - name: Build wheel and offline wheelhouse
         run: |
-          pip install uv
+          # Pinned deliberately. `uv export` output is an input to the
+          # wheelhouse, so an unpinned uv could change what gets bundled
+          # between two runs of the same commit — which is precisely the
+          # determinism tracking uv.lock exists to provide. Bump this
+          # deliberately, after exercising `uv build` and `uv export` locally.
+          pip install uv==0.12.1
           mkdir -p staging/wheels
           uv build --wheel --out-dir dist
           uv export --frozen --no-dev --no-emit-project --format requirements-txt -o requirements.txt
@@ -147,8 +165,11 @@ jobs:
             --version "$VERSION" --api-version "$VERSION" \
             --staging staging --out out --repo-root .)"
           NAME="$(basename "$BUNDLE")"
-          # Generated from inside out/ so the checksum file names the bundle
-          # bare; deploy.sh runs `sha256sum -c` from the incoming/ directory.
+          # Generated from inside out/ so field 2 of the checksum file is the
+          # bundle's bare basename. deploy.sh does not run `sha256sum -c`: it
+          # parses the file, asserts field 2 equals the bundle's basename, and
+          # compares the digest itself (deploy.sh:163-172). A checksum written
+          # from the repo root would name "out/<bundle>" and be refused there.
           (cd out && sha256sum "$NAME" > "$NAME.sha256")
           echo "path=$BUNDLE" >> "$GITHUB_OUTPUT"
           ls -la out
@@ -226,6 +247,7 @@ jobs:
           for attempt in 1 2 3; do
             echo "Upload attempt $attempt..."
             if scp -i ~/.ssh/deploy_key \
+              -o StrictHostKeyChecking=yes \
               -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
               "$BUNDLE" "$BUNDLE.sha256" \
               "${VPS_USERNAME}@${VPS_HOST}:${REMOTE_APP_DIR}/incoming/"; then
@@ -259,6 +281,7 @@ jobs:
           REMOTE_APP_DIR="$(printf '%q' "$APP_DIR")"
           REMOTE_VERSION="$(printf '%q' "$VERSION")"
           ssh -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=yes \
             -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
             "${VPS_USERNAME}@${VPS_HOST}" \
             "APP_DIR=${REMOTE_APP_DIR} bash ${REMOTE_APP_DIR}/bin/deploy.sh ${REMOTE_VERSION}"
