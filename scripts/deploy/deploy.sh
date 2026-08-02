@@ -16,6 +16,11 @@
 set -euo pipefail
 
 APP_DIR="${APP_DIR:-/opt/martyrology}"
+# The group shared with the service account, created by
+# setup-vps-deploy-user.sh, which also adds this (deploy) user to it. Every
+# release tree is chgrp'ed to it, and that group is the *only* way anything
+# other than the deploy user reaches the licensed corpus under data/texts.
+SERVICE_GROUP="${SERVICE_GROUP:-martyrology}"
 SERVICE="martyrology-api.service"
 RUNTIME_ENV="$APP_DIR/config/runtime.env"
 KEEP_RELEASES=5
@@ -50,9 +55,9 @@ get_live_port() {
     printf '%s' "$port"
 }
 
-# Armed immediately after `current` is flipped to the new release and
+# Armed immediately before `current` is flipped to the new release and
 # disarmed only once the live health check passes, so any failure in
-# between — a failed restart, a missing runtime.env, an unset
+# between — a failed flip, a failed restart, a missing runtime.env, an unset
 # MARTYROLOGY_PORT, an unhealthy service, or a signal — restores the
 # previous release instead of leaving the flip half-done. set -e can exit
 # the script at any of those points, and EXIT traps do not fire on their
@@ -145,6 +150,14 @@ done
 BUNDLE="$APP_DIR/incoming/martyrology-${VERSION}-linux-x86_64-cp312.tar.gz"
 [ -f "$BUNDLE" ] || die "bundle not found: $BUNDLE"
 [ -f "$BUNDLE.sha256" ] || die "checksum not found: $BUNDLE.sha256"
+
+# The bundle contains the licensed corpus, and scp created it with whatever
+# umask the deploy user's ssh session had. Tighten it the moment the path is
+# known to exist and before anything else touches it: incoming/ is 0700 so the
+# directory already gates access, but the bundle is only removed on the success
+# path far below, so a failed deploy would otherwise leave a permissive copy
+# sitting there until the next successful one.
+chmod 600 "$BUNDLE" "$BUNDLE.sha256"
 
 # Verify the digest directly against the bundle's own bytes, and assert the
 # checksum file actually names this bundle — `sha256sum -c` only checks that
@@ -241,32 +254,59 @@ python3.12 -m venv "$RELEASE/venv"
 "$RELEASE/venv/bin/pip" install --quiet --no-index \
     --find-links "$RELEASE/wheels" martyrology-api
 
-# The service account runs the app but shares no group with the deploy user,
-# so its access depends on world bits. Tar member modes come from the CI
-# runner and directory modes from this script's umask, neither of which is
-# guaranteed permissive; normalise them here rather than discover it when
-# systemd fails to exec. Capital X (not lowercase x) only sets the execute
-# bit on directories and on files that already have an execute bit
-# somewhere, so it does not make every JSON data file executable. Runs once,
-# after the tree is complete, not per-file or in a loop.
-chmod -R a+rX "$RELEASE"
+# The service account runs the app, and reaches this tree solely through the
+# shared $SERVICE_GROUP. Tar member modes come from the CI runner, directory
+# modes from this script's umask, and the group from whatever releases/'s
+# setgid bit propagated — none of which is guaranteed, so normalise all three
+# here rather than discover it when systemd fails to exec.
+#
+# What must NOT happen is the obvious `a+rX`: data/texts holds the licensed
+# martyrology-texts corpus, and this is a shared Plesk host where every other
+# subscription runs its own non-chrooted uid. A world-readable release tree
+# publishes the corpus to all of them, which is exactly what the private
+# submodule exists to prevent. Group in, everyone else out.
+#
+# chgrp needs the deploy user to be a member of $SERVICE_GROUP —
+# setup-vps-deploy-user.sh's `usermod -aG` is what makes that true, and its own
+# membership check is what makes a missing membership loud there rather than
+# here. Capital X (not lowercase x) only sets the execute bit on directories
+# and on files that already have an execute bit somewhere, so it does not make
+# every JSON data file executable. Both run once, after the tree is complete,
+# not per-file or in a loop.
+chgrp -R "$SERVICE_GROUP" "$RELEASE"
+chmod -R u+rwX,g+rX,o-rwx "$RELEASE"
 
-# The chmod above is the fix; this proves it stuck, without impersonating
-# the service account (this script has no sudo grant for that — see the
-# provisioning script's own `sudo -u martyrology test -x/-r` check, which
-# runs as root at provisioning time, not here). find's own recursion already
-# refuses to descend into a directory it cannot execute, so if a directory
-# were left non-traversable, find would surface exactly the entries below
-# it that it could still see, plus its own "Permission denied" on stderr;
-# either way the failure is captured here rather than left to be discovered
-# by systemd. `|| true` on the capture is deliberate: it exists so a nonzero
-# exit from find (e.g. that same permission error) still reaches the
-# is-empty check below instead of tripping `set -e` and discarding the
-# diagnostic before it can be printed.
-UNREADABLE="$(find "$RELEASE" \( -type d ! -perm -o+x \) -o \( -type f ! -perm -o+r \) 2>&1)" || true
+# The two lines above are the fix; this proves they stuck, without
+# impersonating the service account (this script has no sudo grant for that —
+# see the provisioning script's own `sudo -u martyrology test -x/-r` check,
+# which runs as root at provisioning time, not here). It asserts both halves,
+# and neither can mask the other: group bits present *and* every "other" bit
+# absent *and* the group actually being $SERVICE_GROUP. A tree left
+# world-readable fails it just as loudly as one the service account cannot
+# read — which is the point, since the world-readable case is the one that
+# leaks the corpus while looking like a healthy deploy.
+#
+# Symlinks are excluded because on Linux a symlink's own mode is inert (always
+# lrwxrwxrwx, and chmod -R does not follow them); access is decided by the
+# target, which find visits in its own right. Without this exclusion every venv
+# symlink would trip the "other bits set" arm and the check would fail always,
+# for no real reason — a check that always fires teaches operators to ignore it.
+#
+# find descends fully here because u+rwX above guarantees this user can
+# traverse everything it owns, so nothing is skipped unexamined. `|| true` on
+# the capture is deliberate: it exists so a nonzero exit from find (e.g. a
+# permission error on something this user somehow does not own) still reaches
+# the is-empty check below instead of tripping `set -e` and discarding the
+# diagnostic before it can be printed — the stderr text is captured into the
+# same variable, so such a failure reports rather than passes.
+UNREADABLE="$(find "$RELEASE" ! -type l \( \
+    \( -type d ! -perm -0050 \) -o \
+    \( -type f ! -perm -0040 \) -o \
+    -perm /0007 -o \
+    ! -group "$SERVICE_GROUP" \) 2>&1)" || true
 if [ -n "$UNREADABLE" ]; then
     echo "$UNREADABLE" >&2
-    die "release tree is not fully world-readable/traversable after chmod"
+    die "release tree is not group-readable by $SERVICE_GROUP with all other-access denied"
 fi
 
 # Validate the manifest with the reader the app itself uses, so a bundle whose
@@ -345,12 +385,26 @@ if [ -L "$APP_DIR/current" ]; then
 fi
 
 echo "Activating $VERSION"
-ln -sfn "$RELEASE" "$APP_DIR/current.new"
-mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
 
+# Armed BEFORE the flip, not after. Arming afterwards left a window between
+# `mv -Tf` and the `trap` lines in which a TERM (a cancelled CI run, an ssh
+# disconnect) exited with `current` already pointing at the new release and the
+# service never restarted — no rollback, because the trap did not exist yet.
+#
+# Arming early is safe in both directions. $PREVIOUS is captured just above, so
+# the handler always knows where to go back to, and it has three independent
+# early exits for the "nothing to roll back" cases: ROLLBACK_ARMED not 1,
+# status 0, and an empty or vanished $PREVIOUS. The only new paths this opens
+# are a failing `ln` or `mv` — i.e. `current` never moved — where the handler
+# relinks `current` to the value it already has and restarts the service. That
+# is a redundant restart of an already-correct release, not a wrong state, and
+# it still exits with the original failure's status.
 ROLLBACK_ARMED=1
 trap rollback_on_failure EXIT
 trap 'rollback_on_failure 143' INT TERM
+
+ln -sfn "$RELEASE" "$APP_DIR/current.new"
+mv -Tf "$APP_DIR/current.new" "$APP_DIR/current"
 
 sudo /usr/bin/systemctl restart "$SERVICE"
 

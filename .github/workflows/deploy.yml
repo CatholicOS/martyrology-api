@@ -3,8 +3,9 @@ name: Deploy
 # Builds a release bundle (api wheel + offline wheelhouse + the three pinned
 # data trees + manifest.json), ships it to the VPS, and activates it.
 #
-# All ${{ ... }} interpolations are repo secrets/vars (trusted). No untrusted
-# github.event.* field is used.
+# Every ${{ ... }} interpolation is a repo secret/var (trusted). The two
+# github.event.release.tag_name uses are bound to an `env:` name and referenced
+# as a shell variable, never interpolated into a command line.
 #
 # See docs/superpowers/specs/2026-08-01-continuous-deployment-design.md
 
@@ -43,8 +44,31 @@ jobs:
 
       - name: Resolve version
         id: version
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
+          set -euo pipefail
           VERSION="$(python -c 'import tomllib; print(tomllib.load(open("pyproject.toml","rb"))["project"]["version"])')"
+
+          # The bundle is named, installed and recorded in manifest.json from
+          # pyproject.toml, never from the tag. Publishing v0.2.0 without
+          # bumping pyproject.toml therefore builds and deploys 0.1.0: on a
+          # host already running 0.1.0, deploy.sh refuses it as the active
+          # release and the release silently never ships, while the manifest
+          # attached to v0.2.0 claims api_version 0.1.0. Fail here instead.
+          # workflow_dispatch has no tag and is deliberately exempt.
+          if [ "$EVENT_NAME" = "release" ]; then
+            if [ -z "${RELEASE_TAG:-}" ]; then
+              echo "::error::release event carried no tag_name"
+              exit 1
+            fi
+            if [ "${RELEASE_TAG#v}" != "$VERSION" ]; then
+              echo "::error::Release tag ${RELEASE_TAG} does not match the pyproject.toml version ${VERSION}. Bump pyproject.toml (or retag the release) and publish again."
+              exit 1
+            fi
+          fi
+
           echo "value=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Building martyrology-api $VERSION"
 
@@ -87,6 +111,18 @@ jobs:
           [ "${#texts_editions[@]}" -gt 0 ] \
             || fail "staging/data/texts has no <edition>/01.json; texts staging is wrong (vendor/texts copied whole instead of vendor/texts/data/editions?)"
 
+          # staging/data/editions is the public tree from this repo, and has
+          # the same directory-of-editions shape. It is checked for exactly the
+          # reason texts is: its presence is what made the earlier disappearance
+          # of the private corpus survive a green build, because the app came up
+          # healthy serving editions alone. An unchecked tree is a tree that can
+          # vanish silently, so it gets the same explicit count.
+          shopt -s nullglob
+          public_editions=(staging/data/editions/*/01.json)
+          shopt -u nullglob
+          [ "${#public_editions[@]}" -gt 0 ] \
+            || fail "staging/data/editions has no <edition>/01.json; the public editions tree is missing or mis-shaped"
+
           [ -f staging/data/crmedr/data/martyrology_ids.json ] \
             || fail "staging/data/crmedr/data/martyrology_ids.json is missing"
 
@@ -99,7 +135,7 @@ jobs:
           [ "${#wheels[@]}" -gt 0 ] \
             || fail "staging/wheels contains no .whl files"
 
-          echo "Staged data shape OK: ${#texts_editions[@]} text edition(s), ${#wheels[@]} wheel(s)."
+          echo "Staged data shape OK: ${#texts_editions[@]} text edition(s), ${#public_editions[@]} public edition(s), ${#wheels[@]} wheel(s)."
 
       - name: Assemble bundle
         id: bundle
@@ -201,10 +237,24 @@ jobs:
           APP_DIR: ${{ vars.APP_DIR }}
           VERSION: ${{ steps.version.outputs.value }}
         run: |
+          set -euo pipefail
+          if [ -z "$VPS_USERNAME" ] || [ -z "$VPS_HOST" ] || [ -z "$APP_DIR" ]; then
+            echo "ERROR: VPS_USERNAME / VPS_HOST / APP_DIR is empty."
+            exit 1
+          fi
+          # deploy.sh defaults APP_DIR to /opt/martyrology when it is unset, and
+          # nothing here used to export it — so pointing vars.APP_DIR anywhere
+          # else uploaded the bundle to one directory and looked for it in
+          # another, failing every deploy with "bundle not found". Pass it
+          # explicitly. printf %q quotes each value for the remote bash, so a
+          # path or version containing a space or a shell metacharacter is
+          # passed as one literal word rather than being re-split there.
+          REMOTE_APP_DIR="$(printf '%q' "$APP_DIR")"
+          REMOTE_VERSION="$(printf '%q' "$VERSION")"
           ssh -i ~/.ssh/deploy_key \
             -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=2 \
             "${VPS_USERNAME}@${VPS_HOST}" \
-            "bash ${APP_DIR}/bin/deploy.sh ${VERSION}"
+            "APP_DIR=${REMOTE_APP_DIR} bash ${REMOTE_APP_DIR}/bin/deploy.sh ${REMOTE_VERSION}"
 
       - name: Attach manifest to the release
         if: github.event_name == 'release'

@@ -196,7 +196,10 @@ different private repository.
    variable is empty; write `VPS_SSH_KEY` to `~/.ssh/deploy_key` mode 0600; write
    the pinned `VPS_HOST_KEY` to `~/.ssh/known_hosts`; run the DNS SSHFP drift check.
 5. `scp` the bundle and its `.sha256` to `${APP_DIR}/incoming/`.
-6. `ssh … "bash ${APP_DIR}/bin/deploy.sh <version>"`.
+6. `ssh … "APP_DIR=${APP_DIR} bash ${APP_DIR}/bin/deploy.sh <version>"` — `APP_DIR`
+   is exported explicitly, because `deploy.sh` otherwise falls back to its own
+   `/opt/martyrology` default and would look for the bundle somewhere other than
+   where step 5 put it.
 
 Each network step is wrapped in the established 3-attempt / 15-second retry loop.
 
@@ -213,8 +216,16 @@ handshake.
 
 | User | Role | Rights |
 |---|---|---|
-| `martyrology-deploy` | GitHub Actions deploy identity | owns `/opt/martyrology`; no password; no sudo except the two rules below |
-| `martyrology` | systemd service account | read-only on the release tree; no login |
+| `martyrology-deploy` | GitHub Actions deploy identity | owns `/opt/martyrology`; supplementary member of group `martyrology`; no password; no sudo except the two rules below |
+| `martyrology` | systemd service account | primary group `martyrology`; read-only on the release tree via that group; no login |
+
+The two accounts share exactly one thing: the `martyrology` group. That is what
+grants the service account read access to a tree owned by the deploy user, and
+it is the reason the tree does not need — and must not have — world bits. The
+release tree contains the licensed `martyrology-texts` corpus, and this is a
+Plesk-managed host on which every other hosted subscription runs its own
+non-chrooted uid; a world-readable `data/texts/` would publish the corpus to
+every one of them, defeating the private-submodule architecture entirely.
 
 The Plesk-chrooted subscription user is **not** used. A dedicated non-chrooted
 user (the `cdcfinfra-deploy` pattern) can execute one command over ssh, which
@@ -225,15 +236,37 @@ Plesk may rearrange things underneath it.
 
 ### Directory layout
 
+Everything under `/opt/martyrology` is owned `martyrology-deploy:martyrology`,
+and no path anywhere in it carries an "other" bit.
+
 ```
-/opt/martyrology/
-  bin/deploy.sh                    installed by the setup script
-  config/runtime.env               deploy-readable 0644, non-secret settings
-  incoming/                        scp target
+/opt/martyrology/                  martyrology-deploy:martyrology  0750
+  bin/                             0750
+  bin/deploy.sh                    0750, installed by the setup script
+  config/                          0750
+  config/runtime.env               0640, non-secret settings
+  incoming/                        0700 — scp target; the bundle *contains*
+                                   the corpus, and only the deploy user needs
+                                   it, so the group is excluded here too
+  releases/                        2750 — setgid, so release directories
+                                   created by deploy.sh inherit the
+                                   martyrology group
   releases/<version>/{venv,data,manifest.json}
+                                   u=rwX, g=rX, o= (deploy.sh normalises the
+                                   whole tree after extraction and then
+                                   asserts it)
   current -> releases/<version>
 /etc/martyrology/api.env           root:root 0600, secrets only
 ```
+
+Both scripts assert this rather than assume it. `deploy.sh` walks the freshly
+extracted release and fails if any entry is not group-readable, is not owned by
+the `martyrology` group, or has any "other" bit set. `setup-vps-deploy-user.sh`
+impersonates the service account to prove it can traverse `$APP_DIR` and
+`releases/` and read `runtime.env`, then separately proves that nothing under
+`$APP_DIR` is other-accessible and that the service account cannot read
+`incoming/`. The two halves fail independently: a world-readable tree passes the
+first and fails the second.
 
 ### Two environment files, split by secrecy
 
@@ -246,8 +279,8 @@ is split by who is allowed to read it:
   cannot read them. This mirrors step 4 of `setup-vps-sync-user.sh`, which
   restores `ubuntu` ownership and mode 0600 on `.env.production` after the
   recursive chown.
-- **`/opt/martyrology/config/runtime.env`** — owned by the deploy user, 0644.
-  `MARTYROLOGY_PORT`, `MARTYROLOGY_MANIFEST_PATH` and the three data paths. All
+- **`/opt/martyrology/config/runtime.env`** — `martyrology-deploy:martyrology`,
+  0640. `MARTYROLOGY_PORT`, `MARTYROLOGY_MANIFEST_PATH` and the three data paths. All
   point through the stable `current` symlink, so this file is written once at
   provisioning and never changes.
 
@@ -287,6 +320,9 @@ header comment about keeping script changes out of the automatic path.
 5. `python3.12 -m venv releases/<version>/venv`, then
    `pip install --no-index --find-links wheels …`. Fully offline — a GitHub or
    PyPI outage cannot break a deploy.
+   Then `chgrp -R martyrology` and `chmod -R u+rwX,g+rX,o-rwx` the release tree,
+   and assert the result (see §4) — CI tar member modes and the host umask are
+   not to be trusted in either direction.
 6. **Smoke check before committing:** start the new release on a random free
    loopback port, assert `/healthz` returns 200 with the expected edition set,
    then kill it.

@@ -10,6 +10,14 @@
 #   martyrology — the service account the unit runs as. Read-only on the
 #     release tree, no login.
 #
+# The two identities meet in one place only: the martyrology group. The deploy
+# user is added to it, the tree is owned martyrology-deploy:martyrology, and
+# every "other" bit is stripped. That is deliberate and load-bearing — the
+# release tree contains the licensed martyrology-texts corpus, and this host is
+# Plesk-managed, so every other hosted subscription runs its own non-chrooted
+# uid on the same box. A world-readable release tree would hand that corpus to
+# all of them. Group bits let the service account in; nothing else gets in.
+#
 # Secrets live in /etc/martyrology/api.env (root:root 0600), which the deploy
 # identity cannot read; systemd loads it as root before dropping privileges.
 # Non-secret settings live in $APP_DIR/config/runtime.env, which the deploy
@@ -19,6 +27,9 @@ set -euo pipefail
 
 DEPLOY_USER="martyrology-deploy"
 SERVICE_USER="martyrology"
+# The service account's own group; both identities share it. Kept as its own
+# variable because deploy.sh chgrp's each release tree to exactly this name.
+SERVICE_GROUP="martyrology"
 APP_DIR="/opt/martyrology"
 SECRET_ENV="/etc/martyrology/api.env"
 RUNTIME_ENV="$APP_DIR/config/runtime.env"
@@ -48,13 +59,35 @@ else
     echo "User already exists: $DEPLOY_USER"
 fi
 
+# The shared group has to exist before the service account is created, so the
+# account can be pinned to it explicitly rather than relying on useradd's
+# distro-dependent USERGROUPS_ENAB default to conjure one of the same name.
+if ! getent group "$SERVICE_GROUP" >/dev/null; then
+    echo "Creating group: $SERVICE_GROUP"
+    groupadd --system "$SERVICE_GROUP"
+else
+    echo "Group already exists: $SERVICE_GROUP"
+fi
+
 # No login: the service account only ever runs the unit, never a shell.
 if ! id -u "$SERVICE_USER" >/dev/null 2>&1; then
     echo "Creating user: $SERVICE_USER"
-    useradd --system --shell /usr/sbin/nologin --no-create-home "$SERVICE_USER"
+    useradd --system --gid "$SERVICE_GROUP" --shell /usr/sbin/nologin \
+        --no-create-home "$SERVICE_USER"
     passwd --lock "$SERVICE_USER" >/dev/null
 else
     echo "User already exists: $SERVICE_USER"
+fi
+
+# The single point of contact between the two identities. Supplementary group
+# membership is read at session setup, so an ssh session the deploy user
+# already holds will not see it — irrelevant here because deploys open a fresh
+# session, but the reason a re-run is safe rather than merely idempotent.
+if ! id -nG "$DEPLOY_USER" | tr ' ' '\n' | grep -qx "$SERVICE_GROUP"; then
+    echo "Adding $DEPLOY_USER to group $SERVICE_GROUP"
+    usermod -aG "$SERVICE_GROUP" "$DEPLOY_USER"
+else
+    echo "$DEPLOY_USER is already in group $SERVICE_GROUP"
 fi
 
 SSH_DIR="/home/$DEPLOY_USER/.ssh"
@@ -65,14 +98,32 @@ chmod 600 "$SSH_DIR/authorized_keys"
 chown -R "$DEPLOY_USER:$DEPLOY_USER" "$SSH_DIR"
 
 mkdir -p "$APP_DIR"/{bin,config,incoming,releases}
-chown -R "$DEPLOY_USER:$DEPLOY_USER" "$APP_DIR"
-chmod 755 "$APP_DIR"
-# martyrology and martyrology-deploy share no group, so traversal into the
-# release tree depends entirely on these world bits — don't leave them to
-# the deploy user's umask or the CI runner's tar member modes.
-chmod 755 "$APP_DIR"/{bin,config,incoming,releases}
+chown -R "$DEPLOY_USER:$SERVICE_GROUP" "$APP_DIR"
 
-install -o "$DEPLOY_USER" -g "$DEPLOY_USER" -m 755 "$SCRIPT_DIR/deploy.sh" "$APP_DIR/bin/deploy.sh"
+# Recursive first, then the per-directory modes below, so this cannot undo
+# them. On a re-run over a tree provisioned by an earlier version of this
+# script, this is what actually retracts the world bits from release trees that
+# were previously chmod'ed a+rX — the exposure does not fix itself just because
+# new releases are written correctly. Symlinks are skipped by chmod -R, which
+# is correct: on Linux a symlink's own mode is inert.
+chmod -R u+rwX,g+rX,o-rwx "$APP_DIR/releases"
+
+# 0750, not 0755: the service account reaches the release tree through the
+# shared martyrology group, and no other local uid has any business here.
+chmod 0750 "$APP_DIR"
+chmod 0750 "$APP_DIR/bin" "$APP_DIR/config"
+# setgid, so release directories created later by deploy.sh inherit the
+# martyrology group from the parent instead of the deploy user's primary group.
+# deploy.sh chgrp's as well; this makes the inherited case the default rather
+# than the repaired one, and covers anything created outside that chgrp (the
+# venv, pip's caches) between extraction and the chgrp itself.
+chmod 2750 "$APP_DIR/releases"
+# 0700, not 0750: incoming/ holds the uploaded bundle, which *contains* the
+# licensed corpus. Only the deploy user ever needs it; the service account
+# reads the extracted release, never the tarball.
+chmod 0700 "$APP_DIR/incoming"
+
+install -o "$DEPLOY_USER" -g "$SERVICE_GROUP" -m 750 "$SCRIPT_DIR/deploy.sh" "$APP_DIR/bin/deploy.sh"
 
 if [ ! -f "$RUNTIME_ENV" ]; then
     echo "Writing $RUNTIME_ENV"
@@ -83,11 +134,15 @@ MARTYROLOGY_DATA_PATH=$APP_DIR/current/data/editions:$APP_DIR/current/data/texts
 MARTYROLOGY_CRMEDR_PATH=$APP_DIR/current/data/crmedr
 MARTYROLOGY_CLBDR_PATH=$APP_DIR/current/data/clbdr
 EOF
-    chown "$DEPLOY_USER:$DEPLOY_USER" "$RUNTIME_ENV"
-    chmod 644 "$RUNTIME_ENV"
 else
     echo "Keeping existing $RUNTIME_ENV"
 fi
+# Outside the branch above: a re-run over a file written by an earlier version
+# of this script must still have its mode retracted from 0644. 0640, not 0644 —
+# systemd reads EnvironmentFile= as root, and the deploy script reads it as the
+# owner; nothing else on the host needs the live port and paths.
+chown "$DEPLOY_USER:$SERVICE_GROUP" "$RUNTIME_ENV"
+chmod 0640 "$RUNTIME_ENV"
 
 mkdir -p "$(dirname "$SECRET_ENV")"
 if [ ! -f "$SECRET_ENV" ]; then
@@ -138,10 +193,53 @@ EOF
 systemctl daemon-reload
 systemctl enable martyrology-api.service
 
-# Fail loudly now if the service account can't read what it needs, rather
-# than at first start with a bare "Permission denied" from ExecStart.
-if ! sudo -u "$SERVICE_USER" test -x "$APP_DIR" || ! sudo -u "$SERVICE_USER" test -r "$RUNTIME_ENV"; then
-    echo "ERROR: $SERVICE_USER cannot traverse $APP_DIR or read $RUNTIME_ENV — check the host umask" >&2
+# Two halves, both of which have to hold and each of which fails loudly on its
+# own. Neither can be satisfied by the other going wrong: the first asserts
+# access the group grants, the second asserts the absence of access nobody
+# should have. A tree that is world-readable passes half one and fails half
+# two; a tree that is 0700 passes half two and fails half one.
+#
+# Half one — the service account really can reach what it needs. Asserted by
+# impersonating it (this script runs as root, so it can; deploy.sh cannot,
+# which is why deploy.sh asserts modes instead). Without this, the first
+# failure is a bare "Permission denied" from ExecStart at unit start.
+if ! sudo -u "$SERVICE_USER" test -x "$APP_DIR" \
+    || ! sudo -u "$SERVICE_USER" test -x "$APP_DIR/releases" \
+    || ! sudo -u "$SERVICE_USER" test -r "$RUNTIME_ENV"; then
+    echo "ERROR: $SERVICE_USER cannot traverse $APP_DIR or $APP_DIR/releases," >&2
+    echo "       or cannot read $RUNTIME_ENV. Check group membership and modes." >&2
+    exit 1
+fi
+
+# Half two — nothing else can. The release tree holds the licensed corpus and
+# this is a shared, Plesk-managed host, so any surviving "other" bit is a
+# disclosure. Checked with find rather than by impersonation because there is
+# no unrelated account to impersonate; the mode is what the kernel consults for
+# a uid that is neither the owner nor in the group.
+WORLD_ACCESSIBLE="$(find "$APP_DIR" ! -type l -perm /0007 2>&1)" || true
+if [ -n "$WORLD_ACCESSIBLE" ]; then
+    echo "$WORLD_ACCESSIBLE" >&2
+    echo "ERROR: the paths above under $APP_DIR are accessible to every local" >&2
+    echo "       account. The release tree contains licensed texts; refusing." >&2
+    exit 1
+fi
+
+# Half two, continued: the deploy user must actually be in the shared group, or
+# the deploy-time chgrp silently has nothing to chgrp to and every release lands
+# unreadable by the service account.
+if ! id -nG "$DEPLOY_USER" | tr ' ' '\n' | grep -qx "$SERVICE_GROUP"; then
+    echo "ERROR: $DEPLOY_USER is not a member of group $SERVICE_GROUP" >&2
+    exit 1
+fi
+
+# And the service account must not be able to reach the uploaded bundle, which
+# is a second copy of the same corpus sitting in incoming/. This is the one
+# check here whose *failure* is the pass, so it would be satisfied by `sudo -u`
+# simply not working — but half one above required the same `sudo -u
+# "$SERVICE_USER" test` invocation to succeed and exited if it did not, so by
+# this point the mechanism is known to work and a false here means denied.
+if sudo -u "$SERVICE_USER" test -r "$APP_DIR/incoming"; then
+    echo "ERROR: $APP_DIR/incoming is readable by $SERVICE_USER; expected 0700" >&2
     exit 1
 fi
 
@@ -153,9 +251,13 @@ ACTUAL_PORT="${ACTUAL_PORT:-$PORT}"
 cat <<EOF
 
 ✓ Provisioned $DEPLOY_USER (deploys) and $SERVICE_USER (runtime).
-✓ $APP_DIR ready; deploy.sh installed at $APP_DIR/bin/deploy.sh.
+✓ $APP_DIR ready ($DEPLOY_USER:$SERVICE_GROUP, 0750); deploy.sh installed at
+  $APP_DIR/bin/deploy.sh.
 ✓ Unit enabled but NOT started — it needs a first release.
-✓ $SERVICE_USER can traverse $APP_DIR and read $RUNTIME_ENV.
+✓ $SERVICE_USER can traverse $APP_DIR and $APP_DIR/releases and read $RUNTIME_ENV.
+✓ No path under $APP_DIR is readable by any other local account, and
+  $APP_DIR/incoming (which holds the licensed corpus in bundle form) is
+  reachable only by $DEPLOY_USER.
 
 NEXT STEPS
 ──────────

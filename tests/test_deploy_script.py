@@ -140,9 +140,11 @@ def _extract_die_function() -> str:
     return "\n".join(lines[start_idx : end_idx + 1])
 
 
-def _extract_world_readability_selfcheck() -> str:
-    """Pulls the UNREADABLE=... / if / echo / die / fi block that follows
-    the `chmod -R a+rX "$RELEASE"` line out of deploy.sh's current source."""
+def _extract_permission_selfcheck() -> str:
+    """Pulls the UNREADABLE=... / if / echo / die / fi block that follows the
+    chgrp/chmod pair out of deploy.sh's current source. The `find` invocation
+    spans several lines, so the block runs from the `UNREADABLE=` line to the
+    first `fi` after it."""
     text = SCRIPT.read_text(encoding="utf-8")
     lines = text.splitlines()
     start_idx = next(
@@ -150,6 +152,19 @@ def _extract_world_readability_selfcheck() -> str:
     )
     end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i].strip() == "fi")
     return "\n".join(lines[start_idx : end_idx + 1])
+
+
+def _extract_permission_selfcheck_block() -> tuple[str, str]:
+    """The two pieces the permission tests below splice: the literal chmod
+    line from deploy.sh, and the self-check block that follows it."""
+    return _extract_line('chmod -R u+rwX,g+rX,o-rwx "$RELEASE"'), _extract_permission_selfcheck()
+
+
+def _own_group() -> str:
+    """The test user's own primary group, used as a stand-in for the
+    martyrology service group: it is the one group this process is
+    guaranteed to be able to chgrp to and to be a member of."""
+    return subprocess.run(["id", "-gn"], capture_output=True, text=True, check=True).stdout.strip()
 
 
 def _extract_rollback_harness_pieces() -> tuple[str, str, str]:
@@ -519,44 +534,85 @@ def test_rejects_a_corrupt_bundle_with_a_clear_message(tmp_path: Path):
     assert str(bundle) in result.stderr
 
 
-def test_chmod_normalises_world_permissions_on_the_release_tree(tmp_path: Path):
-    """Regression test for the missing-world-bits fix: on a host with a
-    restrictive umask (e.g. UMASK 027) or tar member modes that came out of
-    the CI runner non-permissive, the release tree's directories and files
-    would not be traversable/readable by the martyrology service account,
-    which shares no group with the deploy user and depends entirely on
-    world bits. The deploy completes and reports success; the unit then
-    dies with "Permission denied" on ExecStart.
+def test_tightens_the_uploaded_bundle_to_0600(tmp_path: Path):
+    """The bundle scp'd into incoming/ *contains* the licensed corpus, and
+    scp writes it with whatever umask the deploy user's ssh session had.
+    deploy.sh only deletes it on the success path, so a deploy that fails
+    anywhere after upload would leave a permissive copy sitting in
+    incoming/ until the next successful deploy. Tightening happens as soon
+    as the path is known to exist -- before the checksum is even read --
+    so it covers every failure path after that point, which is all of them.
+
+    Uses --dry-run: it returns before the venv/systemd-dependent work this
+    suite cannot reach, but after the chmod.
+    """
+    app = _app_dir(tmp_path)
+    bundle = _bundle(app, "1.0.0")
+    checksum = bundle.parent / f"{bundle.name}.sha256"
+    bundle.chmod(0o644)
+    checksum.chmod(0o644)
+
+    result = _run(app, "--dry-run", "1.0.0")
+
+    assert result.returncode == 0, result.stderr
+    assert bundle.stat().st_mode & 0o777 == 0o600, "bundle must not be readable by other accounts"
+    assert checksum.stat().st_mode & 0o777 == 0o600
+
+
+def test_chmod_grants_group_access_and_denies_every_other_account(tmp_path: Path):
+    """Regression test for the release-tree permission fix, which has to get
+    two opposite things right at once.
+
+    The service account (martyrology) must be able to read the tree: it
+    shares no *primary* group with the deploy user, and on a host with a
+    restrictive umask (e.g. UMASK 027) or non-permissive tar member modes
+    from the CI runner, the deploy completes and reports success while the
+    unit dies with "Permission denied" on ExecStart.
+
+    And nothing else must: releases/<v>/data/texts holds the licensed
+    martyrology-texts corpus, and the VPS is Plesk-managed, where every
+    other hosted subscription runs its own non-chrooted uid on the same
+    box. The earlier `chmod -R a+rX` fixed the first problem by creating
+    the second -- it published the corpus to every local account, which is
+    precisely what the private-submodule architecture exists to prevent.
+    So this asserts the group bits are present AND that no "other" bit
+    survives anywhere.
 
     Reaching this line through a real end-to-end `deploy.sh <version>` run
     would require a working `python3.12 -m venv` plus a real installable
     martyrology-api wheel for `pip install --no-index`, neither available
     in this suite (the same constraint noted for the venv/systemd-dependent
-    paths elsewhere in this file). Instead this splices the literal
-    `chmod -R a+rX "$RELEASE"` line out of deploy.sh's current source
-    (extracted at test-run time, not hand-duplicated, via the same pattern
-    used for the rollback and smoke harnesses above) and runs it directly
-    against a tree built under a restrictive umask, so a revert of that
-    exact line is what makes this test fail.
+    paths elsewhere in this file). Instead this splices the literal chmod
+    line out of deploy.sh's current source (extracted at test-run time, not
+    hand-duplicated, via the same pattern used for the rollback and smoke
+    harnesses above) and runs it against a tree built both too tight (a
+    0600 file, 0700 dirs) and too loose (a 0644 file, a 0755 dir), so a
+    revert to `a+rX` fails on the loose entries and a removal of the chmod
+    entirely fails on the tight ones.
 
     Also proves the capital-X distinction the fix depends on: a plain data
     file with no execute bit anywhere must NOT gain one (that's what
     lowercase `x` would have done, making every JSON file "executable"),
-    while a file that already had an owner execute bit does gain the
-    world execute bit, and both directories become traversable.
+    while a file that already had an owner execute bit does gain the group
+    execute bit, and directories become group-traversable.
     """
-    chmod_line = _extract_line('chmod -R a+rX "$RELEASE"')
+    chmod_line = _extract_line('chmod -R u+rwX,g+rX,o-rwx "$RELEASE"')
 
     release = tmp_path / "release"
     (release / "sub").mkdir(parents=True)
+    (release / "loose").mkdir()
     data_file = release / "sub" / "manifest.json"
     script_file = release / "sub" / "run.sh"
+    corpus_file = release / "loose" / "01.json"
 
     data_file.write_text("{}", encoding="utf-8")
     script_file.write_text("#!/bin/sh\n", encoding="utf-8")
+    corpus_file.write_text("{}", encoding="utf-8")
     script_file.chmod(0o700)
     data_file.chmod(0o600)
+    corpus_file.chmod(0o644)  # deliberately world-readable going in
     (release / "sub").chmod(0o700)
+    (release / "loose").chmod(0o755)  # deliberately world-traversable going in
     release.chmod(0o700)
 
     result = subprocess.run(
@@ -566,60 +622,149 @@ def test_chmod_normalises_world_permissions_on_the_release_tree(tmp_path: Path):
     )
     assert result.returncode == 0, result.stderr
 
-    assert release.stat().st_mode & 0o007 == 0o005, "release dir must be world r-x"
-    assert (release / "sub").stat().st_mode & 0o007 == 0o005, "subdir must be world r-x"
-    assert data_file.stat().st_mode & 0o007 == 0o004, (
-        "a data file with no execute bit must gain world-read only, "
-        "never world-execute (that would mean lowercase x was used, not X)"
+    for path in (release, release / "sub", release / "loose"):
+        mode = path.stat().st_mode & 0o777
+        assert mode & 0o050 == 0o050, f"{path} must be group r-x, got {mode:04o}"
+        assert mode & 0o007 == 0, f"{path} must deny all other access, got {mode:04o}"
+    for path in (data_file, script_file, corpus_file):
+        mode = path.stat().st_mode & 0o777
+        assert mode & 0o040 == 0o040, f"{path} must be group-readable, got {mode:04o}"
+        assert mode & 0o007 == 0, (
+            f"{path} must deny all other access (the licensed corpus must not be "
+            f"world-readable on a shared host), got {mode:04o}"
+        )
+    assert data_file.stat().st_mode & 0o010 == 0, (
+        "a data file with no execute bit must gain group-read only, "
+        "never group-execute (that would mean lowercase x was used, not X)"
     )
-    assert script_file.stat().st_mode & 0o007 == 0o005, (
-        "a file that already had an owner execute bit must gain world-execute too"
+    assert script_file.stat().st_mode & 0o010 == 0o010, (
+        "a file that already had an owner execute bit must gain group-execute too"
     )
 
 
-def test_world_readability_selfcheck_fails_loudly_on_a_non_traversable_tree(tmp_path: Path):
+def _run_selfcheck(release: Path, service_group: str) -> subprocess.CompletedProcess[str]:
+    """Runs deploy.sh's literal permission self-check block against a tree,
+    with $SERVICE_GROUP bound to the given group. `REACHED END` is echoed
+    afterwards so a check that fails to abort is caught rather than read as
+    a pass."""
+    die_fn = _extract_die_function()
+    selfcheck = _extract_permission_selfcheck()
+    script = (
+        f"RELEASE={release}\nSERVICE_GROUP={service_group}\n"
+        f'{die_fn}\n{selfcheck}\necho "REACHED END" >&2\n'
+    )
+    return subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+
+def test_permission_selfcheck_fails_loudly_on_a_group_unreadable_tree(tmp_path: Path):
     """The chmod above is the fix; this exercises the belt-and-braces
     self-check that follows it in deploy.sh (the UNREADABLE=... / die
     block), on its own, against a tree that was deliberately left
-    non-traversable -- standing in for the chmod silently not taking full
-    effect (e.g. a filesystem quirk, or a later code change that adds a
-    step after the chmod without re-running it). Splices the literal
-    die() function and the literal self-check block out of deploy.sh's
-    current source, same rationale as the harnesses above: a revert of
-    either piece is what makes this test fail, not a hand-duplicated
-    stand-in that could drift from the real script.
+    non-traversable by the service group -- standing in for the chmod
+    silently not taking full effect (e.g. a filesystem quirk, or a later
+    code change that adds a step after the chmod without re-running it).
+    Splices the literal die() function and the literal self-check block out
+    of deploy.sh's current source, same rationale as the harnesses above: a
+    revert of either piece is what makes this test fail, not a
+    hand-duplicated stand-in that could drift from the real script.
     """
-    die_fn = _extract_die_function()
-    selfcheck = _extract_world_readability_selfcheck()
-
     release = tmp_path / "release"
     (release / "locked").mkdir(parents=True)
-    (release / "locked").chmod(0o700)  # not world-traversable, deliberately
-    release.chmod(0o755)
+    (release / "locked").chmod(0o700)  # not group-traversable, deliberately
+    release.chmod(0o750)
 
-    script = f'RELEASE={release}\n{die_fn}\n{selfcheck}\necho "REACHED END" >&2\n'
-    result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+    result = _run_selfcheck(release, _own_group())
 
     assert result.returncode != 0, result.stderr
-    assert "not fully world-readable" in result.stderr
+    assert "not group-readable" in result.stderr
     assert "REACHED END" not in result.stderr
 
 
-def test_world_readability_selfcheck_passes_once_chmod_has_run(tmp_path: Path):
-    """Companion positive control: the same self-check block, on the same
-    kind of deliberately-locked-down tree, but this time preceded by the
-    real chmod line -- proving the two pieces work together as they do in
-    the real script, not just each in isolation."""
-    chmod_line = _extract_line('chmod -R a+rX "$RELEASE"')
+def test_permission_selfcheck_fails_loudly_on_a_world_readable_tree(tmp_path: Path):
+    """The other half, and the one that matters for the licensing exposure:
+    a tree the service account can read perfectly well, but which every
+    other local account can read too. Under the previous `a+rX` this was
+    the *expected* state and the old self-check asserted it, so this test
+    is what stops a revert to world-readable from passing silently.
+
+    Deliberately group-correct throughout, so the only reason it can fail
+    is the "other" bits -- if this test passes, it is not passing by
+    accident of some unrelated tightness.
+    """
+    release = tmp_path / "release"
+    (release / "data").mkdir(parents=True)
+    corpus = release / "data" / "01.json"
+    corpus.write_text("{}", encoding="utf-8")
+    corpus.chmod(0o644)
+    (release / "data").chmod(0o755)
+    release.chmod(0o755)
+
+    result = _run_selfcheck(release, _own_group())
+
+    assert result.returncode != 0, result.stderr
+    assert "other-access denied" in result.stderr
+    assert str(corpus) in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_permission_selfcheck_fails_loudly_when_the_tree_is_not_in_the_service_group(
+    tmp_path: Path,
+):
+    """Group bits are only worth anything if the group is the one the
+    service account is in. `root` stands in for "some group that is not
+    $SERVICE_GROUP": it exists on every Linux host and the tree is
+    certainly not in it, so the ! -group arm must fire. Without this arm a
+    tree left in the deploy user's own primary group -- what happens if
+    releases/'s setgid bit is lost and the chgrp is dropped -- would sail
+    through with textbook-correct 0750/0640 modes and be unreadable to the
+    service account at runtime.
+    """
+    release = tmp_path / "release"
+    (release / "data").mkdir(parents=True)
+    (release / "data" / "01.json").write_text("{}", encoding="utf-8")
+    subprocess.run(
+        ["bash", "-c", f'chmod -R u+rwX,g+rX,o-rwx "{release}"'],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+
+    result = _run_selfcheck(release, "root")
+
+    assert result.returncode != 0, result.stderr
+    assert "not group-readable" in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_permission_selfcheck_passes_once_chmod_has_run(tmp_path: Path):
+    """Companion positive control: the same self-check block, on a tree
+    that is both too tight (0700 subdir) and too loose (0644 file) to
+    begin with, but this time preceded by the real chmod line -- proving
+    the two pieces work together as they do in the real script, not just
+    each in isolation, and that the check is satisfiable at all rather
+    than failing unconditionally.
+
+    A dangling symlink is included on purpose: a symlink's own mode is
+    always lrwxrwxrwx on Linux and chmod -R does not follow it, so without
+    the `! -type l` exclusion in the self-check every real release would
+    fail here on its venv's python symlink.
+    """
+    chmod_line, selfcheck = _extract_permission_selfcheck_block()
     die_fn = _extract_die_function()
-    selfcheck = _extract_world_readability_selfcheck()
 
     release = tmp_path / "release"
     (release / "locked").mkdir(parents=True)
+    loose = release / "loose.json"
+    loose.write_text("{}", encoding="utf-8")
+    loose.chmod(0o644)
     (release / "locked").chmod(0o700)
+    (release / "python").symlink_to("/usr/bin/python3.12")
     release.chmod(0o755)
 
-    script = f'RELEASE={release}\n{die_fn}\n{chmod_line}\n{selfcheck}\necho "REACHED END" >&2\n'
+    script = (
+        f"RELEASE={release}\nSERVICE_GROUP={_own_group()}\n"
+        f'{die_fn}\n{chmod_line}\n{selfcheck}\necho "REACHED END" >&2\n'
+    )
     result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
 
     assert result.returncode == 0, result.stderr
