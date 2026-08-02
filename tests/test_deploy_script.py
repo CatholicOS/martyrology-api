@@ -206,6 +206,7 @@ def _extract_rollback_harness_pieces() -> tuple[str, str, str]:
 
 
 HARNESS_READY = "HARNESS ARMED"
+READY_TIMEOUT = 10.0
 
 
 def _wait_for_ready(proc: "subprocess.Popen[str]") -> None:
@@ -219,10 +220,37 @@ def _wait_for_ready(proc: "subprocess.Popen[str]") -> None:
     -- there is no arrival time that is both certainly-after-arming and
     certainly-before the harness's `sleep 2` elapses. Reading the marker
     removes both ends of that guess.
+
+    The read is bounded. A bare `proc.stdout.readline()` blocks forever if the
+    harness starts but never reaches its marker, and this repo configures no
+    pytest timeout, so that would hang the whole suite rather than fail one
+    test. The harness prints the marker before its `sleep 2`, so the real wait
+    is well under a second; READY_TIMEOUT is only a backstop.
     """
     assert proc.stdout is not None
-    line = proc.stdout.readline()
-    assert HARNESS_READY in line, f"harness never reported readiness; first stdout line: {line!r}"
+    stdout = proc.stdout
+    captured: list[str] = []
+    reader = threading.Thread(target=lambda: captured.append(stdout.readline()), daemon=True)
+    reader.start()
+    reader.join(READY_TIMEOUT)
+
+    line = captured[0] if captured else ""
+    if reader.is_alive() or HARNESS_READY not in line:
+        # Always collect the harness before failing: an assertion alone leaves
+        # it running, and on the timeout path it is still blocked mid-run.
+        # stderr is read directly rather than via communicate(), which would
+        # race the reader thread for stdout.
+        proc.terminate()
+        try:
+            proc.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            proc.kill()
+            proc.wait(timeout=5)
+        stderr = proc.stderr.read() if proc.stderr is not None else ""
+        raise AssertionError(
+            f"harness never reported readiness within {READY_TIMEOUT}s; "
+            f"first stdout line: {line!r}; stderr: {stderr!r}"
+        )
 
 
 def _build_signal_harness(tmp_path: Path) -> Path:
