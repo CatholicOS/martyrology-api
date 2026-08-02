@@ -205,24 +205,53 @@ jobs:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_HOST_KEY: ${{ vars.VPS_HOST_KEY }}
         run: |
-          # Non-fatal drift detector, mirroring cdcf-website's deploy workflow.
-          # The pinned key is the trust anchor; DNS is only corroboration, so a
-          # mismatch warns rather than blocks (DNS may simply lag a rotation).
+          # Non-fatal drift detector. The pinned key is the trust anchor; DNS is
+          # only corroboration, so a mismatch warns rather than blocks (DNS may
+          # simply lag a rotation).
+          #
+          # Both sides are normalised to uppercase hex before comparing. Two
+          # encoding bugs previously made this check warn on every single run,
+          # including for keys that matched perfectly -- which is worse than no
+          # check, because a real rotation would have been lost in the noise:
+          #
+          #   1. `ssh-keygen -l` prints SHA256 fingerprints in *base64*
+          #      (`SHA256:yL4GLc+x...`), while SSHFP rdata is *hex*. They can
+          #      never compare equal, so the base64 digest is decoded here.
+          #   2. `dig +short` wraps long SSHFP rdata across whitespace, so
+          #      `$3` alone captured 56 of the 64 hex characters. Fields 3..NF
+          #      are joined instead.
+          #
+          # Only fptype 2 (SHA-256) records are considered, matching what
+          # ssh-keygen emits; type 1 (SHA-1) rdata is a different digest.
           PIN_FPS=$(printf '%s\n' "$VPS_HOST_KEY" \
             | awk '$1 ~ /^(ssh-|ecdsa-)/ || $2 ~ /^(ssh-|ecdsa-)/' \
             | ssh-keygen -l -f - 2>/dev/null \
-            | awk '{print $2}' | sed 's/^SHA256://' | sort -u)
+            | awk '{print $2}' \
+            | python3 -c '
+          import base64, sys
+          for line in sys.stdin:
+              fp = line.strip()
+              if not fp.startswith("SHA256:"):
+                  continue
+              b64 = fp[len("SHA256:"):]
+              b64 += "=" * (-len(b64) % 4)   # ssh-keygen omits base64 padding
+              print(base64.b64decode(b64).hex().upper())
+          ' | sort -u)
           if [ -z "$PIN_FPS" ]; then
             echo "::warning::Could not derive fingerprints from VPS_HOST_KEY; skipping drift check."
             exit 0
           fi
-          DNS_FPS=$(dig +short SSHFP "$VPS_HOST" 2>/dev/null | awk '{print toupper($3)}' | sort -u)
+          DNS_FPS=$(dig +short SSHFP "$VPS_HOST" 2>/dev/null \
+            | awk '$2 == 2 { s = ""; for (i = 3; i <= NF; i++) s = s $i; print toupper(s) }' \
+            | sort -u)
           if [ -z "$DNS_FPS" ]; then
             echo "::warning::No SSHFP records published for $VPS_HOST; skipping drift check."
             exit 0
           fi
+          # grep -qx, not -qi: an exact whole-line match. A substring match would
+          # have accepted the truncated fingerprints bug (2) produced, hiding it.
           for fp in $PIN_FPS; do
-            echo "$DNS_FPS" | grep -qi "$fp" \
+            printf '%s\n' "$DNS_FPS" | grep -qx "$fp" \
               || echo "::warning::Pinned key $fp not advertised in SSHFP for $VPS_HOST. Either DNS lags reality or VPS_HOST_KEY is stale."
           done
 
