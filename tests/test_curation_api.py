@@ -47,9 +47,12 @@ def seed_repo(root: Path, repo: str, files: dict[str, str]):
 
 
 class StaticAuth:
+    def __init__(self, roles=frozenset({"martyrology_editor"})):
+        self.roles = roles
+
     async def identity(self, token):
         return (
-            Identity(subject="u123", username="jdoe", email="j@example.org")
+            Identity(subject="u123", username="jdoe", email="j@example.org", roles=self.roles)
             if token == "good"
             else None
         )
@@ -330,3 +333,42 @@ def test_patch_edition_explicit_null_removes_key(client):
         )[0]
     )
     assert "note" not in raw
+
+
+def test_missing_role_is_denied_before_openfga_is_consulted(client):
+    class ExplodingAuthz:
+        async def check(self, *a, **k):
+            raise AssertionError("OpenFGA must not be consulted without a role")
+
+    client.app.state.authenticator = StaticAuth(roles=frozenset())
+    client.app.state.authz = ExplodingAuthz()
+    r = client.patch(
+        "/api/v1/editions/martyrologium_romanum_1584/elogia/mr:0102-concordius",
+        json={"text": "x"},
+        headers={"Authorization": "Bearer good"},
+    )
+    assert r.status_code == 403
+    assert r.json()["type"].endswith("/missing-role")
+
+
+def test_irrelevant_role_does_not_satisfy_the_gate(client):
+    client.app.state.authenticator = StaticAuth(roles=frozenset({"developer"}))
+    r = client.patch(
+        "/api/v1/editions/martyrologium_romanum_1584/elogia/mr:0102-concordius",
+        json={"text": "x"},
+        headers={"Authorization": "Bearer good"},
+    )
+    assert r.status_code == 403
+    assert r.json()["type"].endswith("/missing-role")
+
+
+def test_admin_role_satisfies_the_gate_but_does_not_bypass_openfga(client):
+    client.app.state.authenticator = StaticAuth(roles=frozenset({"admin"}))
+    client.app.state.authz = Grants(set())
+    r = client.patch(
+        "/api/v1/editions/martyrologium_romanum_1584/elogia/mr:0102-concordius",
+        json={"text": "x"},
+        headers={"Authorization": "Bearer good"},
+    )
+    assert r.status_code == 403
+    assert r.json()["type"].endswith("/forbidden")

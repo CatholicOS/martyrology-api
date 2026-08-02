@@ -24,6 +24,8 @@ EDITION = Path(pattern=r"^[a-z0-9_]+$")
 
 TOPIC_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
 
+CURATION_ROLES = frozenset({"admin", "martyrology_editor"})
+
 
 def valid_topic(topic: str | None = None) -> str | None:
     if topic is not None and not TOPIC_RE.fullmatch(topic):
@@ -56,6 +58,14 @@ def require_relation(relation: str):
     ) -> Identity:
         if identity is None:
             raise ApiProblem(401, "Authentication required", type_slug="authentication-required")
+        if not (identity.roles & CURATION_ROLES):
+            raise ApiProblem(
+                403,
+                "Forbidden",
+                detail="Curation requires the 'martyrology_editor' or 'admin' role "
+                "on the Martyrology project.",
+                type_slug="missing-role",
+            )
         allowed = await request.app.state.authz.check(user_ref(identity), relation, edition_id)
         if not allowed:
             raise ApiProblem(
