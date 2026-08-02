@@ -32,8 +32,13 @@ introspection.
   `Authenticator`, and the existing `StaticAuth` / `Grants` stub pattern for
   route tests.
 - Never break existing constructor call sites. `Identity(...)` and
-  `Authz(url, store, model)` are constructed positionally in tests; every new
-  field and parameter is keyword-with-default and appended last.
+  `Authz(url, store, model)` are constructed positionally in tests, and
+  `transport=` is always passed by keyword. Every new field and parameter
+  therefore takes a default and goes after the last parameter any caller
+  passes positionally — `api_token` before `transport`, `project_id` before
+  `cache_ttl`, `Identity.roles` last. The binding requirement is that no
+  existing call site changes meaning; the exact signatures in Tasks 1 and 2
+  govern.
 - Commits are GPG-signed. Never pass `--no-gpg-sign`.
 - Route paths below are written in full. All routers mount under `/api/v1`, so
   the spec's `/admin/permissions` is `/api/v1/admin/permissions` in code.
