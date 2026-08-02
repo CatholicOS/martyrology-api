@@ -12,7 +12,7 @@ from .manifest import load_manifest
 from .models import HealthOut
 from .problems import install_problem_handlers
 from .registry import Registry
-from .routers import curation, discovery, read
+from .routers import admin, curation, discovery, read
 from .store import Store
 from .writer.github import GitHubBackend
 from .writer.local import LocalGitBackend
@@ -58,6 +58,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(discovery.router, prefix="/api/v1")
     app.include_router(curation.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
+    app.include_router(admin.router, prefix="/api/v1")
 
     @app.get("/", tags=["service"])
     def service_document() -> dict:
