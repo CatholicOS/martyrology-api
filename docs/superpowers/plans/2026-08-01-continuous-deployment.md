@@ -1,5 +1,33 @@
 # Continuous Deployment Implementation Plan
 
+> **STATUS: EXECUTED AND SUPERSEDED.** All six tasks were implemented and reviewed
+> on branch `deployment-design`. **The committed files are authoritative; the code
+> blocks below are not.** Several of them contained defects that review caught only
+> after implementation, so re-executing this document verbatim would reintroduce
+> them. Read `scripts/deploy/`, `.github/workflows/` and the spec at
+> `docs/superpowers/specs/2026-08-01-continuous-deployment-design.md` instead.
+>
+> Defects that were in this plan's own code, kept here as a record of what review
+> caught rather than as instructions to follow:
+>
+> | Where | Defect |
+> |---|---|
+> | Task 3 `assemble()` | Its test called `assemble()` without `write_manifest()`, so no manifest reached the tarball. Now raises instead. |
+> | Task 4 traversal guard | `tar \| grep -q` under `pipefail` made tar die of SIGPIPE, so the guard silently never fired. |
+> | Task 4 `rm -rf "$RELEASE"` | Ran while `current` still pointed at that release, destroying the live deployment on a redeploy. |
+> | Task 4 link screening | `tar -t` prints names, never link targets, so escaping symlinks and hardlinks passed. |
+> | Task 4 venv build | `pip install --upgrade pip` reached PyPI despite the "fully offline" claim. |
+> | Task 4 rollback | No coverage between the symlink flip and the health check; rollback also reported success without verifying it. |
+> | Task 4 checksum | `sha256sum -c` verified whatever filename the `.sha256` named, not the bundle. |
+> | Task 5 permissions | Only `$APP_DIR` got an explicit mode, so the service account's access depended on the host umask. |
+> | Task 5 prerequisites | `python3.12-venv` and `curl` were neither installed nor checked. |
+> | Task 6 texts staging | `cp -a vendor/texts` copied the repo root, so **zero** private editions loaded while the deploy still reported success. |
+> | Task 6 permissions | `contents: read` with a `gh release upload` step made every release run end red after a successful deploy. |
+>
+> Two further defects were introduced by fix rounds and caught by scoped re-review:
+> the SIGPIPE fix broke the name screen via `awk '{print $NF}'`, and adding
+> `INT TERM` to two traps made signalled deploys exit 0 with `current` left flipped.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Ship `martyrology-api` to the Plesk-managed VPS automatically on every published GitHub release, bundling the private text corpus and the two public registries into one verifiable, rollback-able artifact.
