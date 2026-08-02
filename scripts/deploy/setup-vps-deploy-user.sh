@@ -28,15 +28,34 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [ "$(id -u)" -eq 0 ] || { echo "ERROR: run as root (try: sudo $0)" >&2; exit 1; }
 [ -f "$SCRIPT_DIR/deploy.sh" ] || { echo "ERROR: deploy.sh not beside this script" >&2; exit 1; }
 
-for user in "$DEPLOY_USER" "$SERVICE_USER"; do
-    if ! id -u "$user" >/dev/null 2>&1; then
-        echo "Creating user: $user"
-        useradd --create-home --shell /bin/bash "$user"
-        passwd --lock "$user" >/dev/null
-    else
-        echo "User already exists: $user"
-    fi
+# deploy.sh needs these at deploy time; fail loudly now rather than mid-deploy.
+for cmd in python3.12 curl tar sha256sum; do
+    command -v "$cmd" >/dev/null || { echo "ERROR: required command not found: $cmd" >&2; exit 1; }
 done
+python3.12 -m venv --help >/dev/null 2>&1 \
+    || { echo "ERROR: python3.12-venv is not installed (apt install python3.12-venv)" >&2; exit 1; }
+
+# The sudoers drop-in below is useless if the host's sudoers doesn't pull in
+# /etc/sudoers.d — catch that now instead of at first deploy.
+grep -qE '^[#@]includedir[[:space:]]+/etc/sudoers\.d' /etc/sudoers \
+    || { echo "ERROR: /etc/sudoers has no includedir for /etc/sudoers.d" >&2; exit 1; }
+
+if ! id -u "$DEPLOY_USER" >/dev/null 2>&1; then
+    echo "Creating user: $DEPLOY_USER"
+    useradd --create-home --shell /bin/bash "$DEPLOY_USER"
+    passwd --lock "$DEPLOY_USER" >/dev/null
+else
+    echo "User already exists: $DEPLOY_USER"
+fi
+
+# No login: the service account only ever runs the unit, never a shell.
+if ! id -u "$SERVICE_USER" >/dev/null 2>&1; then
+    echo "Creating user: $SERVICE_USER"
+    useradd --system --shell /usr/sbin/nologin --no-create-home "$SERVICE_USER"
+    passwd --lock "$SERVICE_USER" >/dev/null
+else
+    echo "User already exists: $SERVICE_USER"
+fi
 
 SSH_DIR="/home/$DEPLOY_USER/.ssh"
 mkdir -p "$SSH_DIR"
@@ -48,6 +67,10 @@ chown -R "$DEPLOY_USER:$DEPLOY_USER" "$SSH_DIR"
 mkdir -p "$APP_DIR"/{bin,config,incoming,releases}
 chown -R "$DEPLOY_USER:$DEPLOY_USER" "$APP_DIR"
 chmod 755 "$APP_DIR"
+# martyrology and martyrology-deploy share no group, so traversal into the
+# release tree depends entirely on these world bits — don't leave them to
+# the deploy user's umask or the CI runner's tar member modes.
+chmod 755 "$APP_DIR"/{bin,config,incoming,releases}
 
 install -o "$DEPLOY_USER" -g "$DEPLOY_USER" -m 755 "$SCRIPT_DIR/deploy.sh" "$APP_DIR/bin/deploy.sh"
 
@@ -115,22 +138,40 @@ EOF
 systemctl daemon-reload
 systemctl enable martyrology-api.service
 
+# Fail loudly now if the service account can't read what it needs, rather
+# than at first start with a bare "Permission denied" from ExecStart.
+if ! sudo -u "$SERVICE_USER" test -x "$APP_DIR" || ! sudo -u "$SERVICE_USER" test -r "$RUNTIME_ENV"; then
+    echo "ERROR: $SERVICE_USER cannot traverse $APP_DIR or read $RUNTIME_ENV — check the host umask" >&2
+    exit 1
+fi
+
+# Report the port actually in force, not the default — a re-run that keeps
+# an existing runtime.env may have a different value than $PORT.
+ACTUAL_PORT="$(grep -E '^MARTYROLOGY_PORT=' "$RUNTIME_ENV" | cut -d= -f2 || true)"
+ACTUAL_PORT="${ACTUAL_PORT:-$PORT}"
+
 cat <<EOF
 
 ✓ Provisioned $DEPLOY_USER (deploys) and $SERVICE_USER (runtime).
 ✓ $APP_DIR ready; deploy.sh installed at $APP_DIR/bin/deploy.sh.
 ✓ Unit enabled but NOT started — it needs a first release.
+✓ $SERVICE_USER can traverse $APP_DIR and read $RUNTIME_ENV.
 
 NEXT STEPS
 ──────────
 1. Fill in the secrets in $SECRET_ENV.
+   ⚠ Until you do: MARTYROLOGY_ZITADEL_ISSUER is empty, so config.py sets
+     auth_enabled=False and authz_enabled=False — the API comes up healthy
+     but PUBLICLY UNAUTHENTICATED. Do not skip this step.
 2. Generate the deploy keypair on a workstation:
        ssh-keygen -t ed25519 -C "martyrology-api deploy" -f ./deploy-key
 3. Append the PUBLIC half to $SSH_DIR/authorized_keys.
 4. Capture the host key for pinning:
        ssh-keyscan -t ed25519,rsa <vps-hostname>
-5. Confirm port $PORT is free:
+5. Confirm port $ACTUAL_PORT is free:
        ss -ltnp | sort -t: -k2 -n
+   (to change the port on a re-run, use "sudo -E MARTYROLOGY_PORT=<port> $0"
+   — plain sudo resets the environment and MARTYROLOGY_PORT would be lost)
 6. Add the nginx proxy directives for the domain in Plesk (spec §6).
 7. In the martyrology-api repo settings:
        Secrets:   VPS_HOST, VPS_SSH_KEY (private half), VPS_USERNAME=$DEPLOY_USER,
