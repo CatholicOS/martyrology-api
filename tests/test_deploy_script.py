@@ -121,6 +121,37 @@ def _bundle_with_hardlink(app: Path, version: str, *, target: str) -> Path:
     return payload
 
 
+def _extract_line(exact_text: str) -> str:
+    """Pulls one exact line out of deploy.sh's current source, stripped of
+    leading indentation, at test-run time rather than hand-duplicating it —
+    same rationale as _extract_rollback_harness_pieces below. Raises (and so
+    fails the test) if the line is not found, e.g. because it was reworded
+    or removed."""
+    text = SCRIPT.read_text(encoding="utf-8")
+    line = next(line for line in text.splitlines() if line.strip() == exact_text)
+    return line.strip()
+
+
+def _extract_die_function() -> str:
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(i for i, line in enumerate(lines) if line == "die() {")
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i] == "}")
+    return "\n".join(lines[start_idx : end_idx + 1])
+
+
+def _extract_world_readability_selfcheck() -> str:
+    """Pulls the UNREADABLE=... / if / echo / die / fi block that follows
+    the `chmod -R a+rX "$RELEASE"` line out of deploy.sh's current source."""
+    text = SCRIPT.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    start_idx = next(
+        i for i, line in enumerate(lines) if line.startswith('UNREADABLE="$(find "$RELEASE"')
+    )
+    end_idx = next(i for i in range(start_idx + 1, len(lines)) if lines[i].strip() == "fi")
+    return "\n".join(lines[start_idx : end_idx + 1])
+
+
 def _extract_rollback_harness_pieces() -> tuple[str, str, str]:
     """Pulls the rollback_on_failure() function body and its two
     trap-arming lines directly out of deploy.sh's current source, for
@@ -486,6 +517,113 @@ def test_rejects_a_corrupt_bundle_with_a_clear_message(tmp_path: Path):
     assert result.returncode != 0
     assert "failed to list bundle contents" in result.stderr
     assert str(bundle) in result.stderr
+
+
+def test_chmod_normalises_world_permissions_on_the_release_tree(tmp_path: Path):
+    """Regression test for the missing-world-bits fix: on a host with a
+    restrictive umask (e.g. UMASK 027) or tar member modes that came out of
+    the CI runner non-permissive, the release tree's directories and files
+    would not be traversable/readable by the martyrology service account,
+    which shares no group with the deploy user and depends entirely on
+    world bits. The deploy completes and reports success; the unit then
+    dies with "Permission denied" on ExecStart.
+
+    Reaching this line through a real end-to-end `deploy.sh <version>` run
+    would require a working `python3.12 -m venv` plus a real installable
+    martyrology-api wheel for `pip install --no-index`, neither available
+    in this suite (the same constraint noted for the venv/systemd-dependent
+    paths elsewhere in this file). Instead this splices the literal
+    `chmod -R a+rX "$RELEASE"` line out of deploy.sh's current source
+    (extracted at test-run time, not hand-duplicated, via the same pattern
+    used for the rollback and smoke harnesses above) and runs it directly
+    against a tree built under a restrictive umask, so a revert of that
+    exact line is what makes this test fail.
+
+    Also proves the capital-X distinction the fix depends on: a plain data
+    file with no execute bit anywhere must NOT gain one (that's what
+    lowercase `x` would have done, making every JSON file "executable"),
+    while a file that already had an owner execute bit does gain the
+    world execute bit, and both directories become traversable.
+    """
+    chmod_line = _extract_line('chmod -R a+rX "$RELEASE"')
+
+    release = tmp_path / "release"
+    (release / "sub").mkdir(parents=True)
+    data_file = release / "sub" / "manifest.json"
+    script_file = release / "sub" / "run.sh"
+
+    data_file.write_text("{}", encoding="utf-8")
+    script_file.write_text("#!/bin/sh\n", encoding="utf-8")
+    script_file.chmod(0o700)
+    data_file.chmod(0o600)
+    (release / "sub").chmod(0o700)
+    release.chmod(0o700)
+
+    result = subprocess.run(
+        ["bash", "-c", f"RELEASE={release}\n{chmod_line}\n"],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stderr
+
+    assert release.stat().st_mode & 0o007 == 0o005, "release dir must be world r-x"
+    assert (release / "sub").stat().st_mode & 0o007 == 0o005, "subdir must be world r-x"
+    assert data_file.stat().st_mode & 0o007 == 0o004, (
+        "a data file with no execute bit must gain world-read only, "
+        "never world-execute (that would mean lowercase x was used, not X)"
+    )
+    assert script_file.stat().st_mode & 0o007 == 0o005, (
+        "a file that already had an owner execute bit must gain world-execute too"
+    )
+
+
+def test_world_readability_selfcheck_fails_loudly_on_a_non_traversable_tree(tmp_path: Path):
+    """The chmod above is the fix; this exercises the belt-and-braces
+    self-check that follows it in deploy.sh (the UNREADABLE=... / die
+    block), on its own, against a tree that was deliberately left
+    non-traversable -- standing in for the chmod silently not taking full
+    effect (e.g. a filesystem quirk, or a later code change that adds a
+    step after the chmod without re-running it). Splices the literal
+    die() function and the literal self-check block out of deploy.sh's
+    current source, same rationale as the harnesses above: a revert of
+    either piece is what makes this test fail, not a hand-duplicated
+    stand-in that could drift from the real script.
+    """
+    die_fn = _extract_die_function()
+    selfcheck = _extract_world_readability_selfcheck()
+
+    release = tmp_path / "release"
+    (release / "locked").mkdir(parents=True)
+    (release / "locked").chmod(0o700)  # not world-traversable, deliberately
+    release.chmod(0o755)
+
+    script = f'RELEASE={release}\n{die_fn}\n{selfcheck}\necho "REACHED END" >&2\n'
+    result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+    assert result.returncode != 0, result.stderr
+    assert "not fully world-readable" in result.stderr
+    assert "REACHED END" not in result.stderr
+
+
+def test_world_readability_selfcheck_passes_once_chmod_has_run(tmp_path: Path):
+    """Companion positive control: the same self-check block, on the same
+    kind of deliberately-locked-down tree, but this time preceded by the
+    real chmod line -- proving the two pieces work together as they do in
+    the real script, not just each in isolation."""
+    chmod_line = _extract_line('chmod -R a+rX "$RELEASE"')
+    die_fn = _extract_die_function()
+    selfcheck = _extract_world_readability_selfcheck()
+
+    release = tmp_path / "release"
+    (release / "locked").mkdir(parents=True)
+    (release / "locked").chmod(0o700)
+    release.chmod(0o755)
+
+    script = f'RELEASE={release}\n{die_fn}\n{chmod_line}\n{selfcheck}\necho "REACHED END" >&2\n'
+    result = subprocess.run(["bash", "-c", script], capture_output=True, text=True)
+
+    assert result.returncode == 0, result.stderr
+    assert "REACHED END" in result.stderr
 
 
 def test_signal_during_flip_window_rolls_back_instead_of_exiting_zero(tmp_path: Path):

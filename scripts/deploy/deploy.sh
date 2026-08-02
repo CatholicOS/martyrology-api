@@ -241,6 +241,34 @@ python3.12 -m venv "$RELEASE/venv"
 "$RELEASE/venv/bin/pip" install --quiet --no-index \
     --find-links "$RELEASE/wheels" martyrology-api
 
+# The service account runs the app but shares no group with the deploy user,
+# so its access depends on world bits. Tar member modes come from the CI
+# runner and directory modes from this script's umask, neither of which is
+# guaranteed permissive; normalise them here rather than discover it when
+# systemd fails to exec. Capital X (not lowercase x) only sets the execute
+# bit on directories and on files that already have an execute bit
+# somewhere, so it does not make every JSON data file executable. Runs once,
+# after the tree is complete, not per-file or in a loop.
+chmod -R a+rX "$RELEASE"
+
+# The chmod above is the fix; this proves it stuck, without impersonating
+# the service account (this script has no sudo grant for that — see the
+# provisioning script's own `sudo -u martyrology test -x/-r` check, which
+# runs as root at provisioning time, not here). find's own recursion already
+# refuses to descend into a directory it cannot execute, so if a directory
+# were left non-traversable, find would surface exactly the entries below
+# it that it could still see, plus its own "Permission denied" on stderr;
+# either way the failure is captured here rather than left to be discovered
+# by systemd. `|| true` on the capture is deliberate: it exists so a nonzero
+# exit from find (e.g. that same permission error) still reaches the
+# is-empty check below instead of tripping `set -e` and discarding the
+# diagnostic before it can be printed.
+UNREADABLE="$(find "$RELEASE" \( -type d ! -perm -o+x \) -o \( -type f ! -perm -o+r \) 2>&1)" || true
+if [ -n "$UNREADABLE" ]; then
+    echo "$UNREADABLE" >&2
+    die "release tree is not fully world-readable/traversable after chmod"
+fi
+
 # Validate the manifest with the reader the app itself uses, so a bundle whose
 # manifest this release cannot parse is rejected before it is ever activated.
 "$RELEASE/venv/bin/python" - "$RELEASE/manifest.json" <<'PY' || die "manifest validation failed"
