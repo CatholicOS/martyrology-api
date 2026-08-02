@@ -250,3 +250,57 @@ async def test_read_tuples_filters_by_relation_and_fails_closed():
     assert await a.read_tuples("governance_body:cei", "editor") == []
     assert seen["body"]["tuple_key"] == {"object": "governance_body:cei", "relation": "editor"}
     assert await Authz("", "", "").read_tuples("governance_body:cei") == []
+
+
+def non_dict_json_transport():
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json=[])
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_read_tuples_non_dict_json_body_fails_closed():
+    a = Authz(
+        "https://fga.example",
+        "s1",
+        "m1",
+        api_token="k",
+        transport=non_dict_json_transport(),
+    )
+    assert await a.read_tuples("governance_body:cei") == []
+
+
+@pytest.mark.asyncio
+async def test_read_tuples_stops_at_max_pages_when_token_never_ends():
+    calls: list[dict] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        body = json.loads(request.content)
+        calls.append(body)
+        return httpx.Response(
+            200,
+            json={
+                "tuples": [
+                    {
+                        "key": {
+                            "user": f"user:{len(calls)}",
+                            "relation": "editor",
+                            "object": "governance_body:cei",
+                        }
+                    }
+                ],
+                "continuation_token": "still-more",
+            },
+        )
+
+    a = Authz(
+        "https://fga.example",
+        "s1",
+        "m1",
+        api_token="k",
+        transport=httpx.MockTransport(handler),
+    )
+    got = await a.read_tuples("governance_body:cei")
+    assert len(calls) == Authz.MAX_READ_PAGES
+    assert len(got) == Authz.MAX_READ_PAGES

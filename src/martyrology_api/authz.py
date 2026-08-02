@@ -1,6 +1,10 @@
+import logging
+
 import httpx2 as httpx
 
 from .auth import Identity
+
+log = logging.getLogger(__name__)
 
 
 def user_ref(identity: Identity) -> str:
@@ -124,6 +128,8 @@ class Authz:
                 page = resp.json()
             except ValueError:
                 return out
+            if not isinstance(page, dict):
+                return out
             for item in page.get("tuples") or []:
                 keyed = item.get("key") if isinstance(item, dict) else None
                 if isinstance(keyed, dict):
@@ -131,4 +137,12 @@ class Authz:
             token = page.get("continuation_token") or ""
             if not token:
                 break
+        else:
+            if token:
+                log.warning(
+                    "read_tuples truncated after %d pages for object %r: "
+                    "more tuples exist but were not fetched",
+                    self.MAX_READ_PAGES,
+                    obj,
+                )
         return out
