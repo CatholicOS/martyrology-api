@@ -103,3 +103,34 @@ Each should become its own issue before being picked up.
   `GET /elogia/...`. This is a documented limitation, not a bug, but it
   means a curator reviewing a draft cross-edition placement via the
   by-canonical-id endpoint always sees published data.
+
+## Deployment
+
+Parked after the continuous-deployment branch's final review. None reintroduces
+the corpus exposure or a failure-reports-success path; all are low or cosmetic.
+
+- **`scp` destination interpolates `${APP_DIR}` unquoted** in
+  `.github/workflows/deploy.yml`, while the `ssh` step is `printf %q`-safe.
+  Only bites on an `APP_DIR` containing whitespace, and `vars.APP_DIR` is trusted.
+- **A stale bundle left in `incoming/` by a pre-fix failed deploy is detected,
+  not remediated.** `setup-vps-deploy-user.sh` retracts world bits from
+  `releases/` only; a leftover 0644 bundle aborts provisioning with a message
+  naming the path instead of being fixed in place. Exposure is contained by
+  `incoming/` being 0700.
+- **Anything written into `$RELEASE` after the permission normalisation is not
+  re-checked** — realistically only `__pycache__` from the smoke check, and pip
+  byte-compiles at install time, so in practice nothing new appears.
+- **`deploy.sh`'s permission self-check covers `$RELEASE` only.** `$APP_DIR` and
+  `releases/` modes are asserted at provisioning time alone, so a later manual
+  `chmod 0755 /opt/martyrology` would go unnoticed by subsequent deploys.
+- **A TERM during the sub-millisecond window between `trap -` and `kill`/`rm` in
+  the smoke-check teardown** orphans the smoke uvicorn and leaks its temp log.
+  Still exits 143, so it is loud.
+- **The token-expiry watch's dedup uses `printf | grep -Fxq`.** Safe below 64 KiB
+  of issue titles (~1000+ open issues); a here-string eliminates it structurally.
+- **`deploy.sh` never asserts that `/healthz`'s `version` equals the deployed
+  version** after restart, so a restart that did not actually swap processes
+  reads as success. `HealthOut.version` is already available for this.
+- **Scheduled workflows only run from the default branch**, and GitHub disables
+  them after 60 days of repository inactivity — so the token-expiry watch stops
+  warning in exactly the scenario where it would matter most.
