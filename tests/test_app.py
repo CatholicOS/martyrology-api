@@ -7,8 +7,20 @@ import pytest
     "overrides,expected",
     [
         (
-            {"openfga_api_url": "https://fga.example", "openfga_api_token": ""},
-            "MARTYROLOGY_OPENFGA_API_TOKEN is empty",
+            {
+                "openfga_api_url": "https://fga.example",
+                "openfga_store_id": "s1",
+                "openfga_api_token": "",
+            },
+            "MARTYROLOGY_OPENFGA_API_TOKEN",
+        ),
+        (
+            {
+                "openfga_api_url": "https://fga.example",
+                "openfga_store_id": "",
+                "openfga_api_token": "k",
+            },
+            "MARTYROLOGY_OPENFGA_STORE_ID",
         ),
         (
             {"zitadel_issuer": "https://issuer.example", "zitadel_project_id": ""},
@@ -32,10 +44,21 @@ def test_openfga_warning_does_not_fire_when_fully_configured(make_client, caplog
     assert not any("MARTYROLOGY_OPENFGA_API_TOKEN" in r.message for r in caplog.records)
 
 
-def test_openfga_warning_does_not_fire_when_url_unset(make_client, caplog):
+def test_openfga_warning_does_not_fire_when_entirely_unconfigured(make_client, caplog):
+    """All three empty is a deployment that simply does not use OpenFGA."""
+    with caplog.at_level(logging.WARNING, logger="martyrology_api.app"):
+        make_client(openfga_api_url="", openfga_store_id="", openfga_api_token="")
+    assert not any("OpenFGA is partially configured" in r.message for r in caplog.records)
+
+
+def test_openfga_warning_fires_when_only_the_token_is_set(make_client, caplog):
+    """A token with no URL or store is partial, not absent — it denies everything."""
     with caplog.at_level(logging.WARNING, logger="martyrology_api.app"):
         make_client(openfga_api_token="k")
-    assert not any("MARTYROLOGY_OPENFGA_API_TOKEN" in r.message for r in caplog.records)
+    warnings = [r.message for r in caplog.records if "partially configured" in r.message]
+    assert warnings, "expected a partial-configuration warning"
+    assert "MARTYROLOGY_OPENFGA_API_URL" in warnings[0]
+    assert "MARTYROLOGY_OPENFGA_STORE_ID" in warnings[0]
 
 
 def test_zitadel_warning_does_not_fire_when_fully_configured(make_client, caplog):

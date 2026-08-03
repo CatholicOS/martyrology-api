@@ -22,5 +22,7 @@ def test_authz_enabled_requires_a_token():
     from martyrology_api.config import Settings
 
     base = dict(openfga_api_url="https://fga.example", openfga_store_id="s1")
-    assert Settings(_env_file=None, **base).authz_enabled is False
-    assert Settings(_env_file=None, **base, openfga_api_token="k").authz_enabled is True
+    off = Settings(_env_file=None, **base)  # pyright: ignore[reportCallIssue]
+    on = Settings(_env_file=None, **base, openfga_api_token="k")  # pyright: ignore[reportCallIssue]
+    assert off.authz_enabled is False
+    assert on.authz_enabled is True

@@ -149,11 +149,15 @@ act on the two English editions while their governance is undecided.
 ### D4 — Grant endpoint, scoped to governance bodies only
 
 ```
-GET    /admin/permissions?governance_body=<id>[&relation=<r>]
-POST   /admin/permissions        {"user": "<sub>", "governance_body": "<id>", "relation": "<r>"}
-DELETE /admin/permissions?user=<sub>&governance_body=<id>&relation=<r>
-GET    /admin/permissions/check?user=<sub>&governance_body=<id>&relation=<r>
+GET    /api/v1/admin/permissions?governance_body=<id>[&relation=<r>]
+POST   /api/v1/admin/permissions   {"user": "<sub>", "governance_body": "<id>", "relation": "<r>"}
+DELETE /api/v1/admin/permissions?user=<sub>&governance_body=<id>&relation=<r>
+GET    /api/v1/admin/permissions/check?user=<sub>&governance_body=<id>&relation=<r>
 ```
+
+Paths are written as mounted. The router declares `/admin/permissions`; every
+router in this API is included under the `/api/v1` prefix, so that is what an
+operator calls.
 
 The path mirrors LitCal's `/admin/permissions` for consistency across CDCF
 properties. `DELETE` takes query parameters rather than LitCal's request
@@ -201,7 +205,7 @@ durable state.
 **Audit:** every grant and revoke emits one structured log line carrying
 the actor's subject, the target user, the body, the relation, the action,
 and the outcome. The authoritative record of who holds what is the tuple
-set, readable through `GET /admin/permissions`.
+set, readable through `GET /api/v1/admin/permissions`.
 
 ### D5 — `Authz` gains write and read operations
 
@@ -209,10 +213,18 @@ set, readable through `GET /admin/permissions`.
 
 - `write(user, relation, object)` → `POST /stores/{id}/write` with `writes`
 - `delete(user, relation, object)` → the same endpoint with `deletes`
-- `read(object, relation=None)` → `POST /stores/{id}/read`
+- `read_tuples(obj, relation="")` → `POST /stores/{id}/read`, paginated
 
 All four operations, `check()` included, send
 `Authorization: Bearer <MARTYROLOGY_OPENFGA_API_TOKEN>`.
+
+Their error contracts differ deliberately, and callers depend on the
+difference. `check_object` is the fail-closed primitive under all three gates:
+it returns `False` on transport failure, non-200, or a malformed body, and
+never raises. `write`, `delete`, and `read_tuples` raise `AuthzError` on those
+same conditions, because their callers must distinguish "the store said no"
+from "the store did not answer" — a listing endpoint that returned an empty
+list during an outage would report "nobody has any permission on this body".
 
 This widens the API's blast radius from "can only ask questions" to "can
 modify authorization", which is the price of a grant endpoint. D4's
@@ -257,7 +269,7 @@ inheritance will not resolve until the pin is updated.
    `MARTYROLOGY_ZITADEL_PROJECT_ID` to `/etc/martyrology/api.env`; update
    `MARTYROLOGY_OPENFGA_MODEL_ID` to the ID from step 2.
 5. **martyrology-api:** implement, release, deploy.
-6. **Verify:** as the operator, `GET /admin/permissions?governance_body=cei`
+6. **Verify:** as the operator, `GET /api/v1/admin/permissions?governance_body=cei`
    returns 200; a restricted-edition read returns text rather than
    `null`; a curation write against an edition of a governed body
    succeeds; the same call from a principal holding no project role

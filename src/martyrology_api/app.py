@@ -40,11 +40,21 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         settings.openfga_model_id,
         settings.openfga_api_token,
     )
-    if settings.openfga_api_url and not settings.openfga_api_token:
+    # Any partial OpenFGA configuration denies every check: an empty URL or store
+    # short-circuits `check_object` to False, and an empty token makes a preshared
+    # OpenFGA answer 401. Warn on all three rather than the token alone, since each
+    # produces the same silent, total denial.
+    openfga_vars = {
+        "MARTYROLOGY_OPENFGA_API_URL": settings.openfga_api_url,
+        "MARTYROLOGY_OPENFGA_STORE_ID": settings.openfga_store_id,
+        "MARTYROLOGY_OPENFGA_API_TOKEN": settings.openfga_api_token,
+    }
+    unset = [name for name, value in openfga_vars.items() if not value]
+    if unset and len(unset) < len(openfga_vars):
         logging.getLogger(__name__).warning(
-            "MARTYROLOGY_OPENFGA_API_URL is set but MARTYROLOGY_OPENFGA_API_TOKEN is empty; "
-            "an OpenFGA running with preshared authentication will reject every check, "
-            "denying all curation writes and redacting all restricted texts."
+            "OpenFGA is partially configured — " + ", ".join(unset) + " empty. "
+            "Every authorization check will be denied, so curation writes will fail "
+            "and restricted texts will be redacted for every caller."
         )
     if settings.zitadel_issuer and not settings.zitadel_project_id:
         logging.getLogger(__name__).warning(

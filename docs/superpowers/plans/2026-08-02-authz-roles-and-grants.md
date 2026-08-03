@@ -20,6 +20,28 @@ introspection.
 
 **Spec:** `docs/superpowers/specs/2026-08-02-authz-roles-and-grants-design.md`
 
+## Superseded during implementation
+
+This plan is the pre-implementation record. Three pieces of its code were
+changed by review findings and by an explicit ruling; the shipped code in
+`src/` and the spec are authoritative where they differ.
+
+- **`read_tuples` (Task 4, Step 3) no longer fails closed by returning a
+  partial list.** It raises `AuthzError` on transport failure, non-200, a
+  malformed or non-dict body, and a non-list `tuples` field. Returning `[]`
+  during an outage made the listing endpoint answer "nobody has any permission
+  on this body", indistinguishable from the truth. Only the unconfigured case
+  still returns `[]`.
+- **`_mutate` (Task 5, Step 4) no longer maps `IDEMPOTENT_CODE` straight to
+  success.** That code also fires when the deployed model rejects the write, so
+  a failed revoke reported as revoked. It now confirms the postcondition
+  against *direct* tuples via `read_tuples` — not `check_object`, whose
+  computed relations union `editor ← admin` and would report a successful
+  revoke as a failure — and returns 502 when the desired state is unconfirmed.
+- **`check_object` (Task 1, Step 4) gained an `isinstance(payload, dict)`
+  guard**, so a 200 whose body is a JSON list or scalar denies rather than
+  raising `AttributeError`.
+
 ## Global Constraints
 
 - Python 3.12 (`target-version = "py312"`), ruff `line-length = 100`.
