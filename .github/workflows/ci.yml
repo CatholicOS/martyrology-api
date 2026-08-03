@@ -31,6 +31,7 @@ jobs:
         run: pyright
 
       - name: pytest
+        id: pytest
         run: pytest -q --cov --cov-branch --cov-report=term-missing --cov-report=xml --junitxml=junit.xml
 
       - name: Coverage summary
@@ -46,8 +47,13 @@ jobs:
           slug: CatholicOS/martyrology-api
           files: coverage.xml
 
+      # Upload results when pytest RAN, pass or fail — a failing suite is
+      # exactly when Codecov's test analytics earns its keep. Skip when pytest
+      # never ran (an earlier step failed), since there is no junit.xml to find
+      # and the resulting "unable to find any JUnit XML files" notice reads like
+      # a config fault while distracting from the real failure.
       - name: Upload test results to Codecov
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.pytest.conclusion != 'skipped' }}
         uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
