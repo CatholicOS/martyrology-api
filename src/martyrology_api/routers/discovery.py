@@ -1,5 +1,6 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Depends, Request
 
+from ..caching import declare_public_cache
 from ..config import Settings
 from ..models import (
     AvailabilityOut,
@@ -15,7 +16,7 @@ from ..problems import ApiProblem
 from ..registry import EditionMeta
 from ..store import Store
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(declare_public_cache)])
 
 
 def governance_for(scope: str) -> GovernanceOut:

@@ -58,3 +58,23 @@ def test_errors_not_cached(client):
     r = client.get("/api/v1/elogia/03/05")
     assert r.status_code == 404
     assert "cache-control" not in r.headers or "max-age=8" not in r.headers.get("cache-control", "")
+
+
+def test_undeclared_router_is_private_by_default(client):
+    """A router that declares no cache posture must not be shared-cached.
+
+    Mounted at runtime so the assertion is about the middleware's default,
+    not about any particular existing router's declaration.
+    """
+    from fastapi import APIRouter
+
+    probe = APIRouter()
+
+    @probe.get("/cache-probe")
+    def _probe() -> dict:
+        return {"ok": True}
+
+    client.app.include_router(probe, prefix="/api/v1")
+    r = client.get("/api/v1/cache-probe")
+    assert r.status_code == 200
+    assert r.headers["cache-control"] == "private, max-age=0"
