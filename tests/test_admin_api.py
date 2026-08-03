@@ -46,6 +46,8 @@ class FakeAuthz:
         self.deletes.append((user, relation, obj))
 
     async def read_tuples(self, obj, relation=""):
+        if self.fail:
+            raise self.fail
         return [
             t
             for t in self.tuples
@@ -126,6 +128,12 @@ def test_malformed_body_id_is_422(client):
 
 
 def test_duplicate_grant_is_idempotent(client):
+    # The postcondition already holds (the tuple exists), so the
+    # idempotent-coded failure is confirmed as the caller's desired
+    # end state and reported as success.
+    client.app.state.authz.tuples = [
+        {"user": "user:u9", "relation": "editor", "object": "governance_body:cei"}
+    ]
     client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "exists")
     r = client.post(
         BASE,
@@ -133,6 +141,20 @@ def test_duplicate_grant_is_idempotent(client):
         headers=hdr(),
     )
     assert r.status_code == 200
+
+
+def test_duplicate_grant_with_unconfirmed_postcondition_is_502(client):
+    # The idempotent-coded failure fires, but the tuple still does not
+    # exist afterward: the desired end state (grant holds) cannot be
+    # confirmed, so this must not be swallowed as success.
+    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "exists")
+    r = client.post(
+        BASE,
+        json={"user": "u9", "governance_body": "cei", "relation": "editor"},
+        headers=hdr(),
+    )
+    assert r.status_code == 502
+    assert client.app.state.authz.writes == []
 
 
 def test_other_openfga_errors_are_502(client):
@@ -154,11 +176,29 @@ def test_revoke_removes_the_tuple(client):
 
 
 def test_revoke_of_an_absent_tuple_is_idempotent(client):
+    # The postcondition already holds (no such tuple), so the
+    # idempotent-coded failure is confirmed as the caller's desired
+    # end state and reported as success.
     client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "missing")
     r = client.request(
         "DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor", headers=hdr()
     )
     assert r.status_code == 200
+
+
+def test_revoke_with_unconfirmed_postcondition_is_502(client):
+    # The idempotent-coded failure fires, but the tuple is still present
+    # afterward: the desired end state (revoke holds) cannot be confirmed,
+    # so this must not be swallowed as success.
+    client.app.state.authz.tuples = [
+        {"user": "user:u9", "relation": "editor", "object": "governance_body:cei"}
+    ]
+    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "missing")
+    r = client.request(
+        "DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor", headers=hdr()
+    )
+    assert r.status_code == 502
+    assert client.app.state.authz.deletes == []
 
 
 def test_list_returns_the_bodys_tuples(client):
@@ -179,6 +219,57 @@ def test_check_reports_allowed(client):
     r = client.get(f"{BASE}/check?user=a&governance_body=cei&relation=editor", headers=hdr())
     assert r.status_code == 200
     assert r.json()["allowed"] is True
+
+
+def test_list_permissions_is_not_publicly_cached(client):
+    r = client.get(f"{BASE}?governance_body=cei", headers=hdr())
+    assert r.headers["cache-control"] == "private, max-age=0"
+
+
+def test_check_permission_is_not_publicly_cached(client):
+    r = client.get(f"{BASE}/check?user=a&governance_body=cei&relation=editor", headers=hdr())
+    assert r.headers["cache-control"] == "private, max-age=0"
+
+
+def test_list_permissions_is_502_when_the_store_is_unreachable(client):
+    client.app.state.authz.fail = AuthzError(500, "internal_error", "boom")
+    r = client.get(f"{BASE}?governance_body=cei", headers=hdr())
+    assert r.status_code == 502
+
+
+def test_delete_unauthenticated_is_401(client):
+    r = client.request("DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor")
+    assert r.status_code == 401
+
+
+def test_delete_non_body_admin_is_403(client):
+    r = client.request(
+        "DELETE",
+        f"{BASE}?user=u9&governance_body=cei&relation=editor",
+        headers=hdr("plain"),
+    )
+    assert r.status_code == 403
+    assert client.app.state.authz.deletes == []
+
+
+def test_check_unauthenticated_is_401(client):
+    r = client.get(f"{BASE}/check?user=a&governance_body=cei&relation=editor")
+    assert r.status_code == 401
+
+
+def test_check_non_body_admin_is_403(client):
+    r = client.get(f"{BASE}/check?user=a&governance_body=cei&relation=editor", headers=hdr("plain"))
+    assert r.status_code == 403
+
+
+def test_double_prefixed_user_is_422(client):
+    r = client.post(
+        BASE,
+        json={"user": "user:user:x", "governance_body": "cei", "relation": "editor"},
+        headers=hdr(),
+    )
+    assert r.status_code == 422
+    assert client.app.state.authz.writes == []
 
 
 def test_no_route_can_address_an_edition_or_platform_object(client):

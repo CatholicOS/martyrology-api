@@ -120,16 +120,30 @@ class Authz:
                         json=payload,
                         headers=self._headers(),
                     )
-            except httpx.HTTPError:
-                return out
+            except httpx.HTTPError as exc:
+                raise AuthzError(0, "transport_error", str(exc)) from exc
             if resp.status_code != 200:
-                return out
+                code, message = "", ""
+                try:
+                    err = resp.json()
+                except ValueError:
+                    err = {}
+                if isinstance(err, dict):
+                    code = err.get("code") or ""
+                    message = err.get("message") or ""
+                raise AuthzError(resp.status_code, code, message)
             try:
                 page = resp.json()
-            except ValueError:
-                return out
+            except ValueError as exc:
+                raise AuthzError(
+                    resp.status_code, "invalid_response", "response body was not JSON"
+                ) from exc
             if not isinstance(page, dict):
-                return out
+                raise AuthzError(
+                    resp.status_code,
+                    "invalid_response",
+                    "response body was not a JSON object",
+                )
             for item in page.get("tuples") or []:
                 keyed = item.get("key") if isinstance(item, dict) else None
                 if isinstance(keyed, dict):

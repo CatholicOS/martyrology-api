@@ -260,7 +260,7 @@ def non_dict_json_transport():
 
 
 @pytest.mark.asyncio
-async def test_read_tuples_non_dict_json_body_fails_closed():
+async def test_read_tuples_non_dict_json_body_raises():
     a = Authz(
         "https://fga.example",
         "s1",
@@ -268,7 +268,51 @@ async def test_read_tuples_non_dict_json_body_fails_closed():
         api_token="k",
         transport=non_dict_json_transport(),
     )
-    assert await a.read_tuples("governance_body:cei") == []
+    with pytest.raises(AuthzError):
+        await a.read_tuples("governance_body:cei")
+
+
+def failing_transport(exc: Exception):
+    def handler(request: httpx.Request) -> httpx.Response:
+        raise exc
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_read_tuples_raises_on_transport_error():
+    a = Authz(
+        "https://fga.example",
+        "s1",
+        "m1",
+        api_token="k",
+        transport=failing_transport(httpx.ConnectError("boom")),
+    )
+    with pytest.raises(AuthzError) as exc:
+        await a.read_tuples("governance_body:cei")
+    assert exc.value.code == "transport_error"
+
+
+def error_status_transport(status: int, payload: dict):
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(status, json=payload)
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_read_tuples_raises_on_non_200_response():
+    a = Authz(
+        "https://fga.example",
+        "s1",
+        "m1",
+        api_token="k",
+        transport=error_status_transport(500, {"code": "internal_error", "message": "boom"}),
+    )
+    with pytest.raises(AuthzError) as exc:
+        await a.read_tuples("governance_body:cei")
+    assert exc.value.status == 500
+    assert exc.value.code == "internal_error"
 
 
 @pytest.mark.asyncio

@@ -70,8 +70,19 @@ async def _mutate(request: Request, identity: Identity, op: str, ref: str, rel: 
     try:
         await fn(ref, rel, obj)
     except AuthzError as exc:
-        if exc.code != IDEMPOTENT_CODE:
+        if exc.code == IDEMPOTENT_CODE:
+            # OpenFGA reports both "tuple already exists" (grant) and
+            # "tuple does not exist" (revoke) with this code. That is
+            # consistent with the caller's desired end state, but not
+            # proof of it — confirm the postcondition rather than assume
+            # it: a grant should now check True, a revoke should now
+            # check False.
+            desired = op == "grant"
+            confirmed = await request.app.state.authz.check_object(ref, rel, obj)
+            outcome = "noop" if confirmed == desired else "error:unconfirmed"
+        else:
             outcome = f"error:{exc.code or exc.status}"
+        if outcome != "noop":
             log.warning(
                 "permission %s by %s: %s %s on %s -> %s",
                 op,
@@ -87,7 +98,6 @@ async def _mutate(request: Request, identity: Identity, op: str, ref: str, rel: 
                 detail="The authorization store rejected the change.",
                 type_slug="authz-store-error",
             ) from exc
-        outcome = "noop"
     log.info(
         "permission %s by %s: %s %s on %s -> %s",
         op,
@@ -106,10 +116,25 @@ async def list_permissions(
     relation: str | None = Query(default=None),
     identity: Identity = Depends(_authenticated),
 ):
+    request.state.cache_private = True
     obj = _body_ref(governance_body)
     rel = _relation(relation) if relation is not None else ""
     await _require_body_admin(request, identity, obj)
-    tuples = await request.app.state.authz.read_tuples(obj, rel)
+    try:
+        tuples = await request.app.state.authz.read_tuples(obj, rel)
+    except AuthzError as exc:
+        log.warning(
+            "permission list by %s on %s -> error:%s",
+            user_ref(identity),
+            obj,
+            exc.code or exc.status,
+        )
+        raise ApiProblem(
+            502,
+            "Authorization store error",
+            detail="The authorization store could not be read.",
+            type_slug="authz-store-error",
+        ) from exc
     return PermissionListOut(
         governance_body=governance_body,
         permissions=[
@@ -162,6 +187,7 @@ async def check_permission(
     relation: str = Query(...),
     identity: Identity = Depends(_authenticated),
 ):
+    request.state.cache_private = True
     obj = _body_ref(governance_body)
     rel = _relation(relation)
     ref = _normalise_user(user)
