@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 def scope_dict(scope: str) -> dict:
@@ -160,3 +160,29 @@ class ElogiumPutIn(BaseModel):
 
 class ElogiumPatchIn(BaseModel):
     text: str
+
+
+class GrantIn(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    user: str
+    governance_body: str
+    relation: str
+
+
+class PermissionOut(BaseModel):
+    user: str
+    governance_body: str
+    relation: str
+
+
+class PermissionListOut(BaseModel):
+    governance_body: str
+    permissions: list[PermissionOut]
+
+
+class PermissionCheckOut(BaseModel):
+    user: str
+    governance_body: str
+    relation: str
+    allowed: bool

@@ -124,3 +124,73 @@ async def test_cache_stays_bounded():
     for i in range(10):
         await a.identity(f"tok-bound-{i}")
     assert len(a._cache) <= 3
+
+
+PROJECT = "384518610174869507"
+OTHER_PROJECT = "999999999999999999"
+
+
+def roles_transport(claims: dict):
+    def handler(request: httpx.Request) -> httpx.Response:
+        body = {"active": True, "sub": "u123", "username": "jdoe"}
+        body.update(claims)
+        return httpx.Response(200, json=body)
+
+    return httpx.MockTransport(handler)
+
+
+def _auth(claims: dict, project_id: str = PROJECT) -> Authenticator:
+    return Authenticator(
+        "https://zitadel.example",
+        "cid",
+        "sec",
+        project_id=project_id,
+        transport=roles_transport(claims),
+    )
+
+
+@pytest.mark.asyncio
+async def test_roles_read_from_project_scoped_claim():
+    claims = {f"urn:zitadel:iam:org:project:{PROJECT}:roles": {"admin": {}, "developer": {}}}
+    ident = await _auth(claims).identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset({"admin", "developer"})
+
+
+@pytest.mark.asyncio
+async def test_generic_roles_claim_is_ignored():
+    claims = {"urn:zitadel:iam:org:project:roles": {"admin": {}}}
+    ident = await _auth(claims).identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset()
+
+
+@pytest.mark.asyncio
+async def test_roles_from_another_project_are_ignored():
+    claims = {f"urn:zitadel:iam:org:project:{OTHER_PROJECT}:roles": {"admin": {}}}
+    ident = await _auth(claims).identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset()
+
+
+@pytest.mark.asyncio
+async def test_absent_claim_yields_no_roles():
+    ident = await _auth({}).identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset()
+
+
+@pytest.mark.asyncio
+async def test_non_object_claim_yields_no_roles():
+    claims = {f"urn:zitadel:iam:org:project:{PROJECT}:roles": ["admin"]}
+    ident = await _auth(claims).identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset()
+
+
+@pytest.mark.asyncio
+async def test_no_project_id_configured_yields_no_roles():
+    claims = {f"urn:zitadel:iam:org:project:{PROJECT}:roles": {"admin": {}}}
+    ident = await _auth(claims, project_id="").identity("t")
+    assert ident is not None
+    assert ident.roles == frozenset()

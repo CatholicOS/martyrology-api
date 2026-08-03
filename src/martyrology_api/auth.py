@@ -13,6 +13,7 @@ class Identity:
     username: str
     email: str | None = None
     name: str | None = None
+    roles: frozenset[str] = frozenset()
 
 
 class Authenticator:
@@ -21,6 +22,7 @@ class Authenticator:
         issuer: str,
         client_id: str,
         client_secret: str,
+        project_id: str = "",
         cache_ttl: int = 300,
         cache_max: int = 10_000,
         transport: httpx.AsyncBaseTransport | None = None,
@@ -28,10 +30,26 @@ class Authenticator:
         self.issuer = issuer.rstrip("/")
         self.client_id = client_id
         self.client_secret = client_secret
+        self.project_id = project_id
         self.cache_ttl = cache_ttl
         self.cache_max = cache_max
         self._transport = transport
         self._cache: dict[str, tuple[Identity | None, float]] = {}
+
+    @property
+    def roles_claim(self) -> str:
+        if not self.project_id:
+            return ""
+        return f"urn:zitadel:iam:org:project:{self.project_id}:roles"
+
+    def _roles(self, body: dict) -> frozenset[str]:
+        claim_key = self.roles_claim
+        if not claim_key:
+            return frozenset()
+        claim = body.get(claim_key)
+        if not isinstance(claim, dict):
+            return frozenset()
+        return frozenset(k for k in claim if isinstance(k, str))
 
     def _insert_cache(self, token: str, ident: Identity | None) -> None:
         if len(self._cache) >= self.cache_max:
@@ -79,6 +97,7 @@ class Authenticator:
                     username=body.get("username") or body.get("preferred_username") or sub,
                     email=body.get("email"),
                     name=body.get("name"),
+                    roles=self._roles(body),
                 )
             else:
                 # Active but no subject: malformed introspection response.

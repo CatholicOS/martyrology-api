@@ -5,6 +5,7 @@ from starlette.concurrency import run_in_threadpool
 
 from ..auth import Identity, get_identity
 from ..authz import user_ref
+from ..caching import declare_public_cache
 from ..grammar import ElogiaRequest, parse_elogia_path
 from ..licensing import is_restricted, redact, texts_allowed
 from ..models import (
@@ -24,7 +25,7 @@ from ..registry import is_canonical_id, slug_of
 from ..resolver import EditionUnavailableError, Resolution, resolve
 from ..store import DayData, Elogium
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(declare_public_cache)])
 
 BRANCH_HEADER_RE = re.compile(r"^curation/[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$")
 

@@ -167,9 +167,15 @@ if [ ! -f "$SECRET_ENV" ]; then
 MARTYROLOGY_ZITADEL_ISSUER=
 MARTYROLOGY_ZITADEL_CLIENT_ID=
 MARTYROLOGY_ZITADEL_CLIENT_SECRET=
+# Empty = the roles claim cannot be built, so every curation write 403s
+# missing-role for every principal, even a correctly-configured issuer.
+MARTYROLOGY_ZITADEL_PROJECT_ID=
 MARTYROLOGY_OPENFGA_API_URL=
 MARTYROLOGY_OPENFGA_STORE_ID=
 MARTYROLOGY_OPENFGA_MODEL_ID=
+# Empty = every check against an OpenFGA requiring a bearer token 401s, so
+# curation is denied and restricted texts are redacted for everyone.
+MARTYROLOGY_OPENFGA_API_TOKEN=
 MARTYROLOGY_GITHUB_TOKEN=
 EOF
 else
@@ -281,6 +287,12 @@ NEXT STEPS
    ⚠ Until you do: MARTYROLOGY_ZITADEL_ISSUER is empty, so config.py sets
      auth_enabled=False and authz_enabled=False — the API comes up healthy
      but PUBLICLY UNAUTHENTICATED. Do not skip this step.
+   ⚠ Filling in every OTHER line but leaving MARTYROLOGY_OPENFGA_API_TOKEN or
+     MARTYROLOGY_ZITADEL_PROJECT_ID empty does not reproduce that same open
+     failure — it silently flips to fully closed instead: every OpenFGA check
+     401s (token) or the roles claim cannot be built (project ID), so every
+     curation write is denied and every restricted text is redacted for
+     every principal, including admins. Set both.
 2. Generate the deploy keypair on a workstation:
        ssh-keygen -t ed25519 -C "martyrology-api deploy" -f ./deploy-key
 3. Append the PUBLIC half to $SSH_DIR/authorized_keys.
