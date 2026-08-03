@@ -140,6 +140,25 @@ async def test_check_object_fails_closed_when_unconfigured():
     assert await Authz("", "", "").check_object("user:u", "admin", "governance_body:cei") is False
 
 
+def non_dict_body_transport(raw: bytes):
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, content=raw, headers={"content-type": "application/json"})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("raw", [b"[]", b"null", b'"ok"', b"3"])
+async def test_check_object_non_dict_json_body_fails_closed(raw):
+    a = Authz(
+        "https://fga.example",
+        "store1",
+        "model1",
+        transport=non_dict_body_transport(raw),
+    )
+    assert await a.check_object("user:u", "admin", "governance_body:cei") is False
+
+
 def write_transport(seen: dict, status: int = 200, payload: dict | None = None):
     def handler(request: httpx.Request) -> httpx.Response:
         seen["path"] = request.url.path
@@ -267,6 +286,26 @@ async def test_read_tuples_non_dict_json_body_raises():
         "m1",
         api_token="k",
         transport=non_dict_json_transport(),
+    )
+    with pytest.raises(AuthzError):
+        await a.read_tuples("governance_body:cei")
+
+
+def scalar_tuples_transport():
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"tuples": 5})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_read_tuples_non_iterable_tuples_field_raises_authz_error():
+    a = Authz(
+        "https://fga.example",
+        "s1",
+        "m1",
+        api_token="k",
+        transport=scalar_tuples_transport(),
     )
     with pytest.raises(AuthzError):
         await a.read_tuples("governance_body:cei")

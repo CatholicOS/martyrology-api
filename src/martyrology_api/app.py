@@ -46,6 +46,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "an OpenFGA running with preshared authentication will reject every check, "
             "denying all curation writes and redacting all restricted texts."
         )
+    if settings.zitadel_issuer and not settings.zitadel_project_id:
+        logging.getLogger(__name__).warning(
+            "MARTYROLOGY_ZITADEL_ISSUER is set but MARTYROLOGY_ZITADEL_PROJECT_ID is empty; "
+            "the roles claim cannot be built, so every curation write will 403 "
+            "missing-role for every principal."
+        )
     if settings.local_git_root:
         backend = LocalGitBackend(_Path(settings.local_git_root))
     elif settings.github_token:

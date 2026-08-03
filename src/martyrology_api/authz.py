@@ -61,6 +61,8 @@ class Authz:
             payload = resp.json()
         except ValueError:
             return False
+        if not isinstance(payload, dict):
+            return False
         return payload.get("allowed") is True
 
     MAX_READ_PAGES = 10
@@ -144,7 +146,14 @@ class Authz:
                     "invalid_response",
                     "response body was not a JSON object",
                 )
-            for item in page.get("tuples") or []:
+            raw_tuples = page.get("tuples")
+            if raw_tuples is not None and not isinstance(raw_tuples, list):
+                raise AuthzError(
+                    resp.status_code,
+                    "invalid_response",
+                    "tuples field was not a list",
+                )
+            for item in raw_tuples or []:
                 keyed = item.get("key") if isinstance(item, dict) else None
                 if isinstance(keyed, dict):
                     out.append(keyed)
