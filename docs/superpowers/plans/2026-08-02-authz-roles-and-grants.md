@@ -1644,3 +1644,149 @@ The one ordering trap is the model ID pin. Task 6 Step 5 mints a new model
 ID; Step 6 must repoint `MARTYROLOGY_OPENFGA_API_TOKEN`,
 `MARTYROLOGY_ZITADEL_PROJECT_ID`, and `MARTYROLOGY_OPENFGA_MODEL_ID` together
 in the same edit, and the service must be restarted afterwards.
+
+---
+
+### Task 7: Make shared caching opt-in, so new routes fail private
+
+Added after the Task 5 review found both admin GET routes inheriting
+`Cache-Control: public, max-age=86400`. Task 5's fix sets `cache_private` on
+those two handlers, which closes the live defect. This task closes the class:
+today `CacheHeadersMiddleware` marks every 200 GET under `/api/v1` publicly
+cacheable *unless* a handler opts out, so any future router that forgets the
+flag publishes its responses to shared caches with no lint, test, or type
+error to catch it. On an API that now serves authorization state, the default
+must be the safe one.
+
+The inversion is small because only four GET routes exist under `/api/v1`
+(two in `discovery.py`, two in `read.py`); `curation.py` is writes only, and
+`/` and `/healthz` sit outside the `/api/v1` prefix the middleware matches.
+
+Declaring the posture at the router rather than the handler is deliberate:
+it is one line per router, it cannot be missed by adding a route to an
+existing router, and it puts the decision where a security posture belongs.
+
+**Files:**
+- Modify: `src/martyrology_api/caching.py`
+- Modify: `src/martyrology_api/routers/discovery.py:18`
+- Modify: `src/martyrology_api/routers/read.py:27`
+- Test: `tests/test_caching.py`
+
+**Interfaces:**
+- Consumes: `request.state.cache_private` (unchanged meaning — an explicit
+  downgrade that always wins).
+- Produces: `caching.declare_public_cache(request) -> None`, a FastAPI
+  dependency that sets `request.state.cache_public = True`.
+
+Resulting precedence in the middleware, in order:
+1. `cache_private` set → `private, max-age=0` (downgrade always wins)
+2. else no `cache_public` → `private, max-age=0` (**the new safe default**)
+3. else edition path/query → `public, max-age=31536000, immutable`
+4. else → `public, max-age=86400`
+
+- [ ] **Step 1: Write the failing test**
+
+Append to `tests/test_caching.py`:
+
+```python
+def test_undeclared_router_is_private_by_default(client):
+    """A router that declares no cache posture must not be shared-cached.
+
+    Mounted at runtime so the assertion is about the middleware's default,
+    not about any particular existing router's declaration.
+    """
+    from fastapi import APIRouter
+
+    probe = APIRouter()
+
+    @probe.get("/cache-probe")
+    def _probe() -> dict:
+        return {"ok": True}
+
+    client.app.include_router(probe, prefix="/api/v1")
+    r = client.get("/api/v1/cache-probe")
+    assert r.status_code == 200
+    assert r.headers["cache-control"] == "private, max-age=0"
+```
+
+- [ ] **Step 2: Run it to verify it fails**
+
+Run: `uv run pytest tests/test_caching.py::test_undeclared_router_is_private_by_default -v`
+Expected: FAIL — asserts `private, max-age=0` but gets `public, max-age=86400`.
+
+- [ ] **Step 3: Add the declaration dependency**
+
+In `src/martyrology_api/caching.py`, add above the middleware class:
+
+```python
+def declare_public_cache(request: Request) -> None:
+    """Declare a router's 200 GET responses shared-cacheable.
+
+    Caching is opt-in: a router that does not depend on this gets
+    `private, max-age=0`, so a new route cannot leak into shared caches by
+    omission. An individual handler can still downgrade to private by
+    setting `request.state.cache_private = True`, which always wins.
+    """
+    request.state.cache_public = True
+```
+
+Add `from fastapi import Request` to the imports.
+
+- [ ] **Step 4: Invert the middleware default**
+
+In `src/martyrology_api/caching.py`, replace the `cc` selection block:
+
+```python
+        if getattr(request.state, "cache_private", False) or not getattr(
+            request.state, "cache_public", False
+        ):
+            cc = "private, max-age=0"
+        elif "/edition/" in request.url.path or "edition" in request.query_params:
+            cc = "public, max-age=31536000, immutable"
+        else:
+            cc = "public, max-age=86400"
+```
+
+- [ ] **Step 5: Declare the two public routers**
+
+In `src/martyrology_api/routers/discovery.py:18`:
+
+```python
+router = APIRouter(dependencies=[Depends(declare_public_cache)])
+```
+
+In `src/martyrology_api/routers/read.py:27`:
+
+```python
+router = APIRouter(dependencies=[Depends(declare_public_cache)])
+```
+
+Both files need `Depends` imported from `fastapi` (check first — they may
+already import it) and `from ..caching import declare_public_cache`.
+
+Do **not** add the dependency to `curation.py` or `admin.py`. Curation is
+writes only, which the middleware skips; admin must stay private.
+
+- [ ] **Step 6: Run the caching tests**
+
+Run: `uv run pytest tests/test_caching.py -v`
+Expected: PASS, including the four pre-existing assertions —
+`test_edition_path_is_immutable` (`public, max-age=31536000, immutable`),
+`test_resolver_path_is_daily` (`public, max-age=86400`), and the two
+`private, max-age=0` restricted-content tests. Those four passing unchanged
+is the evidence the inversion preserved every intended public response.
+
+- [ ] **Step 7: Run the whole suite and the linter**
+
+Run: `uv run pytest && uv run ruff check src tests && uv run ruff format --check src tests`
+Expected: PASS. The admin GET tests added by Task 5's fix round assert
+`private, max-age=0`; they must still pass, now by default rather than by
+the handler's explicit flag.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add src/martyrology_api/caching.py src/martyrology_api/routers/discovery.py \
+        src/martyrology_api/routers/read.py tests/test_caching.py
+git commit -m "Make shared caching opt-in so new routes fail private"
+```
