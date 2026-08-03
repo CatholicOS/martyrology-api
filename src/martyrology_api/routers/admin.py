@@ -75,11 +75,21 @@ async def _mutate(request: Request, identity: Identity, op: str, ref: str, rel: 
             # "tuple does not exist" (revoke) with this code. That is
             # consistent with the caller's desired end state, but not
             # proof of it — confirm the postcondition rather than assume
-            # it: a grant should now check True, a revoke should now
-            # check False.
-            desired = op == "grant"
-            confirmed = await request.app.state.authz.check_object(ref, rel, obj)
-            outcome = "noop" if confirmed == desired else "error:unconfirmed"
+            # it. Confirm against a *direct* tuple read, not check_object:
+            # check_object evaluates the computed relation, but write/
+            # delete manipulate direct tuples, and the model unions them
+            # (e.g. editor: [user] or admin) — a computed check can
+            # disagree with the direct-tuple state in either direction.
+            # read_tuples raises AuthzError on infrastructure failure
+            # (rather than failing closed like check_object does), so a
+            # failure to confirm is itself treated as unconfirmed.
+            desired_present = op == "grant"
+            try:
+                tuples = await request.app.state.authz.read_tuples(obj, rel)
+                present = any(t.get("user") == ref for t in tuples)
+                outcome = "noop" if present == desired_present else "error:unconfirmed"
+            except AuthzError:
+                outcome = "error:unconfirmed"
         else:
             outcome = f"error:{exc.code or exc.status}"
         if outcome != "noop":
