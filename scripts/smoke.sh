@@ -68,6 +68,11 @@ for _ in $(seq 1 10); do
     TOKEN=$(jq -r '.continuation_token // empty' <<<"$PAGE")
     [[ -n "$TOKEN" ]] || break
 done
+# If the loop above exhausted its 10-iteration cap while TOKEN is still
+# non-empty, pagination did not finish — OpenFGA said there was more to
+# read. COUNT is a partial sum in that case; treat it the same as the
+# curl-failure branch above rather than let a partial read satisfy >= 11.
+[[ -n "$TOKEN" ]] && COUNT=""
 if [[ -n "$COUNT" && "$COUNT" -ge 11 ]]; then
     ok "$COUNT structural tuples (>= 11)"
 else
