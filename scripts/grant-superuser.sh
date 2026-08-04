@@ -67,14 +67,24 @@ if [[ $ASSUME_YES -eq 0 ]]; then
     # auto-answer from unrelated data. `-r /dev/tty` only checks the
     # device node's permission bits, which can be true even with no
     # controlling terminal attached (open then fails with ENXIO) — so
-    # actually open it on an fd and check THAT, not just the bits.
-    if ! exec 2>/dev/null 3</dev/tty; then
+    # actually attempt to open it and check THAT, not just the bits.
+    #
+    # The open attempt is confined to a subshell: a bare `exec 3</dev/tty`
+    # in the main shell would rebind fd 3 (and any co-listed redirection,
+    # such as 2>/dev/null) for the REST OF THE SCRIPT, not just this
+    # attempt — on the success path that silently swallows all later
+    # stderr, including "Aborted." and a genuine failing `curl`, which
+    # would then look identical to success. The subshell's `2>/dev/null`
+    # only suppresses the ENXIO probe's own diagnostic and evaporates when
+    # the subshell exits either way; the actual read below opens
+    # /dev/tty fresh, scoped to that one command, so fd 2 in this shell is
+    # never touched.
+    if ! ( exec 3</dev/tty ) 2>/dev/null; then
         echo "No controlling terminal to confirm on — pass --yes/-y to proceed non-interactively." >&2
         exit 1
     fi
     REPLY=""
-    read -r -u 3 -p "Proceed? [y/N] " REPLY
-    exec 3<&-
+    read -r -p "Proceed? [y/N] " REPLY < /dev/tty
     case "$REPLY" in
         [yY]|[yY][eE][sS]) ;;
         *) echo "Aborted." >&2; exit 1 ;;
