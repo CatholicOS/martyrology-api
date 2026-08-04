@@ -23,6 +23,13 @@ class Settings(BaseSettings):
     zitadel_client_secret: str = ""
     zitadel_project_id: str = ""
 
+    # Transport-only override for the introspection endpoint. Empty = use
+    # zitadel_issuer. Set when the browser-facing issuer is not reachable from
+    # inside the API process: in Docker `localhost` is the container's own
+    # loopback, and behind Plesk nginx terminates upstream. This is NEVER an
+    # auth-posture input — `auth_enabled` still keys off zitadel_issuer alone.
+    zitadel_internal_url: str = ""
+
     openfga_api_url: str = ""
     openfga_store_id: str = ""
     openfga_model_id: str = ""

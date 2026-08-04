@@ -26,3 +26,15 @@ def test_authz_enabled_requires_a_token():
     on = Settings(_env_file=None, **base, openfga_api_token="k")  # pyright: ignore[reportCallIssue]
     assert off.authz_enabled is False
     assert on.authz_enabled is True
+
+
+def test_zitadel_internal_url_defaults_empty_and_does_not_affect_posture():
+    s = Settings(_env_file=None)  # pyright: ignore[reportCallIssue]
+    assert s.zitadel_internal_url == ""
+
+    s2 = Settings(
+        _env_file=None,  # pyright: ignore[reportCallIssue]
+        zitadel_internal_url="http://zitadel:8080",
+    )
+    assert s2.zitadel_internal_url == "http://zitadel:8080"
+    assert s2.auth_enabled is False

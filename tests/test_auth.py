@@ -194,3 +194,45 @@ async def test_no_project_id_configured_yields_no_roles():
     ident = await _auth(claims, project_id="").identity("t")
     assert ident is not None
     assert ident.roles == frozenset()
+
+
+def mock_transport_recording(seen: list[str], sub: str):
+    def handler(request: httpx.Request) -> httpx.Response:
+        seen.append(str(request.url))
+        return httpx.Response(200, json={"active": True, "sub": sub})
+
+    return httpx.MockTransport(handler)
+
+
+@pytest.mark.asyncio
+async def test_internal_url_is_used_for_introspection():
+    seen: list[str] = []
+    a = Authenticator(
+        "https://auth.example",
+        "cid",
+        "sec",
+        internal_url="http://zitadel:8080",
+        transport=mock_transport_recording(seen, "u1"),
+    )
+    ident = await a.identity("tok-internal")
+    assert ident is not None
+    assert ident.subject == "u1"
+    assert seen == ["http://zitadel:8080/oauth/v2/introspect"]
+
+
+@pytest.mark.asyncio
+async def test_internal_url_defaults_to_issuer_and_strips_trailing_slash():
+    seen: list[str] = []
+    a = Authenticator(
+        "https://auth.example/", "cid", "sec", transport=mock_transport_recording(seen, "u2")
+    )
+    await a.identity("tok-default")
+    assert seen == ["https://auth.example/oauth/v2/introspect"]
+
+
+@pytest.mark.asyncio
+async def test_internal_url_does_not_resurrect_auth_when_issuer_is_empty():
+    # Transport-only override: an internal URL must never make a
+    # deliberately-disabled authenticator start answering.
+    a = Authenticator("", "cid", "sec", internal_url="http://zitadel:8080")
+    assert await a.identity("tok-no-issuer") is None

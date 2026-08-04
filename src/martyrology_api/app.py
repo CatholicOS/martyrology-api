@@ -33,6 +33,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         settings.zitadel_client_id,
         settings.zitadel_client_secret,
         settings.zitadel_project_id,
+        settings.zitadel_internal_url,
     )
     app.state.authz = Authz(
         settings.openfga_api_url,
