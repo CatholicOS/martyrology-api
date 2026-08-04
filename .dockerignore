@@ -1,0 +1,12 @@
+# Deny-all, then re-admit exactly what the image needs. `vendor/` is excluded
+# on purpose: vendor/texts is a PRIVATE submodule, and crmedr/clbdr are cloned
+# in the build instead (see the Dockerfile).
+*
+!pyproject.toml
+!uv.lock
+!src
+!data
+!alembic
+!alembic.ini
+!scripts
+scripts/__pycache__
