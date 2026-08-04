@@ -3,6 +3,17 @@
 # setup-stack.sh — provision the local Zitadel and discover the OpenFGA IDs,
 # then write both into .env.
 #
+# SIBLING NOTE: martyrology-frontend's scripts/setup-stack.sh is a near-
+# duplicate of this file (same provisioning wait loop, cdcf-infra clone,
+# capture-file handling, and set_env; it additionally provisions a frontend
+# OIDC app and AUTH_SECRET, which this repo has no equivalent of). Duplicated
+# rather than shared because the two repos have no submodule/package
+# relationship and these scripts run on the host before any container
+# exists — see martyrology-frontend's
+# .superpowers/sdd/2026-08-04-local-development-stack/task-13-report.md for
+# the full reasoning. If you change the shared parts of this file, apply the
+# same fix to martyrology-frontend's copy, and vice versa.
+#
 # Phase 2 of the three-phase bring-up (see README.md → "Local development
 # stack"). The store ID, model ID, client ID and client secret are all
 # GENERATED at provisioning time, so they cannot be committed; this script

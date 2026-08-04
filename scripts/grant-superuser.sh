@@ -2,6 +2,13 @@
 #
 # grant-superuser.sh — write the platform:martyrology superuser tuple.
 #
+# SIBLING NOTE: byte-for-byte the same tool as martyrology-frontend's
+# scripts/grant-superuser.sh — both write to the exact same OpenFGA store and
+# object (superuser is a platform-wide grant, not scoped to either app).
+# Duplicated rather than shared for the same reason as setup-stack.sh (no
+# submodule/package relationship between the two repos). If you change this
+# file, apply the same fix to martyrology-frontend's copy, and vice versa.
+#
 # Out-of-band by design, exactly as in production. The API's
 # /api/v1/admin/permissions endpoint fixes its object type to governance_body,
 # so platform: tuples are structurally unreachable through it — otherwise any
