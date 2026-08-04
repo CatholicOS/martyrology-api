@@ -43,7 +43,7 @@ services:
     command: 'start-from-init --masterkey "${ZITADEL_MASTERKEY:-MasterkeyNeedsToHave32Characters}"'
     environment:
       ZITADEL_EXTERNALDOMAIN: localhost
-      ZITADEL_EXTERNALPORT: 8080
+      ZITADEL_EXTERNALPORT: ${ZITADEL_PORT:-8080}
       ZITADEL_EXTERNALSECURE: false
       ZITADEL_TLS_ENABLED: false
 
