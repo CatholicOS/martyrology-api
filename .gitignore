@@ -10,3 +10,7 @@ htmlcov/
 coverage.xml
 junit.xml
 htmlcov/
+
+.zitadel-data/
+.stack-out/
+docker-compose.override.yml

@@ -1,0 +1,135 @@
+# Martyrology local development stack — INFRA ONLY.
+#
+# The API itself is NOT here. Run it on the host:
+#   uvicorn martyrology_api.app:create_app --factory --reload
+#
+# This mirrors LiturgicalCalendarAPI's stack, which likewise runs its API on the
+# host and containerizes only the infrastructure. The fully containerized stack
+# lives in the martyrology-frontend repo.
+#
+# Deliberate divergence from cdcf-infra production: there is no zitadel-login
+# service and no nginx proxy. Nothing here performs an interactive browser
+# sign-in — the API only ever calls /oauth/v2/introspect — so Zitadel is served
+# directly and Login V2 is switched off. The frontend repo's stack is the one
+# that mirrors production's single-origin topology.
+#
+# Bring-up: see README.md → "Local development stack".
+
+name: martyrology-infra
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      PGUSER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:rw
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    networks:
+      - martyrology
+
+  zitadel:
+    image: ghcr.io/zitadel/zitadel:v4.15.0
+    restart: unless-stopped
+    command: 'start-from-init --masterkey "${ZITADEL_MASTERKEY:-MasterkeyNeedsToHave32Characters}"'
+    environment:
+      ZITADEL_EXTERNALDOMAIN: localhost
+      ZITADEL_EXTERNALPORT: 8080
+      ZITADEL_EXTERNALSECURE: false
+      ZITADEL_TLS_ENABLED: false
+
+      ZITADEL_DATABASE_POSTGRES_HOST: db
+      ZITADEL_DATABASE_POSTGRES_PORT: 5432
+      ZITADEL_DATABASE_POSTGRES_DATABASE: zitadel
+      ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME: postgres
+      ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD: postgres
+      ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE: disable
+      ZITADEL_DATABASE_POSTGRES_USER_USERNAME: zitadel
+      ZITADEL_DATABASE_POSTGRES_USER_PASSWORD: zitadel
+      ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE: disable
+
+      # No Login V2 in this stack — there is no frontend to log in to, and the
+      # v2 UI would have nothing routing to it. Zitadel's built-in console
+      # login is used for the admin console.
+      ZITADEL_DEFAULTINSTANCE_FEATURES_LOGINV2_REQUIRED: false
+
+      # The automation PAT setup-zitadel.sh authenticates with. Written into
+      # the bind-mounted ./.zitadel-data/ so the host-run script can read it.
+      # The filename matches setup-zitadel.sh's ZITADEL_PAT_FILE convention.
+      ZITADEL_FIRSTINSTANCE_PATPATH: /zitadel-data/automation-user.pat
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_USERNAME: automation-user
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_NAME: Automation User
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_PAT_EXPIRATIONDATE: '2030-01-01T00:00:00Z'
+
+      ZITADEL_FIRSTINSTANCE_ORG_NAME: "Martyrology"
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME: root
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD: RootPassword1!
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORDCHANGEREQUIRED: false
+
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_HOST: mailpit:1025
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_USER: ""
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_PASSWORD: ""
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_TLS: false
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_FROM: noreply@martyrology.localhost
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_FROMNAME: Martyrology
+
+      ZITADEL_LOG_LEVEL: info
+    healthcheck:
+      test: ["CMD", "/app/zitadel", "ready"]
+      interval: 10s
+      timeout: 60s
+      retries: 5
+      start_period: 10s
+    user: "0"
+    volumes:
+      - ./.zitadel-data:/zitadel-data:delegated
+    ports:
+      - "127.0.0.1:${ZITADEL_PORT:-8080}:8080"
+    networks:
+      - martyrology
+    depends_on:
+      db:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    ports:
+      - "127.0.0.1:${MAILPIT_PORT:-8025}:8025"
+    networks:
+      - martyrology
+
+  adminer:
+    image: adminer:latest
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DESIGN: lucas-sandery
+    ports:
+      - "127.0.0.1:${ADMINER_PORT:-8088}:8080"
+    networks:
+      - martyrology
+    depends_on:
+      - db
+
+networks:
+  martyrology:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
