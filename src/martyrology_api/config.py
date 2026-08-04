@@ -30,6 +30,12 @@ class Settings(BaseSettings):
     # auth-posture input — `auth_enabled` still keys off zitadel_issuer alone.
     zitadel_internal_url: str = ""
 
+    # Postgres DSN for the `martyrology` database. Empty = no database
+    # configured; nothing in the API reads it yet. It exists so the
+    # permission-request and notification subsystem lands as migrations
+    # without a compose change. See the local-development-stack design, D9.
+    database_url: str = ""
+
     openfga_api_url: str = ""
     openfga_store_id: str = ""
     openfga_model_id: str = ""

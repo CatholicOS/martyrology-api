@@ -9,6 +9,9 @@ dependencies = [
   "pydantic>=2.13.4",
   "pydantic-settings>=2.3",
   "httpx2>=2.9.1",
+  "alembic>=1.14",
+  "sqlalchemy>=2.0",
+  "psycopg[binary]>=3.2",
 ]
 
 [project.optional-dependencies]

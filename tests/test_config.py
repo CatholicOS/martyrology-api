@@ -38,3 +38,8 @@ def test_zitadel_internal_url_defaults_empty_and_does_not_affect_posture():
     )
     assert s2.zitadel_internal_url == "http://zitadel:8080"
     assert s2.auth_enabled is False
+
+
+def test_database_url_defaults_empty():
+    s = Settings(_env_file=None)  # pyright: ignore[reportCallIssue]
+    assert s.database_url == ""
