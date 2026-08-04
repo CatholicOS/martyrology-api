@@ -41,6 +41,63 @@ Note: the bare `/elogia/01/01` path resolves (by default) to the 2004 editio typ
 The API surface, response model, auth and curation design are specified in
 [docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md](docs/superpowers/specs/2026-07-22-martyrology-api-v1-design.md).
 
+## Local development stack
+
+Brings up Zitadel and OpenFGA locally so auth and authorization can be
+exercised without production. The API itself is **not** containerized here —
+run it on the host. The fully containerized stack lives in
+[`martyrology-frontend`](https://github.com/CatholicOS/martyrology-frontend).
+
+Requires Docker with Compose v2. Ports match LiturgicalCalendar's stack, so
+only one of the two can run at a time.
+
+```bash
+cp .env.example .env                    # 1. stack knobs
+docker compose up -d                    # 2. infra; the store is seeded automatically
+./scripts/setup-stack.sh --update-env   # 3. provision Zitadel, write IDs into .env
+set -a; . ./.env; set +a                # 4. run the API against it
+uvicorn martyrology_api.app:create_app --factory --reload
+./scripts/smoke.sh                      # 5. verify
+```
+
+| Service | URL | Credentials |
+| --- | --- | --- |
+| Zitadel console | <http://localhost:8080/ui/console> | `root@martyrology.localhost` / `RootPassword1!` |
+| OpenFGA API | <http://localhost:8083> | Bearer `OPENFGA_PRESHARED_KEY` from `.env` |
+| Adminer | <http://localhost:8088> | server `db`, user `postgres`, password `postgres` |
+| Mailpit | <http://localhost:8025> | — |
+
+`ZITADEL_PORT` in `.env` overrides the issuer origin (default 8080) when
+something on the host already holds that port. Under Docker Desktop on WSL2,
+the port must be free on the **Windows** host, not just inside WSL — `ss`/
+`netstat` run from within WSL cannot see Windows-side listeners, and Docker
+Desktop fails a conflicting publish *silently* (compose reports healthy;
+only `docker inspect` reveals the empty port binding). To inspect the
+OpenFGA store directly, use `curl` against the API (as `scripts/smoke.sh`
+does) rather than a UI — there is no Playground in this stack (see below).
+
+To grant yourself platform superuser (after signing in once, so a `sub`
+exists — find it under Martyrology Org → Users → your user → ID):
+
+```bash
+./scripts/grant-superuser.sh <your-sub>
+```
+
+**The OIDC client secret is emitted once.** `setup-stack.sh` captures it into
+`.env` on the run that creates the app; a re-run cannot recover it. If `.env`
+is lost, regenerate the secret in the Zitadel console.
+
+**`OPENFGA_PRESHARED_KEY` is required, not optional.** `Settings.authz_enabled`
+is false when `MARTYROLOGY_OPENFGA_API_TOKEN` is empty, which denies every
+authorization check while the stack reports healthy.
+
+**There is no OpenFGA Playground.** OpenFGA v1.15.1 panics at startup
+("the playground only supports authn method 'none'") when the Playground is
+enabled alongside preshared auth, and preshared auth is non-negotiable here
+(`Settings.authz_enabled` requires a non-empty token). Inspect the store with
+`curl` against the OpenFGA API instead — the same way production is
+inspected.
+
 ## Licensing
 
 The code in this repository is licensed under Apache-2.0. The eulogy texts of the 2004 editions are **not** part of this repository and are not redistributable; should an agreement with the rights holders be reached, texts could be served publicly without changing this architecture.
