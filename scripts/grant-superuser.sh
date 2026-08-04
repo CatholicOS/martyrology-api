@@ -11,31 +11,85 @@
 # The `sub` only exists after that account has signed in once, which is why
 # this cannot be folded into setup-stack.sh.
 #
-# Usage:   ./scripts/grant-superuser.sh <zitadel-sub>
+# OpenFGA does not validate that a sub corresponds to a real user — a
+# transposed digit silently grants superuser to a nonexistent identity while
+# the intended person still cannot do anything, with nothing to surface the
+# mistake. So this script always prints exactly what it is about to do
+# before writing, and asks for confirmation unless --yes/-y is passed.
+#
+# Usage:   ./scripts/grant-superuser.sh <zitadel-sub> [--revoke] [--yes|-y]
 # Revoke:  ./scripts/grant-superuser.sh <zitadel-sub> --revoke
 
 set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
+usage() { echo "Usage: $0 <zitadel-sub> [--revoke] [--yes|-y]" >&2; exit 64; }
+
 SUB="${1:-}"
-[[ -n "$SUB" ]] || { echo "Usage: $0 <zitadel-sub> [--revoke]" >&2; exit 64; }
+[[ -n "$SUB" ]] || usage
+shift || true
+
 OP="writes"
-[[ "${2:-}" == "--revoke" ]] && OP="deletes"
+ASSUME_YES=0
+for arg in "$@"; do
+    case "$arg" in
+        --revoke) OP="deletes" ;;
+        --yes|-y) ASSUME_YES=1 ;;
+        *) usage ;;
+    esac
+done
 
 ENV_FILE=".env"
-API_URL="$(grep -E '^MARTYROLOGY_OPENFGA_API_URL=' "$ENV_FILE" | cut -d= -f2-)"
-STORE_ID="$(grep -E '^MARTYROLOGY_OPENFGA_STORE_ID=' "$ENV_FILE" | cut -d= -f2)"
-TOKEN="$(grep -E '^MARTYROLOGY_OPENFGA_API_TOKEN=' "$ENV_FILE" | cut -d= -f2)"
+API_URL="$(grep -E '^MARTYROLOGY_OPENFGA_API_URL=' "$ENV_FILE" | cut -d= -f2- || true)"
+STORE_ID="$(grep -E '^MARTYROLOGY_OPENFGA_STORE_ID=' "$ENV_FILE" | cut -d= -f2 || true)"
+TOKEN="$(grep -E '^MARTYROLOGY_OPENFGA_API_TOKEN=' "$ENV_FILE" | cut -d= -f2 || true)"
 
 for v in API_URL STORE_ID TOKEN; do
     [[ -n "${!v}" ]] || { echo "$v missing from $ENV_FILE — run setup-stack.sh first" >&2; exit 1; }
 done
 
+OP_LABEL="grant"
+[[ "$OP" == "deletes" ]] && OP_LABEL="revoke"
+
+# Announce the exact effect before writing — the minimum defense against a
+# mistyped sub, since OpenFGA will happily accept one that names no one.
+echo "About to $OP_LABEL superuser:"
+echo "  user:   user:$SUB"
+echo "  object: platform:martyrology"
+echo "  store:  $STORE_ID"
+echo "  api:    $API_URL"
+
+if [[ $ASSUME_YES -eq 0 ]]; then
+    # Read from the controlling terminal, not stdin — stdin may be
+    # redirected (e.g. piped input), in which case a plain `read` would
+    # silently consume that instead of prompting, and either hang or
+    # auto-answer from unrelated data. `-r /dev/tty` only checks the
+    # device node's permission bits, which can be true even with no
+    # controlling terminal attached (open then fails with ENXIO) — so
+    # actually open it on an fd and check THAT, not just the bits.
+    if ! exec 2>/dev/null 3</dev/tty; then
+        echo "No controlling terminal to confirm on — pass --yes/-y to proceed non-interactively." >&2
+        exit 1
+    fi
+    REPLY=""
+    read -r -u 3 -p "Proceed? [y/N] " REPLY
+    exec 3<&-
+    case "$REPLY" in
+        [yY]|[yY][eE][sS]) ;;
+        *) echo "Aborted." >&2; exit 1 ;;
+    esac
+fi
+
+# Built with jq rather than string interpolation: a sub containing a quote,
+# backslash, or newline would otherwise produce malformed or reshaped JSON.
+BODY="$(jq -n --arg op "$OP" --arg sub "$SUB" \
+    '{($op): {tuple_keys: [{user: ("user:" + $sub), relation: "superuser", object: "platform:martyrology"}]}}')"
+
 curl -sS --fail-with-body -X POST "$API_URL/stores/$STORE_ID/write" \
     -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
-    -d "{\"$OP\":{\"tuple_keys\":[{\"user\":\"user:$SUB\",\"relation\":\"superuser\",\"object\":\"platform:martyrology\"}]}}"
+    -d "$BODY"
 
 echo
 echo "✓ $OP superuser tuple for user:$SUB"

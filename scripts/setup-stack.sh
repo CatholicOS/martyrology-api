@@ -32,7 +32,8 @@ ZITADEL_PORT="$(grep -E '^ZITADEL_PORT=' "$ENV_FILE" | cut -d= -f2 || true)"
 ZITADEL_PORT="${ZITADEL_PORT:-8080}"
 OPENFGA_HTTP_PORT="$(grep -E '^OPENFGA_HTTP_PORT=' "$ENV_FILE" | cut -d= -f2 || true)"
 OPENFGA_HTTP_PORT="${OPENFGA_HTTP_PORT:-8083}"
-PRESHARED_KEY="$(grep -E '^OPENFGA_PRESHARED_KEY=' "$ENV_FILE" | cut -d= -f2)"
+PRESHARED_KEY="$(grep -E '^OPENFGA_PRESHARED_KEY=' "$ENV_FILE" | cut -d= -f2 || true)"
+[[ -n "$PRESHARED_KEY" ]] || { echo "OPENFGA_PRESHARED_KEY missing from $ENV_FILE" >&2; exit 1; }
 CDCF_INFRA_REF="$(grep -E '^CDCF_INFRA_REF=' "$ENV_FILE" | cut -d= -f2 || true)"
 CDCF_INFRA_REF="${CDCF_INFRA_REF:-main}"
 
@@ -70,6 +71,12 @@ ZITADEL_ADMIN_EMAIL=root@martyrology.localhost
 EOF
 
 OUT="$WORKDIR/zitadel-provision.out"
+# The provisioner's stdout carries the one-time client secret. Create the
+# capture file with owner-only permissions BEFORE tee writes to it — tee
+# opens an existing file without changing its mode, so pre-creating it
+# closes the window where the secret would briefly land in a 644 file.
+(umask 077; : > "$OUT")
+chmod 600 "$OUT"
 (
     cd "$INFRA_DIR/auth"
     ./setup-zitadel.sh --target local \
@@ -84,6 +91,12 @@ val() { sed -n "s/^$1=\([^ ]*\).*/\1/p" "$OUT" | head -1; }
 CLIENT_ID="$(val MARTYROLOGY_ZITADEL_CLIENT_ID)"
 CLIENT_SECRET="$(val MARTYROLOGY_ZITADEL_CLIENT_SECRET)"
 PROJECT_ID="$(val ZITADEL_PROJECT_ID)"
+
+# Parsed — the capture file's only reason to exist is gone, and it is the
+# one place a plaintext copy of the one-time secret could otherwise survive
+# indefinitely at rest. Remove it now rather than leaving even a
+# permission-protected copy around.
+rm -f "$OUT"
 
 [[ -n "$CLIENT_ID" ]]  || { echo "No client ID in provisioner output" >&2; exit 1; }
 [[ -n "$PROJECT_ID" ]] || { echo "No project ID in provisioner output" >&2; exit 1; }
@@ -104,13 +117,42 @@ MODEL_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" \
     || { echo "No authorization model in store $STORE_ID" >&2; exit 1; }
 
 # --- write .env -----------------------------------------------------------
+# Values come from Zitadel/OpenFGA and may contain arbitrary punctuation
+# (secrets especially). A sed `s|^KEY=.*|KEY=VALUE|` splice would treat `&`
+# in VALUE as "the whole matched line" (silent corruption, not an error) and
+# `|` would break the delimiter — so the key/value are passed through the
+# environment into awk instead, matched by literal prefix (no regex, no
+# replacement-string metacharacters), never interpolated into program text.
+# Written to a temp file and renamed in rather than edited in place, so a
+# key that isn't present is appended exactly once and one that is present
+# is replaced exactly where it stood.
 set_env() {
     local key="$1" value="$2"
-    if grep -qE "^${key}=" "$ENV_FILE"; then
-        sed -i "s|^${key}=.*|${key}=${value}|" "$ENV_FILE"
-    else
-        printf '%s=%s\n' "$key" "$value" >> "$ENV_FILE"
-    fi
+    local tmp
+    tmp="$(mktemp "$(dirname "$ENV_FILE")/.env.XXXXXX")"
+    SET_ENV_KEY="$key" SET_ENV_VALUE="$value" awk '
+        BEGIN {
+            key = ENVIRON["SET_ENV_KEY"]
+            value = ENVIRON["SET_ENV_VALUE"]
+            prefix = key "="
+            found = 0
+        }
+        {
+            if (!found && substr($0, 1, length(prefix)) == prefix) {
+                print prefix value
+                found = 1
+            } else {
+                print
+            }
+        }
+        END {
+            if (!found) print prefix value
+        }
+    ' "$ENV_FILE" > "$tmp"
+    # mv replaces $ENV_FILE with the temp file's own mode, so re-assert 600
+    # on the temp file before the swap rather than trusting it survives.
+    chmod 600 "$tmp"
+    mv "$tmp" "$ENV_FILE"
 }
 
 set_env MARTYROLOGY_ZITADEL_ISSUER       "$ISSUER"
@@ -131,6 +173,11 @@ else
     grep -qE '^MARTYROLOGY_ZITADEL_CLIENT_SECRET=.+' "$ENV_FILE" \
         || echo "  .env has NO secret. Rotate it in the Zitadel console." >&2
 fi
+
+# Belt and suspenders: set_env's mv already leaves $ENV_FILE at 600 (the
+# temp file's own mode), but assert it explicitly — $ENV_FILE now holds a
+# live client secret and must never be group/world-readable.
+chmod 600 "$ENV_FILE"
 
 echo
 echo "✓ .env updated. Restart the API to pick up the new values."
