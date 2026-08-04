@@ -208,9 +208,17 @@ services:
   # Re-runnable and a no-op when up to date. Rebuild with
   # `docker compose up -d --build api-migrate` so newly-pulled migrations land
   # in the image before it runs.
+  #
+  # Deliberately NOT tagged `martyrology-api:latest`: this compose file is
+  # infra-only (see file header), and that tag is the canonical application
+  # image the martyrology-frontend stack's `db-init`, `api-migrate`, and
+  # `martyrology-api` services pull. Docker tags are global, not scoped to a
+  # compose project — claiming it here would let `docker compose up --build`
+  # in this repo silently clobber that shared tag out from under the frontend
+  # stack. Leave this service unclaimed; compose names its image after the
+  # project and service instead (`martyrology-infra-api-migrate`).
   api-migrate:
     build: .
-    image: martyrology-api:latest
     command: ["alembic", "upgrade", "head"]
     environment:
       MARTYROLOGY_DATABASE_URL: postgresql+psycopg://martyrology:martyrology_secure_password@db:5432/martyrology
