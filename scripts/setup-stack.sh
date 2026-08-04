@@ -38,6 +38,7 @@ if [[ $UPDATE_ENV -eq 0 ]]; then
 fi
 
 ENV_FILE=".env"
+[[ -r "$ENV_FILE" ]] || { echo "$ENV_FILE not found or unreadable — copy .env.example to .env first" >&2; exit 1; }
 PAT_FILE="./.zitadel-data/automation-user.pat"
 ZITADEL_PORT="$(grep -E '^ZITADEL_PORT=' "$ENV_FILE" | cut -d= -f2- || true)"
 ZITADEL_PORT="${ZITADEL_PORT:-8080}"

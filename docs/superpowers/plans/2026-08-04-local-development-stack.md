@@ -14,6 +14,7 @@
 
 - **Image versions are pinned to production's**, never `:latest`: `ghcr.io/zitadel/zitadel:v4.15.0`, `ghcr.io/zitadel/zitadel-login:v4.15.0`, `openfga/openfga:v1.15.1`, `postgres:17`, `nginx:alpine`, `adminer:latest`, `axllent/mailpit:latest`, `alpine:3.21`.
 - **Ports reuse LiturgicalCalendar's numbers** (spec D5): Postgres `5432`, Zitadel `8080`, OpenFGA HTTP `8083`, OpenFGA gRPC `8084`, OpenFGA Playground `3001`, Adminer `8088`, Mailpit `8025`, API `8000`, frontend `3000`. Port `8081` is deliberately unused. All published ports bind `127.0.0.1` only.
+  > **2026-08-04 correction:** the Playground port never shipped. OpenFGA v1.15.1 panics at startup when the Playground is enabled alongside the preshared auth this stack requires (see the spec's D5 note and §3 "Resolved at implementation"). This bullet is left as originally planned for the historical record.
 - **The frontend's published port is `3000` and cannot change.** `cdcf-infra`'s `--target local` registers `http://localhost:3000/api/auth/callback/zitadel` as the OIDC redirect URI.
 - **OpenFGA runs with `OPENFGA_AUTHN_METHOD=preshared` in both stacks.** `Settings.authz_enabled` requires a non-empty `openfga_api_token`; a tokenless OpenFGA makes the whole stack fail closed while reporting healthy.
 - **Compose project names differ**: `martyrology-infra` (API repo) and `martyrology` (frontend repo), so the two stacks never share volumes.
@@ -1984,6 +1985,11 @@ Insert after `api-migrate`:
       # so introspection is sent over the docker network instead. Transport
       # only — it never affects auth_enabled.
       MARTYROLOGY_ZITADEL_INTERNAL_URL: http://zitadel:8080
+      # 2026-08-04 correction: this value turned out to be wrong at
+      # implementation. Zitadel routes by Host header, so the internal URL
+      # had to become the public origin (http://localhost:${ZITADEL_PORT})
+      # instead of the docker-network hostname — see the spec's D7/§3
+      # correction. Left as originally planned for the historical record.
       MARTYROLOGY_ZITADEL_CLIENT_ID: ${MARTYROLOGY_ZITADEL_CLIENT_ID:-}
       MARTYROLOGY_ZITADEL_CLIENT_SECRET: ${MARTYROLOGY_ZITADEL_CLIENT_SECRET:-}
       MARTYROLOGY_ZITADEL_PROJECT_ID: ${MARTYROLOGY_ZITADEL_PROJECT_ID:-}

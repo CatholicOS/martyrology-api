@@ -109,4 +109,4 @@ curl -sS --fail-with-body -X POST "$API_URL/stores/$STORE_ID/write" \
     -d "$BODY"
 
 echo
-echo "✓ $OP superuser tuple for user:$SUB"
+echo "✓ $OP_LABEL superuser tuple for user:$SUB"

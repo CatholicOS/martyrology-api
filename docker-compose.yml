@@ -25,7 +25,15 @@ services:
       PGUSER: postgres
       POSTGRES_PASSWORD: postgres
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      # -h 127.0.0.1 is load-bearing, not decoration: with no -h, pg_isready
+      # defaults to the local UNIX socket, which the entrypoint's temporary
+      # init server (started with listen_addresses='' to run
+      # docker-entrypoint-initdb.d scripts) also accepts on. A socket-only
+      # check can therefore report healthy before the real server is
+      # listening on TCP, racing openfga-migrate/api-migrate/zitadel, which
+      # all connect over the network as `db:5432`. Forcing TCP via loopback
+      # ensures the check only passes once the real server is up.
+      test: ["CMD-SHELL", "pg_isready -U postgres -h 127.0.0.1"]
       interval: 10s
       timeout: 30s
       retries: 5

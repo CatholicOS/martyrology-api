@@ -49,22 +49,26 @@ FROM python:3.12.13-slim AS main
 
 WORKDIR /app
 
-COPY --from=build /app/.venv /app/.venv
-COPY --from=build /data /data
+RUN useradd -m -u 1000 martyrology
+
+COPY --from=build --chown=martyrology:martyrology /app/.venv /app/.venv
+COPY --from=build --chown=martyrology:martyrology /data /data
 # Load-bearing, not redundant with the copied .venv: `uv sync` in the build
 # stage produced an editable install whose .pth file points at the literal
 # path /app/src, so this WORKDIR/COPY pair must keep matching the build
 # stage's or every import breaks silently at first boot.
-COPY src ./src
-COPY data ./data
-COPY alembic ./alembic
-COPY alembic.ini ./
-COPY scripts/init-db.sql ./scripts/init-db.sql
+COPY --chown=martyrology:martyrology src ./src
+COPY --chown=martyrology:martyrology data ./data
+COPY --chown=martyrology:martyrology alembic ./alembic
+COPY --chown=martyrology:martyrology alembic.ini ./
+COPY --chown=martyrology:martyrology scripts/init-db.sql ./scripts/init-db.sql
 
 ENV PATH="/app/.venv/bin:$PATH" \
     MARTYROLOGY_CRMEDR_PATH=/data/crmedr \
     MARTYROLOGY_CLBDR_PATH=/data/clbdr \
     MARTYROLOGY_DATA_PATH=/app/data/editions
+
+USER martyrology
 
 EXPOSE 8000
 
