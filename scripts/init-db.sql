@@ -7,6 +7,10 @@
 --
 -- Zitadel creates its own database from the admin credentials it is given, so
 -- only the openfga and martyrology databases are created here.
+--
+-- The passwords below are placeholders for an ephemeral local-development
+-- volume only. They are committed to source control and must never be
+-- pointed at a persisted or network-reachable Postgres instance.
 
 CREATE ROLE openfga WITH LOGIN PASSWORD 'openfga_secure_password';
 CREATE DATABASE openfga OWNER openfga;

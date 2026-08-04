@@ -5,12 +5,13 @@
 # `uvicorn --factory --reload` on the host, so this image is never in that
 # edit loop. See docs/superpowers/specs/2026-08-04-local-development-stack-design.md, D4.
 
-FROM python:3.12-slim AS build
+FROM python:3.12.13-slim AS build
 
-# Pinned refs for the two data repositories. Override at build time with
-# --build-arg when a specific data revision is needed.
-ARG CRMEDR_REF=main
-ARG CLBDR_REF=main
+# Pinned refs for the two data repositories — these SHAs are the commits this
+# repo's own vendor/ submodules record, so the image and vendor/ agree. To
+# bump the data revision intentionally, pass a new SHA with --build-arg.
+ARG CRMEDR_REF=51740e79584f64940f9e3f98615b000ef5f77e92
+ARG CLBDR_REF=ecb147b47b47368fbdefeb2074c5770ebb7c8f9d
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-suggests --no-install-recommends \
@@ -29,19 +30,31 @@ RUN uv sync --frozen --no-dev
 # without these. They are CLONED rather than COPYed from vendor/ because
 # vendor/texts is a PRIVATE submodule: a recursive clone of a GitHub build
 # context would fail for anyone without access to it.
-RUN git clone --depth 1 --branch "$CRMEDR_REF" \
-        https://github.com/CatholicOS/crmedr.git /data/crmedr && \
-    git clone --depth 1 --branch "$CLBDR_REF" \
-        https://github.com/CatholicOS/clbdr.git /data/clbdr && \
+#
+# CRMEDR_REF/CLBDR_REF are commit SHAs, not branch names, so `git clone
+# --branch` can't be used (it only accepts refs GitHub advertises, not
+# arbitrary SHAs). init+fetch+checkout fetches the exact commit instead.
+RUN git init /data/crmedr && \
+    git -C /data/crmedr remote add origin https://github.com/CatholicOS/crmedr.git && \
+    git -C /data/crmedr fetch --depth 1 origin "$CRMEDR_REF" && \
+    git -C /data/crmedr checkout FETCH_HEAD && \
+    git init /data/clbdr && \
+    git -C /data/clbdr remote add origin https://github.com/CatholicOS/clbdr.git && \
+    git -C /data/clbdr fetch --depth 1 origin "$CLBDR_REF" && \
+    git -C /data/clbdr checkout FETCH_HEAD && \
     rm -rf /data/crmedr/.git /data/clbdr/.git
 
 
-FROM python:3.12-slim AS main
+FROM python:3.12.13-slim AS main
 
 WORKDIR /app
 
 COPY --from=build /app/.venv /app/.venv
 COPY --from=build /data /data
+# Load-bearing, not redundant with the copied .venv: `uv sync` in the build
+# stage produced an editable install whose .pth file points at the literal
+# path /app/src, so this WORKDIR/COPY pair must keep matching the build
+# stage's or every import breaks silently at first boot.
 COPY src ./src
 COPY data ./data
 COPY alembic ./alembic
