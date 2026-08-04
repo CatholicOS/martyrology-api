@@ -103,7 +103,9 @@ fi
 BODY="$(jq -n --arg op "$OP" --arg sub "$SUB" \
     '{($op): {tuple_keys: [{user: ("user:" + $sub), relation: "superuser", object: "platform:martyrology"}]}}')"
 
-curl -sS --fail-with-body -X POST "$API_URL/stores/$STORE_ID/write" \
+# --connect-timeout/--max-time bound this single call so an unreachable
+# OpenFGA fails fast instead of hanging on curl's own defaults.
+curl -sS --fail-with-body --connect-timeout 5 --max-time 15 -X POST "$API_URL/stores/$STORE_ID/write" \
     -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
     -d "$BODY"

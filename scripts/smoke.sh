@@ -32,8 +32,15 @@ API="http://localhost:8000"
 FGA="${MARTYROLOGY_OPENFGA_API_URL:-http://localhost:8083}"
 ISSUER="${MARTYROLOGY_ZITADEL_ISSUER:-http://localhost:${ZITADEL_PORT:-8080}}"
 
+# --connect-timeout/--max-time bound EVERY curl below so an unreachable
+# service fails fast instead of hanging on curl's own (much longer) defaults.
+# By this point in the bring-up (see README.md → "Local development stack")
+# Zitadel's slow first boot is already behind setup-stack.sh's own retry
+# loop, so a generous but finite per-call timeout is safe here.
+CURL_TIMEOUT=(--connect-timeout 5 --max-time 15)
+
 echo "1. Zitadel discovery"
-DISCOVERY_ISSUER=$(curl -sf "$ISSUER/.well-known/openid-configuration" | jq -r '.issuer')
+DISCOVERY_ISSUER=$(curl -sf "${CURL_TIMEOUT[@]}" "$ISSUER/.well-known/openid-configuration" | jq -r '.issuer')
 if [[ "$DISCOVERY_ISSUER" == "$ISSUER" ]]; then
     ok "issuer is $ISSUER"
 else
@@ -61,7 +68,7 @@ for _ in $(seq 1 10); do
     if [[ -n "$TOKEN" ]]; then
         PAYLOAD=$(jq -n --arg t "$TOKEN" '{page_size:100, continuation_token:$t}')
     fi
-    PAGE=$(curl -sf -X POST "$FGA/stores/$MARTYROLOGY_OPENFGA_STORE_ID/read" \
+    PAGE=$(curl -sf "${CURL_TIMEOUT[@]}" -X POST "$FGA/stores/$MARTYROLOGY_OPENFGA_STORE_ID/read" \
         -H "Authorization: Bearer $MARTYROLOGY_OPENFGA_API_TOKEN" \
         -H "Content-Type: application/json" -d "$PAYLOAD") || { COUNT=""; break; }
     COUNT=$((COUNT + $(jq '.tuples | length' <<<"$PAGE")))
@@ -92,7 +99,7 @@ else
 fi
 
 echo "4. API health"
-if curl -sf "$API/healthz" >/dev/null; then
+if curl -sf "${CURL_TIMEOUT[@]}" "$API/healthz" >/dev/null; then
     ok "GET /healthz 200"
 else
     bad "GET /healthz failed"
@@ -105,7 +112,7 @@ echo "5. Anonymous read of a restricted edition is redacted"
 # same "not attached" skip. Capture the status code instead (appended after a
 # newline, then split off) so only a 404 skips; every other non-2xx is
 # reported as a failure with the code attached.
-RESP=$(curl -s -w '\n%{http_code}' \
+RESP=$(curl -s "${CURL_TIMEOUT[@]}" -w '\n%{http_code}' \
     "$API/api/v1/elogia/edition/martyrologium_romanum_2004/01/02" 2>/dev/null)
 CODE=$(tail -n1 <<<"$RESP")
 BODY=$(sed '$d' <<<"$RESP")

@@ -54,12 +54,18 @@ WORKDIR=".stack-out"
 mkdir -p "$WORKDIR"
 
 # --- wait for Zitadel -----------------------------------------------------
+# --connect-timeout/--max-time bound EACH attempt so an unreachable host
+# (wrong port, container not started) fails fast instead of hanging on
+# curl's own defaults; the retry loop above already bounds total attempts
+# (60x2s), and Zitadel's genuinely slow first boot is accommodated by
+# retrying, not by a long per-attempt timeout.
+CURL_TIMEOUT=(--connect-timeout 5 --max-time 15)
 echo "Waiting for Zitadel at $ISSUER ..."
 for _ in $(seq 1 60); do
-    if curl -sf "$ISSUER/.well-known/openid-configuration" >/dev/null; then break; fi
+    if curl -sf "${CURL_TIMEOUT[@]}" "$ISSUER/.well-known/openid-configuration" >/dev/null; then break; fi
     sleep 2
 done
-curl -sf "$ISSUER/.well-known/openid-configuration" >/dev/null \
+curl -sf "${CURL_TIMEOUT[@]}" "$ISSUER/.well-known/openid-configuration" >/dev/null \
     || { echo "Zitadel never became ready" >&2; exit 1; }
 [[ -s "$PAT_FILE" ]] || { echo "PAT not found at $PAT_FILE" >&2; exit 1; }
 
@@ -134,7 +140,7 @@ rm -f "$OUT"
 FGA="http://localhost:${OPENFGA_HTTP_PORT}"
 STORE_ID=""
 for _ in $(seq 1 15); do
-    STORE_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" "$FGA/stores" \
+    STORE_ID="$(curl -sf "${CURL_TIMEOUT[@]}" -H "Authorization: Bearer $PRESHARED_KEY" "$FGA/stores" \
         | jq -r '.stores[] | select(.name=="Martyrology") | .id' | head -1 || true)"
     [[ -n "$STORE_ID" ]] && break
     sleep 2
@@ -147,7 +153,7 @@ done
     exit 1
 }
 
-MODEL_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" \
+MODEL_ID="$(curl -sf "${CURL_TIMEOUT[@]}" -H "Authorization: Bearer $PRESHARED_KEY" \
     "$FGA/stores/$STORE_ID/authorization-models?page_size=1" \
     | jq -r '.authorization_models[0].id' || true)"
 [[ -n "$MODEL_ID" && "$MODEL_ID" != "null" ]] \
