@@ -1,7 +1,8 @@
 __pycache__/
 *.pyc
 .venv/
-.env
+.env*
+!.env.example
 .coverage
 .coverage.*
 coverage.xml

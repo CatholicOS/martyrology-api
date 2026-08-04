@@ -48,8 +48,12 @@ exercised without production. The API itself is **not** containerized here —
 run it on the host. The fully containerized stack lives in
 [`martyrology-frontend`](https://github.com/CatholicOS/martyrology-frontend).
 
-Requires Docker with Compose v2. Ports match LiturgicalCalendar's stack, so
-only one of the two can run at a time.
+Requires Docker with Compose v2, `curl`, `jq`, `git`, and `python3`.
+`scripts/smoke.sh` shells out to `curl` and `jq`; `scripts/setup-stack.sh`
+additionally needs `git` (it clones `cdcf-infra` on the host); running the
+API itself needs `python3`. A missing `jq` otherwise surfaces as a bare
+"command not found" rather than anything actionable. Ports match
+LiturgicalCalendar's stack, so only one of the two can run at a time.
 
 ```bash
 cp .env.example .env                    # 1. stack knobs
