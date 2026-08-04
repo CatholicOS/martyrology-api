@@ -23,6 +23,7 @@ class Authenticator:
         client_id: str,
         client_secret: str,
         project_id: str = "",
+        internal_url: str = "",
         cache_ttl: int = 300,
         cache_max: int = 10_000,
         transport: httpx.AsyncBaseTransport | None = None,
@@ -31,6 +32,10 @@ class Authenticator:
         self.client_id = client_id
         self.client_secret = client_secret
         self.project_id = project_id
+        # Where introspection is actually sent. `issuer` stays the public,
+        # browser-facing value asserted in the `iss` claim; only the transport
+        # target moves.
+        self.internal_url = (internal_url or issuer).rstrip("/")
         self.cache_ttl = cache_ttl
         self.cache_max = cache_max
         self._transport = transport
@@ -71,7 +76,7 @@ class Authenticator:
         try:
             async with httpx.AsyncClient(transport=self._transport) as client:
                 resp = await client.post(
-                    f"{self.issuer}/oauth/v2/introspect",
+                    f"{self.internal_url}/oauth/v2/introspect",
                     data={"token": token},
                     auth=(self.client_id, self.client_secret),
                 )

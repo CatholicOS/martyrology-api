@@ -1,0 +1,259 @@
+# Martyrology local development stack — INFRA ONLY.
+#
+# The API itself is NOT here. Run it on the host:
+#   uvicorn martyrology_api.app:create_app --factory --reload
+#
+# This mirrors LiturgicalCalendarAPI's stack, which likewise runs its API on the
+# host and containerizes only the infrastructure. The fully containerized stack
+# lives in the martyrology-frontend repo.
+#
+# Deliberate divergence from cdcf-infra production: there is no zitadel-login
+# service and no nginx proxy. Nothing here performs an interactive browser
+# sign-in — the API only ever calls /oauth/v2/introspect — so Zitadel is served
+# directly and Login V2 is switched off. The frontend repo's stack is the one
+# that mirrors production's single-origin topology.
+#
+# Bring-up: see README.md → "Local development stack".
+
+name: martyrology-infra
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      PGUSER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      # -h 127.0.0.1 is load-bearing, not decoration: with no -h, pg_isready
+      # defaults to the local UNIX socket, which the entrypoint's temporary
+      # init server (started with listen_addresses='' to run
+      # docker-entrypoint-initdb.d scripts) also accepts on. A socket-only
+      # check can therefore report healthy before the real server is
+      # listening on TCP, racing openfga-migrate/api-migrate/zitadel, which
+      # all connect over the network as `db:5432`. Forcing TCP via loopback
+      # ensures the check only passes once the real server is up.
+      test: ["CMD-SHELL", "pg_isready -U postgres -h 127.0.0.1"]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:rw
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    networks:
+      - martyrology
+
+  zitadel:
+    image: ghcr.io/zitadel/zitadel:v4.15.0
+    restart: unless-stopped
+    command: 'start-from-init --masterkey "${ZITADEL_MASTERKEY:-MasterkeyNeedsToHave32Characters}"'
+    environment:
+      ZITADEL_EXTERNALDOMAIN: localhost
+      ZITADEL_EXTERNALPORT: ${ZITADEL_PORT:-8080}
+      ZITADEL_EXTERNALSECURE: false
+      ZITADEL_TLS_ENABLED: false
+
+      ZITADEL_DATABASE_POSTGRES_HOST: db
+      ZITADEL_DATABASE_POSTGRES_PORT: 5432
+      ZITADEL_DATABASE_POSTGRES_DATABASE: zitadel
+      ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME: postgres
+      ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD: postgres
+      ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE: disable
+      ZITADEL_DATABASE_POSTGRES_USER_USERNAME: zitadel
+      ZITADEL_DATABASE_POSTGRES_USER_PASSWORD: zitadel
+      ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE: disable
+
+      # No Login V2 in this stack — there is no frontend to log in to, and the
+      # v2 UI would have nothing routing to it. Zitadel's built-in console
+      # login is used for the admin console.
+      ZITADEL_DEFAULTINSTANCE_FEATURES_LOGINV2_REQUIRED: false
+
+      # The automation PAT setup-zitadel.sh authenticates with. Written into
+      # the bind-mounted ./.zitadel-data/ so the host-run script can read it.
+      # The filename matches setup-zitadel.sh's ZITADEL_PAT_FILE convention.
+      ZITADEL_FIRSTINSTANCE_PATPATH: /zitadel-data/automation-user.pat
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_USERNAME: automation-user
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_NAME: Automation User
+      ZITADEL_FIRSTINSTANCE_ORG_MACHINE_PAT_EXPIRATIONDATE: '2030-01-01T00:00:00Z'
+
+      ZITADEL_FIRSTINSTANCE_ORG_NAME: "Martyrology"
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME: root
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD: RootPassword1!
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORDCHANGEREQUIRED: false
+
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_HOST: mailpit:1025
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_USER: ""
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_SMTP_PASSWORD: ""
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_TLS: false
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_FROM: noreply@martyrology.localhost
+      ZITADEL_DEFAULTINSTANCE_SMTPCONFIGURATION_FROMNAME: Martyrology
+
+      ZITADEL_LOG_LEVEL: info
+    healthcheck:
+      test: ["CMD", "/app/zitadel", "ready"]
+      interval: 10s
+      timeout: 60s
+      retries: 5
+      start_period: 10s
+    user: "0"
+    volumes:
+      - ./.zitadel-data:/zitadel-data:delegated
+    ports:
+      - "127.0.0.1:${ZITADEL_PORT:-8080}:8080"
+    networks:
+      - martyrology
+    depends_on:
+      db:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    ports:
+      - "127.0.0.1:${MAILPIT_PORT:-8025}:8025"
+    networks:
+      - martyrology
+
+  openfga-migrate:
+    image: openfga/openfga:v1.15.1
+    command: migrate
+    environment:
+      OPENFGA_DATASTORE_ENGINE: postgres
+      OPENFGA_DATASTORE_URI: postgres://openfga:openfga_secure_password@db:5432/openfga?sslmode=disable
+    networks:
+      - martyrology
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  openfga:
+    image: openfga/openfga:v1.15.1
+    command: run
+    restart: unless-stopped
+    environment:
+      OPENFGA_DATASTORE_ENGINE: postgres
+      OPENFGA_DATASTORE_URI: postgres://openfga:openfga_secure_password@db:5432/openfga?sslmode=disable
+      # Preshared auth is REQUIRED, not a hardening choice. Settings.authz_enabled
+      # is `bool(api_url and store_id and api_token)`, so a tokenless OpenFGA
+      # leaves MARTYROLOGY_OPENFGA_API_TOKEN empty, authz disabled, and every
+      # check denied — while the stack reports perfectly healthy.
+      OPENFGA_AUTHN_METHOD: preshared
+      OPENFGA_AUTHN_PRESHARED_KEYS: "${OPENFGA_PRESHARED_KEY:-local-dev-preshared-key}"
+      # No OPENFGA_PLAYGROUND_ENABLED / port 3001 here: OpenFGA v1.15.1 panics
+      # at startup ("the playground only supports authn method 'none'") when
+      # the Playground is enabled alongside preshared auth. Preshared auth is
+      # required (see above), so the Playground cannot be offered in this
+      # stack — confirmed empirically, not assumed.
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/grpc_health_probe", "-addr=localhost:8081"]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 10s
+    ports:
+      - "127.0.0.1:${OPENFGA_HTTP_PORT:-8083}:8080"
+      - "127.0.0.1:${OPENFGA_GRPC_PORT:-8084}:8081"
+    networks:
+      - martyrology
+    depends_on:
+      openfga-migrate:
+        condition: service_completed_successfully
+
+  # Creates the Martyrology store, uploads the authorization model, and seeds
+  # the 8 governed_by + 3 on_platform structural tuples.
+  #
+  # The model is CLONED from cdcf-infra rather than vendored into this repo:
+  # auth/models/Martyrology{,.tuples}.json is the authoritative copy production
+  # uploads, and a second copy here would drift silently. cdcf-infra is public,
+  # so this works from a bare clone with no sibling checkouts.
+  #
+  # Idempotent: setup-openfga.sh reads the store's existing tuples first and
+  # writes only the difference. A second run reports everything already present.
+  authz-seed:
+    image: alpine:3.21
+    restart: "no"
+    environment:
+      CDCF_INFRA_REF: "${CDCF_INFRA_REF:-main}"
+      OPENFGA_PRESHARED_KEY: "${OPENFGA_PRESHARED_KEY:-local-dev-preshared-key}"
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        set -eu
+        apk add --no-cache bash curl jq git >/dev/null
+        rm -rf /tmp/cdcf-infra
+        git clone --depth 1 --branch "$$CDCF_INFRA_REF" \
+          https://github.com/CatholicOS/cdcf-infra.git /tmp/cdcf-infra
+        cd /tmp/cdcf-infra/auth
+        cat > .env.local <<EOF
+        OPENFGA_API_URL=http://openfga:8080
+        OPENFGA_INTERNAL_URL=http://openfga:8080
+        OPENFGA_PRESHARED_KEY=$$OPENFGA_PRESHARED_KEY
+        EOF
+        ./setup-openfga.sh --target local --create-martyrology-store
+    networks:
+      - martyrology
+    depends_on:
+      openfga:
+        condition: service_healthy
+
+  # One-shot Alembic runner for the `martyrology` database.
+  #
+  # scripts/init-db.sql (run by db on first init) is bootstrap-only: roles and
+  # empty databases. Application-table DDL lives in alembic/versions/ and is
+  # applied here. Today that is a single baseline revision creating nothing —
+  # the service exists so the permission-request and notification subsystem
+  # lands as migrations without a compose change.
+  #
+  # Re-runnable and a no-op when up to date. Rebuild with
+  # `docker compose up -d --build api-migrate` so newly-pulled migrations land
+  # in the image before it runs.
+  #
+  # Deliberately NOT tagged `martyrology-api:latest`: this compose file is
+  # infra-only (see file header), and that tag is the canonical application
+  # image the martyrology-frontend stack's `db-init`, `api-migrate`, and
+  # `martyrology-api` services pull. Docker tags are global, not scoped to a
+  # compose project — claiming it here would let `docker compose up --build`
+  # in this repo silently clobber that shared tag out from under the frontend
+  # stack. Leave this service unclaimed; compose names its image after the
+  # project and service instead (`martyrology-infra-api-migrate`).
+  api-migrate:
+    build: .
+    command: ["alembic", "upgrade", "head"]
+    environment:
+      MARTYROLOGY_DATABASE_URL: postgresql+psycopg://martyrology:martyrology_secure_password@db:5432/martyrology
+    networks:
+      - martyrology
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  adminer:
+    image: adminer:latest
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DESIGN: lucas-sandery
+    ports:
+      - "127.0.0.1:${ADMINER_PORT:-8088}:8080"
+    networks:
+      - martyrology
+    depends_on:
+      - db
+
+networks:
+  martyrology:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

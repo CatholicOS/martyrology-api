@@ -1,7 +1,8 @@
 __pycache__/
 *.pyc
 .venv/
-.env
+.env*
+!.env.example
 .coverage
 .coverage.*
 coverage.xml
@@ -10,3 +11,7 @@ htmlcov/
 coverage.xml
 junit.xml
 htmlcov/
+
+.zitadel-data/
+.stack-out/
+docker-compose.override.yml
