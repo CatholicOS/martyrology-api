@@ -39,13 +39,13 @@ fi
 
 ENV_FILE=".env"
 PAT_FILE="./.zitadel-data/automation-user.pat"
-ZITADEL_PORT="$(grep -E '^ZITADEL_PORT=' "$ENV_FILE" | cut -d= -f2 || true)"
+ZITADEL_PORT="$(grep -E '^ZITADEL_PORT=' "$ENV_FILE" | cut -d= -f2- || true)"
 ZITADEL_PORT="${ZITADEL_PORT:-8080}"
-OPENFGA_HTTP_PORT="$(grep -E '^OPENFGA_HTTP_PORT=' "$ENV_FILE" | cut -d= -f2 || true)"
+OPENFGA_HTTP_PORT="$(grep -E '^OPENFGA_HTTP_PORT=' "$ENV_FILE" | cut -d= -f2- || true)"
 OPENFGA_HTTP_PORT="${OPENFGA_HTTP_PORT:-8083}"
-PRESHARED_KEY="$(grep -E '^OPENFGA_PRESHARED_KEY=' "$ENV_FILE" | cut -d= -f2 || true)"
+PRESHARED_KEY="$(grep -E '^OPENFGA_PRESHARED_KEY=' "$ENV_FILE" | cut -d= -f2- || true)"
 [[ -n "$PRESHARED_KEY" ]] || { echo "OPENFGA_PRESHARED_KEY missing from $ENV_FILE" >&2; exit 1; }
-CDCF_INFRA_REF="$(grep -E '^CDCF_INFRA_REF=' "$ENV_FILE" | cut -d= -f2 || true)"
+CDCF_INFRA_REF="$(grep -E '^CDCF_INFRA_REF=' "$ENV_FILE" | cut -d= -f2- || true)"
 CDCF_INFRA_REF="${CDCF_INFRA_REF:-main}"
 
 ISSUER="http://localhost:${ZITADEL_PORT}"
@@ -116,14 +116,39 @@ rm -f "$OUT"
 # Queried from the API rather than parsed out of setup-openfga.sh's output:
 # the store already exists (authz-seed created it), and an API read is stable
 # where output parsing is not.
+#
+# Both substitutions below end in `|| true`. Under `set -euo pipefail`, a bare
+# `STORE_ID="$(curl -sf ... | jq ...)"` aborts the whole script AT THE
+# ASSIGNMENT the instant curl fails (OpenFGA down, wrong preshared key,
+# connection refused) — before the "No Martyrology store found" guard two
+# lines down, the one purpose-built to name the likely causes, ever gets to
+# run. `|| true` lets a failed pipeline fall through to an empty STORE_ID
+# instead, so the guard actually fires in the cases it exists for.
+#
+# This is also the only network read in the script with no retry (Zitadel
+# above gets 60x2s). `docker compose up -d` does not wait for authz-seed —
+# a `restart: "no"` one-shot — to finish, so a run of this script can
+# legitimately land before the store has been seeded yet. Poll briefly
+# rather than failing on that ordinary race.
 FGA="http://localhost:${OPENFGA_HTTP_PORT}"
-STORE_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" "$FGA/stores" \
-    | jq -r '.stores[] | select(.name=="Martyrology") | .id' | head -1)"
-[[ -n "$STORE_ID" ]] || { echo "No Martyrology store found at $FGA" >&2; exit 1; }
+STORE_ID=""
+for _ in $(seq 1 15); do
+    STORE_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" "$FGA/stores" \
+        | jq -r '.stores[] | select(.name=="Martyrology") | .id' | head -1 || true)"
+    [[ -n "$STORE_ID" ]] && break
+    sleep 2
+done
+[[ -n "$STORE_ID" ]] || {
+    echo "No Martyrology store found at $FGA" >&2
+    echo "  Likely causes: OpenFGA is not up, OPENFGA_PRESHARED_KEY in .env" >&2
+    echo "  doesn't match the running stack's, or authz-seed hasn't finished" >&2
+    echo "  seeding the store yet — check 'docker compose logs authz-seed'." >&2
+    exit 1
+}
 
 MODEL_ID="$(curl -sf -H "Authorization: Bearer $PRESHARED_KEY" \
     "$FGA/stores/$STORE_ID/authorization-models?page_size=1" \
-    | jq -r '.authorization_models[0].id')"
+    | jq -r '.authorization_models[0].id' || true)"
 [[ -n "$MODEL_ID" && "$MODEL_ID" != "null" ]] \
     || { echo "No authorization model in store $STORE_ID" >&2; exit 1; }
 

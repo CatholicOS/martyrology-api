@@ -35,7 +35,7 @@ notification subsystem (§9) somewhere to run.
 | **D2** | The **minimal** stack omits `zitadel-login` and the proxy, and serves Zitadel directly on `:8080` with `LOGINV2_REQUIRED: false`. | Nothing in the API repo performs an interactive browser sign-in; the API only ever calls `/oauth/v2/introspect`. A login UI with no frontend to log into is inventory without a purpose. This is a deliberate, documented divergence from D1, not an oversight. |
 | **D3** | The OpenFGA model and tuples come from a **clone of `cdcf-infra`** performed by a one-shot `authz-seed` service; the local override bind-mounts `../cdcf-infra` instead. | `auth/models/Martyrology{,.tuples}.json` is the authoritative copy that production uploads. Vendoring a second copy into either repo would drift silently. `cdcf-infra` is public, so the default path works from a bare clone with no siblings. |
 | **D4** | `martyrology-api` gains a `Dockerfile`, used by the **frontend's** stack and CI but **not** by the API's own stack. The API dev loop stays `uvicorn --factory --reload` on the host. | LitCal's precedent: its minimal stack is infra-only and the API runs on the host via `composer start`. Keeps the Dockerfile out of the everyday API edit loop. |
-| **D5** | Ports reuse LitCal's numbers (`5432`, `8080`, `8083/8084`, `3001`, `8088`, `8025`, `8000`, `3000`). | The two compose files read almost line-for-line the same, which is the point of mirroring. Consequence: only one stack runs at a time. |
+| **D5** | Ports reuse LitCal's numbers (`5432`, `8080`, `8083/8084`, `8088`, `8025`, `8000`, `3000`). | The two compose files read almost line-for-line the same, which is the point of mirroring. Consequence: only one stack runs at a time. (No OpenFGA Playground port: see §3 — `v1.15.1` refuses to start the Playground alongside the preshared auth this stack requires, so the Playground was dropped and never got a port.) |
 | **D6** | Generated IDs reach the containers via LitCal's **two-phase `--update-env`**: `up` → provision → `up --force-recreate`. | The store ID, model ID, client IDs and client secrets are all generated at provisioning time. A `.env` file is inspectable when something is wrong, which matters when one of the values is a one-time-emit secret. |
 | **D7** | `martyrology-api` gains **`MARTYROLOGY_ZITADEL_INTERNAL_URL`** (empty default → falls back to `zitadel_issuer`), used for introspection only. | `localhost:8080` must stay the browser-facing issuer and the `iss` claim, but inside the API container `localhost` is its own loopback. This is LitCal's `ZITADEL_INTERNAL_URL` precedent for the API specifically, and it is useful in production too, where Plesk's nginx makes the same round trip. |
 | **D8** | The API image **clones `crmedr` and `clbdr` at pinned refs** rather than `COPY vendor/`. | `app.py:27` calls `Registry.load(crmedr_path, clbdr_path)` at startup and `registry.py` reads four files from them unconditionally — the API cannot start without them. `vendor/texts` is a **private** submodule, so a recursive clone of a GitHub build context would fail for anyone without access to it. Cloning the two public repos explicitly sidesteps the question. |
@@ -107,9 +107,10 @@ as `MARTYROLOGY_OPENFGA_API_TOKEN` and consumed by `setup-openfga.sh`, which
 already requires `OPENFGA_PRESHARED_KEY` in its env file. This also matches
 production, which uses a preshared key.
 
-**To confirm at implementation:** whether the Playground can be enabled alongside
-preshared auth on `v1.15.1`. If not, the Playground is dropped and the store is
-inspected via `curl` — the same way production is.
+**Resolved at implementation:** the Playground cannot be enabled alongside
+preshared auth on `v1.15.1` — it panics at startup. The Playground is dropped
+(no `OPENFGA_PLAYGROUND_PORT` in either repo's `.env.example`) and the store is
+inspected via `curl` instead — the same way production is.
 
 ### Full stack services
 
@@ -124,7 +125,14 @@ The minimal set plus `db-init`, `zitadel-login`, `zitadel-proxy`,
   everything else → `zitadel:8080`. `ZITADEL_EXTERNALPORT: 8080` therefore
   describes the proxy. **Port 8081 is unused in this stack.**
 - **`martyrology-api`** — `MARTYROLOGY_ZITADEL_ISSUER=http://localhost:8080`,
-  `MARTYROLOGY_ZITADEL_INTERNAL_URL=http://zitadel:8080` (D7),
+  `MARTYROLOGY_ZITADEL_INTERNAL_URL=http://localhost:${ZITADEL_PORT}` (D7) — **not**
+  `http://zitadel:8080`, which is precisely what does not work: Zitadel resolves
+  the instance from the Host header, not the network path, and `Host:
+  zitadel:8080` matches no registered domain ("Instance not found"). The fix
+  routes container → host → proxy instead, so the request presents `Host:
+  localhost:${ZITADEL_PORT}` — the same origin the browser uses — which is the
+  inverse of D7's original "avoid the round trip through the host" rationale,
+  not an application of it.
   `MARTYROLOGY_OPENFGA_API_URL=http://openfga:8080`.
 - **`martyrology-frontend`** — `extra_hosts: - "localhost:host-gateway"`, matching
   `litcal-frontend` exactly. Auth.js needs server-side discovery and the browser
@@ -137,10 +145,14 @@ The minimal set plus `db-init`, `zitadel-login`, `zitadel-proxy`,
 `cdcf-infra`'s `auth/nginx/zitadel.conf`. Production's `connect-src` allowlist
 names the CDCF and LitCal origins and would block `http://localhost:3000`.
 
-Only the CSP line differs; the routing half is stable. The local copy must say so
-explicitly and cite the original, because this is a genuine second copy of a file
-whose comments carry real reasoning about why the CSP is replaced rather than
-appended.
+Four things differ, not one: the Content-Security-Policy; `$zitadel_host` (a
+normalized `$http_host`) in place of `$host` on the Host / X-Forwarded-Host
+headers; the `map{}` block that normalization depends on; and
+`X-Forwarded-Proto`, which is `https` upstream (production terminates TLS in
+front of it) and `http` here. The routing half — where each path is
+proxied — is otherwise stable. The local copy must say so explicitly and cite
+the original, because this is a genuine second copy of a file whose comments
+carry real reasoning about why each divergence exists.
 
 ## 4. Changes to `martyrology-api`
 
@@ -222,7 +234,9 @@ docker compose up -d --force-recreate martyrology-api martyrology-frontend
 
 `setup-stack.sh` waits for Zitadel healthy, clones or reuses `cdcf-infra`, writes
 a `.env.local` for the provisioners (`ZITADEL_ISSUER=http://localhost:8080`,
-`ZITADEL_INTERNAL_URL=http://127.0.0.1:8080`,
+`ZITADEL_INTERNAL_URL=http://localhost:${ZITADEL_PORT}` — the same
+browser-facing origin as the issuer, not a container-internal address; see
+§3's `MARTYROLOGY_ZITADEL_INTERNAL_URL` correction for why —
 `ZITADEL_PAT_FILE=./.zitadel-data/automation-user.pat`, plus the OpenFGA values),
 runs `--create-org Martyrology --provision-martyrology
 --provision-martyrology-frontend`, and writes the emitted IDs back into `.env`.
@@ -278,7 +292,7 @@ reachable in this stack but are not an acceptance criterion of it.
 
 | Risk | Mitigation |
 |---|---|
-| `zitadel.local.conf` drifts from `cdcf-infra`'s original. | Only the CSP line differs; the local copy cites the original and says which line is intentionally divergent. |
+| `zitadel.local.conf` drifts from `cdcf-infra`'s original. | Four things differ (CSP, `$zitadel_host` Host-header normalization, the `map{}` block it depends on, `X-Forwarded-Proto`); the local copy cites the original and says which lines are intentionally divergent. |
 | The GitHub-default full stack cannot exercise restricted texts. | Accepted and documented. `martyrology-texts` is private; the override path is the supported way to reach it. |
 | Pinned `crmedr`/`clbdr` refs in the Dockerfile go stale. | The override bind-mounts host siblings over them, so local work is never blocked by a stale pin. |
 | Only one stack runs at a time (D5). | Accepted. Documented in both READMEs. |

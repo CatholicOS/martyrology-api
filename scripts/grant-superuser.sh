@@ -49,8 +49,8 @@ done
 
 ENV_FILE=".env"
 API_URL="$(grep -E '^MARTYROLOGY_OPENFGA_API_URL=' "$ENV_FILE" | cut -d= -f2- || true)"
-STORE_ID="$(grep -E '^MARTYROLOGY_OPENFGA_STORE_ID=' "$ENV_FILE" | cut -d= -f2 || true)"
-TOKEN="$(grep -E '^MARTYROLOGY_OPENFGA_API_TOKEN=' "$ENV_FILE" | cut -d= -f2 || true)"
+STORE_ID="$(grep -E '^MARTYROLOGY_OPENFGA_STORE_ID=' "$ENV_FILE" | cut -d= -f2- || true)"
+TOKEN="$(grep -E '^MARTYROLOGY_OPENFGA_API_TOKEN=' "$ENV_FILE" | cut -d= -f2- || true)"
 
 for v in API_URL STORE_ID TOKEN; do
     [[ -n "${!v}" ]] || { echo "$v missing from $ENV_FILE — run setup-stack.sh first" >&2; exit 1; }

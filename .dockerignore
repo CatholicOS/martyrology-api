@@ -9,4 +9,4 @@
 !alembic
 !alembic.ini
 !scripts
-scripts/__pycache__
+**/__pycache__

@@ -69,4 +69,4 @@ jobs:
           persist-credentials: false
 
       - name: shellcheck
-        run: shellcheck scripts/deploy/*.sh
+        run: shellcheck scripts/*.sh scripts/deploy/*.sh
