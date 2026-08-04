@@ -197,6 +197,30 @@ services:
       openfga:
         condition: service_healthy
 
+  # One-shot Alembic runner for the `martyrology` database.
+  #
+  # scripts/init-db.sql (run by db on first init) is bootstrap-only: roles and
+  # empty databases. Application-table DDL lives in alembic/versions/ and is
+  # applied here. Today that is a single baseline revision creating nothing —
+  # the service exists so the permission-request and notification subsystem
+  # lands as migrations without a compose change.
+  #
+  # Re-runnable and a no-op when up to date. Rebuild with
+  # `docker compose up -d --build api-migrate` so newly-pulled migrations land
+  # in the image before it runs.
+  api-migrate:
+    build: .
+    image: martyrology-api:latest
+    command: ["alembic", "upgrade", "head"]
+    environment:
+      MARTYROLOGY_DATABASE_URL: postgresql+psycopg://martyrology:martyrology_secure_password@db:5432/martyrology
+    networks:
+      - martyrology
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
   adminer:
     image: adminer:latest
     restart: unless-stopped
