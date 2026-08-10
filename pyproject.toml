@@ -4,8 +4,8 @@ version = "0.2.0"
 description = "Roman Martyrology API"
 requires-python = ">=3.12"
 dependencies = [
-  "fastapi>=0.140.5",
-  "uvicorn>=0.51.0",
+  "fastapi>=0.141.1",
+  "uvicorn>=0.52.1",
   "pydantic>=2.13.4",
   "pydantic-settings>=2.3",
   "httpx2>=2.9.1",
@@ -19,7 +19,7 @@ dev = [
   "pytest>=9.1.1",
   "pytest-asyncio>=0.23",
   "pytest-cov>=7.1.0",
-  "ruff>=0.15.22",
+  "ruff>=0.16.1",
   "pyright>=1.1",
   "openapi-spec-validator>=0.7",
 ]
