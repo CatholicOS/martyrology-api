@@ -1,5 +1,5 @@
 {
- "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
+ "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID), override (hand-corrected, CatholicOS/crmedr#25) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
  "ids": {
   "mr:0101-circumcisio-domini": {
    "method": "coined-deprecated",
@@ -2137,9 +2137,9 @@
    "method": "same-day",
    "score": 2.1
   },
-  "mr:0320-sabas": {
-   "method": "same-day",
-   "score": 1.49
+  "mr:0320-photina-et-socii": {
+   "method": "coined-deprecated",
+   "score": null
   },
   "mr:0320-septem-martyres-amisi": {
    "method": "coined-deprecated",
@@ -5737,7 +5737,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0726-benedictus": {
+  "mr:0726-simeon": {
    "method": "same-day",
    "score": 2.23
   },
@@ -6513,9 +6513,9 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0823-philippus": {
-   "method": "same-day",
-   "score": 1.93
+  "mr:0823-philippus-benizi": {
+   "method": "coined-deprecated",
+   "score": null
   },
   "mr:0823-cyriacus-et-archelaus": {
    "method": "same-day",
@@ -9482,7 +9482,7 @@
    "score": 2.37
   },
   "mr:1126-leonardus-a-portu-mauritio": {
-   "method": "coined-deprecated",
+   "method": "override",
    "score": null
   },
   "mr:1126-basolus": {
