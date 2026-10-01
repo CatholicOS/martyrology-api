@@ -333,7 +333,7 @@
    "method": "same-day",
    "score": 3.4
   },
-  "mr:0110-petrus-urseoli": {
+  "mr:0110-petrus-urseolus": {
    "method": "same-day",
    "score": 2.01
   },
@@ -2025,7 +2025,7 @@
    "method": "same-day",
    "score": 2.99
   },
-  "mr:0307-paulus-simplicis": {
+  "mr:0307-paulus-simplex": {
    "method": "same-day",
    "score": 2.83
   },
@@ -3097,7 +3097,7 @@
    "method": "same-day",
    "score": 2.4
   },
-  "mr:0413-carpus-et-thyatirensis": {
+  "mr:0413-carpus-et-socii": {
    "method": "same-day",
    "score": 2.11
   },
@@ -3613,7 +3613,7 @@
    "method": "same-day",
    "score": 1.63
   },
-  "mr:0417-robertus-molismensi": {
+  "mr:0417-robertus-molismensis": {
    "method": "cross-day",
    "score": 1.84
   },
@@ -3841,7 +3841,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0505-sacerdotis": {
+  "mr:0505-sacerdos": {
    "method": "same-day",
    "score": 3.16
   },
@@ -4545,7 +4545,7 @@
    "method": "same-day",
    "score": 0.99
   },
-  "mr:0425-pasicratis-et-valentio": {
+  "mr:0425-pasicrates-et-valentio": {
    "method": "same-day",
    "score": 1.94
   },
@@ -6085,7 +6085,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0712-ioannes-gualberti": {
+  "mr:0712-ioannes-gualbertus": {
    "method": "same-day",
    "score": 2.22
   },
@@ -6133,7 +6133,7 @@
    "method": "same-day",
    "score": 2.87
   },
-  "mr:0713-myropis": {
+  "mr:0713-myrope": {
    "method": "same-day",
    "score": 2.27
   },
@@ -6629,7 +6629,7 @@
    "method": "same-day",
    "score": 2.33
   },
-  "mr:0727-dormientium-ephesi": {
+  "mr:0727-septem-dormientes-ephesi": {
    "method": "same-day",
    "score": 2.3
   },
@@ -7841,7 +7841,7 @@
    "method": "same-day",
    "score": 2.58
   },
-  "mr:0831-raymundus-nonnati": {
+  "mr:0831-raymundus-nonnatus": {
    "method": "same-day",
    "score": 1.8
   },
@@ -8405,7 +8405,7 @@
    "method": "same-day",
    "score": 2.47
   },
-  "mr:0914-ioannes-chrysostomi": {
+  "mr:0914-ioannes-chrysostomus": {
    "method": "same-day",
    "score": 2.09
   },
@@ -8557,7 +8557,7 @@
    "method": "same-day",
    "score": 1.69
   },
-  "mr:0918-ferreolus-galliae-viennensi": {
+  "mr:0918-ferreolus-viennensis": {
    "method": "same-day",
    "score": 1.58
   },
@@ -10825,7 +10825,7 @@
    "method": "same-day",
    "score": 2.16
   },
-  "mr:1120-gregorius-decapolitani": {
+  "mr:1120-gregorius-decapolitanus": {
    "method": "same-day",
    "score": 2.38
   },
@@ -11089,7 +11089,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1128-iacobus-piceni": {
+  "mr:1128-iacobus-picenus": {
    "method": "override",
    "score": null
   },
@@ -11529,7 +11529,7 @@
    "method": "same-day",
    "score": 1.86
   },
-  "mr:1212-alexandrini-epimachi-et-alexander": {
+  "mr:1212-epimachus-et-alexander": {
    "method": "same-day",
    "score": 1.73
   },

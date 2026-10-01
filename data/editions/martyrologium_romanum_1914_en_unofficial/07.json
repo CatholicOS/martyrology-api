@@ -154,7 +154,7 @@
  "12": {
   "titulus": "The Twelfth Day of July",
   "elogia": {
-   "mr:0712-ioannes-gualberti": "In the monastery of Passignano, near Florence, the abbot St. John Gualbert, founder of the Vallumbrosan Order.",
+   "mr:0712-ioannes-gualbertus": "In the monastery of Passignano, near Florence, the abbot St. John Gualbert, founder of the Vallumbrosan Order.",
    "mr:0712-nabor-et-felix": "At Milan, the holy martyrs Nabor and Felix, who suffered in the persecution of Maximian.",
    "mr:0712-in-cypro-beat": "In Cyprus, St. Jason, one of the first disciples of Christ.",
    "mr:0712-fortunatus-et-hermagora": "At Aquileia, the birthday of St. Hermagoras, disciple of the blessed evangelist Mark, and first bishop of that city. Whilst occupied in performing miraculous cures, in preaching frequently and bringing souls to repentance, he suffered many kinds of torments, and finally by capital punishment, merited an immortal triumph with his deacon Fortunatus.",
@@ -171,7 +171,7 @@
    "mr:0713-anacletus": "At Rome, St. Anacletus, pope and martyr, who governed the Church of God after St. Clement, and shed lustre on it by a glorious martyrdom. The same day, the holy prophets Joel and Esdras.",
    "mr:0713-sila": "In Macedonia, blessed Silas, one of the first Christians. By the Apostles he was destined for the churches of the Gentiles with Paul and Barnabas. Filled with the grace of God, he zealously discharged the office of preaching, and after glorifying Christ by his sufferings, rested in peace.",
    "mr:0713-serapion": "Also, St. Serapion, martyr, who obtained the crown of martyrdom by fire, in the time of the emperor Severus and the governor Aquila.",
-   "mr:0713-myropis": "In the island of Chio, in the time of the emperor Decius and the governor Numerian, the martyr St. Myrops. Being clubbed to death, he went to our Lord.",
+   "mr:0713-myrope": "In the island of Chio, in the time of the emperor Decius and the governor Numerian, the martyr St. Myrops. Being clubbed to death, he went to our Lord.",
    "mr:0713-eugenius": "In Africa, the holy confessors Eugenius, the faithful and virtuous bishop of Carthage, and all the clergy of that church, to the number of about five hundred or more, among whom were many small children employed as lectors. In the persecution of the Vandals, under the Arian king Hunneric, they were subjected to scourging and starvation, and driven into a most painful banishment, which they bore with joy for God’s sake. In their number were also two distinguished personages, the archdeacon Salutaris, and Muritta, occupying the second rank among the ministers of the church. Both had three times confessed the faith, and were illustrious by their sturdy perseverance in Christianity.",
    "mr:0713-turiavus": "In Bretagne, St. Turian, bishop and confessor, a man of admirable simplicity and innocence."
   }
@@ -365,7 +365,7 @@
    "mr:0727-maurus-et-socii": "At Biseglia, in Apulia, the holy martyrs Maurus, bishop, Pantaleemon, and Sergius, who suffered under Trajan.",
    "mr:0727-martyres-homeritas": "In the country of the Homerites (Arabia), the commemoration of the holy martyrs, who were delivered to the flames for faith of Christ, under the tyrant Dunaan.",
    "mr:0727-georgius": "At Cordova, in Spain, during the persecution of the Arabs, the holy martyrs George, deacon, Felix, Aurelius, Natalia, and Liliosa.",
-   "mr:0727-dormientium-ephesi": "At Ephesus, the birthday of the seven holy sleepers, Maximian, Malchus, Martinian, Denis, John, Serapion, and Constantine.",
+   "mr:0727-septem-dormientes-ephesi": "At Ephesus, the birthday of the seven holy sleepers, Maximian, Malchus, Martinian, Denis, John, Serapion, and Constantine.",
    "mr:0727-aetherius": "At Auxerre, the demise of blessed Aetherius, bishop and confessor.",
    "mr:0727-anthusa": "At Constantinople, blessed Anthusa, a virgin. Under Constantine Copronymus, after being scourged and banished, she rested in the Lord."
   }

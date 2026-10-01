@@ -2733,7 +2733,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0413-carpus-et-thyatirensis": {
+  "mr:0413-carpus-et-socii": {
    "method": "same-day",
    "score": 2.09
   },
@@ -3377,7 +3377,7 @@
    "method": "same-day",
    "score": 1.98
   },
-  "mr:0505-sacerdotis": {
+  "mr:0505-sacerdos": {
    "method": "same-day",
    "score": 2.11
   },
@@ -3973,7 +3973,7 @@
    "method": "same-day",
    "score": 1.72
   },
-  "mr:0425-pasicratis-et-valentio": {
+  "mr:0425-pasicrates-et-valentio": {
    "method": "cross-day",
    "score": 2.32
   },
@@ -5261,7 +5261,7 @@
    "method": "same-day",
    "score": 3.31
   },
-  "mr:0712-ioannes-gualberti": {
+  "mr:0712-ioannes-gualbertus": {
    "method": "same-day",
    "score": 1.82
   },
@@ -5321,7 +5321,7 @@
    "method": "same-day",
    "score": 3.01
   },
-  "mr:0713-myropis": {
+  "mr:0713-myrope": {
    "method": "same-day",
    "score": 2.26
   },
@@ -5757,7 +5757,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0727-dormientium-ephesi": {
+  "mr:0727-septem-dormientes-ephesi": {
    "method": "same-day",
    "score": 2.29
   },
@@ -6833,7 +6833,7 @@
    "method": "same-day",
    "score": 2.12
   },
-  "mr:0831-raymundus-nonnati": {
+  "mr:0831-raymundus-nonnatus": {
    "method": "same-day",
    "score": 1.96
   },
@@ -7245,7 +7245,7 @@
    "method": "same-day",
    "score": 1.93
   },
-  "mr:0914-ioannes-chrysostomi": {
+  "mr:0914-ioannes-chrysostomus": {
    "method": "same-day",
    "score": 1.97
   },
@@ -7385,7 +7385,7 @@
    "method": "cross-day",
    "score": 2.26
   },
-  "mr:0918-ferreolus-galliae-viennensi": {
+  "mr:0918-ferreolus-viennensis": {
    "method": "same-day",
    "score": 1.74
   },
@@ -9329,7 +9329,7 @@
    "method": "same-day",
    "score": 1.46
   },
-  "mr:1120-gregorius-decapolitani": {
+  "mr:1120-gregorius-decapolitanus": {
    "method": "same-day",
    "score": 1.79
   },
@@ -9533,7 +9533,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1128-papinianus-vitensis-et-mansuetus-urusitani": {
+  "mr:1128-papinianus-vitensis-et-mansuetus-urusitanus": {
    "method": "same-day",
    "score": 1.98
   },
@@ -9905,7 +9905,7 @@
    "method": "same-day",
    "score": 1.9
   },
-  "mr:1212-alexandrini-epimachi-et-alexander": {
+  "mr:1212-epimachus-et-alexander": {
    "method": "same-day",
    "score": 1.71
   },
