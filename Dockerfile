@@ -50,6 +50,12 @@ FROM python:3.12.13-slim AS main
 WORKDIR /app
 
 RUN useradd -m -u 1000 martyrology
+# Mount point for the stack's db-init service, which runs this image (as
+# martyrology, per USER below) to copy scripts/init-db.sql into a named volume
+# at /init. Docker seeds a new empty named volume with the ownership of the
+# image path it is mounted over; without this directory the volume comes up
+# root-owned and the copy fails with "Permission denied".
+RUN mkdir /init && chown martyrology:martyrology /init
 
 COPY --from=build --chown=martyrology:martyrology /app/.venv /app/.venv
 COPY --from=build --chown=martyrology:martyrology /data /data
