@@ -107,7 +107,7 @@
    "mr:0708-aquila-et-prisca": "In Asia Minor, the Saints Aquila and his wife Priscilla, of whom mention is made in the Acts of the Apostles.",
    "mr:0708-quinquaginta-milites-portu": "At Porto, fifty holy soldiers, martyrs, who were led to the faith by the martyrdom of St. Bonosa, and baptized by the blessed pope Felix. They were put to death in the persecution of Aurelian.",
    "mr:0708-procopius": "In Palestine, in the reign of Diocletian, St. Procopius, martyr, who was brought from Scythopolis to Caesarea, and upon his first resolute answer was beheaded by the judge Fabian.",
-   "mr:0708-monachi-constantinopoli": "At Constantinople, the holy Abrahamite monks, who resisted the emperor Theophilus by defending the worship of holy images, and suffered martyrdom.",
+   "mr:0708-monachi-abrahamitae": "At Constantinople, the holy Abrahamite monks, who resisted the emperor Theophilus by defending the worship of holy images, and suffered martyrdom.",
    "mr:0708-kilianus": "At Wurtzburg, in Germany, St. Kilian, bishop, who was commissioned by the Roman Pontiff to preach the Gospel. After having converted many to Christ, he was put to death with his companions, Colman, a priest, and Totnan, a deacon.",
    "mr:0708-eugenius-iii": "At Rome, the blessed Eugenius II., pope. Having gained a great reputation for sanctity and prudence in his government of the monastery of Saints Vincent and Anastasius, he was raised to the Sovereign Pontificate and ruled over the universal Church with much holiness. Pope Pius IX. approved and confirmed the veneration paid to him.",
    "mr:0708-auspicius": "At Treves, St. Auspicius, bishop and confessor."
@@ -195,8 +195,8 @@
   "elogia": {
    "mr:0715-henricus-primus": "At Bamberg, St. Henry I., emperor, who kept perpetual chastity with his wife Cunegunde, and induced St. Stephen, king of Hungary, with nearly all his kingdom, to receive the faith of Christ.",
    "mr:0715-eutropius-et-socii": "At Porto, the birthday of the holy martyrs Eutropius, and the sisters Zosima and Bonosa.",
-   "mr:0715-catulinus": "At Carthage, blessed Catulinus, deacon, whose glories were proclaimed by St. Augustine in a sermon to his people, and the Saints Januarius, Florentius, Julia and Justa, martyrs, who were entombed in the church of St. Faustus.",
-   "mr:0715-philippus": "At Alexandria, the holy martyrs Philip, Zeno, Narseus, and ten children.",
+   "mr:0715-catulinus-et-socii": "At Carthage, blessed Catulinus, deacon, whose glories were proclaimed by St. Augustine in a sermon to his people, and the Saints Januarius, Florentius, Julia and Justa, martyrs, who were entombed in the church of St. Faustus.",
+   "mr:0715-philippus-et-socii": "At Alexandria, the holy martyrs Philip, Zeno, Narseus, and ten children.",
    "mr:0715-abudemius": "In the island of Tenedos, St. Abudemius, a martyr, who suffered under Diocletian.",
    "mr:0715-antiochus": "At Sebaste, St. Antiochus, a physician, who was decapitated under the governor Adrian. On seeing milk flowing from his wounds instead of blood, Cyriacus, his executioner, was converted to Christ and endured martyrdom.",
    "mr:0715-felix": "At Pavia, St. Felix, bishop and martyr.",
@@ -223,7 +223,7 @@
   "titulus": "The Seventeenth Day of July",
   "elogia": {
    "mr:0717-alexius": "At Rome, St. Alexius, confessor, son of the senator Euphemian. Leaving his spouse untouched the night of his marriage, he withdrew from his house, and after a long pilgrimage returned to Rome, where he was for seventeen years harbored in his father’s house as an unknown beggar, thus deluding the world by a new device. But after his death, becoming known through a voice heard in the churches of the city, and by his own writing, he was, under the Sovereign Pontiff, Innocent I., translated to the church of St. Boniface, where he wrought many miracles.",
-   "mr:0717-scillitani": "At Carthage, the birthday of the holy Scillitan martyrs Speratus, Narzales, Cythinus, Veturius, Felix, Acyllinus, Laetantius, Januaria, Generosa, Vestina, Donata, and Secunda. By order of the prefect Saturninus, after their first confession of the faith, they were sent to prison, nailed to pieces of wood, and finally beheaded. The relics of Speratus, with the bones of blessed Cyprian and the head of the martyr St. Pantaleon, were carried from Africa into France, and religiously placed in the basilica of St. John the Baptist at Lyons.",
+   "mr:0717-martyres-scillitani": "At Carthage, the birthday of the holy Scillitan martyrs Speratus, Narzales, Cythinus, Veturius, Felix, Acyllinus, Laetantius, Januaria, Generosa, Vestina, Donata, and Secunda. By order of the prefect Saturninus, after their first confession of the faith, they were sent to prison, nailed to pieces of wood, and finally beheaded. The relics of Speratus, with the bones of blessed Cyprian and the head of the martyr St. Pantaleon, were carried from Africa into France, and religiously placed in the basilica of St. John the Baptist at Lyons.",
    "mr:0717-hyacinthus": "At Amastris, in Paphlagonia, St. Hyacinth, martyr, who died in prison after much suffering, under the prefect Castritius.",
    "mr:0717-generosus": "At Tivoli, St. Generosus, martyr.",
    "mr:0717-theodota": "At Constantinople, St. Theodota, martyr, under the Iconoclast Leo.",
@@ -364,7 +364,7 @@
    "mr:0727-nolae-in-campania": "At Nola, the holy martyrs Felix, Julia and Jucunda.",
    "mr:0727-maurus-et-socii": "At Biseglia, in Apulia, the holy martyrs Maurus, bishop, Pantaleemon, and Sergius, who suffered under Trajan.",
    "mr:0727-martyres-homeritas": "In the country of the Homerites (Arabia), the commemoration of the holy martyrs, who were delivered to the flames for faith of Christ, under the tyrant Dunaan.",
-   "mr:0727-georgius": "At Cordova, in Spain, during the persecution of the Arabs, the holy martyrs George, deacon, Felix, Aurelius, Natalia, and Liliosa.",
+   "mr:0727-georgius-et-socii": "At Cordova, in Spain, during the persecution of the Arabs, the holy martyrs George, deacon, Felix, Aurelius, Natalia, and Liliosa.",
    "mr:0727-septem-dormientes-ephesi": "At Ephesus, the birthday of the seven holy sleepers, Maximian, Malchus, Martinian, Denis, John, Serapion, and Constantine.",
    "mr:0727-aetherius": "At Auxerre, the demise of blessed Aetherius, bishop and confessor.",
    "mr:0727-anthusa": "At Constantinople, blessed Anthusa, a virgin. Under Constantine Copronymus, after being scourged and banished, she rested in the Lord."

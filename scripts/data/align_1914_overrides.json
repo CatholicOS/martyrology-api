@@ -188,7 +188,7 @@
    "subject_la": "Sanctus Petrus",
    "subject_en": "Saint Peter"
   },
-  "3-12-3": "mr:0312-mygdo",
+  "3-12-3": "mr:0312-mygdo-et-socii",
   "3-13-5": {
    "coin": "nicephorus",
    "subject_la": "Sanctus Nicephorus",
@@ -1143,7 +1143,7 @@
    "subject_la": "Sanctus Nicetius",
    "subject_en": "Saint Nicetius"
   },
-  "12-6-1": "mr:1206-martyres-africa",
+  "12-6-1": "mr:1206-martyres-africae",
   "12-7-5": {
    "coin": "martinus",
    "subject_la": "Sanctus Martinus",
