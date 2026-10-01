@@ -2393,9 +2393,9 @@
    "method": "same-day",
    "score": 3.18
   },
-  "mr:0320-sabas": {
-   "method": "same-day",
-   "score": 2.13
+  "mr:0320-photina-et-socii": {
+   "method": "override",
+   "score": null
   },
   "mr:0320-septem-martyres-amisi": {
    "method": "same-day",
@@ -2525,9 +2525,9 @@
    "method": "same-day",
    "score": 1.73
   },
-  "mr:0330-iulianus": {
-   "method": "cross-day",
-   "score": 1.71
+  "mr:0324-pigmenius": {
+   "method": "coined-deprecated",
+   "score": null
   },
   "mr:0324-timolaus-et-socii": {
    "method": "same-day",
@@ -6601,7 +6601,7 @@
    "method": "same-day",
    "score": 2.7
   },
-  "mr:0726-benedictus": {
+  "mr:0726-simeon": {
    "method": "same-day",
    "score": 2.76
   },
@@ -7509,9 +7509,9 @@
    "method": "same-day",
    "score": 2.7
   },
-  "mr:0823-philippus": {
-   "method": "same-day",
-   "score": 1.95
+  "mr:0822-philippus-benizi": {
+   "method": "override",
+   "score": null
   },
   "mr:0823-restitutus-et-socii": {
    "method": "same-day",

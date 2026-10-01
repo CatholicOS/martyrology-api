@@ -1246,6 +1246,13 @@
    "coin": "pudens",
    "subject_la": "Sanctus Pudens",
    "subject_en": "Saint Pudens"
-  }
+  },
+  "8-23-1": "mr:0822-philippus-benizi",
+  "3-24-2": {
+   "coin": "pigmenius",
+   "subject_la": "Beatus Pigmenius",
+   "subject_en": "Blessed Pigmenius"
+  },
+  "3-20-3": "mr:0320-photina-et-socii"
  }
 }
