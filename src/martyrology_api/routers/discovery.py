@@ -1,11 +1,15 @@
 from fastapi import APIRouter, Depends, Request
 
+from ..auth import Identity, get_identity
 from ..caching import declare_public_cache
 from ..config import Settings
+from ..licensing import texts_allowed
 from ..models import (
+    AccessOut,
     AvailabilityOut,
     CatalogEntryOut,
     CatalogOut,
+    EditionAccessOut,
     EditionOut,
     EditionsOut,
     GovernanceOut,
@@ -72,6 +76,25 @@ def get_editions(request: Request) -> EditionsOut:
     settings = request.app.state.settings
     eds = sorted(registry.editions.values(), key=lambda e: (e.promulgated_year, e.id))
     return EditionsOut(editions=[_edition_out(e, available, settings, store) for e in eds])
+
+
+@router.get("/access")
+async def get_access(
+    request: Request, identity: Identity | None = Depends(get_identity)
+) -> AccessOut:
+    """Which editions' texts the caller may read. The answer depends on the
+    caller, so it is never shared-cacheable: cache_private overrides this
+    router's public default."""
+    request.state.cache_private = True
+    registry = request.app.state.registry
+    return AccessOut(
+        editions={
+            edition_id: EditionAccessOut(
+                can_read_texts=await texts_allowed(request, identity, edition_id)
+            )
+            for edition_id in sorted(registry.editions)
+        }
+    )
 
 
 @router.get("/elogia")
