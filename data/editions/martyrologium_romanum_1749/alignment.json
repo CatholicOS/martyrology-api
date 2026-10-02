@@ -1,5 +1,5 @@
 {
- "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID), override (hand-corrected, CatholicOS/crmedr#25, #45) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
+ "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID), override (hand-corrected, CatholicOS/crmedr#25, #45, #47) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
  "ids": {
   "mr:0101-circumcisio-domini": {
    "method": "coined-deprecated",
@@ -1417,15 +1417,15 @@
    "method": "same-day",
    "score": 2.56
   },
-  "mr:0220-tyrannion": {
-   "method": "same-day",
-   "score": 1.56
+  "mr:0220-quinque-martyres-tyri": {
+   "method": "override",
+   "score": null
   },
-  "mr:0220-eleutherius": {
-   "method": "same-day",
-   "score": 2.46
+  "mr:0220-eleutherius-constantinopoli": {
+   "method": "coined-deprecated",
+   "score": null
   },
-  "mr:0220-eleutherius-pe": {
+  "mr:0220-eleutherius-et-socii": {
    "method": "coined-deprecated",
    "score": null
   },
@@ -1434,6 +1434,10 @@
    "score": 1.11
   },
   "mr:0220-eucherius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0220-eleutherius-tornaci": {
    "method": "override",
    "score": null
   },

@@ -259,12 +259,13 @@
  "20": {
   "titulus": "20 Februarii Decimo Kalendas Martii. v. A",
   "elogia": {
-   "mr:0220-tyrannion": "Tyri, in Phoenicia, commemoratio beatorum Martyrum, quorum numerum solius scientia Dei colligit. Hi omnes, sub Diocletiano Imperatore, a Veturio, militum magistro, multis tormentorum generibus, sibi invicem succedentibus, occisi sunt; nam, primo quidem flagris toto corpore dilaniati, inde diversis bestiarum generibus traditi, sed ab illis divina virtute nil laesi, post, addita feritate ignis ac ferri, martyrium consummarunt. Eorum vero gloriosam multitudinem ad victoriam incitabant Episcopi Tyrannio, Silvanus, Peleus et Nilus, ac Presbyter Zenobius, qui, felici agone, una cum illis, martyrii palmam adepti sunt.",
-   "mr:0220-eleutherius": "Constantinopoli sancti Eleutherii, Episcopi et Martyris.",
-   "mr:0220-eleutherius-pe": "In Perside natalis sancti Eleutherii, Episcopi, et aliorum centum viginti octo; qui, sub Rege Persarum Sapore, cum Solem adorare renuissent, crudeli nece praeclaras sibi coronas compararunt.",
+   "mr:0220-quinque-martyres-tyri": "Tyri, in Phoenicia, commemoratio beatorum Martyrum, quorum numerum solius scientia Dei colligit. Hi omnes, sub Diocletiano Imperatore, a Veturio, militum magistro, multis tormentorum generibus, sibi invicem succedentibus, occisi sunt; nam, primo quidem flagris toto corpore dilaniati, inde diversis bestiarum generibus traditi, sed ab illis divina virtute nil laesi, post, addita feritate ignis ac ferri, martyrium consummarunt. Eorum vero gloriosam multitudinem ad victoriam incitabant Episcopi Tyrannio, Silvanus, Peleus et Nilus, ac Presbyter Zenobius, qui, felici agone, una cum illis, martyrii palmam adepti sunt.",
+   "mr:0220-eleutherius-constantinopoli": "Constantinopoli sancti Eleutherii, Episcopi et Martyris.",
+   "mr:0220-eleutherius-et-socii": "In Perside natalis sancti Eleutherii, Episcopi, et aliorum centum viginti octo; qui, sub Rege Persarum Sapore, cum Solem adorare renuissent, crudeli nece praeclaras sibi coronas compararunt.",
    "mr:0220-potamius-et-nemesius": "In Cypro sanctorum Martyrum Potamii et Nemesii.",
    "mr:0220-leo": "Catanae, in Sicilia, sancti Leonis Episcopi, qui virtutibus atque miraculis coruscavit.",
-   "mr:0220-eucherius": "Eodem die sancti Eucherii, Aurelianensis Episcopi, qui eo magis miraculis claruit, quo pluribus invidorum calumniis fuit oppressus. Tornaci, in Galliis, sancti Eleutherii, Episcopi et Confessoris."
+   "mr:0220-eucherius": "Eodem die sancti Eucherii, Aurelianensis Episcopi, qui eo magis miraculis claruit, quo pluribus invidorum calumniis fuit oppressus.",
+   "mr:0220-eleutherius-tornaci": "Tornaci, in Galliis, sancti Eleutherii, Episcopi et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
