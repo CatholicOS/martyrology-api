@@ -1585,17 +1585,17 @@
    "method": "same-day",
    "score": 2.47
   },
-  "mr:0220-tyrannion": {
-   "method": "same-day",
-   "score": 1.83
+  "mr:0220-quinque-martyres-tyri": {
+   "method": "override",
+   "score": null
   },
   "mr:0220-potamius-et-nemesius": {
    "method": "same-day",
    "score": 1.55
   },
-  "mr:0220-eleutherius": {
-   "method": "same-day",
-   "score": 3.44
+  "mr:0220-eleutherius-constantinopoli": {
+   "method": "override",
+   "score": null
   },
   "mr:0218-sadoth-et-socii": {
    "method": "cross-day",
@@ -1609,9 +1609,9 @@
    "method": "same-day",
    "score": 0.84
   },
-  "mr:0220-eleutherius-pe": {
-   "method": "same-day",
-   "score": 1.57
+  "mr:0220-eleutherius-tornaci": {
+   "method": "override",
+   "score": null
   },
   "mr:0221-novem-martyres-sicilia": {
    "method": "same-day",
