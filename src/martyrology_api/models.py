@@ -91,6 +91,20 @@ class AvailabilityOut(BaseModel):
     note: str | None = None
 
 
+class SourceOut(BaseModel):
+    """The printed copy an edition's texts were taken from, as described in
+    the `source.json` beside its monthly files."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    title: str
+    imprint: str | None = None
+    year: int | None = None
+    rights: str | None = None
+    isbn: str | None = None
+    note: str | None = None
+
+
 class EditionOut(BaseModel):
     edition_id: str
     book: str = "martyrologium_romanum"
@@ -104,6 +118,7 @@ class EditionOut(BaseModel):
     governance: GovernanceOut
     availability: AvailabilityOut
     aligned: bool | None = None
+    source: SourceOut | None = None
 
 
 class EditionsOut(BaseModel):

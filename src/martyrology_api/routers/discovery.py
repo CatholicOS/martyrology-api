@@ -13,6 +13,7 @@ from ..models import (
     EditionOut,
     EditionsOut,
     GovernanceOut,
+    SourceOut,
     promulgation_dict,
     scope_dict,
 )
@@ -65,6 +66,7 @@ def _edition_out(
         governance=governance_for(e.scope),
         availability=AvailabilityOut(status=status, note=note),
         aligned=store.aligned(e.id),
+        source=None if (src := store.source(e.id)) is None else SourceOut.model_validate(src),
     )
 
 
