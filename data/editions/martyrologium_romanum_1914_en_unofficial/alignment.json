@@ -477,9 +477,9 @@
    "method": "same-day",
    "score": 2.36
   },
-  "mr:0114-datius-mediolani": {
-   "method": "same-day",
-   "score": 1.8
+  "mr:0114-datius": {
+   "method": "override",
+   "score": null
   },
   "mr:0114-euphrasius": {
    "method": "same-day",
@@ -497,9 +497,9 @@
    "method": "same-day",
    "score": 1.63
   },
-  "mr:0115-maurus-in": {
-   "method": "same-day",
-   "score": 1.63
+  "mr:0115-maurus": {
+   "method": "override",
+   "score": null
   },
   "mr:0115-habacuc-et-michaea-prophetarum": {
    "method": "same-day",
@@ -533,9 +533,9 @@
    "method": "same-day",
    "score": 1.85
   },
-  "mr:0116-marcellus-primus-romae": {
-   "method": "same-day",
-   "score": 1.13
+  "mr:0116-marcellus-primus": {
+   "method": "override",
+   "score": null
   },
   "mr:0116-berardus-et-socii": {
    "method": "same-day",
@@ -3997,9 +3997,9 @@
    "method": "same-day",
    "score": 2.29
   },
-  "mr:0510-job-propheta": {
-   "method": "same-day",
-   "score": 1.7
+  "mr:0510-iob": {
+   "method": "override",
+   "score": null
   },
   "mr:0510-calepodius": {
    "method": "same-day",
@@ -4293,9 +4293,9 @@
    "method": "same-day",
    "score": 2.26
   },
-  "mr:0518-ericus-upsali": {
-   "method": "same-day",
-   "score": 1.56
+  "mr:0518-ericus": {
+   "method": "override",
+   "score": null
   },
   "mr:0518-felix-de-cantalicio": {
    "method": "override",
@@ -4329,7 +4329,7 @@
    "method": "same-day",
    "score": 2.0
   },
-  "mr:0519-ivo-lohaneti": {
+  "mr:0519-ivo": {
    "method": "override",
    "score": null
   },
@@ -4565,7 +4565,7 @@
    "method": "same-day",
    "score": 2.09
   },
-  "mr:0525-leo-in": {
+  "mr:0525-leo": {
    "method": "override",
    "score": null
   },
@@ -6693,7 +6693,7 @@
    "method": "same-day",
    "score": 2.56
   },
-  "mr:0729-olavus-norvegia": {
+  "mr:0729-olavus": {
    "method": "override",
    "score": null
   },
@@ -7533,7 +7533,7 @@
    "method": "same-day",
    "score": 1.15
   },
-  "mr:0823-luppus-item": {
+  "mr:0823-luppus": {
    "method": "override",
    "score": null
   },
@@ -7597,9 +7597,9 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0825-ludovicus-noni": {
-   "method": "same-day",
-   "score": 1.05
+  "mr:0825-ludovicus-nonus": {
+   "method": "override",
+   "score": null
   },
   "mr:0825-eusebius-et-socii": {
    "method": "same-day",
@@ -7789,9 +7789,9 @@
    "method": "override",
    "score": null
   },
-  "mr:0829-sebbus-anglia": {
-   "method": "same-day",
-   "score": 1.55
+  "mr:0829-sebbus": {
+   "method": "override",
+   "score": null
   },
   "mr:0829-basilla": {
    "method": "same-day",
@@ -8017,9 +8017,9 @@
    "method": "override",
    "score": null
   },
-  "mr:0903-gregorius-magnus-item": {
-   "method": "same-day",
-   "score": 0.63
+  "mr:0903-gregorius-magnus": {
+   "method": "override",
+   "score": null
   },
   "mr:0904-moyses": {
    "method": "same-day",
@@ -8725,9 +8725,9 @@
    "method": "same-day",
    "score": 2.22
   },
-  "mr:0923-lini": {
-   "method": "same-day",
-   "score": 1.78
+  "mr:0923-linus": {
+   "method": "override",
+   "score": null
   },
   "mr:0923-christophorus-et-socii": {
    "method": "same-day",
@@ -9177,9 +9177,9 @@
    "method": "same-day",
    "score": 1.82
   },
-  "mr:1007-marcus-romae": {
-   "method": "same-day",
-   "score": 1.7
+  "mr:1007-marcus": {
+   "method": "override",
+   "score": null
   },
   "mr:1007-sergius-et-bacchus": {
    "method": "same-day",
@@ -9549,9 +9549,9 @@
    "method": "same-day",
    "score": 1.7
   },
-  "mr:1016-lullus-moguntiae": {
-   "method": "same-day",
-   "score": 1.8
+  "mr:1016-lullus": {
+   "method": "override",
+   "score": null
   },
   "mr:1016-florentinus": {
    "method": "same-day",
@@ -9757,9 +9757,9 @@
    "method": "same-day",
    "score": 1.7
   },
-  "mr:1022-donatus-scotus-tuscia": {
-   "method": "same-day",
-   "score": 1.24
+  "mr:1022-donatus-scotus": {
+   "method": "override",
+   "score": null
   },
   "mr:1022-verecundus": {
    "method": "same-day",
@@ -9897,7 +9897,7 @@
    "method": "override",
    "score": null
   },
-  "mr:1026-fulcus-papiae": {
+  "mr:1026-fulcus": {
    "method": "override",
    "score": null
   },
@@ -11657,9 +11657,9 @@
    "method": "same-day",
    "score": 1.68
   },
-  "mr:1216-ado-viennae": {
-   "method": "same-day",
-   "score": 1.8
+  "mr:1216-ado": {
+   "method": "override",
+   "score": null
   },
   "mr:1216-beanus": {
    "method": "same-day",

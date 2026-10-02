@@ -80,7 +80,7 @@
   "titulus": "The Seventh Day of October",
   "elogia": {
    "mr:1007-maria-de-rosario": "The feast of the Most Holy Rosary of the Blessed Virgin Mary, and the commemoration of Our Lady of Victory, which the sovereign Pontiff, blessed Pius V., on account of the great naval victory gained by the Christians on this day, ordered to be kept annually.",
-   "mr:1007-marcus-romae": "At Rome, on the Ardeatine road, the demise of St. Mark, pope and confessor.",
+   "mr:1007-marcus": "At Rome, on the Ardeatine road, the demise of St. Mark, pope and confessor.",
    "mr:1007-sergius-et-bacchus": "In the province of the Euphrates, the holy martyrs Sergius and Bacchus, noble Romans, in the time of the emperor Maximian. Bacchus, being scourged with rough whips until his body was completely mangled, breathed his last in the confession of Christ. Sergius had his feet forced into shoes full of sharp-pointed nails, and, remaining unshaken in the faith, he was sentenced to undergo capital punishment. The place where he reposes is called after him Sergiopolis, and, on account of the signal miracles wrought in it, is honored by a great concourse of Christians.",
    "mr:1007-marcellus": "At Rome, the holy martyrs Marcellus and Apuleius, who at first followed Simon Magus, but seeing the wonders which the Lord performed by the apostle Peter, abandoned Simon, and embraced the apostolical doctrine. After the death of the Apostles, under the ex-consul Aurelian, they won the crown of martyrdom, and were buried near the city.",
    "mr:1007-julia": "Also, in the province of the Euphrates, St. Julia, virgin, who endured martyrdom under the governor Marcian.",
@@ -218,7 +218,7 @@
    "mr:1016-eliphius": "At Cologne, St. Eliphius, martyr, under Julian the Apostate.",
    "mr:1016-bercharius": "Also, St. Bercharius, abbot and martyr.",
    "mr:1016-ambrosius": "Near Bourges, St. Ambrose, bishop of Cahors.",
-   "mr:1016-lullus-moguntiae": "At Mayence, St. Lullus, bishop and confessor.",
+   "mr:1016-lullus": "At Mayence, St. Lullus, bishop and confessor.",
    "mr:1016-florentinus": "At Treves, St. Florentinus, bishop.",
    "mr:1016-gallus": "At Arbon, in Switzerland, St. Gall, abbot, disciple of blessed Columban.",
    "mr:1016-victor-iii": "On Mount Cassino, blessed Victor III., who succeeded Gregory VII. in the papal chair and threw new lustre round the Holy See by the signal triumph he gained over the Saracens through the divine assistance. The veneration paid to him from time immemorial Pope Leo XIII. approved and confirmed.",
@@ -300,7 +300,7 @@
    "mr:1022-cordula": "At Cologne, St. Cordula, one of the companions of St. Ursula, who, being terrified at the torments and slaughter of the other virgins, hid herself, but soon repenting, came forward the next day, and last of all received the crown of martyrdom.",
    "mr:1022-abercius": "At Hierapolis, in Phrygia, St. Abercius, bishop, who flourished under the emperor Marcus Antoninus.",
    "mr:1022-melanius": "At Rouen, St. Melanius, bishop, who was ordained by pope St. Stephen, and sent thither to preach the Gospel.",
-   "mr:1022-donatus-scotus-tuscia": "In Tuscany, St. Donatus, of Scotland, bishop of Fiesoli.",
+   "mr:1022-donatus-scotus": "In Tuscany, St. Donatus, of Scotland, bishop of Fiesoli.",
    "mr:1022-verecundus": "At Verona, St. Verecundus, bishop and confessor.",
    "mr:1022-maria-salome": "At Jerusalem, St. Mary Salome, who, as we read in the Gospel, piously attended to the burial of our Lord."
   }
@@ -355,7 +355,7 @@
    "mr:1026-quodvultdeus": "The same day, St. Quodvultdeus, bishop of Carthage. By the Arian king Genseric, he and his clergy were put on board of leaking boats without oars or sails, but beyond all expectations he landed at Naples, and there in exile died a confessor.",
    "mr:1026-rusticus": "At Narbonne, St. Rusticus, bishop and confessor, who flourished in the time of the emperors Valentinian and Leo.",
    "mr:1026-gaudiosus": "At Salerno, St. Gaudiosus, bishop.",
-   "mr:1026-fulcus-papiae": "At Pavia, St. Fulk, bishop.",
+   "mr:1026-fulcus": "At Pavia, St. Fulk, bishop.",
    "mr:1026-bernwardus": "At Hildesheim, in Saxony, St. Bernward, bishop and confessor, who was ranked among the saints by Celestine III.",
    "mr:1026-quadragesimus-subdiaconus": "Also, St. Quadragesimus, sub-deacon, who raised a dead man to life."
   }

@@ -131,7 +131,7 @@
  "10": {
   "titulus": "10 Januarii Quarto Idus Januarii. vij. E",
   "elogia": {
-   "mr:0110-paulus-thebaide": "In Thebaide natalis beati Pauli, primi Eremitae, Confessoris, qui, a sextodecimo aetatis suae anno usque ad centesimum decimum tertium, solus in eremo permansit; cujus animam, inter Apostolorum et Prophetarum choros, ad caelum ferri ab Angelis sanctus Antonius vidit. Ejus autem festivitas decimo octavo Kalendas Februarii celebratur.",
+   "mr:0110-paulus": "In Thebaide natalis beati Pauli, primi Eremitae, Confessoris, qui, a sextodecimo aetatis suae anno usque ad centesimum decimum tertium, solus in eremo permansit; cujus animam, inter Apostolorum et Prophetarum choros, ad caelum ferri ab Angelis sanctus Antonius vidit. Ejus autem festivitas decimo octavo Kalendas Februarii celebratur.",
    "mr:0110-nicanoris": "In Cypro beati Nicanoris, qui fuit unus de septem primis Diaconis; atque, gratia fidei et virtute admirandus, gloriosissime coronatus est.",
    "mr:0110-agathon": "Romae sancti Agathonis Papae, qui, sanctitate et doctrina conspicuus, quievit in pace.",
    "mr:0110-willhelmus": "Bituricis, in Aquitania, sancti Willhelmi, Episcopi et Confessoris, signis et virtutibus clari; quem Honorius Papa Tertius in Sanctorum canonem adscripsit.",
@@ -197,7 +197,7 @@
    "mr:0114-malachia-propheta": "In Judaea sancti Malachiae Prophetae.",
    "mr:0114-triginta-monachi-inmonte": "In monte Sina sanctorum triginta octo Monachorum, a Saracenis ob Christi fidem interfectorum.",
    "mr:0114-monachi-raithi": "In Rhaithi regione, in Aegypto, sanctorum quadraginta trium Monachorum, qui, pro Christiana religione, a Blemmiis occisi sunt.",
-   "mr:0114-datius-mediolani": "Mediolani sancti Datii, Episcopi et Confessoris; cujus meminit beatus Gregorius Papa.",
+   "mr:0114-datius": "Mediolani sancti Datii, Episcopi et Confessoris; cujus meminit beatus Gregorius Papa.",
    "mr:0114-euphrasius": "In Africa sancti Euphrasii Episcopi.",
    "mr:0114-gregorius-thaumaturgus": "Neocaesareae, in Ponto, sanctae Macrinae, discipulae beati Gregorii Thaumaturgi, et aviae sancti Basilii, quae eumdem Basilium educavit."
   },
@@ -207,7 +207,7 @@
   "titulus": "15 Januarii Decimo octavo Kalendas Februarii. x. C",
   "elogia": {
    "mr:0115-paulus": "Sancti Pauli, primi Eremitae, Confessoris, qui quarto Idus Januarii inter beatorum agmina translatus fuit.",
-   "mr:0115-maurus-in": "In territorio Andegavensi beati Mauri Abbatis, qui fuit discipulus sancti Benedicti; et, hujus disciplinis usque ab infantia eruditus, quantum in eis profecerit, inter alia quae apud eum positus gessit (res nova et post Petrum fere inusitata), pedibus super aquas incedens patefecit. In Gallias inde ab ipso Benedicto directus, ibi, constructo celebri monasterio, cui quadraginta annis praefuit, miraculorum gloria clarus, in pace quievit.",
+   "mr:0115-maurus": "In territorio Andegavensi beati Mauri Abbatis, qui fuit discipulus sancti Benedicti; et, hujus disciplinis usque ab infantia eruditus, quantum in eis profecerit, inter alia quae apud eum positus gessit (res nova et post Petrum fere inusitata), pedibus super aquas incedens patefecit. In Gallias inde ab ipso Benedicto directus, ibi, constructo celebri monasterio, cui quadraginta annis praefuit, miraculorum gloria clarus, in pace quievit.",
    "mr:0115-habacuc-et-michaea-prophetarum": "In Judaea sanctorum Habacuc et Michaeae Prophetarum, quorum corpora, sub Theodosio seniore, divina revelatione sunt reperta.",
    "mr:0115-ephisius": "Carali, in Sardinia, sancti Ephisii Martyris, qui, in persecutione Diocletiani, sub Flaviano Judice, plurimis tormentis divina virtute superatis, demum, abscissis cervicibus, victor migravit in caelum.",
    "mr:0115-secundina": "Anagniae sanctae Secundinae, Virginis et Martyris; quae sub Decio Imperatore passa est.",
@@ -222,7 +222,7 @@
  "16": {
   "titulus": "16 Januarii Decimo septimo Kalendas Februarii. ix. D",
   "elogia": {
-   "mr:0116-marcellus-primus-romae": "Romae, via Salaria, natalis sancti Marcelli Primi, Papae et Martyris; qui, ob catholicae fidei confessionem, jubente Maxentio tyranno, primo caesus est fustibus, deinde ad servitium animalium cum custodia publica deputatus, et ibidem, serviendo indutus amictu cilicino, defunctus est.",
+   "mr:0116-marcellus-primus": "Romae, via Salaria, natalis sancti Marcelli Primi, Papae et Martyris; qui, ob catholicae fidei confessionem, jubente Maxentio tyranno, primo caesus est fustibus, deinde ad servitium animalium cum custodia publica deputatus, et ibidem, serviendo indutus amictu cilicino, defunctus est.",
    "mr:0116-berardus-et-socii": "Marrochii, in Africa, passio sanctorum quinque Protomartyrum Ordinis Minorum, scilicet Berardi, Petri atque Othonis Sacerdotum, Accursii et Adjuti Laicorum; qui, ob Christianae fidei praedicationem ac Mahumeticae reprobationem legis, post varia tormenta et ludibria, a Saracenorum Rege, scissis gladio capitibus, enecati sunt.",
    "mr:0116-mela": "Rhinocoluras, in Aegypto, sancti Melae Episcopi, qui, sub Valente exsilium et alia gravia pro fide catholica passus, in pace quievit.",
    "mr:0116-honoratus": "Arelate, in Gallia, sancti Honorati, Episcopi et Confessoris; cujus vita tam doctrina quam miraculis fuit illustris.",

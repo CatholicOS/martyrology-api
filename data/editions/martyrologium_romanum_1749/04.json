@@ -155,7 +155,7 @@
    "mr:0413-justinus-philosophus": "Romae, in persecutione Marci Antonini Veri et Lucii Aurelii Commodi, passio sancti Justini, Philosophi et Martyris; qui, cum secundum librum pro religionis nostrae defensione praefatis Imperatoribus porrexisset, eamque ibidem disputando strenue propugnasset, Crescentis Cynici, cujus vitam et mores nefarios redarguerat, insidiis accusatus quod Christianus esset, remunerationem linguae fidelis, martyrii munus accepit. Ipsius tamen festum sequenti die recolitur.",
    "mr:0413-carpus-et-socii": "Pergami, in Asia, in eadem persecutione, natalis sanctorum Martyrum Carpi, Thyatirensis Episcopi; Papyli Diaconi, et Agathonicae, ejusdem Papyli sororis et optimae feminae, atque Agathodori, eorum famuli, aliorumque multorum. Hi omnes, post varios cruciatus, pro beatis confessionibus martyrio coronati sunt.",
    "mr:0413-maximus-quinctilianus-et-dada": "Dorostori, in Mysia inferiore, passio sanctorum Maximi, Quinctiliani et Dadae, in persecutione Diocletiani.",
-   "mr:0413-ursi": "Ravennae sancti Ursi, Episcopi et Confessoris."
+   "mr:0413-ursus": "Ravennae sancti Ursi, Episcopi et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -267,7 +267,7 @@
   "titulus": "22 Aprilis Decimo Kalendas Maji. iij. C",
   "elogia": {
    "mr:0422-soter": "Romae, via Appia, natalis sancti Soteris, Papae et Martyris.",
-   "mr:0422-caji": "Item Romae sancti Caji, Papae et Martyris; qui martyrio coronatus est sub Diocletiano Principe.",
+   "mr:0422-caius": "Item Romae sancti Caji, Papae et Martyris; qui martyrio coronatus est sub Diocletiano Principe.",
    "mr:0422-apellis-et-lucius": "Smyrnae sanctorum Apellis et Lucii, ex primis Christi discipulis.",
    "mr:0422-plurimi-martyres-eodem": "Eodem die sanctorum plurimorum Martyrum, qui, sequenti anno post obitum Simeonis, annuo item die quo passionis Dominicae memoria celebrabatur, per totam Persidis regionem, pro Christi nomine, sub Rege Sapore, gladio caedi jussi sunt. In quo fidei certamine passus est Azades eunuchus, Regi carissimus; Milles Episcopus, sanctitate et miraculorum virtute insignis; Acepsimas Episcopus, cum Presbytero suo Jacobo, item Aithala et Josepho Presbyteris, Azadane et Abdieso Diaconis, et compluribus aliis Clericis; Mareas quoque et Bicor Episcopi, cum aliis viginti Episcopis, et Clericis fere ducentis quinquaginta, Monachis etiam et sacris Virginibus plurimis. Has inter Virgines fuit etiam sancti Simeonis Episcopi soror, nomine Tarbula, cum pedissequa sua; quae, stipitibus alligatae serraque scissae, crudelissime necatae sunt.",
    "mr:0422-parmenius-helimena-et-chrysotelus": "Item in Perside sanctorum Parmenii, Helimenae et Chrysoteli Presbyterorum, Lucae et Mucii Diaconorum, quorum triumphus martyrii in passione sanctorum Abdon et Sennen habetur.",
@@ -308,7 +308,7 @@
   "titulus": "25 Aprilis Septimo Kalendas Maji. *. F",
   "elogia": {
    "mr:0425-petrum": "Romae Litaniae majores ad sanctum Petrum.",
-   "mr:0425-marcus-evangelista-hic": "Alexandriae natalis beati Marci Evangelistae. Hic, discipulus et interpres Apostoli Petri, rogatus Romae a fratribus scripsit Evangelium, quo assumpto, perrexit in Aegyptum, primusque Alexandriae Christum annuntians, constituit Ecclesiam; ac postea, pro fide Christi tentus, funibus vinctus et per saxa raptatus, graviter afflictus est; deinde, reclusus in carcere, primo angelica visitatione confortatus est, et demum, ipso Domino sibi apparente, ad caelestia regna vocatus, octavo Neronis anno.",
+   "mr:0425-marcus": "Alexandriae natalis beati Marci Evangelistae. Hic, discipulus et interpres Apostoli Petri, rogatus Romae a fratribus scripsit Evangelium, quo assumpto, perrexit in Aegyptum, primusque Alexandriae Christum annuntians, constituit Ecclesiam; ac postea, pro fide Christi tentus, funibus vinctus et per saxa raptatus, graviter afflictus est; deinde, reclusus in carcere, primo angelica visitatione confortatus est, et demum, ipso Domino sibi apparente, ad caelestia regna vocatus, octavo Neronis anno.",
    "mr:0425-anianus": "Item Alexandriae sancti Aniani Episcopi, qui, beati Marci discipulus ejusque in Episcopatu successor, clarus virtutibus quievit in Domino.",
    "mr:0425-stephanus": "Antiochiae sancti Stephani, Episcopi et Martyris, qui ab haereticis Synodum Chalcedonensem impugnantibus, multa passus, in Orontem fluvium praecipitatus est, tempore Zenonis Imperatoris.",
    "mr:0425-evodius-et-socii": "Syracusis, in Sicilia, sanctorum Martyrum fratrum Evodii, Hermogenis et Callistae.",

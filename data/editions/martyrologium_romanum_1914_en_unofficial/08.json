@@ -304,7 +304,7 @@
    "mr:0823-claudius-et-socii": "At Aegeae, in Cilicia, the holy martyrs Claudius, Asterius, and Neon, brothers, who were accused of being Christians by their step-mother, under the emperor Diocletian, and the governor Lysias, and after enduring bitter torments, were fastened to a cross, and thus conquered and triumphed with Christ. After them suffered Domnina and Theonilla.",
    "mr:0823-timotheus-et-apollinaris": "At Rheims, in France, the birthday of the Saints Timothy and Apollinaris, who merited to enter the heavenly kingdom by consummating their martyrdom in that city.",
    "mr:0823-lugduni-in-gallia": "At Lyons, the holy martyrs Minervus, and Eleazar with his eight sons.",
-   "mr:0823-luppus-item": "Also, St. Luppus, martyr, who, though a slave, enjoyed the liberty of Christ, and was likewise deemed worthy of the crown of martyrdom.",
+   "mr:0823-luppus": "Also, St. Luppus, martyr, who, though a slave, enjoyed the liberty of Christ, and was likewise deemed worthy of the crown of martyrdom.",
    "mr:0823-zachaeus": "At Jerusalem, St. Zaccheus, bishop, who governed the church of that city the fourth after the blessed apostle James.",
    "mr:0823-theona": "At Alexandria, St. Theonas, bishop and confessor.",
    "mr:0823-victor": "At Utica, in Africa, blessed Victor, bishop.",
@@ -330,7 +330,7 @@
  "25": {
   "titulus": "The Twenty-fifth Day of August",
   "elogia": {
-   "mr:0825-ludovicus-noni": "At Paris, St. Louis, confessor, king of France, illustrious by the holiness of his life and the fame of his miracles.",
+   "mr:0825-ludovicus-nonus": "At Paris, St. Louis, confessor, king of France, illustrious by the holiness of his life and the fame of his miracles.",
    "mr:0825-eusebius-et-socii": "At Rome, in the time of the emperor Commodus, the holy martyrs Eusebius, Pontian, Vincent, and Peregrinus, who were first racked, distended by ropes, then beaten with rods and burned on their sides. As they continued faithfully to praise Christ, they were scourged with leaded whips until they expired.",
    "mr:0825-genesius-item": "Also, at Rome, St. Genesius, martyr, who embraced the profession of actor while he was yet a Pagan. One day he was deriding the Christian mysteries in the theatre in the presence of the emperor Diocletian; but by the inspiration of God he was suddenly converted to the faith and baptized. By the command of the emperor, he was forthwith most cruelly beaten with rods, then racked, and a long time lacerated with iron hooks, and burned with fire-brands. As he remained firm in the faith of Christ, and said: “There is no king besides Christ. Should you kill me a thousand times, you shall not be able to take Him from my lips or my heart,” he was beheaded, and thus merited the palm of martyrdom.",
    "mr:0825-geruntius": "At Italica, in Spain, St. Gerontius, a bishop, who preached the Gospel in that country in apostolic times, and after many labors died in prison.",
@@ -398,7 +398,7 @@
    "mr:0829-euthy": "At Perugia, St. Euthymius, a Roman, who fled from the persecution of Diocletian with his wife and his son Crescentius, and there rested in the Lord.",
    "mr:0829-adelphus": "At Metz, St. Adelphus, bishop and confessor.",
    "mr:0829-medericus": "At Paris the demise of St. Merry, priest.",
-   "mr:0829-sebbus-anglia": "In England, St. Sebbi, king.",
+   "mr:0829-sebbus": "In England, St. Sebbi, king.",
    "mr:0829-basilla": "At Smyrna, the birthday of St. Basilla.",
    "mr:0829-sabina-tricassino": "In the vicinity of Troyes, St. Sabina, a virgin, celebrated for virtues and miracles."
   }

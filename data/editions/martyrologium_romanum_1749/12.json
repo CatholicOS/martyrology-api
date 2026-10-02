@@ -120,9 +120,9 @@
    "mr:1209-leocadia": "Toleti, in Hispania, natalis sanctae Leocadiae, Virginis et Martyris; quae, in persecutione Diocletiani Imperatoris, a Praefecto Hispaniarum Daciano inclusa carcere ac dire macerata, in eo tandem, cum gravissimos beatae Eulaliae et reliquorum Martyrum cruciatus audisset, impollutum spiritum, genibus in oratione positis, Christo reddidit.",
    "mr:1209-valeria": "Lemovicis, in Aquitania, sanctae Valeriae, Virginis et Martyris.",
    "mr:1209-proculus": "Veronae sancti Proculi Episcopi, qui, in persecutione Diocletiani, colaphis ac fustibus caesus, e civitate pulsus est, ac tandem, in Ecclesiam suam restitutus, quievit in pace.",
-   "mr:1209-syri": "Papiae sancti Syri, qui fuit primus ejusdem civitatis Episcopus, atque apostolicis signis et virtutibus claruit.",
+   "mr:1209-syrus": "Papiae sancti Syri, qui fuit primus ejusdem civitatis Episcopus, atque apostolicis signis et virtutibus claruit.",
    "mr:1209-julianus": "Apameae, in Syria, beati Juliani Episcopi, qui, tempore Severi, sanctitate refulsit.",
-   "mr:1209-petrus-fourier-graji": "Graji, in Burgundia, sancti Petri Fourier, qui Canonicus Regularis fuit Salvatoris Nostri, et Canonissarum Regularium Dominae Nostrae edocendis puellis Institutor; atque, virtutibus ac miraculis clarus, a Leone Decimo tertio, Pontifice Maximo, Sanctorum catalogo adjunctus est.",
+   "mr:1209-petrus-fourier": "Graji, in Burgundia, sancti Petri Fourier, qui Canonicus Regularis fuit Salvatoris Nostri, et Canonissarum Regularium Dominae Nostrae edocendis puellis Institutor; atque, virtutibus ac miraculis clarus, a Leone Decimo tertio, Pontifice Maximo, Sanctorum catalogo adjunctus est.",
    "mr:1209-gorgonia": "Petragoricis, in Gallia, sancti Cypriani Abbatis, magnae sanctitatis viri. Nazianzi, in Cappadocia, sanctae Gorgoniae, quae fuit beatae Nonnae filia, atque beatorum Gregorii Theologi et Caesarii soror, cujus ipse Gregorius virtutes et miracula conscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -214,7 +214,7 @@
    "mr:1216-valentinus": "Ravennae sanctorum Martyrum Valentini, magistri militum, ejusque filii Concordii, atque Navalis et Agricolae; qui, in persecutione Maximiani, pro Christo passi sunt.",
    "mr:1216-albina": "Formiis, in Campania, sanctae Albinae, Virginis et Martyris, sub Decio Imperatore.",
    "mr:1216-plurimae-virgines-africa": "In Africa passio plurimarum sanctarum Virginum, quae, in persecutione Wandalica, sub Ariano Rege Hunnerico, suspendia, pondera laminasque ignitas perpessae, martyrii agonem feliciter consummarunt.",
-   "mr:1216-ado-viennae": "Viennae, in Gallia, beati Adonis, Episcopi et Confessoris.",
+   "mr:1216-ado": "Viennae, in Gallia, beati Adonis, Episcopi et Confessoris.",
    "mr:1216-beanus": "In Hibernia sancti Beani Episcopi. Gazae, in Palaestina, sancti Irenionis Episcopi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -278,7 +278,7 @@
   "titulus": "21 Decembris Duodecimo Kalendas Januarii. iv. B",
   "elogia": {
    "mr:1221-thomas-apostolus": "Calaminae natalis beati Thomae Apostoli, qui Parthis, Medis, Persis et Hyrcanis Evangelium praedicavit; ac demum in Indiam pervenit, ibique, cum eos populos in Christiana religione instituisset, Regis jussu lanceis transfixus occubuit. Ipsius reliquiae primo ad urbem Edessam, in Mesopotamia, deinde Ortonam, apud Frentanos, translatae sunt.",
-   "mr:1221-petrus-canisius-friburgi": "Friburgi Helvetiorum item natalis sancti Petri Canisii, Sacerdotis e Societate Jesu et Confessoris, doctrina et sanctitate praeclari; qui, difficillimis Germaniae temporibus, fidem catholicam strenue defendit ac propagavit. Eum vero Pius Undecimus, Pontifex Maximus, Sanctorum catalogo adscripsit, simulque Doctorem universalis Ecclesiae declaravit, et ipsius festum quinto Kalendas Maji agendum esse decrevit.",
+   "mr:1221-petrus-canisius": "Friburgi Helvetiorum item natalis sancti Petri Canisii, Sacerdotis e Societate Jesu et Confessoris, doctrina et sanctitate praeclari; qui, difficillimis Germaniae temporibus, fidem catholicam strenue defendit ac propagavit. Eum vero Pius Undecimus, Pontifex Maximus, Sanctorum catalogo adscripsit, simulque Doctorem universalis Ecclesiae declaravit, et ipsius festum quinto Kalendas Maji agendum esse decrevit.",
    "mr:1221-anastasius": "Antiochiae sancti Anastasii, Episcopi et Martyris; qui, Phocae Imperatoris tempore, a Judaeis, in seditione ab ipsis contra Christianos facta, saevissime necatus est.",
    "mr:1221-glycerius": "Nicomediae sancti Glycerii Presbyteri, qui, in persecutione Diocletiani, multis tormentis vexatus, demum, in ignem conjectus, martyrium consummavit.",
    "mr:1221-ioannes-et-festus": "In Tuscia sanctorum Martyrum Joannis et Festi.",

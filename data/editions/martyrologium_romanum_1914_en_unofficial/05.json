@@ -131,7 +131,7 @@
   "elogia": {
    "mr:0510-antoninus": "St. Antoninus, confessor and archbishop of Florence, whose birthday is the 2d of May.",
    "mr:0510-gordianus": "At Rome, on the Latin road, the birthday of the holy martyrs Gordian and Epimachus. In the time of Julian the Apostate, the former was a long time scourged and finally decapitated for confessing the name of Christ. He was buried at night by the Christians, in a crypt to which, shortly before, the remains of the blessed martyr Epimachus had been translated from Alexandria, where he had been martyred for the faith of Christ.",
-   "mr:0510-job-propheta": "In the land of Hus, the holy prophet Job, a man of wonderful patience.",
+   "mr:0510-iob": "In the land of Hus, the holy prophet Job, a man of wonderful patience.",
    "mr:0510-calepodius": "At Rome, the blessed priest and martyr Calepodius, who was killed with the sword, by order of the emperor Alexander. His body was dragged through the city and thrown into the Tiber. It was afterwards found and buried by Pope Callistus. The consul Palmatius was also beheaded with his wife, his sons, and forty-two of both sexes belonging to his household; likewise, the senator Simplicius with his wife, and sixty-eight of his house; Felix also with his wife Blanda. The heads of all these martyrs were exposed over different gates of the city, to terrify the Christians.",
    "mr:0510-quartus-et-quinctus": "Also, at Rome, on the Latin way, the birthday of the holy martyrs Quartus and Quinctus, whose bodies were translated to Capua.",
    "mr:0510-alphius-et-socii": "At Lentini, in Sicily, the holy martyrs Alphius, Philadelpus, and Cyrinus.",
@@ -245,7 +245,7 @@
    "mr:0518-felix": "At Spoleto, St. Felix, a bishop, who obtained the palm of martyrdom under the emperor Maximian.",
    "mr:0518-potamon-et-socii": "In Egypt, St. Potamon, bishop, a confessor under Maximian Galerius, and afterwards a martyr under the emperor Constantius, and the Arian governor Philagrius.",
    "mr:0518-theodotus-et-thecusa": "At Ancyra, in Galatia, the martyrs St. Theodotus, and the saintly virgins Thecusa, his aunt, Alexandra, Claudia, Faina, Euphrasia, Matrona, and Julitta. They were at first taken to a place of debauch, but the power of God having preserved them from evil, they had stones tied to their necks, and were plunged into a lake. For gathering their remains and burying them honorably, Theodotus was arrested by the governor, and after being horribly lacerated, was put to the sword, and thus received the crown of martyrdom.",
-   "mr:0518-ericus-upsali": "At Upsal, in Sweden, St. Eric, king and martyr.",
+   "mr:0518-ericus": "At Upsal, in Sweden, St. Eric, king and martyr.",
    "mr:0518-felix-de-cantalicio": "At Rome, St. Felix, confessor, of the Order of Capuchin Minorites, celebrated for his evangelical simplicity and charity. He was inscribed on the roll of Saints by the Sovereign Pontiff, Clement XI."
   }
  },
@@ -259,7 +259,7 @@
    "mr:0519-philoterus-m": "At Nicomedia, the martyr St. Philoterus, son of the proconsul Pacian, who after much suffering under the emperor Diocletian, received the crown of martyrdom.",
    "mr:0519-sex-virgines-ibidem": "In the same city six holy virgins and martyrs. The principal one, named Cyriaca, having freely reproved Maximian for his impiety, was most severely scourged and lacerated, and then consumed with fire.",
    "mr:0519-dunstanus": "At Canterbury, St. Dunstan, bishop.",
-   "mr:0519-ivo-lohaneti": "In Bretagne, St. Ives, priest and confessor, who, for the love of Christ, defended the interests of orphans, widows, and the poor."
+   "mr:0519-ivo": "In Bretagne, St. Ives, priest and confessor, who, for the love of Christ, defended the interests of orphans, widows, and the poor."
   }
  },
  "20": {
@@ -348,7 +348,7 @@
    "mr:0525-bonifatius-iv": "At Rome, pope St. Boniface IV., who dedicated the Pantheon to the honor of blessed Mary of the Martyrs.",
    "mr:0525-zenobius": "At Florence, the birthday of St. Zenobius, bishop of that city, renowned for holiness of life and glorious miracles.",
    "mr:0525-aldhelmus": "In England, St. Aldhelm, bishop of Sherburn.",
-   "mr:0525-leo-in": "In the territory of Troyes, St. Leo, confessor.",
+   "mr:0525-leo": "In the territory of Troyes, St. Leo, confessor.",
    "mr:0525-translatio-sancti-francisci": "At Assisi, in Umbria, the translation of St. Francis, confessor, in the time of Pope Gregory IX.",
    "mr:0525-maria-jacobus": "At Veroli, in Campania, the translation of St. Mary, mother of James, whose sacred body is rendered illustrious by many miracles."
   }

@@ -73,7 +73,7 @@
    "mr:1006-romanus": "Antisiodori sancti Romani, Episcopi et Martyris.",
    "mr:1006-marcellus-et-socii": "Capuae natalis sanctorum Martyrum Marcelli, Casti, Aemilii et Saturnini.",
    "mr:1006-treviris-commemoratio-innumerabilium": "Treviris commemoratio innumerabilium fere Martyrum, qui, in persecutione Diocletiani, sub Rictiovaro Praeside, ob Christi fidem, vario mortis genere necati sunt.",
-   "mr:1006-fideus-agenni": "Agenni, in Gallia, natalis sanctae Fidei, Virginis et Martyris; cujus exemplo beatus Caprasius, ad martyrium animatus, agonem suum tertiodecimo Kalendas Novembris feliciter consummavit.",
+   "mr:1006-fideus": "Agenni, in Gallia, natalis sanctae Fidei, Virginis et Martyris; cujus exemplo beatus Caprasius, ad martyrium animatus, agonem suum tertiodecimo Kalendas Novembris feliciter consummavit.",
    "mr:1006-erotidis": "Item sanctae Erotidis Martyris, quae, Christi amore succensa, ignis superavit incendium.",
    "mr:1006-maria-francisca-a-vulneribus-domini": "Opitergii, in Venetorum finibus, sancti Magni Episcopi, cujus corpus Venetiis requiescit. Neapoli, in Campania, depositio sanctae Mariae-Franciscae a Quinque Vulneribus Domini nostri Jesu Christi, Virginis, ex tertio Ordine sancti Francisci, quae, virtutibus et miraculis clara, a Pio Papa Nono sanctis Virginibus adscripta fuit."
   },
@@ -83,7 +83,7 @@
   "titulus": "7 Octobris Nonis Octobris. vij. B",
   "elogia": {
    "mr:1007-maria-de-rosario": "Festum sacratissimi Rosarii beatae Mariae Virginis; itemque sanctae Mariae de Victoria commemoratio, quam sanctus Pius Quintus, Pontifex Maximus, ob insignem victoriam a Christianis bello navali, ejusdem sanctissimae Dei Genitricis auxilio, hac ipsa die de Turcis reportatam, quotannis fieri instituit.",
-   "mr:1007-marcus-romae": "Romae, via Ardeatina, depositio sancti Marci, Papae et Confessoris.",
+   "mr:1007-marcus": "Romae, via Ardeatina, depositio sancti Marci, Papae et Confessoris.",
    "mr:1007-sergius-et-bacchus": "In Provincia quae nuncupatur Augusta Euphratesia, sanctorum Martyrum Sergii et Bacchi, nobilium Romanorum, sub Maximiano Imperatore. Ex his Bacchus tamdiu nervis crudis caesus est, quoadusque, toto corpore discissus, in Christi confessione emitteret spiritum; Sergius vero clavatis cothurnis pedes indutus, et, cum in fide fixus maneret, data sententia, jussus est decollari. Beati autem Sergii nomine locus ubi quiescit, Sergiopolis appellatus est, et, ob praeclara miracula, frequenti Christianorum concursu honoratur.",
    "mr:1007-marcellus": "Romae sanctorum Martyrum Marcelli et Apuleji, qui prius quidem Simoni mago adhaeserunt; sed, videntes mirabilia quae per Apostolum Petrum Dominus operabatur, ambo, relicto Simone, se doctrinae Apostolicae tradiderunt, ac, post passionem Apostolorum, sub Aureliano Consulari, coronam martyrii reportarunt, sepultique sunt non longe ad Urbe.",
    "mr:1007-julia": "Item apud Augustam Euphratesiam sanctae Juliae Virginis, quae, sub Marciano Praeside, martyrium consummavit.",
@@ -224,7 +224,7 @@
    "mr:1016-saturninus-nereus": "Item sanctorum Saturnini, Nerei et aliorum trecentorum sexaginta quinque Martyrum.",
    "mr:1016-eliphius": "Coloniae Agrippinae sancti Eliphii Martyris, sub Juliano Apostata.",
    "mr:1016-ambrosius": "In territorio Bituricensi sancti Ambrosii, Episcopi Caturcensis.",
-   "mr:1016-lullus-moguntiae": "Moguntiae sancti Lulli, Episcopi et Confessoris.",
+   "mr:1016-lullus": "Moguntiae sancti Lulli, Episcopi et Confessoris.",
    "mr:1016-florentinus": "Treviris sancti Florentini Episcopi.",
    "mr:1016-gerardus-maiella": "Apud Arbonam, in Germania, sancti Galli Abbatis, qui fuit discipulus beati Columbani. Muri, in Lucania, sancti Gerardi Majella Confessoris, Laici professi Congregationis a sanctissimo Redemptore nuncupatae, quem, miraculis clarum, Pius Decimus, Pontifex Maximus, Sanctorum albo accensuit."
   },
@@ -306,7 +306,7 @@
    "mr:1022-nunilo-et-alodia": "Oscae, in Hispania, sanctarum Virginum Nunilonis et Alodiae sororum, quae, a Saracenis ob fidei confessionem capitali sententia punitae, martyrium consummarunt.",
    "mr:1022-abercius": "Hierapoli, in Phrygia, sancti Abercii Episcopi, qui sub Marco Antonino Imperatore claruit.",
    "mr:1022-melanius": "Rotomagi sancti Melanii Episcopi, qui, a sancto Stephano Papa ordinatus, illuc ad praedicandum Evangelium missus est.",
-   "mr:1022-donatus-scotus-tuscia": "In Tuscia sancti Donati Scoti, Episcopi Faesulani.",
+   "mr:1022-donatus-scotus": "In Tuscia sancti Donati Scoti, Episcopi Faesulani.",
    "mr:1022-verecundus": "Veronae sancti Verecundi, Episcopi et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -360,7 +360,7 @@
    "mr:1026-rogatianus": "Romae sancti Evaristi, Papae et Martyris, qui Dei Ecclesiam, sub Hadriano Imperatore, suo sanguine purpuravit. In Africa sanctorum Martyrum Rogatiani Presbyteri, et Felicissimi, qui, in persecutione Valeriani et Gallieni, illustri martyrio coronati sunt; de quibus etiam scribit sanctus Cyprianus in epistola ad Confessores. Nicomediae sanctorum Martyrum Luciani, Florii et Sociorum.",
    "mr:1026-rusticus": "Narbone, in Gallia, sancti Rustici, Episcopi et Confessoris; qui claruit temporibus Valentiniani et Leonis Imperatorum.",
    "mr:1026-gaudiosus": "Apud Salernum sancti Gaudiosi Episcopi.",
-   "mr:1026-fulcus-papiae": "Papiae sancti Fulci Episcopi.",
+   "mr:1026-fulcus": "Papiae sancti Fulci Episcopi.",
    "mr:1026-quadragesimus-subdiaconus": "Item sancti Quadragesimi Subdiaconi, qui et mortuum resuscitavit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
