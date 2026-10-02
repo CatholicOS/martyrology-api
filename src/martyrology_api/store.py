@@ -57,7 +57,9 @@ def _elogium(cid: str, text: str | None, registry: Registry) -> Elogium:
     )
 
 
-def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> dict[int, DayData]:
+def parse_month_file(
+    raw: dict, month: int, shape: str, registry: Registry, edition_id: str | None = None
+) -> dict[int, DayData]:
     days: dict[int, DayData] = {}
     if shape == "day-structured":
         for day_key, obj in raw.items():
@@ -91,7 +93,11 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
         for e in registry.entries.values():
             if e.deprecated or e.month != month or e.id not in raw:
                 continue
-            by_day.setdefault(e.day, []).append(e)
+            # The edition's own placement (2004 family); None: it does not print it.
+            placed = e.in_edition(edition_id) if edition_id is not None else e
+            if placed is None:
+                continue
+            by_day.setdefault(placed.day, []).append(placed)
         for day, entries in by_day.items():
             entries.sort(
                 key=lambda e: (
@@ -148,7 +154,7 @@ class Store:
                     isinstance(obj.get("elogia"), list) for obj in raw.values()
                 ):
                     self._unaligned_editions.add(edition_id)
-                result = parse_month_file(raw, month, shape, self.registry)
+                result = parse_month_file(raw, month, shape, self.registry, edition_id)
         self._months[key] = result
         return result
 

@@ -56,3 +56,18 @@ def test_id_helpers():
     assert is_canonical_id("mr:0102-argeus-et-socii")
     assert not is_canonical_id("mr:102-x")
     assert not is_canonical_id("foo:0102-x")
+
+
+def test_in_edition_applies_overrides(crmedr_path, clbdr_path):
+    reg = Registry.load(crmedr_path, clbdr_path)
+    greg = reg.entries["mr:0103-gregorius"]
+    assert (greg.entry, greg.asterisk) == (3, False)
+    it = greg.in_edition("martyrologium_romanum_2004_it_IT")
+    assert it is not None and (it.entry, it.asterisk) == (2, True)
+    assert greg.in_edition("martyrologium_romanum_2004") is greg
+    assert reg.entries["mr:0103-abrunculus"].in_edition("martyrologium_romanum_2004_it_IT") is None
+    explicit_null = reg.entries["mr:0103-sine-numero"].in_edition(
+        "martyrologium_romanum_2004_it_IT"
+    )
+    assert explicit_null is not None and explicit_null.entry is None
+    assert reg.entries["mr:0105-durando"].same_eulogy == ("mr:0106-durando",)

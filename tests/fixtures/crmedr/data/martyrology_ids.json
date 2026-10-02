@@ -9,6 +9,20 @@
     {"id": "mr:0228-romanus", "month": 2, "day": 28, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
     {"id": "mr:0229-oswaldus", "month": 2, "day": 29, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
     {"id": "mr:0304-nullus-entry", "month": 3, "day": 4, "entry": null, "asterisk": false, "country": null, "unnumbered": false},
-    {"id": "mr:0304-primus", "month": 3, "day": 4, "entry": 1, "asterisk": false, "country": null, "unnumbered": false}
+    {"id": "mr:0304-primus", "month": 3, "day": 4, "entry": 1, "asterisk": false, "country": null, "unnumbered": false},
+    {"id": "mr:0103-hermes", "month": 1, "day": 3, "entry": 1, "asterisk": false, "country": null},
+    {"id": "mr:0103-abrunculus", "month": 1, "day": 3, "entry": 2, "asterisk": true, "country": "FR",
+     "editions": {"martyrologium_romanum_2004_it_IT": {"absent": true}}},
+    {"id": "mr:0103-gregorius", "month": 1, "day": 3, "entry": 3, "asterisk": false, "country": null,
+     "editions": {"martyrologium_romanum_2004_it_IT": {"entry": 2, "asterisk": true}}},
+    {"id": "mr:0103-sine-numero", "month": 1, "day": 3, "entry": 4, "asterisk": false, "country": null,
+     "editions": {"martyrologium_romanum_2004_it_IT": {"entry": null}}},
+    {"id": "mr:0105-durando", "month": 1, "day": 5, "entry": 1, "asterisk": true, "country": "IT",
+     "same_eulogy": ["mr:0106-durando"],
+     "editions": {"martyrologium_romanum_2004_it_IT": {"absent": true}}},
+    {"id": "mr:0106-durando", "month": 1, "day": 6, "entry": 1, "asterisk": true, "country": "IT",
+     "same_eulogy": ["mr:0105-durando"],
+     "editions": {"martyrologium_romanum_2004": {"absent": true},
+                  "martyrologium_romanum_2004_en_unofficial": {"absent": true}}}
   ]
 }

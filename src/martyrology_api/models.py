@@ -78,6 +78,8 @@ class EulogyOut(BaseModel):
     anchor_day: str
     deprecated: bool
     editions: dict[str, EditionPlacementOut]
+    # The same eulogy printed by another edition on another day (other IDs).
+    same_eulogy: list[str] = []
 
 
 class GovernanceOut(BaseModel):

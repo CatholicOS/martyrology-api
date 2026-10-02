@@ -22,7 +22,7 @@ def test_month_universal(client):
     r = client.get("/api/v1/elogia/01")
     assert r.status_code == 200
     b = r.json()
-    assert set(b["days"]) == {"01", "02"}
+    assert set(b["days"]) == {"01", "02", "03", "05"}
     assert b["metadata"]["day"] is None
 
 
@@ -135,3 +135,14 @@ def test_root_service_document(client):
     assert b["name"] == "Roman Martyrology API"
     assert b["links"]["editions"] == "/api/v1/editions"
     assert b["links"]["docs"] == "/docs"
+
+
+def test_elogium_same_eulogy_and_placements(client):
+    r = client.get("/api/v1/elogium/mr:0105-durando")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["same_eulogy"] == ["mr:0106-durando"]
+    assert set(body["editions"]) == {"martyrologium_romanum_2004"}
+    twin = client.get("/api/v1/elogium/mr:0106-durando").json()
+    assert twin["editions"]["martyrologium_romanum_2004_it_IT"]["day_printed"] == "01-06"
+    assert "martyrologium_romanum_2004" not in twin["editions"]

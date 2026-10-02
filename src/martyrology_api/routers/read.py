@@ -245,4 +245,5 @@ async def get_elogium(
         anchor_day=f"{entry.month:02d}-{entry.day:02d}",
         deprecated=entry.deprecated,
         editions=placements,
+        same_eulogy=list(entry.same_eulogy),
     )
