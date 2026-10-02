@@ -66,7 +66,7 @@ def _edition_out(
         governance=governance_for(e.scope),
         availability=AvailabilityOut(status=status, note=note),
         aligned=store.aligned(e.id),
-        source=SourceOut.model_validate(src) if (src := store.source(e.id)) else None,
+        source=None if (src := store.source(e.id)) is None else SourceOut.model_validate(src),
     )
 
 

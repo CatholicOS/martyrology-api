@@ -1,4 +1,5 @@
 import pytest
+from pydantic import ValidationError
 
 
 @pytest.fixture
@@ -44,6 +45,20 @@ def test_editions_source(client):
     # No source.json beside the texts, or no texts at all: no source.
     assert eds["martyrologium_romanum_1914_en_unofficial"]["source"] is None
     assert eds["martyrologium_romanum_1584"]["source"] is None
+
+
+def test_editions_empty_source_is_invalid(make_client, data_paths, tmp_path):
+    # An empty source.json is a broken record, not a missing one: it must fail
+    # validation (title is required) rather than read as "no source".
+    src = data_paths[0] / "martyrologium_romanum_1749"
+    ed = tmp_path / "martyrologium_romanum_1749"
+    ed.mkdir()
+    for f in src.glob("[01]*.json"):
+        (ed / f.name).write_bytes(f.read_bytes())
+    (ed / "source.json").write_text("{}", encoding="utf-8")
+    client = make_client(data_path=str(tmp_path))
+    with pytest.raises(ValidationError, match="title"):
+        client.get("/api/v1/editions")
 
 
 def test_catalog_default(client):
