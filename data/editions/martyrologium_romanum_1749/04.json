@@ -61,7 +61,7 @@
  "6": {
   "titulus": "6 Aprilis Octavo Idus Aprilis. vij. A",
   "elogia": {
-   "mr:0406-petrus": "Mediolani passio sancti Petri, ex Ordine Praedicatorum, Martyris, qui ab haereticis, ob fidem catholicam, interemptus est. Ipsius tamen festivitas recolitur tertio Kalendas Maji.",
+   "mr:0406-petrus-veronensis": "Mediolani passio sancti Petri, ex Ordine Praedicatorum, Martyris, qui ab haereticis, ob fidem catholicam, interemptus est. Ipsius tamen festivitas recolitur tertio Kalendas Maji.",
    "mr:0406-methodius": "Velehradii, in Moravia, natalis sancti Methodii, Episcopi et Confessoris, qui, una cum sancto Cyrillo, item Episcopo et fratre suo, cujus natalis sextodecimo Kalendas Martii recensetur, multas Slavicas gentes earumque Reges ad fidem Christi perduxit. Horum autem Sanctorum festum Nonis Julii celebratur.",
    "mr:0408-timotheus-et-socii": "In Macedonia sanctorum Martyrum Timothei et Diogenis.",
    "mr:0406-centum-martyres-perside": "In Perside sanctorum centum viginti Martyrum.",
@@ -234,7 +234,7 @@
    "mr:1028-vincentius-et-socii": "Caucoliberi, in Hispania Tarraconensi, passio sancti Vincentii Martyris.",
    "mr:0419-socrates-et-dionysius": "Eodem die sanctorum Martyrum Socratis et Dionysii, qui lanceis confossi sunt.",
    "mr:0419-paphnutius": "Hierosolymis sancti Paphnutii Martyris.",
-   "mr:0419-leo": "Romae sancti Leonis Papae Noni, virtutum et miraculorum laude insignis.",
+   "mr:0419-leo-ix": "Romae sancti Leonis Papae Noni, virtutum et miraculorum laude insignis.",
    "mr:0419-georgius": "Antiochiae Pisidiae sancti Georgii Episcopi, qui, ob sanctarum Imaginum cultum, exsul occubuit.",
    "mr:0419-ursmarus": "In coenobio Laubiensi, in Belgio, sancti Ursmari Episcopi. Florentiae sancti Crescentii Confessoris, qui fuit discipulus beati Zenobii Episcopi."
   },

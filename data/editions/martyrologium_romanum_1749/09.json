@@ -242,7 +242,7 @@
    "mr:0917-justinus": "Romae, via Tiburtina, natalis sancti Justini, Presbyteri et Martyris; qui, in persecutione Valeriani et Gallieni, ob confessionis gloriam fuit insignis. Hic beati Pontificis Xysti Secundi, Laurentii, Hippolyti aliorumque plurimorum Sanctorum corpora sepelivit, ac demum, sub Claudio, martyrium consummavit.",
    "mr:0917-narcissus-et-crescention": "Item Romae sanctorum Martyrum Narcissi et Crescentionis.",
    "mr:0917-lambertus": "Apud Leodium, in Belgio, beati Lamberti, Episcopi Trajectensis, qui, cum regiam domum zelo religionis increpasset, a nocentibus innocens occisus est, sicque aulam regni caelestis perpetuo victurus intravit.",
-   "mr:0917-petrus-de-arbues-caesaraugustae": "Caesaraugustae, in Hispania, sancti Petri de Arbues, primi in Aragoniae regno Quaesitoris fidei; quem, a relapsis Judaeis ob eamdem, quam pro munere suo strenue tuebatur, catholicam fidem, immaniter trucidatum, sanctorum Martyrum catalogo [Beatus] Pius Papa Nonus adjunxit.",
+   "mr:0917-petrus-de-arbues": "Caesaraugustae, in Hispania, sancti Petri de Arbues, primi in Aragoniae regno Quaesitoris fidei; quem, a relapsis Judaeis ob eamdem, quam pro munere suo strenue tuebatur, catholicam fidem, immaniter trucidatum, sanctorum Martyrum catalogo [Beatus] Pius Papa Nonus adjunxit.",
    "mr:0917-socrates-et-stephanus": "In Britannia sanctorum Martyrum Socratis et Stephani.",
    "mr:0917-valerianus-et-socii": "Novioduni, in Galliis, sanctorum Martyrum Valeriani, Macrini et Gordiani.",
    "mr:0917-flocellus": "Augustoduni sancti Flocelli pueri, qui, sub Antonino Imperatore et Valeriano Praeside, multa passus, demum, a feris discerptus, martyrii coronam adeptus est.",
@@ -342,7 +342,7 @@
   "elogia": {
    "mr:0924-festum-beatae-mariae-virginis": "Festum beatae Mariae Virginis de Mercede nuncupatae, Ordinis redemptionis captivorum sub ejus nomine Institutricis, de cujus Apparitione agitur quarto Idus Augusti.",
    "mr:0924-anathalo": "Brixiae depositio sancti Anathalonis Episcopi, qui, beati Barnabae Apostoli discipulus, in ejus locum Episcopus Ecclesiae Mediolanensis successit.",
-   "mr:0924-gerardus": "In Pannonia sancti Gerardi, Episcopi Morisenae sedis et Martyris, Hungarorum Apostoli nuncupati, patricii Veneti; qui, cum e Chanadiensi oppido Albam Regalem se conferret, prope flumen Danubium ab infidelibus impetitus, lapidibus obrutus ac tandem lancea transfixus occubuit, sicque primus patriam nobili martyrio illustravit.",
+   "mr:0924-gerardus-sagredo": "In Pannonia sancti Gerardi, Episcopi Morisenae sedis et Martyris, Hungarorum Apostoli nuncupati, patricii Veneti; qui, cum e Chanadiensi oppido Albam Regalem se conferret, prope flumen Danubium ab infidelibus impetitus, lapidibus obrutus ac tandem lancea transfixus occubuit, sicque primus patriam nobili martyrio illustravit.",
    "mr:0924-andochius-et-socii": "Augustoduni natalis sanctorum Martyrum Andochii Presbyteri, Thyrsi Diaconi, et Felicis. Hi, a beato Polycarpo, Smyrnensi Episcopo, ab Oriente directi ad docendam Galliam, ibidem flagellis durissime caesi, ac tota die inversis manibus suspensi, et in ignem missi sunt, sed non combusti; tandem eorum colla vectibus feriuntur, et ita Martyres gloriosissime coronantur.",
    "mr:0924-paphnutius-et-sociorum": "In Aegypto passio sanctorum Paphnutii et Sociorum Martyrum. Ipse, vitam in solitudine agens, cum audiret multos Christianos in vinculis retineri, sponte, divino Spiritu concitus, Praefecto se offert, et Christianam religionem libere profitetur; a quo primum catenis ferreis constringitur, et in equuleo diutissime torquetur, deinde cum aliis plurimis ad Diocletianum mittitur, cujus jussu, ipse palmae affigitur, ceteri autem ferro necantur.",
    "mr:0924-quadraginta-martyres-chalcedone": "Chalcedone sanctorum quadraginta novem Martyrum, qui post martyrium sanctae Euphemiae, sub Diocletiano Imperatore, damnati ad bestias, et, cum ab iis divinitus liberi evasissent, demum, gladio percussi, migraverunt in caelum.",
@@ -428,7 +428,7 @@
    "mr:0930-leopardus": "Romae sancti Leopardi Martyris, qui ex Juliani Apostatae domesticis fuit; cui caput amputatum est, et corpus ejus Aquisgranum postea translatum.",
    "mr:0930-ursus-et-victor": "Solodori, in Gallia, passio sanctorum Martyrum Victoris et Ursi, ex gloriosa legione Thebaeorum, qui, sub Maximiano Imperatore, primum diris suppliciis cruciati, sed, caelesti super eos lumine coruscante, ruentibus in terram ministris, erepti; deinde in ignem missi, sed in nullo penitus laesi; novissime gladio consummati sunt.",
    "mr:0930-antoninus": "Placentiae sancti Antonini Martyris, ex eadem legione.",
-   "mr:0930-gregorius": "Eodem die sancti Gregorii, Episcopi magnae Armeniae, qui, sub Diocletiano, multa passus est; ac tandem, Constantini Magni Imperatoris tempore, in pace quievit.",
+   "mr:0930-gregorius-illuminator": "Eodem die sancti Gregorii, Episcopi magnae Armeniae, qui, sub Diocletiano, multa passus est; ac tandem, Constantini Magni Imperatoris tempore, in pace quievit.",
    "mr:0930-honorius": "Cantuariae, in Anglia, sancti Honorii, Episcopi et Confessoris. Romae sanctae Sophiae Viduae, matris sanctarum Virginum et Martyrum Fidei, Spei et Caritatis."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
