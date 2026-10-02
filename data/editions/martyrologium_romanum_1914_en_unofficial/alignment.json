@@ -1309,7 +1309,7 @@
    "method": "same-day",
    "score": 2.29
   },
-  "mr:0211-maria": {
+  "mr:0211-maria-de-lourdes": {
    "method": "same-day",
    "score": 1.9
   },
@@ -1605,7 +1605,7 @@
    "method": "same-day",
    "score": 1.41
   },
-  "mr:0220-eucherius-aurelianensis": {
+  "mr:0220-eucherius": {
    "method": "same-day",
    "score": 0.84
   },
@@ -1821,7 +1821,7 @@
    "method": "same-day",
    "score": 1.5
   },
-  "mr:0228-presbyteri-diaconi": {
+  "mr:0228-presbyteri-diaconi-plurimi-alexandriae": {
    "method": "override",
    "score": null
   },
@@ -2161,7 +2161,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0312-theophanes": {
+  "mr:0312-theophanes-chronographus": {
    "method": "same-day",
    "score": 1.72
   },
@@ -2497,7 +2497,7 @@
    "method": "same-day",
    "score": 1.25
   },
-  "mr:0323-turibius": {
+  "mr:0323-turibius-de-mogrovejo": {
    "method": "same-day",
    "score": 1.74
   },
@@ -3305,7 +3305,7 @@
    "method": "same-day",
    "score": 3.23
   },
-  "mr:0419-leo": {
+  "mr:0419-leo-ix": {
    "method": "override",
    "score": null
   },
@@ -4245,7 +4245,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0517-paschalis": {
+  "mr:0517-paschalis-baylon": {
    "method": "same-day",
    "score": 1.39
   },
@@ -5205,7 +5205,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0615-vitus-et-socii": {
+  "mr:0615-vitus": {
    "method": "same-day",
    "score": 1.73
   },
@@ -6737,7 +6737,7 @@
    "method": "same-day",
    "score": 2.65
   },
-  "mr:0731-ignatius": {
+  "mr:0731-ignatius-de-loyola": {
    "method": "same-day",
    "score": 1.64
   },
@@ -8981,7 +8981,7 @@
    "method": "same-day",
    "score": 2.51
   },
-  "mr:0930-gregorius": {
+  "mr:0930-gregorius-illuminator": {
    "method": "same-day",
    "score": 1.63
   },
@@ -9485,7 +9485,7 @@
    "method": "same-day",
    "score": 2.28
   },
-  "mr:1015-teresia": {
+  "mr:1015-teresia-a-iesu": {
    "method": "same-day",
    "score": 1.85
   },
@@ -9617,7 +9617,7 @@
    "method": "same-day",
    "score": 1.78
   },
-  "mr:1018-paulus-a-cruce-romae": {
+  "mr:1018-paulus-a-cruce": {
    "method": "same-day",
    "score": 1.56
   },
@@ -10633,7 +10633,7 @@
    "method": "override",
    "score": null
   },
-  "mr:1116-gertrudis": {
+  "mr:1116-gertrudis-magna": {
    "method": "cross-day",
    "score": 1.8
   },
@@ -10989,7 +10989,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1126-silvester": {
+  "mr:1126-silvester-gozzolini": {
    "method": "same-day",
    "score": 2.19
   },

@@ -142,7 +142,7 @@
  "11": {
   "titulus": "11 Februarii Tertio Idus Februarii. xiv. F",
   "elogia": {
-   "mr:0211-maria": "Lapurdi, in Gallia, Apparitio beatae Mariae Virginis Immaculatae.",
+   "mr:0211-maria-de-lourdes": "Lapurdi, in Gallia, Apparitio beatae Mariae Virginis Immaculatae.",
    "mr:0211-lucius": "Hadrianopoli, in Thracia, sanctorum Martyrum Lucii Episcopi, et Sociorum ejus, sub Constantio. Ipse Lucius, ab Arianis multa perpessus, in vinculis martyrium consummavit; ceteri vero nobiliores civium, cum Arianos, in Sardicensi Concilio tunc damnatos, recipere noluissent, a Philagrio Comite capitalem sententiam exceperunt.",
    "mr:0211-saturninus-et-socii": "In Africa natalis sanctorum Martyrum Saturnini Presbyteri, Dativi, Felicis, Ampelii et Sociorum, qui, in persecutione Diocletiani, cum ad Dominicum ex more celebrandum convenissent, idcirco, a militibus comprehensi, sub Anolino Proconsule passi sunt.",
    "mr:0211-plurimi-martyres-numidiae": "In Numidia commemoratio plurimorum sanctorum Martyrum, qui in eadem persecutione comprehensi sunt, et, cum juxta Imperatoris edictum divinas Scripturas tradere noluissent, gravissimis excruciati sunt suppliciis, ac tandem occisi.",
@@ -264,7 +264,7 @@
    "mr:0220-eleutherius-pe": "In Perside natalis sancti Eleutherii, Episcopi, et aliorum centum viginti octo; qui, sub Rege Persarum Sapore, cum Solem adorare renuissent, crudeli nece praeclaras sibi coronas compararunt.",
    "mr:0220-potamius-et-nemesius": "In Cypro sanctorum Martyrum Potamii et Nemesii.",
    "mr:0220-leo": "Catanae, in Sicilia, sancti Leonis Episcopi, qui virtutibus atque miraculis coruscavit.",
-   "mr:0220-eucherius-aurelianensis": "Eodem die sancti Eucherii, Aurelianensis Episcopi, qui eo magis miraculis claruit, quo pluribus invidorum calumniis fuit oppressus. Tornaci, in Galliis, sancti Eleutherii, Episcopi et Confessoris."
+   "mr:0220-eucherius": "Eodem die sancti Eucherii, Aurelianensis Episcopi, qui eo magis miraculis claruit, quo pluribus invidorum calumniis fuit oppressus. Tornaci, in Galliis, sancti Eleutherii, Episcopi et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -367,7 +367,7 @@
   "elogia": {
    "mr:0228-macarius-et-socii": "Romae natalis sanctorum Martyrum Macarii, Rufini, Justi et Theophili.",
    "mr:0228-caerealis-pupulus-cajiet": "Alexandriae passio sanctorum Caerealis, Pupuli, Caji et Serapionis.",
-   "mr:0228-presbyteri-diaconi": "Ibidem commemoratio sanctorum Presbyterorum, Diaconorum et aliorum plurimorum; qui, tempore Valeriani Imperatoris, cum pestis saevissima grassaretur, morbo laborantibus ministrantes, libentissime mortem oppetiere, et quos velut Martyres religiosa piorum fides venerari consuevit.",
+   "mr:0228-presbyteri-diaconi-plurimi-alexandriae": "Ibidem commemoratio sanctorum Presbyterorum, Diaconorum et aliorum plurimorum; qui, tempore Valeriani Imperatoris, cum pestis saevissima grassaretur, morbo laborantibus ministrantes, libentissime mortem oppetiere, et quos velut Martyres religiosa piorum fides venerari consuevit.",
    "mr:0228-hilarus": "Romae sancti Hilari, Papae et Confessoris.",
    "mr:0228-romanus": "In territorio Lugdunensi, locis Jurensibus, depositio sancti Romani Abbatis, qui primus illic eremiticam vitam duxit, et, multis virtutibus ac miraculis clarus, plurimorum postea Pater exstitit Monachorum.",
    "mr:0228-augustinus": "Papiae Translatio corporis sancti Augustini Episcopi, Confessoris et Ecclesiae Doctoris, ex Sardinia insula, opera Luitprandi, Regis Longobardorum."

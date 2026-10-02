@@ -1,5 +1,5 @@
 {
- "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID), override (hand-corrected, CatholicOS/crmedr#25) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
+ "$comment": "Per-ID alignment provenance: same-day / cross-day (matched to a current CRMEDR ID), override (hand-corrected, CatholicOS/crmedr#25, #45) or coined-deprecated (no counterpart identified; ID coined with deprecated:true in the CRMEDR). Scores are matcher totals; all draft.",
  "ids": {
   "mr:0101-circumcisio-domini": {
    "method": "coined-deprecated",
@@ -205,8 +205,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0107-canutus": {
-   "method": "coined-deprecated",
+  "mr:0107-canutus-lavard": {
+   "method": "override",
    "score": null
   },
   "mr:0107-crispinus": {
@@ -1205,8 +1205,8 @@
    "method": "same-day",
    "score": 2.28
   },
-  "mr:0211-maria": {
-   "method": "coined-deprecated",
+  "mr:0211-maria-de-lourdes": {
+   "method": "override",
    "score": null
   },
   "mr:0211-plurimi-martyres-numidiae": {
@@ -1433,8 +1433,8 @@
    "method": "same-day",
    "score": 1.11
   },
-  "mr:0220-eucherius-aurelianensis": {
-   "method": "coined-deprecated",
+  "mr:0220-eucherius": {
+   "method": "override",
    "score": null
   },
   "mr:0221-severianus": {
@@ -1633,8 +1633,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0228-presbyteri-diaconi": {
-   "method": "coined-deprecated",
+  "mr:0228-presbyteri-diaconi-plurimi-alexandriae": {
+   "method": "override",
    "score": null
   },
   "mr:0228-hilarus": {
@@ -1929,8 +1929,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0312-theophanes": {
-   "method": "coined-deprecated",
+  "mr:0312-theophanes-chronographus": {
+   "method": "override",
    "score": null
   },
   "mr:0312-bernardus": {
@@ -2229,8 +2229,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0323-turibius": {
-   "method": "coined-deprecated",
+  "mr:0323-turibius-de-mogrovejo": {
+   "method": "override",
    "score": null
   },
   "mr:0323-theodulus": {
@@ -2537,8 +2537,8 @@
    "method": "same-day",
    "score": 2.29
   },
-  "mr:0406-petrus": {
-   "method": "coined-deprecated",
+  "mr:0406-petrus-veronensis": {
+   "method": "override",
    "score": null
   },
   "mr:0406-methodius": {
@@ -2897,8 +2897,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0419-leo": {
-   "method": "coined-deprecated",
+  "mr:0419-leo-ix": {
+   "method": "override",
    "score": null
   },
   "mr:0419-georgius": {
@@ -3737,8 +3737,8 @@
    "method": "same-day",
    "score": 1.51
   },
-  "mr:0517-paschalis": {
-   "method": "coined-deprecated",
+  "mr:0517-paschalis-baylon": {
+   "method": "override",
    "score": null
   },
   "mr:0517-restituta": {
@@ -5853,8 +5853,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0731-ignatius": {
-   "method": "coined-deprecated",
+  "mr:0731-ignatius-de-loyola": {
+   "method": "override",
    "score": null
   },
   "mr:0731-calimerus": {
@@ -7349,8 +7349,8 @@
    "method": "same-day",
    "score": 1.62
   },
-  "mr:0917-petrus-de-arbues-caesaraugustae": {
-   "method": "coined-deprecated",
+  "mr:0917-petrus-de-arbues": {
+   "method": "override",
    "score": null
   },
   "mr:0917-flocellus": {
@@ -7557,8 +7557,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0924-gerardus": {
-   "method": "coined-deprecated",
+  "mr:0924-gerardus-sagredo": {
+   "method": "override",
    "score": null
   },
   "mr:0924-andochius-et-socii": {
@@ -7737,8 +7737,8 @@
    "method": "same-day",
    "score": 2.72
   },
-  "mr:0930-gregorius": {
-   "method": "coined-deprecated",
+  "mr:0930-gregorius-illuminator": {
+   "method": "override",
    "score": null
   },
   "mr:0930-honorius": {
@@ -8185,8 +8185,8 @@
    "method": "same-day",
    "score": 1.58
   },
-  "mr:1015-teresia": {
-   "method": "coined-deprecated",
+  "mr:1015-teresia-a-iesu": {
+   "method": "override",
    "score": null
   },
   "mr:1015-hedwigis": {
@@ -8273,12 +8273,12 @@
    "method": "same-day",
    "score": 1.25
   },
-  "mr:1018-paulus-a-cruce-romae": {
-   "method": "coined-deprecated",
+  "mr:1018-paulus-a-cruce": {
+   "method": "override",
    "score": null
   },
-  "mr:1018-petrus-de-alcantara-arenis": {
-   "method": "coined-deprecated",
+  "mr:1018-petrus-de-alcantara": {
+   "method": "override",
    "score": null
   },
   "mr:1018-asclepiades": {
@@ -9005,8 +9005,8 @@
    "method": "same-day",
    "score": 1.8
   },
-  "mr:1110-leo": {
-   "method": "coined-deprecated",
+  "mr:1110-leo-i": {
+   "method": "override",
    "score": null
   },
   "mr:1110-demetrianus": {
@@ -9161,8 +9161,8 @@
    "method": "same-day",
    "score": 2.6
   },
-  "mr:1115-albertus": {
-   "method": "coined-deprecated",
+  "mr:1115-albertus-magnus": {
+   "method": "override",
    "score": null
   },
   "mr:1115-eugenius": {
@@ -9193,8 +9193,8 @@
    "method": "same-day",
    "score": 2.21
   },
-  "mr:1116-gertrudis": {
-   "method": "coined-deprecated",
+  "mr:1116-gertrudis-magna": {
+   "method": "override",
    "score": null
   },
   "mr:1116-margarita": {
@@ -9453,8 +9453,8 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:1126-silvester": {
-   "method": "coined-deprecated",
+  "mr:1126-silvester-gozzolini": {
+   "method": "override",
    "score": null
   },
   "mr:1126-petrus": {
@@ -10765,8 +10765,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0615-vitus-et-socii": {
-   "method": "coined-deprecated",
+  "mr:0615-vitus": {
+   "method": "override",
    "score": null
   },
   "mr:0615-lybes-et-socii": {

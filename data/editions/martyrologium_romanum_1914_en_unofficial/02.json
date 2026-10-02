@@ -127,7 +127,7 @@
  "11": {
   "titulus": "The Eleventh Day of February",
   "elogia": {
-   "mr:0211-maria": "At Lourdes, in France, the apparition of the Blessed Virgin Mary Immaculate.",
+   "mr:0211-maria-de-lourdes": "At Lourdes, in France, the apparition of the Blessed Virgin Mary Immaculate.",
    "mr:0211-saturninus-et-socii": "In Africa, during the persecution of Diocletian, the birthday of the holy martyrs Saturninus, a priest, Dativus, Felix, Ampelius, and their companions. They had, as was their custom, assembled for Mass, when they were seized by the soldiers and put to death, under the proconsul Anolinus.",
    "mr:0211-plurimi-martyres-numidiae": "In Numidia, in the same persecution, the commemoration of many holy martyrs, who, refusing after their apprehension to deliver the holy Scriptures, conformably to the imperial edict, were given over to most painful torments and slain.",
    "mr:0211-lucius": "At Adrianople, the holy martyrs Lucius, bishop, and his companions. Lucius suffered much from the Arians under Constantius, and terminated his martyrdom in prison. The others, who were among the principal citizens, refusing to communicate with the Arians, just then anathematized in the Council of Sardica, were condemned to capital punishment by Count Philagrius.",
@@ -246,7 +246,7 @@
    "mr:0220-eleutherius": "At Constantinople, St. Eleutherius, bishop and martyr.",
    "mr:0218-sadoth-et-socii": "In Persia, in the time of king Sapor, the birthday of St. Sadoth, bishop, and one hundred and twenty-eight others, who refused to adore the sun, and by a cruel death purchased for themselves bright crowns.",
    "mr:0220-leo": "At Catania, in Sicily, St. Leo, bishop, illustrious for virtues and miracles.",
-   "mr:0220-eucherius-aurelianensis": "The same day, St. Eucherius, bishop of Orleans, whose miracles increased in proportion to the slanders of the envious.",
+   "mr:0220-eucherius": "The same day, St. Eucherius, bishop of Orleans, whose miracles increased in proportion to the slanders of the envious.",
    "mr:0220-eleutherius-pe": "At Tournai, in Belgium, St. Eleutherius, bishop and confessor."
   }
  },
@@ -340,7 +340,7 @@
   "elogia": {
    "mr:0228-macarius-et-socii": "At Rome, the birthday of the holy martyrs Macarius, Rufinus, Justus, and Theophilus.",
    "mr:0228-caerealis-pupulus-cajiet": "At Alexandria, the passion of the Saints Caerealis, Pupulus, Caius, and Serapion.",
-   "mr:0228-presbyteri-diaconi": "In the same city, in the reign of the emperor Valerian, the commemoration of the holy priests, deacons, and other Christians in great number, who encountered death most willingly by nursing the victims of a most deadly pestilence then raging. They have been generally revered as martyrs by the pious faithful.",
+   "mr:0228-presbyteri-diaconi-plurimi-alexandriae": "In the same city, in the reign of the emperor Valerian, the commemoration of the holy priests, deacons, and other Christians in great number, who encountered death most willingly by nursing the victims of a most deadly pestilence then raging. They have been generally revered as martyrs by the pious faithful.",
    "mr:0228-romanus": "In the territory of Lyons, on Mount Jura, the demise of St. Romanus, abbot, who was the first to lead the eremitical life there. His reputation for virtues and miracles brought under his guidance numerous monks.",
    "mr:0228-augustinus": "At Pavia, the translation, from the island of Sardinia, of the body of St. Augustine, bishop, by Luitprand, king of the Lombards."
   }

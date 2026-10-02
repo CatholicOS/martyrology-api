@@ -143,7 +143,7 @@
   "elogia": {
    "mr:1110-andreas-avellino": "Neapoli, in Campania, natalis sancti Andreae Avellini, Clerici Regularis et Confessoris, sanctitate et salutis proximorum procurandae studio praecelebris, quem, miraculis clarum, Clemens Undecimus, Pontifex Maximus, Sanctorum catalogo adscripsit.",
    "mr:1110-tryphon-et-socii": "Eodem die natalis quoque sanctorum Martyrum Tryphonis, et Respicii, ac Nymphae Virginis.",
-   "mr:1110-leo": "Romae item natalis sancti Leonis Papae Primi, Confessoris et Ecclesiae Doctoris; qui, virtutum excellens meritis, dictus est Magnus. Ejus temporibus celebrata fuit sancta Synodus Chalcedonensis, in qua ipse per legatos damnavit Eutychen; cujus etiam Synodi decreta postmodum auctoritate sua confirmavit. Tandem, cum sanxisset multa luculenterque scripsisset, Pastor bonus, de sancta Dei Ecclesia et universo grege Dominico optime meritus, quievit in pace. Ipsius tamen festivitas tertio Idus Aprilis celebratur.",
+   "mr:1110-leo-i": "Romae item natalis sancti Leonis Papae Primi, Confessoris et Ecclesiae Doctoris; qui, virtutum excellens meritis, dictus est Magnus. Ejus temporibus celebrata fuit sancta Synodus Chalcedonensis, in qua ipse per legatos damnavit Eutychen; cujus etiam Synodi decreta postmodum auctoritate sua confirmavit. Tandem, cum sanxisset multa luculenterque scripsisset, Pastor bonus, de sancta Dei Ecclesia et universo grege Dominico optime meritus, quievit in pace. Ipsius tamen festivitas tertio Idus Aprilis celebratur.",
    "mr:1110-tryphenna-et-tryphosa": "Iconii, in Lycaonia, sanctarum mulierum Tryphennae et Tryphosae, quae, beati Pauli praedicatione et exemplo Theclae, in Christiana disciplina plurimum profecerunt.",
    "mr:1110-demetrianus": "Antiochiae sanctorum Demetrii Episcopi, Aniani Diaconi, Eustosii et aliorum viginti Martyrum.",
    "mr:1110-tiberius-et-socii": "In territorio Agathensi, in Gallia, sanctorum Martyrum Tiberii, Modesti et Florentiae; qui, tempore Diocletiani, variis tormentis cruciati, martyrium compleverunt.",
@@ -216,7 +216,7 @@
  "15": {
   "titulus": "15 Novembris Decimo septimo Kalendas Decembris. x. C",
   "elogia": {
-   "mr:1115-albertus": "Coloniae Agrippinae sancti Alberti Episcopi et Confessoris, ex Ordine Praedicatorum, cognomento Magni, sanctitate et doctrina celebris, quem Pius Papa Undecimus Doctorem universalis Ecclesiae declaravit, et Pius Duodecimus cultorum scientiarum naturalium caelestem apud Deum Patronum constituit.",
+   "mr:1115-albertus-magnus": "Coloniae Agrippinae sancti Alberti Episcopi et Confessoris, ex Ordine Praedicatorum, cognomento Magni, sanctitate et doctrina celebris, quem Pius Papa Undecimus Doctorem universalis Ecclesiae declaravit, et Pius Duodecimus cultorum scientiarum naturalium caelestem apud Deum Patronum constituit.",
    "mr:1115-eugenius": "Eodem die natalis sancti Eugenii, Episcopi Toletani et Martyris; qui fuit beati Dionysii Areopagitae discipulus, et in territorio Parisiensi, consummato martyrii cursu, beatae passionis coronam percepit a Domino. Ipsius autem corpus Toletum, in Hispania, postea fuit translatum.",
    "mr:1115-felix": "Nolae, in Campania, beati Felicis, Episcopi et Martyris; qui, a quintodecimo aetatis suae anno, miraculis claruit, et, sub Marciano Praeside, cum aliis triginta Sociis, agonem martyrii complevit.",
    "mr:0902-habib": "Edessae, in Mesopotamia, passio sancti Abibi Diaconi, qui sub Licinio Imperatore et Lysania Praeside, unguibus laceratus, in ignem conjectus est.",
@@ -230,7 +230,7 @@
  "16": {
   "titulus": "16 Novembris Sextodecimo Kalendas Decembris. ix. D",
   "elogia": {
-   "mr:1116-gertrudis": "Sanctae Gertrudis Virginis, cujus natalis sequenti die recensetur.",
+   "mr:1116-gertrudis-magna": "Sanctae Gertrudis Virginis, cujus natalis sequenti die recensetur.",
    "mr:1116-margarita": "Edimburgi, in Scotia, natalis sanctae Margaritae Viduae, Scotorum Reginae, amore in pauperes et voluntaria paupertate celebris. Ipsius tamen festivitas quarto Idus Junii celebratur.",
    "mr:1116-rufinus-et-socii": "In Africa sanctorum Martyrum Rufini, Marci, Valerii et Sociorum.",
    "mr:1116-elpidius-et-socii": "Eodem die sanctorum Martyrum Elpidii, Marcelli, Eustochii et Sociorum; ex quibus Elpidius, cum esset ordinis Senatorii et coram Juliano Apostata Christianam fidem constantissime profiteretur, ideo, primum equis indomitis, una cum Sociis, alligatus atque pertractus, deinde, in ignem conjectus, gloriosum martyrium consummavit.",
@@ -359,7 +359,7 @@
  "26": {
   "titulus": "26 Novembris Sexto Kalendas Decembris. xxix. G",
   "elogia": {
-   "mr:1126-silvester": "Apud Fabrianum, in Piceno, beati Silvestri Abbatis, Institutoris Congregationis Monachorum Silvestrinorum.",
+   "mr:1126-silvester-gozzolini": "Apud Fabrianum, in Piceno, beati Silvestri Abbatis, Institutoris Congregationis Monachorum Silvestrinorum.",
    "mr:1126-petrus": "Alexandriae natalis sancti Petri, ejusdem urbis Episcopi et Martyris; qui, cum esset omnibus virtutibus exornatus, ibidem, Galerii Maximiani praecepto, capite obtruncatus est.",
    "mr:1126-faustus-et-socii": "Passi sunt etiam Alexandriae, in eadem persecutione, sancti Martyres Faustus Presbyter, Didius et Ammonius, itemque Episcopi quatuor Aegyptii, idest Phileas, Hesychius, Pachomius et Theodorus, cum aliis sexcentis sexaginta, quos persecutionis gladius evexit ad caelos.",
    "mr:1126-bellinus": "Apud villam cui nomen Fracta, in territorio Rhodigiensi, sancti Bellini, Episcopi Patavini et Martyris; qui a sicariis, cum esset Ecclesiae jurium defensor eximius, crudeliter impetitus ac multis illatis vulneribus occisus est.",
