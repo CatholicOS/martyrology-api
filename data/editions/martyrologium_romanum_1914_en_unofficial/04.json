@@ -2,11 +2,11 @@
  "1": {
   "titulus": "The First Day of April",
   "elogia": {
-   "mr:0427-theodorus": "At Rome, the passion of St. Theodora, sister of the illustrious martyr Hermes, who underwent martyrdom in the time of the emperor Adrian, under the judge Aurelian, and was buried by the side of her brother, on the Salarian road, a short distance from the city.",
+   "mr:0401-theodora": "At Rome, the passion of St. Theodora, sister of the illustrious martyr Hermes, who underwent martyrdom in the time of the emperor Adrian, under the judge Aurelian, and was buried by the side of her brother, on the Salarian road, a short distance from the city.",
    "mr:0401-venantius-et-socii": "The same day, St. Venantius, bishop and martyr.",
-   "mr:0402-victor": "In Egypt, the holy martyrs Victor and Stephen.",
+   "mr:0401-victor-et-stephanus": "In Egypt, the holy martyrs Victor and Stephen.",
    "mr:0401-quinctianus-et-irenaeus": "In Armenia, the holy martyrs Quinctian and Irenaeus.",
-   "mr:0818-macarius": "At Constantinople, under the emperor Leo, St. Macarius, confessor, who ended his life in exile for the defence of the honor paid to sacred images.",
+   "mr:0401-macarius": "At Constantinople, under the emperor Leo, St. Macarius, confessor, who ended his life in exile for the defence of the honor paid to sacred images.",
    "mr:0401-valericus": "At Grenoble, the bishop St. Hugh, who spent many years of his life in solitude, and departed for heaven, with a reputation for miracles. At Amiens, the abbot St. Valery, whose tomb is made illustrious by frequent miracles."
   }
  },
@@ -19,15 +19,15 @@
    "mr:0402-nicetius": "At Lyons, St. Nizier, bishop of that city, renowned for his saintly life and miracles.",
    "mr:0402-abundius": "At Como, St. Abundius, bishop and confessor.",
    "mr:0402-urbanus": "At Langres, St. Urban, bishop.",
-   "mr:0401-maria-aegyptiaca": "In Palestine, the decease of St. Mary of Egypt, surnamed the Sinner."
+   "mr:0402-maria-aegyptiaca": "In Palestine, the decease of St. Mary of Egypt, surnamed the Sinner."
   }
  },
  "3": {
   "titulus": "The Third Day of April",
   "elogia": {
-   "mr:0708-pancratius": "At Taormina, in Sicily, the bishop St. Pancratius, who sealed, with a martyr’s blood, the gospel of Christ which the apostle St. Peter had sent him thither to preach.",
+   "mr:0403-pancratius": "At Taormina, in Sicily, the bishop St. Pancratius, who sealed, with a martyr’s blood, the gospel of Christ which the apostle St. Peter had sent him thither to preach.",
    "mr:0403-chrestus-et-pappus": "At Tomis, in Scythia, the birthday of the holy martyrs Evagrius and Benignus.",
-   "mr:0401-agapis-et-chionia": "At Thessalonica, the martyrdom of the holy virgins Agape and Chionia, under the emperor Diocletian. As they would not deny Christ, they were first detained in prison, then cast into the fire, but being untouched by the flames, they gave up their souls to their Creator whilst praying to Him.",
+   "mr:0403-agapis-et-chionia": "At Thessalonica, the martyrdom of the holy virgins Agape and Chionia, under the emperor Diocletian. As they would not deny Christ, they were first detained in prison, then cast into the fire, but being untouched by the flames, they gave up their souls to their Creator whilst praying to Him.",
    "mr:0403-ulpianus": "At Tyre, the martyr St. Vulpian, who was sewed up in a sack with a serpent and a dog, and drowned in the sea, during the persecution of Maximian Galerius.",
    "mr:0403-nicetas": "In the monastery of Medicion, in the East, the abbot St. Nicetas, who suffered much for the worship of holy images, in the time of Leo the Armenian.",
    "mr:0403-richardus": "In England, St. Richard, bishop of Chichester, celebrated for holiness and glorious miracles.",
@@ -58,13 +58,13 @@
  "6": {
   "titulus": "The Sixth Day of April",
   "elogia": {
-   "mr:0403-xystus-i": "At Rome, the birthday of blessed Sixtus, pope and martyr, who governed the Church in the time of the emperor Adrian. Under Antoninus Pius, he joyfully endured a corporal death in order to gain Christ.",
-   "mr:0408-timotheus-et-socii": "In Macedonia, the holy martyrs Timothy and Diogenes.",
+   "mr:0406-xystus-i": "At Rome, the birthday of blessed Sixtus, pope and martyr, who governed the Church in the time of the emperor Adrian. Under Antoninus Pius, he joyfully endured a corporal death in order to gain Christ.",
+   "mr:0406-timotheus-et-socii": "In Macedonia, the holy martyrs Timothy and Diogenes.",
    "mr:0406-centum-martyres-perside": "In Persia, one hundred and twenty holy martyrs.",
    "mr:0406-platonidis": "At Ascalon, the holy martyrs Platonides and two others.",
    "mr:0406-marcellinus": "At Carthage, St. Marcellin, who was slain by the heretics for defending the Catholic faith.",
    "mr:0406-caelestinus": "At Rome, pope St. Celestin, who condemned Nestorius, bishop of Constantinople, and put Pelagius to flight. It was also by his authority, that the holy ecumenical Synod of Ephesus was convoked against Nestorius.",
-   "mr:0401-celsus": "In Ireland, the holy bishop Celsus, who preceded blessed Malachy in the episcopate.",
+   "mr:0406-celsus": "In Ireland, the holy bishop Celsus, who preceded blessed Malachy in the episcopate.",
    "mr:0406-gulielmus": "In Denmark, St. William, an abbot renowned for his saintly life and miracles."
   }
  },
@@ -89,7 +89,7 @@
    "mr:0408-concessa": "At Carthage, St. Concessa, martyr.",
    "mr:0408-herodion-et-socii": "The same day, the commemoration of the Saints Herodion, Asyncritus and Phlegon, who are mentioned by the blessed apostle Paul in his epistle to the Romans.",
    "mr:0408-dionysius-2": "At Corinth, the bishop St. Denis, who instructed not only the people of his own city and province by the learning and unction with which he preached the word of God, but also the bishops of other cities and provinces by the letters which he wrote to them. His veneration for the Roman Pontiffs was such that he used to read their epistles publicly in the church on Sundays. He lived in the time of Marcus Antoninus Verus and Lucius Aurelius Commodus.",
-   "mr:1230-perpetuus": "At Tours, the holy bishop Perpetuus, a man of wonderful sanctity.",
+   "mr:0408-perpetuus": "At Tours, the holy bishop Perpetuus, a man of wonderful sanctity.",
    "mr:0408-redemptus": "At Ferentino, in Campania, St. Redemptus, bishop, mentioned by pope St. Gregory.",
    "mr:0408-amantius": "At Como, St. Amantius, bishop and confessor."
   }
@@ -104,7 +104,7 @@
    "mr:0409-martyres-africa": "In Africa, the holy Massylitan martyrs, on whose birthday St. Augustine delivered a discourse.",
    "mr:0409-acacius": "At Amida, in Mesopotamia, St. Acatius, bishop, who melted and sold even the sacred vessels in order to ransom captives.",
    "mr:0409-hugo": "At Rouen, St. Hugh, bishop and confessor.",
-   "mr:0117-marcellus": "At Die, St. Marcellus, bishop, celebrated for miracles.",
+   "mr:0409-marcellus": "At Die, St. Marcellus, bishop, celebrated for miracles.",
    "mr:0409-maria-cleopha": "In Judea, St. Mary Cleophas, sister of the most Blessed Mary, Mother of God.",
    "mr:0409-translatio-monicae": "At Rome, the translation of the body of St. Monica, mother of the blessed bishop Augustine, which was brought from Ostia to Rome, under the Sovereign Pontiff, Martin V., and with due honors buried in the Church of St. Augustine.",
    "mr:0409-valdetrudis": "At Mons, in Hainaut, blessed Waltrude, renowned for holiness of life and miracles."
@@ -159,13 +159,13 @@
   "elogia": {
    "mr:0414-justinus-philosophus": "The feast of St. Justin, martyr, who is mentioned on the 13th of this month.",
    "mr:0414-tiburtius-et-socii": "At Rome, on the Appian way, the birthday of the holy martyrs Tiburtius, Valerian, and Maximus, who suffered in the time of the emperor Alexander and the prefect Almachius. The first two being converted to Christ by the exhortations of blessed Cecilia, and baptized by pope St. Urban, were beaten with rods, and decapitated for the true faith. But Maximus, chamberlain of the prefect, moved by their constancy, and encouraged by the vision of an angel, believed in Christ, and was scourged with leaded whips until he expired.",
-   "mr:1018-proculus-et-socii": "At Teramo, St. Proculus, bishop and martyr.",
+   "mr:0414-proculus": "At Teramo, St. Proculus, bishop and martyr.",
    "mr:0414-domnina": "Also, St. Domnina, virgin and martyr, crowned with other virgins, her companions.",
    "mr:0414-thomais": "At Alexandria, St. Thomaides, martyr.",
    "mr:0414-ardalio": "The same day, St. Ardalion, an actor. One day, in the theatre, while mocking the holy rites of the Christian religion, he was suddenly converted, and bore testimony to it, not only by his words, but also with his blood.",
    "mr:0414-lambertus": "At Lyons, St. Lambert, bishop and confessor.",
    "mr:0414-fronto": "At Alexandria, St. Fronto, an abbot, whose life was adorned with sanctity and miracles.",
-   "mr:0415-abundius": "At Rome, St. Abundius, resident sacristan of the church of St. Peter."
+   "mr:0414-abundius": "At Rome, St. Abundius, resident sacristan of the church of St. Peter."
   }
  },
  "15": {
@@ -174,7 +174,7 @@
    "mr:0415-basilissa-et-anastasia": "At Rome, the Saints Basilissa and Anastasia. Of noble family, they were disciples of the Apostles, and as they persevered courageously in the profession of their faith in the time of the emperor Nero, they had their tongues and feet cut off, were put to the sword, and thus obtained the crown of martyrdom.",
    "mr:0415-maro": "The same day, the holy martyrs Maro, Eutyches, and Victorinus, who, with blessed Flavia Domitilla, were banished to the island of Pontia for the confession of Christ. Being recalled in the reign of Nerva, and having converted many to the faith, they were put to death in different manners by the judge Valerian during the persecution of Trajan.",
    "mr:0415-maximus-et-olympias": "In Persia, in the reign of the emperor Decius, the holy martyrs Maximus and Olympiades, who were beaten with rods and whips, and struck on their heads with clubs until they breathed their last.",
-   "mr:1208-eutychianus": "At Ferentino, in Campania, St. Eutychius, martyr.",
+   "mr:0415-eutychius": "At Ferentino, in Campania, St. Eutychius, martyr.",
    "mr:0415-crescens": "At Myra, in Lycia, St. Crescens, who consummated his martyrdom by fire.",
    "mr:0415-theodorus-et-pausilypus": "Also the holy martyrs Theodorus and Pausilippus, who suffered under the emperor Adrian."
   }
@@ -186,10 +186,10 @@
    "mr:0416-optatus-et-socii": "At Saragossa, in Spain, the birthday of eighteen holy martyrs, Optatus, Lupercus, Successus, Martial, Urbanus, Julia, Quinctilian, Pubilus, Fronto, Felix, Caecilian, Eventius, Primitivus, Apodemius, and four others, who, it is said, bore the name of Saturninus. Under Dacian, governor of Spain, they were all together subjected to torments and slain. The glory of their martyrdom has been celebrated in verse by Prudentius.",
    "mr:0416-engratia": "In the same place, St. Encratis, a virgin and martyr who had her body lacerated, her breasts cut off, and her liver plucked out. As she survived these torments, she was confined in a prison until her ulcerated flesh putrefied.",
    "mr:0416-caius-et-crementius": "In the same city, the Saints Caius and Crementius, who twice confessed the faith of Christ, and persevering in it, drank of the chalice of martyrdom.",
-   "mr:0619-lambertus": "Again in the same place, the martyr St. Lambert.",
+   "mr:0416-lambertus": "Again in the same place, the martyr St. Lambert.",
    "mr:0416-turibius": "At Palencia, St. Turibius, bishop of Astorga, who with the aid of pope St. Leo, drove the heresy of Priscillian entirely out of Spain, and went to rest in the Lord with a great renown for miracles.",
    "mr:0416-fructuosus": "At Braga, in Portugal, the bishop St. Fructuosus.",
-   "mr:0415-paternus": "The same day, St. Paternus, bishop of Avranches.",
+   "mr:0416-paternus": "The same day, St. Paternus, bishop of Avranches.",
    "mr:0416-drogo": "In Belgium, near Valenciennes, St. Drogo, confessor.",
    "mr:0416-ioachimus": "At Siena, in Tuscany, blessed Joachim, of the Order of the Servites of the Blessed Virgin Mary.",
    "mr:0416-benedictus-iosephus-labre": "At Rome, the birthday of St. Benedict Joseph Labre, confessor, who was renowned for his contempt of self and his great voluntary poverty."
@@ -200,12 +200,12 @@
   "elogia": {
    "mr:0417-anicetus": "At Rome, St. Anicetus, pope and martyr, who obtained the palm of martyrdom in the persecution of Marcus Aurelius Antoninus.",
    "mr:0417-mappalicus": "In Africa, the birthday of blessed Mappalicus, and many others who were crowned with martyrdom, as is related by St. Cyprian in his epistle to the Martyrs and Confessors.",
-   "mr:0614-fortunatus": "In the same country, the holy martyrs Fortunatus and Marcian.",
+   "mr:0417-fortunatus-et-marcianus": "In the same country, the holy martyrs Fortunatus and Marcian.",
    "mr:0417-petrus-et-hermogenes": "At Antioch, the holy martyrs Peter, a deacon, and Hermogenes, his servant.",
    "mr:0417-elias-et-socii": "At Cordova, the holy martyrs Elias, a priest, Paul and Isidore, monks.",
    "mr:0417-pantagathus": "At Vienne, St. Pantagathus, bishop.",
    "mr:0417-innocentius": "At Tortona, St. Innocent, bishop and confessor.",
-   "mr:0414-bernardus": "At Citeaux, in France, the abbot St. Stephen, who was the first to live in the desert of Citeaux, and who joyfully welcomed St. Bernard and his companions when they came thither.",
+   "mr:0417-stephanus-harding": "At Citeaux, in France, the abbot St. Stephen, who was the first to live in the desert of Citeaux, and who joyfully welcomed St. Bernard and his companions when they came thither.",
    "mr:0417-robertus-casae": "In the monastery of Chaise-Dieu, in the diocese of Clermont, St. Robert, confessor, founder and first abbot of that monastery."
   }
  },
@@ -226,7 +226,7 @@
   "elogia": {
    "mr:0419-timo": "The birthday of St. Timon, one of the first seven deacons, who taught first at Berea. Afterwards while preaching the word of the Lord at Corinth, he was delivered to the flames by the Jews and the Greeks; but remaining uninjured, he ended his martyrdom by crucifixion.",
    "mr:0419-hermogenes-et-socii": "At Melitine, in Armenia, the holy martyrs Hermogenes, Caius, Expeditus, Aristonicus, Rufus and Galatas, crowned on the same day.",
-   "mr:1028-vincentius-et-socii": "At Collioure, in Spain, the holy martyr Vincent.",
+   "mr:0419-vincentius": "At Collioure, in Spain, the holy martyr Vincent.",
    "mr:0419-socrates-et-dionysius": "The same day, the holy martyrs Socrates and Denis, who were transpierced with lances.",
    "mr:0419-paphnutius": "At Jerusalem, St. Paphnutius, martyr.",
    "mr:0419-aelphegus": "At Canterbury, in England, St. Elphege, bishop and martyr.",
@@ -252,7 +252,7 @@
   "titulus": "The Twenty-first Day of April",
   "elogia": {
    "mr:0421-anselmus": "At Canterbury, in England, St. Anselm, bishop and Doctor of the Church, who was renowned for sanctity and learning.",
-   "mr:0417-simeon": "In Persia, the birthday of St. Simeon, bishop of Seleucia and Ctesiphon. He was arrested by order of Sapor, king of Persia, loaded with irons, and presented to the iniquitous tribunals. As he refused to adore the sun, and openly and courageously bore testimony to Jesus Christ, he was confined a long time in a dungeon with one hundred other confessors, among whom were bishops, priests, and clerics of various ranks. Afterwards Usthazanes, the king’s foster-father, who had been converted from apostasy by Simeon, endured martyrdom with great constancy. The day after, which was the anniversary of our Lord’s Passion, the companions of Simeon whom he had feelingly exhorted, were beheaded before his eyes, after which he met the same fate. With him suffered also several distinguished men: Abdechalas and Ananias, his priests, with Pusicius, the chief of the royal artificers. This last having encouraged Ananias, who seemed to falter, died a cruel death, having his tongue drawn out through a perforation made in his neck. After him, his daughter, who was a consecrated virgin, was put to death.",
+   "mr:0421-simeon": "In Persia, the birthday of St. Simeon, bishop of Seleucia and Ctesiphon. He was arrested by order of Sapor, king of Persia, loaded with irons, and presented to the iniquitous tribunals. As he refused to adore the sun, and openly and courageously bore testimony to Jesus Christ, he was confined a long time in a dungeon with one hundred other confessors, among whom were bishops, priests, and clerics of various ranks. Afterwards Usthazanes, the king’s foster-father, who had been converted from apostasy by Simeon, endured martyrdom with great constancy. The day after, which was the anniversary of our Lord’s Passion, the companions of Simeon whom he had feelingly exhorted, were beheaded before his eyes, after which he met the same fate. With him suffered also several distinguished men: Abdechalas and Ananias, his priests, with Pusicius, the chief of the royal artificers. This last having encouraged Ananias, who seemed to falter, died a cruel death, having his tongue drawn out through a perforation made in his neck. After him, his daughter, who was a consecrated virgin, was put to death.",
    "mr:0421-arator-et-socii": "At Alexandria, the holy martyrs Arator, priest, Fortunatus, Felix, Silvius, and Vitalis, who died in prison.",
    "mr:0421-apollonius": "Also, the Saints Apollo, Isacius, and Crotates, who suffered under Diocletian.",
    "mr:0421-anastasius": "At Antioch, St. Anastasius Sinaita, bishop."
@@ -291,7 +291,7 @@
    "mr:0424-eusebius-et-socii": "The same day, during the persecution of Diocletian, the holy martyrs Eusebius, Neon, Leontius, Longinus, and four others, were slain with the sword after enduring great torments.",
    "mr:0424-mellitus": "In England, the demise of St. Mellitus, bishop. Being sent thither by St. Gregory, he converted to the faith the East-Saxons and their king.",
    "mr:0424-gregorius": "At Elvira, in Spain, St. Gregory, bishop and confessor.",
-   "mr:0227-honorina": "At Brescia, St. Honorius, bishop.",
+   "mr:0424-honorius": "At Brescia, St. Honorius, bishop.",
    "mr:0424-egbertus": "In Ireland, St. Egbert, priest and monk, a man of admirable humility and continency.",
    "mr:0424-maria-a-sancta-euphrasia-pelletier": "At Rheims, the holy virgins Bona and Doda."
   }
@@ -315,10 +315,10 @@
    "mr:0426-marcellinus": "In the same city, in the time of Maximian, St. Marcellinus, pope and martyr, who was beheaded for the faith of Christ, with Claudius, Cyrinus, and Antoninus. So great was the persecution at this time that within a month seventeen thousand Christians were crowned with martyrdom.",
    "mr:0426-basileus": "At Amasea, in Pontus, St. Basileus, bishop and martyr, whose illustrious martyrdom occurred under the emperor Licinius. His body was thrown into the sea; but being found by Elpidiphorus, through the revelation of an angel, it was honorably entombed.",
    "mr:0426-petrus": "At Braga, in Portugal, St. Peter, martyr, the first bishop of that city.",
-   "mr:0425-clarentius": "At Venice, St. Clarence, bishop and confessor.",
+   "mr:0426-clarentius": "At Venice, St. Clarence, bishop and confessor.",
    "mr:0426-lucidius": "At Verona, St. Lucidius, bishop.",
    "mr:0426-richarius": "In the monastery of Centula, St. Richarius, priest and confessor.",
-   "mr:0801-exsuperius": "At Troyes, St. Exuperantia, virgin."
+   "mr:0426-exsuperantia": "At Troyes, St. Exuperantia, virgin."
   }
  },
  "27": {
@@ -327,7 +327,7 @@
    "mr:0427-anthimus": "At Nicomedia, during the persecution of Diocletian, the birthday of St. Anthimus, bishop and martyr, who obtained the glory of martyrdom for the faith by decapitation. Nearly all his numerous flock followed him; the judge ordered some to be beheaded, some to be buried alive, and others to be put in boats and sunk in the sea.",
    "mr:0427-castor-et-stephanus": "At Tarsus, in Cilicia, the Saints Castor and Stephen, martyrs.",
    "mr:0427-anastasius": "At Rome, the demise of the blessed pope Anastasius, a man most rich in his poverty, and filled with apostolic zeal, whom Rome, says St. Jerome, did not deserve to possess long, lest the capital of the world should be devastated under such a bishop; for shortly after his death Rome was taken and sacked by the Goths.",
-   "mr:0731-tertullinus": "At Bologna, St. Tertullian, bishop and confessor.",
+   "mr:0427-tertullianus": "At Bologna, St. Tertullian, bishop and confessor.",
    "mr:0427-theophilus": "At Brescia, the bishop St. Theophilus.",
    "mr:0427-ioannes": "At Constantinople, the abbot St. John, who combated vigorously for the worship of holy images, under Leo the Isaurian.",
    "mr:0427-petrus-ermengol": "At Tarragona, the blessed Peter Armengaudius, of the Order of Blessed Mary of Mercy for the Redemption of Captives, who endured many tribulations in Africa in ransoming the faithful, and finally closed his career peacefully in the convent of St. Mary of the Meadows.",
@@ -356,9 +356,9 @@
    "mr:0429-tychicus": "At Paphos, in Cyprus, St. Tychicus, a disciple of the blessed apostle Paul, who called him in his epistles most dear brother, faithful minister, and fellow-servant in the Lord.",
    "mr:0429-martyres-cirthae": "At Cirtha, in Numidia, the birthday of the holy martyrs Agapius and Secundinus, bishops, who, after a long exile in that city, added to the glory of their priesthood the crown of martyrdom. They suffered in the persecution of Valerian, during which the enraged Gentiles made every effort to shake the faith of the just. In their company, suffered Aemilian, soldier, Tertulla and Antonia, consecrated virgin, and a woman with her twin children.",
    "mr:0429-septem-martyres-ininsula": "The same day, seven robbers, who, being converted to Christ by St. Jason, attained to eternal life by martyrdom.",
-   "mr:0314-paulina": "At Brescia, St. Paulinus, bishop and confessor.",
+   "mr:0429-paulinus": "At Brescia, St. Paulinus, bishop and confessor.",
    "mr:0429-hugo": "In the monastery of Cluny, the abbot St. Hugh.",
-   "mr:0417-robertus-molismensis": "In the monastery of Molesmes, St. Robert, first abbot of the Cistercians."
+   "mr:0429-robertus-molismensis": "In the monastery of Molesmes, St. Robert, first abbot of the Cistercians."
   }
  },
  "30": {
@@ -372,7 +372,7 @@
    "mr:0430-triginta-martyres-alexandriae": "At Alexandria, the holy martyrs Aphrodisius, priest, and thirty others.",
    "mr:0430-maximus": "At Ephesus, St. Maximus, martyr, who was crowned in the persecution of Decius.",
    "mr:0430-sophia": "At Fermo, in the Marches, St. Sophia, virgin and martyr.",
-   "mr:0429-severus": "At Naples, in Campania, St. Severus, bishop, who, among other prodigies, raised for a short time a dead man from the grave, in order to convict of falsehood the lying creditor of a widow and her children.",
+   "mr:0430-severus": "At Naples, in Campania, St. Severus, bishop, who, among other prodigies, raised for a short time a dead man from the grave, in order to convict of falsehood the lying creditor of a widow and her children.",
    "mr:0430-donatus": "At Evorea, in Epirus, St. Donatus, a bishop, who was eminent for sanctity in the time of the emperor Theodosius.",
    "mr:0430-earconwaldus": "At London, in England, St. Erconwald, a bishop celebrated for many miracles."
   }

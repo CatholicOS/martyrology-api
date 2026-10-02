@@ -7,7 +7,7 @@
    "mr:0701-aaron": "In monte Hor depositio sancti Aaron, primi ex ordine Levitico Sacerdotis.",
    "mr:0701-martinus": "Viennae, in Gallia, sancti Martini Episcopi, Apostolorum discipuli.",
    "mr:0701-castus-et-secundinus": "Sinuessae, in Campania, sanctorum Martyrum Casti et Secundini Episcoporum.",
-   "mr:0622-iulius-et-aaron": "In Britannia sanctorum Martyrum Julii et Aaron, qui post sanctum Albanum, in persecutione Diocletiani Imperatoris, passi sunt; quo tempore ibidem quamplurimi, diversis cruciatibus torti et saevissime lacerati, ad supernae civitatis gaudia, consummato agone, pervenerunt.",
+   "mr:0701-iulius-et-aaron": "In Britannia sanctorum Martyrum Julii et Aaron, qui post sanctum Albanum, in persecutione Diocletiani Imperatoris, passi sunt; quo tempore ibidem quamplurimi, diversis cruciatibus torti et saevissime lacerati, ad supernae civitatis gaudia, consummato agone, pervenerunt.",
    "mr:0701-gallus": "Arvernis, in Gallia, sancti Galli Episcopi.",
    "mr:0701-domitianus": "In territorio Lugdunensi depositio sancti Domitiani Abbatis, qui primus illic eremiticam vitam exercuit, et, cum plurimos ibi in Dei servitio congregasset, tandem, magnis virtutibus et gloriosis miraculis valde clarus, ad patres, in senectute bona, collectus est.",
    "mr:0701-eparchius": "Engolismae, in Gallia, sancti Eparchii Abbatis.",
@@ -23,7 +23,7 @@
    "mr:0702-tres-milites-romae": "Item Romae passio sanctorum trium militum, qui, ad Christum conversi in martyrio beati Pauli Apostoli, cum eo participes fieri caelestis gloriae meruerunt.",
    "mr:0702-eodem-die-sanc": "Eodem die sanctorum Martyrum Aristonis, Crescentiani, Eutychiani, Urbani, Vitalis, Justi, Felicissimi, Felicis, Marciae et Symphorosae; qui omnes apud Campaniam, cum Diocletiani Imperatoris persecutio desaeviret, martyrio coronati sunt.",
    "mr:0702-swithinus": "Wintoniae, in Anglia, sancti Swithuni Episcopi, cujus sanctitas miraculis effulsit.",
-   "mr:0630-otho": "Bambergae sancti Othonis Episcopi, qui Pomeranis Evangelium praedicavit, et eos ad fidem convertit.",
+   "mr:0702-otho": "Bambergae sancti Othonis Episcopi, qui Pomeranis Evangelium praedicavit, et eos ad fidem convertit.",
    "mr:0702-monegundis": "Lyciis, in Apulia, sancti Bernardini Realino, Confessoris, qui magistratus munere egregie functus, Societatem Jesu ingressus et sacerdotio auctus, caritate ac miraculis inclaruit. Turonis, in Gallia, depositio sanctae Monegundis, religiosae feminae."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -33,7 +33,7 @@
   "elogia": {
    "mr:0703-leo-secundus": "Romae natalis sancti Leonis Secundi, Papae et Confessoris, qui primo sui Pontificatus anno, plenus meritis, migravit in caelum.",
    "mr:0703-irenaeus-et-mustiola": "Clusii, in Etruria, sanctorum Martyrum Irenaei Diaconi, et Mustiolae matronae; qui sub Aureliano Imperatore, diversis atrocibusque suppliciis cruciati, coronam martyrii meruerunt.",
-   "mr:0201-tryphon": "Alexandriae sanctorum Martyrum Tryphonis et aliorum duodecim.",
+   "mr:0703-tryphon-et-socii": "Alexandriae sanctorum Martyrum Tryphonis et aliorum duodecim.",
    "mr:0703-eulogius-et-sociorum": "Constantinopoli sanctorum Eulogii et Sociorum Martyrum.",
    "mr:0703-hyacinthus": "Caesareae, in Cappadocia, sancti Hyacinthi, qui Trajani Imperatoris cubicularius fuit; et, accusatus quod Christianus esset, plagis varie afflictus est, atque, in carcerem trusus, ibi fame consumptus exspiravit.",
    "mr:0703-marcus-et-mocianus": "Eodem die sanctorum Martyrum Marci et Muciani, qui pro Christo sunt gladio caesi. Hos cum puer parvulus, ne immolarent idolis, alta voce moneret, verberibus jussus est caedi; cumque vehementius Christum confiteretur, tandem, una cum quodam Paulo, Martyres exhortante, necatus est.",
@@ -190,7 +190,7 @@
    "mr:0714-phoca": "Synope, in Ponto, sancti Phocae Martyris, ejusdem civitatis Episcopi, qui, sub Trajano Imperatore, carcerem, vincula, ferrum ignemque pro Christo superans, evolavit in caelum. Ejus reliquiae postea Viennam, in Gallia, sunt delatae, et in Basilica sanctorum Apostolorum conditae.",
    "mr:0714-heracla-antistitis": "Alexandriae sancti Heraclae Antistitis, ob cujus celeberrimam opinionem, Africanus historiographus memorat se Alexandriam, ad eum visendum, properasse.",
    "mr:0714-cyri": "Carthagine sancti Cyri Episcopi, in cujus festivitate sanctus Augustinus de eo sermonem ad populum habuit.",
-   "mr:1008-felix": "Novocomi sancti Felicis, qui fuit primus ejusdem civitatis Episcopus.",
+   "mr:0714-felix": "Novocomi sancti Felicis, qui fuit primus ejusdem civitatis Episcopus.",
    "mr:0714-optatianus": "Brixiae sancti Optatiani Episcopi.",
    "mr:0714-marchelmus": "Daventriae, in Belgis, sancti Marcellini, Presbyteri et Confessoris.",
    "mr:0714-franciscus-solano": "Limae, in Peruvia, sancti Francisci Solani, Sacerdotis ex Ordine Minorum et Confessoris; qui, praedicatione, signis et virtutibus apud Indos occidentales illustris, migravit ad Dominum, atque a Benedicto Decimo tertio, Pontifice Maximo, Sanctorum fastis adscriptus est."
@@ -264,8 +264,8 @@
   "elogia": {
    "mr:0719-vincentius-a-paulo": "Sancti Vincentii a Paulo, Presbyteri et Confessoris, Congregationis Presbyterorum Missionis et Puellarum Caritatis Fundatoris, caelestis omnium caritatis Societatum Patroni; qui in Domino obdormivit quinto Kalendas Octobris.",
    "mr:0719-epaphra": "Colossis, in Phrygia, natalis sancti Epaphrae, quem sanctus Paulus Apostolus concaptivum appellat. Hic, ab eodem Apostolo Colossis Episcopus ordinatus, ibidem, clarus virtutibus, martyrii palmam, pro ovibus sibi commendatis, virili agone percepit; cujus corpus Romae, in Basilica sanctae Mariae Majoris, conditum est.",
-   "mr:0508-martinus": "Treviris sancti Martini, Episcopi et Martyris.",
-   "mr:0717-iusta-et-rufina": "Hispali, in Hispania, passio sanctarum Virginum Justae et Rufinae, quae, a Praeside Diogeniano comprehensae, primo equulei extensione et ungularum laniatione vexatae, postea carcere, inedia et variis torsionibus sunt afflictae; tandem Justa in carcere spiritum exhalavit, Rufinae vero cervix, in confessione Domini, confracta est.",
+   "mr:0719-martinus": "Treviris sancti Martini, Episcopi et Martyris.",
+   "mr:0719-iusta-et-rufina": "Hispali, in Hispania, passio sanctarum Virginum Justae et Rufinae, quae, a Praeside Diogeniano comprehensae, primo equulei extensione et ungularum laniatione vexatae, postea carcere, inedia et variis torsionibus sunt afflictae; tandem Justa in carcere spiritum exhalavit, Rufinae vero cervix, in confessione Domini, confracta est.",
    "mr:0719-aurea": "Cordubae, in Hispania, sanctae Aureae Virginis, beatorum Adulphi et Joannis Martyrum sororis; quae aliquando in apostasiae crimen a Mahumetano Judice inducta est, sed mox, facti poenitens, iterato certamine, hostem effuso sanguine superavit.",
    "mr:0719-symmachus": "Romae sancti Symmachi Papae, qui, a schismaticorum factione diutius fatigatus, demum, sanctitate conspicuus, migravit ad Dominum.",
    "mr:0719-felix": "Veronae sancti Felicis Episcopi.",
@@ -321,7 +321,7 @@
   "titulus": "23 Julii Decimo Kalendas Augusti. ij. D",
   "elogia": {
    "mr:0723-apollinaris": "Ravennae natalis sancti Apollinaris Episcopi, qui, ab Apostolo Petro Romae ordinatus et Ravennam missus, pro fide Christi diversas et multiplices poenas perpessus est; postea, Evangelium in Aemilia praedicans, plurimos ab idolorum cultu revocavit; tandem, Ravennam reversus, gloriosum martyrium, sub Vespasiano Caesare, complevit.",
-   "mr:0409-liborius": "Cenomanis, in Gallia, sancti Liborii, Episcopi et Confessoris.",
+   "mr:0723-liborius": "Cenomanis, in Gallia, sancti Liborii, Episcopi et Confessoris.",
    "mr:0723-birgitta": "Romae natalis sanctae Birgittae Viduae, quae, post multas sanctarum locorum peregrinationes, divino afflata Spiritu, quievit. Ipsius autem festivitas octavo Idus Octobris celebratur.",
    "mr:0723-rasyphus": "Ibidem sancti Rasyphi Martyris.",
    "mr:0723-primitiva": "Item Romae passio sanctae Primitivae, Virginis et Martyris.",

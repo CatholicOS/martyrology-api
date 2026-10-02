@@ -102,9 +102,9 @@
    "mr:1107-auctus-et-socii": "At Amphipolis, in Macedonia, the holy martyrs Auctus, Taurio and Thessalonica.",
    "mr:1107-melasippus-antonius-et-carina": "At Ancyra, the passion of the Saints Melasippus, Anthony and Carina, under Julian the Apostate.",
    "mr:1107-engelbertus": "At Cologne, St. Engelbertus, bishop, who did not hesitate to suffer martyrdom in defence of ecclesiastical liberties, and for obedience to the Roman Church.",
-   "mr:0613-achilleus": "At Alexandria, blessed Achillas, a bishop renowned for erudition, faith and purity of life.",
+   "mr:1107-achilleus": "At Alexandria, blessed Achillas, a bishop renowned for erudition, faith and purity of life.",
    "mr:1107-willibrordus": "In Friesland, the decease of St. Willibrord, bishop of Utrecht, who was consecrated bishop by the blessed pope Sergius, and preached the Gospel in Friesland and Denmark.",
-   "mr:1114-rufus": "At Metz, St. Rufus, bishop and confessor.",
+   "mr:1107-rufus": "At Metz, St. Rufus, bishop and confessor.",
    "mr:1107-florentius": "At Strasburg, St. Florentius, bishop."
   }
  },
@@ -126,7 +126,7 @@
   "elogia": {
    "mr:1109-dedicatio-basilicae-lateranensis": "At Rome, the dedication of the Basilica of our Saviour.",
    "mr:1109-theodorus": "At Amasea, in Pontus, the birthday of St. Theodore, a soldier, in the time of the emperor Maximian. For the confession of Christ, he was severely scourged and sent to prison, where he was comforted by an apparition of our Lord, who exhorted him to act with courage and constancy. He was finally stretched on the rack, lacerated with iron hooks till his intestines were laid bare, and then cast into the flames to be burned alive. His glorious deeds have been celebrated in a magnificent oration by St. Gregory of Nyssa.",
-   "mr:1110-orestes": "At Tyana, in Cappadocia, the martyrdom of St. Orestes, under the emperor Diocletian.",
+   "mr:1109-orestes": "At Tyana, in Cappadocia, the martyrdom of St. Orestes, under the emperor Diocletian.",
    "mr:1109-alexander": "At Thessalonica, St. Alexander, martyr, during the reign of Maximian.",
    "mr:1109-ursinus": "At Bourges, St. Ursinus, confessor, who was ordained at Rome by the successors of the apostles and appointed first bishop of that city.",
    "mr:1109-agrippinus": "At Naples, in Campania, St. Agrippinus, a bishop renowned for miracles.",
@@ -172,8 +172,8 @@
    "mr:1112-rufus": "At Avignon, St. Rufus, first bishop of that city.",
    "mr:1112-cunibertus": "At Cologne, the decease of St. Cunibert, bishop.",
    "mr:1112-aemilianus": "At Tarazona, in Spain, blessed Aemilian, a priest who wrought numberless miracles, and whose wonderful life was written by St. Braulio, bishop of Saragossa.",
-   "mr:1128-theodora": "At Constantinople, St. Nilus, abbot who resigned the office of governor of the city to become a monk, and was distinguished for learning and sanctity, in the time of Theodosius the Younger.",
-   "mr:1111-theodorus-studita": "Also, at Constantinople, St. Theodore Studita, who became celebrated throughout the whole Catholic Church by his vigorous defence of the faith against the Iconoclasts.",
+   "mr:1112-nilus": "At Constantinople, St. Nilus, abbot who resigned the office of governor of the city to become a monk, and was distinguished for learning and sanctity, in the time of Theodosius the Younger.",
+   "mr:1112-theodorus-studita": "Also, at Constantinople, St. Theodore Studita, who became celebrated throughout the whole Catholic Church by his vigorous defence of the faith against the Iconoclasts.",
    "mr:1112-didacus": "At Alcala, in Spain, St. Didacus, confessor, of the Order of Minorites, who was renowned for his humility. Inscribed on the catalogue of the saints by Sixtus V., his feast is kept on the thirteenth of this month."
   }
  },
@@ -203,19 +203,19 @@
    "mr:1114-hypatius": "At Gangres, in Paphlagonia, St. Hypatius, bishop, who on his way home from the great council of Nice, was attacked with stones by the Novatian heretics, and died a martyr.",
    "mr:1114-serapion": "At Algiers, in Africa, blessed Serapion, of the Order of Our Blessed Lady of Ransom. For the redemption of the faithful in captivity and the preaching of the Christian faith, he was the first of his Order to deserve the palm of martyrdom by being crucified and cut to pieces.",
    "mr:1114-martyres-emessae": "At Emesa, the passion of many holy women, who were barbarously tortured and massacred under Mady, a savage Arabian chief.",
-   "mr:1230-iucundus": "At Bologna, St. Jucundus, bishop and confessor.",
+   "mr:1114-iucundus": "At Bologna, St. Jucundus, bishop and confessor.",
    "mr:1114-laurentius-o-toole": "In Ireland, St. Lawrence, bishop of Dublin."
   }
  },
  "15": {
   "titulus": "The Fifteenth Day of November",
   "elogia": {
-   "mr:1116-gertrudis-magna": "St. Gertrude, virgin, whose birthday is the 17th of this month.",
+   "mr:1115-gertrudis-magna": "St. Gertrude, virgin, whose birthday is the 17th of this month.",
    "mr:1115-eugenius": "The same day, the birthday of St. Eugenius, bishop of Toledo, and martyr, disciple of blessed Denis the Areopagite. Having consummated his martyrdom near Paris, he received from our Lord a crown for his blessed sufferings. His body was afterwards conveyed to Toledo.",
    "mr:1115-felix": "At Nola, in Campania, blessed Felix, bishop and martyr, who was renowned for miracles from the fifteenth year of his age. He terminated the combats of his martyrdom with thirty others, under the governor Marcian.",
    "mr:1115-guria-et-samona": "At Edessa, in Syria, the holy martyrs Gurias and Samonas, under the emperor Diocletian and the governor Antoninus.",
-   "mr:0902-habib": "In the same place, the martyrdom of St. Abibus, deacon, who was torn with iron hooks, and cast into the fire in the time of the emperor Licinius and the governor Lysanias.",
-   "mr:0330-secundus": "In Africa, the holy martyrs Secundus, Fidentian, and Varicus.",
+   "mr:1115-habib": "In the same place, the martyrdom of St. Abibus, deacon, who was torn with iron hooks, and cast into the fire in the time of the emperor Licinius and the governor Lysanias.",
+   "mr:1115-secundus-et-socii": "In Africa, the holy martyrs Secundus, Fidentian, and Varicus.",
    "mr:1115-maclovius": "In Bretagne, the birthday of St. Malo, bishop, who was glorious for miracles from his early years.",
    "mr:1115-luperius": "At Verona, St. Luperius, bishop and confessor.",
    "mr:1115-leopoldus": "In Austria, St. Leopold, margrave of that country, who was inscribed among the saints by Innocent VIII."
@@ -250,7 +250,7 @@
   "titulus": "The Eighteenth Day of November",
   "elogia": {
    "mr:1118-romanus": "At Rome, the Dedication of the basilicas of the holy apostles Peter and Paul. The former, having been enlarged, was on this day solemnly consecrated by Urban VIII.; while the latter, more sumptuously rebuilt after its total destruction by the flames, was solemnly dedicated on the 10th of December by Pius IX., though the festival in commemoration of that event was transferred to this day. At Antioch, the birthday of St. Romanus, martyr, in the time of the emperor Galerius. When the prefect Asclepiades broke into the churches and strove to destroy them completely, Romanus exhorted the Christians to resist him, and after being subjected to dire torments and the cutting out of his tongue (without which, however, he spoke the praises of God), he was strangled in prison and crowned with a glorious martyrdom. Before him suffered a young boy named Barula, who being asked by him whether it was better to worship one God or several gods, and having answered that we must believe in the one God whom the Christians adore, was scourged and beheaded.",
-   "mr:0529-hesychius": "Also, at Antioch, the holy martyr Hesychius, a soldier. Hearing the order that anyone refusing to sacrifice to idols, should lay aside his military belt, he immediately took off his. For this reason, he was precipitated into the river with a large stone tied to his right hand.",
+   "mr:1118-hesychius": "Also, at Antioch, the holy martyr Hesychius, a soldier. Hearing the order that anyone refusing to sacrifice to idols, should lay aside his military belt, he immediately took off his. For this reason, he was precipitated into the river with a large stone tied to his right hand.",
    "mr:1118-eodem-die-sanc": "The same day, the Saints Oriculus and his companions, who suffered for the Catholic faith, in the persecution of the Vandals.",
    "mr:1118-maximus": "At Mayence, St. Maximus, bishop, who, after suffering much from the Arians, died a confessor, in the time of Constantius.",
    "mr:1118-odo": "At Tours, the departure from this life of blessed Odo, abbot of Cluny.",
@@ -266,7 +266,7 @@
    "mr:1119-abdia": "At Samaria, the holy prophet Abdias.",
    "mr:1119-maximus": "At Rome, on the Appian road, the birthday of St. Maximus, priest and martyr, who suffered in the persecution of Valerian, and was buried near St. Xystus.",
    "mr:1119-barlaam": "At Caesarea, in Cappadocia, St. Barlaam, martyr, who, though unpolished and ignorant, yet armed with the wisdom of Christ, overcame the tyrant, and, by the constancy of his faith, subdued fire itself. On his birthday, St. Basil the Great delivered a celebrated discourse.",
-   "mr:1120-crispinus": "At Ecijo, the blessed bishop Crispinus, who obtained the glory of martyrdom by decapitation.",
+   "mr:1119-crispinus": "At Ecijo, the blessed bishop Crispinus, who obtained the glory of martyrdom by decapitation.",
    "mr:1119-severinus-et-socii": "At Vienne, the holy martyrs Severinus, Exuperius and Felician. Their bodies, after the lapse of many years, were found through their own revelation, and being taken up with due honors by the bishop, clergy and people of that city, were buried with becoming solemnity.",
    "mr:1119-faustus": "The same day, St. Faustus, deacon of Alexandria, who was first banished with St. Denis, in the persecution of Valerian; later, in the persecution of Diocletian, being far advanced in age, he consummated his martyrdom by the sword.",
    "mr:1119-azas": "In Isauria, the martyrdom of Saint Azas and his military companions, to the number of one hundred and fifty, under the emperor Diocletian and the tribune Aquilinus."
@@ -284,7 +284,7 @@
    "mr:1120-bassus": "At Heraclea, in Thrace, the holy martyrs Bassus, Denis, Agapitus and forty others.",
    "mr:1120-edmundus": "In England, St. Edmund, king and martyr.",
    "mr:1120-gregorius-decapolitanus": "At Constantinople, St. Gregory of Decapolis, who suffered many tribulations for the worship of holy images.",
-   "mr:1122-benignus": "At Milan, St. Benignus, a bishop, who, amidst the serious troubles caused by the barbarians, governed the church entrusted to him with the greatest constancy and piety.",
+   "mr:1120-benignus": "At Milan, St. Benignus, a bishop, who, amidst the serious troubles caused by the barbarians, governed the church entrusted to him with the greatest constancy and piety.",
    "mr:1120-silvester": "At Chalons, St. Silvester, a bishop, who went to God in the forty-second year of his priesthood, full of days and virtues.",
    "mr:1120-bernwardus": "At Verona, St. Simplicius, bishop and confessor."
   }
@@ -300,7 +300,7 @@
    "mr:1121-heliodorus": "In Pamphylia, St. Heliodorus, martyr, in the persecution of Aurelian, under the governor Aetius. After his death his executioners were converted to the faith and thrown into the sea.",
    "mr:1121-gelasius-i": "At Rome, St. Gelasius, pope, distinguished for learning and sanctity.",
    "mr:1121-maurus-parentii": "At Verona, St. Maurus, bishop and confessor.",
-   "mr:1123-columbanus": "In the monastery of Bobio, the departure from this life of St. Columban, abbot, who founded many convents and governed a large number of monks. He died at an advanced age, celebrated for many virtues."
+   "mr:1121-columbanus": "In the monastery of Bobio, the departure from this life of St. Columban, abbot, who founded many convents and governed a large number of monks. He died at an advanced age, celebrated for many virtues."
   }
  },
  "22": {
@@ -357,7 +357,7 @@
    "mr:1126-silvester-gozzolini": "At Fabriano, in the Marches, blessed Silvester, abbot, founder of the Congregation of the Silvestrine monks.",
    "mr:1126-petrus": "At Alexandria, the birthday of St. Peter, bishop of that city, adorned with all virtues, who was beheaded by the command of Galerius Maximian.",
    "mr:1126-faustus-et-socii": "There suffered also at Alexandria, in the same persecution, the holy martyrs Faustus, priest, Didius and Ammonius; likewise, Phileas, Hesychius, Pachomius and Theodore, Egyptian bishops, with six hundred and sixty others, whom the sword of persecution sent to heaven.",
-   "mr:1125-marculus": "At Nicomedia, in the time of Constantius, St. Marcellus, a priest, who died a martyr by being hurled down from a rock.",
+   "mr:1126-marcellus": "At Nicomedia, in the time of Constantius, St. Marcellus, a priest, who died a martyr by being hurled down from a rock.",
    "mr:1126-bellinus": "At Padua, St. Bellinus, bishop and martyr.",
    "mr:1126-siricius": "At Rome, St. Siricius, pope and confessor, celebrated for his learning, piety and zeal for religion, who condemned various heretics, and published salutary laws concerning ecclesiastical discipline.",
    "mr:1126-amator": "At Autun, St. Amator, bishop.",
@@ -371,7 +371,7 @@
  "27": {
   "titulus": "The Twenty-seventh Day of November",
   "elogia": {
-   "mr:1120-basilius": "At Antioch, the holy martyrs Basileus, bishop, Auxilius, and Saturninus.",
+   "mr:1127-basilius": "At Antioch, the holy martyrs Basileus, bishop, Auxilius, and Saturninus.",
    "mr:1127-iacobus-intercisus": "In Persia, St. James Intercisus, a distinguished martyr. In the time of Theodosius the Younger, he denied Christ to please king Isdegerdes, but his mother and his wife having for that reason withdrawn from his company, he entered into himself, and returned to the king to declare his faith in our Lord, whereupon the irritated monarch condemned him to be cut to pieces and beheaded. Countless other martyrs suffered at this time in the same country.",
    "mr:1127-septem-martyres-sebaste": "At Sebaste, in Armenia, the holy martyrs Hirenarchus, Acacius, priest, and seven women. Struck with the constancy of these women, Hirenarchus was converted to Christ, and with Acacius died under the axe, in the reign of the emperor Diocletian and under the governor Maximus.",
    "mr:1127-facundus-et-primitivus": "In Galicia, on the river Cea, the Saints Facundus and Primitivus, who suffered under the governor Atticus.",
@@ -379,7 +379,7 @@
    "mr:1127-maximus": "At Riez, in France, St. Maximus, bishop and confessor, who, from his tender years, was endowed with every grace and virtue. Being first superior of the monastery of Lerins, and afterwards bishop of the church of Riez, he was celebrated for the working of miracles and prodigies.",
    "mr:1127-virgilius": "At Salzburg, in Austria, St. Virgilius, bishop, and apostle of Carinthia, inscribed among the saints by Sovereign Pontiff Gregory IX.",
    "mr:1127-barlaam-et-josaphat": "In India, on the confines of Persia, the Saints Barlaam and Josaphat, whose wonderful deeds were written by St. John Damascene.",
-   "mr:1123-severinus": "At Paris, the departure from this world of St. Severin, monk and solitary."
+   "mr:1127-severinus": "At Paris, the departure from this world of St. Severin, monk and solitary."
   }
  },
  "28": {

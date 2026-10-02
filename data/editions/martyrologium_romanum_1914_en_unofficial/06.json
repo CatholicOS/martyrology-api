@@ -113,7 +113,7 @@
    "mr:0609-maximianus": "At Syracuse, the bishop St. Maximian, who is frequently mentioned by pope St. Gregory.",
    "mr:0609-richardus": "At Andria, in Terra-di-Bari, St. Richard, first bishop of that city, who is renowned for miracles.",
    "mr:0609-columba": "In Scotland, St. Columba, priest and confessor.",
-   "mr:0618-ephraem": "At Edessa, in Syria, St. Julian, a monk, whose memorable deeds have been related by the deacon St. Ephrem."
+   "mr:0609-iulianus": "At Edessa, in Syria, St. Julian, a monk, whose memorable deeds have been related by the deacon St. Ephrem."
   }
  },
  "10": {
@@ -128,7 +128,7 @@
    "mr:0610-in-africa-sanct": "In Africa, the holy martyrs Aresius, Rogatus, and fifteen others.",
    "mr:0610-maurinus": "At Cologne, St. Maurinus, abbot and martyr.",
    "mr:0610-asterius": "At Petra, in Arabia, St. Asterius, a bishop, who suffered much from the Arians for the Catholic faith. By the emperor Constantius he was banished to Africa, where he died a glorious confessor.",
-   "mr:0409-maximus": "At Naples, in Campania, St. Maximus, bishop and martyr. For having vigorously defended the Nicene Creed, he was sent by the same emperor Constantius into exile, where he died worn out by his trials.",
+   "mr:0610-maximus": "At Naples, in Campania, St. Maximus, bishop and martyr. For having vigorously defended the Nicene Creed, he was sent by the same emperor Constantius into exile, where he died worn out by his trials.",
    "mr:0610-censurius": "At Auxerre, St. Censurius, bishop."
   }
  },
@@ -158,7 +158,7 @@
   "elogia": {
    "mr:0613-antonius": "At Padua, St. Anthony, a native of Portugal, confessor of the Order of Minorites, illustrious for the sanctity of his life, his miracles, and his preaching.",
    "mr:0613-felicula": "At Rome, on the Ardeatine road, the birthday of St. Felicula, virgin and martyr, who was delivered to the judge for refusing to marry Flaccus and to sacrifice to idols. As she persevered in the confession of Christ, he confined her in a dark dungeon without food, and afterwards caused her to be racked until she expired. She was then cast into a sewer; but St. Nicomedes buried her on the road just mentioned.",
-   "mr:0103-lucianus": "In Africa, the holy martyrs Fortunatus and Lucian.",
+   "mr:0613-fortunatus-et-lucianus": "In Africa, the holy martyrs Fortunatus and Lucian.",
    "mr:0613-aquilina": "At Byblos, in Palestine, St. Aquilina, virgin and martyr, at the age of twelve years, under the emperor Diocletian and the judge Volusian. For the confession of the faith she was buffeted, scourged, pierced with red-hot bodkins, and being struck with the sword, consecrated her virginity by martyrdom.",
    "mr:0613-cetheus": "In Abruzzo, St. Peregrinus, bishop and martyr. For the Catholic faith he was thrown into the river Pescara by the Lombards.",
    "mr:0613-fandila": "At Cordova, in the persecution of the Arabs, St. Fandila, a priest and monk, who underwent martyrdom by decapitation for the faith of Christ.",
@@ -170,7 +170,7 @@
   "elogia": {
    "mr:0614-basilius": "At Caesarea, in Cappadocia, the consecration of St. Basil, bishop and doctor of the Church, who was eminent for learning and wisdom in the time of the emperor Valens. Being adorned with every virtue, he was a great light in the Church, and defended her with admirable constancy against the Arians and Macedonians.",
    "mr:0614-elisaeus": "At Samaria, in Palestine, the holy prophet Eliseus, whose grave, says St. Jerome, makes the demons tremble. With him rests also the prophet Abdias.",
-   "mr:1030-marcianus": "At Syracuse, St. Marcian, bishop, who was made bishop by blessed Peter, and killed by the Jews after he had preached the Gospel.",
+   "mr:0614-marcianus": "At Syracuse, St. Marcian, bishop, who was made bishop by blessed Peter, and killed by the Jews after he had preached the Gospel.",
    "mr:0614-valerius-et-rufinus": "At Soissons, the holy martyrs Valerius and Rufinus, who, after enduring many torments, were condemned to be beheaded by the governor Rictiovarus, in the persecution of Diocletian.",
    "mr:0614-anastasius-et-socii": "At Cordova, the holy martyrs Anastasius, priest, Felix, monk, and Digna, virgin.",
    "mr:0614-methodius": "At Constantinople, St. Methodius, bishop.",
@@ -186,7 +186,7 @@
    "mr:0615-benildis": "At Cordova, in Spain, St. Benildes, martyr.",
    "mr:0615-dula": "At Zephirium, in Cilicia, St. Dulas, martyr, who, under the governor Maximus, was, for the name of Christ, scourged, laid on the gridiron, scalded with boiling oil, and after enduring other trials, received for his victory the palm of martyrdom.",
    "mr:0615-lybes-et-socii": "At Palmyra, in Syria, the holy martyrs Libya and Leonides, sisters, and Eutropia, a girl of twelve years, who won the crown of martyrdom by various torments.",
-   "mr:0610-landericus": "At Valenciennes, the decease of St. Landelin, abbot.",
+   "mr:0615-landelinus": "At Valenciennes, the decease of St. Landelin, abbot.",
    "mr:0615-abraham": "At Clermont, in Auvergne, St. Abraham, confessor, illustrious by his holiness and miracles.",
    "mr:0615-bernardus-de-menthone": "In Switzerland, on Mount Jou, St. Bernard of Menthon, confessor.",
    "mr:0615-germana": "At Pibrac, in the diocese of Toulouse, St. Germana Cousin, virgin. After a life of poverty, humility, and patient suffering amidst many trials in the care of her flocks, she went to her heavenly spouse, and became renowned for numerous miracles after her death. Pope Pius IX. placed her in the number of holy virgins."
@@ -202,7 +202,7 @@
    "mr:0616-aurelianus": "At Lyons, the demise of blessed Aurelian, bishop of Arles.",
    "mr:0616-similianus": "At Nantes, in Brittany, St. Similian, bishop and confessor.",
    "mr:0616-benno": "At Meissen, in Germany, St. Benno, bishop.",
-   "mr:0627-ioannes": "In the village of La Louvesc, formerly of the diocese of Vienne in Dauphiny, the decease of St. John Francis Regis, confessor, of the Society of Jesus, distinguished by his zeal for the salvation of souls, and by his patience. He was placed on the list of Saints by Clement XII.",
+   "mr:0616-ioannes-franciscus-regis": "In the village of La Louvesc, formerly of the diocese of Vienne in Dauphiny, the decease of St. John Francis Regis, confessor, of the Society of Jesus, distinguished by his zeal for the salvation of souls, and by his patience. He was placed on the list of Saints by Clement XII.",
    "mr:0616-lutgardis": "In Brabant, St. Lutgard, virgin."
   }
  },
@@ -218,7 +218,7 @@
    "mr:0617-gundulphus": "In the territory of Bourges, St. Gundulphus, bishop.",
    "mr:0617-avitus": "At Orleans, St. Avitus, priest and confessor.",
    "mr:0617-hypatius": "In Phrygia, St. Hypatius, confessor.",
-   "mr:0606-bessarion": "Also, St. Bessarion, anchorite.",
+   "mr:0617-bessarion": "Also, St. Bessarion, anchorite.",
    "mr:0617-rainerius": "At Pisa, in Tuscany, St. Rainerius, confessor."
   }
  },
@@ -254,7 +254,7 @@
    "mr:0620-novatus": "At Rome, the demise of St. Novatus, son of the blessed senator Pudens, and brother of the saintly priest Timothy, and of the holy virgins of Christ Pudentiana and Praxedes, who were instructed in the faith by the Apostles. Their house was converted into a church, and bore the title of Pastor.",
    "mr:0620-paulus-et-cyriacus": "At Tomis, in Pontus, the holy martyrs Paul and Cyriacus.",
    "mr:0620-macarius": "At Petra, in Palestine, St. Macarius, a bishop who suffered much from the Arians, and was banished to Africa, where he rested in the Lord.",
-   "mr:0828-florentina": "At Seville, in Spain, the holy virgin Florentina, sister of the holy bishops Leander and Isidore."
+   "mr:0620-florentina": "At Seville, in Spain, the holy virgin Florentina, sister of the holy bishops Leander and Isidore."
   }
  },
  "21": {
@@ -265,7 +265,7 @@
    "mr:0621-rufinus-et-martia": "At Syracuse, in Sicily, the birthday of the holy martyrs Rufinus and Martia.",
    "mr:0621-cyriacus-et-apollinaris": "In Africa, the holy martyrs Cyriacus and Apollinaris.",
    "mr:0621-albanus": "At Mayence, St. Alban, martyr, who was made worthy of the crown of life, after long labors and severe combats.",
-   "mr:0622-eusebius": "The same day, St. Eusebius, bishop of Samosata, who, in the time of the Arian emperor Constantius, disguised himself under a military dress and visited the churches of God, to confirm them in the faith. By Valens he was banished into Thrace, but when peace was restored to the Church in the reign of Theodosius, he was recalled. As he again visited the churches, an Arian woman struck him with a tile, which fractured his skull and made him a martyr.",
+   "mr:0621-eusebius": "The same day, St. Eusebius, bishop of Samosata, who, in the time of the Arian emperor Constantius, disguised himself under a military dress and visited the churches of God, to confirm them in the faith. By Valens he was banished into Thrace, but when peace was restored to the Church in the reign of Theodosius, he was recalled. As he again visited the churches, an Arian woman struck him with a tile, which fractured his skull and made him a martyr.",
    "mr:0621-terentius": "At Iconium, in Lycaonia, St. Terentius, bishop and martyr.",
    "mr:0621-urciscenus": "At Pavia, St. Urciscenus, bishop and confessor.",
    "mr:0621-martinus": "At Tongres, St. Martin, bishop.",
@@ -342,7 +342,7 @@
    "mr:0627-zoilus": "At Cordova, St. Zoilus, and nineteen other martyrs.",
    "mr:0627-anectus": "At Caesarea, in Palestine, in the persecution of Diocletian, under the governor Urbanus, St. Anectus, martyr. For having exhorted others to suffer martyrdom, and overthrown idols by his prayers, he was scourged by ten soldiers, had his hands and feet cut off, and by decapitation merited the crown of martyrdom.",
    "mr:0627-samson": "At Constantinople, St. Sampson, a priest who harbored the poor.",
-   "mr:0630-ladislaus": "At Warasdin, in Hungary, the holy king Ladislas, greatly renowned to this day for miracles."
+   "mr:0627-ladislaus": "At Warasdin, in Hungary, the holy king Ladislas, greatly renowned to this day for miracles."
   }
  },
  "28": {
