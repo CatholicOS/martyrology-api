@@ -110,6 +110,14 @@ class EditionsOut(BaseModel):
     editions: list[EditionOut]
 
 
+class EditionAccessOut(BaseModel):
+    can_read_texts: bool
+
+
+class AccessOut(BaseModel):
+    editions: dict[str, EditionAccessOut]
+
+
 class CatalogEntryOut(BaseModel):
     id: str
     subject: str | None
