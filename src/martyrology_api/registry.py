@@ -1,7 +1,9 @@
 import json
 import re
-from dataclasses import dataclass
+from collections.abc import Mapping
+from dataclasses import dataclass, field, replace
 from pathlib import Path
+from typing import cast
 
 ID_RE = re.compile(r"^mr:(\d{4})-([a-z0-9-]+)$")
 MARTYROLOGY_BOOK = "book:martyrologium-romanum"
@@ -37,6 +39,29 @@ class IdEntry:
     unnumbered: bool = False
     deprecated: bool = False
     attested_in: str | None = None
+    # Where another 2004-family edition differs from this (Latin print) placement:
+    # its own entry/asterisk/unnumbered, or absent. See crmedr's registry format.
+    editions: Mapping[str, Mapping[str, object]] = field(
+        default_factory=dict, hash=False, compare=False
+    )
+    # The same eulogy printed by another edition on another day.
+    same_eulogy: tuple[str, ...] = ()
+
+    def in_edition(self, edition_id: str) -> "IdEntry | None":
+        """This eulogy as `edition_id` prints it, or None if it does not print it."""
+        o = self.editions.get(edition_id)
+        if not o:
+            return self
+        if o.get("absent"):
+            return None
+        return replace(
+            self,
+            entry=cast("int | None", o["entry"])
+            if "entry" in o
+            else self.entry,  # explicit null kept
+            asterisk=bool(o.get("asterisk", self.asterisk)),
+            unnumbered=bool(o.get("unnumbered", self.unnumbered)),
+        )
 
 
 @dataclass(frozen=True)
@@ -99,6 +124,8 @@ class Registry:
                 asterisk=e.get("asterisk", False),
                 country=e.get("country"),
                 unnumbered=e.get("unnumbered", False),
+                editions=e.get("editions", {}),
+                same_eulogy=tuple(e.get("same_eulogy", [])),
             )
         dep_raw = json.loads((crmedr_path / "data/deprecated_ids.json").read_text())
         for e in dep_raw:

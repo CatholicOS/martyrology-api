@@ -135,3 +135,39 @@ def test_source_reads_source_json(crmedr_path, clbdr_path, data_paths):
     assert src is not None and src["year"] == 2013
     assert s.source("martyrologium_romanum_1914_en_unofficial") is None
     assert s.source("martyrologium_romanum_1584") is None
+
+
+def test_each_2004_edition_prints_its_own_day(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    la = s.day("martyrologium_romanum_2004", 1, 3)
+    it = s.day("martyrologium_romanum_2004_it_IT", 1, 3)
+    assert la is not None and it is not None
+    assert [(e.id, e.entry, e.asterisk) for e in la.elogia] == [
+        ("mr:0103-hermes", 1, False),
+        ("mr:0103-abrunculus", 2, True),
+        ("mr:0103-gregorius", 3, False),
+        ("mr:0103-sine-numero", 4, False),
+    ]
+    # Abrunculus is absent from the CEI even though a stray text exists.
+    assert [(e.id, e.entry, e.asterisk) for e in it.elogia] == [
+        ("mr:0103-hermes", 1, False),
+        ("mr:0103-gregorius", 2, True),
+        ("mr:0103-sine-numero", None, False),
+    ]
+
+
+def test_one_eulogy_on_different_days(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    la5 = s.day("martyrologium_romanum_2004", 1, 5)
+    it6 = s.day("martyrologium_romanum_2004_it_IT", 1, 6)
+    assert la5 is not None and it6 is not None
+    assert [e.id for e in la5.elogia] == ["mr:0105-durando"]
+    assert s.day("martyrologium_romanum_2004", 1, 6) is None  # the stray text is not printed
+    assert s.day("martyrologium_romanum_2004_it_IT", 1, 5) is None
+    assert [e.id for e in it6.elogia] == ["mr:0106-durando"]
+
+
+def test_parse_month_file_without_edition_uses_main_placement(crmedr_path, clbdr_path):
+    reg = Registry.load(crmedr_path, clbdr_path)
+    days = parse_month_file({"mr:0103-gregorius": "x"}, 1, "flat", reg)
+    assert [(e.id, e.entry) for e in days[3].elogia] == [("mr:0103-gregorius", 3)]

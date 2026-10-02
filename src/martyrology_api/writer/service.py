@@ -411,4 +411,4 @@ class CurationService:
         if got is None:
             return None
         raw = json.loads(got[0])
-        return parse_month_file(raw, month, detect_shape(raw), self.registry)
+        return parse_month_file(raw, month, detect_shape(raw), self.registry, edition_id)
