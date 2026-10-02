@@ -41,13 +41,15 @@ def detect_shape(raw: dict) -> str:
     return "day-structured"
 
 
-def _elogium(cid: str, text: str | None, position: int, registry: Registry) -> Elogium:
+def _elogium(cid: str, text: str | None, registry: Registry) -> Elogium:
     am, ad = anchor_day(cid)
     reg = registry.entries.get(cid)
     return Elogium(
         id=cid,
         text=text,
-        entry=position,
+        # Day-structured files digitize prints that number no eulogies (1749, 1914):
+        # a position on the page is not an entry number.
+        entry=None,
         asterisk=reg.asterisk if reg else False,
         unnumbered=reg.unnumbered if reg else False,
         anchor_month=am,
@@ -67,19 +69,16 @@ def parse_month_file(raw: dict, month: int, shape: str, registry: Registry) -> d
                     Elogium(
                         id=None,
                         text=item,
-                        entry=i + 1,
+                        entry=None,  # see _elogium: these prints number nothing
                         asterisk=False,
                         unnumbered=False,
                         anchor_month=month,
                         anchor_day=day,
                     )
-                    for i, item in enumerate(raw_elogia)
+                    for item in raw_elogia
                 ]
             else:
-                elogia = [
-                    _elogium(cid, text, i + 1, registry)
-                    for i, (cid, text) in enumerate(raw_elogia.items())
-                ]
+                elogia = [_elogium(cid, text, registry) for cid, text in raw_elogia.items()]
             days[day] = DayData(
                 month=month,
                 day=day,

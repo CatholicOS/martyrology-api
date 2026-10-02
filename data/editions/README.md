@@ -23,6 +23,8 @@ One file per month; each day carries the printed day heading (`titulus`), the eu
 
 Eulogies with no counterpart in the editio altera 2004 (dropped octaves, vigils, and saints removed by the reform) are keyed by **deprecated** canonical IDs coined in the CRMEDR (`deprecated: true` there). Each aligned edition folder carries an `alignment.json` recording, per ID, the match method (`same-day`, `cross-day`, `coined-deprecated`) and the matcher score — the whole alignment is a mechanical draft for committee review.
 
+These historical prints number no eulogies, so the API returns `entry: null` for every eulogy of a day-structured edition; the order of `elogia` is the printed order.
+
 ## Source
 
 Each edition folder may carry a `source.json` describing the printed copy its texts were taken from; `GET /editions` returns it as `source` (null without one):

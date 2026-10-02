@@ -26,11 +26,8 @@ def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
     ids = [e.id for e in d.elogia]
     assert ids == ["mr:0101-circumcisio-domini", "mr:0102-concordius"]
     conc = d.elogia[1]
-    assert (conc.entry, conc.anchor_month, conc.anchor_day) == (
-        2,
-        1,
-        2,
-    )  # printed position 2, anchored 01-02
+    # The 1749 print numbers no eulogies: no entry, whatever the position.
+    assert (conc.entry, conc.anchor_month, conc.anchor_day) == (None, 1, 2)  # anchored 01-02
     assert d.conclusio is not None and d.conclusio.startswith("Et alibi")
 
 
@@ -93,7 +90,7 @@ def test_unaligned_day_returns_null_ids(crmedr_path, clbdr_path, data_paths):
     assert d is not None
     assert len(d.elogia) == 2
     assert [e.id for e in d.elogia] == [None, None]
-    assert [e.entry for e in d.elogia] == [1, 2]
+    assert [e.entry for e in d.elogia] == [None, None]  # the 1914 print numbers nothing
     assert d.elogia[0].text == "At Spoleto, St. Concordius, priest and martyr."
     assert d.elogia[1].text == "At Rome, many holy martyrs."
     assert (d.elogia[0].anchor_month, d.elogia[0].anchor_day) == (1, 2)
