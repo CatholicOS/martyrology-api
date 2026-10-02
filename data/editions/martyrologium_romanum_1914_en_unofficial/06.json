@@ -6,7 +6,7 @@
    "mr:0601-chariton-et-socii": "At Caesarea, in Palestine, blessed Pamphilus, priest and martyr, a man of remarkable sanctity and learning, and great charity to the poor. In the persecution of Galerius Maximian, he was tortured for the faith of Christ, under the governor Urbanus, and thrown into prison; then, being again subjected to torments under Firmilian, he consummated his martyrdom with others. With them suffered also Valens, deacon, and Paul, and nine others, whose commemoration occurs on other days.",
    "mr:0601-reverianus": "At Autun, the Saints Reverian, bishop, and Paul, priest, with ten others, who were crowned with martyrdom under the emperor Aurelian.",
    "mr:0601-thespesius": "In Cappadocia, in the time of the emperor Alexander and the prefect Simplicius, the holy martyr Thespesius, who, after undergoing many torments, was beheaded.",
-   "mr:0601-ischyrion": "In Egypt, under the emperor Diocletian, the holy martyrs Ischyrion, military officer, and five other soldiers, who were put to death in different manners for the faith of Christ.",
+   "mr:0601-ischyrion-et-socii": "In Egypt, under the emperor Diocletian, the holy martyrs Ischyrion, military officer, and five other soldiers, who were put to death in different manners for the faith of Christ.",
    "mr:0601-firmus": "Also, St. Firmus, martyr, who was scourged most severely, struck with stones, and finally decapitated during the persecution of Maximian.",
    "mr:0601-felinus-et-gratinianus": "At Perugia, the holy martyrs Felinus and Gratinian, soldiers under Decius, who were variously tortured, and thus by a glorious death won the palm of martyrdom.",
    "mr:0601-proculus": "At Bologna, St. Proculus, martyr, who suffered under the emperor Maximian.",
@@ -21,9 +21,9 @@
  "2": {
   "titulus": "The Second Day of June",
   "elogia": {
-   "mr:0602-marcellinus": "At Rome, the birthday of the holy martyr Marcellinus, priest, and Peter, exorcist, who instructed in the faith many persons detained in prison. Under Diocletian, they were loaded with chains, and, after enduring many torments, were beheaded by the judge Serenus, in a place which was then called the Black Forest, but which was in their honor afterwards known as the White Forest. Their bodies were buried in a crypt near St. Tiburtius, and pope St. Damasus composed for their tomb an epitaph in verse.",
+   "mr:0602-marcellinus-et-petrus": "At Rome, the birthday of the holy martyr Marcellinus, priest, and Peter, exorcist, who instructed in the faith many persons detained in prison. Under Diocletian, they were loaded with chains, and, after enduring many torments, were beheaded by the judge Serenus, in a place which was then called the Black Forest, but which was in their honor afterwards known as the White Forest. Their bodies were buried in a crypt near St. Tiburtius, and pope St. Damasus composed for their tomb an epitaph in verse.",
    "mr:0602-erasmus": "In Campania, during the reign of Decius, St. Erasmus, bishop and martyr, who was first scourged with leaded whips and then severely beaten with rods; he had also rosin, brimstone, lead, pitch, wax, and oil poured over him, without receiving any injury. Afterwards, under Maximian, he was again subjected to various most horrible tortures at Mola, but was still preserved from death by the power of God for the strengthening of others in the faith. Finally, celebrated for his sufferings, and called by God, he closed his life by a peaceful and holy end. His body was afterwards transferred to Gaeta.",
-   "mr:0602-pothinus": "At Lyons, many holy martyrs (Photinus, bishop, Sanctus, deacon, Vetius, Epagathus, Maturus, Ponticus, Biblis, Attalus, Alexander and Blandina, with many others), whose many valiant combats, in the time of Marcus Aurelius Antoninus and Lucius Verus, are recorded in a letter from the church at Lyons to the churches of Asia and Phrygia. St. Blandina, one of these martyrs, though weaker on account of her sex and frame, and of her lower condition in life, encountered longer and more terrible trials. But remaining unshaken, she was put to the sword, and followed those whom she had exhorted to win the palm of martyrdom.",
+   "mr:0602-pothinus-et-socii": "At Lyons, many holy martyrs (Photinus, bishop, Sanctus, deacon, Vetius, Epagathus, Maturus, Ponticus, Biblis, Attalus, Alexander and Blandina, with many others), whose many valiant combats, in the time of Marcus Aurelius Antoninus and Lucius Verus, are recorded in a letter from the church at Lyons to the churches of Asia and Phrygia. St. Blandina, one of these martyrs, though weaker on account of her sex and frame, and of her lower condition in life, encountered longer and more terrible trials. But remaining unshaken, she was put to the sword, and followed those whom she had exhorted to win the palm of martyrdom.",
    "mr:0602-eugenius-i": "At Rome, St. Eugenius, pope and confessor.",
    "mr:0602-nicolaus": "At Trani, in Terra-di-Bari, St. Nicholas Peregrinus, confessor, whose miracles were related in the Roman Council, under Urban II."
   }
@@ -85,7 +85,7 @@
   "titulus": "The Seventh Day of June",
   "elogia": {
    "mr:0607-paulus": "At Constantinople, the birthday of St. Paul, bishop of that city. For the Catholic faith, he was often expelled from his see by the Arians, and restored to it by the Roman Pontiff, St. Julius. Finally, the Arian emperor Constantius banished him to Cucusum, a small town of Cappadocia, where, by the machinations of the Arians, he was barbarously strangled, and thus departed for the heavenly kingdom. His body was conveyed to Constantinople with the greatest honor, in the reign of emperor Theodosius. In Egypt, St. Licarion, martyr, who was lacerated, scourged with heated iron rods, and, after other horrible torments, was crowned with martyrdom by a stroke from the sword.",
-   "mr:0607-petrus": "At Cordova, the holy martyrs Peter, priest, Wallabonsus, deacon, Sabinian, Wistremundus, Habentius, and Jeremias, monks.",
+   "mr:0607-petrus-et-socii": "At Cordova, the holy martyrs Peter, priest, Wallabonsus, deacon, Sabinian, Wistremundus, Habentius, and Jeremias, monks.",
    "mr:0607-robertus": "In England, the abbot St. Robert, of the Order of Citeaux."
   }
  },
@@ -172,7 +172,7 @@
    "mr:0614-elisaeus": "At Samaria, in Palestine, the holy prophet Eliseus, whose grave, says St. Jerome, makes the demons tremble. With him rests also the prophet Abdias.",
    "mr:1030-marcianus": "At Syracuse, St. Marcian, bishop, who was made bishop by blessed Peter, and killed by the Jews after he had preached the Gospel.",
    "mr:0614-valerius-et-rufinus": "At Soissons, the holy martyrs Valerius and Rufinus, who, after enduring many torments, were condemned to be beheaded by the governor Rictiovarus, in the persecution of Diocletian.",
-   "mr:0614-anastasius": "At Cordova, the holy martyrs Anastasius, priest, Felix, monk, and Digna, virgin.",
+   "mr:0614-anastasius-et-socii": "At Cordova, the holy martyrs Anastasius, priest, Felix, monk, and Digna, virgin.",
    "mr:0614-methodius": "At Constantinople, St. Methodius, bishop.",
    "mr:0614-aetherius": "At Vienne, St. Aetherius, bishop.",
    "mr:0614-quinctianus": "At Rhodez, St. Quinctian, bishop."
@@ -197,7 +197,7 @@
   "elogia": {
    "mr:0616-ferreolus-et-ferrutius": "At Besancon, in France, the holy martyrs Ferreol, priest, and Ferrution, deacon, who were sent by the blessed bishop Irenaeus to preach the word of God, and after being exposed to various torments under the judge Claudius, were put to the sword.",
    "mr:0616-quiricus-et-iulitta": "At Tarsus, in Cilicia, in the reign of the emperor Diocletian, the holy martyrs Quiricus, and Julitta, his mother. Quiricus, a child of three years, seeing his mother cruelly scourged in the presence of the governor Alexander, and crying bitterly, was killed by being dashed against the steps of the tribunal. Julitta, after being subjected to severe stripes and grievous torments, closed the career of her martyrdom by decapitation.",
-   "mr:0616-aureus": "At Mayence, the passion of the Saints Aureus, and Justina, his sister, and other martyrs, who, being at Mass in the church, were massacred by the Huns then devastating Germany.",
+   "mr:0616-aureus-et-socii": "At Mayence, the passion of the Saints Aureus, and Justina, his sister, and other martyrs, who, being at Mass in the church, were massacred by the Huns then devastating Germany.",
    "mr:0616-tychon": "At Amathonte, in Cyprus, St. Tychon, a bishop in the time of Theodosius the Younger.",
    "mr:0616-aurelianus": "At Lyons, the demise of blessed Aurelian, bishop of Arles.",
    "mr:0616-similianus": "At Nantes, in Brittany, St. Similian, bishop and confessor.",

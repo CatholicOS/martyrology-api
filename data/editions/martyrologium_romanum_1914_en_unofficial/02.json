@@ -40,7 +40,7 @@
    "mr:0204-andrea-corsinus": "At Florence, St. Andrew Corsini, bishop of Fiesoli, whose birthday is the 6th of January.",
    "mr:0204-eutychius": "At Rome, St. Eutychius, who endured a glorious martyrdom, and was buried in the cemetery of Callistus. Pope St. Damasus wrote an epitaph in verse for his tomb.",
    "mr:0204-aquilinus-et-socii": "At Fossombrone, the holy martyrs Aquilinus, Geminus, Gelasius, Magnus and Donatus.",
-   "mr:0204-philea": "At Thmuis, in Egypt, in the persecution of Diocletian, the passion of blessed Phileas, bishop of that city, and of Philoromus, military tribune, who rejected the exhortations of their relations and friends to save themselves, offered themselves to death, and so merited immortal palms from God. With them was crowned with martyrdom a numberless multitude of the faithful of the same place, who followed the example of their pastor.",
+   "mr:0204-philea-et-philoromus": "At Thmuis, in Egypt, in the persecution of Diocletian, the passion of blessed Phileas, bishop of that city, and of Philoromus, military tribune, who rejected the exhortations of their relations and friends to save themselves, offered themselves to death, and so merited immortal palms from God. With them was crowned with martyrdom a numberless multitude of the faithful of the same place, who followed the example of their pastor.",
    "mr:0204-rembertus": "The same day, St. Rembert, bishop of Bremen.",
    "mr:0204-aventinus-trecis": "At Troyes, St. Aventin, confessor.",
    "mr:0204-isidorus": "At Pelusium, in Egypt, St. Isidore, a monk renowned for merit and learning.",
@@ -52,7 +52,7 @@
   "titulus": "The Fifth Day of February",
   "elogia": {
    "mr:0205-agatha": "At Catania, in Sicily, in the time of the emperor Decius and the judge Quinctian, the birthday of St. Agatha, virgin and martyr. After being buffeted, imprisoned, tortured, racked, dragged over pieces of earthenware and burning coals, and having her breasts cut off, she consummated her sacrifice in prison while engaged in prayer.",
-   "mr:0205-plurimi-martyres-ponto": "In Pontus, during the persecution of Maximian, the commemoration of many holy martyrs, some of whom had molten lead poured over them, others had sharp-pointed reeds thrust under their nails, and were oftentimes horribly tormented in many other ways. Thus, by their glorious passion, they deserved at the hands of God palms of victory and unfading crowns.",
+   "mr:0205-plurimi-martyres-ponti": "In Pontus, during the persecution of Maximian, the commemoration of many holy martyrs, some of whom had molten lead poured over them, others had sharp-pointed reeds thrust under their nails, and were oftentimes horribly tormented in many other ways. Thus, by their glorious passion, they deserved at the hands of God palms of victory and unfading crowns.",
    "mr:0205-isidorus": "At Alexandria, during the persecution of Decius, St. Isidore, martyr, who was beheaded for the faith of Christ by Numerian, general of the army.",
    "mr:0205-franciscus-ordinem": "In the kingdom of Japan, the passion of twenty-six martyrs, who, by being crucified for the Catholic faith, and pierced with lances, gloriously died in praising God and preaching that same faith. Pius IX. canonized them in 1862.",
    "mr:0205-avitus": "At Vienne, blessed Avitus, bishop and confessor, whose faith, labors and admirable learning protected France against the ravages of the Arian heresy.",
@@ -63,7 +63,7 @@
   "titulus": "The Sixth Day of February",
   "elogia": {
    "mr:0206-titi": "The Festival of St. Titus, bishop and confessor.",
-   "mr:0206-dorothea": "At Caesarea, in Cappadocia, the birthday of St. Dorothy, virgin and martyr, who was stretched on the rack, then a long time scourged with boughs of the palm-tree, and finally condemned to capital punishment, under Sapricius, governor of that province. Her noble confession of Christ converted a lawyer named Theophilus, who was also tortured in a barbarous manner, and finally put to death by the sword.",
+   "mr:0206-dorothea-et-theophilus": "At Caesarea, in Cappadocia, the birthday of St. Dorothy, virgin and martyr, who was stretched on the rack, then a long time scourged with boughs of the palm-tree, and finally condemned to capital punishment, under Sapricius, governor of that province. Her noble confession of Christ converted a lawyer named Theophilus, who was also tortured in a barbarous manner, and finally put to death by the sword.",
    "mr:0206-eodem-die-s": "The same day, the holy martyrs Saturninus, Theophilus, and Revocata.",
    "mr:0206-silvanus": "At Emesa, in Phoenicia, in the time of the emperor Maximian, St. Silvanus, bishop, who, after having governed that church forty years, was delivered to the beasts with two other Christians, and having his limbs all mangled, received the palm of martyrdom.",
    "mr:0206-antolianus": "At Clermont, in Auvergne, St. Antholian, martyr.",
@@ -129,7 +129,7 @@
   "elogia": {
    "mr:0211-maria": "At Lourdes, in France, the apparition of the Blessed Virgin Mary Immaculate.",
    "mr:0211-saturninus-et-socii": "In Africa, during the persecution of Diocletian, the birthday of the holy martyrs Saturninus, a priest, Dativus, Felix, Ampelius, and their companions. They had, as was their custom, assembled for Mass, when they were seized by the soldiers and put to death, under the proconsul Anolinus.",
-   "mr:0211-plurimi-martyres-numidia": "In Numidia, in the same persecution, the commemoration of many holy martyrs, who, refusing after their apprehension to deliver the holy Scriptures, conformably to the imperial edict, were given over to most painful torments and slain.",
+   "mr:0211-plurimi-martyres-numidiae": "In Numidia, in the same persecution, the commemoration of many holy martyrs, who, refusing after their apprehension to deliver the holy Scriptures, conformably to the imperial edict, were given over to most painful torments and slain.",
    "mr:0211-lucius": "At Adrianople, the holy martyrs Lucius, bishop, and his companions. Lucius suffered much from the Arians under Constantius, and terminated his martyrdom in prison. The others, who were among the principal citizens, refusing to communicate with the Arians, just then anathematized in the Council of Sardica, were condemned to capital punishment by Count Philagrius.",
    "mr:0211-desiderius": "At Lyons, St. Desiderius, bishop of Vienne, and martyr.",
    "mr:0211-calocerus": "At Ravenna, St. Calocerus, bishop and confessor.",
@@ -141,7 +141,7 @@
  "12": {
   "titulus": "The Twelfth Day of February",
   "elogia": {
-   "mr:0212-martyres-carthagine": "At Carthage, the holy martyrs Modestus and Julian.",
+   "mr:0212-martyres-abitinenses": "At Carthage, the holy martyrs Modestus and Julian.",
    "mr:0212-modestus": "At Benevento, St. Modestus, deacon and martyr.",
    "mr:0212-modestus-et-ammonius": "At Alexandria, the holy children Modestus and Ammonius.",
    "mr:0212-meletius": "At Antioch, St. Meletius, a bishop, who often suffered exile for the Catholic faith, and finally died at Constantinople and went to his reward. His virtues have been highly extolled by St. John Chrysostom and St. Gregory of Nyssa.",
@@ -231,7 +231,7 @@
   "elogia": {
    "mr:0219-gabinus": "At Rome, the birthday of St. Gabinus, priest and martyr, brother of the blessed pope Caius. Being loaded with chains and kept a long time in prison by Diocletian, he obtained the joys of heaven by a precious death.",
    "mr:0219-publius-et-socii": "In Africa, the holy martyrs Publius, Julian, Marcellus, and others.",
-   "mr:0219-monachi-martyres-palaestina": "In Palestine, the commemoration of the holy monks and other martyrs, who were barbarously massacred for the faith of Christ by the Saracens, under their leader Almondhar.",
+   "mr:0219-monachi-martyres-palaestinae": "In Palestine, the commemoration of the holy monks and other martyrs, who were barbarously massacred for the faith of Christ by the Saracens, under their leader Almondhar.",
    "mr:0219-zambda": "At Jerusalem, St. Zambdas, bishop.",
    "mr:0219-auxibius": "At Soli, St. Auxibius, bishop.",
    "mr:0219-barbatus": "At Benevento, St. Barbatus, a bishop illustrious for sanctity, who converted the Lombards and their chief to the faith of Christ.",

@@ -76,7 +76,7 @@
    "mr:0806-petrus-de-cardegna": "At Burgos, in Spain, in the monastery of St. Peter of Cardegna, of the Order of St. Benedict, two hundred monks, with their abbot Stephen, who were put to death for the faith of Christ by the Saracens, and buried in the monastery by the Christians.",
    "mr:0806-iustus-et-pastor": "At Alcala, in Spain, the holy martyrs Justus and Pastor, brothers. While they were yet schoolboys, they threw aside their books in school, and spontaneously ran to martyrdom. By order of the governor Dacian, they were arrested, beaten with rods, and as they exhorted each other to constancy, were led out of the city, and had their throats cut by the executioner.",
    "mr:0806-hormisda": "At Rome, St. Hormisdas, pope and confessor.",
-   "mr:0812-iacobus": "At Amida, St. James, a hermit renowned for miracles."
+   "mr:0812-iacobus-do-mai-nam-et-socii": "At Amida, St. James, a hermit renowned for miracles."
   }
  },
  "7": {
@@ -109,11 +109,11 @@
   "titulus": "The Ninth Day of August",
   "elogia": {
    "mr:0809-laurentius": "The vigil of St. Lawrence, martyr.",
-   "mr:0823-laurentius": "At Rome, St. Romanus, soldier, who was moved by the torments of blessed Lawrence to ask for baptism from him. He was immediately prosecuted, scourged, and finally beheaded.",
+   "mr:0823-abundius-et-irenaeus": "At Rome, St. Romanus, soldier, who was moved by the torments of blessed Lawrence to ask for baptism from him. He was immediately prosecuted, scourged, and finally beheaded.",
    "mr:0809-secundianus-et-socii": "In Tuscany, the birthday of the holy martyrs Secundian, Marcellian, and Verian. In the time of Decius, they were scourged by the ex-consul Promotus, then racked and torn with iron hooks. Being burned with fire applied to their sides, they merited the triumphant palm of martyrdom by having their heads struck off.",
    "mr:0809-firmus-et-rusticus": "At Verona, the holy martyrs Firmus and Rusticus, in the time of the emperor Maximian.",
    "mr:0809-numidico": "In Africa, the commemoration of many holy martyrs, during the persecution of Valerian. Being exhorted by St. Numidicus, they obtained the palm of martyrdom by being cast into the fire, but Numidicus, although thrown into the flames with the others and overwhelmed with stones, was nevertheless taken out by his daughter. Found half dead, he was restored and deserved afterwards by his virtue to be made priest of the church of Carthage by blessed Cyprian.",
-   "mr:0809-martyres-constantinopoli": "At Constantinople, the holy martyrs Julian, Marcian, and eight others. For having set up the image of our Saviour on the brazen gate, they were exposed to many torments, and then beheaded by order of the impious emperor Leo.",
+   "mr:0809-martyres-constantinopolis": "At Constantinople, the holy martyrs Julian, Marcian, and eight others. For having set up the image of our Saviour on the brazen gate, they were exposed to many torments, and then beheaded by order of the impious emperor Leo.",
    "mr:0809-domitianus": "At Chalons, in France, St. Domitian, bishop and confessor."
   }
  },
@@ -151,7 +151,7 @@
    "mr:0812-macarius-et-iulianus": "In Syria, the holy martyrs Macarius and Julian.",
    "mr:0812-anicetus-et-photius": "At Nicomedia, the holy martyrs, the count Anicetus and his brother Photinus, with many others, under the emperor Diocletian.",
    "mr:0812-gracilianus-et-felicissima": "At Faleria, in Tuscany, the Saints Gracilian, and Felicissima, virgin, who, for the confession of the faith, had their mouths bruised with stones, and being afterwards struck with the sword, received the palm of martyrdom.",
-   "mr:0812-porcarius": "The same day, the holy martyrs Porcarius, abbot of the monastery of Lerins, and five hundred monks, who were slain for the Catholic faith by barbarians, and were thus crowned with martyrdom.",
+   "mr:0812-porcarius-et-socii": "The same day, the holy martyrs Porcarius, abbot of the monastery of Lerins, and five hundred monks, who were slain for the Catholic faith by barbarians, and were thus crowned with martyrdom.",
    "mr:0808-eusebius": "At Milan, the demise of St. Eusebius, bishop and confessor.",
    "mr:0812-herculanus": "At Brescia, St. Herculanus, bishop."
   }
@@ -272,10 +272,10 @@
    "mr:0821-privatus": "In Gévaudan, St. Privatus, bishop and martyr, who suffered in the persecution of Valerian and Gallienus.",
    "mr:0821-bonosus-et-maximianus": "The same day, the holy martyrs Bonosus and Maximian.",
    "mr:0821-paternus": "At Fundi, in Campania, St. Paternus, a martyr, who came from Alexandria to Rome to visit the tomb of the Apostles. Thence he retired to the neighborhood of Fundi, where, being seized by the tribune whilst he was burying the bodies of the martyrs, he died in captivity.",
-   "mr:0821-bassa": "At Edessa, in Syria, during the persecution of Maximian, the holy martyrs Bassa, and her sons Theogonius, Agapius, and Fidelis, whom their pious mother exhorted to martyrdom and sent before her bearing their crowns. Being herself beheaded, she joyfully followed them and shared their victory.",
+   "mr:0821-bassa-et-socii": "At Edessa, in Syria, during the persecution of Maximian, the holy martyrs Bassa, and her sons Theogonius, Agapius, and Fidelis, whom their pious mother exhorted to martyrdom and sent before her bearing their crowns. Being herself beheaded, she joyfully followed them and shared their victory.",
    "mr:0821-euprepius": "At Verona, St. Euprepius, bishop and confessor.",
    "mr:0821-quadratus": "Also St. Quadratus, bishop.",
-   "mr:0821-bernardus": "At Siena, in Tuscany, blessed Bernard Ptolemy, abbot and founder of the Congregation of Olivetans."
+   "mr:0821-bernardus-et-socii": "At Siena, in Tuscany, blessed Bernard Ptolemy, abbot and founder of the Congregation of Olivetans."
   }
  },
  "22": {
@@ -362,7 +362,7 @@
   "elogia": {
    "mr:0827-josephus-calasanctius": "At Rome, the demise of St. Joseph, confessor, illustrious by the innocence of his life and miracles, who, to instruct youth in piety and letters, founded the Order of the Poor Clerks Regular of the pious Schools of the Mother of God.",
    "mr:0827-rufus": "At Capua, in Campania, the birthday of St. Rufus, bishop and martyr, a patrician, who was baptized with all his family by blessed Apollinaris, disciple of St. Peter.—In the same place, the holy martyrs Rufus and Carpophorus, who suffered under Diocletian and Maximian.",
-   "mr:0827-marcellinus": "At Tomis, in Pontus, the holy martyrs Marcellinus, tribune, and Mannea, his wife, and his sons John, Serapion, and Peter.",
+   "mr:0827-marcellinus-et-socii": "At Tomis, in Pontus, the holy martyrs Marcellinus, tribune, and Mannea, his wife, and his sons John, Serapion, and Peter.",
    "mr:0827-euthalia": "At Lentini, in Sicily, St. Euthalia, virgin. Because she was a Christian she was put to the sword by her brother Sermilian, and went to her spouse.",
    "mr:0827-anthusa": "The same day, the martyrdom of St. Anthusa the Younger, who was made a martyr by being cast into a well for the faith of Christ.",
    "mr:0827-narnus": "At Bergamo, St. Narnus, who was baptized by blessed Barnabas, and consecrated by him first bishop of that city.",

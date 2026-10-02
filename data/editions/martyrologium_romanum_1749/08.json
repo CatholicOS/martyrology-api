@@ -115,7 +115,7 @@
    "mr:0809-secundianus-et-socii": "In Tuscia natalis sanctorum Martyrum Secundiani, Marcelliani et Veriani; qui, tempore Decii, a Promoto Consulari primum caesi sunt, deinde in equuleo suspensi, et abrasi ungulis, atque igne lateribus apposito assati, ac tandem triumphalem martyrii palmam, capite caesi, meruerunt.",
    "mr:0809-firmus-et-rusticus": "Veronae sanctorum Martyrum Firmi et Rustici, qui, tempore Maximiani Imperatoris, sub Anolino Judice, cum sacrificare idolis renuerent et constanter in Christi fide persisterent, ambo jussi sunt, post alia superata supplicia, fustibus caedi et capite amputari.",
    "mr:0809-numidico": "In Africa commemoratio plurimorum sanctorum Martyrum, qui, in persecutione Valeriani, hortante eos ad constantiam sancto Numidico, in ignem conjecti, martyrii palmam adepti sunt. Ipse autem Numidicus, licet cum aliis in rogum injectus et lapidibus obrutus fuisset, a filia tamen, effossus et semivivus repertus, curatus est; ac postea, ob ejus virtutem, in Ecclesiae Carthaginensis Presbyterum a beato Cypriano meruit cooptari.",
-   "mr:0809-martyres-constantinopoli": "Constantinopoli sanctorum Martyrum Juliani, Marciani et aliorum octo; qui, ob Salvatoris imaginem, quam in porta aenea constituerant, omnes, impii Leonis Imperatoris jussu, post multa tormenta, gladio necati sunt.",
+   "mr:0809-martyres-constantinopolis": "Constantinopoli sanctorum Martyrum Juliani, Marciani et aliorum octo; qui, ob Salvatoris imaginem, quam in porta aenea constituerant, omnes, impii Leonis Imperatoris jussu, post multa tormenta, gladio necati sunt.",
    "mr:0809-domitianus": "Catalauni, in Gallia, sancti Domitiani, Episcopi et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -150,7 +150,7 @@
   "titulus": "12 Augusti Pridie Idus Augusti. xiij. G",
   "elogia": {
    "mr:0812-clara": "Sanctae Clarae Virginis, primae plantae Pauperum Dominarum Ordinis Minorum; quae ad aeternas Agni nuptias evocata est pridie hujus diei.",
-   "mr:0812-porcarius": "Eodem die sanctorum Martyrum Porcarii, Abbatis monasterii Lirinensis, et Sociorum ejus quingentorum Monachorum; qui pro fide catholica, a barbaris caesi, martyrio coronati sunt.",
+   "mr:0812-porcarius-et-socii": "Eodem die sanctorum Martyrum Porcarii, Abbatis monasterii Lirinensis, et Sociorum ejus quingentorum Monachorum; qui pro fide catholica, a barbaris caesi, martyrio coronati sunt.",
    "mr:0812-euplius": "Catanae, in Sicilia, natalis sancti Euplii Diaconi, sub Diocletiano et Maximiano Augustis; qui, cum diutissime pro confessione Domini tortus esset, tandem martyrii palmam, gladio caedente, percepit.",
    "mr:0812-hilaria": "Augustae Vindelicorum sanctae Hilariae, quae, cum esset beatae Afrae Martyris mater et ad sepulcrum illius excubaret, ibidem, pro fide Christi, a persecutoribus igni tradita est cum Digna, Euprepia et Eunomia, ancillis suis. Passi sunt etiam eodem die, in praefata urbe, Quiriacus, Largio, Crescentianus, Nimmia et Juliana, cum aliis viginti.",
    "mr:0812-macarius-et-iulianus": "In Syria sanctorum Martyrum Macarii et Juliani.",
@@ -284,10 +284,10 @@
    "mr:0821-anastasius": "Salone sancti Anastasii cornicularii, qui cum videret beatum Agapitum constanter tormenta perferentem, conversus est ad fidem, et pro confessione nominis Christi, jubente Aureliano Imperatore, interemptus Martyr migravit ad Dominum.",
    "mr:0821-luxorius": "In Sardinia natalis sanctorum Martyrum Luxorii, Ciselli et Camerini, qui in persecutione Diocletiani sub Delphio Praeside gladio caesi sunt.",
    "mr:0821-privatus": "In territorio Gavalitano sancti Privati Episcopi et Martyris, qui ab Alexandria Romam veniens ad Apostolorum memorias, et inde in agrum Fundanum secedens cum Martyrum corpora sepeliret, a Tribuno comprehensus in vinculis expiravit.",
-   "mr:0821-bassa": "Edessae in Syria sanctorum Martyrum Bassae et filiorum ejus Theogonii, Agapii et Fidelis, quos in persecutione Maximiani pia mater exhortans, martyrio coronatos praemisit ad palmam, et truncato capite gaudens secuta est cum victoria.",
+   "mr:0821-bassa-et-socii": "Edessae in Syria sanctorum Martyrum Bassae et filiorum ejus Theogonii, Agapii et Fidelis, quos in persecutione Maximiani pia mater exhortans, martyrio coronatos praemisit ad palmam, et truncato capite gaudens secuta est cum victoria.",
    "mr:0821-euprepius": "Veronae sancti Euprepii Episcopi et Confessoris.",
    "mr:0821-quadratus": "Item sancti Quadrati Episcopi.",
-   "mr:0821-bernardus": "Senis in Tuscia beati Bernardi Ptolomaei Abbatis, Congregationis Olivetanae Fundatoris."
+   "mr:0821-bernardus-et-socii": "Senis in Tuscia beati Bernardi Ptolomaei Abbatis, Congregationis Olivetanae Fundatoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -386,7 +386,7 @@
    "mr:0827-narnus": "Bergomi sancti Narni, qui, a beato Barnaba baptizatus, primus ab ipso ejusdem civitatis Episcopus ordinatus est.",
    "mr:0827-rufi": "Capuae natalis sancti Rufi, Episcopi et Martyris; qui, cum esset patriciae dignitatis, a beato Apollinare, sancti Petri discipulo, cum universa familia baptizatus est.",
    "mr:0827-rufus-et-carpophorus": "Ibidem sanctorum Martyrum Rufi et Carpophori, qui sub Diocletiano et Maximiano passi sunt.",
-   "mr:0827-marcellinus": "Tomis, in Ponto, sanctorum Martyrum Marcellini Tribuni, et uxoris Manneae, ac filiorum Joannis, Serapionis et Petri.",
+   "mr:0827-marcellinus-et-socii": "Tomis, in Ponto, sanctorum Martyrum Marcellini Tribuni, et uxoris Manneae, ac filiorum Joannis, Serapionis et Petri.",
    "mr:0827-euthalia": "Apud Leontinos, in Sicilia, sanctae Euthaliae Virginis, quae, cum esset Christiana, ad caelestem Sponsum, a fratre suo Sermiliano caesa gladio, migravit.",
    "mr:0827-anthusa": "Eodem die passio sanctae Anthusae junioris, quae ob Christi fidem, in puteum mersa, martyrium sumpsit.",
    "mr:0827-caesarius": "Arelate, in Gallia, sancti Caesarii Episcopi, mirae sanctitatis et pietatis viri.",
