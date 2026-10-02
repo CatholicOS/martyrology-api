@@ -1332,7 +1332,7 @@
   "4-29-6": "mr:0429-robertus-molismensis",
   "4-30-8": "mr:0430-severus",
   "5-2-2": "mr:0502-hesperus-et-zoes",
-  "5-4-2": "mr:0504-triginta-novem-martyres",
+  "5-4-2": "mr:0504-triginta-novem-martyres-phaenonis",
   "5-5-9": "mr:0505-hilarius",
   "5-7-5": "mr:0507-benedictus-ii",
   "5-11-2": "mr:0511-maximus-et-socii",
@@ -1451,6 +1451,7 @@
   "12-21-4": "mr:1221-anastasius",
   "12-25-0": "mr:1225-nativitas-domini",
   "12-26-5": "mr:1226-theodorus",
-  "12-31-3": "mr:1231-hermes"
+  "12-31-3": "mr:1231-hermes",
+  "5-23-2": "mr:0523-quinctianus-et-socii"
  }
 }

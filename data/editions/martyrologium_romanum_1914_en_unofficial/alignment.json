@@ -3749,7 +3749,7 @@
    "method": "same-day",
    "score": 2.51
   },
-  "mr:0504-triginta-novem-martyres": {
+  "mr:0504-triginta-novem-martyres-phaenonis": {
    "method": "override",
    "score": null
   },
@@ -4457,9 +4457,9 @@
    "method": "same-day",
    "score": 2.22
   },
-  "mr:0523-lucius-et-socii": {
-   "method": "same-day",
-   "score": 1.81
+  "mr:0523-quinctianus-et-socii": {
+   "method": "override",
+   "score": null
   },
   "mr:0523-martyres-mesopotamiae": {
    "method": "same-day",

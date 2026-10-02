@@ -3321,8 +3321,8 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0504-triginta-martyres-inmetallo": {
-   "method": "coined-deprecated",
+  "mr:0504-triginta-novem-martyres-phaenonis": {
+   "method": "override",
    "score": null
   },
   "mr:0504-florianus": {
@@ -3905,8 +3905,8 @@
    "method": "override",
    "score": null
   },
-  "mr:0523-martyru": {
-   "method": "coined-deprecated",
+  "mr:0523-quinctianus-et-socii": {
+   "method": "override",
    "score": null
   },
   "mr:0523-martyres-mesopotamiae": {
