@@ -34,6 +34,18 @@ def test_editions_aligned_flag(client):
     assert eds["martyrologium_romanum_1584"]["aligned"] is None
 
 
+def test_editions_source(client):
+    r = client.get("/api/v1/editions")
+    eds = {e["edition_id"]: e for e in r.json()["editions"]}
+    src = eds["martyrologium_romanum_1749"]["source"]
+    assert src["imprint"] == "Eystadii (Eichstätt), 2013"
+    assert src["year"] == 2013
+    assert src["isbn"] is None
+    # No source.json beside the texts, or no texts at all: no source.
+    assert eds["martyrologium_romanum_1914_en_unofficial"]["source"] is None
+    assert eds["martyrologium_romanum_1584"]["source"] is None
+
+
 def test_catalog_default(client):
     r = client.get("/api/v1/elogia")
     assert r.status_code == 200

@@ -130,3 +130,11 @@ def test_detect_shape():
     assert detect_shape({"mr:0101-basilius": "t"}) == "flat"
     assert detect_shape({"1": {"elogia": {}}}) == "day-structured"
     assert detect_shape({}) == "day-structured"
+
+
+def test_source_reads_source_json(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    src = s.source("martyrologium_romanum_1749")
+    assert src is not None and src["year"] == 2013
+    assert s.source("martyrologium_romanum_1914_en_unofficial") is None
+    assert s.source("martyrologium_romanum_1584") is None

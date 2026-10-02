@@ -23,11 +23,28 @@ One file per month; each day carries the printed day heading (`titulus`), the eu
 
 Eulogies with no counterpart in the editio altera 2004 (dropped octaves, vigils, and saints removed by the reform) are keyed by **deprecated** canonical IDs coined in the CRMEDR (`deprecated: true` there). Each aligned edition folder carries an `alignment.json` recording, per ID, the match method (`same-day`, `cross-day`, `coined-deprecated`) and the matcher score — the whole alignment is a mechanical draft for committee review.
 
+## Source
+
+Each edition folder may carry a `source.json` describing the printed copy its texts were taken from; `GET /editions` returns it as `source` (null without one):
+
+```json
+{
+  "title": "The title as printed on the title page",
+  "imprint": "Place: Publisher, year",
+  "year": 1916,
+  "rights": "The copyright line, or the rights status",
+  "isbn": null,
+  "note": "Provenance: which copy, how it was digitized"
+}
+```
+
+Only `title` is required.
+
 ## Editions
 
 | Folder | Edition | Source | Quality |
 | --- | --- | --- | --- |
-| `martyrologium_romanum_1749/` | Benedict XIV revision, 1749 (public domain) | scan with OCR text layer, parsed mechanically | **raw, uncorrected OCR**: 365/365 days, 2,842 elogia (after merging OCR continuation fragments), every day with titulus and conclusio; OCR artifacts remain in the texts. **Aligned to CRMEDR IDs** (draft, v2): 1,495 same-day + 128 cross-day matches, 1,219 coined deprecated IDs in nominative lemma form (multi-martyr eulogies keyed by first-named subject with `-et-…`/`-et-socii`; only anonymous groups keep `martyres-<place>`), each with a subject in the CRMEDR `i18n/la.json`; see `alignment.json`. Proofreading and alignment review welcome. |
+| `martyrologium_romanum_1749/` | Benedict XIV revision, 1749 (public domain) | a 2013 retyping (Eichstätt) of the 1913 Mechelen printing, which follows Leo XIII's 1902 edition and so includes later eulogies; the PDF's text layer, parsed mechanically | **raw, uncorrected OCR**: 365/365 days, 2,842 elogia (after merging OCR continuation fragments), every day with titulus and conclusio; OCR artifacts remain in the texts. **Aligned to CRMEDR IDs** (draft, v2): 1,495 same-day + 128 cross-day matches, 1,219 coined deprecated IDs in nominative lemma form (multi-martyr eulogies keyed by first-named subject with `-et-…`/`-et-socii`; only anonymous groups keep `martyres-<place>`), each with a subject in the CRMEDR `i18n/la.json`; see `alignment.json`. Proofreading and alignment review welcome. |
 | `martyrologium_romanum_1914_en_unofficial/` | Unofficial English translation, 1914 (public domain) | scan re-OCRed with tesseract at 300dpi (the embedded text layer had spaces stripped) | **raw, uncorrected OCR**: 365/365 days, 3,031 elogia; day assignment is sequential per month, cross-validated against fuzzy decoding of the blackletter ordinal words (zero disagreements). The `titulus` is reconstructed in clean form ("The Sixteenth Day of April") since the printed blackletter headings OCR poorly; this translation carries no Et-alibi closing formula. OCR artifacts remain (drop-cap first words of each day are often garbled). Proofreading welcome. |
 
 Corrections are welcome as pull requests; the digitization scripts are in [`scripts/`](../../scripts/).

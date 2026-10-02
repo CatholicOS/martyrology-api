@@ -171,6 +171,14 @@ class Store:
             self._load_month(edition_id, m)
         return edition_id not in self._unaligned_editions
 
+    def source(self, edition_id: str) -> dict | None:
+        """The edition's `source.json` (the printed copy its texts were taken
+        from), or None when it has no texts on disk or no such file."""
+        d = self._dirs.get(edition_id)
+        if d is None or not (d / "source.json").exists():
+            return None
+        return json.loads((d / "source.json").read_text(encoding="utf-8"))
+
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
 
