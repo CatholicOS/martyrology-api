@@ -54,7 +54,7 @@ def _edition_meta_out(request: Request, edition_id: str) -> EditionMetadataOut:
     )
 
 
-def elogium_out(e: Elogium, footnotes: dict[str, list[dict]] | None = None) -> ElogiumOut:
+def elogium_out(e: Elogium, footnotes: dict[str, list[FootnoteOut]] | None = None) -> ElogiumOut:
     return ElogiumOut(
         id=e.id,
         entry=e.entry,
@@ -62,11 +62,13 @@ def elogium_out(e: Elogium, footnotes: dict[str, list[dict]] | None = None) -> E
         unnumbered=e.unnumbered,
         anchor_day=f"{e.anchor_month:02d}-{e.anchor_day:02d}",
         text=e.text,
-        footnotes=[FootnoteOut(**f) for f in (footnotes or {}).get(e.id or "", [])],
+        footnotes=list((footnotes or {}).get(e.id or "", [])),
     )
 
 
-def _day_content(d: DayData, footnotes: dict[str, list[dict]] | None = None) -> DayContentOut:
+def _day_content(
+    d: DayData, footnotes: dict[str, list[FootnoteOut]] | None = None
+) -> DayContentOut:
     return DayContentOut(
         titulus=d.titulus,
         elogia=[elogium_out(e, footnotes) for e in d.elogia],
@@ -239,7 +241,7 @@ async def get_elogium(
             asterisk=p.asterisk,
             unnumbered=p.unnumbered,
             text=text,
-            footnotes=[FootnoteOut(**f) for f in notes],
+            footnotes=list(notes),
         )
     subject = {
         loc: registry.subjects(loc)[canonical_id]
