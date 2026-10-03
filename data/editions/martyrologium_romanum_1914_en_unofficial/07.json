@@ -26,7 +26,8 @@
    "mr:0702-tres-milites-romae": "Also, at Rome, three holy soldiers, who were converted to Christ by the martyrdom of the blessed Apostle Paul, and with him merited to be made partakers of heavenly glory.",
    "mr:0702-eodem-die-sanc": "The same day, the holy martyrs Ariston, Crescentian, Eutychian, Urbanus, Vitalis, Justus, Felicissimus, Felix, Marcia, and Symphorosa, who were all crowned with martyrdom when the persecution of the emperor Diocletian was raging.",
    "mr:0702-swithinus": "At Winchester, in England, St. Swithin, bishop, whose sanctity was illustrated by the gift of miracles.",
-   "mr:0702-monegundis": "At Bamberg, the holy bishop Otho, who preached the Gospel to the people of Pomerania, and converted them to the faith. At Tours, the demise of St. Monegundes, a pious woman."
+   "mr:0702-otho": "At Bamberg, the holy bishop Otho, who preached the Gospel to the people of Pomerania, and converted them to the faith.",
+   "mr:0702-monegundis": "At Tours, the demise of St. Monegundes, a pious woman."
   },
   "conclusio": null
  },
@@ -36,7 +37,8 @@
    "mr:0703-tryphon-et-socii": "At Alexandria, St. Tryphon, and twelve other martyrs.",
    "mr:0703-eulogius-et-sociorum": "At Constantinople, the holy martyrs Eulogius and his companions.",
    "mr:0703-hyacinthus": "At Caesarea, in Cappadocia, St. Hyacinthus, chamberlain of the emperor Trajan. Accused of being a Christian, he was scourged and thrown into prison, where, consumed with hunger, he breathed his last.",
-   "mr:0703-marcus-et-mocianus": "At Chiusi, in Tuscany, in the reign of the emperor Trajan, the holy martyrs Irenaeus, deacon, and Mustiola, a matron, who were subjected to various atrocious tortures and merited the crown of martyrdom. The same day, the holy martyrs Mark and Mucian, who were put to the sword for Christ. As a small boy cried out to them not to sacrifice to idols, he was whipped, but confessing Christ all the more vigorously, he was killed with a man named Paul, who had also exhorted the martyrs.",
+   "mr:0703-irenaeus-et-mustiola": "At Chiusi, in Tuscany, in the reign of the emperor Trajan, the holy martyrs Irenaeus, deacon, and Mustiola, a matron, who were subjected to various atrocious tortures and merited the crown of martyrdom.",
+   "mr:0703-marcus-et-mocianus": "The same day, the holy martyrs Mark and Mucian, who were put to the sword for Christ. As a small boy cried out to them not to sacrifice to idols, he was whipped, but confessing Christ all the more vigorously, he was killed with a man named Paul, who had also exhorted the martyrs.",
    "mr:0703-anatolius-laodiceae": "At Laodicea, in Syria, St. Anatolius, a bishop, whose writings were admired not only by religious men, but even by philosophers.",
    "mr:0703-heliodorus": "At Altino, St. Heliodorus, a bishop distinguished for holiness and learning.",
    "mr:0703-dathus": "At Ravenna, St. Dathus, bishop and confessor.",
@@ -172,7 +174,8 @@
    "mr:0712-paulinus": "At Lucca, in Tuscany, blessed Paulinus, who was consecrated first bishop of that city by St. Peter. Under Nero, after many combats, he terminated his martyrdom with some companions, at the foot of Mount Pisa.",
    "mr:0712-proclus-et-hilarion": "The same day, the Saints Proclus and Hilarion, who won the palm of martyrdom after most bitter torments, in the time of the emperor Trajan and the governor Maximus.",
    "mr:0712-epiphana": "At Lentini, St. Epiphana, who, after having her breasts cut off, died in the time of the emperor Diocletian and the governor Tertillus.",
-   "mr:0712-viventiolus": "At Toledo, St. Marciana, virgin and martyr. For the faith of Christ, she was exposed to the beasts, torn to pieces by a bull, and was thus crowned with martyrdom. At Lyons, St. Viventiolus, bishop.",
+   "mr:0712-marciana": "At Toledo, St. Marciana, virgin and martyr. For the faith of Christ, she was exposed to the beasts, torn to pieces by a bull, and was thus crowned with martyrdom.",
+   "mr:0712-viventiolus": "At Lyons, St. Viventiolus, bishop.",
    "mr:0712-paternianus-bononiae": "At Bologna, St. Paternian, bishop."
   },
   "conclusio": null
@@ -180,7 +183,8 @@
  "13": {
   "titulus": "The Thirteenth Day of July",
   "elogia": {
-   "mr:0713-anacletus": "At Rome, St. Anacletus, pope and martyr, who governed the Church of God after St. Clement, and shed lustre on it by a glorious martyrdom. The same day, the holy prophets Joel and Esdras.",
+   "mr:0713-anacletus": "At Rome, St. Anacletus, pope and martyr, who governed the Church of God after St. Clement, and shed lustre on it by a glorious martyrdom.",
+   "mr:0713-esdra": "The same day, the holy prophets Joel and Esdras.",
    "mr:0713-sila": "In Macedonia, blessed Silas, one of the first Christians. By the Apostles he was destined for the churches of the Gentiles with Paul and Barnabas. Filled with the grace of God, he zealously discharged the office of preaching, and after glorifying Christ by his sufferings, rested in peace.",
    "mr:0713-serapion": "Also, St. Serapion, martyr, who obtained the crown of martyrdom by fire, in the time of the emperor Severus and the governor Aquila.",
    "mr:0713-myrope": "In the island of Chio, in the time of the emperor Decius and the governor Numerian, the martyr St. Myrops. Being clubbed to death, he went to our Lord.",
@@ -230,7 +234,8 @@
    "mr:0716-hilarinus": "The same day, St. Hilarinus, monk, who was arrested with St. Donatus in the persecution of Julian. As he would not sacrifice to idols, he was beaten with rods, and died a martyr at Arezzo, in Tuscany. His body was translated to Ostia.",
    "mr:0716-valentinus": "At Treves, St. Valentine, bishop and martyr.",
    "mr:0716-sisenandus": "At Cordova, in Spain, St. Sisenandus, deacon and martyr, who was strangled by the Saracens for the faith of Christ.",
-   "mr:0716-domnio": "At Saintes, in France, the holy martyrs Raineldes, virgin, and her companions, who were massacred by barbarians for the Christian faith. At Bergamo, St. Domnio, martyr.",
+   "mr:0716-reinildis-et-socii": "At Saintes, in France, the holy martyrs Raineldes, virgin, and her companions, who were massacred by barbarians for the Christian faith.",
+   "mr:0716-domnio": "At Bergamo, St. Domnio, martyr.",
    "mr:0716-vitalianus": "At Capua, St. Vitalian, bishop and confessor."
   },
   "conclusio": null
@@ -256,7 +261,8 @@
   "elogia": {
    "mr:0718-camillus-de-lellis": "The feast of St. Camillus de Lellis, confessor, founder of the Clerks Regular ministering to the sick, whose birthday is the 14th of July. Leo XIII. declared him Celestial Patron of hospitals and the infirm.",
    "mr:0718-symphorosa-et-socii": "At Tivoli, in the time of the emperor Adrian, St. Symphorosa, wife of the martyr St. Getulius, with her seven sons, Crescens, Julian, Nemesius, Primitivus, Justinus, Stacteus, and Eugenius. Their mother, because of her invincible constancy, was first buffeted a long time, then suspended by her hair, and lastly thrown into the river with a stone tied to her body. Her sons had their limbs distended by pulleys and bound to stakes, and terminated their martyrdom by different kinds of death. The bodies were subsequently taken to Rome, and were found in the sacristy of St. Angelo in Piscina, under the Sovereign Pontiff, Pius IV.",
-   "mr:0718-gundenis": "At Carthage, St. Gundenes, virgin. By order of the proconsul Rufinus, she was four different times stretched on the rack for the faith of Christ, horribly lacerated with iron hooks, confined for a long time in a filthy dungeon, and finally put to the sword. At Dorostorum, in Mysia, in the time of Julian the Apostate and the governor Capitolinus, St. Aemilian, martyr, who was cast into a furnace, and thus received the palm of martyrdom.",
+   "mr:0718-gundenis": "At Carthage, St. Gundenes, virgin. By order of the proconsul Rufinus, she was four different times stretched on the rack for the faith of Christ, horribly lacerated with iron hooks, confined for a long time in a filthy dungeon, and finally put to the sword.",
+   "mr:0718-aemilianus": "At Dorostorum, in Mysia, in the time of Julian the Apostate and the governor Capitolinus, St. Aemilian, martyr, who was cast into a furnace, and thus received the palm of martyrdom.",
    "mr:0718-fridericus": "At Utrecht, St. Frederick, bishop and martyr.",
    "mr:0718-marina": "In Spanish Galicia, St. Marina, virgin and martyr.",
    "mr:0718-maternus": "At Milan, in the reign of Maximian, the holy bishop Maternus. For the faith of Christ and the church entrusted to him, he was thrown into prison and often scourged. Finally he went to his rest in the Lord with a great renown for his repeated confession of the faith.",
@@ -444,7 +450,8 @@
   "elogia": {
    "mr:0731-ignatius-de-loyola": "At Rome, the birthday of St. Ignatius, confessor, founder of the Society of Jesus, renowned for sanctity and miracles, and most zealous for propagating the Catholic religion in all parts of the world.",
    "mr:0731-fabius": "At Caesarea, the martyrdom of the blessed martyr Fabius. As he refused to carry the ensign of the governor of the province, he was thrown into prison for some days, and as he persisted twice in confessing Christ when brought before the judge, he was condemned to capital punishment.",
-   "mr:0731-democritus-et-socii": "At Milan, during the persecution of Antoninus, St. Calimerius, bishop and martyr, who was arrested, covered with wounds, and pierced through the neck with a sword. He terminated his martyrdom by being precipitated into a well. At Synnada, in Phrygia, the holy martyrs Democritus, Secundus and Denis.",
+   "mr:0731-calimerus": "At Milan, during the persecution of Antoninus, St. Calimerius, bishop and martyr, who was arrested, covered with wounds, and pierced through the neck with a sword. He terminated his martyrdom by being precipitated into a well.",
+   "mr:0731-democritus-et-socii": "At Synnada, in Phrygia, the holy martyrs Democritus, Secundus and Denis.",
    "mr:0731-quinquaginta-martyres-syria": "In Syria, three hundred and fifty monks, who became martyrs by being slain by the heretics for defending the Council of Chalcedon.",
    "mr:0731-germanus": "At Ravenna, the departure from this world of St. Germanus, bishop of Auxerre, a man most renowned for his birth, faith, learning, and glorious miracles, who freed England completely from the heretical doctrines of the Pelagians.",
    "mr:0731-firmus": "At Tagaste, in Africa, St. Firmus, bishop, illustrious by a glorious confession of the faith.",

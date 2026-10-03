@@ -10,7 +10,8 @@
    "mr:0301-felix-iii": "Romae natalis sancti Felicis Papae Tertii, qui sancti Gregorii Magni atavus fuit; qui etiam (ut ipse Gregorius refert), sanctae Tharsillae nepti apparens, illam ad caelestia regna vocavit.",
    "mr:0301-suitbertus": "Apud civitatem Werdam sancti Suitberti Episcopi, qui, tempore sancti Sergii Papae Primi, apud Frisones, Batavos et alios Germaniae populos Evangelium praedicavit.",
    "mr:0301-albinus": "Andegavi, in Gallia, sancti Albini, Episcopi et Confessoris, viri praeclarissimae virtutis et sanctitatis.",
-   "mr:0301-siviardus": "Apud Cenomanos, in Gallia, sancti Siviardi Abbatis. Perusiae Translatio sancti Herculani, Episcopi et Martyris, qui jussu Totilae, Gothorum Regis, decollatus est. Ipsius autem corpus ita capiti unitum atque sanum, quadragesimo post abscissionem die (ut scribit sanctus Gregorius Papa), repertum est, ac si nulla ferri incisio illud tetigisset."
+   "mr:0301-siviardus": "Apud Cenomanos, in Gallia, sancti Siviardi Abbatis.",
+   "mr:0301-translatio-herculani": "Perusiae Translatio sancti Herculani, Episcopi et Martyris, qui jussu Totilae, Gothorum Regis, decollatus est. Ipsius autem corpus ita capiti unitum atque sanum, quadragesimo post abscissionem die (ut scribit sanctus Gregorius Papa), repertum est, ac si nulla ferri incisio illud tetigisset."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -21,7 +22,8 @@
    "mr:0302-martyres-romae": "Item Romae plurimorum sanctorum Martyrum, qui sub Alexandro Imperatore et Ulpiano Praefecto, diu cruciati, ad extremum capitali sententia damnati sunt.",
    "mr:0302-lucius-et-socii": "Caesareae, in Cappadocia, sanctorum Martyrum Lucii Episcopi, Absalonis et Lorgii.",
    "mr:0302-paulus-et-socii": "In Portu Romano sanctorum Martyrum Pauli, Heraclii, Secundillae et Januariae.",
-   "mr:0302-ceadda": "In Campania commemoratio sanctorum octoginta Martyrum, qui, cum nollent carnes immolatas comedere nec caput caprae adorare, a Longobardis saevissime caesi sunt. Lichfeldiae, in Anglia, sancti Ceaddae, Episcopi Merciorum et Lindisfarnorum, cujus praeclaras virtutes sanctus Beda Venerabilis commemorat."
+   "mr:0302-octoginta-martyres-campaniae": "In Campania commemoratio sanctorum octoginta Martyrum, qui, cum nollent carnes immolatas comedere nec caput caprae adorare, a Longobardis saevissime caesi sunt.",
+   "mr:0302-ceadda": "Lichfeldiae, in Anglia, sancti Ceaddae, Episcopi Merciorum et Lindisfarnorum, cujus praeclaras virtutes sanctus Beda Venerabilis commemorat."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -31,7 +33,9 @@
    "mr:0303-marinus-et-asterius": "Caesareae, in Palaestina, sanctorum Martyrum Marini militis, et Asterii Senatoris, in persecutione Valeriani. Horum prior, cum accusatus esset a commilitonibus ut Christianus, et, interrogatus a Judice, se Christianum esse voce clarissima testaretur, martyrii coronam abscissione capitis accepit; cumque Asterius corpus Martyris, capite truncatum, subjectis humeris et substrata veste, qua induebatur, exciperet, honorem quem Martyri detulit, continuo et ipse Martyr accepit.",
    "mr:0303-hemiterius-et-cheledonius": "Calagurri, in Hispania, natalis sanctorum Martyrum Hemiterii et Cheledonii fratrum, qui, cum apud Legionem, Gallaeciae urbem, in castris militarent, ambo, exsurgente persecutionis procella, pro confessione nominis Christi, Calagurrim usque profecti, ibi, pluribus tormentis afflicti, martyrio coronati sunt.",
    "mr:0303-felix-et-socii": "Eodem die passio sanctorum Felicis, Lucioli, Fortunati, Marciae et Sociorum.",
-   "mr:0303-cleonicus-et-eutropius": "Item sanctorum militum Cleonici, Eutropii et Basilisci, qui, in persecutione Maximiani, sub Asclepiade Praeside, crucis supplicio feliciter triumpharunt Brixiae sancti Titiani, Episcopi et Confessoris. Bambergae sanctae Cunegundis Augustae, quae, sancto Henrico Primo, Romanorum Imperatori, nupta, perpetuam virginitatem, ipso annuente, servavit; ac, bonorum operum meritis cumulata, sancto fine quievit, et post obitum miraculis claruit."
+   "mr:0303-cleonicus-et-eutropius": "Item sanctorum militum Cleonici, Eutropii et Basilisci, qui, in persecutione Maximiani, sub Asclepiade Praeside, crucis supplicio feliciter triumpharunt",
+   "mr:0303-titianus": "Brixiae sancti Titiani, Episcopi et Confessoris.",
+   "mr:0303-cunegundis": "Bambergae sanctae Cunegundis Augustae, quae, sancto Henrico Primo, Romanorum Imperatori, nupta, perpetuam virginitatem, ipso annuente, servavit; ac, bonorum operum meritis cumulata, sancto fine quievit, et post obitum miraculis claruit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -43,7 +47,8 @@
    "mr:0304-hadrianus": "Nicomediae sancti Hadriani Martyris, cum aliis viginti tribus, qui omnes, sub Diocletiano Imperatore, martyrium crurifragio consummarunt. Eorum reliquiae, a Christianis Byzantium delatae, reverenti honore sepultae fuerunt; inde postea sancti Hadriani corpus Romam translatum fuit sexto Idus Septembris, quo die festivitas ejus potissimum celebratur.",
    "mr:0304-nongenti-martyres-romae": "Romae, via Appia, sanctorum Martyrum nongentorum, qui positi sunt in coemeterio ad sanctam Caeciliam.",
    "mr:0304-basilius-et-socii": "Apud Chersonesum passio sanctorum Episcoporum Basilii, Eugenii, Agathodori, Elpidii, Aetherii, Capitonis, Ephraem, Nestoris et Arcadii.",
-   "mr:0304-photius-et-socii": "Eodem die sancti Caji Palatini, in mare demersi, et aliorum viginti septem. Item passio sanctorum Archelai, Cyrilli et Photii."
+   "mr:0304-caius-et-socii": "Eodem die sancti Caji Palatini, in mare demersi, et aliorum viginti septem.",
+   "mr:0304-photius-et-socii": "Item passio sanctorum Archelai, Cyrilli et Photii."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -54,21 +59,24 @@
    "mr:0305-hadrianus": "Caesareae, in Palaestina, sancti Hadriani Martyris, qui in persecutione Diocletiani Imperatoris, jussu Firmiliani Praesidis, prius ob Christi fidem leoni objectus, deinde gladio jugulatus, martyrii coronam accepit.",
    "mr:0305-eusebius-palatinus": "Eodem die passio sanctorum Eusebii Palatini, et aliorum novem Martyrum.",
    "mr:0305-theophilus": "Caesareae, in Palaestina, sancti Theophili Episcopi, qui sub Severo Principe, sapientia et vitae integritate conspicuus, emicuit.",
-   "mr:0305-gerasimus": "Ad ripam Jordanis, item in Palaestina, sancti Gerasimi, Anachoretae et Abbatis, qui tempore Zenonis Imperatoris floruit. Neapoli, in Campania, depositio sancti Joannis-Josephi a Cruce, Sacerdotis ex Ordine Minorum et Confessoris, qui, sanctorum Francisci Assisiensis et Petri de Alcantara studia aemulatus, Ordini Seraphico insigne decus addidit, atque a Gregorio Papa Decimo sexto in Sanctorum canonem est relatus."
+   "mr:0305-gerasimus": "Ad ripam Jordanis, item in Palaestina, sancti Gerasimi, Anachoretae et Abbatis, qui tempore Zenonis Imperatoris floruit.",
+   "mr:0305-ioannes-iosephus-a-cruce-calosirto": "Neapoli, in Campania, depositio sancti Joannis-Josephi a Cruce, Sacerdotis ex Ordine Minorum et Confessoris, qui, sanctorum Francisci Assisiensis et Petri de Alcantara studia aemulatus, Ordini Seraphico insigne decus addidit, atque a Gregorio Papa Decimo sexto in Sanctorum canonem est relatus."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
  "6": {
   "titulus": "6 Martii Pridie Nonas Martii. vij. A",
   "elogia": {
-   "mr:0306-marcianus": "Sanctarum Perpetuae et Felicitatis Martyrum, quae sequenti die gloriosam martyrii coronam a Domino receperunt. Dertonae sancti Marciani, Episcopi et Martyris, qui, sub Trajano, pro Christi gloria occisus, coronatur.",
+   "mr:0306-perpetua-et-felicitas": "Sanctarum Perpetuae et Felicitatis Martyrum, quae sequenti die gloriosam martyrii coronam a Domino receperunt.",
+   "mr:0306-marcianus": "Dertonae sancti Marciani, Episcopi et Martyris, qui, sub Trajano, pro Christi gloria occisus, coronatur.",
    "mr:0306-victorinus": "Nicomediae natalis sanctorum Martyrum Victoris et Victorini, qui, per triennium, cum Claudiano et uxore ejus Bassa, tormentis multis afflicti et retrusi in carcerem, ibidem vitae suae cursum impleverunt.",
    "mr:0306-conon": "In Cypro sancti Cononis Martyris, qui, sub Decio Imperatore, clavis confixus pedes et ante currum jussus currere, in genua procubuit, atque in oratione reddidit spiritum.",
    "mr:0306-quadraginta-duo-martyres-syriae": "In Syria passio sanctorum quadraginta duorum Martyrum, qui, in Amorio comprehensi et illuc perducti, ibi, egregio peracto certamine, victores palmam martyrii perceperunt.",
    "mr:0306-evagrius": "Constantinopoli sancti Evagrii, qui, tempore Valentis a Catholicis electus Episcopus, et ab eodem Imperatore in exsilium missus, Confessor migravit ad Dominum.",
    "mr:0306-basilius": "Bononiae sancti Basilii Episcopi, qui, a sancto Silvestro Papa ordinatus, verbo et exemplo creditam sibi Ecclesiam sanctissime gubernavit.",
    "mr:0306-ollegarius": "Barcinone, in Hispania, beati Ollegarii, primum Canonici, et postea Episcopi Barcinonensis, et Archiepiscopi Tarraconensis.",
-   "mr:0306-rosa": "Viterbii beatae Rosae Virginis, ex tertio Ordine sancti Francisci. Apud Gandavum, in Flandria, sanctae Coletae Virginis, quae, primum tertii Ordinis Franciscalis regulam professa, deinde, divino Spiritu afflata, quamplura Monialium secundi ejusdem Ordinis monasteria primaevae restituit disciplinae; atque, divinis exornata virtutibus et innumeris clara miraculis, a Pio Septimo, Pontifice Maximo, in albo Sanctorum adscripta est."
+   "mr:0306-rosa": "Viterbii beatae Rosae Virginis, ex tertio Ordine sancti Francisci.",
+   "mr:0306-coleta-boylet": "Apud Gandavum, in Flandria, sanctae Coletae Virginis, quae, primum tertii Ordinis Franciscalis regulam professa, deinde, divino Spiritu afflata, quamplura Monialium secundi ejusdem Ordinis monasteria primaevae restituit disciplinae; atque, divinis exornata virtutibus et innumeris clara miraculis, a Pio Septimo, Pontifice Maximo, in albo Sanctorum adscripta est."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -80,7 +88,9 @@
    "mr:0307-eubulius": "Caesareae, in Palaestina, passio sancti Eubuli, qui fuit socius sancti Hadriani, atque, biduo post illum, laniatus a leonibus et gladio trucidatus, martyrii coronam, ultimus omnium in ea civitate, accepit.",
    "mr:0307-theophilactus": "Nicomediae sancti Theophili Episcopi, qui, ob cultum sanctarum Imaginum in exsilium pulsus, illic defunctus est.",
    "mr:0307-paulus-pelusii": "Pelusii, in Aegypto, sancti Pauli Episcopi, qui, eamdem ob causam, exsul occubuit.",
-   "mr:0307-teresia-margarita-redi": "Brixiae sancti Gaudiosi, Episcopi et Confessoris. In Thebaide sancti Pauli, cognomento Simplicis. Florentiae, in Etruria, sanctae Teresiae Margaritae Redi, Virginis, Ordinis Carmelitarum Excalceatarum, vitae puritate ac simplicitate admirabilis, quam Pius Papa Undecimus, sanctarum Virginum albo adscripsit."
+   "mr:0307-gaudiosus": "Brixiae sancti Gaudiosi, Episcopi et Confessoris.",
+   "mr:0307-paulus-simplex": "In Thebaide sancti Pauli, cognomento Simplicis.",
+   "mr:0307-teresia-margarita-redi": "Florentiae, in Etruria, sanctae Teresiae Margaritae Redi, Virginis, Ordinis Carmelitarum Excalceatarum, vitae puritate ac simplicitate admirabilis, quam Pius Papa Undecimus, sanctarum Virginum albo adscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -104,7 +114,8 @@
    "mr:0309-francisca": "Romae sanctae Franciscae Viduae, nobilitate generis, vitae sanctitate et miraculorum dono celebris.",
    "mr:0309-quadraginta-milites-sebasten": "Apud Sebasten, in Armenia, natalis sanctorum quadraginta militum Cappadocum, qui, tempore Licinii Imperatoris, sub Praeside Agricolao, post vincula et carceres teterrimos, post caesas lapidibus facies, nudi sub dio, frigidissimo hiemis tempore, supra stagnum rigens pernoctare jussi sunt, ubi gelu constricta eorum corpora disrumpebantur, ac demum crurifragio martyrium consummarunt. Erant autem inter eos nobiliores Cyrion et Candidus; eorumque omnium praeclaras glorias sanctus Basilius aliique Patres scriptis suis celebrarunt. Ipsorum porro Martyrum festivitas sequenti die recolitur.",
    "mr:0309-gregorius": "Nyssae depositio sancti Gregorii Episcopi, qui sanctorum Basilii et Emmeliae filius, et sanctorum item Basilii Magni ac Petri Sebastensis Episcoporum et Macrinae Virginis frater exstitit; atque, vita et eruditione clarissimus, ob fidei catholicae defensionem, sub Ariano Imperatore Valente, civitate sua pulsus est.",
-   "mr:0309-catharina": "Barcinone, in Hispania, sancti Paciani Episcopi, tam vita quam sermone conspicui; qui, tempore Theodosii Principis, in ultima senectute finem vitae sortitus est. Bononiae sanctae Catharinae Virginis, e secundo Ordine sancti Francisci, quae vitae sanctitate fuit illustris. Ipsius autem corpus magno cum honore ibidem colitur."
+   "mr:0309-pacianus": "Barcinone, in Hispania, sancti Paciani Episcopi, tam vita quam sermone conspicui; qui, tempore Theodosii Principis, in ultima senectute finem vitae sortitus est.",
+   "mr:0309-catharina": "Bononiae sanctae Catharinae Virginis, e secundo Ordine sancti Francisci, quae vitae sanctitate fuit illustris. Ipsius autem corpus magno cum honore ibidem colitur."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -118,7 +129,8 @@
    "mr:0310-victor": "In Africa sancti Victoris Martyris, in cujus solemnitate sanctus Augustinus ad populum de ipso tractatum habuit.",
    "mr:0310-simplicius": "Romae sancti Simplicii, Papae et Confessoris.",
    "mr:0310-macarius": "Hierosolymis sancti Macarii, Episcopi et Confessoris; cujus hortatu loca sancta a Constantino Magno et beata Helena, ejus matre, expurgata sunt et sacris Basilicis illustrata.",
-   "mr:0310-droctoveus": "Lutetiae Parisiorum depositio sancti Droctovei Abbatis, qui fuit discipulus beati Germani Episcopi. In monasterio Bobiensi sancti Attalae Abbatis, miraculis clari."
+   "mr:0310-droctoveus": "Lutetiae Parisiorum depositio sancti Droctovei Abbatis, qui fuit discipulus beati Germani Episcopi.",
+   "mr:0310-attala": "In monasterio Bobiensi sancti Attalae Abbatis, miraculis clari."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -162,7 +174,8 @@
    "mr:0313-sabinus": "Hermopoli, in Aegypto, sancti Sabini Martyris, qui multa passus, tandem, projectus in flumen, martyrium consummavit.",
    "mr:0313-christina": "In Perside sanctae Christinae, Virginis et Martyris.",
    "mr:0313-ansovinus": "Apud Camerinum sancti Ansovini, Episcopi et Confessoris.",
-   "mr:0313-euphrasia": "In Thebaide depositio sanctae Euphrasiae Virginis. Constantinopoli Translatio sancti Nicephori, Episcopi ejusdem urbis et Confessoris; cujus corpus e Proconneso, Propontidis insula, ubi ipse quarto Nonas Junii ob sanctarum Imaginum cultum exsul obierat, Constantinopolim relatum est, atque a sancto illius civitatis Episcopo Methodio, honorifice in templo sanctorum Apostolorum sepultum, hac ipsa recurrente die, in qua olim idem Nicephorus in exsilium fuerat deportatus."
+   "mr:0313-euphrasia": "In Thebaide depositio sanctae Euphrasiae Virginis.",
+   "mr:0313-nicephorus": "Constantinopoli Translatio sancti Nicephori, Episcopi ejusdem urbis et Confessoris; cujus corpus e Proconneso, Propontidis insula, ubi ipse quarto Nonas Junii ob sanctarum Imaginum cultum exsul obierat, Constantinopolim relatum est, atque a sancto illius civitatis Episcopo Methodio, honorifice in templo sanctorum Apostolorum sepultum, hac ipsa recurrente die, in qua olim idem Nicephorus in exsilium fuerat deportatus."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -190,7 +203,8 @@
    "mr:0315-matrona": "Thessalonicae sanctae Matronae, quae, cum esset ancilla cujusdam Judaeae, et occulte Christum coleret, ac furtivis orationibus quotidie Ecclesiam frequentaret, a domina sua est deprehensa et multipliciter afflicta, atque novissime, robustis fustibus usque ad mortem caesa, in confessione Christi, incorruptum Deo spiritum reddidit.",
    "mr:0315-probus": "Reate sancti Probi Episcopi, cui morienti Juvenalis et Eleutherius Martyres adfuerunt.",
    "mr:0315-clemens-maria-hofbauer": "Vindobonae, in Austria, sancti Clementis-Mariae Hofbauer, Sacerdotis professi Congregationis a sanctissimo Redemptore nuncupatae, plurimis in Dei gloria et animarum salute promovenda ac dilatanda ipsa Congregatione exantlatis laboribus insignis; quem, virtutibus et miraculis clarum, [Sanctus] Pius Decimus, Pontifex Maximus, in Sanctorum canonem retulit.",
-   "mr:0315-ludovica-de-marillac": "Apud Capuam sancti Speciosi Monachi, cujus animam (ut scribit beatus Gregorius Papa) germanus ejus deferri vidit in caelum. Lutetiae Parisiorum sanctae Ludovicae de Marillac, viduae Le Gras, Societatis Puellarum a Caritate una cum sancto Vincentio a Paulo Fundatricis, egenis sublevandis addictissimae, quam Pius Papa Undecimus Sanctarum fastis accensuit."
+   "mr:0315-speciosus": "Apud Capuam sancti Speciosi Monachi, cujus animam (ut scribit beatus Gregorius Papa) germanus ejus deferri vidit in caelum.",
+   "mr:0315-ludovica-de-marillac": "Lutetiae Parisiorum sanctae Ludovicae de Marillac, viduae Le Gras, Societatis Puellarum a Caritate una cum sancto Vincentio a Paulo Fundatricis, egenis sublevandis addictissimae, quam Pius Papa Undecimus Sanctarum fastis accensuit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -204,7 +218,8 @@
    "mr:0316-ioannes-de-brebeuf": "In dicione Canadensi sanctorum Martyrum Joannis de Brebeuf, Gabrielis Lalemant, Antonii Daniel, Caroli Garnier et Natalis Chabanel, Presbyterorum Societatis Jesu, qui in Huronica Missione, hac aliisque diebus, post multos labores et saevissimos cruciatus, mortem pro Christo fortiter obierunt.",
    "mr:0316-agapitus": "Ravennae sancti Agapiti, Episcopi et Confessoris.",
    "mr:0316-heribertus": "Coloniae Agrippinae sancti Heriberti Episcopi, sanctitate celebris.",
-   "mr:0316-abraham": "Arvernis, in Gallia, depositio sancti Patricii Episcopi. In Syria sancti Abrahae, Eremitae, cujus res gestas beatus Ephraem Diaconus conscripsit."
+   "mr:0316-patricius": "Arvernis, in Gallia, depositio sancti Patricii Episcopi.",
+   "mr:0316-abraham": "In Syria sancti Abrahae, Eremitae, cujus res gestas beatus Ephraem Diaconus conscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -216,7 +231,8 @@
    "mr:0317-alexander-et-theodorus": "Romae sanctorum Alexandri et Theodori Martyrum.",
    "mr:0317-alexandria": "Alexandriae commemoratio plurimorum sanctorum Martyrum, qui a Serapidis cultoribus comprehensi, et, cum adorare idolum constanter renuissent, saevissime caesi sunt, tempore Theodosii Imperatoris; qui mox rescriptum dedit, ut Serapidis templum destrueretur.",
    "mr:0317-paulus": "Constantinopoli sancti Pauli Martyris, qui, sub Constantino Copronymo, cum sanctarum Imaginum cultum defenderet, igne combustus est.",
-   "mr:0317-agricola": "Cabillone, in Galliis, sancti Agricolae Episcopi. Nivigellae, in Brabantia, sanctae Gertrudis Virginis, quae, clarissimo genere orta, despiciens mundum et toto vitae suae cursu in omnibus sanctitatis officiis se exercens, Christum sponsum in caelis habere meruit."
+   "mr:0317-agricola": "Cabillone, in Galliis, sancti Agricolae Episcopi.",
+   "mr:0317-gertrudis": "Nivigellae, in Brabantia, sanctae Gertrudis Virginis, quae, clarissimo genere orta, despiciens mundum et toto vitae suae cursu in omnibus sanctitatis officiis se exercens, Christum sponsum in caelis habere meruit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -230,7 +246,8 @@
    "mr:0318-trophimus-et-eucarpius": "Ibidem sanctorum Martyrum Trophimi et Eucarpii.",
    "mr:0318-eduardus": "In Britannia sancti Eduardi Regis, qui, dolis novercae necatus, multis miraculis claruit.",
    "mr:0318-frigdianus": "Lucae, in Tuscia, natalis sancti Frigdiani Episcopi, virtute miraculorum illustris.",
-   "mr:0318-salvator-de-horta-grionesos": "Mantuae sancti Anselmi, Episcopi Lucensis et Confessoris. Carali, in Sardinia, sancti Salvatoris ab Horta, Confessoris, ex Ordine Fratrum Minorum, qui, virtutibus et singulari miraculorum dono claruit, et a Pio Papa Undecimo inter sanctos Caelites adnumeratus est."
+   "mr:0318-anselmus": "Mantuae sancti Anselmi, Episcopi Lucensis et Confessoris.",
+   "mr:0318-salvator-de-horta-grionesos": "Carali, in Sardinia, sancti Salvatoris ab Horta, Confessoris, ex Ordine Fratrum Minorum, qui, virtutibus et singulari miraculorum dono claruit, et a Pio Papa Undecimo inter sanctos Caelites adnumeratus est."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -241,7 +258,8 @@
    "mr:0319-quinctus-et-socii": "Surrenti sanctorum Martyrum Quincti, Quinctillae, Quartillae et Marci, cum aliis novem.",
    "mr:0319-pancharius-romanus": "Nicomediae sancti Pancharii Romani, qui, sub Diocletiano Imperatore, in hujus gratiam Christum pro diis inanibus ejuravit, sed, matre ac sorore instantibus, ad veram fidem mox redivit, et ob immotam in ea constantiam, nervis caesus et capite truncatus, martyrii coronam accepit.",
    "mr:0319-apollonius-et-leontius-episcoporum": "Eodem die sanctorum Apollonii et Leontii Episcoporum.",
-   "mr:0319-ioannes": "Gandavi, in Flandria, sanctorum Landoaldi, Presbyteri Romani, et Amantii Diaconi; qui, a sancto Martino Papa ad praedicandum Evangelium missi, ambo apostolicum sibi commissum opus fideliter impleverunt, ac multis post obitum sunt illustrati miraculis. Apud Pinnensem civitatem natalis beati Joannis, magnae sanctitatis viri; qui de Syria ad Italiam venit, atque ibi, constructo monasterio, multorum servorum Dei per quatuor et quadraginta annos Pater exstitit, et, clarus virtutibus, in pace quievit."
+   "mr:0319-landoaldus-et-amantius": "Gandavi, in Flandria, sanctorum Landoaldi, Presbyteri Romani, et Amantii Diaconi; qui, a sancto Martino Papa ad praedicandum Evangelium missi, ambo apostolicum sibi commissum opus fideliter impleverunt, ac multis post obitum sunt illustrati miraculis.",
+   "mr:0319-ioannes": "Apud Pinnensem civitatem natalis beati Joannis, magnae sanctitatis viri; qui de Syria ad Italiam venit, atque ibi, constructo monasterio, multorum servorum Dei per quatuor et quadraginta annos Pater exstitit, et, clarus virtutibus, in pace quievit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -255,7 +273,8 @@
    "mr:0320-septem-martyres-amisi": "Amisi, in Paphlagonia, sanctarum septem mulierum, scilicet Alexandrae, Claudiae, Euphrasiae, Matronae, Julianae, Euphemiae et Theodosiae; quae in fidei confessione sunt caesae, easque secutae sunt Derphuta et soror ipsius.",
    "mr:0320-nicetas": "Apolloniae sancti Nicetae Episcopi, qui, pro sanctarum Imaginum cultu ejectus in exsilium, illic reddidit spiritum.",
    "mr:0320-vulframnus": "In monasterio Fontanellae, in Gallia, sancti Wulfranni, Episcopi Senonensis, qui, relicto Episcopatu, ibidem, clarus miraculis, decessit e vita.",
-   "mr:0320-cuthbertus": "In Britannia depositio sancti Cuthberti, Episcopi Lindisfarnensis, qui, a pueritia ad obitum usque, sanctis operibus et miraculorum signis effulsit. Senis, in Tuscia, Beati Ambrosii, ex Ordine Praedicatorum, sanctitate, praedicatione et miraculis clari."
+   "mr:0320-cuthbertus": "In Britannia depositio sancti Cuthberti, Episcopi Lindisfarnensis, qui, a pueritia ad obitum usque, sanctis operibus et miraculorum signis effulsit.",
+   "mr:0320-ambrosius-sansedoni": "Senis, in Tuscia, Beati Ambrosii, ex Ordine Praedicatorum, sanctitate, praedicatione et miraculis clari."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -267,7 +286,8 @@
    "mr:0321-martyres-alexandrini": "Alexandriae commemoratio sanctorum Martyrum, qui, sub Constantio Imperatore et Praefecto Philagrio, irruentibus Arianis et Gentilibus in Ecclesias, in die Parasceves caesi sunt.",
    "mr:0321-philemon-et-domninus": "Eodem die sanctorum Martyrum Philemonis et Domnini.",
    "mr:0321-serapion": "Alexandriae beati Serapionis, Anachoretae et Episcopi Thmueos, magnarum virtutum viri; qui, Arianorum furore in exsilium actus, Confessor migravit ad Dominum.",
-   "mr:0321-lupicinus": "In territorio Lugdunensi sancti Lupicini Abbatis, cujus vita ob sanctitatis et miraculorum gloriam fuit illustris. In loco Ranft, prope Sachseln, in Helvetia, sancti Nicolai de Flüe, patris familias, dein Anachoretae, arctissima poenitentia, et mundi contemptu insignis, ab Helvetiis pater patriae appellati, quem Pius Papa Duodecimus Sanctorum fastis adscripsit."
+   "mr:0321-lupicinus": "In territorio Lugdunensi sancti Lupicini Abbatis, cujus vita ob sanctitatis et miraculorum gloriam fuit illustris.",
+   "mr:0321-nicolaus-de-flue": "In loco Ranft, prope Sachseln, in Helvetia, sancti Nicolai de Flüe, patris familias, dein Anachoretae, arctissima poenitentia, et mundi contemptu insignis, ab Helvetiis pater patriae appellati, quem Pius Papa Duodecimus Sanctorum fastis adscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -276,12 +296,14 @@
   "elogia": {
    "mr:0322-paulus": "Narbone, in Gallia, natalis sancti Pauli Episcopi, Apostolorum discipuli, quem tradunt fuisse Sergium Paulum Proconsulem. Hic, a beato Apostolo Paulo baptizatus, et ab eo, cum in Hispaniam pergeret, apud Narbonem relictus, ibidem Episcopali dignitate donatus est; ibique, praedicationis officio non segniter expleto, clarus miraculis migravit in caelum.",
    "mr:0322-epaphroditus": "Tarracinae, in Campania, sancti Epaphroditi, Apostolorum discipuli, qui a beato Petro Apostolo Episcopus illius civitatis ordinatus fuit.",
-   "mr:0322-basilius": "Ancyrae, in Galatia, sancti Basilii, Presbyteri et Martyris, qui sub Juliano Apostata, gravissimis cruciatibus affectus, animam Deo reddidit. Carthagine sancti Octaviani Archidiaconi, et multorum millium Martyrum, qui, ob fidem catholicam, a Wandalis caesi sunt.",
+   "mr:0322-basilius": "Ancyrae, in Galatia, sancti Basilii, Presbyteri et Martyris, qui sub Juliano Apostata, gravissimis cruciatibus affectus, animam Deo reddidit.",
+   "mr:0322-octavianus-et-socii": "Carthagine sancti Octaviani Archidiaconi, et multorum millium Martyrum, qui, ob fidem catholicam, a Wandalis caesi sunt.",
    "mr:0322-novem-martyres-africa": "In Africa sanctorum Martyrum Saturnini et aliorum novem.",
    "mr:0322-callinicus-et-basilissa": "In Galatia natalis sanctarum Martyrum Callinicae et Basilissae.",
    "mr:0322-zacharia": "Romae sancti Zachariae Papae, qui Dei Ecclesiam summa vigilantia gubernavit, et clarus meritis quievit in pace.",
    "mr:0322-deogratias": "Carthagine sancti Deogratias, Episcopi Carthaginensis, qui plurimos, a Wandalis captivos ex Urbe ductos, redemit, aliisque sanctis operibus celebris quievit in Domino.",
-   "mr:0322-lea": "Auximi, in Piceno, sancti Benvenuti Episcopi. Romae sanctae Leae Viduae, cujus virtutes et transitum ad Deum sanctus Hieronymus scribit."
+   "mr:0322-benvenutus-scotivoli": "Auximi, in Piceno, sancti Benvenuti Episcopi.",
+   "mr:0322-lea": "Romae sanctae Leae Viduae, cujus virtutes et transitum ad Deum sanctus Hieronymus scribit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -296,7 +318,8 @@
    "mr:0323-turibius-de-mogrovejo": "Limae, in Peruvia, sancti Turibii Episcopi, cujus virtute fides et disciplina ecclesiastica per Americam diffusae sunt.",
    "mr:0323-theodulus": "Antiochiae sancti Theoduli Presbyteri.",
    "mr:0323-iosephus-oriol": "Barcinone, in Hispania, sancti Josephi Oriol Presbyteri, Ecclesiae sanctae Mariae Regum Beneficiarii, omnigena virtute ac praesertim corporis afflictatione, paupertatis cultu atque in egenos et infirmos caritate celebris; quem, in vita et post mortem miraculis gloriosum, Pius Papa Decimus in Sanctorum numero recensuit.",
-   "mr:0323-julianus": "Caesareae sancti Juliani Confessoris. In Campania sancti Benedicti Monachi, qui, a Gothis in ardenti clibano inclusus, sequenti die inventus est illaesus."
+   "mr:0323-julianus": "Caesareae sancti Juliani Confessoris.",
+   "mr:0323-benedictus": "In Campania sancti Benedicti Monachi, qui, a Gothis in ardenti clibano inclusus, sequenti die inventus est illaesus."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -304,7 +327,8 @@
   "titulus": "24 Martii Nono Kalendas Aprilis. j. E",
   "elogia": {
    "mr:0324-festum-sancti-gabrielis-archangeli": "Festum sancti Gabrielis Archangeli, qui ad annuntiandum Incarnationis divini Verbi mysterium a Deo missus est.",
-   "mr:0324-epigmenius": "Romae sancti Epigmenii Presbyteri, qui, in persecutione Diocletiani, sub Turpio Judice, gladio caesus, martyrium consummavit. Ibidem passio beati Pigmenii Presbyteri, qui, sub Juliano Apostata, pro fide Christi, praecipitatus in Tiberim, necatus est.",
+   "mr:0324-epigmenius": "Romae sancti Epigmenii Presbyteri, qui, in persecutione Diocletiani, sub Turpio Judice, gladio caesus, martyrium consummavit.",
+   "mr:0324-pigmenius": "Ibidem passio beati Pigmenii Presbyteri, qui, sub Juliano Apostata, pro fide Christi, praecipitatus in Tiberim, necatus est.",
    "mr:0324-marcus-et-timotheus": "Item Romae sanctorum Martyrum Marci et Timothei, qui martyrio coronati sunt sub Antonino Imperatore.",
    "mr:0324-timolaus-et-socii": "Caesarae, in Palaestina, natalis sanctorum Martyrum Timolai, Dionysii, Pausidis, Romuli, Alexandri, alterius Alexandri, Agapii et alterius Dionysii; qui, in persecutione Diocletiani, sub Urbano Praeside, securis ictu percussi, vitae coronas meruerunt.",
    "mr:0324-secundulus": "In Mauritania item natalis sanctorum fratrum Romuli et Secundi, qui pro Christi fide passi sunt.",
@@ -320,13 +344,15 @@
   "titulus": "25 Martii Octavo Kalendas Aprilis. *. F",
   "elogia": {
    "mr:0325-annuntiatio-beatissimae-virginis-genitricis": "Annuntiatio beatissimae Virginis Genitricis Dei Mariae.",
-   "mr:0325-quirinus": "Hierosolymis commemoratio sancti Latronis, qui, in cruce Christum confessus, ab eo meruit audire: « Hodie mecum eris in paradiso ». Romae sancti Quirini Martyris, qui, sub Claudio Imperatore, post facultatum amissionem, post carceris squalorem, post multorum verberum afflictionem, gladio interfectus est et in Tiberim projectus; quem Christiani, cum in insula Lycaonia (quae postea sancti Bartholomaei dicta est) invenissent, in coemeterio Pontiani condiderunt.",
+   "mr:0325-bonus-latro": "Hierosolymis commemoratio sancti Latronis, qui, in cruce Christum confessus, ab eo meruit audire: « Hodie mecum eris in paradiso ».",
+   "mr:0325-quirinus": "Romae sancti Quirini Martyris, qui, sub Claudio Imperatore, post facultatum amissionem, post carceris squalorem, post multorum verberum afflictionem, gladio interfectus est et in Tiberim projectus; quem Christiani, cum in insula Lycaonia (quae postea sancti Bartholomaei dicta est) invenissent, in coemeterio Pontiani condiderunt.",
    "mr:0325-sexaginta-martyres-romae": "Item Romae sanctorum ducentorum sexaginta duorum Martyrum.",
    "mr:0325-irenaeus-episco": "Sirmii passio sancti Irenaei, Episcopi et Martyris; qui, tempore Maximiani Imperatoris, sub Praeside Probo, primum tormentis acerrimis vexatus, deinde diebus plurimis cruciatus in carcere, novissime, abscisso capite, consummatus est.",
    "mr:0325-dula": "Nicomediae sanctae Dulae, cujusdam militis ancillae, quae, ob castitatem servandam occisa, martyrii coronam promeruit.",
    "mr:0325-pelagius": "Laodiceae, ad Libanum, sancti Pelagii Episcopi, qui, ob fidem catholicam, tempore Valentis, exsilium et alia passus est; ac tandem, in sedem suam restitutus, quievit in Domino.",
    "mr:0325-hermelandus": "In Antro, insula Ligeris fluminis, sancti Hermelandi Abbatis, cujus gloriosa conversatio insigni miraculorum praeconio commendatur.",
-   "mr:0325-lucia-filippini": "Pistorii, in Tuscia, sanctorum Confessorum Barontii et Desiderii. Faliscoduni sanctae Luciae Filippini, Fundatricis Instituti Magistrarum Piarum ab ejus cognomine nuncupatarum, de Christiana puellarum et mulierum, praesertim pauperum, eruditione optime meritae, quam Pius Papa Undecimus inter sanctas Virgines retulit."
+   "mr:0325-barontius-et-desiderius": "Pistorii, in Tuscia, sanctorum Confessorum Barontii et Desiderii.",
+   "mr:0325-lucia-filippini": "Faliscoduni sanctae Luciae Filippini, Fundatricis Instituti Magistrarum Piarum ab ejus cognomine nuncupatarum, de Christiana puellarum et mulierum, praesertim pauperum, eruditione optime meritae, quam Pius Papa Undecimus inter sanctas Virgines retulit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -340,7 +366,8 @@
    "mr:0326-emmanuel-et-socii": "Item sanctorum Martyrum Quadrati, Theodosii, Emmanuelis et aliorum quadraginta.",
    "mr:0326-eutychius": "Alexandriae sanctorum Martyrum Eutychii et aliorum; qui, Constantii tempore, sub Ariano Episcopo Georgio, pro fide catholica gladio caesi sunt.",
    "mr:0326-liudgerus": "Eodem die sancti Ludgeri, Episcopi monasteriensis, qui Saxonibus Evangelium praedicavit.",
-   "mr:0326-braulius": "Caesaraugustae, in Hispania, sancti Braulii, Episcopi et Confessoris. Treviris sancti Felicis Episcopi."
+   "mr:0326-braulius": "Caesaraugustae, in Hispania, sancti Braulii, Episcopi et Confessoris.",
+   "mr:0326-felix-treviris": "Treviris sancti Felicis Episcopi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -351,7 +378,8 @@
    "mr:0327-alexander": "Driziparae, in Pannonia, sancti Alexandri militis, qui, sub Maximiano Imperatore, post multos pro Christo agones superatos multaque miracula edita, capitis abscissione martyrium complevit.",
    "mr:0327-philetus-senator-lydia": "In Illyrico sanctorum Phileti Senatoris, Lydiae uxoris, et filiorum Macedonis et Theoprepii, itemque Amphilochii Ducis, et Cronidae Commentariensis; qui, pro Christi confessione, tormentis pluribus superatis, coronam gloriae sunt adepti.",
    "mr:0327-zanita-et-socii": "In Perside sanctorum Martyrum Zanitae, Lazari, Marotae, Narsetis et aliorum quinque, qui sub Rege Persarum Sapore, saevissime trucidati, martyrii palmam meruerunt.",
-   "mr:0327-rupertus": "Salisburgi, in Norico, sancti Ruperti, Episcopi et Confessoris, qui apud Bavaros et Noricos Evangelium mirifice propagavit. In Aegypto sancti Joannis Eremitae, magnae sanctitatis viri, qui, inter cetera virtutum insignia, etiam prophetico spiritu plenus, Theodosio Imperatori victorias de tyrannis Maximo et Eugenio praedixit."
+   "mr:0327-rupertus": "Salisburgi, in Norico, sancti Ruperti, Episcopi et Confessoris, qui apud Bavaros et Noricos Evangelium mirifice propagavit.",
+   "mr:0327-ioannes": "In Aegypto sancti Joannis Eremitae, magnae sanctitatis viri, qui, inter cetera virtutum insignia, etiam prophetico spiritu plenus, Theodosio Imperatori victorias de tyrannis Maximo et Eugenio praedixit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -362,7 +390,8 @@
    "mr:0328-priscus-et-socii": "Caesareae, in Palaestina, natalis sanctorum Martyrum Prisci, Malchi et Alexandri. Hi tres, in persecutione Valeriani, cum in suburbano agello supradictae urbis habitarent, atque in ea caelestes martyrii proponerentur coronae, ultro Judicem, divino fidei calore succensi, adeunt, et cur tantum in sanguinem piorum desaeviret, objurgant; quos ille continuo, pro Christi nomine, bestiis tradidit devorandos.",
    "mr:0328-castor": "Tarsi, in Cilicia, sanctorum Martyrum Castoris et Dorothei.",
    "mr:0328-rogatus-et-successus": "In Africa sanctorum Martyrum Rogati, Successi et aliorum sexdecim.",
-   "mr:0328-gunthramnus": "Apud Nursiam sancti Spei Abbatis, mirae patientiae viri, cujus anima (ut refert sanctus Gregorius Papa), cum ex hac vita migraret, in columbae specie a cunctis fratribus visa est in caelum ascendere. Cabillone, in Galliis, depositio sancti Gunthramni, Regis Francorum, qui spiritalibus actionibus ita se mancipavit, ut, relictis saeculi pompis, thesauros suos largiter Ecclesiis et pauperibus erogaret."
+   "mr:0328-speus": "Apud Nursiam sancti Spei Abbatis, mirae patientiae viri, cujus anima (ut refert sanctus Gregorius Papa), cum ex hac vita migraret, in columbae specie a cunctis fratribus visa est in caelum ascendere.",
+   "mr:0328-gunthramnus": "Cabillone, in Galliis, depositio sancti Gunthramni, Regis Francorum, qui spiritalibus actionibus ita se mancipavit, ut, relictis saeculi pompis, thesauros suos largiter Ecclesiis et pauperibus erogaret."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -370,9 +399,11 @@
   "titulus": "29 Martii Quarto Kalendas Aprilis. xxvj. C",
   "elogia": {
    "mr:0329-cyrillus": "Heliopoli, apud Libanum, sancti Cyrilli, Diaconi et Martyris, cujus jecur, e discisso ventre avulsum, Gentiles, sub Juliano Apostata, feraliter depasti sunt.",
-   "mr:0329-iona-et-barachisius": "In Perside sanctorum Monachorum et Martyrum Jonae et Barachisii fratrum, sub Rege Persarum Sapore. Ex ipsis Jonas, pressus in cochlea, confractis ossibus, medius dissectus est; Barachisius autem, oppletis faucibus pice ardenti, suffocatus. Nicomediae passio sanctorum Martyrum Pastoris, Victorini et Sociorum.",
+   "mr:0329-iona-et-barachisius": "In Perside sanctorum Monachorum et Martyrum Jonae et Barachisii fratrum, sub Rege Persarum Sapore. Ex ipsis Jonas, pressus in cochlea, confractis ossibus, medius dissectus est; Barachisius autem, oppletis faucibus pice ardenti, suffocatus.",
+   "mr:0329-pastor-et-socii": "Nicomediae passio sanctorum Martyrum Pastoris, Victorini et Sociorum.",
    "mr:0329-armogastus-et-socii": "In Africa sanctorum Confessorum Armogastis Comitis, Masculae archimimi, et Saturi, regiae domus procuratoris; qui, tempore Wandalicae persecutionis, sub Rege Ariano Genserico, pro confessione veritatis, multa et gravia perpessi supplicia atque opprobria, cursum gloriosi certaminis impleverunt.",
-   "mr:0329-eustasius": "In urbe Astensi sancti Secundi Martyris. In monasterio Luxoviensi, in Gallia, depositio sancti Eustasii Abbatis, qui sancti Columbani discipulus et ferme sexcentorum Monachorum Pater fuit; ac, vitae sanctitate conspicuus, etiam miraculis claruit."
+   "mr:0329-secundus": "In urbe Astensi sancti Secundi Martyris.",
+   "mr:0329-eustasius-luxovii": "In monasterio Luxoviensi, in Gallia, depositio sancti Eustasii Abbatis, qui sancti Columbani discipulus et ferme sexcentorum Monachorum Pater fuit; ac, vitae sanctitate conspicuus, etiam miraculis claruit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -386,7 +417,8 @@
    "mr:0330-pastor": "Aureliae, in Gallia, sancti Pastoris Episcopi.",
    "mr:0330-zosimus": "Syracusis, in Sicilia, sancti Zosimi, Episcopi et Confessoris.",
    "mr:0330-ioannes": "In monte Sina sancti Joannis Climaci Abbatis.",
-   "mr:0330-clinius": "Aquileriae, in Hispania, sancti Petri Regalati, in urbe Vallisoletana orti, Sacerdotis ex Ordine Minorum et Confessoris, regularis disciplinae in Hispaniae coenobiis restitutoris; quem Benedictus Decimus quartus, Pontifex Maximus, Sanctorum fastis adscripsit. Apud Aquinum sancti Clinii Confessoris."
+   "mr:0330-petrus-de-vallisoleto-regalado": "Aquileriae, in Hispania, sancti Petri Regalati, in urbe Vallisoletana orti, Sacerdotis ex Ordine Minorum et Confessoris, regularis disciplinae in Hispaniae coenobiis restitutoris; quem Benedictus Decimus quartus, Pontifex Maximus, Sanctorum fastis adscripsit.",
+   "mr:0330-clinius": "Apud Aquinum sancti Clinii Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -395,7 +427,8 @@
   "elogia": {
    "mr:0331-amos-propheta": "Thecuae, in Palaestina, sancti Amos Prophetae, qui ab Amasia Sacerdote frequenter plagis afflictus est, atque ab hujus filio Ozia vecte per tempora transfixus; et postea, semivivus in patriam devectus, ibidem exspiravit, sepultusque est cum patribus suis.",
    "mr:0331-beniamin": "In Perside sancti Benjamin Diaconi, qui, cum Dei verbum non desisteret praedicare, ideo, sub Isdegerde Rege, arundinibus acutis confixus unguibus, et spinosa sude per alvum transmissa, martyrium consummavit.",
-   "mr:0331-balbina": "In Africa sanctorum Martyrum Theoduli, Anesii, Felicis, Corneliae et Sociorum. Romae sanctae Balbinae Virginis, filiae beati Quirini Martyris, quae, a sancto Alexandro Papa baptizata, in sancta virginitate Christum sibi sponsum elegit; et, post devictum hujus saeculi cursum, sepulta est via Appia, juxta patrem suum."
+   "mr:0331-theodulus": "In Africa sanctorum Martyrum Theoduli, Anesii, Felicis, Corneliae et Sociorum.",
+   "mr:0331-balbina": "Romae sanctae Balbinae Virginis, filiae beati Quirini Martyris, quae, a sancto Alexandro Papa baptizata, in sancta virginitate Christum sibi sponsum elegit; et, post devictum hujus saeculi cursum, sepulta est via Appia, juxta patrem suum."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  }

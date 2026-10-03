@@ -12,7 +12,8 @@
    "mr:0901-ammon": "At Heraclea, St. Ammon, deacon, and forty holy virgins whom he instructed in the faith, and led with him to the glory of martyrdom, under the tyrant Licinius.",
    "mr:0901-vincentius": "In Spain, the holy martyrs Vincent and Laetus.",
    "mr:0901-regulus": "At Piombino, in Tuscany, St. Regulus, martyr, who went thither from Africa, and consummated his martyrdom under Totila.",
-   "mr:0901-priscus-capuae": "At Sens, St. Lupus, bishop and confessor, of whom it is related, that on a certain day, whilst he stood at the holy altar in presence of the clergy, a gem fell from heaven into the consecrated chalice which he was using. At Capua, St. Priscus, bishop. He was one of those priests who were subjected to various trials for the Catholic faith during the persecution of the Vandals. Being put in an old ship on the coast of Africa, they reached the shores of Campania, and separating, they were placed at the head of various churches, and thus greatly extended the Christian religion. The companions of Priscus were Castrensis, Tammarus, Rosius, Heraclius, Secundinus, Adjutor, Mark, Augustus, Elpidius, Canion, and Vindonius.",
+   "mr:0901-lupus": "At Sens, St. Lupus, bishop and confessor, of whom it is related, that on a certain day, whilst he stood at the holy altar in presence of the clergy, a gem fell from heaven into the consecrated chalice which he was using.",
+   "mr:0901-priscus-capuae": "At Capua, St. Priscus, bishop. He was one of those priests who were subjected to various trials for the Catholic faith during the persecution of the Vandals. Being put in an old ship on the coast of Africa, they reached the shores of Campania, and separating, they were placed at the head of various churches, and thus greatly extended the Christian religion. The companions of Priscus were Castrensis, Tammarus, Rosius, Heraclius, Secundinus, Adjutor, Mark, Augustus, Elpidius, Canion, and Vindonius.",
    "mr:0901-constantius": "At Aquino, St. Constantius, a bishop renowned for the gift of prophecy and many virtues.",
    "mr:0901-victorius": "At Le Mans, St. Victorius, bishop.",
    "mr:0901-verena": "In Baden, in the diocese of Constance, St. Verena, virgin."
@@ -27,7 +28,8 @@
    "mr:0902-antoninus": "At Pamiers, in France, St. Antoninus, martyr, whose relics are kept with great veneration in the church of Palencia.",
    "mr:0902-diomedes-et-socii": "Also, the holy martyrs Diomedes, Julian, Philip, Euthychian, Hesychius, Leonides, Philadelphus, Menalippus, and Pantagapas. They consummated their martyrdom, some by fire, some by water, others by the sword or by the cross.",
    "mr:0902-zeno": "At Nicomedia, the holy martyr Zeno, and his sons Concordius and Theodore.",
-   "mr:0902-iustus": "The same day, the martyrdom of the Saints Evodius and Hermogenes, brothers, and Callista, their sister. At Lyons, in France, St. Justus, bishop and confessor, who was endowed with extraordinary sanctity, and a prophetic spirit. He resigned his bishopric, and retired into a desert of Egypt, with his lector Viator. When he had for some years led an almost angelical life, and the end of his meritorious labors had come, he went to our Lord to receive the crown of justice, on the 14th day of October. His holy body, together with the relics of his blessed lector Viator, was afterwards taken to Lyons on this day.",
+   "mr:0902-theodota": "The same day, the martyrdom of the Saints Evodius and Hermogenes, brothers, and Callista, their sister.",
+   "mr:0902-iustus": "At Lyons, in France, St. Justus, bishop and confessor, who was endowed with extraordinary sanctity, and a prophetic spirit. He resigned his bishopric, and retired into a desert of Egypt, with his lector Viator. When he had for some years led an almost angelical life, and the end of his meritorious labors had come, he went to our Lord to receive the crown of justice, on the 14th day of October. His holy body, together with the relics of his blessed lector Viator, was afterwards taken to Lyons on this day.",
    "mr:0902-elpidius-lugduni": "In the same city, St. Elpidius, bishop and confessor.",
    "mr:0902-elpidius": "In the March of Ancona, another St. Elpidius, an abbot. A town bearing his name glories in the possession of his sacred body.",
    "mr:0902-nonnosus": "On Mount Soractes, the abbot St. Nonnosus, who, by his prayers removed a rock of huge dimensions, and was renowned for other miracles."
@@ -79,7 +81,8 @@
    "mr:0905-quinctius-et-socii": "At Capua, the holy martyrs Quinctius, Arcontius, and Donatus.",
    "mr:0905-romulus": "The same day, St. Romulus, prefect of Trajan’s court. For reproving the cruelty of the emperor towards Christians, he was scourged with rods, and beheaded.",
    "mr:0905-eudoxius-et-socii": "At Melitine, in Armenia, the martyrdom of the holy soldiers Eudoxius, Zeno, Macarius, and their companions to the number of eleven hundred and four, who threw away their military belts, and were put to death for the confession of Christ, in the persecution of Diocletian.",
-   "mr:0905-urbanus-et-socii": "At Constantinople, the holy martyrs Urbanus, Theodore, Menedemus, and their ecclesiastical companions, seventy-seven in number, who were put in a ship by the command of the emperor Valens, and burned on the sea for the Catholic faith. In the neighborhood of Terouanne, in the monastery of Sithiu, St. Bertin, abbot.",
+   "mr:0905-urbanus-et-socii": "At Constantinople, the holy martyrs Urbanus, Theodore, Menedemus, and their ecclesiastical companions, seventy-seven in number, who were put in a ship by the command of the emperor Valens, and burned on the sea for the Catholic faith.",
+   "mr:0905-bertinus": "In the neighborhood of Terouanne, in the monastery of Sithiu, St. Bertin, abbot.",
    "mr:0905-obdulia": "At Toledo, St. Obdulia, virgin."
   },
   "conclusio": null
@@ -136,7 +139,8 @@
    "mr:0909-severianus": "At Sebaste, St. Severian, a soldier of the emperor Licinius. For frequently visiting the Forty Martyrs whilst they were in prison, he was suspended in the air with a stone tied to his feet by order of the governor Lysias, and being scourged and torn with whips, yielded up his soul in the midst of torments.",
    "mr:0909-straton": "The same day, St. Straton, who ended his martyrdom for Christ by being tied to two trees and torn to pieces.",
    "mr:0909-rufinus-et-rufinianus": "Also, the holy martyrs Rufinus and Rufinian, brothers.",
-   "mr:0909-sergius-i": "At Rome, St. Sergius, pope and confessor. In the territory of Terouanne, St. Omer, bishop.",
+   "mr:0909-sergius-i": "At Rome, St. Sergius, pope and confessor.",
+   "mr:0909-audomarus": "In the territory of Terouanne, St. Omer, bishop.",
    "mr:0909-ciaranus": "In Ireland, St. Kieran, abbot.",
    "mr:0909-petrus-claver": "At Cartagena, in South America, St. Peter Claver, confessor of the Society of Jesus, who labored with wonderful self-abnegation and great charity among the negro slaves for more than forty years and baptized personally almost thirty thousand of them. He was canonized by order of pope Leo XIII."
   },
@@ -360,7 +364,8 @@
   "elogia": {
    "mr:0924-festum-beatae-mariae-virginis": "The feast of our Lady of Ransom.",
    "mr:0924-andochius-et-socii": "At Autun, the birthday of the holy martyrs, Andochius, priest, Thyrsus, deacon, and Felix, who were sent from the East by blessed Polycarp, bishop of Smyrna, to preach in Gaul, where they were most severely scourged, hanged up a whole day by the hands, and cast into the fire. Remaining uninjured, they had their necks broken with heavy bars, and thus won a most glorious crown.",
-   "mr:0924-rusticus": "In Egypt, the holy martyrs Paphnutius and his companions. Whilst leading a solitary life, St. Paphnutius heard that many Christians were kept in bonds, and, moved by the spirit of God, he voluntarily offered himself to the prefect, and freely confessed the Christian faith. By him he was bound with iron chains, and a long time tortured on the rack. Then, being sent with many others to Diocletian, he was fastened by his order to a palm tree, and the rest were struck with the sword. At Clermont, in Auvergne, the departure out of this life of St. Rusticus, bishop and confessor.",
+   "mr:0924-paphnutius-et-sociorum": "In Egypt, the holy martyrs Paphnutius and his companions. Whilst leading a solitary life, St. Paphnutius heard that many Christians were kept in bonds, and, moved by the spirit of God, he voluntarily offered himself to the prefect, and freely confessed the Christian faith. By him he was bound with iron chains, and a long time tortured on the rack. Then, being sent with many others to Diocletian, he was fastened by his order to a palm tree, and the rest were struck with the sword.",
+   "mr:0924-rusticus": "At Clermont, in Auvergne, the departure out of this life of St. Rusticus, bishop and confessor.",
    "mr:0924-geremarus": "In the diocese of Beauvais, St. Geremarus, abbot."
   },
   "conclusio": null
@@ -406,7 +411,8 @@
    "mr:0927-adolphus-et-ioannes": "At Cordova, the holy martyrs Adulphus and John, brothers, who won the martyr’s crown in the Arabian persecution.",
    "mr:0927-florentinus": "At Sion, in Switzerland, St. Florentinus, martyr, who was put to the sword with blessed Hilary, after his tongue had been cut out.",
    "mr:0927-marcus": "At Byblos, in Phoenicia, St. Mark, bishop, who is also called John by blessed Luke.",
-   "mr:0927-caius": "At Milan, the holy bishop Caius, a disciple of the blessed apostle Barnabas, who passed calmly to rest after suffering severely in the persecution of Nero. At Ravenna, St. Aderitus, bishop and confessor.",
+   "mr:0927-caius": "At Milan, the holy bishop Caius, a disciple of the blessed apostle Barnabas, who passed calmly to rest after suffering severely in the persecution of Nero.",
+   "mr:0927-aderitus": "At Ravenna, St. Aderitus, bishop and confessor.",
    "mr:0927-vincentius-de-paul": "At Paris, St. Vincent de Paul, priest, and founder of the Congregation of the Mission and of the Daughters of Charity, an apostolic man and a father to the poor. His feast is celebrated on the 19th of July.",
    "mr:0927-elzearus-de-sabran": "In the same city, St. Eleazar, count.",
    "mr:0927-hiltrudis": "In Hainaut, St. Hiltrude, virgin."
