@@ -112,7 +112,7 @@ def parse_month_file(
                 elogia=elogia,
                 conclusio=obj.get("conclusio"),
                 rubricae=[
-                    Rubrica(after=r["after"], text=r["text"]) for r in obj.get("rubricae", [])
+                    Rubrica(after=r["after"], text=r["text"]) for r in obj.get("rubricae") or []
                 ],
             )
     else:  # flat: membership/order/metadata from the registry, texts from the map

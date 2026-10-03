@@ -215,3 +215,17 @@ def test_a_malformed_footnotes_file_fails_when_the_store_is_built(
     (edition / "footnotes.json").write_text(json.dumps(bad), encoding="utf-8")
     with pytest.raises(ValueError, match=r"martyrologium_romanum_2004/footnotes\.json"):
         make_store(crmedr_path, clbdr_path, [tmp_path])
+
+
+def test_null_rubricae_parse_as_empty(crmedr_path, clbdr_path):
+    """A day written with "rubricae": null (accepted by validation) still reads."""
+    reg = Registry.load(crmedr_path, clbdr_path)
+    raw = {
+        "1": {
+            "titulus": "t",
+            "elogia": {"mr:0101-basilius": "x"},
+            "rubricae": None,
+            "conclusio": None,
+        }
+    }
+    assert parse_month_file(raw, 1, "day-structured", reg)[1].rubricae == []
