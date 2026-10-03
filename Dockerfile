@@ -10,7 +10,7 @@ FROM python:3.12.13-slim AS build
 # Pinned refs for the two data repositories — these SHAs are the commits this
 # repo's own vendor/ submodules record, so the image and vendor/ agree. To
 # bump the data revision intentionally, pass a new SHA with --build-arg.
-ARG CRMEDR_REF=621ff6e49e9271b7f6e1e381fc27b93113ea212a
+ARG CRMEDR_REF=9fad9a6f1cb7703daf105bf9d6bc0c5896b6124c
 ARG CLBDR_REF=ecb147b47b47368fbdefeb2074c5770ebb7c8f9d
 
 RUN apt-get update -y && \
