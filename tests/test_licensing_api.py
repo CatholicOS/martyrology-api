@@ -75,3 +75,50 @@ def test_month_redaction(client):
     b = client.get("/api/v1/elogia/01").json()
     assert b["metadata"]["access"] == "restricted-texts"
     assert all(e["text"] is None for day in b["days"].values() for e in day["elogia"])
+
+
+FOOTNOTE = {
+    "mark": "1",
+    "after": "sociorum",
+    "text": "Quorum nomina: sancti Narcissus et Marcellinus.",
+}
+
+
+def _argeus(body):
+    return next(e for e in body["elogia"] if e["id"] == "mr:0102-argeus-et-socii")
+
+
+def test_authorized_day_carries_footnotes(client):
+    b = client.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_2004/01/02",
+        headers={"Authorization": "Bearer good"},
+    ).json()
+    assert _argeus(b)["footnotes"] == [FOOTNOTE]
+    assert all(e["footnotes"] == [] for e in b["elogia"] if e["id"] != "mr:0102-argeus-et-socii")
+
+
+def test_anonymous_day_and_month_footnotes_redacted(client):
+    day = client.get("/api/v1/elogia/edition/martyrologium_romanum_2004/01/02").json()
+    assert day["metadata"]["access"] == "restricted-texts"
+    assert _argeus(day)["footnotes"] == []
+    month = client.get("/api/v1/elogia/01").json()  # the universal route resolves to 2004
+    assert month["metadata"]["edition"] == "martyrologium_romanum_2004"
+    assert all(e["footnotes"] == [] for d in month["days"].values() for e in d["elogia"])
+
+
+def test_authorized_month_carries_footnotes(client):
+    month = client.get("/api/v1/elogia/01", headers={"Authorization": "Bearer good"}).json()
+    assert _argeus(month["days"]["02"])["footnotes"] == [FOOTNOTE]
+
+
+def test_elogium_placement_footnotes_follow_access(client):
+    url = "/api/v1/elogium/mr:0102-argeus-et-socii"
+    authorized = client.get(url, headers={"Authorization": "Bearer good"}).json()
+    assert authorized["editions"]["martyrologium_romanum_2004"]["footnotes"] == [FOOTNOTE]
+    anonymous = client.get(url).json()
+    assert anonymous["editions"]["martyrologium_romanum_2004"]["footnotes"] == []
+
+
+def test_public_edition_without_footnotes_has_empty_lists(client):
+    b = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
+    assert all(e["footnotes"] == [] for e in b["elogia"])

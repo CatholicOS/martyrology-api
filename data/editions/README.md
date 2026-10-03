@@ -42,6 +42,20 @@ Each edition folder may carry a `source.json` describing the printed copy its te
 
 Only `title` is required.
 
+## Footnotes
+
+An edition folder may carry a `footnotes.json`: the footnotes the print sets under its eulogies, by canonical ID, in printed order:
+
+```json
+{
+  "mr:0115-ioannes-baptista-triquerie-et-socii": [
+    { "mark": "1", "after": "sociorum,", "text": "Quorum nomina: …" }
+  ]
+}
+```
+
+`mark` is the printed mark as a string (the 2004 Latin numbers its notes from 1 each month; the 1914 English uses asterisks). `after` is the phrase the mark follows, which occurs exactly once in the eulogy's text as whole words, or null when it couldn't be anchored (readers then set the mark at the end of the eulogy). The API returns them as each eulogy's `footnotes`, emptied wherever the text is redacted.
+
 ## Editions
 
 | Folder | Edition | Source | Quality |
