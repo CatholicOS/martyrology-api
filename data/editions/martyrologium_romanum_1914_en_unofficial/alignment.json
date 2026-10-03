@@ -2981,7 +2981,7 @@
    "method": "same-day",
    "score": 1.81
   },
-  "mr:0425-marcus": {
+  "mr:0425-marcus-evangelista": {
    "method": "same-day",
    "score": 1.75
   },
@@ -8213,7 +8213,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1018-lucas": {
+  "mr:1018-lucas-evangelista": {
    "method": "same-day",
    "score": 1.75
   },
