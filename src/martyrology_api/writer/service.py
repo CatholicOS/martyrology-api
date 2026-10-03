@@ -22,6 +22,16 @@ def _sanitize_username(username: str) -> str:
     return _USERNAME_SANITIZE_RE.sub("-", username).lstrip("-.")
 
 
+def _reattach_rubricae(day: dict, cid: str) -> None:
+    """Before `cid` leaves the day, a rubric printed after it moves to the eulogy
+    before it (or to the head of the day), so no rubric is left dangling."""
+    order = list(day.get("elogia", {}))
+    prev = order[order.index(cid) - 1] if cid in order and order.index(cid) > 0 else None
+    for r in day.get("rubricae", []):
+        if r.get("after") == cid:
+            r["after"] = prev
+
+
 @dataclass
 class WriteReceipt:
     branch: str
@@ -385,6 +395,7 @@ class CurationService:
         if day_key is None:
             del raw[cid]
         else:
+            _reattach_rubricae(raw[day_key], cid)
             del raw[day_key]["elogia"][cid]
         return self._commit(
             identity,

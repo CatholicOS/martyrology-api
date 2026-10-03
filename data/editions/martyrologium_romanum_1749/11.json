@@ -4,9 +4,9 @@
   "elogia": {
    "mr:1101-festivitas-omnium-sanctorum-quam": "Festivitas omnium Sanctorum, quam in honorem beatae Dei Genitricis Virginis Mariae et sanctorum Martyrum Bonifatius Papa Quartus, cum templum Pantheon tertio Idus Maji dedicasset, celebrem et generalem instituit agi quotannis in urbe Roma. Sed et Gregorius item Quartus postmodum decrevit, eamdem festivitatem, quae variis modis jam in diversis Ecclesiis celebrabatur, in honorem omnium Sanctorum solemniter hac die ab universa Ecclesia perpetuo observari.",
    "mr:1101-ioannes-et-iacobus": "In Perside sanctorum Martyrum Joannis Episcopi, et Jacobi Presbyteri, sub Sapore Rege.",
-   "mr:1101-caesarius-tarracinae": "Tarracinae, in Campania, natalis sancti Caesarii Diaconi, qui, diebus multis in custodia maceratus, postea, cum sancto Juliano Presbytero, in saccum missus et in mare praecipitatus est.",
+   "mr:1101-caesarius": "Tarracinae, in Campania, natalis sancti Caesarii Diaconi, qui, diebus multis in custodia maceratus, postea, cum sancto Juliano Presbytero, in saccum missus et in mare praecipitatus est.",
    "mr:1101-benignus": "In castro Divione sancti Benigni Presbyteri, qui a beato Polycarpo missus est in Galliam ad praedicandum Evangelium; et, postquam, sub Marco Aurelio Imperatore, a Terentio Judice gravissimis tormentis multipliciter est afflictus, tandem ejus collum vecte ferreo tundi et corpus lancea perforari jubetur.",
-   "mr:1101-caesarius": "Damasci passio sanctorum Caesarii, Dacii et aliorum quinque.",
+   "mr:1101-caesarius-et-socii": "Damasci passio sanctorum Caesarii, Dacii et aliorum quinque.",
    "mr:1101-maria": "Eodem die sanctae Mariae ancillae, quae, Christianae religionis nomine accusata, hinc, sub Hadriano Imperatore, diris verberibus afflicta, equulei extensionem et ungularum lacerationem passa, martyrium complevit.",
    "mr:1101-cyrenia-et-juliana": "Tarsi, in Cilicia, sanctarum Cyreniae et Juliana; Martyrum, sub Maximiano Imperatore.",
    "mr:1101-austremonius": "Arvernis, in Gallia, sancti Austremonii, qui fuit primus ejusdem civitatis Episcopus.",
@@ -21,7 +21,6 @@
   "titulus": "2 Novembris Quarto Nonas Novembris. xxj. B",
   "elogia": {
    "mr:1102-omnium-fidelium-defunctorum": "Commemoratio omnium Fidelium Defunctorum.",
-   "mr:1102-domninus": "Si dies secunda Novembris incidat in Dominicam, praedicta verba leguntur primo loco, die sequenti.",
    "mr:1102-victorinus": "Poetovione, in Pannonia superiore, natalis sancti Victorini, ejusdem civitatis Episcopi, qui, post multa edita scripta (ut sanctus Hieronymus testatur), in persecutione Diocletiani, martyrio coronatus est.",
    "mr:1102-iustus": "Tergeste passio beati Justi, qui in eadem persecutione, sub Manatio Praeside, martyrium consummavit.",
    "mr:1102-carterius-et-socii": "Sebaste, in Armenia, sanctorum Carterii, Styriaci, Tobiae, Eudoxii, Agapii et Sociorum Martyrum, sub Licinio Imperatore.",
@@ -32,6 +31,12 @@
    "mr:1102-georgius": "Viennae, in Gallia, sancti Georgii Episcopi.",
    "mr:1102-ambrosius": "In monasterio Agaunensi, in Gallia, sancti Ambrosii Abbatis. Cyri, in Syria, sancti Marciani Confessoris."
   },
+  "rubricae": [
+   {
+    "after": "mr:1102-omnium-fidelium-defunctorum",
+    "text": "Si dies secunda Novembris incidat in Dominicam, praedicta verba leguntur primo loco, die sequenti."
+   }
+  ],
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
  "3": {
@@ -43,7 +48,7 @@
    "mr:1103-germanus-et-socii": "Caesareae, in Cappadocia, sanctorum Martyrum Germani, Theophili, Caesarii et Vitalis; qui, in persecutione Deciana, optime duxerunt martyrium.",
    "mr:1103-martyres-caesaraugustae": "Caesaraugustae, in Hispania, sanctorum innumerabilium Martyrum, qui, sub Hispaniarum Praeside Daciano, mirabiliter occubuerunt pro Christo.",
    "mr:1103-wenefrida": "In Anglia sanctae Wenefridae, Virginis et Martyris.",
-   "mr:1103-berardus": "In monasterio Claraevallensi, in Gallia, depositio sancti Malachiae, Connerthensis in Hibernia Episcopi, qui multis virtutibus suo tempore claruit; cujus vitam sanctus Bernardus Abbas conscripsit.",
+   "mr:1103-malachias": "In monasterio Claraevallensi, in Gallia, depositio sancti Malachiae, Connerthensis in Hibernia Episcopi, qui multis virtutibus suo tempore claruit; cujus vitam sanctus Bernardus Abbas conscripsit.",
    "mr:1103-hubertus-tungrensis": "Eodem die sancti Huberti, Tungrensis Episcopi.",
    "mr:1103-domnus": "Viennae, in Gallia, sancti Domni, Episcopi et Confessoris.",
    "mr:1103-pirminus": "Item depositio sancti Pirmini, Meldensis Episcopi.",
@@ -72,13 +77,13 @@
  "5": {
   "titulus": "5 Novembris Nonis Novembris. vij. G",
   "elogia": {
-   "mr:1105-dominicus-mau": "Sancti Zachariae, Sacerdotis et Prophetae, qui pater exstitit beati Joannis Baptistae, Praecursoris Domini.",
+   "mr:1105-zacharias": "Sancti Zachariae, Sacerdotis et Prophetae, qui pater exstitit beati Joannis Baptistae, Praecursoris Domini.",
    "mr:1105-elisabeth": "Item sanctae Elisabeth, ejusdem sanctissimi Praecursoris matris.",
    "mr:1105-felix-et-eusebius": "Tarracinae, in Campania, natalis sanctorum Martyrum Felicis Presbyteri, et Eusebii Monachi. Ex his Eusebius, cum sepelisset sanctos Martyres Julianum et Caesarium, et multos converteret ad fidem Christi, quos sanctus Felix Presbyter baptizabat, una cum ipso Felice tentus est; et, ad Judicis forum ducti nec superati, inde in carcerem inclusi, ambo, nocte eadem, cum sacrificare noluissent, decollati sunt.",
    "mr:1105-galatio-et-episteme": "Emessae, in Phoenicia, sanctorum Martyrum Galationis et Epistemis conjugis, qui in Decii persecutione, flagris caesi, manibus pedibusque et lingua insuper mutilati, denique, truncato capite, martyrium consummarunt.",
    "mr:1105-theotimus-et-socii": "Item sanctorum Martyrum Domnini, Theotimi, Philothei, Silvani et Sociorum, sub Maximino Imperatore.",
    "mr:1105-magnus": "Mediolani sancti Magni, Episcopi et Confessoris.",
-   "mr:1105-domninus": "Brixiae sancti Dominatoris Episcopi.",
+   "mr:1105-dominator": "Brixiae sancti Dominatoris Episcopi.",
    "mr:1105-fibicius": "Treviris sancti Fibitii, qui ex Abbate factus est ejusdem civitatis Episcopus. Aurelianis, in Gallia, sancti Laeti, Presbyteri et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -289,7 +294,7 @@
    "mr:1120-ampelus-et-caius": "Messanae, in Sicilia, sanctorum Martyrum Ampeli et Caji.",
    "mr:1120-octavius-et-socii": "Taurini sanctorum Martyrum Octavii, Solutoris et Adventoris, Thebanae legionis militum; qui, sub Maximiano Imperatore, egregie decertantes, martyrio coronati sunt.",
    "mr:1120-agapius": "Caesareae, in Palaestina, sancti Agapii Martyris, qui, sub Galerio Maximiano Imperatore, damnatus ad bestias et ab iis nil laesus, tandem, lapidibus ad pedes appensis, in mare demergitur.",
-   "mr:1120-dorus": "Dorostori, in Mysia inferiore, sancti Dasii Martyris, qui, cum in festo Saturni nollet impudicitiis ejus consentire, sub Basso Praeside caesus est.",
+   "mr:1120-dasius": "Dorostori, in Mysia inferiore, sancti Dasii Martyris, qui, cum in festo Saturni nollet impudicitiis ejus consentire, sub Basso Praeside caesus est.",
    "mr:1120-edmundus": "Nicaeae, in Bithynia, sanctorum Martyrum Eustachii, Thespesii et Anatolii, in persecutione Maximiani. Heracleae, in Thracia, sanctorum Martyrum Bassi, Dionysii, Agapiti et aliorum quadraginta. In Anglia sancti Eadmundi, Regis et Martyris.",
    "mr:1120-gregorius-decapolitanus": "Constantinopoli sancti Gregorii Decapolitae, qui ob cultum sanctarum Imaginum multa passus est.",
    "mr:1120-benignus": "Mediolani sancti Benigni Episcopi, qui, in magna barbarorum perturbatione, commissam sibi Ecclesiam summa constantia et religione administravit.",

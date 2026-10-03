@@ -3,7 +3,7 @@
   "titulus": "The First Day of June",
   "elogia": {
    "mr:0601-juventius": "At Rome, St. Juventius, martyr.",
-   "mr:0601-chariton-et-socii": "At Caesarea, in Palestine, blessed Pamphilus, priest and martyr, a man of remarkable sanctity and learning, and great charity to the poor. In the persecution of Galerius Maximian, he was tortured for the faith of Christ, under the governor Urbanus, and thrown into prison; then, being again subjected to torments under Firmilian, he consummated his martyrdom with others. With them suffered also Valens, deacon, and Paul, and nine others, whose commemoration occurs on other days.",
+   "mr:0601-pamphilus": "At Caesarea, in Palestine, blessed Pamphilus, priest and martyr, a man of remarkable sanctity and learning, and great charity to the poor. In the persecution of Galerius Maximian, he was tortured for the faith of Christ, under the governor Urbanus, and thrown into prison; then, being again subjected to torments under Firmilian, he consummated his martyrdom with others. With them suffered also Valens, deacon, and Paul, and nine others, whose commemoration occurs on other days.",
    "mr:0601-reverianus": "At Autun, the Saints Reverian, bishop, and Paul, priest, with ten others, who were crowned with martyrdom under the emperor Aurelian.",
    "mr:0601-thespesius": "In Cappadocia, in the time of the emperor Alexander and the prefect Simplicius, the holy martyr Thespesius, who, after undergoing many torments, was beheaded.",
    "mr:0601-ischyrion-et-socii": "In Egypt, under the emperor Diocletian, the holy martyrs Ischyrion, military officer, and five other soldiers, who were put to death in different manners for the faith of Christ.",
@@ -16,7 +16,8 @@
    "mr:0601-caprasius": "In the monastery of Lerins, the abbot St. Caprasius.",
    "mr:0601-simeon": "At Treves, St. Simeon, monk, who was added to the number of the Saints by pope Benedict IX.",
    "mr:0601-eneco": "At Burgos, in Spain, in the monastery of Onia, St. Eneco, Benedictine abbot, illustrious by his sanctity and miracles."
-  }
+  },
+  "conclusio": null
  },
  "2": {
   "titulus": "The Second Day of June",
@@ -26,7 +27,8 @@
    "mr:0602-pothinus-et-socii": "At Lyons, many holy martyrs (Photinus, bishop, Sanctus, deacon, Vetius, Epagathus, Maturus, Ponticus, Biblis, Attalus, Alexander and Blandina, with many others), whose many valiant combats, in the time of Marcus Aurelius Antoninus and Lucius Verus, are recorded in a letter from the church at Lyons to the churches of Asia and Phrygia. St. Blandina, one of these martyrs, though weaker on account of her sex and frame, and of her lower condition in life, encountered longer and more terrible trials. But remaining unshaken, she was put to the sword, and followed those whom she had exhorted to win the palm of martyrdom.",
    "mr:0602-eugenius-i": "At Rome, St. Eugenius, pope and confessor.",
    "mr:0602-nicolaus": "At Trani, in Terra-di-Bari, St. Nicholas Peregrinus, confessor, whose miracles were related in the Roman Council, under Urban II."
-  }
+  },
+  "conclusio": null
  },
  "3": {
   "titulus": "The Third Day of June",
@@ -40,7 +42,8 @@
    "mr:0603-davinus": "At Lucca, in Tuscany, St. Davinus, confessor.",
    "mr:0603-clotildis": "At Paris, St. Clotilde, queen, by whose prayers her husband, king Clovis, was converted to the faith of Christ.",
    "mr:0603-oliva": "At Anagni, St. Oliva, virgin."
-  }
+  },
+  "conclusio": null
  },
  "4": {
   "titulus": "The Fourth Day of June",
@@ -54,7 +57,8 @@
    "mr:0604-metrophanes": "At Constantinople, St. Metrophanes, bishop and renowned confessor.",
    "mr:0604-optatus": "At Milevis, in Numidia, St. Optatus, bishop, celebrated for learning and holiness.",
    "mr:0604-alexander": "At Verona, St. Alexander, bishop."
-  }
+  },
+  "conclusio": null
  },
  "5": {
   "titulus": "The Fifth Day of June",
@@ -65,7 +69,8 @@
    "mr:0605-zenais": "At Caesarea, in Palestine, the martyrdom of the Saints Zenaides, Cyria, Valeria, and Marcia, who through many torments attained to martyrdom rejoicing.",
    "mr:0605-dorotheus": "At Tyre, St. Dorotheus, a priest, who suffered much under Diocletian, but survived until the reign of Julian, under whom his venerable age was crowned with martyrdom, he being then one hundred and seven years old.",
    "mr:0605-sancius": "At Cordova, in Spain, blessed Sancius, a youth, who, though brought up in the royal court, did not hesitate to undergo martyrdom for the faith of Christ, during the persecution of the Arabs."
-  }
+  },
+  "conclusio": null
  },
  "6": {
   "titulus": "The Sixth Day of June",
@@ -79,7 +84,8 @@
    "mr:0606-eustorgius-secundus": "At Milan, the demise of St. Eustorgius II., bishop and confessor.",
    "mr:0606-joannis": "At Verona, St. John, bishop.",
    "mr:0606-claudius": "At Besancon, in France, St. Claude, bishop."
-  }
+  },
+  "conclusio": null
  },
  "7": {
   "titulus": "The Seventh Day of June",
@@ -87,7 +93,8 @@
    "mr:0607-paulus": "At Constantinople, the birthday of St. Paul, bishop of that city. For the Catholic faith, he was often expelled from his see by the Arians, and restored to it by the Roman Pontiff, St. Julius. Finally, the Arian emperor Constantius banished him to Cucusum, a small town of Cappadocia, where, by the machinations of the Arians, he was barbarously strangled, and thus departed for the heavenly kingdom. His body was conveyed to Constantinople with the greatest honor, in the reign of emperor Theodosius. In Egypt, St. Licarion, martyr, who was lacerated, scourged with heated iron rods, and, after other horrible torments, was crowned with martyrdom by a stroke from the sword.",
    "mr:0607-petrus-et-socii": "At Cordova, the holy martyrs Peter, priest, Wallabonsus, deacon, Sabinian, Wistremundus, Habentius, and Jeremias, monks.",
    "mr:0607-robertus": "In England, the abbot St. Robert, of the Order of Citeaux."
-  }
+  },
+  "conclusio": null
  },
  "8": {
   "titulus": "The Eighth Day of June",
@@ -102,7 +109,8 @@
    "mr:0608-severinus-septempedanus": "In the March of Ancona, St. Severin, bishop of Septempeda.",
    "mr:0608-sallustianus": "In Sardinia, St. Sallustian, confessor.",
    "mr:0608-victorinus": "At Camerino, St. Victorinus, confessor."
-  }
+  },
+  "conclusio": null
  },
  "9": {
   "titulus": "The Ninth Day of June",
@@ -114,7 +122,8 @@
    "mr:0609-richardus": "At Andria, in Terra-di-Bari, St. Richard, first bishop of that city, who is renowned for miracles.",
    "mr:0609-columba": "In Scotland, St. Columba, priest and confessor.",
    "mr:0609-iulianus": "At Edessa, in Syria, St. Julian, a monk, whose memorable deeds have been related by the deacon St. Ephrem."
-  }
+  },
+  "conclusio": null
  },
  "10": {
   "titulus": "The Tenth Day of June",
@@ -130,16 +139,18 @@
    "mr:0610-asterius": "At Petra, in Arabia, St. Asterius, a bishop, who suffered much from the Arians for the Catholic faith. By the emperor Constantius he was banished to Africa, where he died a glorious confessor.",
    "mr:0610-maximus": "At Naples, in Campania, St. Maximus, bishop and martyr. For having vigorously defended the Nicene Creed, he was sent by the same emperor Constantius into exile, where he died worn out by his trials.",
    "mr:0610-censurius": "At Auxerre, St. Censurius, bishop."
-  }
+  },
+  "conclusio": null
  },
  "11": {
   "titulus": "The Eleventh Day of June",
   "elogia": {
    "mr:0611-barnabas": "The birthday of the apostle St. Barnabas, born in Cyprus. By the disciples, he was ordained apostle of the Gentiles with St. Paul, and with him traversed many regions, fulfilling his commission to preach the Gospel. At length he went to Cyprus, where he ennobled his apostolate by a glorious martyrdom. Through his own revelation his body was found, in the time of the emperor Zeno, together with a copy of St. Matthew’s gospel copied with his own hand.",
-   "mr:0611-maximus": "At Aquileia, the martyrdom of the saints Felix and Fortunatus, brothers. In the persecution of Diocletian and Maximian, they were racked, and had flaming torches held against their sides. These being extinguished by the power of God, boiling oil was poured over them, and as they persevered in confessing Christ, they were decapitated.",
+   "mr:0611-felix-et-fortunatus": "At Aquileia, the martyrdom of the saints Felix and Fortunatus, brothers. In the persecution of Diocletian and Maximian, they were racked, and had flaming torches held against their sides. These being extinguished by the power of God, boiling oil was poured over them, and as they persevered in confessing Christ, they were decapitated.",
    "mr:0611-parisius": "At Bologna, St. Parisius, confessor, a monk of the Order of Camaldoli.",
    "mr:0611-translatio-gregorii-nazianzeni": "At Rome, the translation of St. Gregory Nazianzen, whose sacred body after having been brought from Constantinople to Rome, and kept a long time in the church of the Mother of God, was, by the Sovereign Pontiff, Gregory XIII., transferred with great solemnity to a chapel of the basilica of St. Peter, most sumptuously decorated by his Holiness, and the next day placed with due honor beneath the altar."
-  }
+  },
+  "conclusio": null
  },
  "12": {
   "titulus": "The Twelfth Day of June",
@@ -151,7 +162,8 @@
    "mr:0612-leo-iii": "At Rome, in the Vatican basilica, the pope St. Leo III., to whom God miraculously restored his eyes and his tongue after they had been torn out by impious men.",
    "mr:0612-amphion": "In Cilicia, the bishop St. Amphion, a celebrated confessor of the time of Galerius Maximian.",
    "mr:0612-onuphrius": "In Egypt, St. Onuphrius, an anchoret, who for sixty years led a religious life in the desert, and renowned for great virtues and merits, departed for heaven. His admirable deeds were recorded by the abbot Paphnutius."
-  }
+  },
+  "conclusio": null
  },
  "13": {
   "titulus": "The Thirteenth Day of June",
@@ -163,7 +175,8 @@
    "mr:0613-cetheus": "In Abruzzo, St. Peregrinus, bishop and martyr. For the Catholic faith he was thrown into the river Pescara by the Lombards.",
    "mr:0613-fandila": "At Cordova, in the persecution of the Arabs, St. Fandila, a priest and monk, who underwent martyrdom by decapitation for the faith of Christ.",
    "mr:0613-triphyllius": "In Cyprus, St. Triphyllius, bishop."
-  }
+  },
+  "conclusio": null
  },
  "14": {
   "titulus": "The Fourteenth Day of June",
@@ -176,7 +189,8 @@
    "mr:0614-methodius": "At Constantinople, St. Methodius, bishop.",
    "mr:0614-aetherius": "At Vienne, St. Aetherius, bishop.",
    "mr:0614-quinctianus": "At Rhodez, St. Quinctian, bishop."
-  }
+  },
+  "conclusio": null
  },
  "15": {
   "titulus": "The Fifteenth Day of June",
@@ -190,7 +204,8 @@
    "mr:0615-abraham": "At Clermont, in Auvergne, St. Abraham, confessor, illustrious by his holiness and miracles.",
    "mr:0615-bernardus-de-menthone": "In Switzerland, on Mount Jou, St. Bernard of Menthon, confessor.",
    "mr:0615-germana": "At Pibrac, in the diocese of Toulouse, St. Germana Cousin, virgin. After a life of poverty, humility, and patient suffering amidst many trials in the care of her flocks, she went to her heavenly spouse, and became renowned for numerous miracles after her death. Pope Pius IX. placed her in the number of holy virgins."
-  }
+  },
+  "conclusio": null
  },
  "16": {
   "titulus": "The Sixteenth Day of June",
@@ -204,7 +219,8 @@
    "mr:0616-benno": "At Meissen, in Germany, St. Benno, bishop.",
    "mr:0616-ioannes-franciscus-regis": "In the village of La Louvesc, formerly of the diocese of Vienne in Dauphiny, the decease of St. John Francis Regis, confessor, of the Society of Jesus, distinguished by his zeal for the salvation of souls, and by his patience. He was placed on the list of Saints by Clement XII.",
    "mr:0616-lutgardis": "In Brabant, St. Lutgard, virgin."
-  }
+  },
+  "conclusio": null
  },
  "17": {
   "titulus": "The Seventeenth Day of June",
@@ -220,7 +236,8 @@
    "mr:0617-hypatius": "In Phrygia, St. Hypatius, confessor.",
    "mr:0617-bessarion": "Also, St. Bessarion, anchorite.",
    "mr:0617-rainerius": "At Pisa, in Tuscany, St. Rainerius, confessor."
-  }
+  },
+  "conclusio": null
  },
  "18": {
   "titulus": "The Eighteenth Day of June",
@@ -233,7 +250,8 @@
    "mr:0618-amandus": "At Bordeaux, St. Amandus, bishop and confessor.",
    "mr:0618-calogerus": "At Sacca, in Sicily, St. Calogerus, hermit, whose holiness is principally manifested by the deliverance of possessed persons.",
    "mr:0618-elisabeth": "At Schongau, St. Elizabeth, virgin, celebrated for her observance of monastic discipline."
-  }
+  },
+  "conclusio": null
  },
  "19": {
   "titulus": "The Nineteenth Day of June",
@@ -245,7 +263,8 @@
    "mr:0619-gaudentius-et-culmatius": "At Arezzo, in Tuscany, the holy martyrs Gaudentius, bishop, and Culmatius, deacon, who were murdered by the furious Gentiles, during the reign of Valentinian.",
    "mr:0619-bonifatius": "The same day, St. Boniface, martyr, a disciple of blessed Romuald, who was sent by the Roman Pontiff to preach the Gospel in Russia. Having passed through fire uninjured, and baptized the king and his people, he was killed by the enraged brother of the king, and thus gained the palm of martyrdom which he ardently desired.",
    "mr:0619-romualdus": "At Ravenna, St. Romuald, anchoret, founder of the monks of Camaldoli, who restored and greatly extended monastic discipline, which was much relaxed in Italy. He is also mentioned on the 7th of February."
-  }
+  },
+  "conclusio": null
  },
  "20": {
   "titulus": "The Twentieth Day of June",
@@ -255,7 +274,8 @@
    "mr:0620-paulus-et-cyriacus": "At Tomis, in Pontus, the holy martyrs Paul and Cyriacus.",
    "mr:0620-macarius": "At Petra, in Palestine, St. Macarius, a bishop who suffered much from the Arians, and was banished to Africa, where he rested in the Lord.",
    "mr:0620-florentina": "At Seville, in Spain, the holy virgin Florentina, sister of the holy bishops Leander and Isidore."
-  }
+  },
+  "conclusio": null
  },
  "21": {
   "titulus": "The Twenty-first Day of June",
@@ -270,7 +290,8 @@
    "mr:0621-urciscenus": "At Pavia, St. Urciscenus, bishop and confessor.",
    "mr:0621-martinus": "At Tongres, St. Martin, bishop.",
    "mr:0621-leutfridus": "In the diocese of Evreux, St. Leutfrid, abbot."
-  }
+  },
+  "conclusio": null
  },
  "22": {
   "titulus": "The Twenty-second Day of June",
@@ -283,7 +304,8 @@
    "mr:0622-flavius-clemens": "At Rome, the translation of St. Flavius Clemens, ex-consul and martyr, who was put to death for the faith of Christ by the emperor Domitian. His body was found in the basilica of pope St. Clement, and buried there with great pomp.",
    "mr:0622-nicetas": "The same day, St. Nicetas, bishop of the town of Romatia, celebrated for his learning and holy life.",
    "mr:0622-paulinus": "At Naples, in Campania, St. John, bishop, who was called to the kingdom of heaven by blessed Paulinus, bishop of Nola. In the monastery of Cluny, St. Consortia, virgin."
-  }
+  },
+  "conclusio": null
  },
  "23": {
   "titulus": "The Twenty-third Day of June",
@@ -295,7 +317,8 @@
    "mr:0623-nicomedia": "At Nicomedia, in the time of Diocletian, the commemoration of many holy martyrs, who concealed themselves in mountains and caverns, and joyfully underwent martyrdom for the name of Christ.",
    "mr:0623-zeno": "At Philadelphia, in Arabia, the holy martyrs Zeno, and Zenas, his slave. When the latter kissed the chains of his master, begging to be his partner in torments, he was arrested by the soldiers, and received the crown of martyrdom with him.",
    "mr:0623-ediltrudis": "In England, St. Audry, queen and virgin, who departed for heaven with a great renown for sanctity and miracles. Her body was found without corruption eleven years afterwards."
-  }
+  },
+  "conclusio": null
  },
  "24": {
   "titulus": "The Twenty-fourth Day of June",
@@ -303,12 +326,13 @@
    "mr:0624-ioannes-baptista": "The Nativity of St. John the Baptist, precursor of our Lord, son of Zachary and Elizabeth, who, while yet in his mother’s womb, was filled with the Holy Ghost.",
    "mr:0624-plurimi-martyres-romae": "At Rome, in the time of Nero, the commemoration of many holy martyrs, who were accused of having set fire to the city, and cruelly put to death in various manners by the emperor’s order. Some were covered with the skins of wild beasts and lacerated by dogs; others were fastened to crosses, others again were delivered to the flames to serve as torches in the night. All these were disciples of the Apostles, and the first fruits of the martyrs, which the Roman Church, a field so fertile in martyrs, offered to God before the death of the Apostles.",
    "mr:0624-viginti-martyres-romae": "In the same city, the holy martyrs Faustus and twenty-three others.",
-   "mr:0624-rumoldus": "At Satalis, in Armenia, seven saintly brothers, martyrs: Orentius, Heros, Pharnacius, Firminus, Firmus, Cyriacus and Longinus, who owe their martyrdom to the emperor Maximian. Because they were Christians, they were deprived of the military cincture by his command, separated from one another, hurried away to various places, and in the midst of painful trials, found their repose in the Lord.",
+   "mr:0624-orentius-et-socii": "At Satalis, in Armenia, seven saintly brothers, martyrs: Orentius, Heros, Pharnacius, Firminus, Firmus, Cyriacus and Longinus, who owe their martyrdom to the emperor Maximian. Because they were Christians, they were deprived of the military cincture by his command, separated from one another, hurried away to various places, and in the midst of painful trials, found their repose in the Lord.",
    "mr:0624-agoardus-et-agilbertus": "In the diocese of Paris, at Creteil, the martyrdom of the Saints Agoardus and Aglibertus, with a multitude of others of both sexes.",
    "mr:0624-simplicius": "At Autun, the demise of St. Simplicius, bishop and confessor.",
    "mr:0624-theodulfus": "At Lobbes, St. Theodulphus, bishop.",
    "mr:0624-ioannes-therestus": "At Stilo, in Calabria, St. John, surnamed Therestus, distinguished for his fidelity to the monastic rule, and for his sanctity."
-  }
+  },
+  "conclusio": null
  },
  "25": {
   "titulus": "The Twenty-fifth Day of June",
@@ -321,7 +345,8 @@
    "mr:0625-prosperus": "At Besancon, in France, St. Antidius, bishop and martyr, who was killed by the Vandals for the faith of Christ. At Riez, St. Prosper of Aquitaine, bishop of that city, distinguished by his erudition and piety. He valiantly combated the Pelagians in defence of the Catholic faith.",
    "mr:0625-maximus": "At Turin, the birthday of St. Maximus, bishop and confessor, most celebrated for his learning and sanctity.",
    "mr:0625-adalbertus": "In Holland, St. Adelbert, confessor, disciple of the sainted bishop Willibrord."
-  }
+  },
+  "conclusio": null
  },
  "26": {
   "titulus": "The Twenty-sixth Day of June",
@@ -333,7 +358,8 @@
    "mr:0626-maxentius": "Also, the commemoration of St. Anthelmus, bishop of Belley. In Poitou, St. Maxentius, priest and confessor, renowned for miracles.",
    "mr:0626-david": "At Thessalonica, St. David, hermit.",
    "mr:0626-perseveranda": "The same day, St. Perseveranda, virgin."
-  }
+  },
+  "conclusio": null
  },
  "27": {
   "titulus": "The Twenty-seventh Day of June",
@@ -343,7 +369,8 @@
    "mr:0627-anectus": "At Caesarea, in Palestine, in the persecution of Diocletian, under the governor Urbanus, St. Anectus, martyr. For having exhorted others to suffer martyrdom, and overthrown idols by his prayers, he was scourged by ten soldiers, had his hands and feet cut off, and by decapitation merited the crown of martyrdom.",
    "mr:0627-samson": "At Constantinople, St. Sampson, a priest who harbored the poor.",
    "mr:0627-ladislaus": "At Warasdin, in Hungary, the holy king Ladislas, greatly renowned to this day for miracles."
-  }
+  },
+  "conclusio": null
  },
  "28": {
   "titulus": "The Twenty-eighth Day of June",
@@ -356,7 +383,8 @@
    "mr:0628-benignus": "At Maestricht, St. Benignus, bishop and martyr.",
    "mr:0628-argimirus": "At Cordova, St. Argymirus, monk and martyr, who was slain for the faith of Christ during the persecution of the Arabs.",
    "mr:0628-paulus-primus": "At Rome, St. Paul, pope and confessor."
-  }
+  },
+  "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of June",
@@ -367,7 +395,8 @@
    "mr:0629-cassius": "At Narni, St. Cassius, bishop of that city, of whom St. Gregory relates, that he permitted scarcely any day of his life to pass without offering the victim of propitiation to Almighty God; and he was well worthy to do it, for he distributed in alms all he possessed, and his devotion was such that abundant tears flowed from his eyes during the holy sacrifice. At last, he came to Rome on the birthday of the Apostles, as was his yearly custom, and after having solemnly celebrated Mass and given the Lord’s body and the kiss of peace to all, he departed for heaven.",
    "mr:0629-maria": "In Cyprus, St. Mary, mother of John, surnamed Mark.",
    "mr:0629-benedicta": "In the territory of Sens, St. Benedicta, virgin."
-  }
+  },
+  "conclusio": null
  },
  "30": {
   "titulus": "The Thirtieth Day of June",
@@ -379,6 +408,7 @@
    "mr:0630-lucina-apostolorum": "At Rome, St. Lucina, a disciple of the Apostles, who relieved the necessities of the saints with her goods, visited the Christians detained in prison, buried the martyrs, and was laid by their side in a crypt constructed by herself.",
    "mr:0630-aemiliana": "In the same city, St. Aemiliana, martyr.",
    "mr:0630-ostianus": "In the territory of Viviers, St. Ostian, priest and confessor."
-  }
+  },
+  "conclusio": null
  }
 }

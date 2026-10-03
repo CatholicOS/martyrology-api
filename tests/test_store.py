@@ -34,6 +34,7 @@ def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
     # The 1749 print numbers no eulogies: no entry, whatever the position.
     assert (conc.entry, conc.anchor_month, conc.anchor_day) == (None, 1, 2)  # anchored 01-02
     assert d.conclusio is not None and d.conclusio.startswith("Et alibi")
+    assert [(r.after, r.text[:13]) for r in d.rubricae] == [("mr:0102-concordius", "Quod sequitur")]
 
 
 def test_flat_day_uses_registry_placement(crmedr_path, clbdr_path, data_paths):
@@ -214,3 +215,17 @@ def test_a_malformed_footnotes_file_fails_when_the_store_is_built(
     (edition / "footnotes.json").write_text(json.dumps(bad), encoding="utf-8")
     with pytest.raises(ValueError, match=r"martyrologium_romanum_2004/footnotes\.json"):
         make_store(crmedr_path, clbdr_path, [tmp_path])
+
+
+def test_null_rubricae_parse_as_empty(crmedr_path, clbdr_path):
+    """A day written with "rubricae": null (accepted by validation) still reads."""
+    reg = Registry.load(crmedr_path, clbdr_path)
+    raw = {
+        "1": {
+            "titulus": "t",
+            "elogia": {"mr:0101-basilius": "x"},
+            "rubricae": None,
+            "conclusio": None,
+        }
+    }
+    assert parse_month_file(raw, 1, "day-structured", reg)[1].rubricae == []

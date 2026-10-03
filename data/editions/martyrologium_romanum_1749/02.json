@@ -16,7 +16,7 @@
   "elogia": {
    "mr:0202-purificatio-beatae-mariae-virginis": "Purificatio beatae Mariae Virginis, quae a Graecis Hypapante Domini appellatur.",
    "mr:0202-cornelius": "Caesareae, in Palaestina, sancti Cornelii Centurionis, quem beatus Petrus Apostolus baptizavit, et apud praefatam urbem Episcopali sublimavit honore.",
-   "mr:0202-praesentatio-domini": "Romae, via Salaria, passio sancti Aproniani Commentariensis, qui, adhuc Gentilis, cum sanctum Sisinium e carcere educeret ut Laodicio Praefecto praesentaret, vocemque de caelo factam audiret: « Venite, benedicti Patris mei, percipite regnum, quod vobis paratum est a constitutione mundi», credens baptizatur, et postea, in confessione Domini, vitae finem sententia capitali accepit.",
+   "mr:0202-apronianus": "Romae, via Salaria, passio sancti Aproniani Commentariensis, qui, adhuc Gentilis, cum sanctum Sisinium e carcere educeret ut Laodicio Praefecto praesentaret, vocemque de caelo factam audiret: « Venite, benedicti Patris mei, percipite regnum, quod vobis paratum est a constitutione mundi», credens baptizatur, et postea, in confessione Domini, vitae finem sententia capitali accepit.",
    "mr:0202-fortunatius-et-socii": "Item Romae sanctorum Martyrum Fortunatii Feliciani, Firmi et Candidi.",
    "mr:0202-flosculus": "Aurelianis, in Gallia, sancti Flosculi Episcopi.",
    "mr:0202-laurentius": "Cantuariae, in Anglia, natalis sancti Laurentii Episcopi, qui, post sanctum Augustinum, eam Ecclesiam gubernavit, et Regem ipsum ad fidem convertit.",
@@ -30,7 +30,7 @@
   "elogia": {
    "mr:0203-blasius": "Sebaste, in Armenia, passio sancti Blasii, Episcopi et Martyris; qui, multorum patrator miraculorum, sub Agricolao Praeside, post diutinam caesionem, atque in ligno suspensionem, ubi ferreis pectinibus carnes ejus diruptae sunt, post teterrimum carcerem et in lacum demersionem, unde salvus exivit, tandem, jubente eodem Judice, una cum duobus pueris, capite truncatur. Ante ipsum vero septem mulieres, quae guttas sanguinis, ex ejusdem Martyris corpore defluentes, dum torqueretur, colligebant, propterea, deprehensae quod essent Christianae, omnes, post dira tormenta, gladio percussae sunt.",
    "mr:0203-celerinus-africa": "In Africa sancti Celerini Diaconi, qui, decem et novem dies custodia carceris septus, in nervo et ferro variisque poenis gloriosus fuit Christi Confessor; et, dum inexpugnabili firmitate certaminis sui vicit adversarium, vincendi ceteris viam fecit.",
-   "mr:0203-celerinus": "Ibidem sanctorum trium Martyrum, ipsius Celerini Diaconi consanguineorum, scilicet Laurentini patrui, Ignatii avunculi, et Celerinae aviae, qui antea martyrio coronati fuerant; de quorum omnium gloriosis laudibus exstat beati Cypriani epistola.",
+   "mr:0203-laurentinus-et-socii": "Ibidem sanctorum trium Martyrum, ipsius Celerini Diaconi consanguineorum, scilicet Laurentini patrui, Ignatii avunculi, et Celerinae aviae, qui antea martyrio coronati fuerant; de quorum omnium gloriosis laudibus exstat beati Cypriani epistola.",
    "mr:0203-felix-et-socii": "Item in Africa sanctorum Martyrum Felicis, Symphronii, Hippolyti et Sociorum.",
    "mr:0203-teridius-et-remedius": "In oppido Vapingo, in Gallia, sanctorum Tigridis et Remedii Episcoporum.",
    "mr:0203-lupicinus": "Lugduni, in Gallia, sanctorum Lupicini et Felicis, itidem Episcoporum.",
@@ -86,7 +86,7 @@
    "mr:0207-romualdus": "Sancti Romualdi Abbatis, Monachorum Camaldulensium Patris, cujus dies natalis tertiodecimo Kalendas Julii recensetur, sed festivitas hac die, ob Translationem corporis ejus, potissimum celebratur.",
    "mr:0207-augulus": "Augustae, cui nunc Londini nomen, in Britannia, natalis beati Auguli Episcopi, qui, aetatis cursu per martyrium expleto, aeterna praemia suscipere meruit.",
    "mr:0207-adaucus": "In Phrygia sancti Adauci Martyris, qui, ex Italico genere clarus, et omni fere dignitatum gradu ab Imperatoribus insignitus, tandem, cum adhuc Quaestoris officio fungeretur, martyrii corona pro fidei defensione dignatus est.",
-   "mr:0207-maximus": "Ibidem plurimorum sanctorum Martyrum, urbis unius civium, quorum dux erat idem Adaucus; qui, cum omnes Christiani essent, et constanter in fidei confessione persisterent, a Galerio Maximiano Imperatore sunt igne consumpti.",
+   "mr:0207-plurimi-martyres-phrygiae": "Ibidem plurimorum sanctorum Martyrum, urbis unius civium, quorum dux erat idem Adaucus; qui, cum omnes Christiani essent, et constanter in fidei confessione persisterent, a Galerio Maximiano Imperatore sunt igne consumpti.",
    "mr:0207-theodorus": "Heracleae, in Ponto, sancti Theodori, ductoris militum, qui, Licinio imperante, post multa tormenta, truncatus capite, victor migravit in caelum.",
    "mr:0207-moyses": "In Aegypto sancti Moysis, Episcopi venerabilis, qui primum in eremo vitam solitariam duxit; deinde, petente Regina Saracenorum Mauvia, Episcopus factus, gentem illam ferocissimam magna ex parte ad fidem convertit, et gloriosus meritis quievit in pace.",
    "mr:0207-richardus": "Lucae, in Tuscia, depositio sancti Richardi, Regis Anglorum, qui pater exstitit sancti Willebaldi, Eystettensis Episcopi, ac sanctae Walburgae Virginis.",
@@ -108,7 +108,7 @@
    "mr:0208-honoratus": "Mediolani depositio sancti Honorati, Episcopi et Confessoris.",
    "mr:0208-paulus": "Viroduni, in Gallia, sancti Pauli Episcopi, miraculorum dono illustris.",
    "mr:0208-stephanus": "Apud Muretum, in agro Lemovicensi, natalis sancti Stephani Abbatis, qui Grandimontensis Ordinis Institutor fuit, ac virtutibus et miraculis claruit.",
-   "mr:0208-petrus-cardinalis": "In monasterio Vallis Umbrosae Beati Petri, Cardinalis et Episcopi Albanensis, ex Ordine Vallis Umbrosae, cognomento Ignei, quia per ignem illaesus transivit."
+   "mr:0208-petrus-igneus": "In monasterio Vallis Umbrosae Beati Petri, Cardinalis et Episcopi Albanensis, ex Ordine Vallis Umbrosae, cognomento Ignei, quia per ignem illaesus transivit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -117,7 +117,7 @@
   "elogia": {
    "mr:0209-cyrillus": "Sancti Cyrilli, Episcopi Alexandrini, Confessoris et Ecclesiae Doctoris, cujus dies natalis quinto Kalendas Februarii recensetur.",
    "mr:0209-apollonia": "Alexandriae natalis sanctae Apolloniae, Virginis et Martyris, cui persecutores, sub Decio, dentes omnes primum excusserunt. Deinde, constructo ac succenso rogo, iidem comminati sunt, nisi cum eis impia verba proferret, vivam se eam incensuros; at illa, cum paululum intra semetipsam deliberasset, repente se de manibus impiorum proripuit, et in ignem, quem paraverant, maiore Sancti Spiritus flamma intus aestuans, sponte ita prosilivit, ut perterrerentur etiam ipsi crudelitatis auctores, quod promptior inventa esset ad mortem femina quam persecutor ad poenam.",
-   "mr:0209-plurimi-martyres-alexandriae": "Romae passio sanctorum Martyrum Alexandri et aliorum triginta octo coronatorum.",
+   "mr:0209-alexander-et-socii": "Romae passio sanctorum Martyrum Alexandri et aliorum triginta octo coronatorum.",
    "mr:0209-primus-et-donatus": "In castello Lemelensi, in Africa, sanctorum Martyrum Primi et Donati Diaconorum, qui, cum altare in Ecclesia tutarentur, a Donatistis occisi sunt.",
    "mr:0209-ammonius-et-alexander": "Solis, in Cypro, sanctorum Martyrum Ammonii et Alexandri.",
    "mr:0209-nicephorus": "Antiochiae sancti Nicephori Martyris, qui sub Valeriano Imperatore, capite caesus, martyrii coronam accepit.",
@@ -160,7 +160,7 @@
   "elogia": {
    "mr:0212-septem-martyres-sanctorum": "Sanctorum septem Fundatorum Ordinis Servorum beatae Mariae Virginis, Confessorum, quorum depositio respectivis diebus recolitur. Quos autem in vita unus verae fraternitatis spiritus sociavit, et indivisa post obitum veneratio populi prosecuta est, eos Leo Decimus tertius, Pontifex Maximus, una pariter Sanctorum fastis accensuit.",
    "mr:0212-damianus": "In Africa sancti Damiani, militis et Martyris.",
-   "mr:0212-martyres-abitinenses": "Carthagine sanctorum Martyrum Modesti et Juliani.",
+   "mr:0212-modestus-et-iulianus": "Carthagine sanctorum Martyrum Modesti et Juliani.",
    "mr:0212-modestus-et-ammonius": "Alexandriae sanctorum Martyrum Modesti et Ammonii infantum.",
    "mr:0212-eulalia": "Barcinone, in Hispania, sanctae Eulaliae Virginis, quae, tempore Diocletiani Imperatoris, equuleum, ungulas flammasque perpessa, demum, cruci affixa, gloriosam martyrii coronam accepit.",
    "mr:0212-meletius": "Constantinopoli sancti Meletii, Episcopi Antiocheni, qui, pro fide catholica saepe exsilium passus, demum in eadem urbe migravit ad Dominum. Ejus virtutes sanctus Joannes Chrysostomus et sanctus Gregorius Nyssenus summis laudibus celebrarunt.",
@@ -174,7 +174,7 @@
    "mr:0213-agabus-propheta": "Antiochiae natalis sancti Agabi Prophetae, de quo beatus Lucas in Actibus Apostolicis scribit.",
    "mr:0213-benignus": "Tuderti, in Umbria, sancti Benigni, Presbyteri et Martyris; qui, Diocletiani et Maximiani Imperatorum tempore, cum fidem Christianam verbo et exemplo propagare non desisteret, ab idolorum cultoribus captus est, ac, variis affectus suppliciis, sacerdotale munus honore martyrii cumulavit.",
    "mr:0213-polyeuctus": "Melitinae, in Armenia, sancti Polyeucti Martyris, qui, in persecutione Decii, multa passus, martyrii coronam adeptus est.",
-   "mr:0213-guimera": "Lugduni, in Gallia, sancti Juliani Martyris.",
+   "mr:0213-iulianus": "Lugduni, in Gallia, sancti Juliani Martyris.",
    "mr:0213-fusca": "Ravennae sanctarum Fuscae Virginis, ejusque nutricis Maurae, quae, Decio imperante, multa sub Quinctiano Praeside perpessae, demum gladio transfixae, martyrium consummarunt.",
    "mr:0213-stephanus-lugduni": "Lugduni, in Gallia, sancti Stephani, Episcopi et Confessoris.",
    "mr:0213-stephanus-reate": "Reate sancti Stephani Abbatis, mirae patientiae viri; in cujus transitu (ut refert beatus Gregorius Papa) sancti Angeli, ceteris etiam videntibus, adfuerunt."
@@ -188,7 +188,7 @@
    "mr:0214-cyrillus-et-methodius": "Ibidem depositio sancti Cyrilli, Episcopi et Confessoris; qui, una cum sancto Methodio, similiter Episcopo et fratre suo, cujus dies natalis octavo Idus Aprilis recensetur, multas Slavicas gentes earumque Reges ad fidem Christi perduxit. Horum tamen Sanctorum festivitas Nonis Julii celebratur.",
    "mr:0214-vitalis": "Item Romae sanctorum Martyrum Vitalis, Feliculae et Zenonis.",
    "mr:0214-valentinus-interamnae": "Interamnae sancti Valentini, Episcopi et Martyris, qui, post diutinam caedem mancipatus custodiae, et, cum superari non posset, tandem, mediae noctis silentio ejectus de carcere, decollatus est, jussu Praefecti urbis Placidi.",
-   "mr:0214-bassianus-et-socii": "Alexandriae sanctorum Martyrum Cyrionis Presbyteri, Bassiani Lectoris, Agathonis Exorcistae, et Moysis; qui omnes, igne combusti, evolaverunt ad caelum.",
+   "mr:0214-cyrio-et-socii": "Alexandriae sanctorum Martyrum Cyrionis Presbyteri, Bassiani Lectoris, Agathonis Exorcistae, et Moysis; qui omnes, igne combusti, evolaverunt ad caelum.",
    "mr:0214-proculus-et-socii": "Interamnae sanctorum Proculi, Ephebi et Apollonii Martyrum, qui, cum ad sancti Valentini corpus vigilias agerent, Leontii Consularis jussu comprehensi sunt, et gladio caesi.",
    "mr:0214-bassus-et-socii": "Alexandriae sanctorum Martyrum Bassi, Antonii et Protolici, qui demersi sunt in mare.",
    "mr:0214-dionysius-et-ammonius": "Item Alexandriae sanctorum Dionysii et Ammonii decollatorum.",
@@ -287,7 +287,7 @@
    "mr:0222-petrus-damianus": "Faventiae, in Aemilia, natalis sancti Petri Damiani, Cardinalis atque Episcopi Ostiensis et Confessoris, ex Ordine Camaldulensi, doctrina et sanctitate celebris, quem Leo Papa Duodecimus Doctorem universalis Ecclesiae declaravit. Ipsius autem festum sequenti die celebratur.",
    "mr:0222-aristio": "Salaminae, in Cypro, sancti Aristionis, qui (ut mox memorandus Papias testatur) fuit unus de septuaginta duobus Christi discipulis.",
    "mr:0222-papias": "Hierapoli, in Phrygia, beati Papiae, ejusdem civitatis Episcopi, qui sancti Joannis Senioris auditor, Polycarpi autem sodalis fuit.",
-   "mr:0222-maximianus": "In Arabia commemoratio plurimorum sanctorum Martyrum, qui, sub Galerio Maximiano Imperatore, saevissime caesi sunt.",
+   "mr:0222-martyres-arabiae": "In Arabia commemoratio plurimorum sanctorum Martyrum, qui, sub Galerio Maximiano Imperatore, saevissime caesi sunt.",
    "mr:0222-abilius": "Alexandriae sancti Abilii Episcopi, qui, secundus post beatum Marcum, factus ejusdem civitatis Episcopus, sacerdotium virtute conspicuus ministravit.",
    "mr:0222-paschasius": "Viennae, in Gallia, sancti Paschasii Episcopi, eruditione et morum sanctitate praeclari.",
    "mr:0222-margarita": "Ravennae sancti Maximiani, Episcopi et Confessoris. Cortonae, in Tuscia, sanctae Margaritae, ex tertio Ordine sancti Francisci; quae admirabili poenitentia et uberrimis lacrimis maculas anteactae vitae indesinenter abstersit. Ipsius corpus, mirabiliter incorruptum, suavem spirans odorem et crebris miraculis clarum, ibidem magno cum honore colitur."
@@ -297,7 +297,6 @@
  "23": {
   "titulus": "23 Februarii Septimo Kalendas Februarii. ij. D",
   "elogia": {
-   "mr:0223-matthia-apostolus": "In anno Bissextili omittitur: Vigilia sancti Matthiae Apostoli; quia transfertur in sequentem diem, quae est 24.",
    "mr:0223-vigilia-sancti-matthiae-apostoli": "Vigilia sancti Matthiae Apostoli.",
    "mr:0223-petrus-damianus": "Sancti Petri Damiani, ex Ordine Camaldulensi, Cardinalis et Episcopi Ostiensis, Confessoris et Ecclesiae Doctoris, qui evolavit in caelum pridie hujus diei.",
    "mr:0223-polycarpus": "Smyrnae natalis sancti Polycarpi, qui, beati Joannis Apostoli discipulus, et ab eo ejusdem civitatis Episcopus ordinatus, totius Asiae Princeps fuit. Postea, sub Marco Antonino et Lucio Aurelio Commodo, sedente Proconsule et universo populo in theatro adversus eum personante, igni traditus est; et, cum ab igne minime laederetur, martyrii coronam, gladio confossus, accepit. Cum illo etiam alii duodecim, qui ex Philadelphia venerant, in eadem Smyrnensi urbe, martyrio consummati sunt. Ipsius tamen Polycarpi festum septimo Kalendas Februarii celebratur.",
@@ -311,6 +310,12 @@
    "mr:0223-silvestro-papabaptizata": "Tuderti, in Umbria, sanctae Romanae Virginis, quae, a sancto Silvestro Papa baptizata, in antris et speluncis caelestem vitam duxit, et miraculorum gloria claruit.",
    "mr:0223-milburga": "In Anglia sanctae Milburgis Virginis, filiae Regis Merciorum."
   },
+  "rubricae": [
+   {
+    "after": null,
+    "text": "In anno Bissextili omittitur: Vigilia sancti Matthiae Apostoli; quia transfertur in sequentem diem, quae est 24."
+   }
+  ],
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
  "24": {
@@ -320,7 +325,7 @@
    "mr:0224-primitiva": "Romae sanctae Primitivae Martyris.",
    "mr:0224-praetextatus": "Rotomagi passio sancti Praetextati, Episcopi et Martyris.",
    "mr:0224-sergius": "Caesareae, in Cappadocia, sancti Sergii Martyris, cujus gesta praeclara habentur.",
-   "mr:0224-cyprianus": "In Africa sanctorum Martyrum Montani, Lucii, Juliani, Victorici, Flaviani et Sociorum, qui discipuli fuerunt sancti Cypriani, et, sub Valeriano Imperatore, martyrium consummarunt.",
+   "mr:0224-montanus-et-socii": "In Africa sanctorum Martyrum Montani, Lucii, Juliani, Victorici, Flaviani et Sociorum, qui discipuli fuerunt sancti Cypriani, et, sub Valeriano Imperatore, martyrium consummarunt.",
    "mr:0224-modestus": "Treviris sancti Modesti, Episcopi et Confessoris.",
    "mr:0224-ethelbertus": "Apud Stylum, in Calabria, sancti Joannis, cognomento Theristi, monasticae vitae laude et sanctitate insignis. In Anglia sancti Edilberti, Regis Cantiorum, quem sanctus Augustinus, Anglorum Episcopus, ad Christi fidem convertit. Hierosolymis prima Inventio capitis sancti Joannis Baptistae Praecursoris Domini."
   },
@@ -333,7 +338,7 @@
    "mr:0225-donatus-et-socii": "In Africa sanctorum Martyrum Donati, Justi, Herenae et Sociorum.",
    "mr:0225-tarasius": "Constantinopoli sancti Tharasii Episcopi, eruditione et pietate insignis; ad quem exstat Hadriani Papae Primi epistola pro defensione sanctarum Imaginum.",
    "mr:0225-caesarius": "Nazianzi, in Cappadocia, sancti Caesarii, qui beatae Nonnae filius ac beatorum Gregorii Theologi et Gorgoniae fuit frater, et quem idem Gregorius inter agmina beatorum se vidisse testatur.",
-   "mr:0225-gerlandus": "In monasterio Heidenhemii, dioecesis Eystettensis, in Germania, sanctae Walburgae Virginis, quae fuit filia sancti Richardi, Anglorum Regis, et soror sancti Willebaldi, Eystettensis Episcopi."
+   "mr:0225-waldburgis": "In monasterio Heidenhemii, dioecesis Eystettensis, in Germania, sanctae Walburgae Virginis, quae fuit filia sancti Richardi, Anglorum Regis, et soror sancti Willebaldi, Eystettensis Episcopi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },

@@ -41,7 +41,7 @@
    "mr:0304-casimirus": "Vilnae, in Lithuania, beati Casimiri Confessoris, e Casimiro Rege progeniti: quem Leo Decimus, Romanus Pontifex, in Sanctorum numerum retulit.",
    "mr:0304-lucius-primus": "Romae, via Appia, natalis sancti Lucii Primi, Papae et Martyris; qui, primo in persecutione Valeriani ob Christi fidem exsilio relegatus, et postmodum divino nutu ad Ecclesiam suam redire permissus, tandem, cum plurimum adversus Novatianos laborasset, capitis obtruncatione martyrium complevit. Eum vero sanctus Cyprianus summis laudibus celebravit.",
    "mr:0304-hadrianus": "Nicomediae sancti Hadriani Martyris, cum aliis viginti tribus, qui omnes, sub Diocletiano Imperatore, martyrium crurifragio consummarunt. Eorum reliquiae, a Christianis Byzantium delatae, reverenti honore sepultae fuerunt; inde postea sancti Hadriani corpus Romam translatum fuit sexto Idus Septembris, quo die festivitas ejus potissimum celebratur.",
-   "mr:0304-appianus": "Romae, via Appia, sanctorum Martyrum nongentorum, qui positi sunt in coemeterio ad sanctam Caeciliam.",
+   "mr:0304-nongenti-martyres-romae": "Romae, via Appia, sanctorum Martyrum nongentorum, qui positi sunt in coemeterio ad sanctam Caeciliam.",
    "mr:0304-basilius-et-socii": "Apud Chersonesum passio sanctorum Episcoporum Basilii, Eugenii, Agathodori, Elpidii, Aetherii, Capitonis, Ephraem, Nestoris et Arcadii.",
    "mr:0304-photius-et-socii": "Eodem die sancti Caji Palatini, in mare demersi, et aliorum viginti septem. Item passio sanctorum Archelai, Cyrilli et Photii."
   },
@@ -78,7 +78,7 @@
    "mr:0307-thomas-de-aquino": "In monasterio Fossae Novas, prope Tarracinam, in Campania, sancti Thomae Aquinatis, Confessoris et Ecclesiae Doctoris, ex Ordine Praedicatorum, nobilitate generis, vitae sanctitate et Theologiae scientia illustrissimi; quem Leo Papa Decimus tertius caelestem Scholarum omnium catholicarum Patronum declaravit.",
    "mr:0307-perpetua-et-felicitas": "Carthagine natalis sanctarum Perpetuae et Felicitatis Martyrum; e quibus Felicitas, cum esset praegnans (ut sanctus Augustinus ait), juxta leges exspectata ut pareret, dum parturiebat, dolebat, objecta feris gaudebat. Passi quoque sunt cum eis Satyrus, Saturninus, Revocatus et Secundulus; quorum ultimus quievit in carcere, reliqui omnes a variis bestiis sunt vexati, ac demum gladiorum ictibus confecti, sub Severo Principe. Sanctarum vero Perpetuae et Felicitatis festum pridie hujus diei recolitur.",
    "mr:0307-eubulius": "Caesareae, in Palaestina, passio sancti Eubuli, qui fuit socius sancti Hadriani, atque, biduo post illum, laniatus a leonibus et gladio trucidatus, martyrii coronam, ultimus omnium in ea civitate, accepit.",
-   "mr:0307-paulus": "Nicomediae sancti Theophili Episcopi, qui, ob cultum sanctarum Imaginum in exsilium pulsus, illic defunctus est.",
+   "mr:0307-theophilactus": "Nicomediae sancti Theophili Episcopi, qui, ob cultum sanctarum Imaginum in exsilium pulsus, illic defunctus est.",
    "mr:0307-paulus-pelusii": "Pelusii, in Aegypto, sancti Pauli Episcopi, qui, eamdem ob causam, exsul occubuit.",
    "mr:0307-teresia-margarita-redi": "Brixiae sancti Gaudiosi, Episcopi et Confessoris. In Thebaide sancti Pauli, cognomento Simplicis. Florentiae, in Etruria, sanctae Teresiae Margaritae Redi, Virginis, Ordinis Carmelitarum Excalceatarum, vitae puritate ac simplicitate admirabilis, quam Pius Papa Undecimus, sanctarum Virginum albo adscripsit."
   },
@@ -135,7 +135,8 @@
    "mr:0311-sophronius": "Hierosolymis sancti Sophronii Episcopi.",
    "mr:0311-benedictus": "Mediolani sancti Benedicti Episcopi.",
    "mr:0311-firminus": "In finibus Ambianensium sancti Firmini Abbatis.",
-   "mr:0311-constantinus": "Carthagine sancti Constantini Confessoris. Babuci, in Hernicis, sancti Petri Confessoris, miraculorum gloria conspicui."
+   "mr:0311-constantinus-carthaginis": "Carthagine sancti Constantini Confessoris.",
+   "mr:0311-petrus": "Babuci, in Hernicis, sancti Petri Confessoris, miraculorum gloria conspicui."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },

@@ -18,6 +18,7 @@ from ..models import (
     FootnoteOut,
     MetadataOut,
     MonthOut,
+    RubricaOut,
     promulgation_dict,
     scope_dict,
 )
@@ -72,6 +73,7 @@ def _day_content(
     return DayContentOut(
         titulus=d.titulus,
         elogia=[elogium_out(e, footnotes) for e in d.elogia],
+        rubricae=[RubricaOut(after=r.after, text=r.text) for r in d.rubricae],
         conclusio=d.conclusio,
     )
 
@@ -168,6 +170,7 @@ async def get_elogia(
         if not allowed:
             for c in contents.values():
                 redact(c.elogia)
+                c.rubricae = []
         return MonthOut(metadata=metadata, days=contents)
 
     day_data = months.get(req.day)
@@ -184,7 +187,14 @@ async def get_elogia(
         c = _day_content(day_data, notes)
         if not allowed:
             redact(c.elogia)
-        return DayOut(metadata=metadata, titulus=c.titulus, elogia=c.elogia, conclusio=c.conclusio)
+            c.rubricae = []
+        return DayOut(
+            metadata=metadata,
+            titulus=c.titulus,
+            elogia=c.elogia,
+            rubricae=c.rubricae,
+            conclusio=c.conclusio,
+        )
 
     hit = next((e for e in day_data.elogia if e.id is not None and slug_of(e.id) == req.slug), None)
     if hit is None:
@@ -197,10 +207,19 @@ async def get_elogia(
             type_slug="unknown-eulogy",
         )
     elogia = [elogium_out(hit, notes)]
+    # The rubrics printed right after this eulogy.
+    rubricae = [
+        RubricaOut(after=r.after, text=r.text) for r in day_data.rubricae if r.after == hit.id
+    ]
     if not allowed:
         redact(elogia)
+        rubricae = []
     return DayOut(
-        metadata=metadata, titulus=day_data.titulus, elogia=elogia, conclusio=day_data.conclusio
+        metadata=metadata,
+        titulus=day_data.titulus,
+        elogia=elogia,
+        rubricae=rubricae,
+        conclusio=day_data.conclusio,
     )
 
 

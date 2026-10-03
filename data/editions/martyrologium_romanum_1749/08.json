@@ -47,7 +47,7 @@
    "mr:0804-perpetua": "Romae sanctae Perpetuae, quae, a beato Petro Apostolo baptizata, Nazarium filium et Africanum virum ad Christi fidem perduxit, et multa sanctorum Martyrum corpora sepelivit; ac tandem, bonorum operum meritis cumulata, migravit ad Dominum.",
    "mr:0804-tertullinus": "Item Romae, via Latina, passio beati Tertullini, Presbyteri et Martyris; qui, sub Valeriano Imperatore, post impiam fustium mactationem, ignium circa latera exustionem, oris quassationem, atque in equuleo extensionem nervorumque caesionem, data sententia, capitis amputatione martyrium consummavit.",
    "mr:0804-eleutherius": "Constantinopoli sancti Eleutherii Martyris, ex ordine Senatorio viri, qui pro Christo, in persecutione Maximiani, gladio caesus est.",
-   "mr:0804-novem-martyres-perside": "In Perside sanctarum Martyrum Iae et Sociarum; quae, cum novem millibus Christianis captivis, sub Sapore Rege, diversis poenis afflictae, martyrium subierunt.",
+   "mr:0804-ia": "In Perside sanctarum Martyrum Iae et Sociarum; quae, cum novem millibus Christianis captivis, sub Sapore Rege, diversis poenis afflictae, martyrium subierunt.",
    "mr:0804-agabius": "Veronae sancti Agabii, Episcopi et Confessoris.",
    "mr:0804-euphronius": "Turonis, in Gallia, sancti Euphronii Episcopi. Coloniae Agrippinae commemoratio sancti Protasii Martyris; qui Mediolani, una cum Gervasio fratre, passus est tertiodecimo Kalendas Julii."
   },
@@ -71,7 +71,7 @@
  "6": {
   "titulus": "6 Augusti Octavo Idus Augusti. vij. A",
   "elogia": {
-   "mr:0806-dominicus": "In monte Thabor Transfiguratio Domini nostri Jesu Christi.",
+   "mr:0806-transfiguratio-domini": "In monte Thabor Transfiguratio Domini nostri Jesu Christi.",
    "mr:0806-xystus-ii": "Romae, via Appia, in coemeterio Callisti, natalis beati Xysti Secundi, Papae et Martyris, qui, in persecutione Valeriani, gladio animadversus, martyrii coronam accepit.",
    "mr:0806-felicissimus-et-agapitus": "Item Romae sanctorum Martyrum Felicissimi et Agapiti, ipsius beati Xysti Diaconorum; Januarii, Magni, Vincentii et Stephani, Subdiaconorum. Hi omnes, una cum eodem Pontifice pariter decollati sunt, atque in Praetextati coemeterio sepulti. Passus est etiam cum eis beatus Quartus, ut scribit sanctus Cyprianus.",
    "mr:0806-dominicus-bononiae": "Bononiae natalis sancti Dominici Confessoris, qui Ordinis Fratrum Praedicatorum Fundator exstitit. Hic vir, sanctitate et doctrina clarissimus, virginitatem perpetuo illibatam custodivit, et, ob singularem meritorum gratiam, tres mortuos suscitavit; cumque praedicatione sua compressisset haereses, ac plurimos ad religiosam et piam vitam instituisset, in pace quievit. Ejus autem festivitas pridie Nonas mensis hujus celebratur, ex constitutione Pauli Papae Quarti.",
@@ -236,7 +236,7 @@
    "mr:0818-joannis-et-crispus-presbyteri": "Romae beatorum Joannis et Crispi Presbyterorum, qui in persecutione Diocletiani multa Sanctorum corpora officiosissime sepelierunt, quorum meritis et ipsi postmodum sociati, gaudia vitae aeternae meruerunt.",
    "mr:0818-herma-et-socii": "Ibidem sanctorum Martyrum Hermae, Serapionis et Polyaeni, qui per angusta, saxosa et aspera loca raptati, animas Deo reddiderunt.",
    "mr:0818-marytrum-florus-et-laurus": "In Illyrico sanctorum Martyrum Flori et Lauri artis lapicidinae, qui, consumptis martyrio eorum magistris Proculo et Maximo, sub Licione Praeside post multa tormenta in profundum puteum sunt demersi.",
-   "mr:0818-eonius": "Myrae in Lycia sanctorum Martyrum Leonis et Julianae.",
+   "mr:0818-leo": "Myrae in Lycia sanctorum Martyrum Leonis et Julianae.",
    "mr:0818-firminus": "Metis in Gallia sancti Firmini Episcopi et Confessoris.",
    "mr:0818-helena": "Romae via Lavicana sanctae Helenae matris Constantini Magni piissimi Imperatoris, qui primus Ecclesiae tuendae atque amplificandae exemplum ceteris Principibus praebuit.",
    "mr:0818-clara": "In Montefalco Umbriae beatae Clarae Virginis, Monialis Ordinis Eremitarum sancti Augustini, in cujus visceribus dominicae Passionis mysteria renovata, maxima cum devotione venerantur. Eam Leo Decimustertius Summus Pontifex, sanctarum Virginum albo solemni ritu adscripsit."
@@ -287,7 +287,7 @@
    "mr:0821-bassa-et-socii": "Edessae in Syria sanctorum Martyrum Bassae et filiorum ejus Theogonii, Agapii et Fidelis, quos in persecutione Maximiani pia mater exhortans, martyrio coronatos praemisit ad palmam, et truncato capite gaudens secuta est cum victoria.",
    "mr:0821-euprepius": "Veronae sancti Euprepii Episcopi et Confessoris.",
    "mr:0821-quadratus": "Item sancti Quadrati Episcopi.",
-   "mr:0821-bernardus-et-socii": "Senis in Tuscia beati Bernardi Ptolomaei Abbatis, Congregationis Olivetanae Fundatoris."
+   "mr:0821-bernardus-ptolomaeus": "Senis in Tuscia beati Bernardi Ptolomaei Abbatis, Congregationis Olivetanae Fundatoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -402,7 +402,7 @@
   "elogia": {
    "mr:0828-augustinus": "Hippone Regio, in Africa, natalis sancti Augustini Episcopi, Confessoris et Ecclesiae Doctoris eximii, qui, beati Ambrosii Episcopi opera ad catholicam fidem conversus et baptizatus, eam adversus Manichaeos aliosque haereticos acerrimus propugnator defendit, multisque aliis pro Ecclesia Dei perfunctus laboribus, ad praemia migravit in caelum. Ejus reliquiae, primo de sua civitate propter barbaros in Sardiniam advectae, et postea a Rege Longobardorum Luitprando Papiam translatae, ibi honorifice conditae sunt.",
    "mr:0828-hermes": "Romae item natalis sancti Hermetis, viri illustris, qui (ut in Actis beati Alexandri Papae legitur), prius carcerali custodiae mancipatus, deinde, cum aliis plurimis, gladio caedente, martyrium complevit, sub Aureliano Judice.",
-   "mr:0828-bonifatius-et-thecla": "Venusiae, in Apulia, passio sanctorum Septimini, Januarii et Felicis, qui, sanctorum Bonifatii et Theclae filii, a Valeriano Judice, sub Maximiano Imperatore, jussi sunt decollari. Ipsorum tamen ac reliquorum ex duodecim fratribus festivitas agitur Kalendis Septembris.",
+   "mr:0828-septiminus-et-socii": "Venusiae, in Apulia, passio sanctorum Septimini, Januarii et Felicis, qui, sanctorum Bonifatii et Theclae filii, a Valeriano Judice, sub Maximiano Imperatore, jussi sunt decollari. Ipsorum tamen ac reliquorum ex duodecim fratribus festivitas agitur Kalendis Septembris.",
    "mr:0828-iulianus": "Brivate, apud Arvernos, item passio sancti Juliani Martyris, qui, cum esset beati Ferreoli Tribuni comes et in habitu militari occulte Christo serviret, in persecutione Diocletiani, a militibus tentus est, et, desecto gutture, morte horribili necatus.",
    "mr:0828-pelagius": "Constantiae, in Germania, sancti Pelagii Martyris, qui sub Numeriano Imperatore et Evilasio Judice, capite amputatus, martyrii coronam accepit.",
    "mr:0828-fortunatus-et-socii": "Salerni sanctorum Martyrum Fortunati, Caji et Anthis; qui, sub Diocletiano Imperatore et Leontio Proconsule, decollati sunt.",

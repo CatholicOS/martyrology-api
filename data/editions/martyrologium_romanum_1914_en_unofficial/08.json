@@ -13,7 +13,8 @@
    "mr:0801-justinus": "In the diocese of Paris, St. Justin, martyr.—At Vienne, St. Verus, bishop.",
    "mr:0801-ethelwoldus": "At Winchester, in England, St. Ethelwold, bishop.",
    "mr:0801-nemesius": "In the territory of Liswin, St. Nemesius, confessor."
-  }
+  },
+  "conclusio": null
  },
  "2": {
   "titulus": "The Second Day of August",
@@ -23,7 +24,8 @@
    "mr:0802-theodota": "At Nicaea, in Bithynia, the martyrdom of St. Theodota with her three sons. The eldest, named Evodius, confessing Christ with confidence, was first beaten with rods, by order of Nicetius, ex-consul of Bithynia, and then the mother, with all her sons, was consumed by fire.",
    "mr:0802-rutilius": "In Africa, St. Rutilius, martyr. He had frequently secured safety from the perils of persecution by flight, and sometimes even by means of money, but at last, being unexpectedly apprehended, he was led to the governor, and subjected to many tortures. Afterwards he was cast into the fire, and thus merited the glorious crown of martyrdom.",
    "mr:0802-maximus": "At Padua, St. Maximus, bishop of that city, who ended his blessed life in peace, with a reputation for miracles."
-  }
+  },
+  "conclusio": null
  },
  "3": {
   "titulus": "The Third Day of August",
@@ -36,7 +38,8 @@
    "mr:0803-petrus": "At Anagni, St. Peter, bishop, who rested in the Lord after gaining great renown for monastical observance and for pastoral vigilance.",
    "mr:0803-lydia": "At Philippi, in Macedonia, St. Lydia, a dealer in purple, who was the first to believe in the Gospel when the apostle St. Paul preached in that city.",
    "mr:0803-marana-et-cyra": "At Beroea, in Syria, the holy women Marana and Cyra."
-  }
+  },
+  "conclusio": null
  },
  "4": {
   "titulus": "The Fourth Day of August",
@@ -45,12 +48,13 @@
    "mr:0804-aristarchus-thessalonicensis": "At Thessalonica, the birthday of blessed Aristarchus, disciple and inseparable companion of the apostle St. Paul, who writes to the Colossians: “My fellow-prisoner Aristarchus salutes you.” He was consecrated bishop of the Thessalonians by the same apostle, and after long sufferings under Nero, crowned by Christ, rested in peace.",
    "mr:0804-tertullinus": "At Rome, on the Latin road, the martyrdom of blessed Tertullinus, priest and martyr, in the time of emperor Valerian. After being cruelly beaten with rods, after having his sides burned, his mouth shattered; after being stretched on the rack and scourged with whips, he completed his martyrdom by being beheaded.",
    "mr:0804-eleutherius": "At Constantinople, the holy martyr Eleutherius, of the senatorial rank, who was put to the sword for Christ, in the persecution of Maximian.",
-   "mr:0804-novem-martyres-perside": "In Persia, in the time of king Sapor, the holy martyr Ia and her companions, who, with nine thousand Christian captives, underwent martyrdom after having been subjected to various torments.",
+   "mr:0804-ia": "In Persia, in the time of king Sapor, the holy martyr Ia and her companions, who, with nine thousand Christian captives, underwent martyrdom after having been subjected to various torments.",
    "mr:0804-protasius": "At Cologne, St. Protasius, martyr.",
    "mr:0804-agabius": "At Verona, St. Agabius, bishop and confessor.",
    "mr:0804-euphronius": "At Tours, St. Euphronius, bishop.",
    "mr:0804-perpetua": "At Rome, St. Perpetua, who was baptized by the blessed apostle Peter. She converted to the faith her son Nazarius and her husband Africanus, buried the remains of many holy martyrs, and finally went to our Lord endowed with an abundance of merit."
-  }
+  },
+  "conclusio": null
  },
  "5": {
   "titulus": "The Fifth Day of August",
@@ -65,19 +69,21 @@
    "mr:0805-paridis": "At Teano, St. Paris, bishop.",
    "mr:0805-oswaldus": "In England, St. Oswald, king, whose life is related by Venerable Bede.",
    "mr:0805-nonna": "The same day, St. Nonna, mother of blessed Gregory Nazianzen."
-  }
+  },
+  "conclusio": null
  },
  "6": {
   "titulus": "The Sixth Day of August",
   "elogia": {
-   "mr:0806-dominicus": "On Mount Thabor, the transfiguration of our Lord Jesus Christ.",
+   "mr:0806-transfiguratio-domini": "On Mount Thabor, the transfiguration of our Lord Jesus Christ.",
    "mr:0806-xystus-ii": "At Rome, on the Appian road, in the cemetery of Callistus, the birthday of blessed Xystus II., pope and martyr, who received the crown of martyrdom in the persecution of Valerian, by being put to the sword.",
    "mr:0806-felicissimus-et-agapitus": "Also, the holy martyrs Felicissimus and Agapitus, deacons of blessed Xystus; Januarius, Magnus, Vincent, and Stephen, subdeacons, all of whom were beheaded with him, and buried in the cemetery of Praetextatus. With them suffered also blessed Quartus, as is related by St. Cyprian.",
    "mr:0806-petrus-de-cardegna": "At Burgos, in Spain, in the monastery of St. Peter of Cardegna, of the Order of St. Benedict, two hundred monks, with their abbot Stephen, who were put to death for the faith of Christ by the Saracens, and buried in the monastery by the Christians.",
    "mr:0806-iustus-et-pastor": "At Alcala, in Spain, the holy martyrs Justus and Pastor, brothers. While they were yet schoolboys, they threw aside their books in school, and spontaneously ran to martyrdom. By order of the governor Dacian, they were arrested, beaten with rods, and as they exhorted each other to constancy, were led out of the city, and had their throats cut by the executioner.",
    "mr:0806-hormisda": "At Rome, St. Hormisdas, pope and confessor.",
    "mr:0806-iacobus": "At Amida, St. James, a hermit renowned for miracles."
-  }
+  },
+  "conclusio": null
  },
  "7": {
   "titulus": "The Seventh Day of August",
@@ -90,8 +96,9 @@
    "mr:0807-dometius": "At Nisibis, in Mesopotamia, St. Dometius, a Persian monk, who was stoned to death with two of his disciples, under Julian the Apostate.",
    "mr:0807-victricius": "At Rouen, the holy bishop St. Victricius. Whilst he was yet a soldier under Julian, he threw away his military belt for Christ, and after being subjected by the tribune to many torments, was condemned to capital punishment. But the executioner who had been sent to put him to death being struck blind, and the confessor’s chains being loosened, he made his escape. Afterwards being made bishop, by preaching the word of God, he brought to the faith of Christ the barbarous people of Belgic Gaul, and finally died a confessor in peace.",
    "mr:0807-donatianus": "At Chalons, in France, St. Donatian, bishop.",
-   "mr:0807-albertus": "At Messina, in Sicily, St. Albert, confessor, of the Order of Carmelites, renowned for miracles."
-  }
+   "mr:0807-albertus-de-abbatibus": "At Messina, in Sicily, St. Albert, confessor, of the Order of Carmelites, renowned for miracles."
+  },
+  "conclusio": null
  },
  "8": {
   "titulus": "The Eighth Day of August",
@@ -103,19 +110,21 @@
    "mr:0808-aemilianus": "At Cyzicum, in Hellespont, St. Aemilian, bishop, who ended his life in exile after having suffered much from the emperor Leo for the worship of holy images.",
    "mr:0808-myron": "In Crete, St. Myron, a bishop renowned for miracles.",
    "mr:0808-severus": "At Vienne, in France, St. Severus, priest and confessor, who undertook a painful journey from India in order to preach the Gospel in that city, and converted a great number of Pagans to the faith of Christ by his labors and miracles."
-  }
+  },
+  "conclusio": null
  },
  "9": {
   "titulus": "The Ninth Day of August",
   "elogia": {
-   "mr:0809-laurentius": "The vigil of St. Lawrence, martyr.",
+   "mr:0809-vigilia-sancti-laurentii-martyris": "The vigil of St. Lawrence, martyr.",
    "mr:0809-romanus": "At Rome, St. Romanus, soldier, who was moved by the torments of blessed Lawrence to ask for baptism from him. He was immediately prosecuted, scourged, and finally beheaded.",
    "mr:0809-secundianus-et-socii": "In Tuscany, the birthday of the holy martyrs Secundian, Marcellian, and Verian. In the time of Decius, they were scourged by the ex-consul Promotus, then racked and torn with iron hooks. Being burned with fire applied to their sides, they merited the triumphant palm of martyrdom by having their heads struck off.",
    "mr:0809-firmus-et-rusticus": "At Verona, the holy martyrs Firmus and Rusticus, in the time of the emperor Maximian.",
    "mr:0809-numidico": "In Africa, the commemoration of many holy martyrs, during the persecution of Valerian. Being exhorted by St. Numidicus, they obtained the palm of martyrdom by being cast into the fire, but Numidicus, although thrown into the flames with the others and overwhelmed with stones, was nevertheless taken out by his daughter. Found half dead, he was restored and deserved afterwards by his virtue to be made priest of the church of Carthage by blessed Cyprian.",
    "mr:0809-martyres-constantinopolis": "At Constantinople, the holy martyrs Julian, Marcian, and eight others. For having set up the image of our Saviour on the brazen gate, they were exposed to many torments, and then beheaded by order of the impious emperor Leo.",
    "mr:0809-domitianus": "At Chalons, in France, St. Domitian, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "10": {
   "titulus": "The Tenth Day of August",
@@ -127,7 +136,8 @@
    "mr:0810-bassa-et-socii": "At Carthage, the holy virgins and martyrs Bassa, Paula, and Agathonica.",
    "mr:0810-deusdedit": "At Rome, the holy confessor Deusdedit, a laboring man, who gave to the poor every Saturday what he had earned during the week.",
    "mr:0810-maria": "In Spain, the Apparition of the Blessed Virgin Mary, under the name of our Lady of Ransom, foundress of the Order for the Redemption of Captives."
-  }
+  },
+  "conclusio": null
  },
  "11": {
   "titulus": "The Eleventh Day of August",
@@ -140,7 +150,8 @@
    "mr:0811-gaugericus": "At Cambrai, in France, St. Gaugericus, bishop and confessor.",
    "mr:0811-equitius": "In the province of Valeria, St. Equitius, abbot, whose sanctity is attested by the blessed pope Gregory.",
    "mr:0811-digna": "At Todi, St. Digna, virgin."
-  }
+  },
+  "conclusio": null
  },
  "12": {
   "titulus": "The Twelfth Day of August",
@@ -154,7 +165,8 @@
    "mr:0812-porcarius-et-socii": "The same day, the holy martyrs Porcarius, abbot of the monastery of Lerins, and five hundred monks, who were slain for the Catholic faith by barbarians, and were thus crowned with martyrdom.",
    "mr:0812-eusebius": "At Milan, the demise of St. Eusebius, bishop and confessor.",
    "mr:0812-herculanus": "At Brescia, St. Herculanus, bishop."
-  }
+  },
+  "conclusio": null
  },
  "13": {
   "titulus": "The Thirteenth Day of August",
@@ -167,7 +179,8 @@
    "mr:0813-vigbertus": "In Germany, St. Wigbert, priest and confessor.",
    "mr:0813-ioannes-berchmans": "At Rome, St. John Berchmans, a scholastic of the Society of Jesus, illustrious for his innocence and for his fidelity to the rules of the religious life. He was canonized by Leo XIII.",
    "mr:0813-radegundis": "At Poitiers, St. Radegundes, queen, whose life was renowned for miracles and virtues."
-  }
+  },
+  "conclusio": null
  },
  "14": {
   "titulus": "The Fourteenth Day of August",
@@ -179,7 +192,8 @@
    "mr:0814-marcellus": "At Apamea, in Syria, St. Marcellus, bishop and martyr, who was killed by the exasperated Gentiles, for having pulled down a temple of Jupiter.",
    "mr:0814-callistus": "At Todi, St. Callistus, bishop and martyr.",
    "mr:0814-athanasia": "In the island of Aegina, St. Athanasia, widow, celebrated for monastical observance, and the gift of miracles."
-  }
+  },
+  "conclusio": null
  },
  "15": {
   "titulus": "The Fifteenth Day of August",
@@ -190,7 +204,8 @@
    "mr:0815-arnulphus": "At Soissons, in France, St. Arnulf, bishop and confessor.",
    "mr:0815-stephanus": "At Alba, in Hungary, St. Stephen, king of the Hungarians, whose feast is celebrated on the 2d of September.",
    "mr:0815-stanislaus-kostka": "At Rome, St. Stanislaus Kostka, a native of Poland, confessor, of the Society of Jesus, who being made perfect in a short space, fulfilled a long time by the angelical innocence of his life. He was inscribed on the list of the saints by the Sovereign Pontiff, Benedict XIII."
-  }
+  },
+  "conclusio": null
  },
  "16": {
   "titulus": "The Sixteenth Day of August",
@@ -205,7 +220,8 @@
    "mr:0816-arsacius": "At Nicomedia, St. Arsacius, confessor. Under the persecutor Licinius, he left the military service, and leading a solitary life, became so famous for working miracles, that we read of his expelling the demons and killing a huge dragon by his prayers. Finally he foretold the destruction of the city, and gave up his soul to God in prayer.",
    "mr:0816-rochus": "In France, near Montpelier, the demise of blessed Roch, confessor, who by the sign of the cross, delivered many cities of Italy from an epidemic. His body was afterwards transferred to Venice, and deposited with the greatest honors in the church dedicated under his invocation.",
    "mr:0816-serena": "At Rome, St. Serena, who had been the wife of the emperor Diocletian."
-  }
+  },
+  "conclusio": null
  },
  "17": {
   "titulus": "The Seventeenth Day of August",
@@ -218,7 +234,8 @@
    "mr:0817-straton-et-socii": "At Nicomedia, the holy martyrs Straton, Philip and Eutychian, who were condemned to the beasts, but being uninjured by them, ended their martyrdom by fire.",
    "mr:0817-anastasius": "At Teramo, St. Anastasius, bishop and confessor.",
    "mr:0817-paulus": "At Ptolemais, in Palestine, the holy martyrs Paul, and his sister Juliana, who suffered under Valerian."
-  }
+  },
+  "conclusio": null
  },
  "18": {
   "titulus": "The Eighteenth Day of August",
@@ -231,7 +248,8 @@
    "mr:0818-firminus": "At Metz, in France, St. Firmin, bishop and confessor.",
    "mr:0818-helena": "At Rome, on the Lavican road, St. Helena, mother of the pious emperor Constantine the Great, who was the first to set the example to other princes of protecting and extending the Church.",
    "mr:0818-clara": "At Monte-Falo, in Umbria, blessed Clare, virgin, nun of the Order of Augustinians, in whom the mysteries of our Lord’s passion were renewed, and are venerated with the greatest devotion. Pope Leo XIII. solemnly added her to the list of holy virgins."
-  }
+  },
+  "conclusio": null
  },
  "19": {
   "titulus": "The Nineteenth Day of August",
@@ -246,7 +264,8 @@
    "mr:0819-marianus": "In the territory of Bourges, St. Marian, confessor.",
    "mr:0819-rufinus": "At Mantua, St. Rufinus, confessor.",
    "mr:0819-urbanus": "At Rome, blessed Urban II., pope, who followed in the footsteps of St. Gregory VII., in his zeal for learning and religion, and fired the crusaders with enthusiasm for the recovery of the holy places in Palestine from the power of the infidels. The veneration paid to him from time immemorial Pope Leo XIII. approved and confirmed."
-  }
+  },
+  "conclusio": null
  },
  "20": {
   "titulus": "The Twentieth Day of August",
@@ -260,7 +279,8 @@
    "mr:0820-philibertus": "In the island of Noirmoutiers, St. Philibert, abbot.",
    "mr:0820-maximus": "At Chinon, St. Maximus, confessor, disciple of the blessed bishop Martin.",
    "mr:0820-manetius": "On Mount Senario, in the diocese of Florence, blessed Manetius, confessor, one of the seven founders of the Order of the Servites of the Blessed Virgin Mary, who breathed his last whilst reciting hymns in her honor."
-  }
+  },
+  "conclusio": null
  },
  "21": {
   "titulus": "The Twenty-first Day of August",
@@ -275,8 +295,9 @@
    "mr:0821-bassa-et-socii": "At Edessa, in Syria, during the persecution of Maximian, the holy martyrs Bassa, and her sons Theogonius, Agapius, and Fidelis, whom their pious mother exhorted to martyrdom and sent before her bearing their crowns. Being herself beheaded, she joyfully followed them and shared their victory.",
    "mr:0821-euprepius": "At Verona, St. Euprepius, bishop and confessor.",
    "mr:0821-quadratus": "Also St. Quadratus, bishop.",
-   "mr:0821-bernardus-et-socii": "At Siena, in Tuscany, blessed Bernard Ptolemy, abbot and founder of the Congregation of Olivetans."
-  }
+   "mr:0821-bernardus-ptolomaeus": "At Siena, in Tuscany, blessed Bernard Ptolemy, abbot and founder of the Congregation of Olivetans."
+  },
+  "conclusio": null
  },
  "22": {
   "titulus": "The Twenty-second Day of August",
@@ -292,7 +313,8 @@
    "mr:0822-maurus": "At Rheims, the holy martyr Maurus and his companions.",
    "mr:0822-fabricianus-et-philibertus": "In Spain, the saintly martyrs Fabrician and Philibert.",
    "mr:0822-gunifortus": "At Pavia, St. Gunifort, martyr."
-  }
+  },
+  "conclusio": null
  },
  "23": {
   "titulus": "The Twenty-third Day of August",
@@ -310,7 +332,8 @@
    "mr:0823-victor": "At Utica, in Africa, blessed Victor, bishop.",
    "mr:0823-flavianus": "At Autun, St. Flavian, bishop.",
    "mr:0823-sidonius-apollinaris": "At Clermont, in Auvergne, St. Sidonius, a bishop distinguished for learning and sanctity."
-  }
+  },
+  "conclusio": null
  },
  "24": {
   "titulus": "The Twenty-fourth Day of August",
@@ -321,11 +344,12 @@
    "mr:0824-romanus": "In the same place, St. Romanus, bishop of that city, who was the disciple of St. Ptolemy, and his companion in martyrdom.",
    "mr:0824-aurea": "At Ostia, St. Aurea, virgin and martyr, who was plunged into the sea with a stone tied to her neck. Her body, being cast on the shore, was buried by blessed Nonnus.",
    "mr:0824-tatio": "In Isauria, St. Tatio, martyr, who received the crown of martyrdom by being beheaded in the persecution of Domitian, under the governor Urbanus.",
-   "mr:0824-ioanna-antida-thouret": "The same day, St. Eutychius, disciple of the blessed Evangelist John. He preached the Gospel in many countries, was subjected to imprisonment, to stripes and fire, and finally he rested in peace.",
+   "mr:0824-eutychius": "The same day, St. Eutychius, disciple of the blessed Evangelist John. He preached the Gospel in many countries, was subjected to imprisonment, to stripes and fire, and finally he rested in peace.",
    "mr:0824-georgius-limniota": "Also, St. George Limniota, monk. Because he reprehended the impious emperor Leo for breaking holy images and burning the relics of the saints, he had his hands cut off and his head burned by order of the tyrant, and went to our Lord to receive the recompense of a martyr.",
    "mr:0824-audoenus": "At Rouen, St. Owen, bishop and confessor.",
    "mr:0824-patricius": "At Nevers, St. Patrick, abbot."
-  }
+  },
+  "conclusio": null
  },
  "25": {
   "titulus": "The Twenty-fifth Day of August",
@@ -340,7 +364,8 @@
    "mr:0825-menna": "At Constantinople, St. Mennas, bishop.",
    "mr:0825-gregorius": "At Utrecht, St. Gregory, bishop.",
    "mr:0825-patricia": "At Naples, St. Patricia, virgin."
-  }
+  },
+  "conclusio": null
  },
  "26": {
   "titulus": "The Twenty-sixth Day of August",
@@ -355,7 +380,8 @@
    "mr:0826-rufinus": "At Capua, St. Rufinus, bishop and confessor.",
    "mr:0826-felix": "At Pistoja, St. Felix, priest and confessor.",
    "mr:0826-rosa": "At Lima, in Peru, St. Rose of St. Mary, virgin, of the third Order of St. Dominic. Her feast is celebrated on the 30th of this month."
-  }
+  },
+  "conclusio": null
  },
  "27": {
   "titulus": "The Twenty-seventh Day of August",
@@ -372,7 +398,8 @@
    "mr:0827-licerius": "At Lerida, in Spain, St. Licerius, bishop.",
    "mr:0827-poemen": "In Thebais, St. Poemen, anchoret.",
    "mr:0827-margarita": "At San Severino, in the March of Ancona, St. Margaret, widow."
-  }
+  },
+  "conclusio": null
  },
  "28": {
   "titulus": "The Twenty-eighth Day of August",
@@ -385,7 +412,8 @@
    "mr:0828-alexander": "At Constantinople, the holy bishop Alexander, an aged and celebrated man, through whose efficacious prayers Arius, by the judgment of God, burst asunder and exposed his intestines.",
    "mr:0828-vivianus": "At Saintes, St. Vivian, bishop and confessor.",
    "mr:0828-moyses-aethiopis": "Also, St. Moses, an Aethiopian, who gave up a life of robbery and became a renowned anchoret. He converted many robbers, and led them to a monastery."
-  }
+  },
+  "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of August",
@@ -401,7 +429,8 @@
    "mr:0829-sebbus": "In England, St. Sebbi, king.",
    "mr:0829-basilla": "At Smyrna, the birthday of St. Basilla.",
    "mr:0829-sabina-tricassino": "In the vicinity of Troyes, St. Sabina, a virgin, celebrated for virtues and miracles."
-  }
+  },
+  "conclusio": null
  },
  "30": {
   "titulus": "The Thirtieth Day of August",
@@ -416,7 +445,8 @@
    "mr:0830-fiacrius": "In the diocese of Meaux, St. Fiacre, confessor.",
    "mr:0830-petrus": "At Trevi, St. Peter, confessor, who was distinguished for many virtues and miracles. He is honored in that place, whence he departed for heaven.",
    "mr:0830-bononius": "At Bologna, St. Bononius, abbot."
-  }
+  },
+  "conclusio": null
  },
  "31": {
   "titulus": "The Thirty-first Day of August",
@@ -431,6 +461,7 @@
    "mr:0831-aidanus": "In England, St. Aidan, bishop of Lindisfarne. When St. Cuthbert, then a shepherd, saw his soul going up to heaven, he left his sheep and became a monk.",
    "mr:0831-amatus": "At Nusco, St. Amatus, bishop.",
    "mr:0831-bonajuncta": "On Mount Senario, near Florence, blessed Bonajuncta, confessor, one of the seven founders of the Order of the Servites of the Blessed Virgin Mary, who gave up his soul into the hands of the Lord whilst discoursing to his brethren on the Passion of our Saviour."
-  }
+  },
+  "conclusio": null
  }
 }

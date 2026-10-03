@@ -5,7 +5,7 @@
    "mr:0601-angela-mericus": "Sanctae Angelae Merici Virginis, ex tertio Ordine sancti Francisci; quae fuit Institutrix Societatis Virginum sanctae Ursulae, et ad accipiendam coronam immarcescibilem, sexto Kalendas Februarii a caelesti Sponso vocata est.",
    "mr:0601-juventius": "Romae sancti Juventii Martyris.",
    "mr:0601-reverianus": "Augustoduni sanctorum Reveriani Episcopi, et Pauli Presbyteri, cum aliis decem, qui, sub Aureliano Principe, martyrio coronati sunt.",
-   "mr:0601-chariton-et-socii": "Caesareae, in Palaestina, beati Pamphili, Presbyteri et Martyris, viri admirandae sanctitatis et doctrinae, atque in pauperes munifici; qui, ob Christi fidem, in persecutione Galerii Maximiani, primum, sub Urbano Praeside, cruciatus et in carcerem trusus, deinde, sub Firmiliano, iterum revocatus ad poenas, una cum aliis martyrium consummavit. Passi sunt etiam tunc Valens Diaconus, et Paulus, aliique novem; quorum memoria aliis diebus celebratur.",
+   "mr:0601-pamphilus": "Caesareae, in Palaestina, beati Pamphili, Presbyteri et Martyris, viri admirandae sanctitatis et doctrinae, atque in pauperes munifici; qui, ob Christi fidem, in persecutione Galerii Maximiani, primum, sub Urbano Praeside, cruciatus et in carcerem trusus, deinde, sub Firmiliano, iterum revocatus ad poenas, una cum aliis martyrium consummavit. Passi sunt etiam tunc Valens Diaconus, et Paulus, aliique novem; quorum memoria aliis diebus celebratur.",
    "mr:0601-thespesius": "In Cappadocia sancti Thespesii Martyris, qui, sub Alexandro Imperatore et Simplicio Praefecto, post alia tormenta, decollatus est.",
    "mr:0601-ischyrion-et-socii": "In Aegypto sanctorum Martyrum Ischyrionis, ductoris militum, et aliorum quinque militum; qui, sub Diocletiano Imperatore, pro fide Christi, diverso mortis genere perempti sunt.",
    "mr:0601-firmus": "Item sancti Firmi Martyris, qui, in persecutione Maximiani, acerbissimis plagis affectus, lapidibus percussus, ac demum capite caesus est.",
@@ -145,7 +145,7 @@
    "mr:0611-felix-et-fortunatus": "Aquilejae passio sanctorum Felicis et Fortunati fratrum, qui, in persecutione Diocletiani et Maximiani, equuleo suspensi, atque, ardentibus lampadibus circa eorum latera appositis et mox divina virtute exstinctis, per ventrem ferventi oleo sunt perfusi; et ad ultimum, cum in Christi confessione persisterent, gloriosi certaminis cursum, obtruncati capite, impleverunt.",
    "mr:0611-rembertus": "Bremae natalis sancti Remberti, Hamburgensis ac Bremensis Episcopi.",
    "mr:0611-parisius": "Tarvisii sancti Parisii, civis Bononiensis, Confessoris et Monachi, ex Ordine Camaldulensi.",
-   "mr:0611-maximus": "Romae Translatio sancti Gregorii Nazianzeni, Episcopi, Confessoris atque Ecclesiae Doctoris; cujus sacrum corpus, e Constantinopoli antea delatum ad Urbem, atque in Ecclesia sanctae Dei Genitricis ad Campum Martium diu asservatum, Gregorius Decimus tertius, Pontifex Maximus, in Capellam, a se in Basilica sancti Petri magnificentissime exornatam, summa celebritate transtulit, ac postridie digno honore sub altari condidit."
+   "mr:0611-translatio-gregorii-nazianzeni": "Romae Translatio sancti Gregorii Nazianzeni, Episcopi, Confessoris atque Ecclesiae Doctoris; cujus sacrum corpus, e Constantinopoli antea delatum ad Urbem, atque in Ecclesia sanctae Dei Genitricis ad Campum Martium diu asservatum, Gregorius Decimus tertius, Pontifex Maximus, in Capellam, a se in Basilica sancti Petri magnificentissime exornatam, summa celebritate transtulit, ac postridie digno honore sub altari condidit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -155,7 +155,7 @@
    "mr:0612-joannis": "Sancti Joannis a sancto Facundo, ex Eremitarum sancti Augustini Ordine, Confessoris, qui migravit in caelum pridie hujus diei.",
    "mr:0612-basilides-et-socii": "Romae, via Aurelia, natalis sanctorum Martyrum Basilidis, Cyrini, Naboris et Nazarii militum, qui, in persecutione Diocletiani et Maximiani, sub Aurelio Praefecto, ob Christiani nominis confessionem, detrusi in carcerem et scorpionibus lacerati, tandem capite truncati sunt.",
    "mr:0612-antonina": "Nicaeae, in Bithynia, sanctae Antoninae Martyris, quae, in eadem persecutione, a Priscilliano Praeside jussa est fustibus caedi, suspendi in equuleo, lateribus laniari et flammis incendi, ac demum gladio necari.",
-   "mr:0612-basilides": "Romae, in Basilica Vaticana, sancti Leonis Papae Tertii, cui erutos ab impiis oculos et praecisam linguam Deus mirabiliter restituit.",
+   "mr:0612-leo-iii": "Romae, in Basilica Vaticana, sancti Leonis Papae Tertii, cui erutos ab impiis oculos et praecisam linguam Deus mirabiliter restituit.",
    "mr:0612-olympius": "In Thracia sancti Olympii Episcopi, qui, ab Arianis sede pulsus, Confessor occubuit.",
    "mr:0612-onuphrius": "In Cilicia sancti Amphionis Episcopi, qui, tempore Galerii Maximiani, Confessor fuit egregius. In Aegypto sancti Onuphrii Anachoretae, qui in vasta eremo sexaginta annis vitam religiose peregit, et, magnis virtutibus ac meritis clarus, migravit in caelum. Ipsius vero insignia gesta Paphnutius Abbas conscripsit."
   },
@@ -201,7 +201,7 @@
  "16": {
   "titulus": "16 Junii Sextodecimo Kalendas Julii. ix. D",
   "elogia": {
-   "mr:0616-aurelianus": "Moguntiae passio sanctorum Auraei Episcopi, et Justinae sororis, ac ceterorum Martyrum; qui, synaxim in Ecclesia agentes, ab Hunnis, Germaniam diripientibus, trucidati sunt.",
+   "mr:0616-aureus-et-socii": "Moguntiae passio sanctorum Auraei Episcopi, et Justinae sororis, ac ceterorum Martyrum; qui, synaxim in Ecclesia agentes, ab Hunnis, Germaniam diripientibus, trucidati sunt.",
    "mr:0616-ferreolus-et-ferrutius": "Vesontione, in Galliis, sanctorum Martyrum Ferreoli Presbyteri, et Ferrutionis Diaconi, qui, a beato Irenaeo Episcopo missi ad praedicandum verbum Dei, postea, sub Claudio Judice, diversis poenis excruciati, gladio feriuntur.",
    "mr:0616-quiricus-et-iulitta": "Tarsi, in Cilicia, sanctorum Martyrum Quirici et Julittae matris, sub Diocletiano Imperatore. Ex eis Quiricus, triennis puellus, cum matrem, quae ante Alexandrum Praesidem nervis dirissime caedebatur, implacabili luctu lugeret, ad gradus tribunalis illisus interiit; Julitta vero, post dira verbera et gravia tormenta, martyrii sui cursum obtruncatione capitis implevit.",
    "mr:0616-tychon": "Amathunte, in Cypro, sancti Tychonis Episcopi, tempore Theodosii junioris.",
@@ -289,7 +289,7 @@
    "mr:0622-albanus": "Verolamii, in Britannia, sancti Albani Martyris, qui, tempore Diocletiani, pro Clerico hospite, quem domi exceperat et a quo Christianae fidei praeceptionibus imbutus fuerat, seipsum, commutata veste, tradidit; et hanc ob causam, post verbera et acerba tormenta, capite plexus est. Passus est etiam cum illo unus de militibus, qui, dum eum duceret ad supplicium, in via conversus est ad Christum, et mox, gladio decollatus, proprio sanguine meruit baptizari. Hoc autem nobile sancti Albani ac Socii duratum pro Deo certamen sanctus Beda Venerabilis descripsit.",
    "mr:0622-martyres-samariae": "Samariae, in Palaestina, sanctorum mille quadringentorum octoginta Martyrum, qui, sub Rege Persarum Chosroa, pro Christi fide interfecti sunt.",
    "mr:0622-nicetas": "Eodem die sancti Nicetae, Romatianae civitatis Episcopi, doctrina sanctisque moribus clari.",
-   "mr:0622-paulinus": "Neapoli, in Campania, sancti Joannis Episcopi, quem beatus Paulinus, Episcopus Nolanus, ad caelestia regna vocavit.",
+   "mr:0622-ioannes": "Neapoli, in Campania, sancti Joannis Episcopi, quem beatus Paulinus, Episcopus Nolanus, ad caelestia regna vocavit.",
    "mr:0622-consortia": "In monasterio Cluniacensi, in Gallia, depositio sanctae Consortiae Virginis.",
    "mr:0622-innocentius-v": "Romae beati Innocentii Papae Quinti, ex Ordine Praedicatorum, Confessoris, qui ad tuendam Ecclesiae libertatem et Christianorum concordiam suavi prudentia adlaboravit. Cultum autem, ei exhibitum, Leo Decimus tertius, Pontifex Maximus, ratum habuit et confirmavit. Item Romae Translatio sancti Flavii Clementis, viri Consularis et Martyris; qui, sanctae Plautillae frater ac beatae Virginis et Martyris Flaviae Domitillae avunculus, a Domitiano Imperatore, quocum Consulatum gesserat, ob Christi fidem interemptus est. Ipsius porro corpus, in Basilica sancti Clementis Papae inventum, ibidem solemni pompa reconditum est."
   },
