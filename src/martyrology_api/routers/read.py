@@ -15,6 +15,7 @@ from ..models import (
     EditionPlacementOut,
     ElogiumOut,
     EulogyOut,
+    FootnoteOut,
     MetadataOut,
     MonthOut,
     promulgation_dict,
@@ -53,7 +54,7 @@ def _edition_meta_out(request: Request, edition_id: str) -> EditionMetadataOut:
     )
 
 
-def elogium_out(e: Elogium) -> ElogiumOut:
+def elogium_out(e: Elogium, footnotes: dict[str, list[dict]] | None = None) -> ElogiumOut:
     return ElogiumOut(
         id=e.id,
         entry=e.entry,
@@ -61,12 +62,15 @@ def elogium_out(e: Elogium) -> ElogiumOut:
         unnumbered=e.unnumbered,
         anchor_day=f"{e.anchor_month:02d}-{e.anchor_day:02d}",
         text=e.text,
+        footnotes=[FootnoteOut(**f) for f in (footnotes or {}).get(e.id or "", [])],
     )
 
 
-def _day_content(d: DayData) -> DayContentOut:
+def _day_content(d: DayData, footnotes: dict[str, list[dict]] | None = None) -> DayContentOut:
     return DayContentOut(
-        titulus=d.titulus, elogia=[elogium_out(e) for e in d.elogia], conclusio=d.conclusio
+        titulus=d.titulus,
+        elogia=[elogium_out(e, footnotes) for e in d.elogia],
+        conclusio=d.conclusio,
     )
 
 
@@ -155,9 +159,10 @@ async def get_elogia(
         # A genuine draft month is on the response: it must never be
         # shared-cached, since it reflects a specific curator's branch.
         request.state.cache_private = True
+    notes = store.footnotes(resolution.edition_id)
 
     if req.day is None:
-        contents = {f"{d:02d}": _day_content(v) for d, v in sorted(months.items())}
+        contents = {f"{d:02d}": _day_content(v, notes) for d, v in sorted(months.items())}
         if not allowed:
             for c in contents.values():
                 redact(c.elogia)
@@ -174,7 +179,7 @@ async def get_elogia(
         )
 
     if req.slug is None:
-        c = _day_content(day_data)
+        c = _day_content(day_data, notes)
         if not allowed:
             redact(c.elogia)
         return DayOut(metadata=metadata, titulus=c.titulus, elogia=c.elogia, conclusio=c.conclusio)
@@ -189,7 +194,7 @@ async def get_elogia(
             f"'{resolution.edition_id}'.",
             type_slug="unknown-eulogy",
         )
-    elogia = [elogium_out(hit)]
+    elogia = [elogium_out(hit, notes)]
     if not allowed:
         redact(elogia)
     return DayOut(
@@ -227,12 +232,14 @@ async def get_elogium(
         if is_restricted(p.edition_id, settings):
             if allowed:
                 request.state.cache_private = True
+        notes = store.footnotes(p.edition_id).get(canonical_id, []) if allowed else []
         placements[p.edition_id] = EditionPlacementOut(
             day_printed=p.day_printed,
             entry=p.entry,
             asterisk=p.asterisk,
             unnumbered=p.unnumbered,
             text=text,
+            footnotes=[FootnoteOut(**f) for f in notes],
         )
     subject = {
         loc: registry.subjects(loc)[canonical_id]

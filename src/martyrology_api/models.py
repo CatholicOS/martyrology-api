@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 def scope_dict(scope: str) -> dict:
@@ -40,6 +40,15 @@ class MetadataOut(BaseModel):
     access_info: str | None = None
 
 
+class FootnoteOut(BaseModel):
+    """A footnote as printed under a eulogy: its printed mark, the phrase the
+    mark follows in the text (null when it couldn't be anchored), its text."""
+
+    mark: str
+    after: str | None
+    text: str
+
+
 class ElogiumOut(BaseModel):
     id: str | None
     entry: int | None
@@ -47,6 +56,7 @@ class ElogiumOut(BaseModel):
     unnumbered: bool
     anchor_day: str
     text: str | None
+    footnotes: list[FootnoteOut] = Field(default_factory=list)
 
 
 class DayContentOut(BaseModel):
@@ -70,6 +80,7 @@ class EditionPlacementOut(BaseModel):
     asterisk: bool
     unnumbered: bool
     text: str | None
+    footnotes: list[FootnoteOut] = Field(default_factory=list)
 
 
 class EulogyOut(BaseModel):

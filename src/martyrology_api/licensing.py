@@ -20,3 +20,4 @@ async def texts_allowed(request: Request, identity: Identity | None, edition_id:
 def redact(elogia: list[ElogiumOut]) -> None:
     for e in elogia:
         e.text = None
+        e.footnotes = []
