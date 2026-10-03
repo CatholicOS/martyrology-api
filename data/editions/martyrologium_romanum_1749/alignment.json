@@ -365,7 +365,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0113-veronica-de-binasco-negroni": {
+  "mr:0113-veronica-de-binasco": {
    "method": "override",
    "score": null
   },
@@ -1397,7 +1397,7 @@
    "method": "same-day",
    "score": 2.94
   },
-  "mr:0227-gabriel-a-virgine-perdolenti-possenti": {
+  "mr:0227-gabriel-a-virgine-perdolenti": {
    "method": "same-day",
    "score": 1.5
   },
@@ -1813,7 +1813,7 @@
    "method": "same-day",
    "score": 1.69
   },
-  "mr:0318-salvator-de-horta-grionesos": {
+  "mr:0318-salvator-de-horta": {
    "method": "override",
    "score": null
   },
@@ -2581,7 +2581,7 @@
    "method": "same-day",
    "score": 1.86
   },
-  "mr:0424-maria-a-sancta-euphrasia-pelletier": {
+  "mr:0424-maria-a-sancta-euphrasia": {
    "method": "override",
    "score": null
   },
@@ -6809,7 +6809,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1012-seraphinus-de-monte-granario-de-nicola": {
+  "mr:1012-seraphinus-de-monte-granario": {
    "method": "override",
    "score": null
   },
@@ -10105,7 +10105,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0305-ioannes-iosephus-a-cruce-calosirto": {
+  "mr:0305-ioannes-iosephus-a-cruce": {
    "method": "override",
    "score": null
   },
@@ -10209,7 +10209,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0330-petrus-de-vallisoleto-regalado": {
+  "mr:0330-petrus-regalado": {
    "method": "override",
    "score": null
   },
@@ -10301,7 +10301,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0421-conradus-de-parzham-birndorfer": {
+  "mr:0421-conradus-de-parzham": {
    "method": "override",
    "score": null
   },
@@ -10797,7 +10797,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0824-maria-michaela-a-sanctissimo-sacramento-desmaisieres": {
+  "mr:0824-maria-michaela-a-sanctissimo-sacramento": {
    "method": "override",
    "score": null
   },

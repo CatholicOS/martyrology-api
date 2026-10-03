@@ -405,7 +405,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0113-veronica-de-binasco-negroni": {
+  "mr:0113-veronica-de-binasco": {
    "method": "same-day",
    "score": 2.4
   },
@@ -1721,7 +1721,7 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:0305-ioannes-iosephus-a-cruce-calosirto": {
+  "mr:0305-ioannes-iosephus-a-cruce": {
    "method": "override",
    "score": null
   },
@@ -8053,7 +8053,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1012-seraphinus-de-monte-granario-de-nicola": {
+  "mr:1012-seraphinus-de-monte-granario": {
    "method": "same-day",
    "score": 1.27
   },
