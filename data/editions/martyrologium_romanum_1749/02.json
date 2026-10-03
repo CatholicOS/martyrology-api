@@ -29,12 +29,12 @@
   "titulus": "3 Februarii Tertio Nonas Februarii. vij. E",
   "elogia": {
    "mr:0203-blasius": "Sebaste, in Armenia, passio sancti Blasii, Episcopi et Martyris; qui, multorum patrator miraculorum, sub Agricolao Praeside, post diutinam caesionem, atque in ligno suspensionem, ubi ferreis pectinibus carnes ejus diruptae sunt, post teterrimum carcerem et in lacum demersionem, unde salvus exivit, tandem, jubente eodem Judice, una cum duobus pueris, capite truncatur. Ante ipsum vero septem mulieres, quae guttas sanguinis, ex ejusdem Martyris corpore defluentes, dum torqueretur, colligebant, propterea, deprehensae quod essent Christianae, omnes, post dira tormenta, gladio percussae sunt.",
-   "mr:0203-celerinus-africa": "In Africa sancti Celerini Diaconi, qui, decem et novem dies custodia carceris septus, in nervo et ferro variisque poenis gloriosus fuit Christi Confessor; et, dum inexpugnabili firmitate certaminis sui vicit adversarium, vincendi ceteris viam fecit.",
+   "mr:0203-celerinus": "In Africa sancti Celerini Diaconi, qui, decem et novem dies custodia carceris septus, in nervo et ferro variisque poenis gloriosus fuit Christi Confessor; et, dum inexpugnabili firmitate certaminis sui vicit adversarium, vincendi ceteris viam fecit.",
    "mr:0203-laurentinus-et-socii": "Ibidem sanctorum trium Martyrum, ipsius Celerini Diaconi consanguineorum, scilicet Laurentini patrui, Ignatii avunculi, et Celerinae aviae, qui antea martyrio coronati fuerant; de quorum omnium gloriosis laudibus exstat beati Cypriani epistola.",
    "mr:0203-felix-et-socii": "Item in Africa sanctorum Martyrum Felicis, Symphronii, Hippolyti et Sociorum.",
    "mr:0203-teridius-et-remedius": "In oppido Vapingo, in Gallia, sanctorum Tigridis et Remedii Episcoporum.",
    "mr:0203-lupicinus": "Lugduni, in Gallia, sanctorum Lupicini et Felicis, itidem Episcoporum.",
-   "mr:0203-anscharius-hamburgensis": "Bremae sancti Anscharii, Hamburgensis ac postea Bremensis simul Episcopi, qui Suecos et Danos ad Christi fidem convertit, et a Gregorio Papa Quarto Legatus Apostolicus totius Septentrionis fuit institutus."
+   "mr:0203-ansgarius": "Bremae sancti Anscharii, Hamburgensis ac postea Bremensis simul Episcopi, qui Suecos et Danos ad Christi fidem convertit, et a Gregorio Papa Quarto Legatus Apostolicus totius Septentrionis fuit institutus."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -59,7 +59,7 @@
   "titulus": "5 Februarii Nonis Februarii. vij. G",
   "elogia": {
    "mr:0205-agatha": "Catanae, in Sicilia, natalis sanctae Agathae, Virginis et Martyris; quae, temporibus Decii Imperatoris, sub Quinctiano Judice, post alapas et carcerem, post equuleum et torsiones, post mamillarum abscissionem, post volutationem in testulis et carbonibus, tandem in carcere, Deum precans, consummata est.",
-   "mr:0205-franciscus-ordinem": "Nangasachii, in Japonia, passio viginti sex Martyrum, e quibus tres Sacerdotes atque unus Clericus et duo Laici ad Ordinem Minorum, tres, et in eis unus quidem Clericus, ad Societatem Jesu, ac septemdecim ad tertium sancti Francisci Ordinem revocantur. Hi omnes pro catholica fide, in crucem acti et lancearum ictibus perfossi, inter divinas laudes ejusdemque fidei praedicationem, gloriose occubuerunt; et a [Beato] Pio Nono, Pontifice Maximo, Sanctorum fastis adscripti sunt.",
+   "mr:0205-paulus-miki-et-socii": "Nangasachii, in Japonia, passio viginti sex Martyrum, e quibus tres Sacerdotes atque unus Clericus et duo Laici ad Ordinem Minorum, tres, et in eis unus quidem Clericus, ad Societatem Jesu, ac septemdecim ad tertium sancti Francisci Ordinem revocantur. Hi omnes pro catholica fide, in crucem acti et lancearum ictibus perfossi, inter divinas laudes ejusdemque fidei praedicationem, gloriose occubuerunt; et a [Beato] Pio Nono, Pontifice Maximo, Sanctorum fastis adscripti sunt.",
    "mr:0205-plurimi-martyres-ponti": "In Ponto commemoratio plurimorum sanctorum Martyrum, in persecutione Maximiani; quorum alii plumbo liquenti perfusi, alii acutis arundinibus in unguibus cruciati, ac multis horrendis vexati tormentis, iisdemque saepius iteratis, palmas a Domino et coronas illustri passione meruerunt.",
    "mr:0205-isidorus": "Alexandriae sancti Isidori, militis et Martyris; qui, in persecutione Decii, a Numeriano, exercitus Duce, ob Christi fidem, capite caesus est.",
    "mr:0205-avitus": "Viennae beati Aviti, Episcopi et Confessoris, cujus fide, industria atque admirabili doctrina ab Arianae haeresis infestatione sunt Galliae defensae.",
@@ -195,7 +195,7 @@
    "mr:0214-valentinus-interamnae": "Interamnae sancti Valentini, Episcopi et Martyris, qui, post diutinam caedem mancipatus custodiae, et, cum superari non posset, tandem, mediae noctis silentio ejectus de carcere, decollatus est, jussu Praefecti urbis Placidi.",
    "mr:0214-cyrio-et-socii": "Alexandriae sanctorum Martyrum Cyrionis Presbyteri, Bassiani Lectoris, Agathonis Exorcistae, et Moysis; qui omnes, igne combusti, evolaverunt ad caelum.",
    "mr:0214-proculus-et-socii": "Interamnae sanctorum Proculi, Ephebi et Apollonii Martyrum, qui, cum ad sancti Valentini corpus vigilias agerent, Leontii Consularis jussu comprehensi sunt, et gladio caesi.",
-   "mr:0214-bassus-et-socii": "Alexandriae sanctorum Martyrum Bassi, Antonii et Protolici, qui demersi sunt in mare.",
+   "mr:0214-bassianus-et-socii": "Alexandriae sanctorum Martyrum Bassi, Antonii et Protolici, qui demersi sunt in mare.",
    "mr:0214-dionysius-et-ammonius": "Item Alexandriae sanctorum Dionysii et Ammonii decollatorum.",
    "mr:0214-nostrianus": "Neapoli, in Campania, sancti Nostriani Episcopi, qui in catholica fide contra haereticam pravitatem tuenda exstitit insignis.",
    "mr:0214-eleuchadius": "Ravennae sancti Eleuchadii, Episcopi et Confessoris.",

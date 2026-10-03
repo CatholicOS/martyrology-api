@@ -31,7 +31,7 @@
   "titulus": "3 Martii Quinto Nonas Martii. vij. E",
   "elogia": {
    "mr:0303-marinus-et-asterius": "Caesareae, in Palaestina, sanctorum Martyrum Marini militis, et Asterii Senatoris, in persecutione Valeriani. Horum prior, cum accusatus esset a commilitonibus ut Christianus, et, interrogatus a Judice, se Christianum esse voce clarissima testaretur, martyrii coronam abscissione capitis accepit; cumque Asterius corpus Martyris, capite truncatum, subjectis humeris et substrata veste, qua induebatur, exciperet, honorem quem Martyri detulit, continuo et ipse Martyr accepit.",
-   "mr:0303-hemiterius-et-cheledonius": "Calagurri, in Hispania, natalis sanctorum Martyrum Hemiterii et Cheledonii fratrum, qui, cum apud Legionem, Gallaeciae urbem, in castris militarent, ambo, exsurgente persecutionis procella, pro confessione nominis Christi, Calagurrim usque profecti, ibi, pluribus tormentis afflicti, martyrio coronati sunt.",
+   "mr:0303-emetherius-et-cheledonius": "Calagurri, in Hispania, natalis sanctorum Martyrum Hemiterii et Cheledonii fratrum, qui, cum apud Legionem, Gallaeciae urbem, in castris militarent, ambo, exsurgente persecutionis procella, pro confessione nominis Christi, Calagurrim usque profecti, ibi, pluribus tormentis afflicti, martyrio coronati sunt.",
    "mr:0303-felix-et-socii": "Eodem die passio sanctorum Felicis, Lucioli, Fortunati, Marciae et Sociorum.",
    "mr:0303-cleonicus-et-eutropius": "Item sanctorum militum Cleonici, Eutropii et Basilisci, qui, in persecutione Maximiani, sub Asclepiade Praeside, crucis supplicio feliciter triumpharunt",
    "mr:0303-titianus": "Brixiae sancti Titiani, Episcopi et Confessoris.",
@@ -87,7 +87,7 @@
    "mr:0307-perpetua-et-felicitas": "Carthagine natalis sanctarum Perpetuae et Felicitatis Martyrum; e quibus Felicitas, cum esset praegnans (ut sanctus Augustinus ait), juxta leges exspectata ut pareret, dum parturiebat, dolebat, objecta feris gaudebat. Passi quoque sunt cum eis Satyrus, Saturninus, Revocatus et Secundulus; quorum ultimus quievit in carcere, reliqui omnes a variis bestiis sunt vexati, ac demum gladiorum ictibus confecti, sub Severo Principe. Sanctarum vero Perpetuae et Felicitatis festum pridie hujus diei recolitur.",
    "mr:0307-eubulius": "Caesareae, in Palaestina, passio sancti Eubuli, qui fuit socius sancti Hadriani, atque, biduo post illum, laniatus a leonibus et gladio trucidatus, martyrii coronam, ultimus omnium in ea civitate, accepit.",
    "mr:0307-theophilactus": "Nicomediae sancti Theophili Episcopi, qui, ob cultum sanctarum Imaginum in exsilium pulsus, illic defunctus est.",
-   "mr:0307-paulus-pelusii": "Pelusii, in Aegypto, sancti Pauli Episcopi, qui, eamdem ob causam, exsul occubuit.",
+   "mr:0307-paulus": "Pelusii, in Aegypto, sancti Pauli Episcopi, qui, eamdem ob causam, exsul occubuit.",
    "mr:0307-gaudiosus": "Brixiae sancti Gaudiosi, Episcopi et Confessoris.",
    "mr:0307-paulus-simplex": "In Thebaide sancti Pauli, cognomento Simplicis.",
    "mr:0307-teresia-margarita-redi": "Florentiae, in Etruria, sanctae Teresiae Margaritae Redi, Virginis, Ordinis Carmelitarum Excalceatarum, vitae puritate ac simplicitate admirabilis, quam Pius Papa Undecimus, sanctarum Virginum albo adscripsit."
@@ -112,7 +112,7 @@
   "titulus": "9 Martii Septimo Idus Martii. vij. D",
   "elogia": {
    "mr:0309-francisca": "Romae sanctae Franciscae Viduae, nobilitate generis, vitae sanctitate et miraculorum dono celebris.",
-   "mr:0309-quadraginta-milites-sebasten": "Apud Sebasten, in Armenia, natalis sanctorum quadraginta militum Cappadocum, qui, tempore Licinii Imperatoris, sub Praeside Agricolao, post vincula et carceres teterrimos, post caesas lapidibus facies, nudi sub dio, frigidissimo hiemis tempore, supra stagnum rigens pernoctare jussi sunt, ubi gelu constricta eorum corpora disrumpebantur, ac demum crurifragio martyrium consummarunt. Erant autem inter eos nobiliores Cyrion et Candidus; eorumque omnium praeclaras glorias sanctus Basilius aliique Patres scriptis suis celebrarunt. Ipsorum porro Martyrum festivitas sequenti die recolitur.",
+   "mr:0309-quadraginta-milites-sebastes": "Apud Sebasten, in Armenia, natalis sanctorum quadraginta militum Cappadocum, qui, tempore Licinii Imperatoris, sub Praeside Agricolao, post vincula et carceres teterrimos, post caesas lapidibus facies, nudi sub dio, frigidissimo hiemis tempore, supra stagnum rigens pernoctare jussi sunt, ubi gelu constricta eorum corpora disrumpebantur, ac demum crurifragio martyrium consummarunt. Erant autem inter eos nobiliores Cyrion et Candidus; eorumque omnium praeclaras glorias sanctus Basilius aliique Patres scriptis suis celebrarunt. Ipsorum porro Martyrum festivitas sequenti die recolitur.",
    "mr:0309-gregorius": "Nyssae depositio sancti Gregorii Episcopi, qui sanctorum Basilii et Emmeliae filius, et sanctorum item Basilii Magni ac Petri Sebastensis Episcoporum et Macrinae Virginis frater exstitit; atque, vita et eruditione clarissimus, ob fidei catholicae defensionem, sub Ariano Imperatore Valente, civitate sua pulsus est.",
    "mr:0309-pacianus": "Barcinone, in Hispania, sancti Paciani Episcopi, tam vita quam sermone conspicui; qui, tempore Theodosii Principis, in ultima senectute finem vitae sortitus est.",
    "mr:0309-catharina": "Bononiae sanctae Catharinae Virginis, e secundo Ordine sancti Francisci, quae vitae sanctitate fuit illustris. Ipsius autem corpus magno cum honore ibidem colitur."
@@ -366,7 +366,7 @@
    "mr:0326-emmanuel-et-socii": "Item sanctorum Martyrum Quadrati, Theodosii, Emmanuelis et aliorum quadraginta.",
    "mr:0326-eutychius": "Alexandriae sanctorum Martyrum Eutychii et aliorum; qui, Constantii tempore, sub Ariano Episcopo Georgio, pro fide catholica gladio caesi sunt.",
    "mr:0326-liudgerus": "Eodem die sancti Ludgeri, Episcopi monasteriensis, qui Saxonibus Evangelium praedicavit.",
-   "mr:0326-braulius": "Caesaraugustae, in Hispania, sancti Braulii, Episcopi et Confessoris.",
+   "mr:0326-braulio": "Caesaraugustae, in Hispania, sancti Braulii, Episcopi et Confessoris.",
    "mr:0326-felix": "Treviris sancti Felicis Episcopi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."

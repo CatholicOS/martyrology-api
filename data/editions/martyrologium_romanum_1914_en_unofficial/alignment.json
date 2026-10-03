@@ -657,10 +657,6 @@
    "method": "same-day",
    "score": 1.7
   },
-  "mr:0123-ildefonsus": {
-   "method": "same-day",
-   "score": 1.58
-  },
   "mr:0123-martyrius": {
    "method": "coined-deprecated",
    "score": null
@@ -961,10 +957,6 @@
    "method": "same-day",
    "score": 2.06
   },
-  "mr:0203-celerinus-africa": {
-   "method": "same-day",
-   "score": 1.6
-  },
   "mr:0203-felix-et-socii": {
    "method": "same-day",
    "score": 1.8
@@ -976,10 +968,6 @@
   "mr:0203-lupicinus": {
    "method": "same-day",
    "score": 2.34
-  },
-  "mr:0203-anscharius-hamburgensis": {
-   "method": "same-day",
-   "score": 0.88
   },
   "mr:0204-eutychius": {
    "method": "same-day",
@@ -1024,10 +1012,6 @@
   "mr:0205-isidorus": {
    "method": "same-day",
    "score": 1.8
-  },
-  "mr:0205-franciscus-ordinem": {
-   "method": "override",
-   "score": null
   },
   "mr:0205-avitus": {
    "method": "same-day",
@@ -1265,10 +1249,6 @@
    "method": "override",
    "score": null
   },
-  "mr:0214-bassus-et-socii": {
-   "method": "same-day",
-   "score": 2.01
-  },
   "mr:0214-dionysius-et-ammonius": {
    "method": "same-day",
    "score": 2.1
@@ -1324,10 +1304,6 @@
   "mr:0216-onesimus": {
    "method": "same-day",
    "score": 1.74
-  },
-  "mr:0216-translatio-iulianae": {
-   "method": "coined-deprecated",
-   "score": null
   },
   "mr:0216-elias-et-socii": {
    "method": "same-day",
@@ -1672,10 +1648,6 @@
   "mr:0303-marinus-et-asterius": {
    "method": "same-day",
    "score": 2.06
-  },
-  "mr:0303-hemiterius-et-cheledonius": {
-   "method": "same-day",
-   "score": 1.52
   },
   "mr:0303-felix-et-socii": {
    "method": "override",
@@ -3389,10 +3361,6 @@
    "method": "same-day",
    "score": 1.89
   },
-  "mr:0508-agathius-centurio": {
-   "method": "same-day",
-   "score": 0.83
-  },
   "mr:0508-dionysius": {
    "method": "same-day",
    "score": 2.3
@@ -3468,10 +3436,6 @@
   "mr:0510-isidorus-agricola": {
    "method": "same-day",
    "score": 1.11
-  },
-  "mr:0511-anthimus-romae": {
-   "method": "same-day",
-   "score": 1.7
   },
   "mr:0511-evellius": {
    "method": "same-day",
@@ -3652,10 +3616,6 @@
   "mr:0517-restituta": {
    "method": "same-day",
    "score": 1.91
-  },
-  "mr:0517-heradius-et-socii": {
-   "method": "same-day",
-   "score": 1.7
   },
   "mr:0517-solocho": {
    "method": "same-day",
@@ -4289,10 +4249,6 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0608-willhelmus": {
-   "method": "override",
-   "score": null
-  },
   "mr:0608-medardus": {
    "method": "same-day",
    "score": 2.06
@@ -4697,10 +4653,6 @@
    "method": "same-day",
    "score": 2.26
   },
-  "mr:0622-paulinus-nolam": {
-   "method": "same-day",
-   "score": 1.53
-  },
   "mr:0622-innocentius-v": {
    "method": "same-day",
    "score": 1.74
@@ -4860,14 +4812,6 @@
   "mr:0628-argimirus": {
    "method": "same-day",
    "score": 1.39
-  },
-  "mr:0628-paulus-primus": {
-   "method": "override",
-   "score": null
-  },
-  "mr:0629-apostolorum-petrus-et-paulus": {
-   "method": "same-day",
-   "score": 1.6
   },
   "mr:0629-marcellus": {
    "method": "same-day",
@@ -5037,10 +4981,6 @@
    "method": "override",
    "score": null
   },
-  "mr:0705-domitius": {
-   "method": "same-day",
-   "score": 1.8
-  },
   "mr:0705-cyprilla": {
    "method": "same-day",
    "score": 1.96
@@ -5152,10 +5092,6 @@
   "mr:0709-patermuthius-et-socii": {
    "method": "same-day",
    "score": 2.5
-  },
-  "mr:0709-brixius": {
-   "method": "override",
-   "score": null
   },
   "mr:0709-veronica-giuliani": {
    "method": "same-day",
@@ -5741,10 +5677,6 @@
    "method": "same-day",
    "score": 2.14
   },
-  "mr:0729-gulielmus-e": {
-   "method": "same-day",
-   "score": 1.7
-  },
   "mr:0729-prosperus": {
    "method": "same-day",
    "score": 2.78
@@ -5800,10 +5732,6 @@
   "mr:0731-ioannes-columbini": {
    "method": "same-day",
    "score": 1.77
-  },
-  "mr:0801-septem-fratres-antiochiae": {
-   "method": "same-day",
-   "score": 1.79
   },
   "mr:0801-fides-et-socii": {
    "method": "override",
@@ -6093,10 +6021,6 @@
    "method": "same-day",
    "score": 1.56
   },
-  "mr:0812-euplius": {
-   "method": "same-day",
-   "score": 1.85
-  },
   "mr:0812-hilaria": {
    "method": "same-day",
    "score": 1.89
@@ -6184,10 +6108,6 @@
   "mr:0815-tarsicius": {
    "method": "same-day",
    "score": 1.49
-  },
-  "mr:0815-alipius": {
-   "method": "same-day",
-   "score": 1.79
   },
   "mr:0815-arnulphus": {
    "method": "same-day",
@@ -6492,10 +6412,6 @@
   "mr:0825-maginus": {
    "method": "override",
    "score": null
-  },
-  "mr:0825-menna": {
-   "method": "same-day",
-   "score": 1.9
   },
   "mr:0825-gregorius": {
    "method": "same-day",
@@ -6853,10 +6769,6 @@
    "method": "same-day",
    "score": 1.84
   },
-  "mr:0904-marcellus-cabillone": {
-   "method": "same-day",
-   "score": 0.87
-  },
   "mr:0904-theodorus-et-socii": {
    "method": "same-day",
    "score": 2.15
@@ -6880,10 +6792,6 @@
   "mr:0905-victorinus": {
    "method": "same-day",
    "score": 1.64
-  },
-  "mr:0905-herculanus": {
-   "method": "same-day",
-   "score": 1.61
   },
   "mr:0905-romulus": {
    "method": "same-day",
@@ -7140,10 +7048,6 @@
   "mr:0913-maurilius": {
    "method": "same-day",
    "score": 1.81
-  },
-  "mr:0913-amatus": {
-   "method": "override",
-   "score": null
   },
   "mr:0913-venerius": {
    "method": "same-day",
@@ -8341,10 +8245,6 @@
    "method": "same-day",
    "score": 2.72
   },
-  "mr:1022-melanius": {
-   "method": "same-day",
-   "score": 1.7
-  },
   "mr:1022-donatus-scotus": {
    "method": "override",
    "score": null
@@ -8608,10 +8508,6 @@
   "mr:1031-wolfgangus": {
    "method": "override",
    "score": null
-  },
-  "mr:1101-festivitas-omnium-sanctorum-quam": {
-   "method": "same-day",
-   "score": 0.66
   },
   "mr:1101-benignus": {
    "method": "same-day",
@@ -8961,10 +8857,6 @@
    "method": "same-day",
    "score": 1.9
   },
-  "mr:1111-menna-agyptius": {
-   "method": "same-day",
-   "score": 1.46
-  },
   "mr:1111-valentinus-et-socii": {
    "method": "same-day",
    "score": 2.25
@@ -8996,10 +8888,6 @@
   "mr:1112-benedictus-et-socii": {
    "method": "same-day",
    "score": 2.03
-  },
-  "mr:1112-josaphat": {
-   "method": "same-day",
-   "score": 1.63
   },
   "mr:1112-rufus": {
    "method": "coined-deprecated",
@@ -10265,10 +10153,6 @@
    "method": "same-day",
    "score": 2.12
   },
-  "mr:1229-thoma": {
-   "method": "same-day",
-   "score": 1.63
-  },
   "mr:1229-david-rex-et-propheta": {
    "method": "same-day",
    "score": 2.25
@@ -10296,10 +10180,6 @@
   "mr:1230-sabinus-et-socii": {
    "method": "same-day",
    "score": 1.65
-  },
-  "mr:1230-anysius-ibidem": {
-   "method": "same-day",
-   "score": 1.05
   },
   "mr:1230-eugenius": {
    "method": "same-day",
@@ -10894,10 +10774,6 @@
    "score": null
   },
   "mr:1128-papinianus-vitensis-et-mansuetus-urusitanus": {
-   "method": "override",
-   "score": null
-  },
-  "mr:1129-saturninus-et-sisinius": {
    "method": "override",
    "score": null
   },
@@ -11669,15 +11545,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0720-elias-propheta": {
-   "method": "override",
-   "score": null
-  },
   "mr:0721-claudius-et-socii": {
-   "method": "override",
-   "score": null
-  },
-  "mr:0721-ioannes": {
    "method": "override",
    "score": null
   },
@@ -12049,10 +11917,6 @@
    "method": "override",
    "score": null
   },
-  "mr:1010-victor-et-socii": {
-   "method": "override",
-   "score": null
-  },
   "mr:1012-monas": {
    "method": "override",
    "score": null
@@ -12370,6 +12234,142 @@
    "score": null
   },
   "mr:1231-stephanus-et-socii": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0123-hildephonsus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0203-ansgarius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0203-celerinus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0205-paulus-miki-et-socii": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0214-bassianus-et-socii": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0216-iuliana": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0303-emetherius-et-cheledonius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0508-acacius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0511-anthimus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0517-heraclius-et-paulus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0608-gulielmus-fitzherbert": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0622-paulinus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0628-paulus-i": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0629-petrus-et-paulus-apostoli": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0705-dometius-medicus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0709-brictius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0720-elias-thesbita-propheta": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0721-simeon-salus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0729-gulielmus-pinchon": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0801-septem-fratres-martyres-antiochiae": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0812-euplus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0815-alypius": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0825-mena": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0904-marcellus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0905-acontus-et-socii": {
+   "method": "override",
+   "score": null
+  },
+  "mr:0913-amatus-broili": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1010-victor-et-mallosus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1022-mallonus": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1101-omnes-sancti": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1111-menna-mareotidem": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1112-iosaphat-kuncewicz": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1129-saturninus-carthaginensis": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1229-thomas-becket": {
+   "method": "override",
+   "score": null
+  },
+  "mr:1230-anysius": {
    "method": "override",
    "score": null
   }

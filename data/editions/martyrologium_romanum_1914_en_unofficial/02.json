@@ -28,12 +28,12 @@
   "titulus": "The Third Day of February",
   "elogia": {
    "mr:0203-blasius": "At Sebaste, in Armenia, in the time of the governor Agricolaus, the passion of St. Blasius, bishop and martyr, who after working many miracles, was scourged a long time, and suspended on a tree where he was lacerated with iron combs. He was then imprisoned in a dark dungeon, thrown into a lake from which he came out safe, and finally, by order of the same judge, he and two boys were beheaded. Before him, seven women who were gathering the drops of his blood during his torture, were recognized as Christians, and after undergoing severe torments, were put to death by the sword.",
-   "mr:0203-celerinus-africa": "In Africa, St. Celerinus, deacon, who was kept nineteen days in prison loaded with fetters, and confessed Christ gloriously in the midst of afflictions. By overcoming the enemy with invincible constancy, he showed to others the road to victory.",
+   "mr:0203-celerinus": "In Africa, St. Celerinus, deacon, who was kept nineteen days in prison loaded with fetters, and confessed Christ gloriously in the midst of afflictions. By overcoming the enemy with invincible constancy, he showed to others the road to victory.",
    "mr:0203-laurentinus-et-socii": "Also, the holy martyrs, Laurentinus, and Ignatius, his uncles, and Celerina, his grandmother, who had been previously crowned with martyrdom. They are highly praised in an epistle of St. Cyprian.",
    "mr:0203-felix-et-socii": "In the same country, the holy martyrs Felix, Symphronius, Hippolytus and their companions.",
    "mr:0203-teridius-et-remedius": "In the town of Gap, the holy bishops Tigides and Remedius.",
    "mr:0203-lupicinus": "At Lyons, the Saints Lupicinus and Felix, also bishops.",
-   "mr:0203-anscharius-hamburgensis": "The same day, St. Anscharius, bishop of Bremen, who converted the Swedes and the Danes to the faith of Christ."
+   "mr:0203-ansgarius": "The same day, St. Anscharius, bishop of Bremen, who converted the Swedes and the Danes to the faith of Christ."
   },
   "conclusio": null
  },
@@ -58,7 +58,7 @@
    "mr:0205-agatha": "At Catania, in Sicily, in the time of the emperor Decius and the judge Quinctian, the birthday of St. Agatha, virgin and martyr. After being buffeted, imprisoned, tortured, racked, dragged over pieces of earthenware and burning coals, and having her breasts cut off, she consummated her sacrifice in prison while engaged in prayer.",
    "mr:0205-plurimi-martyres-ponti": "In Pontus, during the persecution of Maximian, the commemoration of many holy martyrs, some of whom had molten lead poured over them, others had sharp-pointed reeds thrust under their nails, and were oftentimes horribly tormented in many other ways. Thus, by their glorious passion, they deserved at the hands of God palms of victory and unfading crowns.",
    "mr:0205-isidorus": "At Alexandria, during the persecution of Decius, St. Isidore, martyr, who was beheaded for the faith of Christ by Numerian, general of the army.",
-   "mr:0205-franciscus-ordinem": "In the kingdom of Japan, the passion of twenty-six martyrs, who, by being crucified for the Catholic faith, and pierced with lances, gloriously died in praising God and preaching that same faith. Pius IX. canonized them in 1862.",
+   "mr:0205-paulus-miki-et-socii": "In the kingdom of Japan, the passion of twenty-six martyrs, who, by being crucified for the Catholic faith, and pierced with lances, gloriously died in praising God and preaching that same faith. Pius IX. canonized them in 1862.",
    "mr:0205-avitus": "At Vienne, blessed Avitus, bishop and confessor, whose faith, labors and admirable learning protected France against the ravages of the Arian heresy.",
    "mr:0205-genuinus-et-albuinus": "At Brixen, the holy bishops Genuinus and Albinus, whose lives were illustrious for miracles."
   },
@@ -187,7 +187,7 @@
    "mr:0214-vitalis": "Also, at Rome, the holy martyrs Vitalis, Felicula, and Zeno.",
    "mr:0214-valentinus-interamnae": "At Teramo, St. Valentine, bishop and martyr, who was scourged, committed to prison, and as he remained unshaken in his faith, was taken out of his dungeon in the dead of night and beheaded by order of Placidus, prefect of the city.—",
    "mr:0214-proculus-et-socii": "In the same place, the holy martyrs Proculus, Ephebus and Apollonius, who, whilst watching by the body of St. Valentine, were arrested and put to the sword by the command of the ex-consul Leontius.",
-   "mr:0214-bassus-et-socii": "At Alexandria, the holy martyrs Bassus, Anthony, and Protolicus, who were cast into the sea.",
+   "mr:0214-bassianus-et-socii": "At Alexandria, the holy martyrs Bassus, Anthony, and Protolicus, who were cast into the sea.",
    "mr:0214-cyrio-et-socii": "Also, the holy martyrs Cyrion, priest, Bassian, lector, Agatho, exorcist, and Moses, who perished in the flames and took their flight to heaven.",
    "mr:0214-dionysius-et-ammonius": "In the same city, the Saints Denis and Ammonius, who were beheaded.",
    "mr:0214-eleuchadius": "At Ravenna, St. Eleuchadius, bishop and confessor.",
@@ -215,7 +215,7 @@
   "titulus": "The Sixteenth Day of February",
   "elogia": {
    "mr:0216-onesimus": "The birthday of blessed Onesimus, concerning whom the apostle St. Paul wrote to Philemon. He made him bishop of Ephesus after St. Timothy, and committed to him the office of preaching. Being led a prisoner to Rome, and stoned to death for the faith of Christ, he was buried in that city; but his body was afterwards carried to the place where he had been bishop.",
-   "mr:0216-translatio-iulianae": "At Cumae, in Campania, the Translation of St. Juliana, virgin and martyr. Under the emperor Maximian, she was first severely scourged by her own father, Africanus, then made to suffer many torments by the prefect, Evilasius, whom she had refused to marry. Later being thrown into prison, she encountered the evil spirit in a visible manner. Finally, as a fiery furnace and a caldron of boiling oil could do her no injury, she terminated her martyrdom by decapitation.",
+   "mr:0216-iuliana": "At Cumae, in Campania, the Translation of St. Juliana, virgin and martyr. Under the emperor Maximian, she was first severely scourged by her own father, Africanus, then made to suffer many torments by the prefect, Evilasius, whom she had refused to marry. Later being thrown into prison, she encountered the evil spirit in a visible manner. Finally, as a fiery furnace and a caldron of boiling oil could do her no injury, she terminated her martyrdom by decapitation.",
    "mr:0216-iulianus-et-socii": "In Egypt, St. Julian, martyr, with five thousand other Christians.",
    "mr:0216-elias-et-socii": "At Caesarea, in Palestine, the holy martyrs Elias, Jeremias, Isaias, Samuel, and Daniel, Egyptians, who of their own accord served the confessors of Christ condemned to labor in the mines of Cilicia, but were arrested on their return, and after being cruelly tortured by the governor Firmilian, under the emperor Galerius Maximian, were put to the sword.",
    "mr:0216-porphyrius-et-seleucus": "After them, St. Porphyry, servant of the martyr Pamphilus, and St. Seleucus, a Cappadocian, who had been victorious in several combats, being again exposed to torments, won the crown of martyrdom, the one by fire, the other by the sword.",

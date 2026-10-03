@@ -67,7 +67,7 @@
   "elogia": {
    "mr:0705-antonius-maria-zaccaria": "At Cremona, in Insubria, St. Anthony Mary Zaccaria, confessor, founder of the Barnabites and the Angelic Virgins. Distinguished for all the virtues and for miracles, he was placed among the Saints by Leo XIII. His body is venerated in the church of St. Barnabas, at Milan.",
    "mr:0705-zoa": "At Rome, St. Zoe, martyr, wife of the blessed martyr Nicostratus. Whilst praying at the tomb of the apostle St. Peter, during the time of Diocletian, she was seized by the persecutors, and cast into a dark dungeon; then being suspended on a tree by her neck and hair, and suffocated by a loathsome smoke, she yielded up her soul in the confession of the Lord.",
-   "mr:0705-domitius": "In Syria, the birthday of St. Domitius, martyr, who by his miracles confers many favors on the people of that country.",
+   "mr:0705-dometius-medicus": "In Syria, the birthday of St. Domitius, martyr, who by his miracles confers many favors on the people of that country.",
    "mr:0705-cyprilla": "At Cyrene, in Lybia, St. Cyrilla, a martyr, in the persecution of Diocletian. For a long while she held on her hand burning coals with incense, lest by shaking off the coals she should seem to offer incense to the idols. She was afterwards cruelly scourged, and went to her spouse adorned with her own blood.",
    "mr:0705-athanasius-hierosolymitanus": "At Jerusalem, St. Athanasius, a deacon, who was apprehended by the heretics for defending the Council of Chalcedon, and after experiencing all kinds of torments, was put to the sword.",
    "mr:0705-agathon-et-triphina": "In Sicily, the holy martyrs Agatho and Triphina.",
@@ -131,7 +131,7 @@
    "mr:0709-anatolia-et-audax": "In the town of Thora, on lake Velino, in Italy, the martyrdom of the Saints Anatolia and Audax, under the emperor Decius. Anatolia, a virgin consecrated to Christ, cured, through the whole province of Picenum, many persons laboring under various infirmities, and made them believe in Christ. By order of the judge Fustinian, she was condemned to various kinds of punishments. She was cured of the sting of a serpent to which she had been exposed; a miracle which converted Audax to the faith. Finally she was transpierced with a sword, whilst her hands were extended in prayer. Audax was committed to prison, and being without delay sentenced to capital punishment, obtained the crown of a martyr.",
    "mr:0709-patermuthius-et-socii": "At Alexandria, the holy martyrs Patermuthius, Copres, and Alexander, who were put to death under Julian the Apostate.",
    "mr:0709-nicolaus-pieck-et-socii": "At Briel, in Holland, the martyrdom of the nineteen martyrs of Gorcum. For vindicating the authority of the Roman Church, and the real presence of Christ in the Eucharist, they endured various ignominies and torments from the Calvinist heretics, and ended their suffering by being put to death. In the year 1867, Pius IX. placed them among the holy martyrs.",
-   "mr:0709-brixius": "At Martula, St. Brixius, bishop. Under the judge Marcian, after having suffered much for the confession of our Lord, and converted to Christ a great multitude of people, he rested in peace.",
+   "mr:0709-brictius": "At Martula, St. Brixius, bishop. Under the judge Marcian, after having suffered much for the confession of our Lord, and converted to Christ a great multitude of people, he rested in peace.",
    "mr:0709-veronica-giuliani": "At Citta-di-Castello, St. Veronica Giuliani, a Capuchin nun, abbess of the monastery of that town. Born at Mercatelli, in the diocese of Urbania, she became illustrious by her great love for suffering and other virtues, and by her heavenly gifts. She was inscribed among holy virgins by pope Gregory XVI."
   },
   "conclusio": null
@@ -293,7 +293,7 @@
   "elogia": {
    "mr:0720-hieronymus-aemilianus": "The festival of St. Jerome Aemiliani, confessor, founder of the Congregation of Somascha. Gaining renown for many miracles during his life and after his death, he was inscribed among the beatified by Benedict XIV., and canonized by Clement XIII.",
    "mr:0720-marina": "At Antioch, St. Margaret, virgin and martyr.",
-   "mr:0720-elias-propheta": "On Mount Carmel, the holy prophet Elias.",
+   "mr:0720-elias-thesbita-propheta": "On Mount Carmel, the holy prophet Elias.",
    "mr:0720-ioseph": "The same day, the birthday of blessed Joseph, surnamed the Just, whom the Apostles selected with blessed Matthias for the apostleship, in the place of the traitor Judas. The lot having fallen upon Matthias, Joseph, notwithstanding, continued to preach and to advance in virtue, and after having sustained from the Jews many persecutions for the faith of Christ, happily ended his life in Judea. It is related of him that having drunk poison, he received no injury from it, because of his confidence in the Lord.",
    "mr:0720-sabinus-et-socii": "At Damascus, the holy martyrs Sabinus, Julian, Maximus, Macrobius, Cassia, and Paula, with ten others.",
    "mr:0720-paulus": "At Cordova, St. Paul, deacon and martyr. For rebuking Mahometan princes for their impiety and cruelty, and preaching Christ courageously, he was put to death, and went to his reward in heaven.",
@@ -313,7 +313,7 @@
    "mr:0721-claudius-et-socii": "In the same place, the martyrdom of the saints Claudius, Justus, Jucundinus, and five companions, in the time of the emperor Aurelian.",
    "mr:0721-zoticus": "At Comana, in Armenia, the holy bishop and martyr Zoticus, who was crowned under Severus.",
    "mr:0721-arbogastus": "At Strasburg, St. Arbogastus, a bishop, renowned for miracles.",
-   "mr:0721-ioannes": "In Syria, the holy monk John, a companion of St. Simeon."
+   "mr:0721-simeon-salus": "In Syria, the holy monk John, a companion of St. Simeon."
   },
   "conclusio": null
  },
@@ -427,7 +427,7 @@
    "mr:0729-callinicus": "At Gangra, in Paphlagonia, St. Callinicus, martyr, who was scourged with iron rods, and given over to other torments. Being finally cast into a furnace, he gave up his soul to God.",
    "mr:0729-olavus": "In Norway, St. Olaf, king and martyr.",
    "mr:0729-lupus": "At Troyes, in France, St. Lupus, bishop and confessor, who went with blessed Germanus to England to combat the Pelagian heresy, and by assiduous prayer defended the city of Troyes from the furor of Attila, who was devastating all France. At length, having religiously discharged the functions of the priesthood for fifty-two years, he rested in peace.",
-   "mr:0729-gulielmus-e": "At St. Brieuc, St. William, bishop and confessor.",
+   "mr:0729-gulielmus-pinchon": "At St. Brieuc, St. William, bishop and confessor.",
    "mr:0729-prosperus": "Also, the demise of blessed Prosper, bishop of Orleans.",
    "mr:0729-faustinus": "At Todi, St. Faustinus, confessor.",
    "mr:0729-seraphina": "At Mumia, St. Seraphina."

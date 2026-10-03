@@ -3,7 +3,7 @@
   "titulus": "The First Day of August",
   "elogia": {
    "mr:0801-dedicatio-sancti-petri-apostoli-ad-vincula": "At Rome, on Mount Esquiline, the dedication of the church of St. Peter in Chains.",
-   "mr:0801-septem-fratres-antiochiae": "At Antioch, the martyrdom of the seven holy brothers, the Machabees, and their mother, who suffered under king Antiochus Epiphanes. Their relics were transferred to Rome, and placed in the church of St. Peter, just mentioned.",
+   "mr:0801-septem-fratres-martyres-antiochiae": "At Antioch, the martyrdom of the seven holy brothers, the Machabees, and their mother, who suffered under king Antiochus Epiphanes. Their relics were transferred to Rome, and placed in the church of St. Peter, just mentioned.",
    "mr:0801-fides-et-socii": "At Rome, the holy virgins Faith, Hope and Charity, who won the crown of martyrdom under the emperor Adrian.",
    "mr:0801-bonus-et-socii": "Also, at Rome, on the Latin road, the holy martyrs Bonus, a priest, Faustus and Maurus, with nine others, mentioned in the Acts of pope St. Stephen.",
    "mr:0801-cyrillus-et-socii": "At Philadelphia, in Arabia, the holy martyrs Cyril, Aquila, Peter, Domitian, Rufus, and Menander, crowned on the same day.",
@@ -159,7 +159,7 @@
   "titulus": "The Twelfth Day of August",
   "elogia": {
    "mr:0812-clara": "At Assisi, in Umbria, St. Clare, virgin, the first of the poor women of the Order of Minorites. Being celebrated for holiness of life and miracles, she was placed among holy virgins by Alexander IV.",
-   "mr:0812-euplius": "At Catania, in Sicily, the birthday of St. Euplius, deacon, under the emperors Diocletian and Maximian. He was a long time tortured for the confession of the Lord, and finally obtained the palm of martyrdom by being put to the sword.",
+   "mr:0812-euplus": "At Catania, in Sicily, the birthday of St. Euplius, deacon, under the emperors Diocletian and Maximian. He was a long time tortured for the confession of the Lord, and finally obtained the palm of martyrdom by being put to the sword.",
    "mr:0812-hilaria": "At Augsburg, St. Hilaria, mother of the blessed martyr Afra. Because she watched at the sepulchre of her daughter, she was cast into the fire for the faith of Christ, together with her maid-servants Digna, Euprepia, and Eunomia. On the same day there suffered also in that city Quiriacus, Largius, Crescentian, Nimmia, and Juliana, with twenty others.",
    "mr:0812-macarius-et-iulianus": "In Syria, the holy martyrs Macarius and Julian.",
    "mr:0812-anicetus-et-photius": "At Nicomedia, the holy martyrs, the count Anicetus and his brother Photinus, with many others, under the emperor Diocletian.",
@@ -202,7 +202,7 @@
   "elogia": {
    "mr:0815-assumptio-beatae-mariae-virginis": "The Assumption of the most holy Virgin Mary, Mother of God.",
    "mr:0815-tarsicius": "At Rome, on the Appian way, St. Tharsicius, acolyte. The Pagans accosted him as he was carrying the sacrament of Christ’s body, and began to inquire what it was. But he judged it an unworthy thing to cast pearls before swine. They therefore beat him with sticks and stones until he expired. The sacrilegious searchers examined his body, but found no vestige of the sacrament of Christ, either in his hands or in his clothes. The Christians took up the body of the martyr, and buried it reverently in the cemetery of Callistus.",
-   "mr:0815-alipius": "At Tagasta, in Africa, St. Alipius, bishop, who was the disciple of blessed Augustine, and the companion of his conversion, his colleague in the pastoral charge, his valiant fellow-soldier in combating heretics, and finally his partner in the glory of heaven.",
+   "mr:0815-alypius": "At Tagasta, in Africa, St. Alipius, bishop, who was the disciple of blessed Augustine, and the companion of his conversion, his colleague in the pastoral charge, his valiant fellow-soldier in combating heretics, and finally his partner in the glory of heaven.",
    "mr:0815-arnulphus": "At Soissons, in France, St. Arnulf, bishop and confessor.",
    "mr:0815-stephanus": "At Alba, in Hungary, St. Stephen, king of the Hungarians, whose feast is celebrated on the 2d of September.",
    "mr:0815-stanislaus-kostka": "At Rome, St. Stanislaus Kostka, a native of Poland, confessor, of the Society of Jesus, who being made perfect in a short space, fulfilled a long time by the angelical innocence of his life. He was inscribed on the list of the saints by the Sovereign Pontiff, Benedict XIII."
@@ -364,7 +364,7 @@
    "mr:0825-genesius": "At Arles, in France, another blessed Genesius, who, filling the office of notary, and refusing to record the impious edicts by which Christians were commanded to be punished, threw away his tablets publicly, and declared himself a Christian. He was seized and beheaded, and thus attained to the glory of martyrdom through baptism in his blood.",
    "mr:0825-iulianus": "In Syria, St. Julian, martyr.",
    "mr:0825-maginus": "At Tarragona, St. Maginus, martyr.",
-   "mr:0825-menna": "At Constantinople, St. Mennas, bishop.",
+   "mr:0825-mena": "At Constantinople, St. Mennas, bishop.",
    "mr:0825-gregorius": "At Utrecht, St. Gregory, bishop.",
    "mr:0825-patricia": "At Naples, St. Patricia, virgin."
   },

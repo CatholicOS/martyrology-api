@@ -103,7 +103,7 @@
   "elogia": {
    "mr:0608-maximinus": "At Aix, in France, St. Maximin, first bishop of that city, who is said to have been a disciple of our Lord.",
    "mr:0608-calliopa": "The same day, St. Calliopa, martyr, who, for the faith of Christ, had her breasts cut off, her flesh burned, was rolled on broken pottery, and being lastly decapitated, received the palm of martyrdom.",
-   "mr:0608-willhelmus": "At York, in England, St. William, archbishop and confessor, who, among other miracles wrought at his tomb, raised three persons from the dead. He was placed in the calendar of the Saints by Honorius III.",
+   "mr:0608-gulielmus-fitzherbert": "At York, in England, St. William, archbishop and confessor, who, among other miracles wrought at his tomb, raised three persons from the dead. He was placed in the calendar of the Saints by Honorius III.",
    "mr:0608-medardus": "At Soissons, in France, the birthday of St. Medard, bishop of Noyon, whose life and precious death are illustrated by glorious miracles.",
    "mr:0608-gildardus": "At Rouen, St. Gildard, bishop, brother of St. Medard. They were born on the same day, consecrated bishops at the same time, and being taken away from this life also on the same day, they entered heaven together.",
    "mr:0608-heraclius": "At Sens, St. Heraclius, bishop.",
@@ -298,7 +298,7 @@
  "22": {
   "titulus": "The Twenty-second Day of June",
   "elogia": {
-   "mr:0622-paulinus-nolam": "At Nola, in Campania, the birthday of blessed Paulinus, bishop and confessor, who, although a most noble and wealthy man, made himself poor and humble for Christ; and what is still more admirable, became a slave to liberate a widow’s son, who had been carried to Africa by the Vandals, when they devastated Campania. He was celebrated, not only for his learning and exceptional holiness of life, but also for his power over the demons. His great merit has been extolled by Saints Ambrose, Jerome, Augustine and Gregory, in their writings. His body, at first transferred to Benevento, and thence to Rome, was restored to Nola by order of Pius X.",
+   "mr:0622-paulinus": "At Nola, in Campania, the birthday of blessed Paulinus, bishop and confessor, who, although a most noble and wealthy man, made himself poor and humble for Christ; and what is still more admirable, became a slave to liberate a widow’s son, who had been carried to Africa by the Vandals, when they devastated Campania. He was celebrated, not only for his learning and exceptional holiness of life, but also for his power over the demons. His great merit has been extolled by Saints Ambrose, Jerome, Augustine and Gregory, in their writings. His body, at first transferred to Benevento, and thence to Rome, was restored to Nola by order of Pius X.",
    "mr:0622-innocentius-v": "At Rome, blessed Innocent V., pope, who labored with mildness and prudence to maintain liberty for the Church and harmony among Christians. The veneration paid to him, pope Leo XIII. approved and confirmed.",
    "mr:0622-decem-milia-martyres-montis-ararat": "On Mount Ararat, the martyrdom of ten thousand holy martyrs, who were crucified.",
    "mr:0622-albanus": "At Verulam, in England, in the time of Diocletian, St. Alban, martyr, who gave himself up to save a cleric whom he had harbored. After being scourged and subjected to bitter torments, he was sentenced to capital punishment. With him suffered also one of the soldiers that led him to execution, who was converted to Christ on the way, and merited to be baptized in his own blood.",
@@ -387,14 +387,14 @@
    "mr:0628-papius": "The same day, during the persecution of Diocletian, St. Papius, martyr, who was scourged with knotted cords, cast into a caldron of seething oil and grease, and after other horrible torments, was decapitated, and thus won an eternal crown.",
    "mr:0628-benignus": "At Maestricht, St. Benignus, bishop and martyr.",
    "mr:0628-argimirus": "At Cordova, St. Argymirus, monk and martyr, who was slain for the faith of Christ during the persecution of the Arabs.",
-   "mr:0628-paulus-primus": "At Rome, St. Paul, pope and confessor."
+   "mr:0628-paulus-i": "At Rome, St. Paul, pope and confessor."
   },
   "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of June",
   "elogia": {
-   "mr:0629-apostolorum-petrus-et-paulus": "At Rome, the birthday of the holy apostles Peter and Paul, who suffered martyrdom on the same day, under the emperor Nero. Within the city the former was crucified with his head downwards, and buried in the Vatican, near the Triumphal way, where he is venerated by the whole world. The latter was put to the sword and buried on the Ostian way, where he receives similar honors.",
+   "mr:0629-petrus-et-paulus-apostoli": "At Rome, the birthday of the holy apostles Peter and Paul, who suffered martyrdom on the same day, under the emperor Nero. Within the city the former was crucified with his head downwards, and buried in the Vatican, near the Triumphal way, where he is venerated by the whole world. The latter was put to the sword and buried on the Ostian way, where he receives similar honors.",
    "mr:0629-marcellus": "At Argenton, St. Marcellus, martyr, who was beheaded for the faith of Christ together with the soldier Anastasius.",
    "mr:0629-syrus": "At Genoa, the birthday of St. Syrius, bishop.",
    "mr:0629-cassius": "At Narni, St. Cassius, bishop of that city, of whom St. Gregory relates, that he permitted scarcely any day of his life to pass without offering the victim of propitiation to Almighty God; and he was well worthy to do it, for he distributed in alms all he possessed, and his devotion was such that abundant tears flowed from his eyes during the holy sacrifice. At last, he came to Rome on the birthday of the Apostles, as was his yearly custom, and after having solemnly celebrated Mass and given the Lord’s body and the kiss of peace to all, he departed for heaven.",

@@ -392,7 +392,7 @@
  "29": {
   "titulus": "The Twenty-ninth Day of December",
   "elogia": {
-   "mr:1229-thoma": "At Canterbury, in England, the birthday of St. Thomas, bishop and martyr, who, for the defence of justice and ecclesiastical immunities, was struck with the sword in his own basilica by a faction of impious men, and thus went to Christ.",
+   "mr:1229-thomas-becket": "At Canterbury, in England, the birthday of St. Thomas, bishop and martyr, who, for the defence of justice and ecclesiastical immunities, was struck with the sword in his own basilica by a faction of impious men, and thus went to Christ.",
    "mr:1229-david-rex-et-propheta": "At Jerusalem, holy David, king and prophet.",
    "mr:1229-trophimus": "At Arles, the birthday of St. Trophimus, mentioned by St. Paul in his epistle to Timothy. Being consecrated bishop by that apostle, he was the first sent to preach the gospel of Christ in that city. From his preaching as from a fountain, according to the expression of pope St. Zosimus, all Gaul received the waters of salvation.",
    "mr:1229-callistus-et-socii": "At Rome, the holy martyrs Callistus, Felix and Boniface.",
@@ -409,7 +409,7 @@
    "mr:1230-sabinus-et-socii": "At Spoleto, the birthday of the holy martyrs Sabinus, bishop, Exuperantius and Marcellus, deacons; also of Venustian, governor, with his wife and sons, under the emperor Maximian. Marcellus and Exuperantius were first racked, then severely beaten with rods; afterwards being mangled with iron hooks, and burned in the sides, they terminated their martyrdom. Not long after, Venustian was put to the sword with his wife and sons. St. Sabinus, after having his hands cut off, and being a long time confined in prison, was scourged to death. The martyrdom of these saints is commemorated on the same day, although it occurred at different times.",
    "mr:1230-mansuetus-et-socii": "At Alexandria, the holy martyrs Mansuetus, Severus, Appian, Donatus, Honorius, and their companions.",
    "mr:1230-anysia": "At Thessalonica, St. Anysia, martyr.",
-   "mr:1230-anysius-ibidem": "In the same place, St. Anysius, bishop of that city.",
+   "mr:1230-anysius": "In the same place, St. Anysius, bishop of that city.",
    "mr:1230-eugenius": "At Milan, St. Eugene, bishop and confessor.",
    "mr:1230-liberius": "At Ravenna, St. Liberius, bishop.",
    "mr:1230-rainerius": "At Aquila, in Abruzzo, St. Rainerius, bishop."

@@ -3,7 +3,7 @@
   "titulus": "1 Maji Kalendis Maji. xxij. A",
   "elogia": {
    "mr:0501-ioseph": "Solemnitas sancti Joseph Opificis, Sponsi beatae Mariae Virginis, Confessoris, opificum Patroni.",
-   "mr:0501-pius-quintus": "Romae natalis sancti Pii Quinti, ex Ordine Praedicatorum, Papae et Confessoris; qui, ecclesiasticae disciplinae restituendae, haeresibus exstirpandis et Christiani nominis hostibus conterendis strenue ac feliciter incumbens, vitae ac legum sanctitate catholicam Ecclesiam gubernavit. Ipsius autem festivitas tertio Nonas mensis hujus celebratur.",
+   "mr:0501-pius-v": "Romae natalis sancti Pii Quinti, ex Ordine Praedicatorum, Papae et Confessoris; qui, ecclesiasticae disciplinae restituendae, haeresibus exstirpandis et Christiani nominis hostibus conterendis strenue ac feliciter incumbens, vitae ac legum sanctitate catholicam Ecclesiam gubernavit. Ipsius autem festivitas tertio Nonas mensis hujus celebratur.",
    "mr:0501-ieremias-propheta": "In Aegypto sancti Jeremiae Prophetae, qui, a populo lapidibus obrutus, apud Taphnas occubuit, ibique sepultus est; ad cujus sepulcrum fideles (ut refert sanctus Epiphanius) supplicare consueverunt, indeque sumpto pulvere, aspidum morsibus medentur.",
    "mr:0501-andeolus": "In territorio Vivariensi, in Galliis, beati Andeoli Subdiaconi, qui, una cum aliis, a beato Polycarpo, Smyrnensi Episcopo, ex Oriente in Galliam ad praedicandum verbum Dei missus est. Hic, sub Severo Imperatore, spinosis fustibus caesus, demum, per ensem ligneum capite in quatuor partes in modum crucis conscisso, martyrium consummavit.",
    "mr:0501-orentius-et-patientia": "Oscae, in Hispania, sanctorum Martyrum Orentii et Patientiae.",
@@ -116,7 +116,7 @@
    "mr:0508-apparitio-michaelis": "In monte Gargano Apparitio sancti Michaelis Archangeli, quem Pius Papa Duodecimus Radiologis et Radiumtherapeuticis Patronum et Protectorem constituit.",
    "mr:0508-stanislaus": "Cracoviae, in Polonia, natalis sancti Stanislai, Episcopi et Martyris, qui a Boleslao, impio Rege, necatus est. Ipsius autem festum pridie hujus diei celebratur.",
    "mr:0508-victor": "Mediolani item natalis sancti Victoris Martyris, qui, natione Maurus et a primaeva aetate Christianus, a Maximiano, cum esset in castris imperialibus miles, compulsus ut idolis sacrificaret, et in confessione Domini fortissime perseverans, ideo, primum graviter fustibus caesus, sed, Deo protegente, doloris expers; deinde liquenti plumbo perfusus, sed nihil penitus laesus; novissime gloriosi martyrii cursum, capite abscissus, implevit.",
-   "mr:0508-agathius-centurio": "Constantinopoli sancti Agathii Centurionis, qui, in persecutione Diocletiani et Maximiani, a Firmo Tribuno delatus quod Christianus esset, et a Judice Perinthi Bibiano saevissime tortus, Byzantii demum a Proconsule Flaccino capitis damnatus est. Ipsius corpus ad Scyllacium littus, in Calabria, divinitus postea delatum est, atque ibi honorifice asservatum.",
+   "mr:0508-acacius": "Constantinopoli sancti Agathii Centurionis, qui, in persecutione Diocletiani et Maximiani, a Firmo Tribuno delatus quod Christianus esset, et a Judice Perinthi Bibiano saevissime tortus, Byzantii demum a Proconsule Flaccino capitis damnatus est. Ipsius corpus ad Scyllacium littus, in Calabria, divinitus postea delatum est, atque ibi honorifice asservatum.",
    "mr:0508-bonifatius-iv": "Romae sancti Bonifatii Papae Quarti, qui Pantheon in honorem beatae Mariae ad Martyres dedicavit.",
    "mr:0508-benedictus-ii": "Item Romae sancti Benedicti Secundi, Papae et Confessoris.",
    "mr:0508-dionysius": "Viennae, in Gallia, sancti Dionysii, Episcopi et Confessoris.",
@@ -162,7 +162,7 @@
   "titulus": "11 Maji Quinto Idus Maji. xiv. F",
   "elogia": {
    "mr:0511-philippus-et-iacobus-apostoli": "Natalis beatorum Philippi et Jacobi Apostolorum. Ex his Philippus, cum omnem fere Scythiam ad Christi fidem convertisset, tandem apud Hierapolim, Asiae civitatem, cruci affixus et lapidibus obrutus, glorioso fine quievit; Jacobus vero, qui et frater Domini legitur et primus Hierosolymorum Episcopus, e pinna Templi praecipitatus, confractis inde cruribus, ac fullonis fuste in cerebro percussus, interiit, ibique, non longe a Templo sepultus est.",
-   "mr:0511-anthimus-romae": "Romae, via Salaria, item natalis beati Anthimi Presbyteri, qui, post virtutum et praedicationis insignia, in persecutione Diocletiani, in Tiberim praecipitatus, et ab Angelo exinde ereptus, oratorio proprio restitutus est; deinde, capite punitus, victor migravit ad caelos.",
+   "mr:0511-anthimus": "Romae, via Salaria, item natalis beati Anthimi Presbyteri, qui, post virtutum et praedicationis insignia, in persecutione Diocletiani, in Tiberim praecipitatus, et ab Angelo exinde ereptus, oratorio proprio restitutus est; deinde, capite punitus, victor migravit ad caelos.",
    "mr:0511-evellius": "Ibidem sancti Evellii Martyris, qui, cum esset de familia Neronis, ad passionem sancti Torpetis in Christum credidit, pro quo et decollatus est.",
    "mr:0511-maximus-et-socii": "Item Romae sanctorum Martyrum Maximi, Bassi et Fabii; qui sub Diocletiano, via Salaria, caesi sunt.",
    "mr:0511-sisinius-et-socii": "Auximi, in Piceno, sanctorum Martyrum Sisinii Diaconi, Diocletii et Florentii, discipulorum sancti Anthimi Presbyteri; qui, sub Diocletiano, lapidibus obruti, martyrium compleverunt.",
@@ -255,7 +255,7 @@
   "titulus": "17 Maji Sextodecimo Kalendas Junii. viij. E",
   "elogia": {
    "mr:0517-paschalis-baylon": "Apud Villam Regalem, in Hispania, sancti Paschalis, ex Ordine Minorum, Confessoris, mirae innocentiae et poenitentiae viri; quem Leo Papa Decimus tertius caelestem eucharisticorum Coetuum et Societatum a sanctissima Eucharistia Patronum declaravit.",
-   "mr:0517-heradius-et-socii": "Novioduni, in Galliis, sanctorum Martyrum Heradii, Pauli et Aquilini, cum duobus aliis.",
+   "mr:0517-heraclius-et-paulus": "Novioduni, in Galliis, sanctorum Martyrum Heradii, Pauli et Aquilini, cum duobus aliis.",
    "mr:0517-solocho": "Chalcedone sanctorum Martyrum Solochonis et Sociorum militum, sub Maximiano Imperatore.",
    "mr:0517-adrio": "Alexandriae sanctorum Martyrum Adrionis, Victoris et Basillae.",
    "mr:0517-restituta": "Eodem die sanctae Restitutae, Virginis et Martyris; quae, in Africa, Valeriano imperante, a Proculo Judice varie torta, et in naviculam pice et stupa refertam, ut in mari combureretur, imposita, tandem, cum in incensores immisso igne, flamma converteretur, in oratione spiritum Deo reddidit. Ipsius corpus cum eadem navicula, Dei nutu, ad Aenariam insulam, prope Neapolim, in Campania, devectum est, et a Christianis magna veneratione susceptum; ac postmodum in ejus honorem Constantinus Magnus Basilicam in ipsa urbe Neapoli erigendam curavit."
@@ -279,7 +279,7 @@
  "19": {
   "titulus": "19 Maji Quartodecimo Kalendas Junii. vj. G",
   "elogia": {
-   "mr:0519-petrus-de-morono": "Natalis sancti Petri de Morono Confessoris, qui, ex Anachoreta Summus Pontifex creatus, dictus est Caelestinus Quintus. Sed Pontificatu se postmodum abdicavit, et in solitudine religiosam vitam agens, virtutibus et miraculis clarus, migravit ad Dominum.",
+   "mr:0519-petrus-caelestinus": "Natalis sancti Petri de Morono Confessoris, qui, ex Anachoreta Summus Pontifex creatus, dictus est Caelestinus Quintus. Sed Pontificatu se postmodum abdicavit, et in solitudine religiosam vitam agens, virtutibus et miraculis clarus, migravit ad Dominum.",
    "mr:0519-pudentiana": "Romae sanctae Pudentianae Virginis, quae, post innumeros agones, post multorum Martyrum venerabiliter exhibitas sepulturas, post omnes facultates suas pro Christo pauperibus erogatas, tandem de terris ad caelos migravit.",
    "mr:0519-pudens": "Ibidem sancti Pudentis Senatoris, qui ejusdem sanctae Pudentianae ac sanctae item Praxedis Virginis fuit pater; atque, ab Apostolis Christo in baptismo vestitus, innocentem tunicam usque ad vitae coronam immaculate custodivit.",
    "mr:0519-parthenius-et-calogerus": "Item Romae, via Appia, natalis sanctorum Caloceri et Parthenii eunuchorum; quorum prior, cum esset praepositus cubiculi uxoris Decii Imperatoris, posterior vero alterius muneris primicerius, et ambo nollent idolis sacrificare, idcirco, ejusdem Imperatoris jussu variis ac diris sunt excruciati suppliciis, ac tandem, cervicibus ardenti fuste contusis, spiritum Deo tradiderunt.",
