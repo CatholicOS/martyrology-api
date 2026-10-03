@@ -34,6 +34,7 @@ def test_day_structured_day(crmedr_path, clbdr_path, data_paths):
     # The 1749 print numbers no eulogies: no entry, whatever the position.
     assert (conc.entry, conc.anchor_month, conc.anchor_day) == (None, 1, 2)  # anchored 01-02
     assert d.conclusio is not None and d.conclusio.startswith("Et alibi")
+    assert [(r.after, r.text[:13]) for r in d.rubricae] == [("mr:0102-concordius", "Quod sequitur")]
 
 
 def test_flat_day_uses_registry_placement(crmedr_path, clbdr_path, data_paths):

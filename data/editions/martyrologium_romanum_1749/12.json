@@ -136,8 +136,8 @@
    "mr:1210-menna-et-socii": "Alexandriae sanctorum Martyrum Mennae, Hermogenis et Eugraphi; qui sub Galerio Maximiano passi sunt.",
    "mr:1210-mercurius": "Apud Leontinos, in Sicilia, sanctorum Martyrum Mercurii et Sociorum militum; qui, sub Tertyllo Praeside, tempore Licinii Imperatoris, gladio caesi sunt.",
    "mr:1210-gemellus": "Ancyrae, in Galatia, sancti Gemelli Martyris, qui, post dira tormenta, sub Juliano Apostata, crucis supplicio martyrium consummavit.",
-   "mr:1210-eulalia-emeritae": "Emeritae, in Hispania, passio sanctae Eulaliae Virginis, quae, sub Maximiano Imperatore, cum esset annorum duodecim, ibi, jussu Daciani Praesidis, pro confessione Christi, plurima tormenta est perpessa; novissime, in equuleo suspensa et exungulata, faculis ardentibus ex utroque latere appositis, hausto igne, spiritum reddidit.",
-   "mr:1210-eulalia": "Item ibidem sanctae Juliae, Virginis et Martyris; quae beatae Eulaliae socia fuit, et illi ad passionem properanti individua comes adhaesit.",
+   "mr:1210-eulalia": "Emeritae, in Hispania, passio sanctae Eulaliae Virginis, quae, sub Maximiano Imperatore, cum esset annorum duodecim, ibi, jussu Daciani Praesidis, pro confessione Christi, plurima tormenta est perpessa; novissime, in equuleo suspensa et exungulata, faculis ardentibus ex utroque latere appositis, hausto igne, spiritum reddidit.",
+   "mr:1210-iulia": "Item ibidem sanctae Juliae, Virginis et Martyris; quae beatae Eulaliae socia fuit, et illi ad passionem properanti individua comes adhaesit.",
    "mr:1210-gregorius-iii": "Romae beati Gregorii Papae Tertii, qui sanctitate meritisque praeclarus migravit in caelum.",
    "mr:1210-sindulphus": "Viennae, in Gallia, sancti Sindulphi, Episcopi et Confessoris.",
    "mr:1210-deusdedit": "Brixiae sancti Deusdedit Episcopi. Laureti, in Piceno, Translatio sacrae Domus Genitricis Dei Mariae, qua in domo Verbum caro factum est. Ipsam vero beatissimam Virginem, Lauretanae titulo nuncupatam, Benedictus Papa Decimus quintus omnibus aereonautis praecipuam apud Deum Patronam attribuit."
@@ -265,7 +265,7 @@
    "mr:1220-vigilia-sancti-thomae-apostoli": "Vigilia sancti Thomae Apostoli.",
    "mr:1220-zephyrinus": "Romae natalis sancti Zephyrini, Papae et Martyris. Ipsius tamen festum recolitur septimo Kalendas Septembris.",
    "mr:1220-ignatius": "Ibidem passio sancti Ignatii, Episcopi et Martyris; qui, tertius post beatum Petrum Apostolum, Antiochenam rexit Ecclesiam. Hic, in persecutione Trajani, damnatus ad bestias, Romam vinctus mittitur; ibique, circumsedente Senatu, immanissimis poenarum suppliciis primo est affectus, dehinc objicitur leonibus, quorum dentibus praefocatus, hostia Christi efficitur. Ejus vero festivitas Kalendis Februarii celebratur.",
-   "mr:1220-liberalis": "Item Romae sanctorum Martyrum Liberati et Bajuli.",
+   "mr:1220-liberatus-et-baiulus": "Item Romae sanctorum Martyrum Liberati et Bajuli.",
    "mr:1220-eugenius-et-macarius": "In Arabia sanctorum Martyrum Eugenii et Macarii Presbyterorum, qui a Juliano Apostata, cum ipsius impietatem arguissent, saevissimis plagis affecti sunt, atque in vastissimam eremum relegati, et gladio caesi.",
    "mr:1220-ammon-et-socii": "Alexandriae sanctorum militum et Martyrum Ammonis, Zenonis, Ptolomaei, Ingenis et Theophili; qui, tribunalibus astantes, cum quidam Christianus, in suppliciis positus, trepidaret et jam prope ad negandum declinaret, vultu, oculis ac nutibus illum conabantur erigere. Cumque hac de causa clamor totius populi in eos prosiliret, prorumpentes in medium se Christianos esse testati sunt; per quorum victoriam Christus, qui suis eam animi constantiam dederat, gloriosissime triumphavit.",
    "mr:1220-julius": "Geldubae, in Germania, sancti Julii Martyris.",
@@ -327,11 +327,16 @@
   "titulus": "25 Decembris Octavo Kalendas Januarii. *. F",
   "elogia": {
    "mr:1225-nativitas-domini": "Anno a creatione mundi, quando in principio Deus creavit caelum et terram, quinquies millesimo centesimo nonagesimo nono; a diluvio autem, anno bis millesimo nongentesimo quinquagesimo septimo; a nativitate Abrahae, anno bis millesimo quintodecimo; a Moyse et egressu populi Israel de Aegypto, anno millesimo quingentesimo decimo; ab unctione David in Regem, anno millesimo trigesimo secundo; Hebdomada sexagesima quinta, juxta Danielis prophetiam; Olympiade centesima nonagesima quarta; ab urbe Roma condita, anno septingentesimo quinquagesimo secundo; anno Imperii Octaviani Augusti quadragesimo secundo, toto Orbe in pace composito, sexta mundi aetate, Jesus Christus, aeternus Deus aeternique Patris Filius, mundum volens adventu suo piissimo consecrare, de Spiritu Sancto conceptus, novemque post conceptionem decursis mensibus (Hic vox elevatur, et omnes genua flectunt), in Bethlehem Judae nascitur ex Maria Virgine factus Homo. Hic autem in priori voce dicitur, et in tono passionis: Nativitas Domini nostri Jesu Christi secundum carnem.",
-   "mr:1225-quodsequitur-legitur-in": "Quod sequitur, legitur in tono Lectionis consueto; et surgunt omnes.",
    "mr:1225-anastasia": "Eodem die natalis sanctae Anastasiae, quae, tempore Diocletiani, primo diram et immitem custodiam a viro suo Publio perpessa est, in qua tamen a Confessore Christi Chrysogono multum consolata et confortata fuit; deinde a Floro, Praefecto Illyrici, per diutinam custodiam macerata, ad ultimum, manibus et pedibus extensis, ligata est ad palos, et circa eam ignis accensus, in quo martyrium consummavit in insula Palmaria, ad quam una cum ducentis viris et septuaginta feminis deportata fuerat, qui variis interfectionibus martyrium celebrarunt.",
    "mr:1225-petrus-nolascus": "Barcinone, in Hispania, item natalis sancti Petri Nolasci Confessoris, qui Fundator exstitit Ordinis beatae Mariae de Mercede redemptionis captivorum, ac virtute et miraculis claruit. Ipsius autem festum colitur quinto Kalendas Februarii.",
    "mr:1225-eugenia": "Romae, in coemeterio Aproniani, sanctae Eugeniae Virginis, beati Martyris Philippi filiae, quae, tempore Gallieni Imperatoris, post plurima virtutum insignia, post sacros Virginum choros Christo aggregatos, sub Praefecto Urbis Nicetio diu agonizavit, ac novissime gladio jugulata est. Nicomediae passio multorum millium Martyrum, qui cum in Christi Natali ad Dominicum convenissent, Diocletianus Imperator januas Ecclesiae claudi jussit, et ignem circumcirca parari, tripodemque cum thure prae foribus poni, ac praeconem magna voce clamare ut qui incendium vellent effugere, foras exirent et Jovi thus adolerent; cumque omnes una voce respondissent se pro Christo libentius mori, incenso igne consumpti sunt, atque ita eo die nasci meruerunt in caelis, quo Christus in terris pro salute mundi olim nasci dignatus est."
   },
+  "rubricae": [
+   {
+    "after": "mr:1225-nativitas-domini",
+    "text": "Quod sequitur, legitur in tono Lectionis consueto; et surgunt omnes."
+   }
+  ],
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
  "26": {
@@ -387,7 +392,7 @@
    "mr:1230-felix-i": "Romae natalis sancti Felicis Primi, Papae et Martyris, qui sub Aureliano Principe Ecclesiam rexit. Ipsius tamen festum tertio Kalendas Junii celebratur.",
    "mr:1230-sabinus-et-socii": "Spoleti item natalis sanctorum Martyrum Sabini, Assisiensis Episcopi, atque Exsuperantii et Marcelli Diaconorum, ac Venustiani Praesidis cum uxore et filiis, sub Maximiano Imperatore. Ex ipsis Marcellus et Exsuperantius, primum equuleo suspensi, deinde fustibus graviter mactati, postremum, abrasi ungulis et laterum exustione assati, martyrium compleverunt; Venustianus autem non multo post, simul cum uxore et filiis, est gladio necatus; sanctus vero Sabinus, post detruncationem manuum et diutinam carceris macerationem, ad mortem usque caesus est. Horum martyrium, licet diverso exstiterit tempore, una tamen die recolitur.",
    "mr:1230-mansuetus-severus-appianus": "Alexandriae sanctorum Mansueti, Severi, Appiani, Donati, Honorii et Sociorum Martyrum.",
-   "mr:1230-anysius": "Thessalonicae sanctae Anysiae Martyris.",
+   "mr:1230-anysia": "Thessalonicae sanctae Anysiae Martyris.",
    "mr:1230-anysius-ibidem": "Ibidem sancti Anysii, ejusdem civitatis Episcopi.",
    "mr:1230-eugenius": "Mediolani sancti Eugenii, Episcopi et Confessoris.",
    "mr:1230-rainerius": "Ravennae sancti Liberii Episcopi. Aquilae, in Vestinis, sancti Rainerii Episcopi."

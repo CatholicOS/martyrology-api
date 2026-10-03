@@ -3,10 +3,10 @@
   "titulus": "The First Day of November",
   "elogia": {
    "mr:1101-festivitas-omnium-sanctorum-quam": "The Festival of All Saints, which pope Boniface IV., after the dedication of the Pantheon, ordained to be kept generally and solemnly every year, in the city of Rome, in honor of the blessed Virgin Mary, Mother of God, and of the holy martyrs. It was afterwards decreed by Gregory IV. that this feast, which was then celebrated in many dioceses, but at different times, should be on this day perpetually and solemnly kept by the whole Church in honor of all the Saints.",
-   "mr:1101-caesarius-tarracinae": "At Terracina, in Campania, the birthday of St. Caesarius, deacon, who was for many days detained in prison, afterwards put into a sack with St. Julian, priest, and then precipitated into the sea.",
+   "mr:1101-caesarius": "At Terracina, in Campania, the birthday of St. Caesarius, deacon, who was for many days detained in prison, afterwards put into a sack with St. Julian, priest, and then precipitated into the sea.",
    "mr:1101-benignus": "At Dijon, St. Benignus, a priest, who was sent to France by blessed Polycarp to preach the Gospel. After he had been subjected to many most grievous torments, by the judge Terentius, under the emperor Marcus Aurelius, he was finally condemned to have his neck struck with an iron bar and his body pierced with a lance.",
    "mr:1101-maria": "The same day, St. Mary, handmaid. Accused of professing the Christian religion, in the time of the emperor Adrian, she was subjected to cruel scourging, to torture on the rack, and the lacerating of her body with iron hooks, and thus completed her martyrdom.",
-   "mr:1101-caesarius": "At Damascus, the martyrdom of the Saints Caesarius, Dacius and five others.",
+   "mr:1101-caesarius-et-socii": "At Damascus, the martyrdom of the Saints Caesarius, Dacius and five others.",
    "mr:1101-ioannes-et-iacobus": "In Persia, under king Sapor, the holy martyrs John, bishop, and James, priest.",
    "mr:1101-cyrenia-et-juliana": "At Tarsus, the Saints Cyrenia and Juliana, under the emperor Maximian.",
    "mr:1101-austremonius": "At Clermont, in Auvergne, St. Austremonius, first bishop of that city.",
@@ -14,7 +14,8 @@
    "mr:1101-vigor": "At Bayeux, St. Vigor, bishop, in the time of Childebert, king of the Franks.",
    "mr:1101-severinus": "At Tivoli, St. Severin, monk.",
    "mr:1101-maturinus": "In Gatinais, St. Maturin, confessor."
-  }
+  },
+  "conclusio": null
  },
  "2": {
   "titulus": "The Second Day of November",
@@ -30,7 +31,8 @@
    "mr:1102-georgius": "At Vienne, St. George, bishop.",
    "mr:1102-ambrosius": "In the monastery of St. Maurice, in Switzerland, St. Ambrose, abbot.",
    "mr:1102-marcianus": "At Cyrus, in Syria, St. Marcian, confessor."
-  }
+  },
+  "conclusio": null
  },
  "3": {
   "titulus": "The Third Day of November",
@@ -40,13 +42,14 @@
    "mr:1103-martyres-caesaraugustae": "At Saragossa, under Dacian, governor of Spain, innumerable holy martyrs, who laid down their lives for Christ with admirable fervor.",
    "mr:1103-valentinus-et-hilarius": "At Viterbo, during the persecution of Maximian, the holy martyrs Valentine, priest, and Hilary, deacon. For attachment to the faith of Christ, they were cast into the Tiber with a stone tied to them, but being miraculously rescued by an angel, they were beheaded, and thus were crowned with the glory of martyrdom.",
    "mr:1103-wenefrida": "In England, St. Winefride, virgin and martyr.",
-   "mr:1103-berardus": "In the monastery of Clairvaux, the decease of St. Malachy, bishop of Armagh, in Ireland, who won renown in his own days for his many virtues, and whose life was written by the abbot St. Bernard.",
+   "mr:1103-malachias": "In the monastery of Clairvaux, the decease of St. Malachy, bishop of Armagh, in Ireland, who won renown in his own days for his many virtues, and whose life was written by the abbot St. Bernard.",
    "mr:1103-hubertus-tungrensis": "The same day, St. Hubert, bishop of Tongres.",
    "mr:1103-domnus": "At Vienne, St. Domnus, bishop and confessor.",
    "mr:1103-pirminus": "Also, the departure from this life of St. Pirminus, bishop of Meaux.",
-   "mr:1103-carolus-borromeo": "At Urgel, in Spain, St. Hermengaudus, bishop.",
+   "mr:1103-ermengaudius": "At Urgel, in Spain, St. Hermengaudus, bishop.",
    "mr:1103-silvia": "At Rome, St. Sylvia, mother of pope St. Gregory."
-  }
+  },
+  "conclusio": null
  },
  "4": {
   "titulus": "The Fourth Day of November",
@@ -64,21 +67,23 @@
    "mr:1104-emericus": "In Hungary, at Alba-Regale, the demise of St. Emeric, confessor, son of St. Stephen, king of Hungary.",
    "mr:1104-felix-de-valois": "In the monastery of Cerfroid, in the diocese of Meaux, St. Felix de Valois, founder of the Order of the Most Holy Trinity for the Redemption of Captives. His feast is celebrated on the 20th of this month by order of Innocent XI.",
    "mr:1104-modesta": "At Treves, St. Modesta, virgin."
-  }
+  },
+  "conclusio": null
  },
  "5": {
   "titulus": "The Fifth Day of November",
   "elogia": {
-   "mr:1105-dominicus-mau": "St. Zachary, priest and prophet, father of blessed John the Baptist.",
+   "mr:1105-zacharias": "St. Zachary, priest and prophet, father of blessed John the Baptist.",
    "mr:1105-elisabeth": "Also, St. Elizabeth, mother of the same most holy precursor.",
    "mr:1105-felix-et-eusebius": "At Terracina, in Campania, the birthday of the holy martyrs, Felix, priest, and Eusebius, monk. The latter having buried the holy martyrs Julian and Caesarius, and converted to the faith of Christ, many whom the priest St. Felix baptized, was arrested with him, and both being led to the tribunal of the judge, who could not succeed in intimidating them, they were shut up in prison, and as they refused to offer sacrifice, were beheaded that same night.",
    "mr:1105-galatio-et-episteme": "At Emesa, in Phoenicia, during the persecution of Decius, the holy martyrs Galation, and Epistemis, his wife, who were scourged, had their hands, feet and tongue severed from their bodies, and finally consummated their martyrdom by decapitation.",
    "mr:1105-theotimus-et-socii": "Also, the holy martyrs Domninus, Theotimus, Philotheus, Silvanus, and their companions, under the emperor Maximinus.",
    "mr:1105-magnus": "At Milan, St. Magnus, bishop and confessor.",
-   "mr:1105-domninus": "At Brescia, St. Dominator, bishop.",
+   "mr:1105-dominator": "At Brescia, St. Dominator, bishop.",
    "mr:1105-fibicius": "At Treves, St. Fibitius, who was made bishop of that city while filling the office of abbot.",
    "mr:1105-laetus": "At Orleans, in France, St. Laetus, priest and confessor."
-  }
+  },
+  "conclusio": null
  },
  "6": {
   "titulus": "The Sixth Day of November",
@@ -90,7 +95,8 @@
    "mr:1106-winnocus": "At Berg, the departure from this life of St. Winoc, abbot, who was renowned for virtues and miracles, and for a long time served his brethren, even those who were subject to him.",
    "mr:1106-felix-fundis": "At Fundi, in Campania, St. Felix, monk.",
    "mr:1106-leonardus": "At Limoges, in Aquitaine, St. Leonard, confessor, disciple of the blessed bishop Remigius, who was born of a noble family, and chose to lead a solitary life. He was celebrated for holiness and miracles, but his miraculous gift shone particularly in the deliverance of captives."
-  }
+  },
+  "conclusio": null
  },
  "7": {
   "titulus": "The Seventh Day of November",
@@ -106,7 +112,8 @@
    "mr:1107-willibrordus": "In Friesland, the decease of St. Willibrord, bishop of Utrecht, who was consecrated bishop by the blessed pope Sergius, and preached the Gospel in Friesland and Denmark.",
    "mr:1107-rufus": "At Metz, St. Rufus, bishop and confessor.",
    "mr:1107-florentius": "At Strasburg, St. Florentius, bishop."
-  }
+  },
+  "conclusio": null
  },
  "8": {
   "titulus": "The Eighth Day of November",
@@ -119,7 +126,8 @@
    "mr:1108-godefridus": "At Soissons, in France, St. Godfrey, bishop of Amiens, a man of great holiness.",
    "mr:1108-maurus": "At Verdun, St. Maurus, bishop and confessor.",
    "mr:1108-clarus": "At Tours, St. Clarus, priest, whose epitaph was written by St. Paulinus."
-  }
+  },
+  "conclusio": null
  },
  "9": {
   "titulus": "The Ninth Day of November",
@@ -132,7 +140,8 @@
    "mr:1109-agrippinus": "At Naples, in Campania, St. Agrippinus, a bishop renowned for miracles.",
    "mr:1109-eustolia-et-sopatra": "At Constantinople, the holy virgins Eustolia, a native of Rome, and Sopatra, daughter of the emperor Maurice.",
    "mr:1109-imago-salvatoris": "At Berytus, in Syria, the Commemoration of the Image of our Saviour, which being fastened to a cross by the Jews, poured out blood so copiously that the Eastern and Western Churches received abundantly of it."
-  }
+  },
+  "conclusio": null
  },
  "10": {
   "titulus": "The Tenth Day of November",
@@ -146,7 +155,8 @@
    "mr:1110-leo-in": "At Melun, St. Leo, confessor.",
    "mr:1110-tryphenna-et-tryphosa": "At Iconium, in Lycaonia, the holy women Tryphenna and Tryphosa, who profited by the preaching of blessed Paul and the example of Thecla to make great progress in Christian perfection.",
    "mr:1110-theoctiste": "In the island of Paros, St. Theoctistes, virgin."
-  }
+  },
+  "conclusio": null
  },
  "11": {
   "titulus": "The Eleventh Day of November",
@@ -158,7 +168,8 @@
    "mr:1111-veranus": "At Lyons, St. Veranus, bishop, whose life was illustrated by his faith and other virtues.",
    "mr:1111-bartholomaeus": "In the monastery of Crypta-Ferrata, near Frascati, the holy abbot, Bartholomew, companion of blessed Nilus, whose life he wrote.",
    "mr:1111-menna-samnii": "In the province of Abruzzo, blessed Mennas, solitary, whose virtues and miracles are mentioned by pope St. Gregory."
-  }
+  },
+  "conclusio": null
  },
  "12": {
   "titulus": "The Twelfth Day of November",
@@ -175,7 +186,8 @@
    "mr:1112-nilus": "At Constantinople, St. Nilus, abbot who resigned the office of governor of the city to become a monk, and was distinguished for learning and sanctity, in the time of Theodosius the Younger.",
    "mr:1112-theodorus-studita": "Also, at Constantinople, St. Theodore Studita, who became celebrated throughout the whole Catholic Church by his vigorous defence of the faith against the Iconoclasts.",
    "mr:1112-didacus": "At Alcala, in Spain, St. Didacus, confessor, of the Order of Minorites, who was renowned for his humility. Inscribed on the catalogue of the saints by Sixtus V., his feast is kept on the thirteenth of this month."
-  }
+  },
+  "conclusio": null
  },
  "13": {
   "titulus": "The Thirteenth Day of November",
@@ -190,7 +202,8 @@
    "mr:1113-eugenius": "At Toledo, St. Eugenius, bishop.",
    "mr:1113-quinctianus": "At Clermont, in Auvergne, St. Quinctian, bishop.",
    "mr:1113-homobonus": "At Cremona, St. Homobonus, confessor, renowned for miracles. He was ranked among the saints by Innocent III."
-  }
+  },
+  "conclusio": null
  },
  "14": {
   "titulus": "The Fourteenth Day of November",
@@ -205,7 +218,8 @@
    "mr:1114-martyres-emessae": "At Emesa, the passion of many holy women, who were barbarously tortured and massacred under Mady, a savage Arabian chief.",
    "mr:1114-iucundus": "At Bologna, St. Jucundus, bishop and confessor.",
    "mr:1114-laurentius-o-toole": "In Ireland, St. Lawrence, bishop of Dublin."
-  }
+  },
+  "conclusio": null
  },
  "15": {
   "titulus": "The Fifteenth Day of November",
@@ -219,7 +233,8 @@
    "mr:1115-maclovius": "In Bretagne, the birthday of St. Malo, bishop, who was glorious for miracles from his early years.",
    "mr:1115-luperius": "At Verona, St. Luperius, bishop and confessor.",
    "mr:1115-leopoldus": "In Austria, St. Leopold, margrave of that country, who was inscribed among the saints by Innocent VIII."
-  }
+  },
+  "conclusio": null
  },
  "16": {
   "titulus": "The Sixteenth Day of November",
@@ -230,7 +245,8 @@
    "mr:1116-fidentius": "At Padua, St. Fidentius, bishop.",
    "mr:1116-edmundus-rich": "At Canterbury, in England, St. Edmund, archbishop and confessor, who was sent into exile for having maintained the rights of his church. He died near Provins, in France, and was canonized by Innocent IV.",
    "mr:1116-othmarus": "The same day, the departure from this world of St. Othmar, abbot."
-  }
+  },
+  "conclusio": null
  },
  "17": {
   "titulus": "The Seventeenth Day of November",
@@ -244,7 +260,8 @@
    "mr:1117-gregorius-turonis": "At Tours, St. Gregory, bishop.",
    "mr:1117-eugenius": "At Florence, St. Eugenius, confessor, deacon of blessed Zenobius, bishop of that city.",
    "mr:1117-gertrudis": "In Germany, St. Gertrude, virgin, of the Order of St. Benedict, who was renowned for the revelations she received. Her festival is celebrated on the 15th of this month."
-  }
+  },
+  "conclusio": null
  },
  "18": {
   "titulus": "The Eighteenth Day of November",
@@ -256,7 +273,8 @@
    "mr:1118-odo": "At Tours, the departure from this life of blessed Odo, abbot of Cluny.",
    "mr:1118-thoma": "At Antioch, St. Thomas, a monk honored with an annual solemnity by the people of Antioch, for having obtained the cessation of a pestilence by his prayers.",
    "mr:1118-translatio-frigdiani": "At Lucca, in Tuscany, the translation of St. Frigdian, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "19": {
   "titulus": "The Nineteenth Day of November",
@@ -270,7 +288,8 @@
    "mr:1119-severinus-et-socii": "At Vienne, the holy martyrs Severinus, Exuperius and Felician. Their bodies, after the lapse of many years, were found through their own revelation, and being taken up with due honors by the bishop, clergy and people of that city, were buried with becoming solemnity.",
    "mr:1119-faustus": "The same day, St. Faustus, deacon of Alexandria, who was first banished with St. Denis, in the persecution of Valerian; later, in the persecution of Diocletian, being far advanced in age, he consummated his martyrdom by the sword.",
    "mr:1119-azas": "In Isauria, the martyrdom of Saint Azas and his military companions, to the number of one hundred and fifty, under the emperor Diocletian and the tribune Aquilinus."
-  }
+  },
+  "conclusio": null
  },
  "20": {
   "titulus": "The Twentieth Day of November",
@@ -286,8 +305,9 @@
    "mr:1120-gregorius-decapolitanus": "At Constantinople, St. Gregory of Decapolis, who suffered many tribulations for the worship of holy images.",
    "mr:1120-benignus": "At Milan, St. Benignus, a bishop, who, amidst the serious troubles caused by the barbarians, governed the church entrusted to him with the greatest constancy and piety.",
    "mr:1120-silvester": "At Chalons, St. Silvester, a bishop, who went to God in the forty-second year of his priesthood, full of days and virtues.",
-   "mr:1120-bernwardus": "At Verona, St. Simplicius, bishop and confessor."
-  }
+   "mr:1120-simplicius": "At Verona, St. Simplicius, bishop and confessor."
+  },
+  "conclusio": null
  },
  "21": {
   "titulus": "The Twenty-first Day of November",
@@ -299,9 +319,10 @@
    "mr:1121-honorius-et-socii": "In Spain, the holy martyrs Honorius, Eutychius and Stephen.",
    "mr:1121-heliodorus": "In Pamphylia, St. Heliodorus, martyr, in the persecution of Aurelian, under the governor Aetius. After his death his executioners were converted to the faith and thrown into the sea.",
    "mr:1121-gelasius-i": "At Rome, St. Gelasius, pope, distinguished for learning and sanctity.",
-   "mr:1121-maurus-parentii": "At Verona, St. Maurus, bishop and confessor.",
+   "mr:1121-maurus": "At Verona, St. Maurus, bishop and confessor.",
    "mr:1121-columbanus": "In the monastery of Bobio, the departure from this life of St. Columban, abbot, who founded many convents and governed a large number of monks. He died at an advanced age, celebrated for many virtues."
-  }
+  },
+  "conclusio": null
  },
  "22": {
   "titulus": "The Twenty-second Day of November",
@@ -311,7 +332,8 @@
    "mr:1122-maurus": "Also, at Rome, St. Maurus, martyr, who, coming from Africa to visit the tombs of the Apostles, was condemned to die, under the emperor Numerian, Celerinus being prefect of the city.",
    "mr:1122-marcus": "At Antioch, in Pisidia, the martyrdom of the Saints Mark and Stephen, under the emperor Diocletian.",
    "mr:1122-pragmatius": "At Autun, St. Pragmatius, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "23": {
   "titulus": "The Twenty-third Day of November",
@@ -324,7 +346,8 @@
    "mr:1123-gregorius": "At Girgenti, the decease of St. Gregory, bishop.",
    "mr:1123-trudo": "In the village of Hasbein, St. Tron, priest and confessor.",
    "mr:1123-ioannes-bonus": "At Mantua, blessed John the Good, of the Order of Augustinians, whose celebrated life was written by St. Antoninus."
-  }
+  },
+  "conclusio": null
  },
  "24": {
   "titulus": "The Twenty-fourth Day of November",
@@ -339,7 +362,8 @@
    "mr:1124-protasius": "At Milan, St. Protasius, bishop, who defended the cause of Athanasius before the emperor Constans, in the council of Sardica. Having sustained many labors for the church entrusted to him and for religion, he departed this life to go to the Lord.",
    "mr:1124-romanus": "In the castle of Blaye, St. Romanus, a priest, whose holiness is proclaimed by glorious miracles.",
    "mr:1124-portianus": "In Auvergne, St. Portian, an abbot, who was renowned for miracles in the time of king Theodoric."
-  }
+  },
+  "conclusio": null
  },
  "25": {
   "titulus": "The Twenty-fifth Day of November",
@@ -349,7 +373,8 @@
    "mr:1125-erasmus": "At Antioch, St. Erasmus, martyr.",
    "mr:1125-mercurius": "At Caesarea, in Cappadocia, St. Mercury, soldier, who vanquished the barbarians and triumphed over the cruelty of Decius through the protection of his guardian angel. Finally, having acquired great glory from his sufferings, he was crowned with martyrdom and went to reign forever in heaven.",
    "mr:1125-iucunda": "In Emilia, a province of Italy, St. Jucunda, virgin."
-  }
+  },
+  "conclusio": null
  },
  "26": {
   "titulus": "The Twenty-sixth Day of November",
@@ -363,10 +388,11 @@
    "mr:1126-amator": "At Autun, St. Amator, bishop.",
    "mr:1126-conradus": "At Constance, St. Conrad, bishop.",
    "mr:1126-basolus": "In the diocese of Rheims, the birthday of St. Basolus, confessor.",
-   "mr:1126-alypius": "At Adrianople, in Paphlagonia, St. Stylian, anchoret, renowned for miracles.",
+   "mr:1126-stylianus": "At Adrianople, in Paphlagonia, St. Stylian, anchoret, renowned for miracles.",
    "mr:1126-nicon": "In Armenia, St. Nicon, monk.",
    "mr:1126-leonardus-a-portu-mauritio": "At Rome, St. Leonard, of Port Maurice, confessor, of the Friars Minor of St. Francis, of the strict observance. He was remarkable for zeal, for he spent several years with extraordinary success in conducting his holy expeditions through Italy for the conquest of souls. He was ranked among the blessed by Pius VI., and among the saints by Pius IX. during the solemnities connected with the eighteenth centenary of the princes of the Apostles, Sts. Peter and Paul."
-  }
+  },
+  "conclusio": null
  },
  "27": {
   "titulus": "The Twenty-seventh Day of November",
@@ -380,7 +406,8 @@
    "mr:1127-virgilius": "At Salzburg, in Austria, St. Virgilius, bishop, and apostle of Carinthia, inscribed among the saints by Sovereign Pontiff Gregory IX.",
    "mr:1127-barlaam-et-josaphat": "In India, on the confines of Persia, the Saints Barlaam and Josaphat, whose wonderful deeds were written by St. John Damascene.",
    "mr:1127-severinus": "At Paris, the departure from this world of St. Severin, monk and solitary."
-  }
+  },
+  "conclusio": null
  },
  "28": {
   "titulus": "The Twenty-eighth Day of November",
@@ -390,7 +417,8 @@
    "mr:1128-stephanus": "At Constantinople, in the time of Constantine Copronymus, the holy martyrs Stephen the Younger, Basil, Peter, Andrew and their companions, numbering three hundred and thirty-nine monks, who were subjected to various torments for the worship of holy images, and confirmed the Catholic truth with the shedding of their blood.",
    "mr:1128-gregorius-iii": "At Rome, blessed pope Gregory III., who departed for heaven with a reputation for sanctity and miracles.",
    "mr:1128-iacobus-picenus": "At Naples, the departure from this world of St. James of La Marca, confessor, of the Order of Minorites, celebrated for the austerity of his life, his apostolic manner of preaching, and his many legations undertaken for the success of the affairs of Christianity. His name was added to the calendar of saints by the Sovereign Pontiff, Benedict XIII."
-  }
+  },
+  "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of November",
@@ -401,7 +429,8 @@
    "mr:1129-philomenus": "At Ancyra, St. Philomenus, martyr. During the persecution of the emperor Aurelian, under the governor Felix, he was first exposed to the flames, then having his hands, feet and head pierced with nails, consummated his martyrdom.",
    "mr:1129-blasius": "At Veroli, the holy martyrs Blasius and Demetrius.",
    "mr:1129-illuminata": "At Todi, St. Illuminata, virgin."
-  }
+  },
+  "conclusio": null
  },
  "30": {
   "titulus": "The Thirtieth Day of November",
@@ -413,6 +442,7 @@
    "mr:1130-troja": "At Saintes, the holy bishop Trojanus, a man of great sanctity, who shows by many miracles that he lives in heaven, though buried on earth.",
    "mr:1130-constantius": "At Rome, St. Constantius, confessor, who strongly opposed the Pelagians, and by enduring many injuries from them, gained a place among holy confessors.",
    "mr:1130-zosimus": "In Palestine, blessed Zosimus, confessor, who was distinguished by sanctity and miracles in the time of the emperor Justin."
-  }
+  },
+  "conclusio": null
  }
 }

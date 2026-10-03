@@ -5,6 +5,12 @@
       "mr:0101-circumcisio-domini": "Circumcisio Domini nostri Jesu Christi.",
       "mr:0102-concordius": "Spoleti sancti Concordii, Presbyteri et Martyris."
     },
+    "rubricae": [
+      {
+        "after": "mr:0102-concordius",
+        "text": "Quod sequitur, legitur in tono Lectionis consueto."
+      }
+    ],
     "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum. R. Deo gratias."
   },
   "2": {

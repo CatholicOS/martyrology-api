@@ -65,6 +65,7 @@ def service(tmp_path, crmedr_path, clbdr_path):
                             "mr:0101-circumcisio-domini": "Circumcisio.",
                             "mr:0102-concordius": "Spoleti Concordii.",
                         },
+                        "rubricae": [{"after": "mr:0102-concordius", "text": "Rubrica."}],
                         "conclusio": "c",
                     },
                     "2": {
@@ -189,6 +190,8 @@ def test_delete_elogium_cross_day(service):
         service, PUB, "curation/jdoe/edits", "data/editions/martyrologium_romanum_1749/01.json"
     )
     assert "mr:0102-concordius" not in raw["1"]["elogia"]  # was printed under day 1
+    # the rubric printed after it now follows the eulogy before it
+    assert raw["1"]["rubricae"][0]["after"] == "mr:0101-circumcisio-domini"
     with pytest.raises(ApiProblem) as ei:
         service.delete_elogium(
             IDENT, "martyrologium_romanum_1749", "mr:0102-concordius", topic=None, if_match=None

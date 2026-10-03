@@ -59,9 +59,18 @@ class ElogiumOut(BaseModel):
     footnotes: list[FootnoteOut] = Field(default_factory=list)
 
 
+class RubricaOut(BaseModel):
+    """A rubric printed among the eulogies; `after` is the eulogy it follows, null at
+    the head of the day."""
+
+    after: str | None
+    text: str
+
+
 class DayContentOut(BaseModel):
     titulus: str | None
     elogia: list[ElogiumOut]
+    rubricae: list[RubricaOut] = Field(default_factory=list)
     conclusio: str | None
 
 

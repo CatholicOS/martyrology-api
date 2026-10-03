@@ -1,5 +1,5 @@
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from pydantic import TypeAdapter, ValidationError
@@ -31,12 +31,22 @@ class Elogium:
 
 
 @dataclass
+class Rubrica:
+    """A rubric printed among the eulogies: an instruction, not a eulogy (crmedr#51).
+    `after` is the eulogy it follows, or None at the head of the day."""
+
+    after: str | None
+    text: str
+
+
+@dataclass
 class DayData:
     month: int
     day: int
     titulus: str | None
     elogia: list[Elogium]
     conclusio: str | None
+    rubricae: list[Rubrica] = field(default_factory=list)
 
 
 @dataclass
@@ -101,6 +111,9 @@ def parse_month_file(
                 titulus=obj.get("titulus"),
                 elogia=elogia,
                 conclusio=obj.get("conclusio"),
+                rubricae=[
+                    Rubrica(after=r["after"], text=r["text"]) for r in obj.get("rubricae", [])
+                ],
             )
     else:  # flat: membership/order/metadata from the registry, texts from the map
         by_day: dict[int, list] = {}

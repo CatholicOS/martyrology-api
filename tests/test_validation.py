@@ -35,6 +35,27 @@ def test_deprecated_ids_are_accepted(reg):
     assert validate_month_payload(raw, 1, "day-structured", reg) == []
 
 
+def test_rubricae(reg):
+    elogia = {"mr:0101-basilius": "x"}
+    ok = {
+        "1": {
+            "elogia": elogia,
+            "rubricae": [{"after": None, "text": "r"}, {"after": "mr:0101-basilius", "text": "s"}],
+        }
+    }
+    assert validate_month_payload(ok, 1, "day-structured", reg) == []
+    bad = {
+        "1": {"elogia": elogia, "rubricae": {"after": None}},
+        "2": {"elogia": {}, "rubricae": [{"after": "mr:0101-basilius", "text": "r"}]},
+        "3": {"elogia": {}, "rubricae": [{"after": None, "text": " "}, {"text": "r"}]},
+    }
+    errs = validate_month_payload(bad, 1, "day-structured", reg)
+    assert any("must be a list" in e for e in errs)
+    assert any("not a eulogy of the day" in e for e in errs)
+    assert any("non-empty string" in e for e in errs)
+    assert any("'after' and 'text'" in e for e in errs)
+
+
 def test_flat_valid_and_errors(reg):
     assert validate_month_payload({"mr:0101-basilius": "x"}, 1, "flat", reg) == []
     errs = validate_month_payload(

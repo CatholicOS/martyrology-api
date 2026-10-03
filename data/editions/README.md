@@ -25,6 +25,18 @@ Eulogies with no counterpart in the editio altera 2004 (dropped octaves, vigils,
 
 These historical prints number no eulogies, so the API returns `entry: null` for every eulogy of a day-structured edition; the order of `elogia` is the printed order.
 
+## Rubrics
+
+A day may carry `rubricae`: the rubrics the print sets among its eulogies, which are instructions to the reader, not eulogies (CatholicOS/crmedr#51). Each has the eulogy it follows as `after`, or null when it opens the day:
+
+```json
+"rubricae": [
+  { "after": "mr:1225-nativitas-domini", "text": "Quod sequitur, legitur in tono Lectionis consueto; et surgunt omnes." }
+]
+```
+
+`after` must be a key of the same day's `elogia`. A rubric printed inside a eulogy's sentence (*Hic vox elevatur…*) stays in the eulogy's text. The API returns a day's rubrics as `rubricae`. A single eulogy's view returns only the rubrics that follow it.
+
 ## Source
 
 Each edition folder may carry a `source.json` describing the printed copy its texts were taken from; `GET /editions` returns it as `source` (null without one):

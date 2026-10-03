@@ -45,6 +45,20 @@ def test_explicit_edition_path(client):
     assert b["metadata"]["resolved_from"] is None
 
 
+def test_day_serves_rubricae(client):
+    """crmedr#51: a rubric printed among the eulogies, placed after the eulogy it follows."""
+    b = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
+    assert b["rubricae"] == [
+        {
+            "after": "mr:0102-concordius",
+            "text": "Quod sequitur, legitur in tono Lectionis consueto.",
+        }
+    ]
+    month = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01").json()
+    assert month["days"]["01"]["rubricae"][0]["after"] == "mr:0102-concordius"
+    assert month["days"]["02"]["rubricae"] == []
+
+
 def test_edition_metadata_matches_discovery_vocabulary(client):
     b = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
     em = b["metadata"]["edition_metadata"]

@@ -583,7 +583,7 @@
    "subject_la": "Beatus Petrus Fourier",
    "subject_en": "Blessed Peter Fourier"
   },
-  "7-9-4": "mr:0709-augustinus",
+  "7-9-4": "mr:0709-nicolaus-pieck-et-socii",
   "7-10-6": "mr:0710-amalberga",
   "7-11-0": "mr:0711-pius-i",
   "7-11-8": {
@@ -1133,11 +1133,7 @@
    "subject_la": "Sanctus Maruthas",
    "subject_en": "Saint Maruthas"
   },
-  "12-5-1": {
-   "coin": "crispina",
-   "subject_la": "Sancta Crispina",
-   "subject_en": "Saint Crispina"
-  },
+  "12-5-1": "mr:1205-crispina-thagorensis",
   "12-5-6": {
    "coin": "nicetius",
    "subject_la": "Sanctus Nicetius",

@@ -29,7 +29,8 @@
    "mr:0102-isidorus-nitriae": "In Nitria, in Egypt, blessed Isidore, bishop and confessor.",
    "mr:0102-siridion": "The same day, St. Siridion, bishop.",
    "mr:0102-macarius-alexandrinus": "In Thebais, St. Macarius of Alexandria, abbot."
-  }
+  },
+  "conclusio": null
  },
  "3": {
   "titulus": "The Third Day of January",
@@ -37,13 +38,14 @@
    "mr:0103-octava-sancti-joannis-apostoli": "The Octave of St. John, apostle and evangelist.",
    "mr:0103-antherus": "At Rome, on the Appian way, the birthday of pope St. Anterus, who suffered under Julius Maximinus, and was buried in the cemetery of Callistus.",
    "mr:0103-petrus": "The same day, St. Peter, who was crucified at Aulane.",
-   "mr:0103-theogenes": "In Hellespont, the holy martyrs Cyrinus, Primus, and Theogenes.",
+   "mr:0103-cyrinus-et-socii": "In Hellespont, the holy martyrs Cyrinus, Primus, and Theogenes.",
    "mr:0103-gordius": "At Caesarea, in Cappadocia, St. Gordius, centurion, in whose praise is extant a celebrated discourse, delivered by St. Basil the Great on the day of his festival.—In Cilicia, the holy martyrs Zozimus, and the notary Athanasius.",
    "mr:0103-theopemptus-et-theona": "Also, the Saints Theopemptus and Theonas, who suffered a glorious martyrdom in the persecution of Diocletian.",
    "mr:0103-daniel": "At Padua, St. Daniel, martyr.",
    "mr:0103-florentius": "At Vienne, in France, St. Florentius, bishop, who was sent into exile and consummated his martyrdom, in the time of the emperor Gallienus.",
    "mr:0103-genovefa": "At Paris, St. Genevieve, virgin, who was consecrated to God by St. Germanus, bishop of Auxerre, and became famous for her admirable virtues and miracles."
-  }
+  },
+  "conclusio": null
  },
  "4": {
   "titulus": "The Fourth Day of January",
@@ -57,7 +59,8 @@
    "mr:0104-aquilinus-et-socii": "Also, in Africa, the most renowned martyrs Aquilinus, Geminus, Eugenius, Marcian, Quinctus, Theodotus, and Tryphon.",
    "mr:0104-gregorius": "At Langres, St. Gregory, a bishop renowned for miracles.",
    "mr:0104-rigobertus": "At Rheims, in France, St. Rigobertus, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "5": {
   "titulus": "The Fifth Day of January",
@@ -70,7 +73,8 @@
    "mr:0105-syncletica": "At Alexandria, St. Syncletica, whose noble deeds have been recorded by St. Athanasius.",
    "mr:0105-aemiliana": "At Rome, the holy virgin Emiliana, aunt of pope St. Gregory. Being called to God by her sister Tharsilla, who had preceded her, she departed for heaven on this day.",
    "mr:0105-apollinaris": "The same day, St. Apollinaris, virgin."
-  }
+  },
+  "conclusio": null
  },
  "6": {
   "titulus": "The Sixth Day of January",
@@ -81,7 +85,8 @@
    "mr:0106-melanius": "At Rennes, in France, St. Melanius, bishop and confessor, who, after a life remarkable for virtues innumerable, with his thoughts constantly fixed on heaven, gloriously departed from this world.",
    "mr:0106-andreas-corsini": "At Florence, St. Andrew Corsini, a Florentine Carmelite and bishop of Fiesoli. Being celebrated for miracles, he was ranked among the Saints by Urban VIII. His festival is kept on the 4th of February.",
    "mr:0106-nilammo": "At Geris, in Egypt, St. Nilammon, anchoret, who, whilst he was carried to a bishopric against his will, gave up his soul to God in prayer."
-  }
+  },
+  "conclusio": null
  },
  "7": {
   "titulus": "The Seventh Day of January",
@@ -95,7 +100,8 @@
    "mr:0107-niceta": "In Dacia, St. Nicetas, bishop, who made fierce and barbarous nations humane and meek by preaching the Gospel to them.",
    "mr:0107-theodorus": "In Egypt, St. Theodore, a saintly monk, who flourished in the time of Constantine the Great. He is mentioned by St. Athanasius, in his Life of St. Anthony.",
    "mr:0107-raymundus-de-penyafort": "At Barcelona, St. Raymond of Pennafort, of the Order of Preachers, celebrated for sanctity and learning. His festival is kept on the 23d of this month."
-  }
+  },
+  "conclusio": null
  },
  "8": {
   "titulus": "The Eighth Day of January",
@@ -109,7 +115,8 @@
    "mr:0108-maximus": "At Pavia, St. Maximus, bishop and confessor.",
    "mr:0108-patiens": "At Metz, St. Patiens, bishop.",
    "mr:0108-severinus": "The same day, among the inhabitants of Noricum (now Austria), the abbot St. Severin, who preached the Gospel in that country, and is called its apostle. By divine power his body was carried to Lucullanum, near Naples, and thence transferred to the monastery of St. Severin."
-  }
+  },
+  "conclusio": null
  },
  "9": {
   "titulus": "The Ninth Day of January",
@@ -120,7 +127,8 @@
    "mr:0109-epictetus-et-socii": "In Africa, the holy martyrs Epictetus, Jucundus, Secundus, Vitalis, Felix, and seven others.",
    "mr:0109-petrus": "At Sebaste, in Armenia, St. Peter, bishop, brother of St. Basil the Great.",
    "mr:0109-marcellinus": "At Ancona, St. Marcellinus, bishop, who, according to St. Gregory, miraculously delivered that city from destruction by fire."
-  }
+  },
+  "conclusio": null
  },
  "10": {
   "titulus": "The Tenth Day of January",
@@ -128,11 +136,12 @@
    "mr:0110-nicanoris": "In Cyprus, blessed Nicanor, one of the first seven deacons, a man of admirable faith and virtue, who was most gloriously crowned.",
    "mr:0110-agathon": "At Rome, pope St. Agatho, who terminated a life remarkable for sanctity and learning by a holy death.",
    "mr:0110-gulielmus": "At Bourges, in Aquitaine, St. William, archbishop and confessor, renowned for miracles and virtues. He was canonized by Honorius III.",
-   "mr:0110-ioannes": "At Milan, St. John the Good, bishop and confessor.",
+   "mr:0110-ioannes-bonus": "At Milan, St. John the Good, bishop and confessor.",
    "mr:0110-paulus": "In Thebais, the birthday of St. Paul, the first hermit, who lived alone in the desert from the sixteenth to the one hundred and thirteenth year of his age. His soul was seen by St. Anthony carried by angels among the choirs of apostles and prophets. His feast is celebrated on the 15th of this month.",
    "mr:0110-marcianus": "At Constantinople, St. Marcian, priest.",
    "mr:0110-petrus-urseolus": "In the monastery of Cusani, the birthday of St. Peter Urseolus (Orsini), confessor, previously Doge of Venice, and afterwards monk of the Order of St. Benedict, renowned for piety and miracles. His festival is kept on the 14th of this month."
-  }
+  },
+  "conclusio": null
  },
  "11": {
   "titulus": "The Eleventh Day of January",
@@ -147,7 +156,8 @@
    "mr:0111-palaemon": "In Thebais, St. Palaemon, abbot, who was the teacher of St. Pachomius.",
    "mr:0111-anastasius-et-socii": "At Suppentonia, near Mount Soractes, the holy monk Anastasius, and his companions, who were called by a voice from heaven to enter the kingdom of God.",
    "mr:0111-honorata": "At Pavia, St. Honorata, virgin."
-  }
+  },
+  "conclusio": null
  },
  "12": {
   "titulus": "The Twelfth Day of January",
@@ -162,7 +172,8 @@
    "mr:0112-ioannes": "At Ravenna, St. John, bishop and confessor.",
    "mr:0112-probus": "At Verona, St. Probus, bishop.",
    "mr:0112-benedictus-biscop": "In England, St. Benedict, abbot and confessor."
-  }
+  },
+  "conclusio": null
  },
  "13": {
   "titulus": "The Thirteenth Day of January",
@@ -178,7 +189,8 @@
    "mr:0113-viventius": "In the monastery of Verzy, St. Viventius, confessor.",
    "mr:0113-glaphyra": "At Amasea, in Pontus, St. Glaphyra, virgin.",
    "mr:0113-veronica-de-binasco-negroni": "At Milan, in the monastery of St. Martha, blessed Veronica of Binasco, virgin of the Order of St. Augustine."
-  }
+  },
+  "conclusio": null
  },
  "14": {
   "titulus": "The Fourteenth Day of January",
@@ -188,10 +200,11 @@
    "mr:0114-malachia-propheta": "In Judaea, St. Malachy, prophet.",
    "mr:0114-monachi-raithi": "On Mount Sinai, thirty-eight holy monks, killed by the Saracens for the faith of Christ.—In Egypt, in the district of Raithy, forty-three holy monks, who were put to death by the Blemmians, for the Christian religion.",
    "mr:0114-datius": "At Milan, St. Datius, bishop and confessor, mentioned by pope St. Gregory.",
-   "mr:0114-euphrasius": "In Africa, St. Euphrasius, bishop.",
+   "mr:0114-euphrasius-africae": "In Africa, St. Euphrasius, bishop.",
    "mr:0114-iulianus": "In Syria, in the time of the emperor Valens, St. Julian Sabas, the Elder, who miraculously restored at Antioch the Catholic faith, which was almost destroyed in that city.",
-   "mr:0114-gregorius-thaumaturgus": "At Neocaesarea, in Pontus, St. Macrina, disciple of St. Gregory Thaumaturgus, and grandmother of St. Basil, whom she brought up in the Christian faith."
-  }
+   "mr:0114-macrina": "At Neocaesarea, in Pontus, St. Macrina, disciple of St. Gregory Thaumaturgus, and grandmother of St. Basil, whom she brought up in the Christian faith."
+  },
+  "conclusio": null
  },
  "15": {
   "titulus": "The Fifteenth Day of January",
@@ -206,7 +219,8 @@
    "mr:0115-macarius": "In Egypt, St. Macarius, abbot, disciple of St. Anthony, very celebrated for his life and miracles.",
    "mr:0115-isidorus": "Also, blessed Isidore, renowned for holiness of life, faith and miracles.",
    "mr:0115-ioannes-calybita": "At Rome, St. John Calybita. For some time living unknown to his parents in a corner of their house, and later in a hut on an island in the Tiber, he was recognized by them only at his death. Being renowned for miracles, he was buried where he had died, and a church was subsequently erected in his honor in the same place."
-  }
+  },
+  "conclusio": null
  },
  "16": {
   "titulus": "The Sixteenth Day of January",
@@ -219,7 +233,8 @@
    "mr:0116-honoratus-fundis": "At Fundi, in Campania, St. Honoratus, abbot, mentioned by pope St. Gregory.",
    "mr:0116-furseus": "In the monastery of Peronne, St. Fursey, confessor.",
    "mr:0116-priscilla": "At Rome, St. Priscilla, who devoted herself and her goods to the service of the martyrs."
-  }
+  },
+  "conclusio": null
  },
  "17": {
   "titulus": "The Seventeenth Day of January",
@@ -229,7 +244,8 @@
    "mr:0117-diodorus-et-marianus": "At Rome, the finding of the holy martyrs Diodorus, priest, Marian, deacon, and their companions. Whilst they were commemorating the birthdays of the martyrs in a sand-pit, the entrance was closed by the persecutors, and the vault over them broken down, and they thus obtained the palm of martyrdom in the reign of pope St. Stephen.",
    "mr:0117-sulpicius-pius": "At Bourges, the demise of St. Sulpicius, surnamed Pius, whose life and precious death are adorned with glorious miracles.",
    "mr:0117-antonius-merulus-et-ioannes": "At Rome, in the monastery of St. Andrew, the blessed monks Anthony, Merulus, and John, of whom pope St. Gregory speaks in his writings."
-  }
+  },
+  "conclusio": null
  },
  "18": {
   "titulus": "The Eighteenth Day of January",
@@ -241,7 +257,8 @@
    "mr:0118-leobardus": "In the same place, St. Leobardus, anchoret, a man of wonderful abstinence and humility.",
    "mr:0118-deicolus": "In Brittany, St. Deicola, abbot, disciple of St. Columban.",
    "mr:0118-liberata": "At Como, St. Liberata, virgin."
-  }
+  },
+  "conclusio": null
  },
  "19": {
   "titulus": "The Nineteenth Day of January",
@@ -253,7 +270,8 @@
    "mr:0119-pontianus": "At Spoleto, in the days of the emperor Antoninus, the passion of St. Pontian, martyr, who was barbarously scourged for Christ by the command of the judge Fabian, and then compelled to walk barefoot on burning coals. As he was uninjured by the fire, he was put on the rack, was torn with iron hooks, and then thrown into a dungeon, where he was comforted by the visit of an angel. He was afterwards exposed to the lions, had melted lead poured over him and finally died by the sword.",
    "mr:0119-bassianus": "At Lodi, St. Bassian, bishop and confessor, who, in conjunction with St. Ambrose, courageously combated the heretics.",
    "mr:0119-wulstanus": "At Worcester, in England, St. Wulstan, bishop and confessor, conspicuous for merits and miracles. He was ranked among the Saints by Innocent III."
-  }
+  },
+  "conclusio": null
  },
  "20": {
   "titulus": "The Twentieth Day of January",
@@ -263,7 +281,8 @@
    "mr:0120-neophytus": "At Nicaea, in Bithynia, St. Neophytus, martyr, who, in the fifteenth year of his age, was scourged, cast into a furnace, and exposed to wild beasts; as he remained uninjured, and constantly confessed the faith of Christ, he was at last killed with the sword.",
    "mr:0120-maurus": "At Cesena, St. Maurus, bishop, renowned for virtues and miracles.",
    "mr:0120-euthymius": "In Palestine, in the time of the emperor Marcian, the birthday of St. Euthymius, abbot, who adorned the Church by his zeal for Catholic discipline, and the gift of miracles."
-  }
+  },
+  "conclusio": null
  },
  "21": {
   "titulus": "The Twenty-first Day of January",
@@ -274,7 +293,8 @@
    "mr:0121-patroclus": "At Troyes, St. Patroclus, martyr, who won the crown of martyrdom under the emperor Aurelian.",
    "mr:0121-meginradus": "In the monastery of Reichenau, St. Meinrad, hermit, who was killed by brigands.",
    "mr:0121-epiphanius": "At Pavia, St. Epiphanius, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "22": {
   "titulus": "The Twenty-second Day of January",
@@ -284,7 +304,8 @@
    "mr:0122-vincentius-et-socii": "At Embrun, in France, the holy martyrs Vincent, Orontius, and Victor, who were crowned with martyrdom in the persecution of Diocletian.",
    "mr:0122-gaudentius": "At Novara, St. Gaudentius, bishop and confessor.",
    "mr:0122-dominicus": "At Sora, the abbot St. Dominic, renowned for miracles."
-  }
+  },
+  "conclusio": null
  },
  "23": {
   "titulus": "The Twenty-third Day of January",
@@ -298,7 +319,8 @@
    "mr:0123-joannis-eleemosynarius": "At Alexandria, St. John the Almoner, bishop of that city, most celebrated for his charity towards the poor.",
    "mr:0123-ildefonsus": "At Toledo, St. Ildefonsus, bishop, who, on account of his great purity of life, and his defense of the virginity of the Mother of God against the heretics who impugned it, received from her a brilliant white vestment, and being renowned for sanctity, was called to heaven.",
    "mr:0123-martyrius": "In the Province of Valeria, St. Martyrius, monk, mentioned by pope St. Gregory."
-  }
+  },
+  "conclusio": null
  },
  "24": {
   "titulus": "The Twenty-fourth Day of January",
@@ -310,19 +332,21 @@
    "mr:0124-thyrsus-et-proiectus": "Also, the holy martyrs Thyrsus and Projectus.",
    "mr:0124-zama": "At Bologna, St. Zamas, the first bishop of that city, who was consecrated by pope St. Denis, and there wonderfully propagated the Christian faith.",
    "mr:0124-suranus": "Also, blessed Suranus, abbot, who lived in the time of the Lombards."
-  }
+  },
+  "conclusio": null
  },
  "25": {
   "titulus": "The Twenty-fifth Day of January",
   "elogia": {
    "mr:0125-conversio-sancti-pauli": "The conversion of St. Paul the Apostle, which happened the second year after the Ascension of our Lord.",
    "mr:0125-ananias": "At Damascus, the birthday of St. Ananias, who baptized that apostle. After he had preached the Gospel at Damascus, Eleutheropolis, and elsewhere, he was scourged under the judge Licinius, had his flesh torn, and lastly being overwhelmed with stones, ended his martyrdom.",
-   "mr:0125-agileus": "At Antioch, in the time of Julian the Apostate, the holy martyrs Juventinus and Maximus, who were crowned with martyrdom. On their birthday, St. John Chrysostom preached a sermon to his people.",
+   "mr:0125-iuventinus-et-maximus": "At Antioch, in the time of Julian the Apostate, the holy martyrs Juventinus and Maximus, who were crowned with martyrdom. On their birthday, St. John Chrysostom preached a sermon to his people.",
    "mr:0125-praeiectus-et-amarinus": "At Clermont, in Auvergne, the Saints Projectus, bishop, and Marinus, a man of God, who were murdered by the leading men of that city.",
    "mr:0125-donatus-et-socii": "Also, the holy martyrs Donatus, Sabinus, and Agape.",
    "mr:0125-bretannion": "At Tomis, in Scythia, St. Bretannion, bishop, who by his great sanctity, and his zeal for the Catholic faith, shone in the Church, under the Arian emperor Valens, whom he opposed with fortitude.",
    "mr:0125-poppo": "At Arras, in France, St. Poppo, abbot, renowned for miracles."
-  }
+  },
+  "conclusio": null
  },
  "26": {
   "titulus": "The Twenty-sixth Day of January",
@@ -331,12 +355,13 @@
    "mr:0126-theogenes": "At Hippo Regius, in Africa, the holy bishop Theogenes and thirty-six others, who, despising temporal death, obtained the crown of eternal life in the persecution of Valerian.",
    "mr:0126-paula": "At Bethlehem of Juda, the demise of St. Paula, widow, mother of St. Eustochium, virgin of Christ, who abandoned her worldly prospects, though she was descended from a noble line of senators, distributed her goods to the poor, and retired to the manger of our Lord, where, adorned with many virtues, and crowned with a long martyrdom, she departed for the kingdom of heaven. Her admirable life was written by St. Jerome.",
    "mr:0126-bathildis": "In the diocese of Paris, the saintly queen Bathildis, illustrious by her sanctity and glorious miracles."
-  }
+  },
+  "conclusio": null
  },
  "27": {
   "titulus": "The Twenty-seventh Day of January",
   "elogia": {
-   "mr:0127-theodoricus": "At Constantinople, St. John, bishop, who was surnamed Chrysostom, on account of his golden flow of eloquence. He greatly promoted the interests of the Christian religion by his preaching and exemplary life, and after many toils, closed his life in banishment. His sacred body was brought to Constantinople on this day, in the reign of Theodosius the younger; it was afterwards taken to Rome and placed in the basilica of the Prince of the Apostles. This illustrious preacher of the Word of God Pius X. declared and appointed heavenly patron of sacred orators.",
+   "mr:0127-ioannes-chrysostomus": "At Constantinople, St. John, bishop, who was surnamed Chrysostom, on account of his golden flow of eloquence. He greatly promoted the interests of the Christian religion by his preaching and exemplary life, and after many toils, closed his life in banishment. His sacred body was brought to Constantinople on this day, in the reign of Theodosius the younger; it was afterwards taken to Rome and placed in the basilica of the Prince of the Apostles. This illustrious preacher of the Word of God Pius X. declared and appointed heavenly patron of sacred orators.",
    "mr:0127-iulianus-sorae": "At Sora, St. Julian, martyr, who, being arrested in the persecution of Antoninus, was beheaded, because a pagan temple had fallen to the ground whilst he was tortured. Thus did he win the crown of martyrdom.",
    "mr:0127-avitus": "In Africa, St. Avitus, martyr.",
    "mr:0127-datius-et-reatrus": "In the same country, the holy martyrs, Datius, Reatrus, and their companions, who suffered in the persecution of the Vandals.",
@@ -345,7 +370,8 @@
    "mr:0127-iulianus-cenomanum": "At Le Mans, the demise of St. Julian, the first bishop of that city, who was sent thither by St. Peter to preach the Gospel.",
    "mr:0127-marius": "In the monastery of Bobacum, St. Maur, abbot.",
    "mr:0127-angela-merici": "At Brixen, St. Angela Merici, virgin, foundress of the Order of the Nuns of St. Ursula, whose principal aim is to direct young girls in the ways of the Lord. By an indult of Pius VII. her feast is celebrated on the 31st of May."
-  }
+  },
+  "conclusio": null
  },
  "28": {
   "titulus": "The Twenty-eighth Day of January",
@@ -359,7 +385,8 @@
    "mr:0128-iulianus": "At Cuenca, in Spain, the birthday of St. Julian, bishop, who went to his God with the reputation of working miracles, after bestowing the goods of the Church on the poor, and, like the Apostles, supporting himself by the work of his hands.",
    "mr:0128-ioannes": "In the monastery of Rheims, the demise of a holy priest named John, a man of God.",
    "mr:0128-iacobus": "In Palestine, St. James, a hermit, who hid himself a long time in a sepulchre to do penance for a fault he had committed, and being celebrated for miracles, departed for heaven."
-  }
+  },
+  "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of January",
@@ -372,7 +399,8 @@
    "mr:0129-aquilinus": "At Milan, St. Aquilinus, priest, who was crowned with martyrdom by having his throat pierced with a sword by the Arians.",
    "mr:0129-valerius": "At Treves, the demise of the blessed bishop Valerius, disciple of the apostle St. Peter.",
    "mr:0129-sulpicius-severus": "At Bourges, St. Sulpicius Severus, bishop, distinguished by his virtues and erudition."
-  }
+  },
+  "conclusio": null
  },
  "30": {
   "titulus": "The Thirtieth Day of January",
@@ -389,7 +417,8 @@
    "mr:0130-aldegundis": "In the monastery of Maubeuge, in Hainaut, St. Aldegundes, a virgin, who lived in the time of king Dagobert.",
    "mr:0130-savina": "At Milan, St. Savina, a most religious woman, who went to rest in the Lord whilst praying at the tomb of the holy martyrs Nabor and Felix.",
    "mr:0130-hyacintha-mariscotti": "At Viterbo, the holy virgin Hyacintha de Mariscotti, a nun of the Third Order of St. Francis, distinguished for the virtues of penance and charity. She was inscribed among the Blessed by Benedict XIII., and among the Saints by Pius VII."
-  }
+  },
+  "conclusio": null
  },
  "31": {
   "titulus": "The Thirty-first Day of January",
@@ -397,7 +426,7 @@
    "mr:0131-petrus-nolascus": "At Barcelona, in Spain, St. Peter Nolasco, confessor, who slept in the Lord on the 25th of December.",
    "mr:0131-cyrus-et-ioannes": "At Rome, on the road to Ostia, the holy martyrs Cyrus and John, who were beheaded after suffering many torments for the name of Christ.",
    "mr:0131-metranus": "At Alexandria, in the time of the emperor Decius, the birthday of St. Metran, martyr, who, because he refused to utter blasphemous words at the bidding of the Pagans, was scourged until he was covered with bruises, and pierced through the face and eyes with sharp-pointed reeds. He was then driven out of the city, overwhelmed with stones and killed.",
-   "mr:0131-victorinus-et-socii": "In the same place, the holy martyrs Saturninus, Thyrsus and Victor.",
+   "mr:0131-saturninus-et-socii": "In the same place, the holy martyrs Saturninus, Thyrsus and Victor.",
    "mr:0131-tharsicius-et-socii": "In the same city, the holy martyrs Tharsicius, Zoticus, Cyriacus, and their companions.",
    "mr:0131-tryphaena": "At Cyzicum, in Hellespont, St. Triphenes, martyr, who overcame various torments, but was finally killed by a bull, and thus merited the palm of martyrdom.",
    "mr:0131-geminianus": "At Modena, St. Geminian, bishop, made illustrious by his miracles.",
@@ -405,6 +434,7 @@
    "mr:0131-marcella": "At Rome, St. Marcella, a widow, whose meritorious deeds are related by St. Jerome.",
    "mr:0131-ludovica-albertoni": "In the same place, blessed Louisa Albertonia, a Roman widow, of the Third Order of St. Francis, distinguished for her virtues.",
    "mr:0131-marcus-evangelista": "The same day, the translation of the evangelist St. Mark, when his sacred body was brought from the city of Alexandria, in Egypt, then occupied by barbarians, to Venice, and with the greatest honors placed in the large church dedicated to his name."
-  }
+  },
+  "conclusio": null
  }
 }

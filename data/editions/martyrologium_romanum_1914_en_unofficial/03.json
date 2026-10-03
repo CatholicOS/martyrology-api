@@ -10,7 +10,8 @@
    "mr:0301-suitbertus": "At Kaiserswerth, the bishop St. Swidbert, who, in the time of pope Sergius, preached the Gospel to the inhabitants of Friesland, Holland, and to other Germanic peoples.",
    "mr:0301-siviardus": "At Angers, St. Albinus, bishop and confessor, a man of most eminent virtue and piety.—At Le Mans, St. Siviard, abbot.",
    "mr:0301-translatio-herculani": "At Perugia, the translation of St. Herculanus, bishop and martyr, who was beheaded by order of Totila, king of the Goths. Forty days after his decapitation his body, as pope St. Gregory relates, was found as sound and as firmly joined to the head as if it had never been touched by the sword."
-  }
+  },
+  "conclusio": null
  },
  "2": {
   "titulus": "The Second Day of March",
@@ -22,7 +23,8 @@
    "mr:0302-octoginta-martyres-campania": "In Campania, the commemoration of eighty holy martyrs, who were barbarously killed by the Lombards, because they would not eat meat which had been offered to the idols, nor adore a goat’s head.",
    "mr:0302-simplicius": "At Rome, St. Simplicius, pope and confessor.",
    "mr:0302-ceadda": "In England, St. Chad, bishop of Mercia and Lindisfarne, whose brilliant virtues are mentioned by Bede."
-  }
+  },
+  "conclusio": null
  },
  "3": {
   "titulus": "The Third Day of March",
@@ -33,18 +35,20 @@
    "mr:0303-cleonicus-et-eutropius": "Also, the holy soldiers Cleonicus, Eutropius, and Basiliscus, who gloriously triumphed by the death of the cross under the governor Asclepiades during the persecution of Maximian.",
    "mr:0303-titianus": "At Brescia, St. Titian, bishop and confessor.",
    "mr:0303-cunegundis": "At Bamberg, the empress St. Cunegundes, who preserved her virginity with the consent of her husband, the emperor Henry I. She terminated a life rich in meritorius good deeds with a holy death and worked many miracles afterward."
-  }
+  },
+  "conclusio": null
  },
  "4": {
   "titulus": "The Fourth Day of March",
   "elogia": {
    "mr:0304-casimirus": "At Wilna, in Lithuania, blessed Casimir, son of king Casimir, whom the Roman Pontiff, Leo X., placed in the number of the Saints.",
    "mr:0304-lucius-primus": "At Rome, on the Appian way, during the persecution of Valerian, the birthday of St. Lucius, pope and martyr, who was first exiled for the faith of Christ; but being permitted by divine Providence to return to his church, he suffered martyrdom by decapitation, after having combated the Novatians. His praises have been published by St. Cyprian.",
-   "mr:0304-appianus": "Also, at Rome, on the Appian road, nine hundred holy martyrs, who were buried in the same cemetery as St. Cecilia.—The same day, St. Caius, a member of the imperial household, who was drowned in the sea with twenty-seven others.",
+   "mr:0304-nongenti-martyres-romae": "Also, at Rome, on the Appian road, nine hundred holy martyrs, who were buried in the same cemetery as St. Cecilia.—The same day, St. Caius, a member of the imperial household, who was drowned in the sea with twenty-seven others.",
    "mr:0304-hadrianus": "At Nicomedia, in the reign of the emperor Diocletian, the holy martyr Adrian and twenty-three others, who endured martyrdom by having their limbs crushed. St. Adrian is especially commemorated on the 8th of September, when his body was conveyed to Rome.",
    "mr:0304-photius-et-socii": "Also, the martyrdom of the Saints Archelaus, Cyril, and Photius.",
    "mr:0304-basilius-et-socii": "In Chersonesus, the passion of the saintly bishops Basil, Eugenius, Agathodorus, Elpidius, Aetherius, Capito, Ephrem, Nestor, and Arcadius."
-  }
+  },
+  "conclusio": null
  },
  "5": {
   "titulus": "The Fifth Day of March",
@@ -55,7 +59,8 @@
    "mr:0305-theophilus": "At Caesarea, in Palestine, in the time of the emperor Severus, St. Theophilus, bishop, who was conspicuous by his wisdom and the purity of his life.",
    "mr:0305-gerasimus": "Also in Palestine, on the banks of the Jordan, the anchoret St. Gerasimus, who lived in the time of the emperor Zeno.",
    "mr:0305-ioannes-iosephus-a-cruce-calosirto": "At Naples, the decease of St. John Joseph of the Cross, Promoter and first Provincial of the Italian branch of the Order of Discalced Minorites of St. Peter of Alcantara, who, by emulating the virtues of St. Francis of Assisi and St. Peter of Alcantara, became a new ornament of the Seraphic Order. He was canonized by pope Gregory XVI."
-  }
+  },
+  "conclusio": null
  },
  "6": {
   "titulus": "The Sixth Day of March",
@@ -69,7 +74,8 @@
    "mr:0306-basilius": "At Bologna, St. Basil, bishop, who was consecrated by pope St. Sylvester, and by word and example governed with great holiness the church entrusted to his care.",
    "mr:0306-ollegarius": "At Barcelona, in Spain, blessed Ollegarius, who was first a canon, and afterwards bishop of Barcelona and archbishop of Tarragona.",
    "mr:0306-coleta-boylet": "At Ghent, in Flanders, St. Colette, virgin, who at first professed the rule of the Third Order of St. Francis, and afterwards, by the inspiration of the Holy Spirit, restored the primitive discipline in a great number of monasteries of Nuns of the Second Order. As she was adorned with heavenly virtues, and performed innumerable miracles, she was inscribed on the list of the Saints by the Sovereign Pontiff, Pius VII."
-  }
+  },
+  "conclusio": null
  },
  "7": {
   "titulus": "The Seventh Day of March",
@@ -81,7 +87,8 @@
    "mr:0307-paulus": "At Pelusium, in Egypt, St. Paul, bishop, who for the same cause also died an exile.",
    "mr:0307-gaudiosus": "At Brescia, St. Gaudiosus, bishop and confessor.",
    "mr:0307-paulus-simplex": "In Thebais, St. Paul, surnamed the Simple."
-  }
+  },
+  "conclusio": null
  },
  "8": {
   "titulus": "The Eighth Day of March",
@@ -94,7 +101,8 @@
    "mr:0308-cyrillus-et-socii": "Also in Africa, the Saints Cyril, bishop, Rogatus, Felix, another Rogatus, Beata, Herenia, Felicitas, Urbanus, Sylvanus, and Mamillus.",
    "mr:0308-iulianus": "At Toledo, in Spain, the demise of blessed Julian, bishop and confessor, most celebrated for his sanctity and learning.",
    "mr:0308-felix": "In England, St. Felix, bishop, who converted the East-Angles to the faith."
-  }
+  },
+  "conclusio": null
  },
  "9": {
   "titulus": "The Ninth Day of March",
@@ -105,7 +113,8 @@
    "mr:0309-pacianus": "At Barcelona, in Spain, the bishop St. Pacian, distinguished by his life and preaching. He ended his career in extreme old age, in the time of the emperor Theodosius.",
    "mr:0309-cyrillus-et-methodius": "In Moravia, the saintly bishops Cyril and Methodius, who brought to the faith of Christ many nations in those regions with their kings. Leo XIII. prescribed that their feast should be celebrated on the seventh of July.",
    "mr:0309-catharina": "At Bologna, St. Catherine, virgin, of the Order of St. Clare, illustrious by the holiness of her life. Her body is greatly honored in that city."
-  }
+  },
+  "conclusio": null
  },
  "10": {
   "titulus": "The Tenth Day of March",
@@ -115,7 +124,8 @@
    "mr:0310-macarius": "At Jerusalem, St. Macarius, bishop and confessor, at whose request the holy places were purified by Constantine and Helena, and beautified with sacred edifices.",
    "mr:0310-droctoveus": "At Paris, the decease of the abbot St. Droctoveus, who was a disciple of the blessed bishop Germanus.",
    "mr:0310-attala": "In the monastery of Bobio, the abbot St. Attalas, renowned for miracles."
-  }
+  },
+  "conclusio": null
  },
  "11": {
   "titulus": "The Eleventh Day of March",
@@ -128,9 +138,10 @@
    "mr:0311-sophronius": "At Jerusalem, the bishop St. Sophronius.",
    "mr:0311-benedictus": "At Milan, St. Benedict, bishop.",
    "mr:0311-firminus": "In the diocese of Amiens, the abbot St. Firmin.",
-   "mr:0311-constantinus": "At Carthage, St. Constantine, confessor.",
+   "mr:0311-constantinus-carthaginis": "At Carthage, St. Constantine, confessor.",
    "mr:0311-petrus": "At Babucum, in Campania, St. Peter, confessor, renowned for miracles."
-  }
+  },
+  "conclusio": null
  },
  "12": {
   "titulus": "The Twelfth Day of March",
@@ -141,7 +152,8 @@
    "mr:0312-mygdo-et-socii": "In the same city, St. Egdunus, priest, and seven others, who were strangled one by one, on successive days, to terrify those who remained.",
    "mr:0312-theophanes-chronographus": "At Constantinople, St. Theophanes, who gave up great wealth to embrace poverty in the monastic state. By Leo the Armenian he was kept in prison two years for the worship of holy images, then exiled in Samothracia, where, overwhelmed with afflictions, he breathed his last and wrought many miracles.",
    "mr:0312-bernardus": "At Capua, St. Bernard, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "13": {
   "titulus": "The Thirteenth Day of March",
@@ -154,7 +166,8 @@
    "mr:0313-nicephorus": "At Constantinople, the bishop St. Nicephorus. In defense of the traditions of his forefathers and of the worship of sacred images, he opposed firmly the Iconoclast emperor Leo the Armenian, by whom he was sent into exile, where he underwent a long martyrdom of fourteen years, and departed for the kingdom of God.",
    "mr:0313-ansovinus": "At Camerino, St. Ansovinus, bishop and confessor.",
    "mr:0313-euphrasia": "In Thebais, St. Euphrasia, virgin."
-  }
+  },
+  "conclusio": null
  },
  "14": {
   "titulus": "The Fourteenth Day of March",
@@ -165,7 +178,8 @@
    "mr:0314-duo-monachi-provincia": "In the province of Valeria, two saintly monks, who were hanged on a tree by the Lombards, and though dead, were heard singing psalms even by their enemies.",
    "mr:0314-inea-etiam-persecutione": "In the same persecution, a deacon of the church of Marsico was beheaded for the confession of the faith.",
    "mr:0314-mathildis": "At Halberstadt, in Germany, the demise of the blessed queen Matilda, mother of the emperor Otho I., celebrated for her humility and patience."
-  }
+  },
+  "conclusio": null
  },
  "15": {
   "titulus": "The Fifteenth Day of March",
@@ -178,9 +192,10 @@
    "mr:0315-leocritia": "At Cordova, St. Leocritia, virgin and martyr.",
    "mr:0315-zacharias": "At Rome, the birthday of pope St. Zachary, who governed the Church of God with great vigilance, and renowned for merits, rested in peace.",
    "mr:0315-probus": "At Rieti, the bishop St. Probus, at whose death the martyrs Juvenal and Eleutherius were present.",
-   "mr:0315-ludovica-de-marillac": "At Rome, St. Speciosus, a monk, whose soul his brother saw carried up to heaven.",
+   "mr:0315-speciosus": "At Rome, St. Speciosus, a monk, whose soul his brother saw carried up to heaven.",
    "mr:0315-clemens-maria-hofbauer": "At Vienna, in Austria, St. Clement Mary Hofbauer, a professed priest of the Congregation of the Most Holy Redeemer, remarkable for his energy in promoting the glory of God and the salvation of souls. As he became illustrious by his virtues and miracles, the Sovereign Pontiff Pius X. placed him in the catalogue of Saints."
-  }
+  },
+  "conclusio": null
  },
  "16": {
   "titulus": "The Sixteenth Day of March",
@@ -193,7 +208,8 @@
    "mr:0316-heribertus": "At Cologne, St. Heribert, a bishop, celebrated for sanctity.",
    "mr:0316-patricius": "At Clermont, in Auvergne, the demise of St. Patrick, bishop.",
    "mr:0316-abraham": "In Syria, St. Abraham, hermit, whose life has been written by the blessed deacon Ephrem."
-  }
+  },
+  "conclusio": null
  },
  "17": {
   "titulus": "The Seventeenth Day of March",
@@ -205,7 +221,8 @@
    "mr:0317-paulus": "At Constantinople, St. Paul, martyr, who was burned alive under Constantine Copronymus, for defending the worship of holy images.",
    "mr:0317-agricola": "At Chalons, in France, St. Agricola, bishop.",
    "mr:0317-gertrudis": "At Nivelle, in Brabant, St. Gertrude, a virgin of noble birth. Because she despised the world, and during her whole life practised all kinds of good works, she deserved to have Christ for her spouse in heaven."
-  }
+  },
+  "conclusio": null
  },
  "18": {
   "titulus": "The Eighteenth Day of March",
@@ -218,7 +235,8 @@
    "mr:0318-eduardus": "In England, the holy king Edward, who was assassinated by order of his treacherous stepmother, and became celebrated for many miracles.",
    "mr:0318-frigdianus": "At Lucca, in Tuscany, the birthday of the holy bishop Frigdian, who was illustrious by the power of working miracles. His feast is more especially celebrated on the 18th of November, when his body was translated.",
    "mr:0318-anselmus": "At Mantua, St. Anselm, bishop and confessor."
-  }
+  },
+  "conclusio": null
  },
  "19": {
   "titulus": "The Nineteenth Day of March",
@@ -229,7 +247,8 @@
    "mr:0319-apollonius-et-leontius-episcoporum": "The same day, the holy bishops Apollonius and Leontius.",
    "mr:0319-landoaldus-et-amantius": "At Ghent, the Saints Landoaldus, a Roman priest, and the deacon Amantius, who were sent to preach the Gospel by pope St. Martin, and after their death became illustrious by many miracles.",
    "mr:0319-ioannes": "At Civita-di-Penna, the birthday of blessed John, a man of great holiness, who came from Syria into Italy, where he constructed a monastery, and, after having been the spiritual guide of many servants of God for forty-four years, rested in peace, renowned for great virtue."
-  }
+  },
+  "conclusio": null
  },
  "20": {
   "titulus": "The Twentieth Day of March",
@@ -243,7 +262,8 @@
    "mr:0320-vulframnus": "In the monastery of Fontanelle, St. Wulfran, bishop of Sens, who after having resigned his bishopric and performed miracles, departed out of this life.",
    "mr:0320-cuthbertus": "In England, the demise of St. Cuthbert, bishop of Lindisfarne, who from his childhood to his death was renowned for good works and miracles.",
    "mr:0320-ambrosius-sansedoni": "At Siena, in Tuscany, blessed Ambrose of the Order of Preachers, celebrated for sanctity, eloquence, and miracles."
-  }
+  },
+  "conclusio": null
  },
  "21": {
   "titulus": "The Twenty-first Day of March",
@@ -254,7 +274,8 @@
    "mr:0321-birillus": "At Catania, St. Birillus, who was consecrated bishop by St. Peter. After converting many Gentiles to the faith, in extreme old age he rested in peace.",
    "mr:0321-serapion": "At Alexandria, blessed Serapion, anchoret and bishop of Thmuis, a man of great virtue, who being forced into exile by the enraged Arians, went to heaven.",
    "mr:0321-lupicinus": "In the territory of Lyons, the abbot St. Lupicinus, whose life was resplendent with the lustre of holiness and miracles."
-  }
+  },
+  "conclusio": null
  },
  "22": {
   "titulus": "The Twenty-second Day of March",
@@ -269,7 +290,8 @@
    "mr:0322-catharina-suecica": "In Sweden, St. Catharine, virgin, daughter of St. Bridget.",
    "mr:0322-lea": "At Rome, St. Lea, a widow, whose virtues and happy death are related by St. Jerome.",
    "mr:0322-catharina": "At Genoa, St. Catharine, a widow, celebrated for her contempt of the world and her love of God."
-  }
+  },
+  "conclusio": null
  },
  "23": {
   "titulus": "The Twenty-third Day of March",
@@ -283,7 +305,8 @@
    "mr:0323-julianus": "At Caesarea, St. Julian, confessor.",
    "mr:0323-benedictus": "In Campania, St. Benedict, a monk, who was shut up by the Goths in a burning furnace, but was the next day found uninjured.",
    "mr:0323-iosephus-oriol": "At Barcelona, in Spain, St. Joseph Oriol, priest and beneficiary of the church of St. Mary of the Kings. He was remarkable for his love of poverty and his charity towards the needy and the infirm. Distinguished both in life and after death by the working of miracles, he was placed in the number of the Saints by Pius X."
-  }
+  },
+  "conclusio": null
  },
  "24": {
   "titulus": "The Twenty-fourth Day of March",
@@ -297,7 +320,8 @@
    "mr:0324-agapitus": "At Synnadas, in Phrygia, St. Agapitus, bishop.",
    "mr:0324-latinus": "At Brescia, St. Latinus, bishop.",
    "mr:0324-seleucus": "In Syria, St. Seleucus, confessor."
-  }
+  },
+  "conclusio": null
  },
  "25": {
   "titulus": "The Twenty-fifth Day of March",
@@ -311,7 +335,8 @@
    "mr:0325-pelagius": "At Laodicea, St. Pelagius, bishop, who having endured exile and other afflictions for the Catholic faith under Valens, rested in the Lord.",
    "mr:0325-barontius-et-desiderius": "At Pistoja, the holy confessors Barontius and Desiderius.",
    "mr:0325-hermelandus": "In Indre, an island of the Loire, the abbot St. Hermelandus, whose glorious life is attested by signal miracles."
-  }
+  },
+  "conclusio": null
  },
  "26": {
   "titulus": "The Twenty-sixth Day of March",
@@ -325,7 +350,8 @@
    "mr:0326-liudgerus": "The same day, St. Ludger, bishop of Munster, who preached the Gospel to the Saxons.",
    "mr:0326-braulio": "At Saragossa, in Spain, St. Braulio, bishop and confessor.",
    "mr:0326-felix-treviris": "At Treves, St. Felix, bishop."
-  }
+  },
+  "conclusio": null
  },
  "27": {
   "titulus": "The Twenty-seventh Day of March",
@@ -336,7 +362,8 @@
    "mr:0327-zanita-et-socii": "In Persia, in the reign of King Sapor, the holy martyrs Zanitas, Lazarus, Marotas, Narses, and five others, who merited the palm of martyrdom by being barbarously murdered.",
    "mr:0327-rupertus": "At Salzburg, St. Rupert, bishop and confessor, who spread the Gospel extensively in Bavaria and Austria.",
    "mr:0327-ioannes": "In Egypt, the hermit St. John, a man of great holiness, who among other virtues, was replenished with the spirit of prophecy, and predicted to the emperor Theodosius that he would gain the victory over the tyrants Maximus and Eugenius."
-  }
+  },
+  "conclusio": null
  },
  "28": {
   "titulus": "The Twenty-eighth Day of March",
@@ -348,7 +375,8 @@
    "mr:0328-xystus-iii": "At Rome, St. Xystus III., pope and confessor.",
    "mr:0328-speus": "At Norcia, the abbot St. Speus, a man of extraordinary patience, whose soul at its departure from this life was seen by all his brethren to ascend to heaven in the shape of a dove.",
    "mr:0328-gunthramnus": "At Chalons, in France, the demise of St. Gontram, king, who devoted himself to exercises of piety, renounced the pomps of the world, and bestowed his treasures on churches and the poor."
-  }
+  },
+  "conclusio": null
  },
  "29": {
   "titulus": "The Twenty-ninth Day of March",
@@ -358,8 +386,9 @@
    "mr:0329-pastor-et-socii": "At Nicomedia, the martyrdom of the holy martyrs Pastor, Victorinus and their companions.",
    "mr:0329-armogastus-et-socii": "In Africa, under the Arian king Genseric, during the persecution of the Vandals, the holy confessors Armogastes, count, Mascula, Archimimus, and Saturus, master of the king’s household. Having endured many severe torments, as well as reproaches, for the confession of the truth, they reached the end of their glorious combats.",
    "mr:0329-secundus": "At Asti, St. Secundus, martyr.",
-   "mr:0329-eustasius": "In the monastery of Luxeuil, the decease of the abbot St. Eustasius, a disciple of St. Columban, who had under his guidance nearly six hundred monks. Eminent in sanctity, he was also renowned for miracles."
-  }
+   "mr:0329-eustasius-luxovii": "In the monastery of Luxeuil, the decease of the abbot St. Eustasius, a disciple of St. Columban, who had under his guidance nearly six hundred monks. Eminent in sanctity, he was also renowned for miracles."
+  },
+  "conclusio": null
  },
  "30": {
   "titulus": "The Thirtieth Day of March",
@@ -372,7 +401,8 @@
    "mr:0330-zosimus": "At Syracuse, St. Zosimus, bishop and confessor.",
    "mr:0330-ioannes": "On Mount Sinai, St. John Climacus, abbot.",
    "mr:0330-clinius": "At Aquino, St. Clinius, confessor."
-  }
+  },
+  "conclusio": null
  },
  "31": {
   "titulus": "The Thirty-first Day of March",
@@ -381,6 +411,7 @@
    "mr:0331-theodulus": "In Africa, the holy martyrs Theodulus, Anesius, Felix, Cornelia, and their companions.",
    "mr:0331-beniamin": "In Persia, during the reign of king Isdegerdes, St. Benjamin, deacon. Because he would not cease to preach the word of God, sharp-pointed reeds were forced under his nails, a thorny stake driven through his entrails, and thus he consummated his martyrdom.",
    "mr:0331-balbina": "At Rome, the holy virgin Balbina, daughter of the blessed martyr Quirinus, who was baptized by pope St. Alexander, and after overcoming the world, was buried on the Appian road at her father’s side."
-  }
+  },
+  "conclusio": null
  }
 }
