@@ -1,3 +1,8 @@
+import json
+
+import pytest
+
+from martyrology_api.models import FootnoteOut
 from martyrology_api.registry import Registry
 from martyrology_api.store import Store, detect_shape, parse_month_file
 
@@ -177,11 +182,11 @@ def test_footnotes_loaded_by_id(crmedr_path, clbdr_path, data_paths):
     s = make_store(crmedr_path, clbdr_path, data_paths)
     assert s.footnotes("martyrologium_romanum_2004") == {
         "mr:0102-argeus-et-socii": [
-            {
-                "mark": "1",
-                "after": "sociorum",
-                "text": "Quorum nomina: sancti Narcissus et Marcellinus.",
-            }
+            FootnoteOut(
+                mark="1",
+                after="sociorum",
+                text="Quorum nomina: sancti Narcissus et Marcellinus.",
+            )
         ]
     }
 
@@ -190,3 +195,22 @@ def test_footnotes_empty_without_a_file_or_texts(crmedr_path, clbdr_path, data_p
     s = make_store(crmedr_path, clbdr_path, data_paths)
     assert s.footnotes("martyrologium_romanum_1749") == {}
     assert s.footnotes("no_such_edition") == {}
+
+
+@pytest.mark.parametrize(
+    "bad",
+    [
+        {"mr:0102-argeus-et-socii": [{"mark": "1", "text": "No after."}]},  # a field missing
+        {"mr:0102-argeus-et-socii": {"mark": "1", "after": None, "text": "Not a list."}},
+        ["not", "an", "object"],
+    ],
+)
+def test_a_malformed_footnotes_file_fails_when_the_store_is_built(
+    tmp_path, crmedr_path, clbdr_path, bad
+):
+    edition = tmp_path / "martyrologium_romanum_2004"
+    edition.mkdir()
+    (edition / "01.json").write_text("{}", encoding="utf-8")
+    (edition / "footnotes.json").write_text(json.dumps(bad), encoding="utf-8")
+    with pytest.raises(ValueError, match=r"martyrologium_romanum_2004/footnotes\.json"):
+        make_store(crmedr_path, clbdr_path, [tmp_path])

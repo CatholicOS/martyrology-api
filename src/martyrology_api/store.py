@@ -2,7 +2,21 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from pydantic import TypeAdapter, ValidationError
+
+from .models import FootnoteOut
 from .registry import Registry, anchor_day, slug_of
+
+_FOOTNOTES = TypeAdapter(dict[str, list[FootnoteOut]])
+
+
+def load_footnotes(path: Path) -> dict[str, list[FootnoteOut]]:
+    """An edition's `footnotes.json`, validated. A malformed file raises at once, naming the file,
+    rather than failing every request of the edition later."""
+    try:
+        return _FOOTNOTES.validate_json(path.read_bytes())
+    except ValidationError as err:
+        raise ValueError(f"{path}: invalid footnotes.json: {err}") from err
 
 
 @dataclass
@@ -135,7 +149,12 @@ class Store:
         self._months: dict[tuple[str, int], dict[int, DayData]] = {}
         self._shapes: dict[str, str] = {}
         self._unaligned_editions: set[str] = set()
-        self._footnotes: dict[str, dict[str, list[dict]]] = {}
+        # Loaded and validated up front, so a broken file stops the service at startup.
+        self._footnotes: dict[str, dict[str, list[FootnoteOut]]] = {
+            eid: load_footnotes(d / "footnotes.json")
+            for eid, d in self._dirs.items()
+            if (d / "footnotes.json").exists()
+        }
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -185,18 +204,12 @@ class Store:
             return None
         return json.loads((d / "source.json").read_text(encoding="utf-8"))
 
-    def footnotes(self, edition_id: str) -> dict[str, list[dict]]:
+    def footnotes(self, edition_id: str) -> dict[str, list[FootnoteOut]]:
         """The printed footnotes of the edition's eulogies (`footnotes.json`
         beside its monthly files), by canonical id: each has the printed
         `mark`, the phrase it follows (`after`, or null when it couldn't be
         anchored) and its `text`. Empty when the edition has none."""
-        if edition_id not in self._footnotes:
-            d = self._dirs.get(edition_id)
-            f = d / "footnotes.json" if d is not None else None
-            self._footnotes[edition_id] = (
-                json.loads(f.read_text(encoding="utf-8")) if f is not None and f.exists() else {}
-            )
-        return self._footnotes[edition_id]
+        return self._footnotes.get(edition_id, {})
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
