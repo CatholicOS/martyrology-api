@@ -58,7 +58,7 @@
  "4": {
   "titulus": "4 Septembris Pridie Nonas Septembris. vij. F",
   "elogia": {
-   "mr:0904-moyses": "In monte Nebo, terrae Moab, sancti Moysis, legislatoris et Prophetae.",
+   "mr:0904-moyses-propheta": "In monte Nebo, terrae Moab, sancti Moysis, legislatoris et Prophetae.",
    "mr:0904-candida": "Neapoli, in Campania, natalis sanctae Candidae, quae sancto Petro Apostolo, ad eam urbem venienti, prima occurrit, atque, ab eo baptizata, postea sancto fine quievit.",
    "mr:0904-marcellus-treviris": "Treviris sancti Marcelli, Episcopi et Martyris.",
    "mr:0904-tres-martyres-ancyrae": "Ancyrae, in Galatia, natalis sanctorum trium puerorum Martyrum, id est Rufini, Silvani et Vitalici.",
@@ -91,7 +91,7 @@
  "6": {
   "titulus": "6 Septembris Octavo Idus Septembris. vij. A",
   "elogia": {
-   "mr:0906-zacharias": "In Palaestina sancti Zachariae Prophetae, qui, de Chaldaea senex in patriam reversus, ibique defunctus, juxta Aggaeum Prophetam conditus jacet.",
+   "mr:0906-zacharias-propheta": "In Palaestina sancti Zachariae Prophetae, qui, de Chaldaea senex in patriam reversus, ibique defunctus, juxta Aggaeum Prophetam conditus jacet.",
    "mr:0906-onesiphorus": "In Hellesponto sancti Onesiphori, Apostolorum discipuli, cujus meminit sanctus Paulus ad Timotheum scribens. Ipse autem Onesiphorus ibidem, una cum sancto Porphyrio, jussu Hadriani Proconsulis acriter verberatus et a ferocibus raptatus equis, spiritum Deo reddidit.",
    "mr:0906-donatianus-et-socii": "In Africa sanctorum Episcoporum Donatiani, Praesidii, Mansueti, Germani et Fusculi; qui, in persecutione Wandalica, jussu Ariani Regis Hunnerici, pro assertione catholicae veritatis, fustibus dirissime caesi et exsilio eliminati sunt. Inter eos etiam erat Episcopus, nomine Laetus, strenuus atque doctissimus vir, qui, post diuturnos carceris squalores, incendio concrematus est.",
    "mr:0906-faustus-et-macarius": "Alexandriae passio sanctorum Martyrum Fausti Presbyteri, Macarii et Sociorum decem; qui, sub Decio Imperatore et Valerio Praeside, pro Christi nomine, abscissis cervicibus, martyrium compleverunt.",
@@ -326,7 +326,7 @@
   "titulus": "21 Septembris Undecimo Kalendas Octobris. iv. B",
   "elogia": {
    "mr:0921-matthaeus": "In Aethiopia natalis sancti Matthaei, Apostoli et Evangelistae; qui, in ea regione praedicans, martyrium passus est. Hujus Evangelium, Hebraeo sermone conscriptum, ipso Matthaeo revelante, inventum est, una cum corpore beati Barnabae Apostoli, tempore Zenonis Imperatoris.",
-   "mr:0921-iona": "In terra Saar sancti Jonae Prophetae, qui sepultus est in Geth.",
+   "mr:0921-ionas-propheta": "In terra Saar sancti Jonae Prophetae, qui sepultus est in Geth.",
    "mr:0921-iphigenia": "In Aethiopia sanctae Iphigeniae Virginis, quae, baptizata a beato Matthaeo Apostolo et Deo dicata, sancto fine quievit.",
    "mr:0921-pamphilus": "Romae sancti Pamphili Martyris.",
    "mr:0921-alexander": "Eodem die, via Claudia, vigesimo ab Urbe milliario, passio sancti Alexandri Episcopi, qui, sub Antonino Imperatore, pro Christi fide, vincula, fustes, equuleum, lampades ardentes, ungularum laniationem, bestias ac fornacis superavit flammas, ac tandem, gladio caesus, vitam adeptus est gloriosam. Ejus corpus postea beatus Damasus Papa in Urbem transtulit sexto Kalendas Decembris.",
