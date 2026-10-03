@@ -100,7 +100,7 @@
    "mr:0408-aedesius": "Alexandriae sancti Aedesii Martyris, qui, sub Maximiano Galerio Imperatore, cum esset beati Apphiani frater, et impium Judicem, quod Deo dicatas Virgines lenonibus traderet, palam argueret, idcirco, a militibus tentus saevissimisque affectus suppliciis, in mare demersus est pro Christo Domino.",
    "mr:0408-ianuarius-et-socii": "In Africa sanctorum Martyrum Januarii, Maximae et Macariae.",
    "mr:0408-concessa": "Carthagine sanctae Concessae Martyris.",
-   "mr:0408-dionysius-2": "Apud Corinthum beati Dionysii Episcopi, qui eruditione et gratia, quam habuit in verbo Dei, non solum suae civitatis et provinciae populos, sed et aliarum provinciarum et urbium Episcopos epistolis erudivit; Romanosque Pontifices adeo coluit, ut eorum epistolas publice legere in Ecclesia diebus Dominicis consueverit. Claruit autem temporibus Marci Antonini Veri et Lucii Aurelii Commodi.",
+   "mr:0408-dionysius-corinthi": "Apud Corinthum beati Dionysii Episcopi, qui eruditione et gratia, quam habuit in verbo Dei, non solum suae civitatis et provinciae populos, sed et aliarum provinciarum et urbium Episcopos epistolis erudivit; Romanosque Pontifices adeo coluit, ut eorum epistolas publice legere in Ecclesia diebus Dominicis consueverit. Claruit autem temporibus Marci Antonini Veri et Lucii Aurelii Commodi.",
    "mr:0408-perpetuus": "Turonis, in Gallia, sancti Perpetui Episcopi, admirandae sanctitatis viri.",
    "mr:0408-redemptus": "Ferentini, in Hernicis, sancti Redempti Episcopi, cujus meminit beatus Gregorius Papa.",
    "mr:0408-amantius": "Apud Comum sancti Amantii, Episcopi et Confessoris."
@@ -284,7 +284,7 @@
    "mr:0421-arator-et-socii": "Alexandriae sanctorum Martyrum Aratoris Presbyteri, Fortunati, Felicis, Silvii et Vitalis, qui in carcere quieverunt.",
    "mr:0421-apollo-et-socii": "Nicomediae sanctorum Martyrum Apollinis, Isacii et Codrati; e quibus, sub Diocletiano Imperatore, ultimus capite plexus, et, paucis post illum diebus, duo primi in vinculis fame confecti, martyrii coronam meruerunt.",
    "mr:0421-anastasius": "Antiochiae sancti Anastasii Sinaitae Episcopi.",
-   "mr:0421-conradus-de-parzham-birndorfer": "Œttingae Veteris, in Bavaria, sancti Conradi a Parzham, Confessoris, Ordinis Minorum Capuccinorum, caritate et oratione insignis, quem, miraculis clarum, Pius Papa Undecimus Sanctorum numero adscripsit."
+   "mr:0421-conradus-de-parzham": "Œttingae Veteris, in Bavaria, sancti Conradi a Parzham, Confessoris, Ordinis Minorum Capuccinorum, caritate et oratione insignis, quem, miraculis clarum, Pius Papa Undecimus Sanctorum numero adscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -327,7 +327,7 @@
    "mr:0424-honorius": "Brixiae sancti Honorii Episcopi.",
    "mr:0424-egbertus": "In Iona, Scotiae insula, sancti Egberti, Presbyteri et Monachi, admirandae humilitatis et continentiae viri.",
    "mr:0424-bova-et-doda": "Rhemis, in Gallia, sanctarum Virginum Bovae et Dodae.",
-   "mr:0424-maria-a-sancta-euphrasia-pelletier": "Andegavi, in Gallia, sanctae Mariae a sancta Euphrasia Pelletier, Virginis, Instituti Sororum a Bono Pastore Fundatricis, quam Pius Duodecimus, Pontifex Maximus, in Sanctarum numerum retulit.",
+   "mr:0424-maria-a-sancta-euphrasia": "Andegavi, in Gallia, sanctae Mariae a sancta Euphrasia Pelletier, Virginis, Instituti Sororum a Bono Pastore Fundatricis, quam Pius Duodecimus, Pontifex Maximus, in Sanctarum numerum retulit.",
    "mr:0424-conversio-augustini": "Mediolani Conversio sancti Augustini Episcopi, Confessoris et Ecclesiae Doctoris; quem beatus Ambrosius Episcopus veritatem fidei catholicae docuit, et hac die baptizavit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -336,7 +336,7 @@
   "titulus": "25 Aprilis Septimo Kalendas Maji. *. F",
   "elogia": {
    "mr:0425-litaniae-maiores": "Romae Litaniae majores ad sanctum Petrum.",
-   "mr:0425-marcus": "Alexandriae natalis beati Marci Evangelistae. Hic, discipulus et interpres Apostoli Petri, rogatus Romae a fratribus scripsit Evangelium, quo assumpto, perrexit in Aegyptum, primusque Alexandriae Christum annuntians, constituit Ecclesiam; ac postea, pro fide Christi tentus, funibus vinctus et per saxa raptatus, graviter afflictus est; deinde, reclusus in carcere, primo angelica visitatione confortatus est, et demum, ipso Domino sibi apparente, ad caelestia regna vocatus, octavo Neronis anno.",
+   "mr:0425-marcus-evangelista": "Alexandriae natalis beati Marci Evangelistae. Hic, discipulus et interpres Apostoli Petri, rogatus Romae a fratribus scripsit Evangelium, quo assumpto, perrexit in Aegyptum, primusque Alexandriae Christum annuntians, constituit Ecclesiam; ac postea, pro fide Christi tentus, funibus vinctus et per saxa raptatus, graviter afflictus est; deinde, reclusus in carcere, primo angelica visitatione confortatus est, et demum, ipso Domino sibi apparente, ad caelestia regna vocatus, octavo Neronis anno.",
    "mr:0425-anianus": "Item Alexandriae sancti Aniani Episcopi, qui, beati Marci discipulus ejusque in Episcopatu successor, clarus virtutibus quievit in Domino.",
    "mr:0425-stephanus": "Antiochiae sancti Stephani, Episcopi et Martyris, qui ab haereticis Synodum Chalcedonensem impugnantibus, multa passus, in Orontem fluvium praecipitatus est, tempore Zenonis Imperatoris.",
    "mr:0425-evodius-et-socii": "Syracusis, in Sicilia, sanctorum Martyrum fratrum Evodii, Hermogenis et Callistae.",

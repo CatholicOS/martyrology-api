@@ -405,7 +405,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0113-veronica-de-binasco-negroni": {
+  "mr:0113-veronica-de-binasco": {
    "method": "same-day",
    "score": 2.4
   },
@@ -465,7 +465,7 @@
    "method": "same-day",
    "score": 1.85
   },
-  "mr:0116-marcellus-primus": {
+  "mr:0116-marcellus-i": {
    "method": "override",
    "score": null
   },
@@ -901,7 +901,7 @@
    "method": "same-day",
    "score": 1.16
   },
-  "mr:0131-marcus-evangelista": {
+  "mr:0131-translatio-marci-evangelistae": {
    "method": "same-day",
    "score": 1.63
   },
@@ -1721,7 +1721,7 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:0305-ioannes-iosephus-a-cruce-calosirto": {
+  "mr:0305-ioannes-iosephus-a-cruce": {
    "method": "override",
    "score": null
   },
@@ -2549,7 +2549,7 @@
    "method": "same-day",
    "score": 3.54
   },
-  "mr:0408-dionysius-2": {
+  "mr:0408-dionysius-corinthi": {
    "method": "same-day",
    "score": 2.15
   },
@@ -2981,7 +2981,7 @@
    "method": "same-day",
    "score": 1.81
   },
-  "mr:0425-marcus": {
+  "mr:0425-marcus-evangelista": {
    "method": "same-day",
    "score": 1.75
   },
@@ -8053,7 +8053,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1012-seraphinus-de-monte-granario-de-nicola": {
+  "mr:1012-seraphinus-de-monte-granario": {
    "method": "same-day",
    "score": 1.27
   },
@@ -8213,7 +8213,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1018-lucas": {
+  "mr:1018-lucas-evangelista": {
    "method": "same-day",
    "score": 1.75
   },

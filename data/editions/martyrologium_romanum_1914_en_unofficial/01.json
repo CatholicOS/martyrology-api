@@ -190,7 +190,7 @@
    "mr:0113-agricius": "At Treves, St. Agritius, bishop.",
    "mr:0113-viventius": "In the monastery of Verzy, St. Viventius, confessor.",
    "mr:0113-glaphyra": "At Amasea, in Pontus, St. Glaphyra, virgin.",
-   "mr:0113-veronica-de-binasco-negroni": "At Milan, in the monastery of St. Martha, blessed Veronica of Binasco, virgin of the Order of St. Augustine."
+   "mr:0113-veronica-de-binasco": "At Milan, in the monastery of St. Martha, blessed Veronica of Binasco, virgin of the Order of St. Augustine."
   },
   "conclusio": null
  },
@@ -228,7 +228,7 @@
  "16": {
   "titulus": "The Sixteenth Day of January",
   "elogia": {
-   "mr:0116-marcellus-primus": "At Rome, on the Salarian way, the birthday of the pope St. Marcellus, a martyr, for the confession of the Catholic faith. By command of the tyrant Mexentius he was first beaten with clubs, then sent to take care of animals, with a guard to watch him. In this servile office, dressed in haircloth, he departed this life.",
+   "mr:0116-marcellus-i": "At Rome, on the Salarian way, the birthday of the pope St. Marcellus, a martyr, for the confession of the Catholic faith. By command of the tyrant Mexentius he was first beaten with clubs, then sent to take care of animals, with a guard to watch him. In this servile office, dressed in haircloth, he departed this life.",
    "mr:0116-berardus-et-socii": "At Morocco, in Africa, the martyrdom of the holy martyrs of the Order of Minorites, Berard, Peter, Accursius, Adjutus, and Otto.",
    "mr:0116-honoratus": "At Arles, St. Honoratus, bishop and confessor, whose life was renowned for learning and miracles.",
    "mr:0116-titianus": "At Oderzo, St. Titian, bishop and confessor.",
@@ -439,7 +439,7 @@
    "mr:0131-iulius": "In the province of Milan, St. Julius, priest and confessor, in the reign of the emperor Theodosius.",
    "mr:0131-marcella": "At Rome, St. Marcella, a widow, whose meritorious deeds are related by St. Jerome.",
    "mr:0131-ludovica-albertoni": "In the same place, blessed Louisa Albertonia, a Roman widow, of the Third Order of St. Francis, distinguished for her virtues.",
-   "mr:0131-marcus-evangelista": "The same day, the translation of the evangelist St. Mark, when his sacred body was brought from the city of Alexandria, in Egypt, then occupied by barbarians, to Venice, and with the greatest honors placed in the large church dedicated to his name."
+   "mr:0131-translatio-marci-evangelistae": "The same day, the translation of the evangelist St. Mark, when his sacred body was brought from the city of Alexandria, in Egypt, then occupied by barbarians, to Venice, and with the greatest honors placed in the large church dedicated to his name."
   },
   "conclusio": null
  }

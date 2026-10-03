@@ -195,7 +195,7 @@
    "mr:0113-agricius": "Treviris sancti Agritii Episcopi.",
    "mr:0113-viventius": "In Versiaco monasterio, in Gallia, sancti Viventii Confessoris.",
    "mr:0113-glaphyra": "Amaseae, in Ponto, sanctae Glaphyrae Virginis.",
-   "mr:0113-veronica-de-binasco-negroni": "Mediolani, in coenobio sanctae Marthae, Beatae Veronicae de Binasco Virginis, ex Ordine sancti Augustini."
+   "mr:0113-veronica-de-binasco": "Mediolani, in coenobio sanctae Marthae, Beatae Veronicae de Binasco Virginis, ex Ordine sancti Augustini."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -232,7 +232,7 @@
  "16": {
   "titulus": "16 Januarii Decimo septimo Kalendas Februarii. ix. D",
   "elogia": {
-   "mr:0116-marcellus-primus": "Romae, via Salaria, natalis sancti Marcelli Primi, Papae et Martyris; qui, ob catholicae fidei confessionem, jubente Maxentio tyranno, primo caesus est fustibus, deinde ad servitium animalium cum custodia publica deputatus, et ibidem, serviendo indutus amictu cilicino, defunctus est.",
+   "mr:0116-marcellus-i": "Romae, via Salaria, natalis sancti Marcelli Primi, Papae et Martyris; qui, ob catholicae fidei confessionem, jubente Maxentio tyranno, primo caesus est fustibus, deinde ad servitium animalium cum custodia publica deputatus, et ibidem, serviendo indutus amictu cilicino, defunctus est.",
    "mr:0116-berardus-et-socii": "Marrochii, in Africa, passio sanctorum quinque Protomartyrum Ordinis Minorum, scilicet Berardi, Petri atque Othonis Sacerdotum, Accursii et Adjuti Laicorum; qui, ob Christianae fidei praedicationem ac Mahumeticae reprobationem legis, post varia tormenta et ludibria, a Saracenorum Rege, scissis gladio capitibus, enecati sunt.",
    "mr:0116-mela": "Rhinocoluras, in Aegypto, sancti Melae Episcopi, qui, sub Valente exsilium et alia gravia pro fide catholica passus, in pace quievit.",
    "mr:0116-honoratus": "Arelate, in Gallia, sancti Honorati, Episcopi et Confessoris; cujus vita tam doctrina quam miraculis fuit illustris.",
@@ -447,7 +447,7 @@
    "mr:0131-franciscus-xaverius-maria-bianchi": "Neapoli sancti Francisci Xaverii Mariae Bianchi, Confessoris, Clerici Regularis sancti Pauli, signis, donis caelestibus et admirabili patientia illustris, quem Pius Papa Duodecimus ad supremos honores Sanctorum extulit.",
    "mr:0131-marcella": "Romae sanctae Marcellae Viduae, cujus praeclaras laudes beatus Hieronymus scripsit.",
    "mr:0131-ludovica-albertoni": "Item Romae Beatae Ludovicae Albertoniae, Viduae Romanae, ex tertio Ordine sancti Francisci, virtutibus clarae.",
-   "mr:0131-marcus-evangelista": "Eodem die Translatio sancti Marci Evangelistae, cum sacrum ejus corpus ex Alexandria, a barbaris tunc occupata, Venetias allatum, ibidem in majori Ecclesia, ejus nomine consecrata, honorificentissime conditum fuit."
+   "mr:0131-translatio-marci-evangelistae": "Eodem die Translatio sancti Marci Evangelistae, cum sacrum ejus corpus ex Alexandria, a barbaris tunc occupata, Venetias allatum, ibidem in majori Ecclesia, ejus nomine consecrata, honorificentissime conditum fuit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  }
