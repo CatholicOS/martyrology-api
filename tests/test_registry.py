@@ -71,3 +71,19 @@ def test_in_edition_applies_overrides(crmedr_path, clbdr_path):
     )
     assert explicit_null is not None and explicit_null.entry is None
     assert reg.entries["mr:0105-durando"].same_eulogy == ("mr:0106-durando",)
+
+
+def test_deprecated_same_eulogy(crmedr_path, clbdr_path, tmp_path):
+    """A deprecated eulogy printed on another day than its counterpart keeps its
+    same_eulogy link (crmedr#49): the API reads it from deprecated_ids.json."""
+    import json
+    import shutil
+
+    root = tmp_path / "crmedr"
+    shutil.copytree(crmedr_path, root)
+    dep_path = root / "data" / "deprecated_ids.json"
+    dep = json.loads(dep_path.read_text())
+    dep[0]["same_eulogy"] = ["mr:0101-basilius"]
+    dep_path.write_text(json.dumps(dep))
+    reg = Registry.load(root, clbdr_path)
+    assert reg.entries["mr:0101-circumcisio-domini"].same_eulogy == ("mr:0101-basilius",)

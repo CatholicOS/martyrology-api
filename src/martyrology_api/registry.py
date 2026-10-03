@@ -137,6 +137,7 @@ class Registry:
                 deprecated=True,
                 attested_in=e.get("attested_in"),
                 country=e.get("country"),
+                same_eulogy=tuple(e.get("same_eulogy", [])),
             )
 
         i18n: dict[str, dict[str, str]] = {}
