@@ -42,7 +42,7 @@
    "mr:0703-anatolius-laodiceae": "Laodiceae, in Syria, sancti Anatolii Episcopi, qui non solum religiosis viris, sed et philosophis admiranda scripta reliquit.",
    "mr:0703-heliodorus": "Altini, in Venetorum finibus, sancti Heliodori Episcopi, doctrina et sanctitate insignis.",
    "mr:0703-dathus": "Ravennae sancti Dathi, Episcopi et Confessoris.",
-   "mr:0703-thomas": "Edessae, in Mesopotamia, Translatio sancti Thomae Apostoli ex India; cujus reliquiae Ortonam, apud Frentanos, postea translatae sunt."
+   "mr:0703-thomas-apostolus": "Edessae, in Mesopotamia, Translatio sancti Thomae Apostoli ex India; cujus reliquiae Ortonam, apud Frentanos, postea translatae sunt."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -370,7 +370,7 @@
  "25": {
   "titulus": "25 Julii Octavo Kalendas Augusti. *. F",
   "elogia": {
-   "mr:0725-iacobus": "Sancti Jacobi Apostoli, qui exstitit beati Joannis Evangelistae frater; et, prope festum Paschae ab Herode Agrippa decollatus, primus ex Apostolis coronam martyrii percepit. Ejus sacra ossa, ab Hierosolymis ad Hispanias hoc die translata, et in ultimis earum finibus apud Gallaeciam recondita, celeberrima illarum gentium veneratione, et frequenti Christianorum concursu, religionis et voti causa illuc adeuntium, pie coluntur.",
+   "mr:0725-iacobus-apostolus": "Sancti Jacobi Apostoli, qui exstitit beati Joannis Evangelistae frater; et, prope festum Paschae ab Herode Agrippa decollatus, primus ex Apostolis coronam martyrii percepit. Ejus sacra ossa, ab Hierosolymis ad Hispanias hoc die translata, et in ultimis earum finibus apud Gallaeciam recondita, celeberrima illarum gentium veneratione, et frequenti Christianorum concursu, religionis et voti causa illuc adeuntium, pie coluntur.",
    "mr:0725-christophorus": "In Lycia sancti Christophori Martyris, qui, sub Decio, virgis ferreis attritus, et e flammae aestuantis incendio superna Christi virtute servatus, ad ultimum, sagittarum ictibus confossus, capitis obtruncatione martyrium complevit.",
    "mr:0725-cucuphas": "Barcinone, in Hispania, natalis beati Cucuphatis Martyris, qui, in persecutione Diocletiani, sub Daciano Praeside, plurimis tormentis superatis, tandem, percussus gladio, victor migravit in caelum.",
    "mr:0725-paulus": "In Palaestina sancti Pauli Martyris, qui, in persecutione Maximiani Galerii, sub Firmiliano Praeside, capitis damnatus, et, exiguo orandi spatio impetrato, primum pro contribulibus suis, deinde pro Judaeis et Gentilibus, ut fidei veritatem agnoscerent, postea pro circumstantium multitudine, demum pro Judice qui ipsum damnaverat, et pro carnifice a quo feriendus erat, Deum toto corde precatus, martyrii coronam, abscissis cervicibus, accepit.",

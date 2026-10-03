@@ -753,7 +753,7 @@
    "method": "same-day",
    "score": 1.74
   },
-  "mr:0125-conversio-sancti-pauli": {
+  "mr:0125-conversio-pauli-apostoli": {
    "method": "same-day",
    "score": 2.31
   },
@@ -1577,7 +1577,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0222-cathedra-sancti-petri": {
+  "mr:0222-cathedra-petri-apostoli": {
    "method": "same-day",
    "score": 2.01
   },
@@ -5633,7 +5633,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0703-thomas": {
+  "mr:0703-thomas-apostolus": {
    "method": "same-day",
    "score": 1.65
   },
@@ -6349,7 +6349,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0725-iacobus": {
+  "mr:0725-iacobus-apostolus": {
    "method": "same-day",
    "score": 2.05
   },
@@ -7341,7 +7341,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0824-bartholomaeus": {
+  "mr:0824-bartholomaeus-apostolus": {
    "method": "same-day",
    "score": 1.89
   },
@@ -8401,7 +8401,7 @@
    "method": "same-day",
    "score": 2.3
   },
-  "mr:0921-matthaeus": {
+  "mr:0921-matthaeus-apostolus": {
    "method": "same-day",
    "score": 2.01
   },
@@ -9649,7 +9649,7 @@
    "method": "same-day",
    "score": 1.71
   },
-  "mr:1028-simon-et-iudas": {
+  "mr:1028-simon-et-iudas-apostoli": {
    "method": "same-day",
    "score": 2.0
   },
@@ -10785,7 +10785,7 @@
    "method": "same-day",
    "score": 2.85
   },
-  "mr:1130-andreas": {
+  "mr:1130-andreas-apostolus": {
    "method": "same-day",
    "score": 1.81
   },
@@ -11597,7 +11597,7 @@
    "method": "override",
    "score": null
   },
-  "mr:1227-ioannes": {
+  "mr:1227-ioannes-apostolus": {
    "method": "same-day",
    "score": 1.91
   },
@@ -12309,7 +12309,7 @@
    "method": "override",
    "score": null
   },
-  "mr:1118-dedicatio-basilicarum-petri-et-pauli": {
+  "mr:1118-dedicatio-basilicarum-petri-et-pauli-apostolorum": {
    "method": "override",
    "score": null
   },
