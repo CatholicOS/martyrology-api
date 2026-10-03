@@ -2,7 +2,7 @@
  "1": {
   "titulus": "1 Decembris Kalendis Decembris. xxij. A",
   "elogia": {
-   "mr:1201-nahum": "Sancti Nahum Prophetae, in Begabar quiescentis.",
+   "mr:1201-nahum-propheta": "Sancti Nahum Prophetae, in Begabar quiescentis.",
    "mr:1201-diodorus-et-marianus": "Romae sanctorum Martyrum Diodori Presbyteri, et Mariani Diaconi, cum aliis pluribus, qui, sub Numeriano Principe, cum in Arenario natalitia Martyrum agerent, illic, obstructa a persecutoribus janua cryptae ac diruta desuper mole, martyrii gloriam meruerunt.",
    "mr:1201-lucius-rogatus-cassianus": "Item Romae passio sanctorum Lucii, Rogati, Cassiani et Candidae.",
    "mr:1201-proculus": "Narniae sancti Proculi, Episcopi et Martyris; qui, post multa egregia opera, a Rege Gothorum Totila jussus est decollari.",
@@ -38,7 +38,7 @@
   "titulus": "3 Decembris Tertio Nonas Decembris. vij. E",
   "elogia": {
    "mr:1203-franciscus-xavier": "Sancti Francisci Xaverii, Sacerdotis e Societate Jesu et Confessoris, Indiarum Apostoli, sodalitatis et operis Propagandae Fidei atque Missionum omnium Patroni caelestis; qui pridie hujus diei quievit in pace.",
-   "mr:1203-sophonia": "In Judaea sancti Sophoniae Prophetae.",
+   "mr:1203-sophonias-propheta": "In Judaea sancti Sophoniae Prophetae.",
    "mr:1203-claudius": "Romae sanctorum Martyrum Claudii Tribuni, et uxoris Hilariae, filiorum Jasonis et Mauri, cum septuaginta militibus. Ex eis Claudium jussit Numerianus Imperator, ingenti saxo alligatum, in flumen praecipitem dari; milites vero et ipsius Claudii filios capitali sententia puniri. Beata autem Hilaria, cum filiorum corpora sepelisset, paulo post, orans ad eorum sepulcrum, tenta est a Paganis, et, in carcerem trusa, migravit ad Dominum.",
    "mr:1203-cassianus": "Tingi, in Mauritania, passio sancti Cassiani Martyris, qui, cum exceptoris diu gessisset officium, tandem, admiratus intrepida beati Marcelli Centurionis responsa et immobilem in Christi fide constantiam, atque caelitus inspiratus, exsecrabile duxit Christianorum neci deservire; ideoque, cum renuntiasset eidem officio, et ipse, sub Christiana professione, capite abscissus, triumphum meruit obtinere martyrii.",
    "mr:1203-claudius-et-socii": "Item in Africa sanctorum Martyrum Claudii, Crispini, Maginae, Joannis et Stephani.",
@@ -406,7 +406,7 @@
   "titulus": "29 Decembris Quarto Kalendas Januarii. xxvj. C",
   "elogia": {
    "mr:1229-thoma": "Cantuariae, in Anglia, natalis sancti Thomae, Episcopi et Martyris, qui, ob defensionem justitiae et ecclesiasticae immunitatis, in Basilica sua, ab impiorum hominum factione percussus gladio, Martyr migravit ad Christum.",
-   "mr:1229-david": "Hierosolymis sancti David, Regis et Prophetae.",
+   "mr:1229-david-rex-et-propheta": "Hierosolymis sancti David, Regis et Prophetae.",
    "mr:1229-trophimus": "Arelate, in Gallia, natalis sancti Trophimi, cujus meminit sanctus Paulus ad Timotheum scribens. Ipse autem Trophimus, ab eodem Apostolo Episcopus ordinatus, praefatae urbi primus ad Christi Evangelium praedicandum directus est; ex cujus praedicationis fonte (ut sanctus Zosimus Papa scribit) tota Gallia rivulos fidei recepit.",
    "mr:1229-callistus-et-socii": "Romae sanctorum Martyrum Callisti, Felicis et Bonifatii.",
    "mr:1229-dominicus-et-socii": "In Africa passio sanctorum Martyrum Dominici, Victoris, Primiani, Lybosi, Saturnini, Crescentii, Secundi et Honorati.",
