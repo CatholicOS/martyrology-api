@@ -7,7 +7,8 @@
    "mr:0401-victor-et-stephanus": "In Egypt, the holy martyrs Victor and Stephen.",
    "mr:0401-quinctianus-et-irenaeus": "In Armenia, the holy martyrs Quinctian and Irenaeus.",
    "mr:0401-macarius": "At Constantinople, under the emperor Leo, St. Macarius, confessor, who ended his life in exile for the defence of the honor paid to sacred images.",
-   "mr:0401-valericus": "At Grenoble, the bishop St. Hugh, who spent many years of his life in solitude, and departed for heaven, with a reputation for miracles. At Amiens, the abbot St. Valery, whose tomb is made illustrious by frequent miracles."
+   "mr:0401-hugo-gratianopoli": "At Grenoble, the bishop St. Hugh, who spent many years of his life in solitude, and departed for heaven, with a reputation for miracles.",
+   "mr:0401-valericus": "At Amiens, the abbot St. Valery, whose tomb is made illustrious by frequent miracles."
   },
   "conclusio": null
  },
@@ -163,7 +164,8 @@
    "mr:0413-hermenegildus": "At Seville, in Spain, St. Hermenegild, son of Leovigild, Arian king of the Visigoths, who was incarcerated for the confession of the Catholic faith. By order of his wicked father he was beheaded because he had refused to receive communion from an Arian bishop, on the Paschal solemnity, and thus exchanging an earthly for a heavenly kingdom, he entered the abode of the blessed, both as a king and as a martyr.",
    "mr:0413-carpus-et-socii": "At Pergamus, in Asia, the birthday of the holy martyrs Carpus, bishop of Thyatira, Papylus, deacon, and his sister Agathonica, an excellent woman, Agathadorus, their servant, and many others, who after various torments, were, for their blessed confession, crowned with martyrdom in the persecution of Marcus Antoninus Verus and Lucius Aurelius Commodus.",
    "mr:0413-justinus-philosophus": "In this same persecution, there suffered at Rome that remarkable man, Justin the Philosopher, who had addressed to the emperors his second Apology in defence of our religion, and upheld it by strong arguments. Being accused of professing Christianity by the intrigues of the Cynic Crescens, whose conduct and immorality he had reproved, he obtained the reward of a martyr, as a remuneration for his faithful confession.",
-   "mr:0413-maximus-quinctilianus-et-dada": "The same day, the martyrdom of the Saints Maximus, Quinctillian, and Dadas, during the persecution of Diocletian. At Ravenna, St. Ursus, bishop and confessor."
+   "mr:0413-maximus-quinctilianus-et-dada": "The same day, the martyrdom of the Saints Maximus, Quinctillian, and Dadas, during the persecution of Diocletian.",
+   "mr:0413-ursus": "At Ravenna, St. Ursus, bishop and confessor."
   },
   "conclusio": null
  },

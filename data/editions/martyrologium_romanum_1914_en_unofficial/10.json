@@ -74,7 +74,8 @@
    "mr:1006-bruno": "In Calabria, St. Bruno, confessor, founder of the Carthusian Order.",
    "mr:1006-sagaris": "At Laodicea, the blessed bishop and martyr Sagar, one of the first disciples of the apostle St. Paul.",
    "mr:1006-marcellus-et-socii": "At Capua, the birthday of the holy martyrs Marcellus, Castus, Aemilius, and Saturninus.",
-   "mr:1006-erotidis": "At Agen, in France, the birthday of St. Faith, virgin and martyr, whose example encouraged blessed Caprasius so much that he happily terminated his combat by martyrdom.—Also, St. Erotis, martyr, who, being inflamed with the love of Christ, triumphed over the violence of the flames.",
+   "mr:1006-fideus": "At Agen, in France, the birthday of St. Faith, virgin and martyr, whose example encouraged blessed Caprasius so much that he happily terminated his combat by martyrdom.—",
+   "mr:1006-erotidis": "Also, St. Erotis, martyr, who, being inflamed with the love of Christ, triumphed over the violence of the flames.",
    "mr:1006-treviris-commemoratio-innumerabilium": "At Treves, the commemoration of almost numberless martyrs, who were put to death for the faith in various manners, under the governor Rictiovarus, in the persecution of Diocletian.",
    "mr:1006-romanus": "At Auxerre, St. Romanus, bishop and martyr.",
    "mr:1006-magnus": "At Oderzo, St. Magnus, bishop, whose body rests at Venice.",
@@ -182,13 +183,15 @@
  "13": {
   "titulus": "The Thirteenth Day of October",
   "elogia": {
-   "mr:1013-eduardus": "In England, St. Edward, king, who died on the 5th of January. He is specially honored on this day, on account of the translation of his body.—At Troas, in Asia Minor, the birthday of St. Carpus, disciple of the blessed apostle Paul.",
+   "mr:1013-eduardus": "In England, St. Edward, king, who died on the 5th of January. He is specially honored on this day, on account of the translation of his body.—",
+   "mr:1013-carpus": "At Troas, in Asia Minor, the birthday of St. Carpus, disciple of the blessed apostle Paul.",
    "mr:1013-faustus-et-socii": "At Cordova, in Spain, the birthday of the holy martyrs Faustus, Januarius, and Martial. First tortured on the rack, then having their eyelashes shaven, their teeth plucked out, their ears and noses cut off, they finished their martyrdom by fire.",
    "mr:1013-florentius": "At Thessalonica, St. Florentius, a martyr, who, after enduring various torments, was burned alive.",
    "mr:1013-colmannus": "In Austria, St. Colman, martyr.",
    "mr:1013-daniel-et-socii": "At Ceuta, in Morocco, seven martyrs of the Order of Friars Minor, Daniel, Samuel, Angelus, Domnus, Leo, Nicholas, and Hugolinus. For preaching the Gospel and refuting the errors of Mahomet, they were reviled, bound, and scourged by the Saracens, and finally won the palm of martyrdom by being beheaded.",
    "mr:1013-theophilus": "At Antioch, the holy bishop Theophilus, who held the pontificate in that church, the sixth after the blessed apostle Peter.",
-   "mr:1013-venantius": "At Tours, St. Venantius, abbot, and confessor.—At Subiaco, in Italy, St. Chelidonia, virgin."
+   "mr:1013-venantius": "At Tours, St. Venantius, abbot, and confessor.—",
+   "mr:1013-chelidona": "At Subiaco, in Italy, St. Chelidonia, virgin."
   },
   "conclusio": null
  },
@@ -204,7 +207,8 @@
    "mr:1014-burchardus": "At Wurtzburg, St. Burchard, first bishop of that city.",
    "mr:1014-donatianus": "At Bruges, in Belgium, St. Donatian, bishop of Rheims.",
    "mr:1014-rusticus": "At Treves, St. Rusticus, bishop.",
-   "mr:1014-dominicus": "The same day, the departure out of this world of St. Dominic Loricatus. In Italy, St. Bernard, confessor."
+   "mr:1014-dominicus": "The same day, the departure out of this world of St. Dominic Loricatus.",
+   "mr:1014-bernardus": "In Italy, St. Bernard, confessor."
   },
   "conclusio": null
  },

@@ -8,7 +8,8 @@
    "mr:0301-eudocia": "At Heliopolis, in the persecution of Trajan, St. Eudoxia, martyr, who, being baptized by bishop Theodotus and fortified for the combat, was put to the sword by the command of the governor Vincent, and thus received the crown of martyrdom.",
    "mr:0301-antonina": "The same day, St. Antonina, martyr. For deriding the gods of the Gentiles, in the persecution of Diocletian, she was, after various torments, shut up in a cask and drowned in a marsh near the city of Cea.",
    "mr:0301-suitbertus": "At Kaiserswerth, the bishop St. Swidbert, who, in the time of pope Sergius, preached the Gospel to the inhabitants of Friesland, Holland, and to other Germanic peoples.",
-   "mr:0301-siviardus": "At Angers, St. Albinus, bishop and confessor, a man of most eminent virtue and piety.—At Le Mans, St. Siviard, abbot.",
+   "mr:0301-albinus": "At Angers, St. Albinus, bishop and confessor, a man of most eminent virtue and piety.—",
+   "mr:0301-siviardus": "At Le Mans, St. Siviard, abbot.",
    "mr:0301-translatio-herculani": "At Perugia, the translation of St. Herculanus, bishop and martyr, who was beheaded by order of Totila, king of the Goths. Forty days after his decapitation his body, as pope St. Gregory relates, was found as sound and as firmly joined to the head as if it had never been touched by the sword."
   },
   "conclusio": null
@@ -43,7 +44,8 @@
   "elogia": {
    "mr:0304-casimirus": "At Wilna, in Lithuania, blessed Casimir, son of king Casimir, whom the Roman Pontiff, Leo X., placed in the number of the Saints.",
    "mr:0304-lucius-primus": "At Rome, on the Appian way, during the persecution of Valerian, the birthday of St. Lucius, pope and martyr, who was first exiled for the faith of Christ; but being permitted by divine Providence to return to his church, he suffered martyrdom by decapitation, after having combated the Novatians. His praises have been published by St. Cyprian.",
-   "mr:0304-nongenti-martyres-romae": "Also, at Rome, on the Appian road, nine hundred holy martyrs, who were buried in the same cemetery as St. Cecilia.—The same day, St. Caius, a member of the imperial household, who was drowned in the sea with twenty-seven others.",
+   "mr:0304-nongenti-martyres-romae": "Also, at Rome, on the Appian road, nine hundred holy martyrs, who were buried in the same cemetery as St. Cecilia.—",
+   "mr:0304-caius-et-socii": "The same day, St. Caius, a member of the imperial household, who was drowned in the sea with twenty-seven others.",
    "mr:0304-hadrianus": "At Nicomedia, in the reign of the emperor Diocletian, the holy martyr Adrian and twenty-three others, who endured martyrdom by having their limbs crushed. St. Adrian is especially commemorated on the 8th of September, when his body was conveyed to Rome.",
    "mr:0304-photius-et-socii": "Also, the martyrdom of the Saints Archelaus, Cyril, and Photius.",
    "mr:0304-basilius-et-socii": "In Chersonesus, the passion of the saintly bishops Basil, Eugenius, Agathodorus, Elpidius, Aetherius, Capito, Ephrem, Nestor, and Arcadius."
@@ -120,7 +122,10 @@
   "titulus": "The Tenth Day of March",
   "elogia": {
    "mr:0310-quadraginta": "At Sebaste, in Armenia, forty holy martyrs.",
-   "mr:0310-caius-et-alexander": "At Apamea, in Phrygia, during the persecution of Marcus Antoninus and Lucius Verus, the birthday of the holy martyrs Caius and Alexander, who were crowned with a glorious martyrdom, as is related by Apollinaris, bishop of Hierapolis, in his book. The passion of forty-two holy martyrs.—At Corinth, the holy martyrs Codratus, Denis, Cyprian, Anectus, Paul, and Crescens, who were slain with the sword in the persecution of Decius and Valerian, under the governor Jason.—In Africa, the martyr St. Victor, on whose festival St. Augustine delivered a discourse to his people.",
+   "mr:0310-caius-et-alexander": "At Apamea, in Phrygia, during the persecution of Marcus Antoninus and Lucius Verus, the birthday of the holy martyrs Caius and Alexander, who were crowned with a glorious martyrdom, as is related by Apollinaris, bishop of Hierapolis, in his book.",
+   "mr:0310-quadraginta-martyres-perside": "The passion of forty-two holy martyrs.—",
+   "mr:0310-codratus-et-socii": "At Corinth, the holy martyrs Codratus, Denis, Cyprian, Anectus, Paul, and Crescens, who were slain with the sword in the persecution of Decius and Valerian, under the governor Jason.—",
+   "mr:0310-victor": "In Africa, the martyr St. Victor, on whose festival St. Augustine delivered a discourse to his people.",
    "mr:0310-macarius": "At Jerusalem, St. Macarius, bishop and confessor, at whose request the holy places were purified by Constantine and Helena, and beautified with sacred edifices.",
    "mr:0310-droctoveus": "At Paris, the decease of the abbot St. Droctoveus, who was a disciple of the blessed bishop Germanus.",
    "mr:0310-attala": "In the monastery of Bobio, the abbot St. Attalas, renowned for miracles."
@@ -130,10 +135,12 @@
  "11": {
   "titulus": "The Eleventh Day of March",
   "elogia": {
-   "mr:0311-candidus-piperio": "At Carthage, the holy martyrs Heraclius and Zosimus.—At Alexandria, the passion of the Saints Candidus, Piperion, and twenty others.",
+   "mr:0311-heraclius-et-zosimus": "At Carthage, the holy martyrs Heraclius and Zosimus.—",
+   "mr:0311-candidus-piperio": "At Alexandria, the passion of the Saints Candidus, Piperion, and twenty others.",
    "mr:0311-trophimus-et-thalus": "At Laodicea, in Syria, during the persecution of Diocletian, the holy martyrs Trophimus and Thales, who obtained crowns of glory, after undergoing many severe torments.",
    "mr:0311-martyres-antiochiae": "At Antioch, the commemoration of many holy martyrs, some of whom by order of the emperor Maximian were laid on red-hot gridirons, not to be burned to death, but to suffer a longer time; others were subjected to different horrible torments, and won the palm of martyrdom.",
-   "mr:0311-eulogius": "Also, the Saints Gorgonius and Firmus.—At Cordova, St. Eulogius, a priest, who deserved to be associated with the martyrs of that city, in the persecution of the Saracens, because in writing of their combats for the faith, he had envied their happiness.",
+   "mr:0311-gorgonius-et-firmus": "Also, the Saints Gorgonius and Firmus.—",
+   "mr:0311-eulogius": "At Cordova, St. Eulogius, a priest, who deserved to be associated with the martyrs of that city, in the persecution of the Saracens, because in writing of their combats for the faith, he had envied their happiness.",
    "mr:0311-euthymius": "At Sardis, the bishop St. Euthymius, who was banished by the Iconoclast emperor Michael for the worship of holy images. He consummated his martyrdom during the reign of Theophilus.",
    "mr:0311-sophronius": "At Jerusalem, the bishop St. Sophronius.",
    "mr:0311-benedictus": "At Milan, St. Benedict, bishop.",
@@ -172,7 +179,8 @@
  "14": {
   "titulus": "The Fourteenth Day of March",
   "elogia": {
-   "mr:0314-quadraginta-martyres-romae": "At Rome, the birthday of forty-seven holy martyrs, who were baptized by the apostle St. Peter, whilst he was kept in the Mamertine prison with his fellow-apostle St. Paul. After a detention of nine months they all fell by the sword of Nero, after most generously confessing the faith. Also, at Rome, St. Leo, bishop and martyr.",
+   "mr:0314-quadraginta-martyres-romae": "At Rome, the birthday of forty-seven holy martyrs, who were baptized by the apostle St. Peter, whilst he was kept in the Mamertine prison with his fellow-apostle St. Paul. After a detention of nine months they all fell by the sword of Nero, after most generously confessing the faith.",
+   "mr:0314-leo": "Also, at Rome, St. Leo, bishop and martyr.",
    "mr:0314-in-africa-s": "In Africa, the holy martyrs Peter and Aphrodisius, who obtained the crown of martyrdom in the persecution of the Vandals.",
    "mr:0314-eutychius": "At Carrhae, in Mesopotamia, the patrician St. Eutychius and his companions, who were killed by Evelid, king of Arabia, for the confession of the faith.",
    "mr:0314-duo-monachi-provincia": "In the province of Valeria, two saintly monks, who were hanged on a tree by the Lombards, and though dead, were heard singing psalms even by their enemies.",
@@ -285,7 +293,8 @@
    "mr:0322-novem-martyres-africa": "In Africa, the holy martyrs Saturninus and nine others.",
    "mr:0322-callinicus-et-basilissa": "The same day, the birthday of the Saints Callinica and Basilissa, martyrs.",
    "mr:0322-basilius": "At Ancyra, under Julian the Apostate, St. Basil, priest and martyr, who gave up his soul to God after having endured grievous torments.",
-   "mr:0322-octavianus-et-socii": "At Carthage, St. Octavian, archdeacon, and many thousands of martyrs, who were slain by the Vandals for the Catholic faith.—In the same place, St. Deogratias, bishop of Carthage, who ransomed many captives taken from that city by the Vandals, and performed other good works, after which he went to rest in the Lord.",
+   "mr:0322-octavianus-et-socii": "At Carthage, St. Octavian, archdeacon, and many thousands of martyrs, who were slain by the Vandals for the Catholic faith.—",
+   "mr:0322-deogratias": "In the same place, St. Deogratias, bishop of Carthage, who ransomed many captives taken from that city by the Vandals, and performed other good works, after which he went to rest in the Lord.",
    "mr:0322-benvenutus-scotivoli": "At Osimo, in the March of Ancona, St. Benvenutus, bishop.",
    "mr:0322-catharina-suecica": "In Sweden, St. Catharine, virgin, daughter of St. Bridget.",
    "mr:0322-lea": "At Rome, St. Lea, a widow, whose virtues and happy death are related by St. Jerome.",
@@ -296,7 +305,8 @@
  "23": {
   "titulus": "The Twenty-third Day of March",
   "elogia": {
-   "mr:0323-victorianus-et-socii": "In Africa, the holy martyrs Victorian, proconsul of Carthage, and two brothers, of Aquaregia. Also two merchants, named Frementius, who, bishop Victor Africanus tells us, were subjected to most atrocious torments for their courageous confession of the Catholic faith, and gloriously crowned under the Arian king Hunneric, during the persecution of the Vandals. Also in Africa, St. Fidelis, martyr.",
+   "mr:0323-victorianus-et-socii": "In Africa, the holy martyrs Victorian, proconsul of Carthage, and two brothers, of Aquaregia. Also two merchants, named Frementius, who, bishop Victor Africanus tells us, were subjected to most atrocious torments for their courageous confession of the Catholic faith, and gloriously crowned under the Arian king Hunneric, during the persecution of the Vandals.",
+   "mr:0323-fidel": "Also in Africa, St. Fidelis, martyr.",
    "mr:0323-felix": "In the same country, St. Felix, and twenty others.",
    "mr:0323-novem-martyres-caesareae": "At Caesarea, in Palestine, the holy martyrs Nicon, and twenty-nine others.",
    "mr:0323-domitius-et-socii": "Also, the crowning of the holy martyrs Domitius, Pelagia, Aquila, Eparchius, and Theodosia.",

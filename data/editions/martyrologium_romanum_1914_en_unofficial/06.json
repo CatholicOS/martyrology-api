@@ -51,7 +51,8 @@
    "mr:0604-franciscus-caracciolo": "At Agnone, in Abruzzo, St. Francis, of the noble Neapolitan family of the Caracciolos, confessor, and founder of the Congregation of the Minor Clerks Regular, who burned with an admirable love of God and his neighbor, and a most ardent desire to propagate devotion to the most holy Eucharist. His body is religiously honored at Naples. He was inscribed on the catalogue of the saints by Pius VII.",
    "mr:0604-aretius-et-dacianus": "At Rome, the holy martyrs Aretius and Dacian.",
    "mr:0604-quirinus": "At Sisseck, in Illyria, in the time of the governor Galerius, St. Quirinus, bishop. Prudentius relates that for the faith of Christ he was precipitated into a river, with a millstone tied to his neck; but as the stone floated on the water, he exhorted for a long time the Christians who were present not to be terrified by his punishment, nor to waver in the faith, and then God heard his prayers to be drowned, that he might attain to the glory of martyrdom.",
-   "mr:0604-rutilus": "At Brescia, St. Clateus, bishop and martyr, under the emperor Nero. In Pannonia, the holy martyrs Rutilus and his companions.",
+   "mr:0604-clateus": "At Brescia, St. Clateus, bishop and martyr, under the emperor Nero.",
+   "mr:0604-rutilus-et-socii": "In Pannonia, the holy martyrs Rutilus and his companions.",
    "mr:0604-saturnina": "At Arras, St. Saturnina, virgin and martyr.",
    "mr:0604-quirinus-tibure": "At Tivoli, St. Quirinus, martyr.",
    "mr:0604-metrophanes": "At Constantinople, St. Metrophanes, bishop and renowned confessor.",
@@ -90,7 +91,8 @@
  "7": {
   "titulus": "The Seventh Day of June",
   "elogia": {
-   "mr:0607-paulus": "At Constantinople, the birthday of St. Paul, bishop of that city. For the Catholic faith, he was often expelled from his see by the Arians, and restored to it by the Roman Pontiff, St. Julius. Finally, the Arian emperor Constantius banished him to Cucusum, a small town of Cappadocia, where, by the machinations of the Arians, he was barbarously strangled, and thus departed for the heavenly kingdom. His body was conveyed to Constantinople with the greatest honor, in the reign of emperor Theodosius. In Egypt, St. Licarion, martyr, who was lacerated, scourged with heated iron rods, and, after other horrible torments, was crowned with martyrdom by a stroke from the sword.",
+   "mr:0607-paulus": "At Constantinople, the birthday of St. Paul, bishop of that city. For the Catholic faith, he was often expelled from his see by the Arians, and restored to it by the Roman Pontiff, St. Julius. Finally, the Arian emperor Constantius banished him to Cucusum, a small town of Cappadocia, where, by the machinations of the Arians, he was barbarously strangled, and thus departed for the heavenly kingdom. His body was conveyed to Constantinople with the greatest honor, in the reign of emperor Theodosius.",
+   "mr:0607-lycarion": "In Egypt, St. Licarion, martyr, who was lacerated, scourged with heated iron rods, and, after other horrible torments, was crowned with martyrdom by a stroke from the sword.",
    "mr:0607-petrus-et-socii": "At Cordova, the holy martyrs Peter, priest, Wallabonsus, deacon, Sabinian, Wistremundus, Habentius, and Jeremias, monks.",
    "mr:0607-robertus": "In England, the abbot St. Robert, of the Order of Citeaux."
   },
@@ -303,7 +305,8 @@
    "mr:0622-martyres-samariae": "At Samaria, fourteen hundred and eighty holy martyrs, under Chosroes, king of Persia.",
    "mr:0622-flavius-clemens": "At Rome, the translation of St. Flavius Clemens, ex-consul and martyr, who was put to death for the faith of Christ by the emperor Domitian. His body was found in the basilica of pope St. Clement, and buried there with great pomp.",
    "mr:0622-nicetas": "The same day, St. Nicetas, bishop of the town of Romatia, celebrated for his learning and holy life.",
-   "mr:0622-paulinus": "At Naples, in Campania, St. John, bishop, who was called to the kingdom of heaven by blessed Paulinus, bishop of Nola. In the monastery of Cluny, St. Consortia, virgin."
+   "mr:0622-ioannes": "At Naples, in Campania, St. John, bishop, who was called to the kingdom of heaven by blessed Paulinus, bishop of Nola.",
+   "mr:0622-consortia": "In the monastery of Cluny, St. Consortia, virgin."
   },
   "conclusio": null
  },
@@ -342,7 +345,8 @@
    "mr:0625-lucia": "At Rome, St. Lucy, virgin and martyr, with twenty-two others.",
    "mr:0625-gallicanus": "At Alexandria, St. Gallicanus, ex-consul and martyr, who had been honored with a triumph, and was held in affection by the emperor Constantine. Converted by Saints John and Paul, he withdrew to Ostia with St. Hilarinus, and devoted himself entirely to the duties of hospitality and to the service of the sick. The report of such an event spread through the whole world, and from all sides many persons came to see a man who had been a senator and consul, washing the feet of the poor, preparing their table, serving them, carefully waiting on the infirm, and performing other works of mercy. Driven from this place by Julian the Apostate, he repaired to Alexandria, where, for refusing to sacrifice to idols, at the command of the judge Raucian, he was put to the sword, and thus became a martyr of Christ.",
    "mr:0625-febronia": "At Sibapolis, in Syria, under the governor Lysimachus, in the persecution of Diocletian, St. Febronia, virgin and martyr, who was scourged and racked for defending her faith and her chastity, then torn with iron combs and exposed to fire. Finally, having her teeth plucked out and her breasts cut off, she was condemned to capital punishment, and went to her spouse adorned with her sufferings as with so many jewels.",
-   "mr:0625-prosperus": "At Besancon, in France, St. Antidius, bishop and martyr, who was killed by the Vandals for the faith of Christ. At Riez, St. Prosper of Aquitaine, bishop of that city, distinguished by his erudition and piety. He valiantly combated the Pelagians in defence of the Catholic faith.",
+   "mr:0625-antidius": "At Besancon, in France, St. Antidius, bishop and martyr, who was killed by the Vandals for the faith of Christ.",
+   "mr:0625-prosperus": "At Riez, St. Prosper of Aquitaine, bishop of that city, distinguished by his erudition and piety. He valiantly combated the Pelagians in defence of the Catholic faith.",
    "mr:0625-maximus": "At Turin, the birthday of St. Maximus, bishop and confessor, most celebrated for his learning and sanctity.",
    "mr:0625-adalbertus": "In Holland, St. Adelbert, confessor, disciple of the sainted bishop Willibrord."
   },
@@ -355,7 +359,8 @@
    "mr:0626-vigilius": "At Trent, St. Vigilius, bishop, who, whilst he endeavored to root out the remains of idolatry, was overwhelmed with a shower of stones by cruel and barbarous men, and thus endured martyrdom for the name of Christ.",
    "mr:0626-pelagius": "At Cordova, in Spain, under the Saracen king Abderahman, the birthday of St. Pelagius, a young man who gloriously consummated his martyrdom for the faith by having his flesh torn to pieces with iron pincers.",
    "mr:0626-salvius": "At Valenciennes, the holy martyrs Salvius, bishop of Angouleme, and Superius.",
-   "mr:0626-maxentius": "Also, the commemoration of St. Anthelmus, bishop of Belley. In Poitou, St. Maxentius, priest and confessor, renowned for miracles.",
+   "mr:0626-anthelmus": "Also, the commemoration of St. Anthelmus, bishop of Belley.",
+   "mr:0626-maxentius": "In Poitou, St. Maxentius, priest and confessor, renowned for miracles.",
    "mr:0626-david": "At Thessalonica, St. David, hermit.",
    "mr:0626-perseveranda": "The same day, St. Perseveranda, virgin."
   },

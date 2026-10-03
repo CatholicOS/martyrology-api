@@ -151,7 +151,8 @@
    "mr:1110-tiberius-et-socii": "In the diocese of Agde, the holy martyrs Tiberius, Modestus, and Florentia, who, after being subjected to various torments, consummated their martyrdom in the time of Diocletian.",
    "mr:1110-demetrianus": "At Antioch, the Saints Demetrius, bishop, Anian, deacon, Eustosius, and twenty other martyrs.",
    "mr:1110-probus": "At Ravenna, St. Probus, a bishop, renowned for miracles.",
-   "mr:1110-iustus": "At Orleans, St. Monitor, bishop and confessor. In England, St. Justus, bishop, who was sent by pope Gregory with Augustine, Mellitus, and others to preach the Gospel in that country. There he went to his repose in the Lord, celebrated for sanctity.",
+   "mr:1110-monitor": "At Orleans, St. Monitor, bishop and confessor.",
+   "mr:1110-iustus": "In England, St. Justus, bishop, who was sent by pope Gregory with Augustine, Mellitus, and others to preach the Gospel in that country. There he went to his repose in the Lord, celebrated for sanctity.",
    "mr:1110-leo-in": "At Melun, St. Leo, confessor.",
    "mr:1110-tryphenna-et-tryphosa": "At Iconium, in Lycaonia, the holy women Tryphenna and Tryphosa, who profited by the preaching of blessed Paul and the example of Thecla to make great progress in Christian perfection.",
    "mr:1110-theoctiste": "In the island of Paros, St. Theoctistes, virgin."
@@ -266,7 +267,8 @@
  "18": {
   "titulus": "The Eighteenth Day of November",
   "elogia": {
-   "mr:1118-romanus": "At Rome, the Dedication of the basilicas of the holy apostles Peter and Paul. The former, having been enlarged, was on this day solemnly consecrated by Urban VIII.; while the latter, more sumptuously rebuilt after its total destruction by the flames, was solemnly dedicated on the 10th of December by Pius IX., though the festival in commemoration of that event was transferred to this day. At Antioch, the birthday of St. Romanus, martyr, in the time of the emperor Galerius. When the prefect Asclepiades broke into the churches and strove to destroy them completely, Romanus exhorted the Christians to resist him, and after being subjected to dire torments and the cutting out of his tongue (without which, however, he spoke the praises of God), he was strangled in prison and crowned with a glorious martyrdom. Before him suffered a young boy named Barula, who being asked by him whether it was better to worship one God or several gods, and having answered that we must believe in the one God whom the Christians adore, was scourged and beheaded.",
+   "mr:1118-dedicatio-basilicarum-petri-et-pauli": "At Rome, the Dedication of the basilicas of the holy apostles Peter and Paul. The former, having been enlarged, was on this day solemnly consecrated by Urban VIII.; while the latter, more sumptuously rebuilt after its total destruction by the flames, was solemnly dedicated on the 10th of December by Pius IX., though the festival in commemoration of that event was transferred to this day.",
+   "mr:1118-romanus": "At Antioch, the birthday of St. Romanus, martyr, in the time of the emperor Galerius. When the prefect Asclepiades broke into the churches and strove to destroy them completely, Romanus exhorted the Christians to resist him, and after being subjected to dire torments and the cutting out of his tongue (without which, however, he spoke the praises of God), he was strangled in prison and crowned with a glorious martyrdom. Before him suffered a young boy named Barula, who being asked by him whether it was better to worship one God or several gods, and having answered that we must believe in the one God whom the Christians adore, was scourged and beheaded.",
    "mr:1118-hesychius": "Also, at Antioch, the holy martyr Hesychius, a soldier. Hearing the order that anyone refusing to sacrifice to idols, should lay aside his military belt, he immediately took off his. For this reason, he was precipitated into the river with a large stone tied to his right hand.",
    "mr:1118-eodem-die-sanc": "The same day, the Saints Oriculus and his companions, who suffered for the Catholic faith, in the persecution of the Vandals.",
    "mr:1118-maximus": "At Mayence, St. Maximus, bishop, who, after suffering much from the Arians, died a confessor, in the time of Constantius.",
@@ -299,7 +301,8 @@
    "mr:1120-octavius-et-socii": "At Turin, the holy martyrs Octavius, Solutor and Adventor, soldiers of the Theban Legion, who fought valiantly for the faith under the emperor Maximian, and were crowned with martyrdom.",
    "mr:1120-agapius": "At Caesarea, in Palestine, in the time of the emperor Galerius Maximian, the holy martyr Agapius, who was condemned to be devoured by the beasts; but being unhurt by them, he was cast into the sea with stones tied to his feet.",
    "mr:1120-nersa": "In Persia, the martyrdom of the holy bishop Nersas and his companions.",
-   "mr:1120-dorus": "At Dorostorum, in Mysia, St. Dasius, bishop, who, for refusing to consent to the impurities practised on the feast of Saturn, was put to death, under the governor Bassus. At Nicaea, in Bithynia, the holy martyrs Eustachius, Thespesius and Anatolius, in the persecution of Maximinus.",
+   "mr:1120-dasius": "At Dorostorum, in Mysia, St. Dasius, bishop, who, for refusing to consent to the impurities practised on the feast of Saturn, was put to death, under the governor Bassus.",
+   "mr:1120-eustachius-et-socii": "At Nicaea, in Bithynia, the holy martyrs Eustachius, Thespesius and Anatolius, in the persecution of Maximinus.",
    "mr:1120-bassus": "At Heraclea, in Thrace, the holy martyrs Bassus, Denis, Agapitus and forty others.",
    "mr:1120-edmundus": "In England, St. Edmund, king and martyr.",
    "mr:1120-gregorius-decapolitanus": "At Constantinople, St. Gregory of Decapolis, who suffered many tribulations for the worship of holy images.",
@@ -312,7 +315,8 @@
  "21": {
   "titulus": "The Twenty-first Day of November",
   "elogia": {
-   "mr:1121-rufus": "In the temple at Jerusalem, the Presentation of the Blessed Virgin Mary, Mother of God. The same day, the birthday of blessed Rufus, mentioned by the apostle St. Paul in his epistle to the Romans.",
+   "mr:1121-praesentatio-beatae-mariae-virginis": "In the temple at Jerusalem, the Presentation of the Blessed Virgin Mary, Mother of God.",
+   "mr:1121-rufus": "The same day, the birthday of blessed Rufus, mentioned by the apostle St. Paul in his epistle to the Romans.",
    "mr:1121-celsus-et-clemens": "At Rome, the martyrdom of the Saints Celsus and Clement.",
    "mr:1121-apud-ostia-tiberina": "At Ostia, the holy martyrs Demetrius and Honorius.",
    "mr:1121-albertus": "At Rheims, St. Albert, bishop of Liege and martyr, who was put to death for defending the liberties of the Church.",
@@ -413,7 +417,8 @@
   "titulus": "The Twenty-eighth Day of November",
   "elogia": {
    "mr:1128-rufi": "At Rome, St. Rufus, who, with all his family, was made a martyr by Diocletian.",
-   "mr:1128-sosthenis": "At Corinth, the birthday of St. Sosthenes, disciple of the blessed apostle Paul, who is mentioned by that apostle in his epistle to the Corinthians. He was chief of the synagogue when converted to Christ, and, as a glorious beginning, consecrated the first fruits of his faith by being scourged in the presence of the proconsul Gallio. In Africa, under the Arian king Genseric, in the persecution of the Vandals, the holy martyrs Papinian and Mansuetus, bishops, who, for the Catholic faith, were burned in every part of their bodies with hot plates of iron, and thus ended their glorious combat. At this time also, other holy bishops, Valerian, Urban, Crescens, Eustachius, Cresconius, Crescentian, Felix, Hortulanus, and Florentian, terminated the course of their lives in exile.",
+   "mr:1128-sosthenis": "At Corinth, the birthday of St. Sosthenes, disciple of the blessed apostle Paul, who is mentioned by that apostle in his epistle to the Corinthians. He was chief of the synagogue when converted to Christ, and, as a glorious beginning, consecrated the first fruits of his faith by being scourged in the presence of the proconsul Gallio.",
+   "mr:1128-papinianus-vitensis-et-mansuetus-urusitanus": "In Africa, under the Arian king Genseric, in the persecution of the Vandals, the holy martyrs Papinian and Mansuetus, bishops, who, for the Catholic faith, were burned in every part of their bodies with hot plates of iron, and thus ended their glorious combat. At this time also, other holy bishops, Valerian, Urban, Crescens, Eustachius, Cresconius, Crescentian, Felix, Hortulanus, and Florentian, terminated the course of their lives in exile.",
    "mr:1128-stephanus": "At Constantinople, in the time of Constantine Copronymus, the holy martyrs Stephen the Younger, Basil, Peter, Andrew and their companions, numbering three hundred and thirty-nine monks, who were subjected to various torments for the worship of holy images, and confirmed the Catholic truth with the shedding of their blood.",
    "mr:1128-gregorius-iii": "At Rome, blessed pope Gregory III., who departed for heaven with a reputation for sanctity and miracles.",
    "mr:1128-iacobus-picenus": "At Naples, the departure from this world of St. James of La Marca, confessor, of the Order of Minorites, celebrated for the austerity of his life, his apostolic manner of preaching, and his many legations undertaken for the success of the affairs of Christianity. His name was added to the calendar of saints by the Sovereign Pontiff, Benedict XIII."
@@ -423,7 +428,8 @@
  "29": {
   "titulus": "The Twenty-ninth Day of November",
   "elogia": {
-   "mr:1129-vigilia-sancti-andreae-apostoli": "The vigil of St. Andrew, apostle. At Rome, on the Salarian road, the birthday of the holy martyr Saturninus, an aged man, and the deacon Sisinius, in the time of the emperor Maximian. After a long imprisonment, they were, by order of the prefect of the city, placed on the rack, distended with ropes, scourged with rods and whips garnished with metal, then exposed to the flames, taken down from the rack and beheaded.",
+   "mr:1129-vigilia-sancti-andreae-apostoli": "The vigil of St. Andrew, apostle.",
+   "mr:1129-saturninus-et-sisinius": "At Rome, on the Salarian road, the birthday of the holy martyr Saturninus, an aged man, and the deacon Sisinius, in the time of the emperor Maximian. After a long imprisonment, they were, by order of the prefect of the city, placed on the rack, distended with ropes, scourged with rods and whips garnished with metal, then exposed to the flames, taken down from the rack and beheaded.",
    "mr:1129-saturninus": "At Toulouse, in the time of Decius, the holy bishop Saturninus, who was confined by the Pagans in the capitol of that city, and from the highest part of the building precipitated down the stairs; by which fall, having his head crushed, his brains dashed out and his whole body mangled, he rendered his worthy soul to our Lord.",
    "mr:1129-paramo-et-sociorum": "Also, the martyrdom of the Saints Paramon and his companions, to the number of three hundred and seventy-five, under the emperor Decius and the governor Aquilinus.",
    "mr:1129-philomenus": "At Ancyra, St. Philomenus, martyr. During the persecution of the emperor Aurelian, under the governor Felix, he was first exposed to the flames, then having his hands, feet and head pierced with nails, consummated his martyrdom.",

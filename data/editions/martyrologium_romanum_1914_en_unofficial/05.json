@@ -8,7 +8,8 @@
    "mr:0501-orentius-et-patientia": "At Huesca, in Spain, the holy martyrs Orentius and Patience.",
    "mr:0501-sigismundus": "At Sion, in Switzerland, St. Sigismund, king of the Burgundians, who was drowned in a well, and afterwards became renowned for miracles.",
    "mr:0501-amator": "At Auxerre, St. Amator, bishop and confessor.",
-   "mr:0501-asaphus": "At Auch, St. Orientius, bishop. In England, the Saints Asaph, bishop, and Walburge, virgin.",
+   "mr:0501-orientius": "At Auch, St. Orientius, bishop.",
+   "mr:0501-asaphus": "In England, the Saints Asaph, bishop, and Walburge, virgin.",
    "mr:0501-grata": "At Bergamo, St. Grata, widow.",
    "mr:0501-peregrinus-laziosi": "At Forli, St. Peregrinus, of the Order of the Servites of the Blessed Virgin Mary."
   },
@@ -235,7 +236,8 @@
    "mr:0516-joannis-nepomucenus-metropolitana": "At Prague, in Bohemia, St. John Nepomucen, a canon of the metropolitan church, who, being tempted in vain to betray the secret of confession, was cast into the river Moldau, and thus won the palm of martyrdom.",
    "mr:0516-honoratus": "At Amiens, in France, the bishop St. Honoratus.",
    "mr:0516-domnolus": "At Le Mans, St. Domnolus, bishop.",
-   "mr:0516-possidius": "At Mirandola, in Aemilia, St. Possidius, bishop of Calamae, disciple of St. Augustine, and the writer of his glorious life. At Troyes, St. Fidolus, confessor.",
+   "mr:0516-possidius": "At Mirandola, in Aemilia, St. Possidius, bishop of Calamae, disciple of St. Augustine, and the writer of his glorious life.",
+   "mr:0516-fidolus": "At Troyes, St. Fidolus, confessor.",
    "mr:0516-brendanus": "In Ireland, St. Brendan, abbot.",
    "mr:0516-maxima": "At Fréjus, St. Maxima, virgin, who rested in peace with a reputation for many virtues."
   },
@@ -334,7 +336,8 @@
    "mr:0523-desiderius": "At Langres, in France, the martyrdom of the holy bishop Desiderius, who visited the king as a suppliant in behalf of his people who were maltreated by the Vandal army. Being forthwith condemned to decapitation, he readily presented his neck, and being struck with the sword, died for the sheep committed to his charge and departed for heaven. With him suffered many of his flock, who are buried in the same city.",
    "mr:0523-epitacius-et-basileus": "In Spain, the holy martyrs Epitacius, bishop, and Basileus.",
    "mr:0523-quinctianus-et-socii": "In Africa, the holy martyrs Quintian, Lucius, and Julian, who merited eternal crowns by their sufferings, during the persecution of the Vandals.",
-   "mr:0523-martyres-mesopotamiae": "In Cappadocia, the commemoration of the holy martyrs who died by having their legs crushed, in the persecution of Maximian Galerius. Also, in Mesopotamia, those martyrs who, at the same time, were suspended in the air with their heads downward. Being suffocated with smoke, and consumed with a slow fire, they consummated their martyrdom.",
+   "mr:0523-martyres-cappadociae": "In Cappadocia, the commemoration of the holy martyrs who died by having their legs crushed, in the persecution of Maximian Galerius.",
+   "mr:0523-martyres-mesopotamiae": "Also, in Mesopotamia, those martyrs who, at the same time, were suspended in the air with their heads downward. Being suffocated with smoke, and consumed with a slow fire, they consummated their martyrdom.",
    "mr:0523-desiderius-viennensis": "In the territory of Lyons, St. Desiderius, bishop of Vienne, who was crowned with martyrdom by being overwhelmed with stones by order of king Theodoric.",
    "mr:0523-michael": "At Synnada, in Phrygia, St. Michael, bishop.",
    "mr:0523-mercurialis": "The same day, St. Mercurialis, bishop.",
@@ -347,7 +350,8 @@
  "24": {
   "titulus": "The Twenty-fourth Day of May",
   "elogia": {
-   "mr:0524-ioanna": "At Antioch, the birthday of St. Manahen, foster-brother of Herod the Tetrarch. He was a doctor and prophet under the grace of the New Testament, and his remains now repose in the city of Antioch. Also, blessed Joanna, wife of Chuza, Herod’s steward, mentioned by the evangelist St. Luke.",
+   "mr:0524-manaen": "At Antioch, the birthday of St. Manahen, foster-brother of Herod the Tetrarch. He was a doctor and prophet under the grace of the New Testament, and his remains now repose in the city of Antioch.",
+   "mr:0524-ioanna": "Also, blessed Joanna, wife of Chuza, Herod’s steward, mentioned by the evangelist St. Luke.",
    "mr:0524-vincentius-portuensis": "At Porto, the birthday of St. Vincent, martyr.",
    "mr:0524-afra": "At Brescia, St. Afra, martyr, who suffered under the emperor Adrian.",
    "mr:0524-donatianus-et-rogatianus": "At Nantes, in Bretagne, in the time of the emperor Diocletian, the blessed martyrs Donatian and Rogatian, brothers, who, because of their constancy in the faith, were sent to prison, stretched on the rack, and lacerated. Finally, they were transpierced with a soldier’s lance and beheaded.",
