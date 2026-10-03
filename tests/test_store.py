@@ -171,3 +171,22 @@ def test_parse_month_file_without_edition_uses_main_placement(crmedr_path, clbdr
     reg = Registry.load(crmedr_path, clbdr_path)
     days = parse_month_file({"mr:0103-gregorius": "x"}, 1, "flat", reg)
     assert [(e.id, e.entry) for e in days[3].elogia] == [("mr:0103-gregorius", 3)]
+
+
+def test_footnotes_loaded_by_id(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    assert s.footnotes("martyrologium_romanum_2004") == {
+        "mr:0102-argeus-et-socii": [
+            {
+                "mark": "1",
+                "after": "sociorum",
+                "text": "Quorum nomina: sancti Narcissus et Marcellinus.",
+            }
+        ]
+    }
+
+
+def test_footnotes_empty_without_a_file_or_texts(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    assert s.footnotes("martyrologium_romanum_1749") == {}
+    assert s.footnotes("no_such_edition") == {}

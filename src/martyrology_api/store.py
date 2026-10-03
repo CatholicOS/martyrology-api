@@ -135,6 +135,7 @@ class Store:
         self._months: dict[tuple[str, int], dict[int, DayData]] = {}
         self._shapes: dict[str, str] = {}
         self._unaligned_editions: set[str] = set()
+        self._footnotes: dict[str, dict[str, list[dict]]] = {}
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -183,6 +184,19 @@ class Store:
         if d is None or not (d / "source.json").exists():
             return None
         return json.loads((d / "source.json").read_text(encoding="utf-8"))
+
+    def footnotes(self, edition_id: str) -> dict[str, list[dict]]:
+        """The printed footnotes of the edition's eulogies (`footnotes.json`
+        beside its monthly files), by canonical id: each has the printed
+        `mark`, the phrase it follows (`after`, or null when it couldn't be
+        anchored) and its `text`. Empty when the edition has none."""
+        if edition_id not in self._footnotes:
+            d = self._dirs.get(edition_id)
+            f = d / "footnotes.json" if d is not None else None
+            self._footnotes[edition_id] = (
+                json.loads(f.read_text(encoding="utf-8")) if f is not None and f.exists() else {}
+            )
+        return self._footnotes[edition_id]
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
