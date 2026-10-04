@@ -15,3 +15,7 @@ htmlcov/
 .zitadel-data/
 .stack-out/
 docker-compose.override.yml
+
+# Local tooling state
+.semgrep/
+.serena/
