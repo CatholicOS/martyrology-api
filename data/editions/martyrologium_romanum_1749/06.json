@@ -106,7 +106,7 @@
   "elogia": {
    "mr:0608-maximinus": "Aquis, in Gallia, sancti Maximini, qui exstitit primus ejusdem civitatis Episcopus, ac Domini discipulus fuisse traditur.",
    "mr:0608-calliopa": "Eodem die sanctae Calliopae Martyris, quae, ob Christi fidem, abscissis mammis atque adustis carnibus, super testulas volutata, demum, truncata capite, martyrii palmam accepit.",
-   "mr:0608-willhelmus": "Eboraci, in Anglia, sancti Willhelmi, Episcopi et Confessoris, qui, inter cetera ad ejus sepulcrum patrata miracula, tres mortuos suscitavit, atque ab Honorio Papa Tertio in Sanctorum canonem relatus est.",
+   "mr:0608-gulielmus-fitzherbert": "Eboraci, in Anglia, sancti Willhelmi, Episcopi et Confessoris, qui, inter cetera ad ejus sepulcrum patrata miracula, tres mortuos suscitavit, atque ab Honorio Papa Tertio in Sanctorum canonem relatus est.",
    "mr:0608-medardus": "Apud Suessiones, in Galliis, natalis sancti Medardi, Episcopi Noviomensis; cujus vita et mors pretiosa gloriosis miraculis commendatur.",
    "mr:0608-gildardus": "Rotomagi sancti Gildardi Episcopi, qui fuit frater ejusdem sancti Medardi. Ambo autem fratres, eodem die nati eodemque die Episcopi consecrati, uno quoque die de hac vita subtracti, simul in caelum migrarunt.",
    "mr:0608-heraclius": "Apud Senonas sancti Heraclii Episcopi.",
@@ -151,7 +151,7 @@
   "titulus": "11 Junii Tertio Idus Junii. xiv. F",
   "elogia": {
    "mr:0611-barnabas": "Salaminae, in Cypro, natalis sancti Barnabae Apostoli, qui, natione Cyprius, cum Paulo Gentium Apostolus a discipulis ordinatus, multas regiones cum eo peragravit, injunctum sibi opus Evangelicae praedicationis exercens; postremo, Cyprum profectus, ibi Apostolatum suum glorioso martyrio decoravit. Ejus corpus, tempore Zenonis Imperatoris, ipso Barnaba revelante, repertum est, una cum codice Evangelii sancti Matthaei, ejusdem Barnabae manu descripto.",
-   "mr:0611-joannis": "Salmanticae, in Hispania, item natalis sancti Joannis a sancto Facundo, ex Eremitarum sancti Augustini Ordine, Confessoris; qui fidei zelo, sanctimonia vitae ac miraculis claruit. Ipsius autem festivitas sequenti die celebratur.",
+   "mr:0611-ioannes-a-sancto-facundo": "Salmanticae, in Hispania, item natalis sancti Joannis a sancto Facundo, ex Eremitarum sancti Augustini Ordine, Confessoris; qui fidei zelo, sanctimonia vitae ac miraculis claruit. Ipsius autem festivitas sequenti die celebratur.",
    "mr:0611-felix-et-fortunatus": "Aquilejae passio sanctorum Felicis et Fortunati fratrum, qui, in persecutione Diocletiani et Maximiani, equuleo suspensi, atque, ardentibus lampadibus circa eorum latera appositis et mox divina virtute exstinctis, per ventrem ferventi oleo sunt perfusi; et ad ultimum, cum in Christi confessione persisterent, gloriosi certaminis cursum, obtruncati capite, impleverunt.",
    "mr:0611-rembertus": "Bremae natalis sancti Remberti, Hamburgensis ac Bremensis Episcopi.",
    "mr:0611-parisius": "Tarvisii sancti Parisii, civis Bononiensis, Confessoris et Monachi, ex Ordine Camaldulensi.",
@@ -163,7 +163,7 @@
   "titulus": "12 Junii Pridie Idus Junii. xiij. G",
   "elogia": {
    "mr:0612-ioannes-a-sancto-facundo": "Sancti Joannis a sancto Facundo, ex Eremitarum sancti Augustini Ordine, Confessoris, qui migravit in caelum pridie hujus diei.",
-   "mr:0612-basilides-et-socii": "Romae, via Aurelia, natalis sanctorum Martyrum Basilidis, Cyrini, Naboris et Nazarii militum, qui, in persecutione Diocletiani et Maximiani, sub Aurelio Praefecto, ob Christiani nominis confessionem, detrusi in carcerem et scorpionibus lacerati, tandem capite truncati sunt.",
+   "mr:0612-basilides": "Romae, via Aurelia, natalis sanctorum Martyrum Basilidis, Cyrini, Naboris et Nazarii militum, qui, in persecutione Diocletiani et Maximiani, sub Aurelio Praefecto, ob Christiani nominis confessionem, detrusi in carcerem et scorpionibus lacerati, tandem capite truncati sunt.",
    "mr:0612-antonina": "Nicaeae, in Bithynia, sanctae Antoninae Martyris, quae, in eadem persecutione, a Priscilliano Praeside jussa est fustibus caedi, suspendi in equuleo, lateribus laniari et flammis incendi, ac demum gladio necari.",
    "mr:0612-leo-iii": "Romae, in Basilica Vaticana, sancti Leonis Papae Tertii, cui erutos ab impiis oculos et praecisam linguam Deus mirabiliter restituit.",
    "mr:0612-olympius": "In Thracia sancti Olympii Episcopi, qui, ab Arianis sede pulsus, Confessor occubuit.",
@@ -303,7 +303,7 @@
  "22": {
   "titulus": "22 Junii Decimo Kalendas Julii. iij. C",
   "elogia": {
-   "mr:0622-paulinus-nolam": "Apud Nolam, Campaniae urbem, natalis beati Paulini, Episcopi et Confessoris, qui ex nobilissimo et opulentissimo factus est pro Christo pauper et humilis, et, quod supererat, seipsum pro redimendo viduae filio, quem Wandali, Campania devastata, captivum in Africam abduxerant, in servitutem dedit. Claruit autem non solum eruditione et copiosa vitae sanctitate, sed etiam potentia adversus daemones; ejusque praeclaras laudes sancti Ambrosius, Hieronymus, Augustinus et Gregorius Papa scriptis suis celebrarunt. Ipsius corpus, postea Beneventum et inde Romam translatum, tandem, Summi Pontificis [Sancti] Pii Decimi jussu, Nolae restitutum fuit.",
+   "mr:0622-paulinus": "Apud Nolam, Campaniae urbem, natalis beati Paulini, Episcopi et Confessoris, qui ex nobilissimo et opulentissimo factus est pro Christo pauper et humilis, et, quod supererat, seipsum pro redimendo viduae filio, quem Wandali, Campania devastata, captivum in Africam abduxerant, in servitutem dedit. Claruit autem non solum eruditione et copiosa vitae sanctitate, sed etiam potentia adversus daemones; ejusque praeclaras laudes sancti Ambrosius, Hieronymus, Augustinus et Gregorius Papa scriptis suis celebrarunt. Ipsius corpus, postea Beneventum et inde Romam translatum, tandem, Summi Pontificis [Sancti] Pii Decimi jussu, Nolae restitutum fuit.",
    "mr:0622-ioannes-fisher-et-thomas-more": "Londini, in Anglia, sancti Joannis Fisher, Episcopi Roffensis et Cardinalis, qui pro fide catholica et Romani Pontificis primatu, jubente Henrico Octavo Rege, decollatus est.",
    "mr:0622-decem-milia-martyres-montis-ararat": "In monte Ararath passio sanctorum Martyrum decem millium, crucifixorum.",
    "mr:0622-albanus": "Verolamii, in Britannia, sancti Albani Martyris, qui, tempore Diocletiani, pro Clerico hospite, quem domi exceperat et a quo Christianae fidei praeceptionibus imbutus fuerat, seipsum, commutata veste, tradidit; et hanc ob causam, post verbera et acerba tormenta, capite plexus est. Passus est etiam cum illo unus de militibus, qui, dum eum duceret ad supplicium, in via conversus est ad Christum, et mox, gladio decollatus, proprio sanguine meruit baptizari. Hoc autem nobile sancti Albani ac Socii duratum pro Deo certamen sanctus Beda Venerabilis descripsit.",
@@ -393,7 +393,7 @@
    "mr:0628-plutarchus-et-socii": "Alexandriae, in persecutione Severi, sanctorum Martyrum Plutarchi, Sereni, Heraclidis catechumeni, Heronis neophyti, et alterius Sereni, Rhaidis catechumenae, et Potamioenae cum ipsius matre Marcella; inter quos praecipue enituit Potamioena Virgo, quae, primo immensos innumerosque agones pro virginitate desudavit, deinde etiam exquisita et inaudita tormenta pro fide sustinuit, ad ultimum, simul cum matre, igne consumpta est.",
    "mr:0628-papius": "Eodem die sancti Papii Martyris, qui, in persecutione Diocletiani Imperatoris, flagris caesus, atque in lebetem, oleo et adipe ferventi plenum, immissus, aliaque horrenda supplicia perpessus, demum, datis cervicibus, coronatur.",
    "mr:0628-argimirus": "Cordubae, in Hispania, sancti Argymiri, Monachi et Martyris, qui in persecutione Arabica, pro Christi fide, in equuleo positus et ense transfossus est.",
-   "mr:0628-paulus-primus": "Romae sancti Pauli Primi, Papae et Confessoris.",
+   "mr:0628-paulus-i": "Romae sancti Pauli Primi, Papae et Confessoris.",
    "mr:0628-vincentia-gerosa": "Luere, in dioecesi Brixiensi, sanctae Vincentiae Gerosa, Virginis, Instituti Sororum a Caritate una cum sancta Bartholomaea Capitanio Fundatricis, quam Pius Papa Duodecimus albo sanctarum Virginum accensuit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -401,7 +401,7 @@
  "29": {
   "titulus": "29 Junii Tertio Kalendas Julii. xxvj. C",
   "elogia": {
-   "mr:0629-apostolorum-petrus-et-paulus": "Romae natalis sanctorum Apostolorum Petri et Pauli, qui eodem anno eodemque die passi sunt, sub Nerone Imperatore. Horum prior, in eadem Urbe, capite ad terram verso cruci affixus, et in Vaticano juxta viam Triumphalem sepultus, totius Orbis veneratione celebratur; posterior autem, gladio animadversus, et via Ostiensi sepultus, pari honore habetur.",
+   "mr:0629-petrus-et-paulus-apostoli": "Romae natalis sanctorum Apostolorum Petri et Pauli, qui eodem anno eodemque die passi sunt, sub Nerone Imperatore. Horum prior, in eadem Urbe, capite ad terram verso cruci affixus, et in Vaticano juxta viam Triumphalem sepultus, totius Orbis veneratione celebratur; posterior autem, gladio animadversus, et via Ostiensi sepultus, pari honore habetur.",
    "mr:0629-maria": "In Cypro sanctae Mariae, matris Joannis qui cognominatus est Marcus.",
    "mr:0629-marcellus": "In castro Argentomacho, in Gallia, sancti Marcelli Martyris, qui, pro fide Christi, una cum Anastasio, viro militari, capite plexus est.",
    "mr:0629-syrus": "Genuae natalis sancti Syri Episcopi.",

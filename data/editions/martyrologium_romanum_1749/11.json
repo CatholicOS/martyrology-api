@@ -2,7 +2,7 @@
  "1": {
   "titulus": "1 Novembris Kalendis Novembris. xxij. A",
   "elogia": {
-   "mr:1101-festivitas-omnium-sanctorum-quam": "Festivitas omnium Sanctorum, quam in honorem beatae Dei Genitricis Virginis Mariae et sanctorum Martyrum Bonifatius Papa Quartus, cum templum Pantheon tertio Idus Maji dedicasset, celebrem et generalem instituit agi quotannis in urbe Roma. Sed et Gregorius item Quartus postmodum decrevit, eamdem festivitatem, quae variis modis jam in diversis Ecclesiis celebrabatur, in honorem omnium Sanctorum solemniter hac die ab universa Ecclesia perpetuo observari.",
+   "mr:1101-omnes-sancti": "Festivitas omnium Sanctorum, quam in honorem beatae Dei Genitricis Virginis Mariae et sanctorum Martyrum Bonifatius Papa Quartus, cum templum Pantheon tertio Idus Maji dedicasset, celebrem et generalem instituit agi quotannis in urbe Roma. Sed et Gregorius item Quartus postmodum decrevit, eamdem festivitatem, quae variis modis jam in diversis Ecclesiis celebrabatur, in honorem omnium Sanctorum solemniter hac die ab universa Ecclesia perpetuo observari.",
    "mr:1101-ioannes-et-iacobus": "In Perside sanctorum Martyrum Joannis Episcopi, et Jacobi Presbyteri, sub Sapore Rege.",
    "mr:1101-caesarius": "Tarracinae, in Campania, natalis sancti Caesarii Diaconi, qui, diebus multis in custodia maceratus, postea, cum sancto Juliano Presbytero, in saccum missus et in mare praecipitatus est.",
    "mr:1101-benignus": "In castro Divione sancti Benigni Presbyteri, qui a beato Polycarpo missus est in Galliam ad praedicandum Evangelium; et, postquam, sub Marco Aurelio Imperatore, a Terentio Judice gravissimis tormentis multipliciter est afflictus, tandem ejus collum vecte ferreo tundi et corpus lancea perforari jubetur.",
@@ -64,7 +64,7 @@
   "elogia": {
    "mr:1104-carolus-borromeo": "Sancti Caroli Borromaei Cardinalis, Episcopi Mediolanensis et Confessoris, qui migravit in caelum pridie hujus diei.",
    "mr:1104-vitalis-et-agricola": "Bononiae sanctorum Martyrum Vitalis et Agricolae; quorum prior posterioris servus antea fuit, postea consors et collega martyrii. In ipsum porro Vitalem persecutores omnia tormentorum genera ita exercuerunt, ut non esset in corpore ejus sine vulnere locus, quae ipse constanter perferens, in oratione spiritum Deo reddidit; Agricolam vero, plurimis clavis cruci affigentes, interemerunt. Eorum translationi sanctus Ambrosius cum interesset, Martyris clavos, sanguinem triumphalem et crucis lignum se collegisse refert, ac sub sacris altaribus condidisse.",
-   "mr:1104-felix-valesius": "In coenobio Cervi Frigidi, territorii Meldensis, natalis sancti Felicis Valesii, Presbyteri et Confessoris; qui Fundator fuit Ordinis sanctissimae Trinitatis redemptionis captivorum. Ipsius autem festum, ex dispositione Innocentii Papae Undecimi, celebratur duodecimo Kalendas Decembris.",
+   "mr:1104-felix-de-valois": "In coenobio Cervi Frigidi, territorii Meldensis, natalis sancti Felicis Valesii, Presbyteri et Confessoris; qui Fundator fuit Ordinis sanctissimae Trinitatis redemptionis captivorum. Ipsius autem festum, ex dispositione Innocentii Papae Undecimi, celebratur duodecimo Kalendas Decembris.",
    "mr:1104-philologus-et-patroba": "Eodem die natalis quoque sanctorum Philologi et Patrobae, sancti Pauli Apostoli discipulorum.",
    "mr:1104-proculus": "Augustoduni sancti Proculi, Episcopi et Martyris.",
    "mr:1104-nicandrus-et-hermes": "Myrae, in Lycia, sanctorum Martyrum Nicandri Episcopi, et Hermae Presbyteri, sub Libanio Praeside.",
@@ -172,7 +172,7 @@
   "titulus": "11 Novembris Tertio Idus Novembris. xiv. F",
   "elogia": {
    "mr:1111-martinus": "Turonis, in Gallia, natalis beati Martini, Episcopi et Confessoris; cujus vita tantis exstitit miraculis gloriosa, ut trium mortuorum suscitator esse meruerit.",
-   "mr:1111-menna-agyptius": "Cotyaei, in Phrygia, insignis passio sancti Mennae, Agyptii militis, qui, in persecutione Diocletiani, postquam, abjecto militiae cingulo, meruit caelesti Regi secreta conversatione in eremo militare, processit in publicum, et, se Christianum libera voce declarans, primo diris cruciatibus examinatur; novissime, fixis in oratione genibus, Domino Jesu Christo gratias agens, gladio caesus est, ac multis post mortem miraculis claruit.",
+   "mr:1111-menna-mareotidem": "Cotyaei, in Phrygia, insignis passio sancti Mennae, Agyptii militis, qui, in persecutione Diocletiani, postquam, abjecto militiae cingulo, meruit caelesti Regi secreta conversatione in eremo militare, processit in publicum, et, se Christianum libera voce declarans, primo diris cruciatibus examinatur; novissime, fixis in oratione genibus, Domino Jesu Christo gratias agens, gladio caesus est, ac multis post mortem miraculis claruit.",
    "mr:1111-valentinus-et-socii": "Ravennae sanctorum Martyrum Valentini, Feliciani et Victorini; qui in Diocletiani persecutione coronati sunt.",
    "mr:1111-athenodorus": "In Mesopotamia sancti Athenodori Martyris, qui, sub eodem Diocletiano et Eleusio Praeside, ignibus cruciatus et aliis suppliciis tortus, demum capitis damnatus est, et, cum carnifex corruisset neque ullus alius gladio illum ferire ausus esset, orans obdormivit in Domino.",
    "mr:1111-veranus": "Lugduni, in Gallia, sancti Verani Episcopi, cujus vita fuit fide et virtutum meritis illustris.",
@@ -186,7 +186,7 @@
   "titulus": "12 Novembris Pridie Idus Novembris. xiij. G",
   "elogia": {
    "mr:1112-martinus-i": "Sancti Martini Primi, Papae et Martyris, cujus dies natalis sextodecimo Kalendas Octobris recensetur.",
-   "mr:1112-josaphat": "Vitepsci, in Polonia, passio sancti Josaphat, e sancti Basilii Ordine, Episcopi Polocensis et Martyris; qui a schismaticis, in odium catholicae unitatis et veritatis, crudeliter interfectus est, et a Pio Papa Nono inter sanctos Martyres adscriptus. Ejus tamen festivitas recolitur decimo octavo Kalendas Decembris.",
+   "mr:1112-iosaphat-kuncewicz": "Vitepsci, in Polonia, passio sancti Josaphat, e sancti Basilii Ordine, Episcopi Polocensis et Martyris; qui a schismaticis, in odium catholicae unitatis et veritatis, crudeliter interfectus est, et a Pio Papa Nono inter sanctos Martyres adscriptus. Ejus tamen festivitas recolitur decimo octavo Kalendas Decembris.",
    "mr:1112-didacus": "Compluti, in Hispania, natalis sancti Didaci Confessoris, ex Ordine Minorum, humilitate celebris; quem Xystus Quintus, Pontifex Maximus, Sanctorum catalogo adscripsit. Ipsius autem festum sequenti die celebratur.",
    "mr:1112-aurelius-et-publius": "In Asia passio sanctorum Aurelii et Publii Episcoporum.",
    "mr:1112-livinus": "Eschae, in Belgio, sancti Livini, Episcopi et Martyris; qui, cum plurimos ad Christi fidem convertisset, a Paganis necatus est. Ipsius vero corpus ad Portum Gandae postea translatum fuit.",
@@ -439,7 +439,7 @@
   "titulus": "29 Novembris Tertio Kalendas Decembris. xxvj. C",
   "elogia": {
    "mr:1129-vigilia-andreae-apostoli": "Vigilia sancti Andreae Apostoli.",
-   "mr:1129-saturninus-et-sisinius": "Romae, via Salaria, natalis sanctorum Martyrum Saturnini senis, et Sisinii Diaconi, sub Maximiano Principe; quos, diu in carcere maceratos, jussit Urbis Praefectus in equuleum levari et attrahi nervis, fustibus ac scorpionibus caedi, deinde eis flammas apponi, et, depositos de equuleo, capite truncari.",
+   "mr:1129-saturninus-carthaginensis": "Romae, via Salaria, natalis sanctorum Martyrum Saturnini senis, et Sisinii Diaconi, sub Maximiano Principe; quos, diu in carcere maceratos, jussit Urbis Praefectus in equuleum levari et attrahi nervis, fustibus ac scorpionibus caedi, deinde eis flammas apponi, et, depositos de equuleo, capite truncari.",
    "mr:1129-saturninus": "Tolosae sancti Saturnini Episcopi, qui, temporibus Decii, in Capitolio ejusdem urbis a Paganis tentus atque de summa Capitolii arce per omnes gradus praecipitatus est, atque ita, capite colliso, excussoque cerebro, et toto corpore dilaniato, dignam Christo animam reddidit.",
    "mr:1129-paramon-et-socii": "Item passio sanctorum Paramonis et Sociorum trecentorum septuaginta quinque, sub Decio Imperatore et Aquilino Praeside.",
    "mr:1129-philomenus": "Ancyrae, in Galatia, sancti Philomeni Martyris, qui, in persecutione Aureliani Imperatoris, sub Felice Praeside, igne probatus, manibus pedibusque ac demum capite clavis confixo, martyrium consummavit.",

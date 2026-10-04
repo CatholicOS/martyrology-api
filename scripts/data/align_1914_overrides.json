@@ -47,6 +47,7 @@
    "subject_la": "Cathedra sancti Petri Apostoli Romae",
    "subject_en": "Chair of Saint Peter the Apostle at Rome"
   },
+  "1-23-7": "mr:0123-hildephonsus",
   "1-23-8": {
    "coin": "martyrius",
    "subject_la": "Sanctus Martyrius",
@@ -84,12 +85,14 @@
    "subject_la": "Sanctus Apronianus",
    "subject_en": "Saint Apronian"
   },
+  "2-3-1": "mr:0203-celerinus",
+  "2-3-6": "mr:0203-ansgarius",
   "2-4-4": {
    "coin": "rembertus",
    "subject_la": "Sanctus Rembertus",
    "subject_en": "Saint Rembert"
   },
-  "2-5-3": "mr:0205-franciscus-ordinem",
+  "2-5-3": "mr:0205-paulus-miki-et-socii",
   "2-11-4": {
    "coin": "desiderius",
    "subject_la": "Sanctus Desiderius",
@@ -116,16 +119,13 @@
    "subject_la": "Sanctus Licinius",
    "subject_en": "Saint Licinius"
   },
+  "2-14-3": "mr:0214-bassianus-et-socii",
   "2-15-7": {
    "coin": "iosephus",
    "subject_la": "Sanctus Iosephus",
    "subject_en": "Saint Joseph"
   },
-  "2-16-1": {
-   "coin": "translatio-iulianae",
-   "subject_la": "Translatio sanctae Iulianae",
-   "subject_en": "Translation of Saint Juliana"
-  },
+  "2-16-1": "mr:0216-iuliana",
   "2-16-4": "mr:0216-porphyrius-et-seleucus",
   "2-16-5": {
    "coin": "gregorius-x",
@@ -163,6 +163,7 @@
   },
   "3-2-4": "mr:0302-octoginta-martyres-campaniae",
   "3-2-6": "mr:0302-ceadda",
+  "3-3-1": "mr:0303-emetherius-et-cheledonius",
   "3-5-5": "mr:0305-ioannes-iosephus-a-cruce",
   "3-6-0": {
    "coin": "perpetua-et-felicitas",
@@ -338,12 +339,14 @@
    "subject_la": "Translatio sancti Stephani Protomartyris",
    "subject_en": "Translation of Saint Stephen the First Martyr"
   },
+  "5-8-2": "mr:0508-acacius",
   "5-9-7": {
    "coin": "translatio-nicolai",
    "subject_la": "Translatio sancti Nicolai Episcopi",
    "subject_en": "Translation of Saint Nicholas"
   },
   "5-10-0": "mr:0510-antoninus",
+  "5-11-0": "mr:0511-anthimus",
   "5-11-7": "mr:0511-maiolus",
   "5-11-9": "mr:0511-franciscus-de-geronimo",
   "5-12-0": "mr:0512-nereus-et-achilleus",
@@ -378,6 +381,7 @@
    "subject_la": "Sanctus Torpes",
    "subject_en": "Saint Torpes"
   },
+  "5-17-3": "mr:0517-heraclius-et-paulus",
   "5-18-6": "mr:0518-felix-de-cantalicio",
   "5-19-1": "mr:0519-pudentiana",
   "5-19-7": "mr:0519-ivo",
@@ -439,7 +443,7 @@
    "subject_la": "Sancta Calliopa",
    "subject_en": "Saint Calliopa"
   },
-  "6-8-2": "mr:0608-willhelmus",
+  "6-8-2": "mr:0608-gulielmus-fitzherbert",
   "6-8-9": {
    "coin": "victorinus",
    "subject_la": "Sanctus Victorinus",
@@ -488,6 +492,7 @@
    "subject_la": "Sanctus Martinus",
    "subject_en": "Saint Martin"
   },
+  "6-22-0": "mr:0622-paulinus",
   "6-23-1": {
    "coin": "ioannes",
    "subject_la": "Sanctus Joannes",
@@ -512,7 +517,8 @@
    "subject_la": "Sanctus Leo Secundus",
    "subject_en": "Saint Leo II"
   },
-  "6-28-7": "mr:0628-paulus-primus",
+  "6-28-7": "mr:0628-paulus-i",
+  "6-29-0": "mr:0629-petrus-et-paulus-apostoli",
   "6-29-5": {
    "coin": "benedicta",
    "subject_la": "Sancta Benedicta",
@@ -547,6 +553,7 @@
    "subject_en": "Saint Martin"
   },
   "7-5-1": "mr:0705-zoa",
+  "7-5-2": "mr:0705-dometius-medicus",
   "7-5-8": {
    "coin": "michael-a-sanctis",
    "subject_la": "Sanctus Michael a Sanctis",
@@ -592,11 +599,13 @@
    "subject_la": "Sanctus Arsenius",
    "subject_en": "Saint Arsenius"
   },
+  "7-20-2": "mr:0720-elias-thesbita-propheta",
   "7-20-8": {
    "coin": "severa",
    "subject_la": "Sancta Severa",
    "subject_en": "Saint Severa"
   },
+  "7-21-7": "mr:0721-simeon-salus",
   "7-22-6": "mr:0722-wandregisilus",
   "7-22-7": {
    "coin": "iosephus",
@@ -630,6 +639,7 @@
    "subject_en": "Saint Peregrinus"
   },
   "7-29-5": "mr:0729-olavus",
+  "7-29-7": "mr:0729-gulielmus-pinchon",
   "7-29-10": {
    "coin": "seraphina",
    "subject_la": "Sancta Seraphina",
@@ -640,6 +650,7 @@
    "subject_la": "Sanctus Firmus",
    "subject_en": "Saint Firmus"
   },
+  "8-1-1": "mr:0801-septem-fratres-martyres-antiochiae",
   "8-1-2": "mr:0801-fides-et-socii",
   "8-3-7": {
    "coin": "marana-et-cyra",
@@ -667,11 +678,13 @@
    "subject_la": "Sancta Digna",
    "subject_en": "Saint Digna"
   },
+  "8-12-1": "mr:0812-euplus",
   "8-14-3": {
    "coin": "demetrius",
    "subject_la": "Sanctus Demetrius",
    "subject_en": "Saint Demetrius"
   },
+  "8-15-2": "mr:0815-alypius",
   "8-16-9": {
    "coin": "serena",
    "subject_la": "Sancta Serena",
@@ -705,6 +718,7 @@
    "subject_la": "Sanctus Patricius",
    "subject_en": "Saint Patrick"
   },
+  "8-25-7": "mr:0825-mena",
   "8-26-8": {
    "coin": "felix",
    "subject_la": "Sanctus Felix",
@@ -735,6 +749,7 @@
   "9-1-1": "mr:0901-donatus-et-felix",
   "9-1-3": "mr:0901-anna-prophetissa",
   "9-1-5": "mr:0901-sixtus",
+  "9-4-2": "mr:0904-marcellus",
   "9-4-10": {
    "coin": "candida-iunior",
    "subject_la": "Sancta Candida Iunior",
@@ -745,6 +760,7 @@
    "subject_la": "Beata Rosa",
    "subject_en": "Blessed Rose"
   },
+  "9-5-2": "mr:0905-acontus-et-socii",
   "9-6-5": {
    "coin": "petronius",
    "subject_la": "Sanctus Petronius",
@@ -888,6 +904,7 @@
    "subject_en": "Saint Artemon"
   },
   "10-9-6": "mr:1009-andronicus-et-athanasia",
+  "10-10-3": "mr:1010-victor-et-mallosus",
   "10-11-6": "mr:1011-canicus",
   "10-11-10": {
    "coin": "placidia",
@@ -941,6 +958,7 @@
    "subject_la": "Sancta Irene",
    "subject_en": "Saint Irene"
   },
+  "10-22-7": "mr:1022-mallonus",
   "10-24-5": {
    "coin": "marcus",
    "subject_la": "Sanctus Marcus",
@@ -975,6 +993,7 @@
   },
   "10-31-1": "mr:1031-nemesius-et-lucilla",
   "10-31-6": "mr:1031-wolfgangus",
+  "11-1-0": "mr:1101-omnes-sancti",
   "11-2-0": "mr:1102-omnium-fidelium-defunctorum",
   "11-2-10": "mr:1102-marcianus",
   "11-5-8": {
@@ -995,6 +1014,8 @@
    "subject_la": "Sancta Theoctiste",
    "subject_en": "Saint Theoctiste"
   },
+  "11-11-1": "mr:1111-menna-mareotidem",
+  "11-12-5": "mr:1112-iosaphat-kuncewicz",
   "11-12-6": {
    "coin": "rufus",
    "subject_la": "Sanctus Rufus",
@@ -1067,6 +1088,7 @@
    "subject_en": "Blessed Pope Gregory III"
   },
   "11-28-4": "mr:1128-iacobus-picenus",
+  "11-29-0": "mr:1129-saturninus-carthaginensis",
   "11-29-4": {
    "coin": "blasius-et-demetrius",
    "subject_la": "Sancti Blasius et Demetrius",
@@ -1190,6 +1212,8 @@
    "subject_la": "Sanctus Theodorus",
    "subject_en": "Saint Theodore"
   },
+  "12-29-0": "mr:1229-thomas-becket",
+  "12-30-3": "mr:1230-anysius",
   "12-30-5": {
    "coin": "liberius",
    "subject_la": "Sanctus Liberius",
@@ -1326,7 +1350,7 @@
   "7-1-11": "mr:0701-simeon-salus",
   "7-3-0": "mr:0703-tryphon-et-socii",
   "7-4-6": "mr:0704-flavianus-ii-et-elias",
-  "7-9-5": "mr:0709-brixius",
+  "7-9-5": "mr:0709-brictius",
   "7-14-5": "mr:0714-felix",
   "7-19-2": "mr:0719-iusta-et-rufina",
   "7-19-4": "mr:0719-martinus",
@@ -1360,7 +1384,7 @@
   "9-11-6": "mr:0911-theodora",
   "9-12-3": "mr:0912-macedonius-et-socii",
   "9-13-3": "mr:0913-eulogius",
-  "9-13-5": "mr:0913-amatus",
+  "9-13-5": "mr:0913-amatus-broili",
   "9-15-9": "mr:0915-leobinus",
   "9-17-3": "mr:0917-ariadna",
   "9-18-1": "mr:0918-methodius",
