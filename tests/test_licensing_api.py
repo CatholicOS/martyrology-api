@@ -18,7 +18,8 @@ class GrantReaders:
 
 @pytest.fixture
 def client(make_client):
-    c = make_client()
+    # These tests pin the per-edition grant rule; the default lets any signed-in user read.
+    c = make_client(restricted_texts_access="grant")
     c.app.state.authenticator = StaticAuth()
     c.app.state.authz = GrantReaders({"martyrologium_romanum_2004"})
     return c
@@ -122,3 +123,38 @@ def test_elogium_placement_footnotes_follow_access(client):
 def test_public_edition_without_footnotes_has_empty_lists(client):
     b = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01").json()
     assert all(e["footnotes"] == [] for e in b["elogia"])
+
+
+@pytest.fixture
+def open_client(make_client):
+    """The default rule: any signed-in user reads the restricted editions, with no grant."""
+    c = make_client()
+    c.app.state.authenticator = StaticAuth()
+    c.app.state.authz = GrantReaders(set())
+    return c
+
+
+def test_signed_in_reads_restricted_without_a_grant(open_client):
+    b = open_client.get(
+        "/api/v1/elogia/nation/IT/01/01", headers={"Authorization": "Bearer good"}
+    ).json()
+    assert b["metadata"]["edition"] == "martyrologium_romanum_2004_it_IT"
+    assert b["metadata"]["access"] == "public"
+    assert all(e["text"] is not None for e in b["elogia"])
+
+
+def test_signed_in_access_lists_every_edition_readable(open_client):
+    r = open_client.get("/api/v1/access", headers={"Authorization": "Bearer good"})
+    editions = r.json()["editions"]
+    assert all(v == {"can_read_texts": True} for v in editions.values())
+
+
+def test_anonymous_still_redacted_by_default(open_client):
+    b = open_client.get("/api/v1/elogia/01/01").json()
+    assert b["metadata"]["access"] == "restricted-texts"
+    assert all(e["text"] is None for e in b["elogia"])
+
+
+def test_unknown_access_rule_is_rejected(make_client):
+    with pytest.raises(ValueError):
+        make_client(restricted_texts_access="everyone")

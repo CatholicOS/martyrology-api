@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import Literal
 
 from pydantic_settings import BaseSettings
 
@@ -15,6 +16,11 @@ class Settings(BaseSettings):
         "martyrologium_romanum_2004_it_IT,"
         "martyrologium_romanum_2004_en_unofficial"
     )
+    # Who reads the texts of a restricted edition: "authenticated" = any signed-in caller (the
+    # rights holders allow consultation; sign-in only deters scraping), "grant" = only a caller
+    # with can_read_texts on the edition in OpenFGA. Anonymous callers get redacted texts
+    # either way.
+    restricted_texts_access: Literal["authenticated", "grant"] = "authenticated"
     access_info_url: str = "https://github.com/CatholicOS/martyrology-api#licensing"
     manifest_path: str = ""  # deployment manifest.json; empty outside a bundle
 

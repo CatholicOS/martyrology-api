@@ -18,7 +18,8 @@ class GrantReaders:
 
 @pytest.fixture
 def client(make_client):
-    c = make_client()
+    # These tests pin the per-edition grant rule; the default lets any signed-in user read.
+    c = make_client(restricted_texts_access="grant")
     c.app.state.authenticator = StaticAuth()
     c.app.state.authz = GrantReaders({"martyrologium_romanum_2004"})
     return c
