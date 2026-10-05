@@ -14,6 +14,8 @@ async def texts_allowed(request: Request, identity: Identity | None, edition_id:
         return True
     if identity is None:
         return False
+    if request.app.state.settings.restricted_texts_access == "authenticated":
+        return True
     return await request.app.state.authz.check(user_ref(identity), "can_read_texts", edition_id)
 
 

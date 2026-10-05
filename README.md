@@ -105,3 +105,5 @@ inspected.
 ## Licensing
 
 The code in this repository is licensed under Apache-2.0. The eulogy texts of the 2004 editions are **not** part of this repository and are not redistributable; should an agreement with the rights holders be reached, texts could be served publicly without changing this architecture.
+
+The rights holders allow the 2004 texts to be consulted. Any **signed-in** caller reads them; anonymous callers get the skeleton (IDs, placement, subjects) with the texts redacted, so sign-in deters scraping. `MARTYROLOGY_RESTRICTED_TEXTS_ACCESS` sets the rule: `authenticated` (the default) or `grant`, which restores the per-edition `can_read_texts` grant in OpenFGA. `MARTYROLOGY_RESTRICTED_EDITIONS` lists the editions the rule applies to.
