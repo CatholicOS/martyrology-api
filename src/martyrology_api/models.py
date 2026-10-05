@@ -173,7 +173,16 @@ class HealthOut(BaseModel):
     status: Literal["ok"]
     version: str
     data: dict[str, str | None]
+    # Attached editions: those whose texts this deployment can serve. The deploy
+    # smoke check reads this list, so its shape must not change.
     editions: list[str]
+    # Catalogued vs attached, so a transcription backlog (or a data pin that
+    # dropped an edition) is visible without diffing against the catalog by hand.
+    editions_catalogued: int
+    editions_attached: int
+    # Attached but absent from the catalog: a data fault, not a backlog. Their
+    # texts are unreachable, since every read 404s an unregistered edition.
+    editions_uncatalogued: list[str]
 
 
 class WriteReceiptOut(BaseModel):

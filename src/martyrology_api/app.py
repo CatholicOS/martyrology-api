@@ -28,6 +28,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
+    uncatalogued = sorted(app.state.store.available() - registry.editions.keys())
+    if uncatalogued:
+        logging.getLogger(__name__).warning(
+            "Texts are attached for editions missing from the catalog: "
+            + ", ".join(uncatalogued)
+            + ". Every read of them will 404 unknown-edition."
+        )
     app.state.authenticator = Authenticator(
         settings.zitadel_issuer,
         settings.zitadel_client_id,
@@ -100,11 +107,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if manifest is not None:
             for key in commits:
                 commits[key] = manifest.data.get(key)
+        attached = app.state.store.available()
+        catalogued = app.state.registry.editions.keys()
         return HealthOut(
             status="ok",
             version=__version__,
             data=commits,
-            editions=sorted(app.state.store.available()),
+            editions=sorted(attached),
+            editions_catalogued=len(catalogued),
+            editions_attached=len(attached),
+            editions_uncatalogued=sorted(attached - catalogued),
         )
 
     return app

@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 MANIFEST = {
@@ -37,3 +38,43 @@ def test_healthz_survives_a_corrupt_manifest(make_client, tmp_path: Path):
     response = make_client(manifest_path=str(path)).get("/healthz")
     assert response.status_code == 200
     assert response.json()["data"] == {"crmedr": None, "clbdr": None, "texts": None}
+
+
+def test_healthz_reports_catalogued_and_attached_counts(make_client):
+    client = make_client()
+    body = client.get("/healthz").json()
+    assert body["editions_attached"] == len(body["editions"])
+    assert body["editions_catalogued"] == len(client.app.state.registry.editions)
+    # The fixtures catalogue editions with no text attached (a transcription
+    # backlog), so the two counts must differ for the gap to be legible.
+    assert body["editions_catalogued"] > body["editions_attached"]
+
+
+def test_healthz_lists_no_uncatalogued_editions_for_consistent_data(make_client):
+    body = make_client().get("/healthz").json()
+    assert body["editions_uncatalogued"] == []
+
+
+def test_healthz_surfaces_attached_but_uncatalogued_editions(
+    make_client, data_paths: list[Path], tmp_path: Path
+):
+    stray = tmp_path / "martyrologium_romanum_9999"
+    stray.mkdir()
+    (stray / "01.json").write_text("{}", encoding="utf-8")
+    data_path = os.pathsep.join(str(p) for p in [*data_paths, tmp_path])
+    body = make_client(data_path=data_path).get("/healthz").json()
+    assert body["editions_uncatalogued"] == ["martyrologium_romanum_9999"]
+    assert "martyrologium_romanum_9999" in body["editions"]
+    assert body["editions_attached"] == len(body["editions"])
+
+
+def test_attached_but_uncatalogued_editions_warn_at_startup(
+    make_client, data_paths: list[Path], tmp_path: Path, caplog
+):
+    stray = tmp_path / "martyrologium_romanum_9999"
+    stray.mkdir()
+    (stray / "01.json").write_text("{}", encoding="utf-8")
+    data_path = os.pathsep.join(str(p) for p in [*data_paths, tmp_path])
+    with caplog.at_level("WARNING", logger="martyrology_api.app"):
+        make_client(data_path=data_path)
+    assert "martyrologium_romanum_9999" in caplog.text
