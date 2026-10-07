@@ -31,7 +31,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 2-28 e (Traslatio corporis sancti Augustini) → mr:0228-macarius-et-socii after “None”
 - 3-7 f (Pauli Episcopi) → mr:0307-paulus after “Episcopi”
 - 3-9 c (In rigens stagnum missi sunt) → mr:0309-quadraginta-milites-sebastes after “rigens”
-- 3-11 a (HERACLII, & Zosimi a) → mr:0311-candidus-et-socii after “Zosimi”
+- 3-11 a (HERACLII, & Zosimi) → mr:0311-candidus-et-socii after “Zosimi”
 - 3-22 l (Lea) → mr:0322-paulus after “None”
 - 3-26 i (Felicis Episc) → mr:0326-felix after “Episcopi”
 - 4-8 a (EDESII) → mr:0408-aedesius after “None”
@@ -60,7 +60,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 8-14 f (Callisti Episcopi) → mr:0814-eusebius after “Callisti”
 - 8-17 g (Anastasij Episcopi) → mr:0817-anastasius after “Episcopi”
 - 9-14 f (Materni Episc) → mr:0914-maternus after “Episcopi”
-- 9-15 l (l Albini, alias Alpini) → mr:0915-alpinus after “Albîni”
+- 9-15 l (Albini, alias Alpini) → mr:0915-alpinus after “Albîni”
 - 9-18 e (Eumenij Episcopi) → mr:0918-eumenius after “Eumêni”
 - 9-26 g (Nili Abb) → mr:0926-nilus-iunior after “Nili”
 - 10-7 i (Rosarij) → mr:1007-maria-de-rosario after “Rosarij”
