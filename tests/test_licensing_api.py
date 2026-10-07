@@ -148,6 +148,31 @@ def test_marginalia_follow_access_like_footnotes(client):
     assert anonymous["editions"]["martyrologium_romanum_2004"]["marginalia"] == []
 
 
+ERRATA = [
+    {
+        "kind": "replace",
+        "printed": "Argei",
+        "corrected": "Argæi",
+        "ref": "12.3",
+        "entry": "12.3. Argei, Argæi.",
+    }
+]
+
+
+def test_errata_follow_access_like_footnotes(client):
+    url = "/api/v1/elogia/edition/martyrologium_romanum_2004/01/02"
+    day = client.get(url, headers={"Authorization": "Bearer good"}).json()
+    assert _argeus(day)["errata"] == ERRATA
+    assert all(e["errata"] == [] for e in day["elogia"] if e["id"] != "mr:0102-argeus-et-socii")
+    assert _argeus(client.get(url).json())["errata"] == []
+    month = client.get("/api/v1/elogia/01", headers={"Authorization": "Bearer good"}).json()
+    assert _argeus(month["days"]["02"])["errata"] == ERRATA
+    placement = "/api/v1/elogium/mr:0102-argeus-et-socii"
+    authorized = client.get(placement, headers={"Authorization": "Bearer good"}).json()
+    assert authorized["editions"]["martyrologium_romanum_2004"]["errata"] == ERRATA
+    assert client.get(placement).json()["editions"]["martyrologium_romanum_2004"]["errata"] == []
+
+
 @pytest.fixture
 def open_client(make_client):
     """The default rule: any signed-in user reads the restricted editions, with no grant."""
