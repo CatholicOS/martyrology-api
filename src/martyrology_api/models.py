@@ -92,11 +92,50 @@ class RubricaOut(BaseModel):
     text: str
 
 
+class LunaColumnOut(BaseModel):
+    """One column of a day's lunar table: the letter of the Martyrology, the epact it
+    stands for ("*", "j" … "xxix", or "25" for the Arabic 25), and the moon's age under it.
+    `printed` is the age the edition prints there when it misprints it."""
+
+    letter: str
+    epact: str
+    age: int
+    printed: int | None = None
+
+
+class LunaAnnouncementOut(BaseModel):
+    """The moon announced on the day in `year`: the year's golden number, epact and letter
+    (by the Gregorian computus, whatever edition is read), the column of the table it
+    reads, and the age under it, as announced (`pronuntiatio`: "Luna vigesima prima")."""
+
+    year: int
+    golden_number: int
+    epact: str
+    letter: str
+    column: int
+    age: int
+    pronuntiatio: str
+
+
+class LunaOut(BaseModel):
+    """The calendar apparatus an edition prints with the day: the lunar table under the
+    heading (31 columns, in printed order), the dominical letter and the epacts whose new
+    moon falls on the day in the margin, and the announcement for a year (null before the
+    Gregorian reform)."""
+
+    dominical_letter: str
+    epactae: list[str]
+    tabula: list[LunaColumnOut]
+    annuntiatio: LunaAnnouncementOut | None
+
+
 class DayContentOut(BaseModel):
     titulus: str | None
     elogia: list[ElogiumOut]
     rubricae: list[RubricaOut] = Field(default_factory=list)
     conclusio: str | None
+    # Only for editions that print a lunar table under each day's heading.
+    luna: LunaOut | None = None
 
 
 class DayOut(DayContentOut):
@@ -152,6 +191,9 @@ class SourceOut(BaseModel):
     rights: str | None = None
     isbn: str | None = None
     note: str | None = None
+    # The edition prints the lunar table of the Gregorian computus under each day's
+    # heading: its days carry `luna`.
+    lunar_table: Literal["gregorian"] | None = None
 
 
 class EditionOut(BaseModel):

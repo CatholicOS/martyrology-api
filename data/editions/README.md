@@ -48,11 +48,12 @@ Each edition folder may carry a `source.json` describing the printed copy its te
   "year": 1916,
   "rights": "The copyright line, or the rights status",
   "isbn": null,
-  "note": "Provenance: which copy, how it was digitized"
+  "note": "Provenance: which copy, how it was digitized",
+  "lunar_table": "gregorian"
 }
 ```
 
-Only `title` is required.
+Only `title` is required. `lunar_table` is set when the edition prints the lunar table under each day's heading (see [Lunar tables](#lunar-tables)).
 
 ## Footnotes
 
@@ -96,11 +97,36 @@ An edition folder may carry a `printed_errata.json`: the corrections the edition
 
 `printed` is the phrase as the text prints it, occurring exactly once as whole words. `kind` is `replace` (read it as `corrected`), `add` (add `corrected` after it; before it when `position` is `"before"`, for an addition that opens the eulogy) or `delete` (`corrected` is empty). `ref` is where the errata place it (printed page.line, or `vbique` for "everywhere"), and `entry` is the erratum as printed. The texts stay as printed: the errata are shown beside them, not applied. These are the edition's own corrections, distinct from the misprints the CRMEDR curators record (`crmedr/data/misprints.json`). The API returns them as each eulogy's `errata`, emptied wherever the text is redacted.
 
+## Lunar tables
+
+Editions from the Gregorian reform on print, under each day's heading (*Pridie Nonas Augusti. Luna.*), a table of the 30 epacts' letters, the *litteræ Martyrologii* (31 columns: `a`–`u` for the epacts j–xix, `A B C D E` for xx–xxiiij, `f` for the Arabic 25, `F` for xxv, `G H M N` for xxvj–xxix, `P` for \*), with the moon's age under each; the reader announces the age under the year's letter (*Luna vigesima prima*). In the margin they print the dominical letter and the epacts whose new moon falls on the day. The rules are the 1630 edition's *Explicatio eorum quæ … ad pronunciationem Lunæ pertinent* (pp. 30–36).
+
+These tables are wholly regular, so they are not stored: an edition that prints them declares `"lunar_table": "gregorian"` in its `source.json`, and the API computes them by the Gregorian computus (`src/martyrology_api/lunar.py`). The few cells the print gets wrong, checked against the page images, are in the edition's `lunar_misprints.json`, by day and epact, with the number printed:
+
+```json
+{ "07-29": { "xxv": 27, "xxvj": 28, "xxvij": 29 } }
+```
+
+Each day of such an edition carries `luna` (here 4 August, read in 2026):
+
+```json
+{
+  "dominical_letter": "F",
+  "epactae": ["xxj"],
+  "tabula": [{ "letter": "a", "epact": "j", "age": 10, "printed": null }, …],
+  "annuntiatio": { "year": 2026, "golden_number": 13, "epact": "xj", "letter": "l", "column": 10, "age": 20, "pronuntiatio": "Luna vigesima" }
+}
+```
+
+`tabula` is the table in printed order, `printed` the misprinted number where there is one (`age` is always the computed age). `annuntiatio` is the moon announced under the day in a year: the year of the path (`/elogia/2026/08/04`), else `?year=`, else the current year. The year's golden number, epact and letter come from the Gregorian computus for that year (its own century's equations, not the edition's table of letters), so an old edition is read as it would be printed today; before 1583, the first whole Gregorian year, it is null. In a year with golden number 1 the moon is announced one day less than printed until January's new moon (except under `P`). The day is the printed day: in a leap year, the bissextile day is read under 24 February.
+
+Only the 1630 edition declares its tables so far: the 1749 text is a modern retyping without them (its tituli end in an artifact of the retyping, the same numeral and letter for a day of the month in every month), and the 1914 English and the 2004 editions print none. `scripts/lunar_1630.py` compares the 1630 transcription with the computus (`scripts/data/lunar_1630_check.md`): 355 of 365 days agree in every cell, 5 days have misprints in the print, 3 slips of the transcription, and 2 days have no table transcribed.
+
 ## Editions
 
 | Folder | Edition | Source | Quality |
 | --- | --- | --- | --- |
-| `martyrologium_romanum_1630/` | Urban VIII revision, 1630, with Baronius's Notationes (public domain) | Romae, Typis Vaticanis, 1630 (Internet Archive `bub_gb_2pQUlbrbtAsC`); OCR to TEI, then proofread against the page images in two passes (proofread + audit): `data/sources/martyrologium_romanum_1630.tei.xml` (the whole book, notes and indices included); digitized by `scripts/digitize_1630.py` | **proofread**: 365/365 days, 2,887 elogia; long s normalized to s, otherwise as printed (u/v, i/j, æ/œ, accents, abbreviation tildes, the printer's own misprints); Baronius's reference letters removed from the eulogies; his Notationes are in `footnotes.json` (3,052 notes, each keyed to the eulogy and word its letter follows, or for a note on the day heading to the day's first eulogy) and the margin notes beside them (mostly references to his *Annales*) in `marginalia.json` (2,410), both built by `scripts/notationes_1630.py`: the notes' printed order from where `scripts/layout_1630.py` found them on the page images, each margin note placed from the page image (`scripts/data/marginalia_1630_placement.json`); what is open (notes placed without their letter, margin notes placed in doubt) is the review change-set `scripts/data/notationes-1630-review.json` (`crmedr-changeset/v1`, decided in the frontend's `/review`; `--apply` writes the exported decisions to `scripts/data/notationes_1630_overrides.json` and the placement, then rebuilds); the edition's own printed Errata (p. 747) in `printed_errata.json` (76 corrections on 74 eulogies, by `scripts/errata_1630.py`, checked against the page images: `scripts/data/errata_1630_overrides.json`); the closing formula, printed once on 1 January (*Sic semper terminatur lectio Martyrologij*), is given for every day. **Aligned to CRMEDR IDs** (draft) by `scripts/align_1630_ids.py`: 2,845 same-day matches (an ID of the day, through its 1749/2004 Latin text or its name; an ID's name must be in the text), 42 reviewed overrides (`scripts/data/align_1630_overrides.json`: spelling variants and other names of the same subject, such as Peregrinus for `mr:0613-cetheus`), with 6 deprecated IDs coined for it in the CRMEDR (`attested_in: martyrologium_romanum_1630`, CatholicOS/crmedr#72); see `alignment.json`. |
+| `martyrologium_romanum_1630/` | Urban VIII revision, 1630, with Baronius's Notationes (public domain) | Romae, Typis Vaticanis, 1630 (Internet Archive `bub_gb_2pQUlbrbtAsC`); OCR to TEI, then proofread against the page images in two passes (proofread + audit): `data/sources/martyrologium_romanum_1630.tei.xml` (the whole book, notes and indices included); digitized by `scripts/digitize_1630.py` | **proofread**: 365/365 days, 2,887 elogia; long s normalized to s, otherwise as printed (u/v, i/j, æ/œ, accents, abbreviation tildes, the printer's own misprints); Baronius's reference letters removed from the eulogies; his Notationes are in `footnotes.json` (3,052 notes, each keyed to the eulogy and word its letter follows, or for a note on the day heading to the day's first eulogy) and the margin notes beside them (mostly references to his *Annales*) in `marginalia.json` (2,410), both built by `scripts/notationes_1630.py`: the notes' printed order from where `scripts/layout_1630.py` found them on the page images, each margin note placed from the page image (`scripts/data/marginalia_1630_placement.json`); what is open (notes placed without their letter, margin notes placed in doubt) is the review change-set `scripts/data/notationes-1630-review.json` (`crmedr-changeset/v1`, decided in the frontend's `/review`; `--apply` writes the exported decisions to `scripts/data/notationes_1630_overrides.json` and the placement, then rebuilds); the edition's own printed Errata (p. 747) in `printed_errata.json` (76 corrections on 74 eulogies, by `scripts/errata_1630.py`, checked against the page images: `scripts/data/errata_1630_overrides.json`); the closing formula, printed once on 1 January (*Sic semper terminatur lectio Martyrologij*), is given for every day; the lunar tables under each heading are computed by the API (`"lunar_table": "gregorian"`, see [Lunar tables](#lunar-tables)), with the 4 days the print misprints in `lunar_misprints.json`. **Aligned to CRMEDR IDs** (draft) by `scripts/align_1630_ids.py`: 2,845 same-day matches (an ID of the day, through its 1749/2004 Latin text or its name; an ID's name must be in the text), 42 reviewed overrides (`scripts/data/align_1630_overrides.json`: spelling variants and other names of the same subject, such as Peregrinus for `mr:0613-cetheus`), with 6 deprecated IDs coined for it in the CRMEDR (`attested_in: martyrologium_romanum_1630`, CatholicOS/crmedr#72); see `alignment.json`. |
 | `martyrologium_romanum_1749/` | Benedict XIV revision, 1749 (public domain) | a 2013 retyping (Eichstätt) of the 1913 Mechelen printing, which follows Leo XIII's 1902 edition and so includes later eulogies; the PDF's text layer, parsed mechanically | **raw, uncorrected OCR**: 365/365 days, 2,842 elogia (after merging OCR continuation fragments), every day with titulus and conclusio; OCR artifacts remain in the texts. **Aligned to CRMEDR IDs** (draft, v2): 1,495 same-day + 128 cross-day matches, 1,219 coined deprecated IDs in nominative lemma form (multi-martyr eulogies keyed by first-named subject with `-et-…`/`-et-socii`; only anonymous groups keep `martyres-<place>`), each with a subject in the CRMEDR `i18n/la.json`; see `alignment.json`. Proofreading and alignment review welcome. |
 | `martyrologium_romanum_1914_en_unofficial/` | Unofficial English translation, 1914 (public domain) | scan re-OCRed with tesseract at 300dpi (the embedded text layer had spaces stripped) | **raw, uncorrected OCR**: 365/365 days, 3,031 elogia; day assignment is sequential per month, cross-validated against fuzzy decoding of the blackletter ordinal words (zero disagreements). The `titulus` is reconstructed in clean form ("The Sixteenth Day of April") since the printed blackletter headings OCR poorly; this translation carries no Et-alibi closing formula. OCR artifacts remain (drop-cap first words of each day are often garbled). Proofreading welcome. |
 

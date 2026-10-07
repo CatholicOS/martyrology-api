@@ -30,6 +30,7 @@ uvicorn martyrology_api.app:create_app --factory --reload
 # then e.g.:
 #   GET http://localhost:8000/api/v1/editions
 #   GET http://localhost:8000/api/v1/elogia/edition/martyrologium_romanum_1749/01/02
+#   GET http://localhost:8000/api/v1/elogia/edition/martyrologium_romanum_1630/08/04?year=2026  (with the lunar table and the moon announced)
 #   docs at http://localhost:8000/docs
 pytest                       # runs against tests/fixtures; real-data smoke tests
                              # activate when ../crmedr and ../clbdr are checked out
