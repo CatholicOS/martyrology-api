@@ -1,0 +1,682 @@
+{
+ "mr:0104-dafrosa": [
+  {
+   "kind": "add",
+   "printed": "Item",
+   "corrected": "Romæ",
+   "ref": "13.4",
+   "entry": "13.4. post Item, adde, Romæ."
+  }
+ ],
+ "mr:0105-domnio": [
+  {
+   "kind": "delete",
+   "printed": "Bergŏmi sancti Domnônis martyris.",
+   "corrected": "",
+   "ref": "14.7",
+   "entry": "14.7. dele Bergomi S. Domnonis martyris."
+  }
+ ],
+ "mr:0116-berardus-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "Berradi",
+   "corrected": "Berardi",
+   "ref": "34.7",
+   "entry": "34.7. Berradi, Berardi."
+  }
+ ],
+ "mr:0127-dativus-et-socii": [
+  {
+   "kind": "add",
+   "printed": "Romæ",
+   "corrected": "Sancti",
+   "ref": "58.14",
+   "entry": "58.14. post, Romæ, adde, Sancti."
+  }
+ ],
+ "mr:0207-iuliana": [
+  {
+   "kind": "replace",
+   "printed": "Cononiæ",
+   "corrected": "Bononiæ",
+   "ref": "81.20",
+   "entry": "81.20. Cononiæ, Bononiæ."
+  }
+ ],
+ "mr:0209-apollonia": [
+  {
+   "kind": "replace",
+   "printed": "comminarent",
+   "corrected": "comminarentur",
+   "ref": "84.4",
+   "entry": "84.4. comminarent, comminarentur."
+  }
+ ],
+ "mr:0218-flavianus": [
+  {
+   "kind": "add",
+   "printed": "actus",
+   "corrected": "ibidem",
+   "ref": "98.15",
+   "entry": "98.15. post, actus, adde, ibidem."
+  }
+ ],
+ "mr:0225-felix-iii": [
+  {
+   "kind": "replace",
+   "printed": "Gregorij Papæ",
+   "corrected": "Gregorij Magni",
+   "ref": "108.11",
+   "entry": "108.11. post Gregorij, adde, Magni, & dele Papæ."
+  }
+ ],
+ "mr:0305-gerasimus": [
+  {
+   "kind": "replace",
+   "printed": "anachorêtæ",
+   "corrected": "anachoritæ",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0306-victorinus": [
+  {
+   "kind": "replace",
+   "printed": "Claudio",
+   "corrected": "Claudiano",
+   "ref": "119.3",
+   "entry": "119.3. Claudio, Claudiano."
+  }
+ ],
+ "mr:0307-thomas-de-aquino": [
+  {
+   "kind": "add",
+   "printed": "Prædicatorum",
+   "corrected": "nobilitate generis",
+   "ref": "120.3",
+   "entry": "120.3. post, Prædicatorum, adde, nobilitate generis."
+  }
+ ],
+ "mr:0309-francisca": [
+  {
+   "kind": "delete",
+   "printed": "vitæ",
+   "corrected": "",
+   "ref": "123.19",
+   "entry": "123.19. post, generis. dele, vitæ."
+  }
+ ],
+ "mr:0317-gertrudis": [
+  {
+   "kind": "replace",
+   "printed": "Nauigellæ",
+   "corrected": "Niuigellæ",
+   "ref": "142.14",
+   "entry": "ibid. 14. Nauigellæ, Niuigellæ."
+  }
+ ],
+ "mr:0317-ioseph": [
+  {
+   "kind": "replace",
+   "printed": "ab Arimathia",
+   "corrected": "ab Arimathæa",
+   "ref": "142.1",
+   "entry": "142.1. ab Arimathia, ab Arimathæa."
+  }
+ ],
+ "mr:0322-deogratias": [
+  {
+   "kind": "replace",
+   "printed": "Carthaginensis",
+   "corrected": "Carthaginiensis",
+   "ref": "150.3",
+   "entry": "150.3. Carthaginensis, Carthaginiensis."
+  }
+ ],
+ "mr:0322-paulus": [
+  {
+   "kind": "replace",
+   "printed": "Paulo Apostolo",
+   "corrected": "Apostolo Paulo",
+   "ref": "149.3",
+   "entry": "149.3. Paulo Apostolo, Apostolo Paulo."
+  }
+ ],
+ "mr:0330-pastor": [
+  {
+   "kind": "replace",
+   "printed": "Aureliâni",
+   "corrected": "Aurelianis",
+   "ref": "160.15",
+   "entry": "160.15. Aureliani, Aurelianis."
+  }
+ ],
+ "mr:0403-richardus": [
+  {
+   "kind": "replace",
+   "printed": "Cicestrensis",
+   "corrected": "Cicestriensis",
+   "ref": "166.14",
+   "entry": "166.14. Cicestrensis, Cicestriensis."
+  }
+ ],
+ "mr:0404-agathopodus-et-theodulus": [
+  {
+   "kind": "replace",
+   "printed": "Agathopŏdis",
+   "corrected": "Agathopolis",
+   "ref": "168.1",
+   "entry": "168.1. Agathopodis, Agathopolis."
+  }
+ ],
+ "mr:0404-zosimus": [
+  {
+   "kind": "replace",
+   "printed": "anachoretæ",
+   "corrected": "anachoritæ",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0407-aphraates": [
+  {
+   "kind": "replace",
+   "printed": "anachorêtæ",
+   "corrected": "anachoritæ",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0411-barsanuphius": [
+  {
+   "kind": "replace",
+   "printed": "anachoretæ",
+   "corrected": "anachoritæ",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0416-fructuosus": [
+  {
+   "kind": "replace",
+   "printed": "Brachăræ",
+   "corrected": "Brachari",
+   "ref": "187.19",
+   "entry": "187.19. Bracharæ, Brachari."
+  }
+ ],
+ "mr:0419-timo": [
+  {
+   "kind": "replace",
+   "printed": "Berœam",
+   "corrected": "Beroeam",
+   "ref": "191.2",
+   "entry": "191.2. Berœam, Beroeam."
+  }
+ ],
+ "mr:0422-plurimi-martyres-persidis": [
+  {
+   "kind": "add",
+   "printed": "necatæ sunt.",
+   "corrected": "Item",
+   "ref": "197.12",
+   "entry": "197.12. post, sunt, adde, Item."
+  }
+ ],
+ "mr:0424-saba": [
+  {
+   "kind": "add",
+   "printed": "adustus",
+   "corrected": "&c",
+   "ref": "201.4",
+   "entry": "201.4. post, adustus, adde, &c."
+  }
+ ],
+ "mr:0426-marcellinus": [
+  {
+   "kind": "delete",
+   "printed": "vnum",
+   "corrected": "",
+   "ref": "204.7",
+   "entry": "204.7. post, intra, dele, vnum."
+  }
+ ],
+ "mr:0428-vitalis": [
+  {
+   "kind": "replace",
+   "printed": "hone state",
+   "corrected": "honestate",
+   "ref": "207.3",
+   "entry": "207.3. hone state, honestate."
+  }
+ ],
+ "mr:0430-severus": [
+  {
+   "kind": "replace",
+   "printed": "arguere",
+   "corrected": "argueret",
+   "ref": "210.23",
+   "entry": "210.23. arguere, argueret."
+  }
+ ],
+ "mr:0504-cyriacus": [
+  {
+   "kind": "replace",
+   "printed": "vndequadraginta",
+   "corrected": "trigintanouem",
+   "ref": "218.7",
+   "entry": "218.7. dele, vndequadraginta, & pone, trigintanouem."
+  }
+ ],
+ "mr:0509-trecenti-decem-martyres-persidis": [
+  {
+   "kind": "delete",
+   "printed": "passio",
+   "corrected": "",
+   "ref": "230.9",
+   "entry": "230.9. dele, passio."
+  }
+ ],
+ "mr:0515-torquatus-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "Iandaletij",
+   "corrected": "Indaletij",
+   "ref": "242.2",
+   "entry": "242.2. Iandaletij, Indaletij"
+  },
+  {
+   "kind": "replace",
+   "printed": "Iandaletius",
+   "corrected": "Indaletius",
+   "ref": "242.8",
+   "entry": "ibid. 8 Iandaletius, Indaletius."
+  },
+  {
+   "kind": "replace",
+   "printed": "Euphasius",
+   "corrected": "Euphrasius",
+   "ref": "242.9",
+   "entry": "ibid. 9. Cartheiæ, & Buphasius, Cartheiæ, & Euphrasius,"
+  }
+ ],
+ "mr:0517-restituta": [
+  {
+   "kind": "replace",
+   "printed": "Neapoli in Campania",
+   "corrected": "Eodem die",
+   "ref": "245.10",
+   "entry": "245.10. dele, Neapoli in Campania. & pone, Eodem die."
+  }
+ ],
+ "mr:0527-iulius": [
+  {
+   "kind": "add",
+   "printed": "Mysia",
+   "corrected": "Passio",
+   "ref": "259.5",
+   "entry": "259.5. post, Mysia, adde, Passio."
+  }
+ ],
+ "mr:0601-fortunatus": [
+  {
+   "kind": "replace",
+   "printed": "Lerinensi",
+   "corrected": "Lirinensi",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0607-paulus": [
+  {
+   "kind": "replace",
+   "printed": "Cucŭsum",
+   "corrected": "Cucusam",
+   "ref": "278.5",
+   "entry": "278.5. Cuculum, Cuculam."
+  }
+ ],
+ "mr:0621-urciscenus": [
+  {
+   "kind": "replace",
+   "printed": "Vrscicêni",
+   "corrected": "Vrciceni",
+   "ref": "301.8",
+   "entry": "301.8. Vrsiceni. Vrciceni."
+  }
+ ],
+ "mr:0622-paulinus": [
+  {
+   "kind": "replace",
+   "printed": "redimento",
+   "corrected": "redimendo",
+   "ref": "303.5",
+   "entry": "303.5. redimento, redimendo."
+  }
+ ],
+ "mr:0625-prosperus": [
+  {
+   "kind": "replace",
+   "printed": "Regium",
+   "corrected": "Rhegium",
+   "ref": "310.23",
+   "entry": "310.23. Regium, Rhegium,"
+  }
+ ],
+ "mr:0627-crescens": [
+  {
+   "kind": "replace",
+   "printed": "conueruertit",
+   "corrected": "conuertit",
+   "ref": "314.3",
+   "entry": "314.3. conuer uertit, conuertit."
+  }
+ ],
+ "mr:0710-rufina-et-secunda": [
+  {
+   "kind": "add",
+   "printed": "honore",
+   "corrected": "seruantur",
+   "ref": "335.12",
+   "entry": "335.12. post, honore, adde, seruantur."
+  }
+ ],
+ "mr:0712-fortunatus-et-hermagora": [
+  {
+   "kind": "add",
+   "printed": "diacono",
+   "corrected": "suo",
+   "ref": "337.12",
+   "entry": "337.12. post, diacono, adde, suo."
+  }
+ ],
+ "mr:0717-martyres-scillitani": [
+  {
+   "kind": "replace",
+   "printed": "asseruantur",
+   "corrected": "conditæ fuerunt",
+   "ref": "346.8",
+   "entry": "346.8. dele, asseruantur, & pone, conditæ fuerunt."
+  }
+ ],
+ "mr:0718-aemilianus": [
+  {
+   "kind": "replace",
+   "printed": "Misia",
+   "corrected": "Mysia",
+   "ref": "348.4",
+   "entry": "348.4. Misia, Mysia."
+  }
+ ],
+ "mr:0725-iacobus-apostolus": [
+  {
+   "kind": "replace",
+   "printed": "hac die",
+   "corrected": "hóc die",
+   "ref": "358.4",
+   "entry": "358.4. hac die, hóc die."
+  }
+ ],
+ "mr:0727-hermolaus-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "damnati",
+   "corrected": "puniti",
+   "ref": "363.10",
+   "entry": "363.10. damnati, puniti."
+  }
+ ],
+ "mr:0728-martyres-thebaidis": [
+  {
+   "kind": "replace",
+   "printed": "alios",
+   "corrected": "alius",
+   "ref": "365.14",
+   "entry": "365.14. alios, alius."
+  }
+ ],
+ "mr:0806-xystus-ii": [
+  {
+   "kind": "replace",
+   "printed": "an imaduersus",
+   "corrected": "animaduersus",
+   "ref": "384.9",
+   "entry": "384.9. an imaduersus, animaduersus"
+  }
+ ],
+ "mr:0812-porcarius-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "Lerinensis",
+   "corrected": "Lirinensis",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0818-agapitus": [
+  {
+   "kind": "replace",
+   "printed": "Imperatorio",
+   "corrected": "Imperatoris",
+   "ref": "404.6",
+   "entry": "404.6. Imperatorio, Imperatoris."
+  }
+ ],
+ "mr:0819-donatus": [
+  {
+   "kind": "replace",
+   "printed": "anachoreticam",
+   "corrected": "anachoriticam",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0826-alexander": [
+  {
+   "kind": "replace",
+   "printed": "cruciati",
+   "corrected": "excruciati",
+   "ref": "421.7",
+   "entry": "421.7. cruciat, excruciati."
+  }
+ ],
+ "mr:0826-irenaeus-et-abundius": [
+  {
+   "kind": "replace",
+   "printed": "clôcam",
+   "corrected": "cloacam",
+   "ref": "410.5",
+   "entry": "410.5. Clocã, Cloacam."
+  }
+ ],
+ "mr:0828-hermes": [
+  {
+   "kind": "replace",
+   "printed": "custoditę",
+   "corrected": "custodiæ",
+   "ref": "425.6",
+   "entry": "425.6. custoditæ, custodiæ."
+  }
+ ],
+ "mr:0828-moyses-aethiopis": [
+  {
+   "kind": "replace",
+   "printed": "anachoreta",
+   "corrected": "anachorita",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0903-aigulphus-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "Lerinensis",
+   "corrected": "Lirinensis",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:0907-sozon": [
+  {
+   "kind": "replace",
+   "printed": "reddit",
+   "corrected": "reddidit",
+   "ref": "442.17",
+   "entry": "442.17. reddit, reddidit."
+  }
+ ],
+ "mr:0910-menodora-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "quæ",
+   "corrected": "qui",
+   "ref": "446.13",
+   "entry": "446.13, quæ, qui."
+  }
+ ],
+ "mr:0918-ferreolus-viennensis": [
+  {
+   "kind": "replace",
+   "printed": "tribunicæ potest tis",
+   "corrected": "tribuniciæ potestatis",
+   "ref": "461.7",
+   "entry": "461.7. tribunicæ potest tis, tribuniciæ potestatis."
+  }
+ ],
+ "mr:1002-eleutherius": [
+  {
+   "kind": "replace",
+   "printed": "& alij ignibus",
+   "corrected": "alij ignibus",
+   "ref": "487.6",
+   "entry": "487.6. & alij ignibus, dele, &."
+  }
+ ],
+ "mr:1008-simeon": [
+  {
+   "kind": "replace",
+   "printed": "diei",
+   "corrected": "die",
+   "ref": "496.5",
+   "entry": "496.5. diei, die."
+  }
+ ],
+ "mr:1018-iustus": [
+  {
+   "kind": "replace",
+   "printed": "aduc",
+   "corrected": "adhuc",
+   "ref": "513.8",
+   "entry": "513.8. aduc, adhuc."
+  }
+ ],
+ "mr:1021-malchus": [
+  {
+   "kind": "replace",
+   "printed": "pro Antiochiam",
+   "corrected": "prope Antiochiam",
+   "ref": "518.12",
+   "entry": "518.12. pro Antiochiã, prope Antiochiam."
+  }
+ ],
+ "mr:1110-theoctiste": [
+  {
+   "kind": "replace",
+   "printed": "Theoctistes",
+   "corrected": "Theoctistæ",
+   "ref": "554.7",
+   "entry": "554.7. Theoctiste, Theoctistæ."
+  }
+ ],
+ "mr:1110-tryphon-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "& Nymphæ",
+   "corrected": "ac Nymphæ",
+   "ref": "553.2",
+   "entry": "553.2. & Nymphæ, ac Nymphæ."
+  }
+ ],
+ "mr:1114-theodotus": [
+  {
+   "kind": "replace",
+   "printed": "Philemŏni",
+   "corrected": "Philomeni",
+   "ref": "560.2",
+   "entry": "560.2. Philemoni, Philomeni."
+  }
+ ],
+ "mr:1127-maximus": [
+  {
+   "kind": "replace",
+   "printed": "Lerinensis",
+   "corrected": "Lirinensis",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:1203-claudius": [
+  {
+   "kind": "replace",
+   "printed": "corpore",
+   "corrected": "corpora",
+   "ref": "589.8",
+   "entry": "589.8. corpore, corpora."
+  }
+ ],
+ "mr:1205-sabas": [
+  {
+   "kind": "replace",
+   "printed": "MVTÂLAE",
+   "corrected": "Muralæ",
+   "ref": "592.1",
+   "entry": "592.1. Mutulæ, Muralæ."
+  }
+ ],
+ "mr:1214-iustus-et-abundius": [
+  {
+   "kind": "replace",
+   "printed": "Abundantij",
+   "corrected": "Abundij",
+   "ref": "607.9",
+   "entry": "607.9. Abundantij, Abundij."
+  }
+ ],
+ "mr:1218-auxentius": [
+  {
+   "kind": "replace",
+   "printed": "meriti",
+   "corrected": "meritis",
+   "ref": "612.14",
+   "entry": "612.14. meriti, meritis."
+  }
+ ],
+ "mr:1224-euthymius": [
+  {
+   "kind": "add",
+   "printed": "transfixus,",
+   "corrected": "eos",
+   "ref": "611.8",
+   "entry": "611.8. post, transfixus, adde, eos."
+  }
+ ],
+ "mr:1228-antonius": [
+  {
+   "kind": "replace",
+   "printed": "Lerinensi",
+   "corrected": "Lirinensi",
+   "ref": "vbique",
+   "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
+  }
+ ],
+ "mr:1231-melania": [
+  {
+   "kind": "replace",
+   "printed": "erercuit",
+   "corrected": "exercuit",
+   "ref": "634.10",
+   "entry": "634.10. exercuit, exercuit."
+  }
+ ]
+}

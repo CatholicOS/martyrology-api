@@ -1,0 +1,105 @@
+{
+ "$comment": "Reviewed against the page images (scan PDF, Internet Archive bub_gb_2pQUlbrbtAsC). The errata at times misnumber the page (410 for 420, 611 for 621, 301 for 302) or misquote the print; this copy is in places a corrected impression.",
+ "13.4": {
+  "id": "mr:0104-dafrosa"
+ },
+ "14.7": {
+  "id": "mr:0105-domnio",
+  "printed": "Bergŏmi sancti Domnônis martyris.",
+  "corrected": "",
+  "kind": "delete"
+ },
+ "108.11": {
+  "id": "mr:0225-felix-iii",
+  "printed": "Gregorij Papæ",
+  "corrected": "Gregorij Magni"
+ },
+ "123.19": {
+  "id": "mr:0309-francisca"
+ },
+ "197.12": {
+  "id": "mr:0422-plurimi-martyres-persidis",
+  "printed": "necatæ sunt."
+ },
+ "207.3": {
+  "id": "mr:0428-vitalis"
+ },
+ "242.9": {
+  "id": "mr:0515-torquatus-et-socii",
+  "printed": "Euphasius",
+  "corrected": "Euphrasius"
+ },
+ "269.7": {
+  "drop": "the erratum reads 'doctoris, doctoris': both readings alike (probably meant ductoris); the print has dôctoris"
+ },
+ "278.5": {
+  "id": "mr:0607-paulus",
+  "printed": "Cucŭsum",
+  "corrected": "Cucusam"
+ },
+ "301.8": {
+  "id": "mr:0621-urciscenus",
+  "printed": "Vrscicêni",
+  "corrected": "Vrciceni"
+ },
+ "314.3": {
+  "id": "mr:0627-crescens",
+  "printed": "conueruertit",
+  "corrected": "conuertit"
+ },
+ "365.14": {
+  "id": "mr:0728-martyres-thebaidis"
+ },
+ "376.12": {
+  "drop": "this copy already prints fugisset"
+ },
+ "410.5": {
+  "id": "mr:0826-irenaeus-et-abundius",
+  "printed": "clôcam",
+  "corrected": "cloacam"
+ },
+ "421.7": {
+  "id": "mr:0826-alexander",
+  "printed": "cruciati",
+  "corrected": "excruciati"
+ },
+ "456.8": {
+  "drop": "the erratum reads 'insigente, Insigente'; this copy already prints infigente"
+ },
+ "461.7": {
+  "id": "mr:0918-ferreolus-viennensis"
+ },
+ "487.6": {
+  "id": "mr:1002-eleutherius"
+ },
+ "496.5": {
+  "id": "mr:1008-simeon"
+ },
+ "518.12": {
+  "id": "mr:1021-malchus",
+  "printed": "pro Antiochiam",
+  "corrected": "prope Antiochiam"
+ },
+ "554.7": {
+  "id": "mr:1110-theoctiste",
+  "printed": "Theoctistes",
+  "corrected": "Theoctistæ"
+ },
+ "592.1": {
+  "id": "mr:1205-sabas",
+  "printed": "MVTÂLAE",
+  "corrected": "Muralæ"
+ },
+ "611.8": {
+  "id": "mr:1224-euthymius",
+  "printed": "transfixus,"
+ },
+ "619.8": {
+  "drop": "'Nicetæ, Nicetatis': not found on printed p. 619 or nearby (closest: Nicerâtæ, p. 629, which does not fit)"
+ },
+ "634.10": {
+  "id": "mr:1231-melania",
+  "printed": "erercuit",
+  "corrected": "exercuit"
+ }
+}
