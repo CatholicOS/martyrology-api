@@ -48,9 +48,21 @@ def test_year_resolver_hits_1749(client):
     assert r.json()["metadata"]["edition"] == "martyrologium_romanum_1749"
 
 
+def test_year_resolver_hits_1630(client):
+    r = client.get("/api/v1/elogia/1700/08/04")
+    assert r.status_code == 200
+    b = r.json()
+    assert b["metadata"]["edition"] == "martyrologium_romanum_1630"
+    assert b["elogia"][0]["id"] == "mr:0804-dominicus"
+
+
 @pytest.mark.parametrize(
     "edition_id",
-    ["martyrologium_romanum_1749", "martyrologium_romanum_1914_en_unofficial"],
+    [
+        "martyrologium_romanum_1630",
+        "martyrologium_romanum_1749",
+        "martyrologium_romanum_1914_en_unofficial",
+    ],
 )
 def test_full_year_no_crashes(client, edition_id):
     from martyrology_api.grammar import DAYS_IN_MONTH

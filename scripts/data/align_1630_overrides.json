@@ -1,0 +1,53 @@
+{
+ "$comment": "Reviewed decisions for align_1630_ids.py, keyed 'M-D|<opening words of the eulogy>' (folded comparison). MERGE_PREV: a continuation the segmenter split off; RUBRIC: a rubric, not a eulogy; DROP: printing noise; mr:<id>: the ID (spelling variants the matcher missed, or a 1630-day deprecated ID); split_at: two eulogies run together; coin: a new deprecated ID (with same_eulogy for a eulogy 1630 prints on another day).",
+ "2-1|Eodem die sancti Ephræm": "mr:0201-ephraem",
+ "2-13|Andegăui depositio S. Lucinij": {
+  "coin": "lucinius-andegavorum",
+  "subject_la": "Sanctus Lucinius",
+  "country": "FR",
+  "note": "Bishop of Angers (Andegavi), printed in the 1630 edition only; absent from the 1749 and 2004 editions."
+ },
+ "2-23|In Anno Bissextili omittitur": "RUBRIC",
+ "3-9|In Morauia sanctorum Episcoporum Cyrilli": "mr:0309-cyrillus-et-methodius",
+ "3-22|In Suetia sanctæ Catherinæ": "mr:0322-catharina",
+ "3-28|Romæ S. Sixti Tertij Papæ": "mr:0328-xystus-iii",
+ "5-2|Abŭlæ in Hispania, sancti Secundi": "mr:0502-secundus",
+ "5-7|Celebratur etiam vna cum SS.martyribus": "MERGE_PREV",
+ "5-12|Flauiæ Domitillæ ex diaconîa": "MERGE_PREV",
+ "6-14|CÆSAREAE in Cappadocia ordinatio S. Basilij": "mr:0614-basilius-magnus",
+ "6-22|Claruit autem non solum": "MERGE_PREV",
+ "6-23|VIGILIA sancti Ioannis Baptistæ": {
+  "split_at": "Romæ sancti Ioannis"
+ },
+ "6-28|Romæ sancti Leonis Papæ Secundi": "mr:0628-leo-ii",
+ "7-7|Eosdem in perquirendis": "MERGE_PREV",
+ "7-17|Sperâti autem reliquiæ": "MERGE_PREV",
+ "7-17|Venetijs Translatio sanctę Marînę": "mr:0717-translatio-marinae",
+ "7-29|In quo etiam altari inuenta": "MERGE_PREV",
+ "8-16|CRACOVIAE in Polonia sancti Hyacinthi": {
+  "coin": "hyacinthus",
+  "subject_la": "Sanctus Hyacinthus",
+  "same_eulogy": [
+   "mr:0815-hyacinthus",
+   "mr:0817-hyacinthus"
+  ]
+ },
+ "8-20|Albæ in Pannonia sancti Stephani Regis": {
+  "coin": "stephanus",
+  "subject_la": "Sanctus Stephanus",
+  "same_eulogy": [
+   "mr:0816-stephanus",
+   "mr:0902-stephanus"
+  ]
+ },
+ "8-21|In territorio Gaualitâno S. Priuâti": "mr:0821-privatus",
+ "8-21|Eodem die sanctorum martyrum Bonôsi": "mr:0821-bonosus-et-maximianus",
+ "8-23|Aruernis sancti Sidonij Episcopi": "mr:0823-sidonius-apollinaris",
+ "9-9|Interiecto autem tempore": "MERGE_PREV",
+ "9-20|Item sanctæ martyris Susannæ": "mr:0920-susanna",
+ "10-2|Herfordiæ in Anglia sancti Thomæ": "mr:1002-thomas",
+ "10-13|Apud Septam in Mauritania": "mr:1013-daniel-et-socii",
+ "10-31|Quę Sanctorum corpora, Gregorio XIII": "MERGE_PREV",
+ "11-8|8 D xliij": "DROP",
+ "12-8|CONCEPTIO gloriosæ semper virginis": "mr:1208-conceptio-immaculata-beatae-mariae-virginis"
+}
