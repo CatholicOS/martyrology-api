@@ -361,7 +361,9 @@
    "mr:0826-zephyrinus": "ROMAE sancti Zephyrîni Papæ & martyris.",
    "mr:0826-irenaeus-et-abundius": "Ibîdem sanctorum martyrum Irenæi, & Abundij, qui in persecutione Valeriani, eo quod corpus beatæ Concordiæ in cloâcam proiectum leuauerant, in eamdem clôcam demersi fuerunt: quorum corpora a Iustino presbytero inde extracta, in crypta iuxta beatum Laurentium sepulta sunt.",
    "mr:0826-secundus": "Apud Albintimelium Liguriæ ciuitatem sancti Secundi martyris, viri spectabilis, & ducis ex legione Thebæorum.",
-   "mr:0826-alexander": "Bergŏmi in Gallia Cisalpina sancti Alexandri martyris, qui & ipse vnus ex eadem legione, cum nomen Domini IESV Christi constantissime fateretur, martyrium capitis abscissione compleuit: Apud Marsos sanctorum Simplicij, & filiorum eius Constantij, & Victoriâni qui sub Antonino Imperatore varie primum cruciati, tum demum securi percussi martyrij coronam adepti sunt: Nicomediæ passio sancti Hadriani, filij Probi Cæsaris, qui Licinio persecutionem in Christianos commotam exprŏbrans, ab eôdem iussus est occidi: cuius corpus Domitius Byzantij Episcopus, eius patruus, Argyropŏli sepeliuit.",
+   "mr:0826-alexander": "Bergŏmi in Gallia Cisalpina sancti Alexandri martyris, qui & ipse vnus ex eadem legione, cum nomen Domini IESV Christi constantissime fateretur, martyrium capitis abscissione compleuit:",
+   "mr:0826-simplicius-et-socii": "Apud Marsos sanctorum Simplicij, & filiorum eius Constantij, & Victoriâni qui sub Antonino Imperatore varie primum cruciati, tum demum securi percussi martyrij coronam adepti sunt:",
+   "mr:0826-hadrianus": "Nicomediæ passio sancti Hadriani, filij Probi Cæsaris, qui Licinio persecutionem in Christianos commotam exprŏbrans, ab eôdem iussus est occidi: cuius corpus Domitius Byzantij Episcopus, eius patruus, Argyropŏli sepeliuit.",
    "mr:0826-victor": "In Hispania sancti Victoris martyris, qui a Mauris pro Christi fide occisus, martyrij corona donatus est.",
    "mr:0826-rufinus": "Capuæ sancti Rufini, Episcopi & confessoris.",
    "mr:0826-felix": "Pistorij sancti Felicis presbyteri & confessoris."
@@ -422,7 +424,8 @@
   "elogia": {
    "mr:0830-felix-et-adauctus": "ROMÆ via Ostiensi passio beati Felicis presbyteri, sub Diocletiano & Maximiano Imperatoribus: qui post equulei vexationem, data sententia, cum duceretur ad decollandum, obuius ei fuit quidam Christianus, qui dum se Christianum esse sponte profiteretur, mox cum eodem pariter decollatus est. Huius nomen ignorantes Christiani, Adauctum eum appellauerunt, eo quod sancto Felici auctus sit ad coronam.",
    "mr:0830-gaudentia": "Item Romæ sanctæ Gaudentiæ virginis & martyris, cum alijs tribus.",
-   "mr:0830-sexaginta-martyres-coloniae-sufetanae": "Ibidẽ sancti Pammachij presbyteri, qui fuit doctrina & sanctitate conspicuus; Coloniæ Suffetulânæ in Africa beatorum sexaginta Martyrum, qui furore Gentilium cæsi sunt.",
+   "mr:0830-pammachius": "Ibidẽ sancti Pammachij presbyteri, qui fuit doctrina & sanctitate conspicuus;",
+   "mr:0830-sexaginta-martyres-coloniae-sufetanae": "Coloniæ Suffetulânæ in Africa beatorum sexaginta Martyrum, qui furore Gentilium cæsi sunt.",
    "mr:0830-fantinus": "Adrumêti item in Africa sanctorum Bonifacij & Theclæ, qui beatorum duodecim filiorum martyrum parentes fuerunt. Thessalonĭcæ S, Fantîni confessoris, qui multa a Sarracênis perpessus, atque e monasterio, in quo mira abstinentia vixerat, expulsus, cum plurimos ad viam salutis perduxisset, demum in senectute bona quieuit.",
    "mr:0830-fiacrius": "In territorio Meldensi sancti Fiacrij confessoris.",
    "mr:0830-bononius": "Bononiæ sancti Bononij abbatis."

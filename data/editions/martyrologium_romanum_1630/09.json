@@ -10,7 +10,8 @@
    "mr:0901-terentianus": "Tuderti in Vmbria sancti Terentiani Episcopi & martyris, qui sub Hadriano Imperatore, Lætiani Proconsulis iussu, equuleo & scorpionibus cruciatus, demum abscissa lingua, capitis damnatus, martyrium compleuit.",
    "mr:0901-ammon-et-socii": "Heraclêæ sancti Ammônis diaconi, & sanctarum quadraginta Virginum, quas ille erudiuit in fide, & sub Licinio tyranno ad martyrij gloriam secum perduxit.",
    "mr:0901-vincentius": "In Hispania sanctorum martyrum Vincentij & Læti.",
-   "mr:0901-regulus": "Populonij in Tuscia sancti Regŭli martyris, qui ex Africa veniens, ibi sub Totila martyrium consummauit: Apud Senônas beati Lupi Episcopi & confessoris, de quo refertur, quod quadam die, dum præsente clero sacris altaribus adstaret, lapsa est cęlitus gemma in eius calicem sanctum. Capuæ item alterius Prisci Episcopi, qui vnus fuit ex illis sacerdotibus, qui in persecutione Vuandalorum ob Fidem Catholicam varie afflicti & vetustæ naui impositi, ex Africa ad Campaniæ litora peruenerunt, & Christianam religionem, in ijs locis dispersi, diuersisq. ecclesijs præfecti, mirifice propagarunt. Fuerunt autem eius socij, Castrensis, Tammarus, Rosius, Heraclius, Secundinus, Adiûtor, Marcus, Augustus, Elpidius, Canĭon, & Vindonĭus, Apud Aquînum sancti Constantij Episcopi, prophetiæ dono, multisq. virtutibus clari Apud Cenomănos sancti Victorij Episcopi.",
+   "mr:0901-regulus": "Populonij in Tuscia sancti Regŭli martyris, qui ex Africa veniens, ibi sub Totila martyrium consummauit:",
+   "mr:0901-lupus": "Apud Senônas beati Lupi Episcopi & confessoris, de quo refertur, quod quadam die, dum præsente clero sacris altaribus adstaret, lapsa est cęlitus gemma in eius calicem sanctum. Capuæ item alterius Prisci Episcopi, qui vnus fuit ex illis sacerdotibus, qui in persecutione Vuandalorum ob Fidem Catholicam varie afflicti & vetustæ naui impositi, ex Africa ad Campaniæ litora peruenerunt, & Christianam religionem, in ijs locis dispersi, diuersisq. ecclesijs præfecti, mirifice propagarunt. Fuerunt autem eius socij, Castrensis, Tammarus, Rosius, Heraclius, Secundinus, Adiûtor, Marcus, Augustus, Elpidius, Canĭon, & Vindonĭus, Apud Aquînum sancti Constantij Episcopi, prophetiæ dono, multisq. virtutibus clari Apud Cenomănos sancti Victorij Episcopi.",
    "mr:0901-verena": "In territorio Constantiensi ad Aquas duras sanctæ Verênæ virginis."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -113,7 +114,8 @@
   "titulus": "Sexto Idus Septemb. Luna.",
   "elogia": {
    "mr:0908-nativitas-beatae-mariae-virginis": "NATIVITAS beatissimæ semper Virginis Genitricis Dei MARIAE.",
-   "mr:0908-hadrianus": "Nicomediæ sancti Hadriani martyris, cum alijs vigintitribus, qui omnes post multa supplicia sub Diocletiano & Maximiano Augustis martyrium crurifragio consummarũt quarto Nonas Martij. Eorum reliquię a Christianis Byzantium delatæ, reuerenti honore sepultæ fuerunt: inde postea S. Hadriani corpus Romam hac die translatum fuit, in qua ipsius festiuitas potissimum celebratur: Alexandriæ sanctorum rum martyrum Ammônis, Theŏphili, Neotĕrij, & aliorum vigintiduorum.",
+   "mr:0908-hadrianus": "Nicomediæ sancti Hadriani martyris, cum alijs vigintitribus, qui omnes post multa supplicia sub Diocletiano & Maximiano Augustis martyrium crurifragio consummarũt quarto Nonas Martij. Eorum reliquię a Christianis Byzantium delatæ, reuerenti honore sepultæ fuerunt: inde postea S. Hadriani corpus Romam hac die translatum fuit, in qua ipsius festiuitas potissimum celebratur:",
+   "mr:0908-ammon-et-socii": "Alexandriæ sanctorum rum martyrum Ammônis, Theŏphili, Neotĕrij, & aliorum vigintiduorum.",
    "mr:0908-timotheus-et-faustus": "Antiochiæ sanctorum Timothĕi & Fausti martyrum.",
    "mr:0908-eusebius-et-socii": "Gazæ in Palæstina sanctorum martyrum Eusebij, Nestăbi, & Zenônis fratrum, qui tempore Iuliani Apostătę, irruente in eos turba Gentilium, discerpti atque necati sunt.",
    "mr:0908-nestor": "Ibidem sancti Nestŏris martyris, qui sub eodem Iuliano ab ijsdem Gentilibus furentibus sæuissime cruciatus, emisit spiritum.",
@@ -388,7 +390,8 @@
    "mr:0927-cosmas-et-damianus": "AEGAEAE natalis sanctorum martyrum Cosmę & Damiani fratrum, qui in persecutione Diocletiani post multa tormenta, vincula, & carceres, post mare, & ignes, cruces, lapidationem, & sagittas diuinitus superatas, capite plectuntur: cum quibus etiam referuntur passi tres eorum fratres germani, Anthimus, Leontius, & Euprepius.",
    "mr:0927-epicharis": "Romę sanctę Epicharidis mulieris senatoriæ, quę in eadem persecutione plũbatis cęsa, gladio percussa est.",
    "mr:0927-fidentius-et-terentius": "Tuderti sanctorũ martyrum Fidẽtij & Terentij, sub eodem Diocletiano.",
-   "mr:0927-florentinus": "Cordûbæ SS. martyrum Adulphi & Ioannis fratrum, qui in persecutione Arabica pro Christo coronati sunt: Sedûni in Gallia sancti Florentini martyris, qui vnà cum beato Hilario post abscissionem linguæ iussus est gladio feriri.",
+   "mr:0927-adolphus-et-ioannes": "Cordûbæ SS. martyrum Adulphi & Ioannis fratrum, qui in persecutione Arabica pro Christo coronati sunt:",
+   "mr:0927-florentinus": "Sedûni in Gallia sancti Florentini martyris, qui vnà cum beato Hilario post abscissionem linguæ iussus est gladio feriri.",
    "mr:0927-marcus": "Bibli in Phœnicia sancti Marci Episcopi, qui & Ioannes a beato Luca nominatur.",
    "mr:0927-caius": "Mediolani sancti Caij Episcopi, discipuli beati Barnabæ Apostoli, qui multa in persecutione Neronis passus, in pace quieuit.",
    "mr:0927-aderitus": "Rauennæ sancti Aderiti Episcopi & confessoris.",

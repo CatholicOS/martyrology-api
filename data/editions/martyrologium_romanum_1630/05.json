@@ -274,7 +274,8 @@
    "mr:0520-baudelius": "Nemausi in Gallijs S. Baudelij martyris, qui comprehensus, cum sacrificare nollet, & in fide Christi immobilis inter verbera & tormenta persisteret, martyrij palmam pretiosa morte suscepit.",
    "mr:0520-thalalaeus": "Edessæ in Syria sanctorum martyrum Thalalæi, Asterij, Alexandri, & sociorum, qui sub Numeriano Imperatore passi sunt.",
    "mr:0520-aquila": "In Thebaĭde S. Aquĭlæ martyris, qui pectinibus pro Christo dilaniatus fuit.",
-   "mr:0520-austregisilius": "Apud Biturĭcas in Gallia sancti Austregisili Episcopi & confessoris; Brixiæ S. Anastasij Episcopi.",
+   "mr:0520-austregisilius": "Apud Biturĭcas in Gallia sancti Austregisili Episcopi & confessoris;",
+   "mr:0520-anastasius": "Brixiæ S. Anastasij Episcopi.",
    "mr:0520-theodorus": "Papîæ sancti Theodôri Episcopi.",
    "mr:0520-bernardinus-senensis": "Aquĭlæ in Vestînis S. Bernardini Senensis, ordinis Minorum, qui verbo & exemplo Italiam illustrauit.",
    "mr:0520-plautilla": "Romæ sanctę Plautillæ feminæ Consularis, matris beatæ Flauiæ Domitillæ, quæ a S. Petro Apostolo baptizata, omnium virtutum laude refulgens quieuit in pace."
@@ -318,7 +319,8 @@
    "mr:0523-epitacius-et-basileus": "In Hispania sanctorum martyrum Epitacij Episcopi, & Basilêi.",
    "mr:0523-quinctianus-et-socii": "In Africa sanctorum martyrum Quinctiani, Lucij, & Iuliani, qui in persecutione Vuandalica passi, æternas coronas meruerunt.",
    "mr:0523-martyres-mesopotamiae": "In Cappadocia commemoratio sanctorum martyrum, qui in persecutione Maximiani Galerij confractis cruribus necati sunt: item eorum qui eodem tempore in Mesopotamia appensi pedibus in sublime, capite verso deorsum, suffocati fumo, & lento igne consumpti, martyrium compleuerunt.",
-   "mr:0523-desiderius-viennensis": "In territorio Lugdunensi sancti Desiderij Episcopi Viennensis, qui Theodorici Regis iussu lapidibus obrutus, martyrio coronatur: Synnădæ in Phrygia sancti Michaelis Episcopi.",
+   "mr:0523-desiderius-viennensis": "In territorio Lugdunensi sancti Desiderij Episcopi Viennensis, qui Theodorici Regis iussu lapidibus obrutus, martyrio coronatur:",
+   "mr:0523-michael": "Synnădæ in Phrygia sancti Michaelis Episcopi.",
    "mr:0523-mercurialis": "Ipso die S. Mercurialis Episcopi.",
    "mr:0523-ephebus": "Neapoli in Campania S. Euphebij Episcopi.",
    "mr:0523-eutychius": "Apud Nursiam sanctorum Eutychij & Florentij monachorum, quorum meminit B. Gregorius Papa."
@@ -344,7 +346,8 @@
  "25": {
   "titulus": "Octauo kal. Iunij. Luna.",
   "elogia": {
-   "mr:0525-urbanus-i": "ROMAE via Nomentana natalis B. Vrbani Papæ & martyris, cuius exhortatione & doctrina multi (in quibus fuere Tiburtius & Valerianus) Christi fidem susceperunt; & pro ea martyrium subierunt: ipse quoque in persecutione Alexandri Seueri pro Ecclesia Dei multa passus, tandem ceruicibus abscissis, martyrio tyrio coronatus est: Dorostŏri in Mysia natalis sanctorum martyrum Pasicrătis, Valentiŏnis, & aliorum duorum simul coronatorum.",
+   "mr:0525-urbanus-i": "ROMAE via Nomentana natalis B. Vrbani Papæ & martyris, cuius exhortatione & doctrina multi (in quibus fuere Tiburtius & Valerianus) Christi fidem susceperunt; & pro ea martyrium subierunt: ipse quoque in persecutione Alexandri Seueri pro Ecclesia Dei multa passus, tandem ceruicibus abscissis, martyrio tyrio coronatus est:",
+   "mr:0525-pasicrates-et-valentio": "Dorostŏri in Mysia natalis sanctorum martyrum Pasicrătis, Valentiŏnis, & aliorum duorum simul coronatorum.",
    "mr:0525-dionysius": "Mediolani sancti Dionysij Episcopi, qui ab Imperatore Constantio Ariano in Cappadociam pro fide Catholica relegatus, ibidem propiôre martyribus titulo spiritum Deo reddidit. Eius sacrum corpus ab Aurelio Episcopo Mediolânum transmissum est ad B. Ambrosium Episcopum: cui piæ actioni officium quoque S. Basilij Magni accessisse traditur.",
    "mr:0525-bonifatius-iv": "Romę Sancti Bonifacij Papę Quarti, qui Panthĕon in honorem B. MARIÆ ad Martyres dedicauit.",
    "mr:0525-gregorius-vii": "Salerni depositio B. Gregorij Papæ Septimi, Ecclesiasticæ libertatis propugnatoris ac defensoris acerrimi.",

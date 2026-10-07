@@ -68,7 +68,8 @@
    "mr:0105-martyres-aegypti": "In Aegypto commemoratio plurimorum sanctorum Martyrum, qui in Thebaĭde sub persecutione Diocletiani diuerso tormentorum genere cæsi sunt.",
    "mr:0105-domnio": "Bergŏmi sancti Domnônis martyris.",
    "mr:0105-simeon": "Antiochiæ sancti Simeonis monachi, qui in columna stans multos annos vixit, vnde & Stylîtæ cognomen accepit: cuius vita & conuersatio extitit admirabilis.",
-   "mr:0105-syncletica": "In Anglia sancti Eduardi Regis, virtute castitatis, & gratia miraculorum insignis: Alexandriæ sanctæ Syncleticæ, cuius res præclare gestas sanctus Athanasius litterarum monumentis commendauit.",
+   "mr:0105-eduardus-confessor": "In Anglia sancti Eduardi Regis, virtute castitatis, & gratia miraculorum insignis:",
+   "mr:0105-syncletica": "Alexandriæ sanctæ Syncleticæ, cuius res præclare gestas sanctus Athanasius litterarum monumentis commendauit.",
    "mr:0105-aemiliana": "Romæ sanctæ Aemiliânæ virginis, amĭtæ sancti Gregorij Papæ, quæ vocante Tharsilla sorore, quæ ad Deum præcesserat, hac ipsa die migrauit ad Dominum.",
    "mr:0105-apollinaris": "Eodem die sanctæ Apollinâris virginis."
   },
@@ -143,7 +144,9 @@
   "elogia": {
    "mr:0111-hyginus": "ROMAE natalis S. Hyginij Papæ, qui in persecutione Antonini gloriose martyrium consummauit.",
    "mr:0111-salvius": "In Africa B. Saluij martyris, in cuius die natali S. Augustinus sermonem habuit ad populum Carthaginiensem.",
-   "mr:0111-petrus-et-socii": "Alexandriæ sanctorum martyrum Petri, Seuêri, & Leucij, Firmi in Picêno S. Alexandri Episcopi & martyris: Ambiâni S. Saluij Episcopi & martyris: Brundusij S. Leucij Episcopi & confessoris.",
+   "mr:0111-petrus-et-socii": "Alexandriæ sanctorum martyrum Petri, Seuêri, & Leucij, Firmi in Picêno S. Alexandri Episcopi & martyris:",
+   "mr:0111-salvius-ambiani": "Ambiâni S. Saluij Episcopi & martyris:",
+   "mr:0111-leucius": "Brundusij S. Leucij Episcopi & confessoris.",
    "mr:0111-theodosius": "In Cappadocia in vico Magariasso sancti Theodosij cœnobiarchæ, qui multa pro fide Catholica passus, in pace tandem quieuit.",
    "mr:0111-palaemon": "In Thebaïde S. Palæmŏnis abbatis, magistri S. Pachomij.",
    "mr:0111-anastasius-et-socii": "Suppentoniæ apud montem Soractem S. Anastasij monachi, & sociorum, qui diuinitus vocati migrauerunt ad Dominum.",
@@ -265,7 +268,8 @@
   "titulus": "Tertiodecimo Kal. Febr. Luna.",
   "elogia": {
    "mr:0120-fabianus": "ROMAE Natalis sancti Fabiani Papæ, qui tempore Decij martyrium passus, in cœmeterio Callisti sepultus est.",
-   "mr:0120-sebastianus": "Ibidem ad Catacumbas sancti Sebastiani martyris, qui Diocletiano Imperatore cùm haberet principatum primæ cohortis, sub titulo Christianitatis iussus est ligari in medio campo, & sagittari a militibus, atque ad vltimum fustibus cædi, donec deficẽret: Nicææ in Bithynia sancti Neophyti martyris, qui quintumdecimum annum ætatis agens, flagris cæsus, in fornacem immissus, feris obiectus, cùm permaneret illæsus, & Christi fidem cõstanter profiteretur, gladio tandem occisus est.",
+   "mr:0120-sebastianus": "Ibidem ad Catacumbas sancti Sebastiani martyris, qui Diocletiano Imperatore cùm haberet principatum primæ cohortis, sub titulo Christianitatis iussus est ligari in medio campo, & sagittari a militibus, atque ad vltimum fustibus cædi, donec deficẽret:",
+   "mr:0120-neophytus": "Nicææ in Bithynia sancti Neophyti martyris, qui quintumdecimum annum ætatis agens, flagris cæsus, in fornacem immissus, feris obiectus, cùm permaneret illæsus, & Christi fidem cõstanter profiteretur, gladio tandem occisus est.",
    "mr:0120-maurus": "Cæsenæ sancti Mauri Episcopi, virtutibus & miraculis clari.",
    "mr:0120-euthymius": "In Palæstina natalis sancti Euthymij abbatis, qui zelo Catholicæ disciplinæ, & virtute miraculorum tempore Marciani Imperatoris in Ecclesia floruit."
   },
@@ -368,7 +372,8 @@
    "mr:0128-martyres-alexandriae": "Alexandriæ commemoratio plurimorum sanctorũ martyrum, qui hac ipsa die factione Syriâni Ducis Ariani, dum in ecclesia synaxim agĕrent, diuerso mortis genere sunt interempti.",
    "mr:0128-cyrillus": "Item sancti Cyrilli eiusdem vrbis Episcopi, qui Catholicæ fidei præclarissimus propugnator, doctrina & sanctitate illustris quieuit in pace.",
    "mr:0128-valerius": "Cæsaraugustæ sancti Valerij Episcopi.",
-   "mr:0128-iulianus": "Conchæ in Hispania natalis sancti Iuliani Episcopi, qui erŏgans in pauperes bona ecclesiæ, opere manuum sibi more Apostolico victum quærens, clarus miraculis; quieuit in pace: In monasterio Rhemensi depositio sancti Ioannis præsbyteri, viri Dei.",
+   "mr:0128-iulianus": "Conchæ in Hispania natalis sancti Iuliani Episcopi, qui erŏgans in pauperes bona ecclesiæ, opere manuum sibi more Apostolico victum quærens, clarus miraculis; quieuit in pace:",
+   "mr:0128-ioannes": "In monasterio Rhemensi depositio sancti Ioannis præsbyteri, viri Dei.",
    "mr:0128-iacobus": "In Palæstina sancti Iacobi eremitæ, qui post lapsum diu in sepulchro pœnitentiæ causa latuit, & clarus miraculis migrauit ad Dominum."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."

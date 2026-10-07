@@ -46,7 +46,8 @@
    "mr:1004-petrus": "Damasci sancti Petri Episcopi & martyris, qui accusatus apud Agarenorum Principem, quod fidem Christi doceret, lingua, manibus, pedibusq. amputatis, cruci affixus, martyrium consummauit.",
    "mr:1004-caius-et-socii": "Alexandriæ sanctorum presbyterorum & diaconorum Caij, Fausti, Eusebij, Cheremônis, Lucij, & sociorum: ex quibus alij in persecutione Valeriani martyres facti, alij martyribus seruientes, mercedem martyrum receperunt.",
    "mr:1004-hierotheus": "Athênis sancti Hierothêi discipuli beati Pauli Apostoli.",
-   "mr:1004-petronius": "Bononiæ sancti Petronij Episcopi & confessoris, qui doctrina, miraculis, & sanctitate claruit: Lutetiæ Parisiorum sanctæ Aurêæ virginis."
+   "mr:1004-petronius": "Bononiæ sancti Petronij Episcopi & confessoris, qui doctrina, miraculis, & sanctitate claruit:",
+   "mr:1004-aurea": "Lutetiæ Parisiorum sanctæ Aurêæ virginis."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -191,7 +192,8 @@
    "mr:1014-fortunata": "Cęsarêæ in Palęstina sanctæ Fortunâtę virginis & martyris, quæ in persecutione Diocletiani post equuleum, ignes, bestias, & alia tormenta superata, spiritum Deo reddidit: cuius corpus postea Neapolim in Campania delatum fuit.",
    "mr:1014-carponius-et-socii": "Item sanctorum Carponij, Euaristi, & Prisciani, fratrum eiusdem beatæ Fortunatæ; qui gladio iugulati, pariter martyrij coronam perceperunt.",
    "mr:1014-saturninus-et-lupus": "Item sanctorum Saturnini & Lupi.",
-   "mr:1014-fortunatus": "Arimini sancti Gaudentij Episcopi & martyris: Tuderti sancti Fortunati Episcopi, qui (vt beatus Gregorius refert) in effugandis spiritibus immundis immensæ virtutis gratia emicuit.",
+   "mr:1014-gaudentius": "Arimini sancti Gaudentij Episcopi & martyris:",
+   "mr:1014-fortunatus": "Tuderti sancti Fortunati Episcopi, qui (vt beatus Gregorius refert) in effugandis spiritibus immundis immensæ virtutis gratia emicuit.",
    "mr:1014-burchardus": "Herbipoli sancti Burchardi primi illius ciuitatis Episcopi.",
    "mr:1014-donatianus": "Brugis Flandrorum S Donatiani Rhemensis Episcopi.",
    "mr:1014-rusticus": "Treuiris sancti Rustici Episcopi.",
