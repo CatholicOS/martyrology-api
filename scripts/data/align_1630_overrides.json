@@ -1,12 +1,7 @@
 {
  "$comment": "Reviewed decisions for align_1630_ids.py, keyed 'M-D|<opening words of the eulogy>' (folded comparison). MERGE_PREV: a continuation the segmenter split off; RUBRIC: a rubric, not a eulogy; DROP: printing noise; mr:<id>: the ID (spelling variants the matcher missed, or a 1630-day deprecated ID); split_at: two eulogies run together; coin: a new deprecated ID (with same_eulogy for a eulogy 1630 prints on another day).",
  "2-1|Eodem die sancti Ephræm": "mr:0201-ephraem",
- "2-13|Andegăui depositio S. Lucinij": {
-  "coin": "lucinius-andegavorum",
-  "subject_la": "Sanctus Lucinius",
-  "country": "FR",
-  "note": "Bishop of Angers (Andegavi), printed in the 1630 edition only; absent from the 1749 and 2004 editions."
- },
+ "2-13|Andegăui depositio S. Lucinij": "mr:0213-licinius",
  "2-23|In Anno Bissextili omittitur": "RUBRIC",
  "3-9|In Morauia sanctorum Episcoporum Cyrilli": "mr:0309-cyrillus-et-methodius",
  "3-22|In Suetia sanctæ Catherinæ": "mr:0322-catharina",

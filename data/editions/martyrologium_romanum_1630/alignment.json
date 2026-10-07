@@ -1285,8 +1285,8 @@
    "method": "same-day",
    "score": 0.2
   },
-  "mr:0213-lucinius-andegavorum": {
-   "method": "coined-deprecated",
+  "mr:0213-licinius": {
+   "method": "override",
    "score": null
   },
   "mr:0213-stephanus-lugduni": {
