@@ -28,33 +28,42 @@ epacts) are left to the lunar table (#96).
 Notes on the day heading (`a Kalendis Ianuarij.]`, `b Luna.]`) go with the day's
 first eulogy, unanchored. Orthography is as printed (long s as s), like the
 eulogies. Reviewed corrections are in scripts/data/notationes_1630_overrides.json,
-keyed "M-D|<letter>":
+keyed "M-D|<letter>" (the letter the note was read with; "M-D|<letter>#2" for the
+second note read with it that day):
   {"id": "mr:…"}            the note belongs to this eulogy
   {"after": "<phrase>"|null} its anchor phrase
+  {"mark": "<letter>"}      the letter it is shown with (a misprinted letter)
   {"text": "<…>"}           its text (a transcription fix)
   "DROP"                    not a note of this day
-What couldn't be settled is listed in scripts/data/notationes_1630_review.md.
+and, for a letter printed in a eulogy with no note found, "M-D|<letter>|mark":
+"MISSING" (the book has no note for it) or "NOT A MARK".
+What couldn't be settled is written as a crmedr-changeset/v1 change-set
+(scripts/notationes_changeset.py), decided in the frontend's /review; --apply
+writes the exported decisions to the overrides and the placement, then rebuilds.
 
 Usage:
   python3 notationes_1630.py data/sources/martyrologium_romanum_1630.tei.xml [repo_root]
-(run after digitize_1630.py and align_1630_ids.py; needs lxml)
+      [--changeset <path>] [--apply <exported change-set>]
+(run after digitize_1630.py and align_1630_ids.py; needs lxml; the change-set goes
+to scripts/data/notationes-1630-review.json unless --changeset says otherwise)
 """
 
 import collections
 import json
 import re
 import sys
-import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import digitize_1630 as D  # noqa: E402
+import notationes_changeset as C  # noqa: E402
 from layout_1630 import page_blocks  # noqa: E402
+from notationes_changeset import _isw, occurrences  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 LAYOUT = HERE / "data" / "layout_1630.json"
 OVERRIDES = HERE / "data" / "notationes_1630_overrides.json"
-REVIEW = HERE / "data" / "notationes_1630_review.md"
+CHANGESET = HERE / "data" / "notationes-1630-review.json"
 PLACEMENT = HERE / "data" / "marginalia_1630_placement.json"
 EDITION = "martyrologium_romanum_1630"
 MIN_SCORE = 0.6  # a paragraph placed on the page with a lower match keeps its TEI order
@@ -119,21 +128,6 @@ def join(a, b, sep=" "):
     if re.search(r"\w-$", a) and re.match(r"[a-zæœ]", b):
         return a[:-1] + b
     return a + sep + b
-
-
-# ---- whole-word phrases, as the frontend finds them
-def _isw(c):
-    return unicodedata.category(c)[0] in "LMN"
-
-
-def occurrences(text, phrase):
-    out, i = [], text.find(phrase)
-    while i >= 0:
-        j = i + len(phrase)
-        if (i == 0 or not _isw(text[i - 1])) and (j == len(text) or not _isw(text[j])):
-            out.append(i)
-        i = text.find(phrase, i + 1)
-    return out
 
 
 def anchor_phrase(text, end):
@@ -370,9 +364,38 @@ def lemma_home(note, plain, aligned):
     return eid, anchor_after(e, end, aligned[eid])
 
 
+def mark_page(day, plain_e, at):
+    """The scan page of the day's text holding the words before a mark."""
+    pages = [p for kind, _t, p in day["blocks"] if kind == "text"]
+    words = fold(plain_e[:at]).split()[-2:]
+    for kind, t, p in day["blocks"]:
+        if kind == "text" and words and " ".join(words) in fold(unmark(t)):
+            return p
+    return pages[0] if pages else None
+
+
+def aligned_text(aligned_months, eid):
+    return next(
+        d["elogia"][eid]
+        for month in aligned_months.values()
+        for d in month.values()
+        if eid in d["elogia"]
+    )
+
+
+def anchor_place(text, f):
+    """Where a footnote stands in its eulogy: the heading's first, unanchored last."""
+    if f["_head"]:
+        return -1
+    if f["after"] is None:
+        return len(text)
+    return occurrences(text, f["after"])[0] + len(f["after"])
+
+
 def build(tei, root=D.ROOT):
     """Everything the outputs are made from: the days, their notes (each with its
-    `day` 'M-D' and `home` (ID, letter)), the footnotes and the review lists."""
+    `day` 'M-D' and `home` (ID, letter)), the footnotes and the attach_note ops to
+    review."""
     ed_dir = root / "data" / "editions" / EDITION
     layout = json.load(open(LAYOUT, encoding="utf-8"))
     overrides = json.load(open(OVERRIDES, encoding="utf-8")) if OVERRIDES.exists() else {}
@@ -409,37 +432,61 @@ def build(tei, root=D.ROOT):
                     entries[j].append([entry[0], free[0], free[0][0] != entry[0]["letter"]])
                     break
 
-    footnotes, review = collections.defaultdict(list), collections.defaultdict(list)
+    footnotes, review = collections.defaultdict(list), []
     for x, day, marks, plain in zip(days, entries, all_marks, plains, strict=True):
         md = f"{x['month']}-{x['day']}"
         aligned = aligned_months[x["month"]][str(x["day"])]["elogia"]
         first_id = next(iter(aligned))
-        for n, m, relettered in day:
-            o = overrides.get(f"{md}|{n['letter']}", {})
+        texts = dict(aligned)
+        refs, seen = [], collections.Counter()
+        for n, _m, _r in day:  # a letter read twice in a day: the second is "M-D|a#2"
+            seen[n["letter"]] += 1
+            k = f"#{seen[n['letter']]}" if seen[n["letter"]] > 1 else ""
+            refs.append({"ref": f"{md}|{n['letter']}{k}", "mark": n["letter"], "lemma": n["lemma"]})
+        ops = []
+        for (n, m, relettered), ref in zip(day, refs, strict=True):
+            key = ref["ref"]  # the letter the note was read with
+            o = overrides.get(key, {})
             if o == "DROP":
                 continue
+            head = bool(m) and m[1] is None
+            klass = None
             if relettered:
-                review["letter differs"].append(
-                    f"{md} note {n['letter']} ({n['lemma']}) ↔ mark {m[0]} in the eulogy: "
-                    "the eulogy's letter kept"
-                )
+                klass = "letter-differs"  # the eulogy's letter kept
                 n["letter"] = m[0]
             if m and m[1] is not None:
                 e, at = plain[m[1]], m[2]
                 eid = aligned_id(e, at, aligned)
                 after = anchor_after(e, at, aligned[eid])
                 if after is None:
-                    review["unanchored"].append(f"{md} {n['letter']} ({n['lemma']}) → {eid}")
+                    klass = klass or "unanchored"
             elif m:  # the day heading
                 eid, after = first_id, None
             else:
                 eid, after = lemma_home(n, plain, aligned)
                 eid = eid or first_id
-                review["no mark"].append(
-                    f"{md} {n['letter']} ({n['lemma']}) → {eid} after “{after}”"
+                klass = "no-mark"
+            if klass and key not in overrides:
+                ops.append(
+                    {
+                        "op": "attach_note",
+                        "id": key,
+                        "class": klass,
+                        "day": md,
+                        "mark": n["letter"],
+                        "lemma": n["lemma"],
+                        "note": n["text"],
+                        "proposed": {"id": eid, "after": after},
+                        "texts": texts,
+                        "notes": refs,
+                        "scan_page": n["segs"][0][0],
+                        "decision": None,
+                        "edited": None,
+                    }
                 )
-            eid = o.get("id", eid)
-            after = o.get("after", after)
+            moved = "id" in o or "after" in o
+            eid, after = o.get("id", eid), o.get("after", after)
+            n["letter"] = o.get("mark", n["letter"])
             n["home"] = (eid, n["letter"])
             n["day"] = md
             footnotes[eid].append(
@@ -448,13 +495,47 @@ def build(tei, root=D.ROOT):
                     "after": after,
                     "text": o.get("text", n["text"]),
                     "_at": (m[1] if m and m[1] is not None else -1, m[2] if m else 0),
+                    "_moved": moved,
+                    "_head": head and not moved,
                 }
             )
         used = {m for _n, m, _r in day if m}
         for m in marks:
-            if m not in used:
-                where = "heading" if m[1] is None else plain[m[1]][max(0, m[2] - 30) : m[2]]
-                review["mark without note"].append(f"{md} {m[0]} after “…{where}”")
+            if m in used:
+                continue
+            if m[1] is None:
+                eid, after = first_id, None
+            else:
+                eid = aligned_id(plain[m[1]], m[2], aligned)
+                after = anchor_after(plain[m[1]], m[2], aligned[eid])
+            key = f"{md}|{m[0]}"
+            taken = any(f["mark"] == m[0] and f["after"] == after for f in footnotes.get(eid, []))
+            if taken or f"{key}|mark" in overrides:  # a note was given to it, or settled
+                continue
+            ops.append(
+                {
+                    "op": "attach_note",
+                    "id": key,
+                    "uid": f"{key}|mark",
+                    "class": "mark-without-note",
+                    "day": md,
+                    "mark": m[0],
+                    "lemma": None,
+                    "note": None,
+                    "proposed": {"id": eid, "after": after},
+                    "texts": texts,
+                    "notes": refs,
+                    "scan_page": mark_page(x, plain[m[1]] if m[1] is not None else "", m[2]),
+                    "decision": None,
+                    "edited": None,
+                }
+            )
+        review += ops
+    for eid, fs in footnotes.items():  # a note moved by an override: by its anchor's place
+        if any(f["_moved"] for f in fs):
+            text = aligned_text(aligned_months, eid)
+            for f in fs:
+                f["_at"] = (0, anchor_place(text, f))
 
     return {
         "days": days,
@@ -467,13 +548,38 @@ def build(tei, root=D.ROOT):
     }
 
 
+def write_json(path, data, indent=1):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=indent)
+        f.write("\n")
+
+
+def apply_decisions(exported):
+    """Write an exported change-set's decisions to the overrides and the placement."""
+    overrides = json.load(open(OVERRIDES, encoding="utf-8")) if OVERRIDES.exists() else {}
+    placement = json.load(open(PLACEMENT, encoding="utf-8"))
+    n = C.apply_decisions(json.load(open(exported, encoding="utf-8")), overrides, placement)
+    write_json(OVERRIDES, C.sorted_overrides(overrides))
+    write_json(PLACEMENT, placement, indent=0)
+    return n
+
+
 def main():
-    tei = Path(sys.argv[1]) if len(sys.argv) > 1 else sys.exit(__doc__)
-    root = Path(sys.argv[2]) if len(sys.argv) > 2 else D.ROOT
+    args, opts = [], {}
+    argv = iter(sys.argv[1:])
+    for a in argv:
+        if a in ("--changeset", "--apply"):
+            opts[a] = Path(next(argv, None) or sys.exit(f"{a} needs a path"))
+        else:
+            args.append(a)
+    tei = Path(args[0]) if args else sys.exit(__doc__)
+    root = Path(args[1]) if len(args) > 1 else D.ROOT
     ed_dir = root / "data" / "editions" / EDITION
+    if "--apply" in opts:
+        print(f"{apply_decisions(opts['--apply'])} decisions applied")
     b = build(tei, root)
     footnotes, review = b["footnotes"], b["review"]
-    marginalia = build_marginalia(b["days"], b["notes"], b["layout"], review)
+    marginalia = build_marginalia(b["days"], b["notes"], b["layout"], b["aligned"], review)
 
     def ordered(d, key):
         return {
@@ -485,23 +591,49 @@ def main():
 
     fn = ordered(footnotes, lambda n: n["_at"])
     mg = ordered(marginalia, lambda n: n["_at"])
-    for name, data in (("footnotes.json", fn), ("marginalia.json", mg)):
-        with open(ed_dir / name, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=1)
-            f.write("\n")
-    write_review(review, fn, mg)
+    write_json(ed_dir / "footnotes.json", fn)
+    write_json(ed_dir / "marginalia.json", mg)
+    write_json(opts.get("--changeset", CHANGESET), C.new_changeset(review))
+    counts = collections.Counter(f"{op['op']} {op['class']}" for op in review)
     print(
         f"{sum(map(len, fn.values()))} notes on {len(fn)} eulogies, "
-        f"{sum(map(len, mg.values()))} margin notes on {len(mg)} eulogies; "
-        + ", ".join(f"{len(v)} {k}" for k, v in review.items())
+        f"{sum(map(len, mg.values()))} margin notes on {len(mg)} eulogies; to review: "
+        + (", ".join(f"{v} {k}" for k, v in counts.items()) or "nothing")
     )
 
 
-def build_marginalia(days, all_notes, layout, review):
+def page_candidates(page, days, day_idx, all_notes, aligned):
+    """The notes and eulogies on a scan page, for a margin note's card."""
+    out = []
+    for notes in all_notes:
+        for n in notes:
+            if "home" in n and any(s[0] == page for s in n["segs"]):
+                out.append(
+                    {
+                        "ref": f"{n['day']}|{n['letter']}",
+                        "kind": "note",
+                        "lemma": n["lemma"],
+                        "words": opening(n["text"]),
+                    }
+                )
+    for i in sorted(day_idx):
+        x = days[i]
+        for eid, text in aligned[x["month"]][str(x["day"])]["elogia"].items():
+            out.append({"ref": eid, "kind": "eulogy", "lemma": None, "words": opening(text)})
+    return out
+
+
+def opening(text, n=8):
+    words = text.split()
+    return " ".join(words[:n]) + (" …" if len(words) > n else "")
+
+
+def build_marginalia(days, all_notes, layout, aligned, review):
     """Each margin note beside a note (the note's eulogy, note: its letter) or beside a
     eulogy (note: null): as placed from the page images (PLACEMENT); a margin note not
     placed there goes by where layout_1630.json found it on the page, else by TEI order
-    (the note read after it on its page), and is listed for review."""
+    (the note read after it on its page). Those placed in doubt or without the page image
+    are added to `review` as place_margin ops."""
     placement = json.load(open(PLACEMENT, encoding="utf-8")) if PLACEMENT.exists() else {}
     pages = page_blocks(days)
     by_ref = {f"{n['day']}|{n['letter']}": n for notes in all_notes for n in notes if "day" in n}
@@ -515,23 +647,46 @@ def build_marginalia(days, all_notes, layout, review):
                     stands[page].append((col, y, n))
     out = collections.defaultdict(list)
     for page, blocks in sorted(pages.items()):
-        for j, (i, kind, text, key) in enumerate(blocks):
+        for j, (_i, kind, text, key) in enumerate(blocks):
             if not kind.startswith("margin"):
                 continue
             text = re.sub(r"(\w)- (\w)", r"\1\2", D.norm(text))
             if CALENDAR.match(text):
                 continue
-            x = days[i]
-            where = f"{x['month']}-{x['day']} p{page} “{text}”"
             placed = placement.get(str(page), {}).get(key)
             p = layout.get(str(page), {}).get(key)
             y = p[1] if p else 0
             if placed == "SKIP":
                 continue
-            if placed and placed.get("doubt"):
-                review["margin placement in doubt"].append(f"{where}: {placed['doubt']}")
+            op = None
+            stale = bool(placed) and "note" in placed and placed["note"] not in by_ref
+            if placed is None or placed.get("doubt") or stale:
+                op = {
+                    "op": "place_margin",
+                    "id": f"{page}|{key}",
+                    "class": "doubt" if placed and placed.get("doubt") else "no-image",
+                    "text": text,
+                    "proposed": None,
+                    "candidates": page_candidates(
+                        page, days, {b[0] for b in blocks}, all_notes, aligned
+                    ),
+                    "scan_page": page,
+                    "image": C.image_url(page),
+                    "decision": None,
+                    "edited": None,
+                }
+                if placed and placed.get("doubt"):
+                    confidence, _, reasoning = placed["doubt"].partition(": ")
+                    if confidence in ("low", "medium", "high") and reasoning:
+                        op["confidence"] = confidence
+                    else:
+                        reasoning = placed["doubt"]
+                    op["reasoning"] = reasoning
+                review.append(op)
             if placed and "id" in placed:
                 out[placed["id"]].append({"text": text, "note": None, "_at": (-1, y)})
+                if op:
+                    op["proposed"] = {"id": placed["id"]}
                 continue
             note = by_ref.get(placed["note"]) if placed and "note" in placed else None
             if note is None:
@@ -542,28 +697,13 @@ def build_marginalia(days, all_notes, layout, review):
                     nxt = [n for b in blocks[j + 1 :] for n in started[(page, b[2])]]
                     prv = [n for b in blocks[:j] for n in started[(page, b[2])]]
                     note = (nxt or prv[-1:] or [None])[0]
-                review["margin placed without the page image"].append(where)
             if note is None or "home" not in note:
-                review["margin not placed"].append(where)
                 continue
             eid, letter = note["home"]
+            if op:
+                op["proposed"] = {"note": f"{note['day']}|{letter}"}
             out[eid].append({"text": text, "note": letter, "_at": (D.ALPHA.find(letter), y)})
     return out
-
-
-def write_review(review, fn, mg):
-    lines = [
-        "# 1630 Notationes and marginalia: to review",
-        "",
-        "Written by `scripts/notationes_1630.py`. Settle an item with an entry in",
-        "`notationes_1630_overrides.json` (see the script's docstring), then rerun it.",
-        "",
-        f"{sum(map(len, fn.values()))} notes on {len(fn)} eulogies; "
-        f"{sum(map(len, mg.values()))} margin notes on {len(mg)} eulogies.",
-    ]
-    for k, v in review.items():
-        lines += ["", f"## {k} ({len(v)})", ""] + [f"- {x}" for x in v]
-    REVIEW.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
