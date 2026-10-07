@@ -32,6 +32,9 @@
  "7-20|ANTIOCHIAE passio S. Margarîtæ": "mr:0720-marina",
  "7-26|DORMITIO sanctæ Annę": "mr:0726-anna",
  "7-29|In quo etiam altari inuenta": "MERGE_PREV",
+ "8-3|HIEROSOLYMIS Inuentio corporis": {
+  "split_at": "Constantinopoli natalis sancti Hermelli"
+ },
  "8-16|CRACOVIAE in Polonia sancti Hyacinthi": {
   "coin": "hyacinthus",
   "subject_la": "Sanctus Hyacinthus",

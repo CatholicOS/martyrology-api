@@ -3,7 +3,7 @@
 Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 `notationes_1630_overrides.json` (see the script's docstring), then rerun it.
 
-3052 notes on 2777 eulogies; 2410 margin notes on 2197 eulogies.
+3052 notes on 2778 eulogies; 2410 margin notes on 2197 eulogies.
 
 ## mark without note (10)
 
