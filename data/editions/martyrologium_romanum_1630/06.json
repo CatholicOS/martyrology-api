@@ -18,8 +18,9 @@
  "2": {
   "titulus": "Quarto Nonas Iunij. Luna.",
   "elogia": {
-   "mr:0602-marcellinus-et-petrus": "ROMAE natalis SS. martyrum Marcellîni presbyteri a & Petri exorcistę, qui multos in carcere ad fidem erudientes, sub Diocletiano post dira vincula & plurima tormenta a Serêno Iudice decollati sunt in loco qui dicebatur Silua Nigra, quæ postea in honorem sanctorum commutato nomine Silua Candida appellata est.Horum corpora in crypta iuxta S. Tiburtium sepulta sunt, eorumq. sepulchrum S. Damăsus Papa versibus postea exornauit.",
-   "mr:0602-erasmus": "In Campania S. Erasmi Episcopi & martyris, qui sub Diocletiano Augusto primũ plumbatis cæsus, deinde fustibus grauiter mactatus, post resina, sulphŭre, plumbo, pice, cæra, oleoq. perfũsus, illæsus apparuit: deinde Formijs sub Maximiano diuersis atque immanissimis supplicijs iterum cruciatus, sed ad confirmandum ceteros a Deo seruatus: tandem vocante Domino, martyrio clarus, sancto fine quieuit: cuius corpus Caiêtam postea translatum est.Lugdûni SS. martyrum Photîni Episcopi, Sancti Diaconi, Vetij Epagăthi, Matûri, Pontĭci, Biblĭdis, Attăli, Alexandri, & Blandînæ, cum alijs multis, quorum fortia & iterata certamina tẽpore M. Aurelij Antonini, & Lucij Veri, ecclesiæ Lugdunensis epistola ad ecclesias Asiæ, & Phrygiæ scripta recenset. In his sancta Blandina sexu infirmior, corpore imbecillior, conditione deiectior, diuturniora & acerbiora certamina subiens, & fortis adhuc permanens, gladio iugulata, ceteros secuta est, quos hortabatur ad palmam.",
+   "mr:0602-marcellinus-et-petrus": "ROMAE natalis SS. martyrum Marcellîni presbyteri a & Petri exorcistę, qui multos in carcere ad fidem erudientes, sub Diocletiano post dira vincula & plurima tormenta a Serêno Iudice decollati sunt in loco qui dicebatur Silua Nigra, quæ postea in honorem sanctorum commutato nomine Silua Candida appellata est. Horum corpora in crypta iuxta S. Tiburtium sepulta sunt, eorumq. sepulchrum S. Damăsus Papa versibus postea exornauit.",
+   "mr:0602-erasmus": "In Campania S. Erasmi Episcopi & martyris, qui sub Diocletiano Augusto primũ plumbatis cæsus, deinde fustibus grauiter mactatus, post resina, sulphŭre, plumbo, pice, cæra, oleoq. perfũsus, illæsus apparuit: deinde Formijs sub Maximiano diuersis atque immanissimis supplicijs iterum cruciatus, sed ad confirmandum ceteros a Deo seruatus: tandem vocante Domino, martyrio clarus, sancto fine quieuit: cuius corpus Caiêtam postea translatum est.",
+   "mr:0602-pothinus-et-socii": "Lugdûni SS. martyrum Photîni Episcopi, Sancti Diaconi, Vetij Epagăthi, Matûri, Pontĭci, Biblĭdis, Attăli, Alexandri, & Blandînæ, cum alijs multis, quorum fortia & iterata certamina tẽpore M. Aurelij Antonini, & Lucij Veri, ecclesiæ Lugdunensis epistola ad ecclesias Asiæ, & Phrygiæ scripta recenset. In his sancta Blandina sexu infirmior, corpore imbecillior, conditione deiectior, diuturniora & acerbiora certamina subiens, & fortis adhuc permanens, gladio iugulata, ceteros secuta est, quos hortabatur ad palmam.",
    "mr:0602-eugenius-i": "Romæ sancti Eugenij Papæ & confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -293,12 +294,12 @@
   "titulus": "Nono Kalendas Iulij. Luna.",
   "elogia": {
    "mr:0623-vigilia-nativitatis-ioannis-baptistae": "VIGILIA sancti Ioannis Baptistæ,",
-   "mr:0623-ioannes": "Romæ sancti Ioannisb presbyteri, qui sub Iuliano Apostăta via Salarĭa veteri ante simulacrum Solis decollatus est, & corpus eius a beato Concordio presbytero iuxta Martyrum Conciliac sepultum.",
-   "mr:0623-agrippina": "Item Romæ sanctę Agrippînæd virginis & martyris sub Valeriano Imperatore, cuius corpus in Siciliam translatum, multis miraculis coruscat.",
-   "mr:0623-felix": "Sutrĭj in Tuscia sancti Felîcise presbyteri, cuius os tam diu iussit Turciusf Præfectus lapide contundi, donec emitteret spiritum.",
-   "mr:0623-nicomedia": "Nicomedĭæ commemoratio plurimorumg sanctorum Martyrum, qui in montibus & speluncis tempore Diocletiani latentes, pro Christi nomine martyrium læto animo subierunt.",
-   "mr:0623-zeno-et-zenas": "Philadelphĭæ in Arabia sanctorum martyrum Zenônish, & Zenæ serui eius, qui catenas domini sui vincti exosculans, eumq rogans, vt se in tormentis participem dignaretur habere, a militibus tentus, parem cum domino martyrij coronam accepit.",
-   "mr:0623-ediltrudis": "In Britannia sanctæ Ediltrûdisi Reginæ & virginis, quæ sanctitate & miraculis clara migrauit ad Dominum; cuius corpus vndecim post annis inuentum est incorruptum."
+   "mr:0623-ioannes": "Romæ sancti Ioannis presbyteri, qui sub Iuliano Apostăta via Salarĭa veteri ante simulacrum Solis decollatus est, & corpus eius a beato Concordio presbytero iuxta Martyrum Concilia sepultum.",
+   "mr:0623-agrippina": "Item Romæ sanctę Agrippînæ virginis & martyris sub Valeriano Imperatore, cuius corpus in Siciliam translatum, multis miraculis coruscat.",
+   "mr:0623-felix": "Sutrĭj in Tuscia sancti Felîcis presbyteri, cuius os tam diu iussit Turcius Præfectus lapide contundi, donec emitteret spiritum.",
+   "mr:0623-nicomedia": "Nicomedĭæ commemoratio plurimorum sanctorum Martyrum, qui in montibus & speluncis tempore Diocletiani latentes, pro Christi nomine martyrium læto animo subierunt.",
+   "mr:0623-zeno-et-zenas": "Philadelphĭæ in Arabia sanctorum martyrum Zenônis, & Zenæ serui eius, qui catenas domini sui vincti exosculans, eumq rogans, vt se in tormentis participem dignaretur habere, a militibus tentus, parem cum domino martyrij coronam accepit.",
+   "mr:0623-ediltrudis": "In Britannia sanctæ Ediltrûdis Reginæ & virginis, quæ sanctitate & miraculis clara migrauit ad Dominum; cuius corpus vndecim post annis inuentum est incorruptum."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },

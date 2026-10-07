@@ -68,7 +68,8 @@
    "mr:0505-eulogius": "Edessæ in Syria S. Eulogij Episcopi & confessoris.",
    "mr:0505-hilarius": "Arelâte in Gallia S Hilarij Episcopi, doctrina & sanctitate conspicui.",
    "mr:0505-theodorus": "Viennæ S. Nicetij Episcopi, venerabilis sanctitatis viri Bononiæ sancti Theodôri Episcopi, meritis clari.",
-   "mr:0505-sacerdos-sagunti": "Eodem die sancti Sacerdôtis Episcopi Saguntîni.Mediolani S.Geruntij Episcopi.",
+   "mr:0505-sacerdos-sagunti": "Eodem die sancti Sacerdôtis Episcopi Saguntîni.",
+   "mr:0505-geruntius": "Mediolani S.Geruntij Episcopi.",
    "mr:0505-conversio-augustini": "Ibidem conuersio sancti Augustini Episcopi & Ecclesiæ doctoris, quem beatus Ambrosius Episcopus fidei Catholicæ veritatem docuit, & hac die baptizauit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -94,7 +95,8 @@
   "elogia": {
    "mr:0507-stanislaus": "CRACOVIAE in Polonia natalis S. Stanislai Episc. & martyris, qui a Boleslao impio Rege necatus est.",
    "mr:0507-domitilla": "Tarracînæ in Campania natalis beatę Flauiæ Domitillæ virginis & martyris: quæ cum esset Flauij Clementis Consulis sororis filia, & a S. Clemente sacro velamine consecrata, in persecutione Domitiani ob testimonium Christi cum alijs plurimis in insulam Pontiam exilio deportata, longum ibi martyrium duxit: nouissime vero Tarracinam deducta, cum doctrina & miraculis plurimos ad fidem Christi conuertisset, iussu Iudicis incenso cubiculo, in quo simul cum suis virginibus Euphrosy̆na & Theodôra morabatur, cursum gloriosi martyrij consummauit. Celebratur etiam vna cum SS.martyribus Nerĕo, & Achillĕo die duodecima Maij.",
-   "mr:0507-flavius-et-socii": "Eodem die S.Iuuenâlis martyris.Nicomediæ sanctorum martyrum Flauij Augusti, & Augustini fratrum.",
+   "mr:0507-iuvenalis": "Eodem die S.Iuuenâlis martyris.",
+   "mr:0507-flavius-et-socii": "Nicomediæ sanctorum martyrum Flauij Augusti, & Augustini fratrum.",
    "mr:0507-quadratus": "Ibidem sancti Quadrâti martyris, qui in persecutione Decij sæpius ad tormenta repetitus, demum capite truncatus est.",
    "mr:0507-benedictus-ii": "Romæ S. Benedicti Papæ & confessoris.",
    "mr:0507-ioannes": "Eborâci in Anglia S.Ioãnnis Episcopi, vita & miraculis clari.",

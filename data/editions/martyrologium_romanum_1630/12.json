@@ -85,7 +85,7 @@
    "mr:1206-martyres-africae": "In Africa sanctarum mulierum Dionysiæ, Datîuæ, Leõtiæ, & religiosi viri nomine Tertij, Aemiliâni medici, & Bonifacij, cum alijs tribus, qui omnes in persecutione Vuandalĭca sub Hunnerîco Rege Ariano pro defensione Catholicæ fidei grauissimis & innumeris supplicijs cruciati, confessorum Christi numero sociari meruerunt.",
    "mr:1206-maioricus": "Ibidem S. Maiorici filij sanctæ Dionysiæ, qui cum esset adolescentulus, ac tormenta pauescĕret, matris obtutibus verbisq. corroboratus, ceteris fortior factus in tormentis reddidit spiritum: quem amplexata mater domi sepeliuit, & ad eius sepulchrum assidue orare consueuit.",
    "mr:1206-polychronius": "Eodem die sancti Polychronij presbyteri, qui tempore Constantij Imperatoris, cum ad altare Missas ageret, inuasus est ab Arianis, & iugulatus.",
-   "mr:1206-asella": "Romæ sanctæ Asellæ virginis, quæ (vt beatus Hieronymus scribit) ab vtero matris benedicta, vitam in ieiunijs & orationibus vsque ad senectam produxit. DECEM-"
+   "mr:1206-asella": "Romæ sanctæ Asellæ virginis, quæ (vt beatus Hieronymus scribit) ab vtero matris benedicta, vitam in ieiunijs & orationibus vsque ad senectam produxit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -150,7 +150,11 @@
   "titulus": "Tertio Idus Decemb. Luna.",
   "elogia": {
    "mr:1211-damasus-i": "ROMAE sancti Damasi Papæ & confessoris, qui Appollinarem hæresiarcham damnauit, & Petrum Episcopum Alexandrinum fugatum restituit: multa etiam sanctorum Martyrum corpora inuenit, eorũq memorias versibus exornauit.",
-   "mr:1211-traso": "Itẽ Romæ passio sancti Thrasonis, qui cum Christianos laborantes in thermis, alijsq. operibus publicis fatigatos, & in carcere positos de suis facultatibus aleret, iubente Maximiano tentus, cũ alijs duobus, Pontiano & Prætextato, martyrio coronatus est Ambiani sanctorum martyrum Victorici & Fusciani sub eodem Imperatore, in quorum naribus & auribus iussit Rictiouarus Præses immitti tarinchas, & clauis ardentibus tempora transfigi, deinde oculos euelli, ac postmodum eorum corpora iaculari; sicq. vna cum sancto Gentiano eorum hospite, capitibus amputatis, migrauerunt ad Dominum.In Perside sancti Barsabæ martyris.In Hispania sancti Eutychij martyris.Placentiæ sancti Sabini Episcopi, miraculis clari.",
+   "mr:1211-traso": "Itẽ Romæ passio sancti Thrasonis, qui cum Christianos laborantes in thermis, alijsq. operibus publicis fatigatos, & in carcere positos de suis facultatibus aleret, iubente Maximiano tentus, cũ alijs duobus, Pontiano & Prætextato, martyrio coronatus est",
+   "mr:1211-victoricus-et-fuscianus": "Ambiani sanctorum martyrum Victorici & Fusciani sub eodem Imperatore, in quorum naribus & auribus iussit Rictiouarus Præses immitti tarinchas, & clauis ardentibus tempora transfigi, deinde oculos euelli, ac postmodum eorum corpora iaculari; sicq. vna cum sancto Gentiano eorum hospite, capitibus amputatis, migrauerunt ad Dominum.",
+   "mr:1211-barsaba": "In Perside sancti Barsabæ martyris.",
+   "mr:1211-eutychius": "In Hispania sancti Eutychij martyris.",
+   "mr:1211-sabinus": "Placentiæ sancti Sabini Episcopi, miraculis clari.",
    "mr:1211-daniel-stylita": "Constantinopoli sancti Danielis Stylitæ."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."

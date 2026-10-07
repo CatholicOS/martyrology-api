@@ -254,7 +254,7 @@
    "mr:0220-quinque-martyres-tyri": "TYRI in Phœnicĭa commemoratio beatorum martyrum, quorum numerum solius Dei scientia colligit, qui sub Diocletiano Imperatore a Veturĭo militum magistro multis tormentorum generibus sibi inuicem succedentibus occisi sunt; primo quidem flagris toto corpore dilaniati, inde diuersis bestiarum generibus traditi, sed ab illis diuina virtute nil læsi, post addĭta feritate ignis ac ferri, martyrium consummarunt. Horum gloriosam multitudinem ad victoriam incitabant Tyrannĭo, Siluânus, Pelĕus, & Nilus Episcopi, ac Zenobius presbyter, qui felici agône vna cum illis martyrij palmam adepti sunt.",
    "mr:0220-potamius-et-nemesius": "In Cypro insula sanctorum martyrum Pothamij & Nemesij.",
    "mr:0220-eleutherius-constantinopoli": "Constantinopoli sancti Eleutherij Episcopi & martyris.",
-   "mr:0220-eleutherius-et-socii": "In Perside natalis sancti Sadoth Episcopi, & aliorum centum vigintiocto, qui sub Sapôre Rege Persarum, cùm Solem adorare renuissent, crudeli nece præclaras sibi coronas compararunt.",
+   "mr:0220-sadoth-et-socii": "In Perside natalis sancti Sadoth Episcopi, & aliorum centum vigintiocto, qui sub Sapôre Rege Persarum, cùm Solem adorare renuissent, crudeli nece præclaras sibi coronas compararunt.",
    "mr:0220-leo": "Catănæ in Sicilia sancti Leonis Episcopi, qui virtutibus atque miraculis coruscauit.",
    "mr:0220-eucherius": "Eodem die sancti Eucherij Episcopi Aurelianensis, qui eo magis miraculis claruit, quo pluribus inuidorum calumnijs fuit oppressus.",
    "mr:0220-eleutherius-tornaci": "Tornâci in Gallijs sancti Eleutherij Episcopi & confessoris."
@@ -339,7 +339,10 @@
    "mr:0226-nestor": "PERGE in Pamphilia natalis beati Nestŏris Episcopi, qui in persecutione Decij cùm die noctuq. orationi insisteret, postulans vt grex Christi custodiretur, comprehensus, ac nomen Domini mira libertate & alacritate confessus, iussu Præsidis Polliônis equuleo crudelissime tortus est, ac demum cùm se Christo semper adhæsurum constanter profiteretur, crucis suspendio victor migrauit in cælum.",
    "mr:0226-papias-et-socii": "Ibidem passio sanctorum Papię, Diodôri, Conŏnis, & Claudiani, qui S. Nestŏrem martyrio pręcesserunt.",
    "mr:0226-fortunatus-et-socii": "Item sanctorum martyrum Fortunati, Felicis, & aliorum vigintiseptem.",
-   "mr:0226-alexander": "Alexandrię sancti Alexandri Episcopi, gloriosi senis, qui post beatum Petrum eiusdem ciuitatis Episcopum, Arium presbyterum suum hæretica impietate deprauatum, & diuina veritate conuictum, de Ecclesia eiecit, ac postea inter trecentos decem & octo Patres in Nicæno Concilio eumdem damnauit.Bononiæ S.Faustiniani Episcopi, qui eam ecclesiam, Diocletiani persecutione vexatam, verbo prędicationis firmauit & auxit.Gazę in Palęstina S.Porphyrij Episcopi, qui tẽpore Arcadij Imperatoris Marnam idôlum eiusq. tẽplũ euertit, ac multa passus quieuit in Domino.Florentię S.Andreæ Episcopi & confessoris.",
+   "mr:0226-alexander": "Alexandrię sancti Alexandri Episcopi, gloriosi senis, qui post beatum Petrum eiusdem ciuitatis Episcopum, Arium presbyterum suum hæretica impietate deprauatum, & diuina veritate conuictum, de Ecclesia eiecit, ac postea inter trecentos decem & octo Patres in Nicæno Concilio eumdem damnauit.",
+   "mr:0226-faustinianus": "Bononiæ S.Faustiniani Episcopi, qui eam ecclesiam, Diocletiani persecutione vexatam, verbo prędicationis firmauit & auxit.",
+   "mr:0226-porphyrius": "Gazę in Palęstina S.Porphyrij Episcopi, qui tẽpore Arcadij Imperatoris Marnam idôlum eiusq. tẽplũ euertit, ac multa passus quieuit in Domino.",
+   "mr:0226-andreas": "Florentię S.Andreæ Episcopi & confessoris.",
    "mr:0226-victor": "In territorio Archiacensi S. Victoris confessoris, cuius laudes sanctus Bernardus conscripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."

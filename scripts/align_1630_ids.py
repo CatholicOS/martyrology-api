@@ -91,6 +91,7 @@ SLUGSTOP = {
 ROMAN = re.compile(r"^(?:i|ii|iii|iu|u|ui|uii|uiii|ix|x|xi|xii|xiii)$")
 ALIAS = {
     "xist": ["sixt"],
+    "sixt": ["xist"],
     "meginr": ["mein"],
     "ansgar": ["anschar", "anscar"],
     "brendan": ["brandan"],
@@ -107,6 +108,32 @@ def stems(i):
             continue
         out.append(f[:4] if len(f) >= 5 else f)
     return out
+
+
+GENERIC_WORDS = re.compile(
+    r"^(?:mart|sanct|beat|episc|presb|diac|confes|uirg|abbat|monac|eremit|apost|regi|papa"
+    r"|ciuit|eccles|imper|persec|natal|passi|depos|item|eodem|ibidem|cum|sub|quae|qui)"
+)
+
+
+def named_in_text(i, f):
+    """Is one of the slug's names in the text? Allows for its inflection (nominative
+    slug, genitive print) and for spelling variants (Hildephonsus/Ildefonsi,
+    Udalricus/Vldarici), but not for generic words (martyrum is not Martha)."""
+    toks = [t for t in f.replace("z", "s").split() if len(t) >= 3 and not GENERIC_WORDS.match(t)]
+    for p in i.split("-", 1)[1].split("-"):
+        n = fold(p).strip().replace("z", "s")
+        if p in SLUGSTOP or ROMAN.match(n) or len(n) < 3:
+            continue
+        stem = re.sub(r"(?:us|um|is|es|as|a|e|o|i)$", "", n)
+        stem = stem if len(stem) >= 3 else n
+        for t in toks:
+            if (
+                t.startswith(stem)
+                or difflib.SequenceMatcher(None, stem, t[: len(stem) + 1]).ratio() >= 0.75
+            ):
+                return True
+    return False
 
 
 def stem_alts(st):
@@ -247,7 +274,9 @@ def main():
             )
             assign, used = {}, set()
             for (s, n), x, i in pairs:
-                if x not in assign and i not in used and accept_same(s, n):
+                # a named ID needs its name in the text (spelling variants: overrides)
+                named_ok = n > 0 or not stems(i) or named_in_text(i, F[x])
+                if x not in assign and i not in used and named_ok and accept_same(s, n):
                     assign[x] = (i, "same-day", round(s, 3))
                     used.add(i)
             # unmatched fragments without a saint marker continue the eulogy before them
@@ -328,6 +357,8 @@ def main():
                 out["rubricae"] = [
                     {"after": keys[a] if a >= 0 else None, "text": t} for a, t in rubrics
                 ]
+            elif day.get("rubricae"):  # a repeat run over already-aligned files
+                out["rubricae"] = day["rubricae"]
             month[d] = out
         if WRITE:
             with open(path, "w", encoding="utf-8") as f:

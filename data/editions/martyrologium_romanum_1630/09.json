@@ -6,7 +6,7 @@
    "mr:0901-iosue": "In Palæstina sanctorum Iosue & Gedeônis.",
    "mr:0901-anna-prophetissa": "Hierosoly̆mis beatæ Annæ prophetissæ, cuius sanctitatem sermo Euangelicus prodit.",
    "mr:0901-priscus": "Capuæ via Aquaria sancti Prisci martyris, qui fuit vnus de antiquis Christi discipulis.",
-   "mr:0901-constantius": "Rhemis in Gallia sancti Xisti discipuli beati Petri Apostoli, qui ab eo primus eiusdem ciuitatis Episcopus consecratus, sub Nerone martyrij coronam accepit.",
+   "mr:0901-sixtus": "Rhemis in Gallia sancti Xisti discipuli beati Petri Apostoli, qui ab eo primus eiusdem ciuitatis Episcopus consecratus, sub Nerone martyrij coronam accepit.",
    "mr:0901-terentianus": "Tuderti in Vmbria sancti Terentiani Episcopi & martyris, qui sub Hadriano Imperatore, Lætiani Proconsulis iussu, equuleo & scorpionibus cruciatus, demum abscissa lingua, capitis damnatus, martyrium compleuit.",
    "mr:0901-ammon-et-socii": "Heraclêæ sancti Ammônis diaconi, & sanctarum quadraginta Virginum, quas ille erudiuit in fide, & sub Licinio tyranno ad martyrij gloriam secum perduxit.",
    "mr:0901-vincentius": "In Hispania sanctorum martyrum Vincentij & Læti.",
@@ -53,7 +53,8 @@
   "elogia": {
    "mr:0904-moyses-propheta": "IN monte Nebo terræ Moab sancti Moysis legislatoris & Prophetæ.",
    "mr:0904-rufinus-et-socii": "Ancŷræ in Galatia natalis sanctorum trium puerorum Ruffini, Siluâni, & Vitalĭci martyrum.",
-   "mr:0904-marcellus": "Cabillône in Gallia S.Marcelli martyris sub Antonino Imperatore, qui cum à Præside Prisco ad profanum conuiuium fuisset inuitatus, & huiusmodi epulas exĕcrans, omnes qui aderant, cur idolis deseruirent, libera increpatione corriperet, ab eodem Præside inaudito crudelitatis genere, cingulo tenus defossus est in terra; sicq triduo in laudibus Dei perseuêrans, incontaminatum spiritum reddidit.Eodem die sanctorum martyrum Magni, Casti, & Maxĭmi.",
+   "mr:0904-marcellus": "Cabillône in Gallia S.Marcelli martyris sub Antonino Imperatore, qui cum à Præside Prisco ad profanum conuiuium fuisset inuitatus, & huiusmodi epulas exĕcrans, omnes qui aderant, cur idolis deseruirent, libera increpatione corriperet, ab eodem Præside inaudito crudelitatis genere, cingulo tenus defossus est in terra; sicq triduo in laudibus Dei perseuêrans, incontaminatum spiritum reddidit.",
+   "mr:0904-magnus-et-socii": "Eodem die sanctorum martyrum Magni, Casti, & Maxĭmi.",
    "mr:0904-marcellus-treviris": "Treuĭris sancti Marcelli Episcopi & martyris.",
    "mr:0904-thamel-et-socii": "Eodem die sanctorum Thamĕlis, antea idolorum sacerdotis, & sociorum martyrum sub Hadriano Imperatore.",
    "mr:0904-theodorus-et-socii": "Item sanctorum martyrum Theodôri, Oceăni, Ammiani, & Iuliani, qui sub Maximiano Imperatore dissectis pedibus in ignem coniecti, martyrium consummarunt.",

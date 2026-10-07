@@ -237,10 +237,12 @@ def extract_days(tei):
         t = strip_rows(own_text(el))
         if not t:
             continue
-        if re.fullmatch(r"(?:[A-Z]\s){3,}[A-Z]?\s*\d+\.?", t) or re.fullmatch(
-            r"[A-Z ]{6,}\s+\d+\.?", t
+        if (
+            re.fullmatch(r"(?:[A-Z]\s){3,}[A-Z]?\s*\d+\.?", t)
+            or re.fullmatch(r"[A-Z ]{6,}\s+\d+\.?", t)
+            or re.fullmatch(r"[A-Z]{4,}-", t)
         ):
-            state = "notes"  # a spaced month heading ("I V L I I 10.")
+            state = "notes"  # a month heading ("I V L I I 10.", or broken: "DECEM-")
             continue
         if all(re.fullmatch(ROW_TOKEN, w) for w in t.split()):
             continue  # a lunar-table row
@@ -383,6 +385,19 @@ def strip_markers(text, notes):
                     break
             if found:
                 break
+        if not found:
+            # a letter the transcription glued to its word ('Ioannisb'): removed only
+            # where the rest of the word is exactly a word of the note's lemma
+            for i, t in enumerate(toks):
+                m = re.fullmatch(r"(.*\w)([a-z])([,.;:]?)", t)
+                stem = _w(m.group(1)).replace("ae", "e") if m else ""
+                if (
+                    m
+                    and m.group(2) == n["letter"]
+                    and stem in {w.replace("ae", "e") for w in lem if w}
+                ):
+                    toks[i] = m.group(1) + m.group(3)
+                    break
     pos = {re.fullmatch(r"([a-z])[,.;:]?", toks[j]).group(1): j for j in drop}
     if pos:
         top = max(ALPHA.find(c) for c in pos)
@@ -413,7 +428,8 @@ def strip_markers(text, notes):
 
 
 def clean_day(elogia, notes):
-    t = strip_markers(f" {SEP} ".join(elogia), notes)
+    t = re.sub(r"([,;:])(?=[^\s\d])", r"\1 ", f" {SEP} ".join(elogia))  # "Prisci c,Crescentis"
+    t = strip_markers(t, notes)
     toks = re.findall(r"\S+|\s+", t)
     # leftover lone consonants are markers whose note was not captured (no Latin
     # word is a lone consonant); a/e only where bracketed by such neighbours
@@ -436,6 +452,7 @@ def clean_day(elogia, notes):
         if len(cand) == 1:
             pos[letter] = cand[0]
     drop, out = set(pos.values()), []
+    drop |= {i for i, tok in enumerate(toks) if re.fullmatch(r"[b-df-np-z][,.;:]?", tok)}
     for i, tok in enumerate(toks):
         if i in drop:
             while out and not out[-1].strip() and out[-1] != SEP:
@@ -478,6 +495,8 @@ def main():
     months = {}
     for x in days:
         t = re.sub(r"(\w)- (\w)", r"\1\2", " ".join(x["paras"]))  # words split across pages
+        # a sentence end the transcription glued to the next ("damnauit.Bononiæ")
+        t = re.sub(r"(?<=[a-zæœęũõ])\.(?=[A-ZÆ][a-zæœ])", ". ", t)
         m = re.search(r"¶?\s*Et alibi aliorum.*$", t)
         if m:
             conclusio = m.group(0).lstrip("¶ ").strip()
