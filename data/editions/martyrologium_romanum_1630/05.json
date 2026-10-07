@@ -51,7 +51,8 @@
    "mr:0504-pelagia": "Tarsi sanctæ Pelagiæ virginis, quæ sub Diocletiano in bouem æneum candentem inclusa, martyrium compleuit.",
    "mr:0504-paulinus": "Coloniæ sancti Paulini martyris.",
    "mr:0504-venerius": "Mediolani sancti Venerij Episcopi, cuius virtutes sanctus Ioannes Chrysostomus in epistola ad eum scripta testatas reliquit.",
-   "mr:0504-sacerdos": "In territorio Petragoricensi sancti Sacerdôtis Episcopi Lemouicensis, Antisiodori sancti Curcodômi diaconi."
+   "mr:0504-sacerdos": "In territorio Petragoricensi sancti Sacerdôtis Episcopi Lemouicensis,",
+   "mr:0504-curcodomus": "Antisiodori sancti Curcodômi diaconi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -67,7 +68,8 @@
    "mr:0505-maximus": "Hierosolymis S. Maximi Episcopi & confessoris, quem Maximianus Galerius Cæsar post effossum oculum, pedemque ignîto ferro adustum, ad metalla damnauit.",
    "mr:0505-eulogius": "Edessæ in Syria S. Eulogij Episcopi & confessoris.",
    "mr:0505-hilarius": "Arelâte in Gallia S Hilarij Episcopi, doctrina & sanctitate conspicui.",
-   "mr:0505-theodorus": "Viennæ S. Nicetij Episcopi, venerabilis sanctitatis viri Bononiæ sancti Theodôri Episcopi, meritis clari.",
+   "mr:0505-nicetius": "Viennæ S. Nicetij Episcopi, venerabilis sanctitatis viri",
+   "mr:0505-theodorus": "Bononiæ sancti Theodôri Episcopi, meritis clari.",
    "mr:0505-sacerdos-sagunti": "Eodem die sancti Sacerdôtis Episcopi Saguntîni.",
    "mr:0505-geruntius": "Mediolani S.Geruntij Episcopi.",
    "mr:0505-conversio-augustini": "Ibidem conuersio sancti Augustini Episcopi & Ecclesiæ doctoris, quem beatus Ambrosius Episcopus fidei Catholicæ veritatem docuit, & hac die baptizauit."

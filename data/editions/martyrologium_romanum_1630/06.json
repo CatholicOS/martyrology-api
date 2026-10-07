@@ -4,13 +4,16 @@
   "elogia": {
    "mr:0601-iuventius": "ROMAE S. Iuuentij martyris.",
    "mr:0601-pamphilus": "Cæsarêæ in Palæstina B. Pamphili presbyteri & martyris, viri admirandæ sanctitatis & doctrinæ, atq. in pauperes munifici, qui ob Christi fidem in persecutione Galerij Maximiani, primo sub Vrbano Præside cruciatus, & in carcerem trusus, deinde sub Firmiliano iterum reuocatus ad pœnas, vna cum alijs martyrium consummauit. Passi sunt etiam tunc Valens diaconus, & Paulus, alijq. nouem, quorum memoria alijs diebus celebratur.",
-   "mr:0601-reverianus-et-socii": "Augustodûni sanctorum Reueriâni Episcopi, & Pauli presbyteri, cum alijs decem, qui sub Aureliano Principe martyrio coronati sunt In Cappadocia sancti Thespesij martyris, qui sub Alexandro Imperatore, & Simplicio Præfecto, post alia tormenta decollatus est.",
+   "mr:0601-reverianus-et-socii": "Augustodûni sanctorum Reueriâni Episcopi, & Pauli presbyteri, cum alijs decem, qui sub Aureliano Principe martyrio coronati sunt",
+   "mr:0601-thespesius": "In Cappadocia sancti Thespesij martyris, qui sub Alexandro Imperatore, & Simplicio Præfecto, post alia tormenta decollatus est.",
    "mr:0601-ischyrion-et-socii": "In Aegypto sanctorum martyrum Ischyriônis doctoris militum, & aliorum quinque militum, qui sub Diocletiano Imperatore pro fide Christi diuerso mortis genere perempti sunt.",
-   "mr:0601-firmus": "Item sancti Firmi martyris, qui in persecutione Maximiani acerbissimis plagis affectus, lapidibus percussus, ac demum capite cæsus est. Perusiæ sanctorom martyrum Felîni & Gratiniâni militum, qui sub Decio varijs tormentis cruciati, martyrij palmam gloriosa morte perceperunt.",
+   "mr:0601-firmus": "Item sancti Firmi martyris, qui in persecutione Maximiani acerbissimis plagis affectus, lapidibus percussus, ac demum capite cæsus est.",
+   "mr:0601-felinus-et-gratinianus": "Perusiæ sanctorom martyrum Felîni & Gratiniâni militum, qui sub Decio varijs tormentis cruciati, martyrij palmam gloriosa morte perceperunt.",
    "mr:0601-proculus": "Bononiæ sancti Procŭli martyris, qui sub Maximiano Imperatore passus est.",
    "mr:0601-secundus": "Ameriæ sancti Secundi martyris, qui sub Diocletiano in Tiběrim proiectus, martyrium consummauit.",
    "mr:0601-crescentianus": "Apud Tiphernum in Vmbria S. Crescentiani militis Romani, sub eodem Imperatore martyrio coronati.",
-   "mr:0601-fortunatus": "In Vmbria sancti Fortunati presbyteri, virtutibus & miraculis clari In monasterio Lerinensi sancti Caprasij abbatis.",
+   "mr:0601-fortunatus": "In Vmbria sancti Fortunati presbyteri, virtutibus & miraculis clari",
+   "mr:0601-caprasius": "In monasterio Lerinensi sancti Caprasij abbatis.",
    "mr:0601-simeon": "Treuiris sancti Simeonis monachi, qui a Benedicto Papa Nono in sanctorum numerum relatus est."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."

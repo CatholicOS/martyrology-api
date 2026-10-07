@@ -43,7 +43,8 @@
   "titulus": "Quarto Nonas Martij. Luna.",
   "elogia": {
    "mr:0304-casimirus": "VILNÆ in Lituanĭa B.Casimîri filij Casimiri Regis, quem Leo X. Romanus Pontifex in sanctorum numerum rĕtulit.",
-   "mr:0304-lucius-i": "Romæ via Appia natalis sancti Lucij Papę & martyris, qui primo in persecutione Valeriani ob Christi fidem exilio relegatus, & postmodum diuino nutu ad Ecclesiam suam redire permissus, cùm plurimum aduersus Nouatianos laborasset, martyrium capitis obtruncatione compleuit: quem sanctus Cyprianus summis laudibus celebrauit, Romæ item via Appia sanctorum martyrum nongentorum, qui positi sunt in cœmeterio, ad sanctam Cæciliam.",
+   "mr:0304-lucius-i": "Romæ via Appia natalis sancti Lucij Papę & martyris, qui primo in persecutione Valeriani ob Christi fidem exilio relegatus, & postmodum diuino nutu ad Ecclesiam suam redire permissus, cùm plurimum aduersus Nouatianos laborasset, martyrium capitis obtruncatione compleuit: quem sanctus Cyprianus summis laudibus celebrauit,",
+   "mr:0304-nongenti-martyres-romae": "Romæ item via Appia sanctorum martyrum nongentorum, qui positi sunt in cœmeterio, ad sanctam Cæciliam.",
    "mr:0304-caius-et-socii": "Eodem die S. Caij Palatîni in mare demersi, & aliorum vigintiseptem.",
    "mr:0304-hadrianus-et-socii": "Nicomediæ sancti Hadriâni martyris, cum alijs vigintitribus; qui omnes sub Diocletiano Imperatore martyrium crurifragio consummarunt: cuius memoria sexto Idus Septembris, quando eius corpus Romam translatum fuit, potissimum agitur.",
    "mr:0304-photius-et-socii": "Item passio sanctorum Archelâi, Cyrilli, & Photij.",
@@ -200,7 +201,8 @@
   "titulus": "Decimoseptimo Kal. Aprilis. Luna.",
   "elogia": {
    "mr:0316-cyriacus": "ROMAE passio S. Cyriaci diaconi, qui post longam carceris macerationem liquata pice perfusus; & in catasta extensus, attractus etiam neruis, & fustibus cæsus, ad vltimum cum Largo & Smaragdo, & alijs viginti, iubente Maximiano, capite truncatus est. Horum tamen festiuitas sexto Idus Augusti recolitur, quo die a B. Marcello Papa eorum corpora sunt leuata, ac venerabiliter tumulata.",
-   "mr:0316-hilarius-et-tatianus": "Aquileię natalis B. Hilarij Episcopi, & Tatiani diaconi, qui sub Numeriano Imperatore & Beronio Præside, post equuleum atque alia tormenta, vna cum Felice, Largo, & Dionysio martyrium terminarunt, In Lycaonia S. Papæ martyris, qui ob Christi fidem verberibus cæsus, vngulis ferreis laceratus, clauatis calceis incedere iussus est; deinde arbori alligatus, migrans ad Dominum, eamdem arborem ex sterili reddidit fructuosam.",
+   "mr:0316-hilarius-et-tatianus": "Aquileię natalis B. Hilarij Episcopi, & Tatiani diaconi, qui sub Numeriano Imperatore & Beronio Præside, post equuleum atque alia tormenta, vna cum Felice, Largo, & Dionysio martyrium terminarunt,",
+   "mr:0316-papa": "In Lycaonia S. Papæ martyris, qui ob Christi fidem verberibus cæsus, vngulis ferreis laceratus, clauatis calceis incedere iussus est; deinde arbori alligatus, migrans ad Dominum, eamdem arborem ex sterili reddidit fructuosam.",
    "mr:0316-iulianus": "Anazarbi in Cilicia S. Iuliani martyris, qui sub Marciano Præside diutissime cruciatus, demum in sacco vna cum serpentibus inclusus, in mare demersus est.",
    "mr:0316-agapitus": "Rauennæ sancti Agapiti Episcopi & confessoris.",
    "mr:0316-heribertus": "Coloniæ sancti Heriberti Episcopi, sanctitate celebris.",
@@ -239,7 +241,9 @@
  "19": {
   "titulus": "Quartodecimo Kal. Aprilis. Luna.",
   "elogia": {
-   "mr:0319-ioseph": "IN Iudæa natalis sancti Ioseph sponsi beatissimæ Virginis MARIÆ, Surrenti sanctorum martyrum Quincti, Quinctillæ, Quartillæ, & Marci cum alijs nouem, Nicomediæ S. Pancharij Romani, qui sub Diocletiano truncatus capite, martyrij coronam accepit.",
+   "mr:0319-ioseph": "IN Iudæa natalis sancti Ioseph sponsi beatissimæ Virginis MARIÆ,",
+   "mr:0319-quinctus-et-socii": "Surrenti sanctorum martyrum Quincti, Quinctillæ, Quartillæ, & Marci cum alijs nouem,",
+   "mr:0319-pancharius": "Nicomediæ S. Pancharij Romani, qui sub Diocletiano truncatus capite, martyrij coronam accepit.",
    "mr:0319-apollonius-et-leontius": "Eodem die sanctorum Apollonij & Leontij Episcoporum.",
    "mr:0319-landoaldus-et-amantius": "Gandâui sanctorum Landoaldi presbyteri Romani, & Amantij diaconi: qui a sancto Martino Papa ad prædicandum Euangelium missi, multis post obitum sunt illustrati miraculis.",
    "mr:0319-ioannes": "Apud Pinnensem ciuitatem natalis beati Ioannis, magnæ sanctitatis viri, qui de Syria ad Italiam veniens, & constructo illic monasterio, multorum seruorum Dei per quatuor & quadraginta annos Pater existens, clarus virtutibus quieuit in pace."

@@ -329,7 +329,8 @@ def pair_marks(notes, marks, plain):
 
 def aligned_id(plain_e, at, aligned):
     """The canonical ID whose 1630 text holds the digitized eulogy's text at `at`."""
-    for left, right in ((60, 30), (30, 15), (15, 0)):
+    # around the spot, then before it, then (a mark just after a eulogy's first word) after it
+    for left, right in ((60, 30), (30, 15), (15, 0), (0, 30), (0, 15)):
         ctx = plain_e[max(0, at - left) : at + right].strip()
         hits = [i for i, t in aligned.items() if ctx and ctx in t]
         if len(hits) == 1:

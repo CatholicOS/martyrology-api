@@ -161,7 +161,8 @@
   "elogia": {
    "mr:1111-martinus": "TVRÔNIS in Gallia natalis beati Martini Episcopi & confessoris, cuius vita tantis extitit miraculis gloriosa, vt trium mortuorum meruerit esse suscitator.",
    "mr:1111-menna-mareotidem": "Cotyæi in Phrygia insignis passio sancti Mennæ Aegyptij militis; qui in persecutione Diocletiani, postquam abiecto militiæ cingulo meruit cælesti Regi secreta conuersatione in erêmo militare, procêdens in publicum, & se Christianum libera voce declarans, primo diris cruciatibus examinatur; nouissime fixis in oratione genibus, Domino IESV Christo gratias agens, gladio cæsus est, ac multis post mortem miraculis claruit.",
-   "mr:1111-athenodorus": "Rauennę SS. martyrum Valentini, Feliciani, & Victorini, qui in persecutione Diocletiani coronati sunt In Mesopotamia S. Athenodôri martyris, qui sub eodem Diocletiano, & Eleusso Pręside, ignibus cruciatus, & alijs supplicijs tortus, demum capitis damnatus, cum carnifex corruisset, nec vllus alius gladio illum ferire ausus esset, orans obdormiuit in Domino.",
+   "mr:1111-valentinus-et-socii": "Rauennę SS. martyrum Valentini, Feliciani, & Victorini, qui in persecutione Diocletiani coronati sunt",
+   "mr:1111-athenodorus": "In Mesopotamia S. Athenodôri martyris, qui sub eodem Diocletiano, & Eleusso Pręside, ignibus cruciatus, & alijs supplicijs tortus, demum capitis damnatus, cum carnifex corruisset, nec vllus alius gladio illum ferire ausus esset, orans obdormiuit in Domino.",
    "mr:1111-veranus": "Lugdûni sancti Verâni Episcopi, cuius vita fide & virtutum meritis fuit illustris.",
    "mr:1111-bartholomaeus": "In monasterio Cryptæ ferratæ in agro Tusculano sancti Bartholomæi abbatis, socij beati Nili, cuius vitam ipse conscripsit.",
    "mr:1111-menna-samnii": "In prouincia Samnij beati Mennæ solitarij, cuius virtutes & miracula sanctus Gregorius Papa commemorat."
@@ -424,7 +425,8 @@
   "titulus": "Pridie Kalend. Decemb. Luna.",
   "elogia": {
    "mr:1130-andreas-apostolus": "APVD Patras Achaiæ natalis sancti Andreæ Apostoli, qui in Thracia & Scythia Christi Euangelium prædicauit. Is ab Aegêa Proconsule cõprehensus, primo in carcere clausus est, deinde grauissime cæsus, ad vltimum in cruce suspensus, in ea populum docens biduo superuixit: & rogato Domino ne eum sinêret de cruce deponi, circumdâtus magno splendore de cælo, abscedente postmodum lumine, emisit spiritum.",
-   "mr:1130-maura": "Romæ passio sanctorum Castûli & Euprepîtis, Constantinopoli sanctæ Mauræ virginis & martyris.",
+   "mr:1130-castulus-et-euprepis": "Romæ passio sanctorum Castûli & Euprepîtis,",
+   "mr:1130-maura": "Constantinopoli sanctæ Mauræ virginis & martyris.",
    "mr:1130-iustina": "Item sanctæ Iustinæ virginis & martyris.",
    "mr:1130-troianus": "Apud Santônas sancti Troiani Episcopi, magnæ sanctitatis viri, qui sepultus in terris, in cælo se viuere multis virtutibus manifestat.",
    "mr:1130-constantius": "Romæ sancti Constantij confessoris, qui fortiter Pelagianis resistens, eorum factione multa pertulit, quæ illum sanctis confessoribus sociarunt.",

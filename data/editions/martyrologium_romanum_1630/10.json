@@ -206,13 +206,15 @@
   "titulus": "Idibus Octob. Luna.",
   "elogia": {
    "mr:1015-fortunatus": "ROMAE via Aurelia S.Fortunâti martyris.",
-   "mr:1015-trecenti-martyres-coloniae": "Apud Coloniam Agrippinam natalis, sanctorum trecẽtorum Martyrum, qui in persecutione Maximiani cursum sui agônis compleuernnt Carthagine sancti Agilêi martyris, in cuius die natali S. Augustinus de eo ad populum tractatum habuit.",
+   "mr:1015-trecenti-martyres-coloniae": "Apud Coloniam Agrippinam natalis, sanctorum trecẽtorum Martyrum, qui in persecutione Maximiani cursum sui agônis compleuernnt",
+   "mr:1015-agileus": "Carthagine sancti Agilêi martyris, in cuius die natali S. Augustinus de eo ad populum tractatum habuit.",
    "mr:1015-bruno": "In Prussia sancti Brunônis Episcopi Ruthenorum & martyris, qui Euangelium in ea regione prædicans, ab impijs tentus, manibus pedibusq præcisis, capite truncatus est.",
    "mr:1015-antiochus": "Lugdûni S. Antiochi Episcopi, qui strenue administrato pontificij culmine, ad quod assumptus fuerat, regnum cæleste adeptus est.",
    "mr:1015-severus": "Treuiris S. Seueri Episcopi & confessoris.",
    "mr:1015-aurelia": "Argentorâti sanctæ Aureliæ virginis.",
    "mr:1015-teresia-a-iesu": "Albæ S. Teresię virginis Fratrum, ac Sororum ordinis Carmelitarũ arctioris obseruãtiæ matris, & magistræ.",
-   "mr:1015-hedwigis": "Cracouiæ sanctæ Heduuigis Ducissæ Poloniæ, quæ pauperum obsequio dedita, etiam miraculis claruit: quam & Clemens Papa Quartus numero sanctorum adscripsit In Germania S. Theclæ abbatissæ."
+   "mr:1015-hedwigis": "Cracouiæ sanctæ Heduuigis Ducissæ Poloniæ, quæ pauperum obsequio dedita, etiam miraculis claruit: quam & Clemens Papa Quartus numero sanctorum adscripsit",
+   "mr:1015-thecla": "In Germania S. Theclæ abbatissæ."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -328,7 +330,8 @@
   "elogia": {
    "mr:1024-felix-et-socii": "VENVSIAE in Apulia natalis sanctorum martyrum Felicis Episcopi Africani, Audacti & Ianuarij presbyterorum, Fortunati & Septimi lectorum: qui tempore Diocletiani a Magdelliâno Procuratore multis diu vinculis, & carceribus in Africa & Sicilia macerati, cum Felix nullatenus sacros libros iuxta Imperatoris edictum tradere voluisset, tandem occisione gladi consummati sunt.",
    "mr:1024-aretha-et-socii": "Apud Homeritas in ciuitate Nagran passio sanctorum Arêtæ & sociorum trecentorum & quadraginta, tempore Iustini Imperatoris, sub Dunaan Iudæo tyranno: post quos Christiana mulier incendio tradita est; cuius filius annorum quinque, cum balbutiendo Christum confiteretur, nec blanditijs nec minis retineri posset, in ignem, vbi mater ardebat, se præcipitem dedit.",
-   "mr:1024-proclus": "Coloniæ sancti Euergisli Episcopi & martyris. Constantinopoli sancti Procli Episcopi.",
+   "mr:1024-evergislus": "Coloniæ sancti Euergisli Episcopi & martyris.",
+   "mr:1024-proclus": "Constantinopoli sancti Procli Episcopi.",
    "mr:1024-maglorius": "In Britannia Minori transitus sancti Maglorij Episcopi, cuius corpus Lutetiæ Parisiorum requiescit.",
    "mr:1024-martinus": "In Vertâno monasterio sancti Martini abbatis.",
    "mr:1024-marcus": "In Campania sancti Marci solitarij, cuius præclara opera sanctus Gregorius scripsit."
@@ -345,7 +348,8 @@
    "mr:1025-protus-et-ianuarius": "Turribus in Sardinia sanctorum martyrum Proti presbyteri, & Ianuarij diaconi, qui a sancto Caio Papa ad eam insulam missi, tẽpore Diocletiani sub Barbaro Præside consummati sunt.",
    "mr:1025-martyrius-et-marcianus": "Constantinopoli passio sanctorum Martyrij subdiaconi, & Marciani cantoris, qui ab hæreticis sub Constantio Imperatore necati sunt.",
    "mr:1025-bonifatius": "Romæ sancti Bonifacij Papæ & confessoris.",
-   "mr:1025-fronto": "Petragoricis in Gallia sancti Frontônis, qui a beato Petro Apostolo Episcopus ordinatus, cum Georgio presbytero magnam illius gentis multitudinem ad Christum conuertit, & miraculis clarus in pace quieuit Brixiæ natalis S. Gaudentij Episcopi, eruditione & sanctitate conspicui.",
+   "mr:1025-fronto": "Petragoricis in Gallia sancti Frontônis, qui a beato Petro Apostolo Episcopus ordinatus, cum Georgio presbytero magnam illius gentis multitudinem ad Christum conuertit, & miraculis clarus in pace quieuit",
+   "mr:1025-gaudentius": "Brixiæ natalis S. Gaudentij Episcopi, eruditione & sanctitate conspicui.",
    "mr:1025-hilarius": "Gauălis sancti Hilarij Episcopi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
