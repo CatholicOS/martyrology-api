@@ -44,6 +44,8 @@ def make_client(crmedr_path, clbdr_path, data_paths):
             data_path=os.pathsep.join(str(p) for p in data_paths),
             crmedr_path=crmedr_path,
             clbdr_path=clbdr_path,
+            # The tests exercise the gate; production's default is "public" (test_public_texts).
+            restricted_texts_access="authenticated",
         )
         kwargs.update(settings_overrides)
         settings = Settings(_env_file=None, **kwargs)  # pyright: ignore[reportCallIssue]

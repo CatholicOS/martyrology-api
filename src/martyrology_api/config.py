@@ -11,16 +11,20 @@ class Settings(BaseSettings):
     data_path: str = "data/editions"  # os.pathsep-separated base dirs, one edition dir each
     crmedr_path: Path = Path("../crmedr")
     clbdr_path: Path = Path("../clbdr")
+    # The copyrighted editions: their texts live in the private repository (curation writes go
+    # there), and the access rule below applies to them.
     restricted_editions: str = (
         "martyrologium_romanum_2004,"
         "martyrologium_romanum_2004_it_IT,"
         "martyrologium_romanum_2004_en_unofficial"
     )
-    # Who reads the texts of a restricted edition: "authenticated" = any signed-in caller (the
-    # rights holders allow consultation; sign-in only deters scraping), "grant" = only a caller
-    # with can_read_texts on the edition in OpenFGA. Anonymous callers get redacted texts
-    # either way.
-    restricted_texts_access: Literal["authenticated", "grant"] = "authenticated"
+    # Who reads the texts of the copyrighted editions:
+    #   "public"        = anyone, no sign-in (the rights holders allow the texts to be shown);
+    #   "authenticated" = any signed-in caller (sign-in deters scraping);
+    #   "grant"         = only a caller with can_read_texts on the edition in OpenFGA.
+    # Under "authenticated" and "grant" anonymous callers get the texts redacted. Set
+    # MARTYROLOGY_RESTRICTED_TEXTS_ACCESS to put the texts back behind sign-in.
+    restricted_texts_access: Literal["public", "authenticated", "grant"] = "public"
     access_info_url: str = "https://github.com/CatholicOS/martyrology-api#licensing"
     manifest_path: str = ""  # deployment manifest.json; empty outside a bundle
 
@@ -60,6 +64,12 @@ class Settings(BaseSettings):
     @property
     def restricted_set(self) -> set[str]:
         return {e.strip() for e in self.restricted_editions.split(",") if e.strip()}
+
+    @property
+    def gated_set(self) -> set[str]:
+        """The copyrighted editions whose texts the access rule withholds from some callers:
+        none when the rule is "public"."""
+        return set() if self.restricted_texts_access == "public" else self.restricted_set
 
     @property
     def manifest_file(self) -> Path | None:

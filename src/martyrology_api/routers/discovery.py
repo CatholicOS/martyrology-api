@@ -40,7 +40,7 @@ def governance_for(scope: str) -> GovernanceOut:
 
 
 def availability_status(edition_id: str, available: set[str], settings: Settings) -> str:
-    if edition_id in settings.restricted_set:
+    if edition_id in settings.gated_set:
         return "restricted-texts"
     return "public" if edition_id in available else "unavailable"
 
@@ -51,7 +51,12 @@ def _edition_out(
     status = availability_status(e.id, available, settings)
     note = None
     if status == "restricted-texts":
-        note = f"Copyrighted texts; an approved API key is required. See {settings.access_info_url}"
+        need = (
+            "sign in to read them"
+            if settings.restricted_texts_access == "authenticated"
+            else "an approved access grant is required"
+        )
+        note = f"Copyrighted texts; {need}. See {settings.access_info_url}"
     elif status == "unavailable":
         note = "Registered in the CLBDR but no texts are attached in this deployment."
     return EditionOut(

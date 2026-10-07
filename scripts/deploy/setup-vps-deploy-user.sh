@@ -149,6 +149,9 @@ MARTYROLOGY_MANIFEST_PATH=$APP_DIR/current/manifest.json
 MARTYROLOGY_DATA_PATH=$APP_DIR/current/data/editions:$APP_DIR/current/data/texts
 MARTYROLOGY_CRMEDR_PATH=$APP_DIR/current/data/crmedr
 MARTYROLOGY_CLBDR_PATH=$APP_DIR/current/data/clbdr
+# The copyrighted editions' texts: public (anyone), authenticated (signed-in callers)
+# or grant (OpenFGA). Uncomment and restart the service to put them behind sign-in.
+#MARTYROLOGY_RESTRICTED_TEXTS_ACCESS=authenticated
 EOF
 else
     echo "Keeping existing $RUNTIME_ENV"

@@ -6,7 +6,9 @@ from .models import ElogiumOut
 
 
 def is_restricted(edition_id: str, settings) -> bool:
-    return edition_id in settings.restricted_set
+    """Whether the edition's texts are withheld from some callers: a copyrighted edition while
+    the access rule is not "public"."""
+    return edition_id in settings.gated_set
 
 
 async def texts_allowed(request: Request, identity: Identity | None, edition_id: str) -> bool:
