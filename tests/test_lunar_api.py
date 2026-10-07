@@ -126,7 +126,7 @@ def test_the_italian_edition_announces_in_italian(client_2004):
         "/api/v1/elogia/edition/martyrologium_romanum_2004_it_IT/01/02?year=2026"
     ).json()
     age = b["luna"]["annuntiatio"]["age"]
-    assert b["luna"]["annuntiatio"]["pronuntiatio"] == f"Luna {L.ORDINALI[age - 1]}"
+    assert b["luna"]["annuntiatio"]["pronuntiatio"] == f"Luna: {age}"
 
 
 def test_an_unknown_variant_fails_at_startup(tmp_path, make_client, data_paths):

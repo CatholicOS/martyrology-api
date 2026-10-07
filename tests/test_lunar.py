@@ -207,5 +207,5 @@ def test_2004_leap_day_and_language():
     assert a is not None and b is not None and a.age == b.age
     assert L.announce(2024, 2, 29, printed=True) is None  # the editions before it have none
     it = L.announce(2026, 8, 4, variant=V2004, language="it-IT")
-    assert it is not None and it.pronuntiatio == f"Luna {L.ORDINALI[it.age - 1]}"
-    assert L.ORDINALI[20] == "ventunesima" and len(L.ORDINALI) == 30
+    assert it is not None and it.pronuntiatio == f"Luna: {it.age}"
+    assert L.pronounce(21) == "Luna vigesima prima" and L.pronounce(21, "it") == "Luna: 21"

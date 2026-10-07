@@ -119,41 +119,6 @@ ORDINALS = [
     "trigesima",
 ]
 
-# The Italian edition reads the age in Italian.
-ORDINALI = [
-    "prima",
-    "seconda",
-    "terza",
-    "quarta",
-    "quinta",
-    "sesta",
-    "settima",
-    "ottava",
-    "nona",
-    "decima",
-    "undicesima",
-    "dodicesima",
-    "tredicesima",
-    "quattordicesima",
-    "quindicesima",
-    "sedicesima",
-    "diciassettesima",
-    "diciottesima",
-    "diciannovesima",
-    "ventesima",
-    "ventunesima",
-    "ventiduesima",
-    "ventitreesima",
-    "ventiquattresima",
-    "venticinquesima",
-    "ventiseiesima",
-    "ventisettesima",
-    "ventottesima",
-    "ventinovesima",
-    "trentesima",
-]
-ORDINALS_BY_LANGUAGE = {"la": ORDINALS, "it": ORDINALI}
-
 DOMINICAL = "ABCDEFG"
 FIRST_GREGORIAN_YEAR = 1583  # the first whole Gregorian year (the reform: 15 Oct 1582)
 _CUMULATIVE = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
@@ -325,6 +290,16 @@ def printed_day(month: int, day: int, variant: Variant = GREGORIAN) -> tuple[int
     return month, day
 
 
+def pronounce(age: int, language: str = "la") -> str:
+    """How the age is announced after the day: in Latin by its ordinal (*quota luna sit
+    pronuntianda*: "Luna vigesima"); in the Italian edition by its number after the printed
+    "Luna:" (Rito per la lettura, n. 10, and Il giorno lunare, pp. 33-37: «il numero 20, che
+    è la luna da enunciare»: "Luna: 20")."""
+    if language[:2] == "it":
+        return f"Luna: {age}"
+    return f"Luna {ORDINALS[age - 1]}"
+
+
 def announce(
     year: int,
     month: int,
@@ -357,5 +332,5 @@ def announce(
         letter=variant.letters[col],
         column=col,
         age=age,
-        pronuntiatio=f"Luna {ORDINALS_BY_LANGUAGE.get(language[:2], ORDINALS)[age - 1]}",
+        pronuntiatio=pronounce(age, language),
     )
