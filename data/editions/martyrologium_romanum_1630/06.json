@@ -109,7 +109,7 @@
  "9": {
   "titulus": "Quinto Idus Iunij. Luna.",
   "elogia": {
-   "mr:0609-primus-et-felicianus": "ROMAE in monte Cælio natalis sanctorum martyrum Primi & Feliciani, sub Diocletiano & Maximiano Imperatoribus. Hi gloriosi martyres longæuam in Domino vitam ducentes, & nunc simul paria, nũc singillatim diuersa & exquisita perferentes tormenta, tandem felicis pugnæ cursum, Promôto Præside Nomentâno gladio animaduersi, consummauerunt.",
+   "mr:0609-primus-et-felicianus": "ROMAE in monte Cælio natalis sanctorum martyrum Primi & Feliciani, sub Diocletiano & Maximiano Imperatoribus. Hi gloriosi martyres longæuam in Domino vitam ducentes, & nunc simul paria, nũc singillatim diuersa & exquisita perferentes tormenta, tandem felicis pugnæ cursum, a Promôto Præside Nomentâno gladio animaduersi, consummauerunt.",
    "mr:0609-vincentius": "Agenni in Gallia passio sancti Vincentij Leuitæ & martyris.",
    "mr:0609-pelagia": "Apud Antiochiam sanctæ Pelagiæ virginis & martyris, quam sancti Ambrosius & Ioannes Chrysostomus magnis efferunt laudibus.",
    "mr:0609-maximianus": "Syracusis sancti Maximiani Episcopi, cuius sanctus Gregorius Papa sæpius meminit.",
@@ -137,10 +137,10 @@
  "11": {
   "titulus": "Tertio Idus Iunij Luna.",
   "elogia": {
-   "mr:0611-barnabas": "NATALIS sancti Barnăbæ Apostoli, qui natione Cyprius, discipulis cùm Paulo Gentium Apostolus ordinatus, multas regiones cum eo peragrauit, Euangelicæ prędicationis iniunctum sibi opus exercens: postremò Cyprum profectus, ibi Apostolatum suum glorioso martyrio decorauit: cuius corpus tempore Zenônis Imperatoris, ipso reuelante, repertum est, vna cũ codice Euangelij sancti Matthæi sua manu descripto.",
+   "mr:0611-barnabas": "NATALIS sancti Barnăbæ Apostoli, qui natione Cyprius, a discipulis cùm Paulo Gentium Apostolus ordinatus, multas regiones cum eo peragrauit, Euangelicæ prędicationis iniunctum sibi opus exercens: postremò Cyprum profectus, ibi Apostolatum suum glorioso martyrio decorauit: cuius corpus tempore Zenônis Imperatoris, ipso reuelante, repertum est, vna cũ codice Euangelij sancti Matthæi sua manu descripto.",
    "mr:0611-felix-et-fortunatus": "Aquileię passio sanctorum Felicis & Fortunati fratrum, qui in persecutione Diocletiani & Maximiani equuleo suspensi, atque ardentibus lampadibus circa eorum latera appositis, & mox diuina virtute extinctis; per ventrem feruenti oleo sunt perfusi, & ad vltimum, cùm in confessione Christi persisterent, capite truncati.",
    "mr:0611-parisius": "Bononiæ sancti Parisij confessoris, monachi ordinis Camaldulensis.",
-   "mr:0611-translatio-gregorii-nazianzeni": "Romæ Translatio sancti Gregorij Nazianzeni: cuius sacrum corpus Constantinopoli ad Vrbem antea delatum, atque in ecclesia Dei genitricis ad Campum Martium diu asseruatum, Gregorius XIII, Pontifex Maximus in Cappellam a se in Basilica S. Petri magnificẽtissime exornatam, summa celebritate transtulit, ac postridie sub altari digno honore condidit."
+   "mr:0611-translatio-gregorii-nazianzeni": "Romæ Translatio sancti Gregorij Nazianzeni: cuius sacrum corpus e Constantinopoli ad Vrbem antea delatum, atque in ecclesia Dei genitricis ad Campum Martium diu asseruatum, Gregorius XIII, Pontifex Maximus in Cappellam a se in Basilica S. Petri magnificẽtissime exornatam, summa celebritate transtulit, ac postridie sub altari digno honore condidit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -162,7 +162,7 @@
    "mr:0613-felicula": "Romæ via Ardeatîna natalis sanctæ Felicŭlæ virginis & martyris, quæ Flacco nolens nubere, nec idôlis immolare, tradita est cuidam Iudici, qui eam in confessione Christi perseuerantem, post tenebricosam custodiam, & famis înediam, tamdiu fecit in equuleo torqueri, donec emitteret spiritum; & sic demum deponi, & in cloâcam præcipitari: quam S. Nicomêdes eadem via sepeliuit.",
    "mr:0613-fortunatus-et-lucianus": "In Africa SS. martyrum Fortunati & Luciani.",
    "mr:0613-aquilina": "Bybli in Palæstina sanctæ Aquilinæ virginis & martyris, quæ annos duodecim nata, sub Diocletiano Imp. & Volusiano Iudice ob fidei confessionem colaphis & verberibus cæsa, & subŭlis candentibus perforata, demum percussa gladio, virginitatem martyrio consecrauit.",
-   "mr:0613-cetheus": "In Pelignis S. Peregrini Episcopi & martyris, qui Longobardis pro fide Catholica in Aternum flumen demersus est.",
+   "mr:0613-cetheus": "In Pelignis S. Peregrini Episcopi & martyris, qui a Longobardis pro fide Catholica in Aternum flumen demersus est.",
    "mr:0613-fandila": "Cordŭbæ sancti Fandilæ presbyteri & monachi, qui in persecutione Arabica amputato capite pro fide Christi martyrium subijt.",
    "mr:0613-triphyllius": "In Cypro S. Triphillij Episcopi."
   },
