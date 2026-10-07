@@ -67,22 +67,26 @@ CALENDAR = re.compile(r"^(?:(?:\d{1,2}|[A-HIMNP]|[xvijl]+|\*)\.?\s*)+$")
 LETTER_START = re.compile(r"(?:^|(?<=[.;:)!?,])\s+)([a-z])\s+(?=[A-ZÆŒ*(])")
 
 
-def lemma_letter(lemma):
-    """(letter, lemma words) of a note's lemma: 'b Aristarchi.', 'DOMINICI a.',
-    'KALENDIS a Ianuarij.', 'S. Maria ad Martyresa.'; letter None if not printed."""
-    for pat, li, wi in (
-        (r"^([a-z])\s+(.*)$", 1, 2),
-        (r"^(.*?\S)\s+([a-z])\s*[.,]?\s*$", 2, 1),
-        (r"^(\S+\s+)([a-z])\s+(.*)$", 2, None),
+def unletter(lemma):
+    """(letter, the lemma without it) for a note's lemma, the letter where it is
+    printed: 'b Aristarchi.', 'DOMINICI a.', 'KALENDIS a Ianuarij.', glued
+    'S. Maria ad Martyresa.'; (None, lemma) if no letter is printed."""
+    for pat in (
+        r"^()([a-z])\s+(.*)$",
+        r"^(.*?\S)\s+([a-z])(\s*[.,]?\s*)$",
+        r"^(\S+\s+)([a-z])\s+(.*)$",
+        r"^(.*?(?:\.|soc|Martyres))\s*([a-z])(\s*[.,]?\s*)$",  # glued
     ):
         m = re.match(pat, lemma, re.S)
         if m:
-            words = m.group(wi) if wi else m.group(1) + m.group(3)
-            return m.group(li), words.strip(" .,")
-    m = re.match(r"^(.*?(?:\.|soc|Martyres))\s*([a-z])\s*[.,]?\s*$", lemma)  # glued
-    if m:
-        return m.group(2), m.group(1).strip(" .,")
-    return None, lemma.strip(" .,")
+            return m.group(2), m.group(1) + m.group(3)
+    return None, lemma
+
+
+def lemma_letter(lemma):
+    """(letter, lemma words) of a note's lemma; letter None if not printed."""
+    letter, rest = unletter(lemma)
+    return letter, rest.strip(" .,")
 
 
 def note_starts(t, daytext):
@@ -183,10 +187,20 @@ def build_notes(days, layout):
         notes = []
         for where, start, kind, seg, src in items:
             if start:
-                lem = seg[: seg.index("]")]
-                letter, words = lemma_letter(lem)
+                cut = seg.index("]")
+                letter, rest = unletter(seg[:cut])
+                again, unlettered = unletter(rest.strip())
+                if letter and again == letter:  # printed twice: 'a GREGORII Papæ a.]'
+                    rest = unlettered
+                # the letter is the note's mark, given apart: the text starts with the lemma
                 notes.append(
-                    {"letter": letter, "lemma": words, "text": seg, "segs": [where], "src": src}
+                    {
+                        "letter": letter,
+                        "lemma": rest.strip(" .,"),
+                        "text": rest.lstrip() + seg[cut:],
+                        "segs": [where],
+                        "src": src,
+                    }
                 )
                 continue
             target = notes[-1] if notes else carry

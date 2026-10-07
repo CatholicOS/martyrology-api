@@ -66,7 +66,7 @@ An edition folder may carry a `footnotes.json`: the footnotes the print sets und
 }
 ```
 
-`mark` is the printed mark as a string (the 2004 Latin numbers its notes from 1 each month; the 1914 English uses asterisks; the 1630 Latin, Baronius's reference letters). `after` is the phrase the mark follows, which occurs exactly once in the eulogy's text as whole words, or null when it couldn't be anchored (readers then set the mark at the end of the eulogy). The API returns them as each eulogy's `footnotes`, emptied wherever the text is redacted.
+`mark` is the printed mark as a string (the 2004 Latin numbers its notes from 1 each month; the 1914 English uses asterisks; the 1630 Latin, Baronius's reference letters; his notes' `text` starts with the lemma, without the letter, which is the `mark`: `"mark": "a", "text": "DOMINICI.] Huius…"`). `after` is the phrase the mark follows, which occurs exactly once in the eulogy's text as whole words, or null when it couldn't be anchored (readers then set the mark at the end of the eulogy). The API returns them as each eulogy's `footnotes`, emptied wherever the text is redacted.
 
 ## Marginalia
 
