@@ -4,11 +4,12 @@ from pathlib import Path
 
 from pydantic import TypeAdapter, ValidationError
 
-from .models import FootnoteOut, MarginNoteOut
+from .models import ErratumOut, FootnoteOut, MarginNoteOut
 from .registry import Registry, anchor_day, slug_of
 
 _FOOTNOTES = TypeAdapter(dict[str, list[FootnoteOut]])
 _MARGINALIA = TypeAdapter(dict[str, list[MarginNoteOut]])
+_ERRATA = TypeAdapter(dict[str, list[ErratumOut]])
 
 
 def load_footnotes(path: Path) -> dict[str, list[FootnoteOut]]:
@@ -26,6 +27,14 @@ def load_marginalia(path: Path) -> dict[str, list[MarginNoteOut]]:
         return _MARGINALIA.validate_json(path.read_bytes())
     except ValidationError as err:
         raise ValueError(f"{path}: invalid marginalia.json: {err}") from err
+
+
+def load_errata(path: Path) -> dict[str, list[ErratumOut]]:
+    """An edition's `printed_errata.json`, validated like `footnotes.json`."""
+    try:
+        return _ERRATA.validate_json(path.read_bytes())
+    except ValidationError as err:
+        raise ValueError(f"{path}: invalid printed_errata.json: {err}") from err
 
 
 @dataclass
@@ -182,6 +191,11 @@ class Store:
             for eid, d in self._dirs.items()
             if (d / "marginalia.json").exists()
         }
+        self._errata: dict[str, dict[str, list[ErratumOut]]] = {
+            eid: load_errata(d / "printed_errata.json")
+            for eid, d in self._dirs.items()
+            if (d / "printed_errata.json").exists()
+        }
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -244,6 +258,11 @@ class Store:
         (footnote mark) it stands beside, or null beside the eulogy's text.
         Empty when the edition has none."""
         return self._marginalia.get(edition_id, {})
+
+    def errata(self, edition_id: str) -> dict[str, list[ErratumOut]]:
+        """The corrections the edition prints in its own errata (`printed_errata.json`),
+        by canonical id. Empty when the edition has none."""
+        return self._errata.get(edition_id, {})
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
