@@ -23,3 +23,4 @@ def redact(elogia: list[ElogiumOut]) -> None:
     for e in elogia:
         e.text = None
         e.footnotes = []
+        e.marginalia = []

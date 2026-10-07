@@ -21,6 +21,9 @@ his notes) are removed, guided by the lemma of each note.
 Usage:
   pip install lxml
   python3 digitize_1630.py data/sources/martyrologium_romanum_1630.tei.xml [repo_root]
+
+Baronius's notes and the margin notes are extracted from the same walk by
+notationes_1630.py (footnotes.json, marginalia.json).
 """
 
 import difflib
@@ -32,10 +35,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-TEI = Path(sys.argv[1]) if len(sys.argv) > 1 else sys.exit(__doc__)
-ROOT = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(__file__).resolve().parent.parent
-ED_DIR = ROOT / "data" / "editions" / "martyrologium_romanum_1630"
-REF_DIR = ROOT / "data" / "editions" / "martyrologium_romanum_1749"
+ROOT = Path(__file__).resolve().parent.parent
 NS = "{http://www.tei-c.org/ns/1.0}"
 FIRST_PAGE, LAST_PAGE = 39, 688  # the Martyrology (with notes) in the scan
 # The scan carries printed pp. 430-443 twice (PDF pp. 468-481 and 482-495).
@@ -194,8 +194,18 @@ def lemma_in(note, daytext):
 
 
 def extract_days(tei):
+    """Each day's heading, text paragraphs and note letters+lemmas. `blocks` keeps,
+    in reading order, the day's text paragraphs ("text"), note paragraphs ("note",
+    "foot" for the foot of the page, "verse") and margin notes ("margin" beside the
+    notes, "margin-text" beside the eulogies) as (kind, text, page), for
+    notationes_1630.py."""
     body = etree.parse(str(tei)).getroot().find(f".//{NS}body")
     days, cur, state, page = [], None, None, None
+
+    def block(day, kind, t):
+        if t:
+            day["blocks"].append((kind, t, page))
+
     for el in body.iter():
         if not isinstance(el.tag, str):
             continue
@@ -210,27 +220,53 @@ def extract_days(tei):
             rd = roman_date(strip_acc(t)) if re.search(r"Kal|kal|Non|Idus|Idib|Pridie", t) else None
             if rd:
                 cur = {"month": rd[0], "day": rd[1], "titulus": t, "paras": [], "notes": []}
+                cur["blocks"] = []
                 days.append(cur)
                 state = "day"
             elif state == "day" and cur["paras"]:
                 state = "notes"  # e.g. "AVGVSTI 4." opens the day's notes
+            elif state == "notes" and LEMMA.match(t):  # a lemma set as a heading
+                add_note(cur, t)
+                block(cur, "note", t)
             continue
         if tag == "note" and el.get("type") == "footnote" and cur is not None:
             # notes printed at the foot of the page: this day's, or the previous day's tail
             t = own_text(el)
             if state == "notes":
                 add_note(cur, t)
+                block(cur, "foot", t)
             elif state == "day" and cur["paras"]:
                 if lemma_in(t, " ".join(cur["paras"])):
                     state = "notes"
                     add_note(cur, t)
+                    block(cur, "foot", t)
                 elif len(days) > 1:
                     add_note(days[-2], t)
+                    block(days[-2], "foot", t)
+            elif len(days) > 1:
+                add_note(days[-2], t)
+                block(days[-2], "foot", t)
+            continue
+        if tag == "note" and el.get("place") == "margin" and cur is not None:
+            t = own_text(el)
+            if state == "notes" and LEMMA.match(t):  # a note the transcription set in the margin
+                add_note(cur, t)
+                block(cur, "note", t)
+            else:
+                block(cur, "margin" if state == "notes" else "margin-text", t)
+            continue
+        if tag == "l" and state == "notes":
+            block(cur, "verse", own_text(el))
+            continue
+        if tag == "item" and state == "notes":  # notes the transcription set as a list
+            add_note(cur, own_text(el))
+            block(cur, "note", own_text(el))
             continue
         if tag != "p":
             continue
         if state == "notes":
             add_note(cur, own_text(el))
+            block(cur, "note", own_text(el))
             continue
         if state != "day":
             continue
@@ -249,8 +285,10 @@ def extract_days(tei):
         if re.search(r"\]", t[:160]):  # a note lemma: 'Circumcisio.]'
             state = "notes"
             add_note(cur, t)
+            block(cur, "note", t)
             continue
         cur["paras"].append(t)
+        block(cur, "text", t)
     return days
 
 
@@ -354,16 +392,18 @@ LEMMA_GENERIC = re.compile(
     r"|transl|comm|socio|socia|alias|papa|imp|regis|et|de|in|sub|cum|ac)"
 )
 SEP = "⁣"  # invisible separator: keeps eulogy boundaries through marker stripping
+MARK = "\ue000"  # private use: where a removed letter stood (MARK + letter), for the notes
 
 
 def _w(s):
     return re.sub(r"[^a-z ]", "", _f(s)).replace(" ", "")
 
 
-def strip_markers(text, notes):
+def strip_markers(text, notes, mark=False):
     """Remove the reference letters that the day's notes point at: a letter directly
     after (or just before) a word of its note's lemma; then letters of the sequence
-    lying between their anchored neighbours."""
+    lying between their anchored neighbours. With `mark`, MARK + letter is left in
+    the letter's place, glued to the word before it."""
     toks = re.findall(r"\S+|\s+", text)
     words = [(i, t) for i, t in enumerate(toks) if t.strip()]
     drop = set()
@@ -396,7 +436,7 @@ def strip_markers(text, notes):
                     and m.group(2) == n["letter"]
                     and stem in {w.replace("ae", "e") for w in lem if w}
                 ):
-                    toks[i] = m.group(1) + m.group(3)
+                    toks[i] = m.group(1) + (MARK + m.group(2) if mark else "") + m.group(3)
                     break
     pos = {re.fullmatch(r"([a-z])[,.;:]?", toks[j]).group(1): j for j in drop}
     if pos:
@@ -420,25 +460,30 @@ def strip_markers(text, notes):
         if i in drop:
             while out and not out[-1].strip():
                 out.pop()
-            out.append(re.fullmatch(r"[a-z]([,.;:]?)", t).group(1))
+            m = re.fullmatch(r"([a-z])([,.;:]?)", t)
+            out.append((MARK + m.group(1) if mark else "") + m.group(2))
             continue
         out.append(t)
     s = re.sub(r"\s+([,.;:])", r"\1", "".join(out))
     return re.sub(r"[ \t]{2,}", " ", s).strip()
 
 
-def clean_day(elogia, notes):
+def clean_day(elogia, notes, mark=False):
     t = re.sub(r"([,;:])(?=[^\s\d])", r"\1 ", f" {SEP} ".join(elogia))  # "Prisci c,Crescentis"
-    t = strip_markers(t, notes)
+    t = strip_markers(t, notes, mark=True)
+    taken = set(re.findall(MARK + "([a-z])", t))  # letters already removed
     toks = re.findall(r"\S+|\s+", t)
     # leftover lone consonants are markers whose note was not captured (no Latin
-    # word is a lone consonant); a/e only where bracketed by such neighbours
+    # word is a lone consonant); a/e only where bracketed by such neighbours, and
+    # not when that letter was already found (then a lone a/e is the preposition)
     pos = {}
     for i, tok in enumerate(toks):
         m = re.fullmatch(r"([b-df-np-z])([,.;:]?)", tok)
         if m:
             pos.setdefault(m.group(1), i)
     for letter in "ae":
+        if letter in taken:
+            continue
         k = ALPHA.find(letter)
         lo = max([pos[c] for c in ALPHA[:k] if c in pos] or [-1])
         hi = min([pos[c] for c in ALPHA[k + 1 :] if c in pos] or [-1])
@@ -457,16 +502,18 @@ def clean_day(elogia, notes):
         if i in drop:
             while out and not out[-1].strip() and out[-1] != SEP:
                 out.pop()
-            out.append(tok[1:])
+            out.append((MARK + tok[0] if mark else "") + tok[1:])
             continue
         out.append(tok)
     t = "".join(out)
     t = re.sub(r"\s*\[\*\]\s*", " ", t)
     t = re.sub(r"(?<=\s)\*(?=\s)", "", t)
     t = re.sub(r"\s+([,.;:])", r"\1", t)
-    t = re.sub(r"([,;:])(?=[^\s\d])", r"\1 ", t)
+    t = re.sub(r"([,;:])(?=[^\s\d" + MARK + "])", r"\1 ", t)
     t = re.sub(r"&(?=\S)", "& ", t)
     t = re.sub(r"[ \t]{2,}", " ", t)
+    if not mark:
+        t = re.sub(MARK + "[a-z]", "", t)
     return [e.strip() for e in t.split(SEP) if e.strip()]
 
 
@@ -478,18 +525,21 @@ ASTERISK_BREAK = re.compile(
 )
 
 
-def load_reference():
+def load_reference(root=ROOT):
     ref = {}
+    ref_dir = root / "data" / "editions" / "martyrologium_romanum_1749"
     for mo in range(1, 13):
-        for d, v in json.load(open(REF_DIR / f"{mo:02d}.json", encoding="utf-8")).items():
+        for d, v in json.load(open(ref_dir / f"{mo:02d}.json", encoding="utf-8")).items():
             el = v.get("elogia", {})
             ref[(mo, int(d))] = list(el.values() if isinstance(el, dict) else el)
     return ref
 
 
-def main():
-    ref = load_reference()
-    days = extract_days(TEI)
+def digitize(tei, root=ROOT, mark=False):
+    """The days walked from the TEI and the monthly data. With `mark`, each removed
+    reference letter is left in the eulogies as MARK + letter (see strip_markers)."""
+    ref = load_reference(root)
+    days = extract_days(tei)
     assert len(days) == 365 and len({(d["month"], d["day"]) for d in days}) == 365, len(days)
     conclusio = None
     months = {}
@@ -509,20 +559,28 @@ def main():
         titulus = norm(tm.group(1) + " Luna." if tm else x["titulus"]).replace("..", ".")
         months.setdefault(x["month"], {})[str(x["day"])] = {
             "titulus": titulus,
-            "elogia": clean_day(segs, x["notes"]),
+            "elogia": clean_day(segs, x["notes"], mark),
         }
     # Printed once, on 1 January: "Sic semper terminatur lectio Martyrologij."
     for month in months.values():
         for day in month.values():
             day["conclusio"] = conclusio
-    ED_DIR.mkdir(parents=True, exist_ok=True)
+    return days, months
+
+
+def main():
+    tei = Path(sys.argv[1]) if len(sys.argv) > 1 else sys.exit(__doc__)
+    root = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT
+    ed_dir = root / "data" / "editions" / "martyrologium_romanum_1630"
+    days, months = digitize(tei, root)
+    ed_dir.mkdir(parents=True, exist_ok=True)
     for mo, month in months.items():
         out = {d: month[d] for d in sorted(month, key=int)}
-        with open(ED_DIR / f"{mo:02d}.json", "w", encoding="utf-8") as f:
+        with open(ed_dir / f"{mo:02d}.json", "w", encoding="utf-8") as f:
             json.dump(out, f, ensure_ascii=False, indent=1)
             f.write("\n")
     n = sum(len(d["elogia"]) for m in months.values() for d in m.values())
-    print(f"{len(days)} days, {n} elogia -> {ED_DIR}")
+    print(f"{len(days)} days, {n} elogia -> {ed_dir}")
 
 
 if __name__ == "__main__":

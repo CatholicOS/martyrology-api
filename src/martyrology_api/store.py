@@ -4,10 +4,11 @@ from pathlib import Path
 
 from pydantic import TypeAdapter, ValidationError
 
-from .models import FootnoteOut
+from .models import FootnoteOut, MarginNoteOut
 from .registry import Registry, anchor_day, slug_of
 
 _FOOTNOTES = TypeAdapter(dict[str, list[FootnoteOut]])
+_MARGINALIA = TypeAdapter(dict[str, list[MarginNoteOut]])
 
 
 def load_footnotes(path: Path) -> dict[str, list[FootnoteOut]]:
@@ -17,6 +18,14 @@ def load_footnotes(path: Path) -> dict[str, list[FootnoteOut]]:
         return _FOOTNOTES.validate_json(path.read_bytes())
     except ValidationError as err:
         raise ValueError(f"{path}: invalid footnotes.json: {err}") from err
+
+
+def load_marginalia(path: Path) -> dict[str, list[MarginNoteOut]]:
+    """An edition's `marginalia.json`, validated like `footnotes.json`."""
+    try:
+        return _MARGINALIA.validate_json(path.read_bytes())
+    except ValidationError as err:
+        raise ValueError(f"{path}: invalid marginalia.json: {err}") from err
 
 
 @dataclass
@@ -168,6 +177,11 @@ class Store:
             for eid, d in self._dirs.items()
             if (d / "footnotes.json").exists()
         }
+        self._marginalia: dict[str, dict[str, list[MarginNoteOut]]] = {
+            eid: load_marginalia(d / "marginalia.json")
+            for eid, d in self._dirs.items()
+            if (d / "marginalia.json").exists()
+        }
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -223,6 +237,13 @@ class Store:
         `mark`, the phrase it follows (`after`, or null when it couldn't be
         anchored) and its `text`. Empty when the edition has none."""
         return self._footnotes.get(edition_id, {})
+
+    def marginalia(self, edition_id: str) -> dict[str, list[MarginNoteOut]]:
+        """The notes printed in the margin beside the edition's eulogies
+        (`marginalia.json`), by canonical id: each has its `text` and the `note`
+        (footnote mark) it stands beside, or null beside the eulogy's text.
+        Empty when the edition has none."""
+        return self._marginalia.get(edition_id, {})
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)

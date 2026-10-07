@@ -125,6 +125,29 @@ def test_public_edition_without_footnotes_has_empty_lists(client):
     assert all(e["footnotes"] == [] for e in b["elogia"])
 
 
+MARGINALIA = [
+    {"text": "T. 2. A. 254. n. 24.", "note": "1"},
+    {"text": "cir. A. 320.", "note": None},
+]
+
+
+def test_marginalia_follow_access_like_footnotes(client):
+    url = "/api/v1/elogia/edition/martyrologium_romanum_2004/01/02"
+    day = client.get(url, headers={"Authorization": "Bearer good"}).json()
+    assert _argeus(day)["marginalia"] == MARGINALIA
+    assert all(e["marginalia"] == [] for e in day["elogia"] if e["id"] != "mr:0102-argeus-et-socii")
+    assert _argeus(client.get(url).json())["marginalia"] == []
+    month = client.get("/api/v1/elogia/01", headers={"Authorization": "Bearer good"}).json()
+    assert _argeus(month["days"]["02"])["marginalia"] == MARGINALIA
+    month = client.get("/api/v1/elogia/01").json()
+    assert all(e["marginalia"] == [] for d in month["days"].values() for e in d["elogia"])
+    placement = "/api/v1/elogium/mr:0102-argeus-et-socii"
+    authorized = client.get(placement, headers={"Authorization": "Bearer good"}).json()
+    assert authorized["editions"]["martyrologium_romanum_2004"]["marginalia"] == MARGINALIA
+    anonymous = client.get(placement).json()
+    assert anonymous["editions"]["martyrologium_romanum_2004"]["marginalia"] == []
+
+
 @pytest.fixture
 def open_client(make_client):
     """The default rule: any signed-in user reads the restricted editions, with no grant."""
