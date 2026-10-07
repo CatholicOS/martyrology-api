@@ -145,6 +145,17 @@ def anchor_phrase(text, end):
     return None
 
 
+def anchor_after(digitized, at, text):
+    """The anchor phrase in an aligned eulogy's text for offset `at` of the digitized
+    text: the text before `at` locates the spot, shortened until it lies within the
+    eulogy (a digitized run can hold the end of the eulogy before it)."""
+    for n in (40, 30, 20, 12, 6):
+        ctx = digitized[max(0, at - n) : at].lstrip()
+        if ctx and text.count(ctx) == 1:
+            return anchor_phrase(text, text.find(ctx) + len(ctx))
+    return None
+
+
 def unmark(t):
     return re.sub(D.MARK + "[a-z]", "", t)
 
@@ -318,7 +329,8 @@ def pair_marks(notes, marks, plain):
 
 def aligned_id(plain_e, at, aligned):
     """The canonical ID whose 1630 text holds the digitized eulogy's text at `at`."""
-    for left, right in ((60, 30), (30, 15), (15, 0)):
+    # around the spot, then before it, then (a mark just after a eulogy's first word) after it
+    for left, right in ((60, 30), (30, 15), (15, 0), (0, 30), (0, 15)):
         ctx = plain_e[max(0, at - left) : at + right].strip()
         hits = [i for i, t in aligned.items() if ctx and ctx in t]
         if len(hits) == 1:
@@ -329,11 +341,14 @@ def aligned_id(plain_e, at, aligned):
 
 def lemma_home(note, plain, aligned):
     """For a note without a mark: (ID, anchor) of the eulogy with its lemma's first key
-    word, the anchor ending after the run of the eulogy's words matching the lemma."""
+    word, the anchor ending after the run of the eulogy's words matching the lemma. Where
+    the word comes more than once in the day, the place with the most lemma words close
+    by wins ('Leucij Episc.' is the bishop's 'Leucij Episcopi', not the martyr 'Leucij')."""
     keys = lemma_keys(note["lemma"])
     if not keys:
         return None, None
     lem = [D._w(w)[:5] for w in note["lemma"].split()]
+    best = None  # (lemma words near it, text, end)
     for e in plain:
         words = list(re.finditer(r"\S+", e))
         for i, w in enumerate(words):
@@ -345,11 +360,14 @@ def lemma_home(note, plain, aligned):
             end = words[j].end()
             while end > words[j].start() and not _isw(e[end - 1]):
                 end -= 1
-            eid = aligned_id(e, end, aligned)
-            ctx = e[max(0, end - 40) : end].lstrip()
-            pos = aligned[eid].find(ctx) if ctx else -1
-            return eid, anchor_phrase(aligned[eid], pos + len(ctx)) if pos >= 0 else None
-    return None, None
+            near = sum(D._w(x.group())[:5] in lem for x in words[i : i + len(lem) + 2])
+            if best is None or near > best[0]:
+                best = (near, e, end)
+    if best is None:
+        return None, None
+    _n, e, end = best
+    eid = aligned_id(e, end, aligned)
+    return eid, anchor_after(e, end, aligned[eid])
 
 
 def build(tei, root=D.ROOT):
@@ -409,9 +427,7 @@ def build(tei, root=D.ROOT):
             if m and m[1] is not None:
                 e, at = plain[m[1]], m[2]
                 eid = aligned_id(e, at, aligned)
-                ctx = e[max(0, at - 40) : at].lstrip()
-                pos = aligned[eid].find(ctx) if ctx else -1
-                after = anchor_phrase(aligned[eid], pos + len(ctx)) if pos >= 0 else None
+                after = anchor_after(e, at, aligned[eid])
                 if after is None:
                     review["unanchored"].append(f"{md} {n['letter']} ({n['lemma']}) → {eid}")
             elif m:  # the day heading

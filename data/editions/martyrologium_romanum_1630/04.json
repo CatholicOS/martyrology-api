@@ -42,7 +42,8 @@
   "titulus": "Pridie Nonas Aprilis. Luna.",
   "elogia": {
    "mr:0404-agathopodus-et-theodulus": "THESSALONICAE SS. martyrum Agathopŏdis diaconi & Theodŭli lectoris, qui sub Maximiano Imperatore & Faustino Præside ob Christianæ fidei confessionem, alligato ad collum saxo, in mare demersi sunt.",
-   "mr:0404-ambrosius": "Mediolani depositio sancti Ambrosij Episcopi & confessoris, cuius studio, inter cetera doctrinæ & miraculorum insignia, tempore Arianæ perfidię tota fere Italia ad Catholicam fidem conuersa est. Hispăli in Hispania sancti Isidôri Episcopi, sanctitate & doctrina conspicui, qui zelo Catholicæ fidei, & obseruantia Ecclesiasticæ disciplinæ Hispanias illustrauit.",
+   "mr:0404-ambrosius": "Mediolani depositio sancti Ambrosij Episcopi & confessoris, cuius studio, inter cetera doctrinæ & miraculorum insignia, tempore Arianæ perfidię tota fere Italia ad Catholicam fidem conuersa est.",
+   "mr:0404-isidorus": "Hispăli in Hispania sancti Isidôri Episcopi, sanctitate & doctrina conspicui, qui zelo Catholicæ fidei, & obseruantia Ecclesiasticæ disciplinæ Hispanias illustrauit.",
    "mr:0404-platon": "Constantinopoli sancti Platônis monachi, qui pluribus annis aduersus hæreticos sanctarum imaginum effractores inuicto animo decertauit.",
    "mr:0404-zosimus": "In Palæstina sancti Zosimi anachoretæ, qui funus sanctæ Mariæ Aegyptiăcæ curauit."
   },
@@ -122,7 +123,8 @@
   "elogia": {
    "mr:0410-ezechiel-propheta": "EZECHIELIS Prophetę, qui a Iudice populi Israel, quod eum de cultu idolorum argueret, apud Babyloniam interfectus, in sepulchro Sem & Arphaxad Abrahæ progenitorum sepultus est: ad quod orationis causa multi confluĕre consueuerunt.",
    "mr:0410-martyres-romae": "Romę natalis plurimorum sanctorum martyrum, quos sanctus Alexander Papa, cum detineretur in carcere, baptizauit. Hos autem omnes Aurelianus Præfectus naui vetustæ impositos, in altum mare deduci, & illic ligatis ad colla lapidibus mergi præcepit.",
-   "mr:0410-apollonius": "Alexandriæ sanctorum martyrum Apollonij presbyteri, & aliorum quinque, qui in persecutione Maximini in mare demersi sunt In Africa sanctorum martyrum Terentij, Africani, Pompeij, & sociorum, qui sub Decio Imperatore & Fortuniano Præfecto virgis cæsi, equuleis torti, alijsq. supplicijs cruciati, demum capitis obtruncatione martyrium compleuerunt.",
+   "mr:0410-apollonius": "Alexandriæ sanctorum martyrum Apollonij presbyteri, & aliorum quinque, qui in persecutione Maximini in mare demersi sunt",
+   "mr:0410-terentius-et-socii": "In Africa sanctorum martyrum Terentij, Africani, Pompeij, & sociorum, qui sub Decio Imperatore & Fortuniano Præfecto virgis cæsi, equuleis torti, alijsq. supplicijs cruciati, demum capitis obtruncatione martyrium compleuerunt.",
    "mr:0410-macarius": "Eodem die sancti Macarij Episcopi Antiochêni, virtutibus & miraculis clari."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -169,7 +171,8 @@
   "elogia": {
    "mr:0414-tiburtius-et-socii": "ROMAE via Appia natalis sanctorum martyrum Tiburtij, Valeriani, & Maximi sub Alexandro Imperatore, & Almachio Pręfecto: quorum primi B. Cæciliæ exhortatione ad Christum conuersi, & a sancto Vrbano Papa baptizati, ob fidei confessionem fustibus cæsi, gladio percussi sunt: Maximus vero Pręfecti cubicularius, horum permotus constantia, & angelica visione firmatus, in Christum credens, tamdiu plumbatis verberatus est, donec spiritum exhalaret.",
    "mr:0414-proculus": "Interamnæ sancti Procŭli Episcopi & martyris.",
-   "mr:0414-domnina-et-socii": "Item sanctæ Domnînæ virginis & martyris, cum socijs virginibus coronatæ, Alexandriæ sanctæ Thomaĭdis martyris.",
+   "mr:0414-domnina-et-socii": "Item sanctæ Domnînæ virginis & martyris, cum socijs virginibus coronatæ,",
+   "mr:0414-thomais": "Alexandriæ sanctæ Thomaĭdis martyris.",
    "mr:0414-ardalio": "Eodem die sancti Ardaliônis mimi, qui cùm sacris Christianorum in theatro illuderet, de repente mutatus, ea non solum verbis, sed & testimonio sui sanguinis comprobauit.",
    "mr:0414-lambertus": "Lugdûni S. Lamberti Episcopi & confessoris.",
    "mr:0414-fronto": "Alexandriæ sancti Frontônis abbatis, cuius vita sanctitate & miraculis claruit.",
@@ -210,7 +213,8 @@
    "mr:0417-anicetus": "ROMAE S. Anicêti Papæ & martyris, qui in persecutione Marci Aurelij Antonini, & Lucij Veri, martyrij palmam accepit.",
    "mr:0417-mappalicus": "In Africa natalis beati Mappalici martyris, qui(vt scribit sanctus Cyprianus in epistola ad martyres & confessores) cum alijs pluribus martyrio coronatus est.",
    "mr:0417-fortunatus-et-marcianus": "Ibidem sanctorum martyrum Fortunati & Marciani.",
-   "mr:0417-petrus-et-hermogenes": "Antiochiæ sanctorum martyrum Petri diaconi, & Hermogĕnis eius ministri: Cordŭbę sanctorum martyrum Elię presbyteri, Pauli & Isidori monachorum.",
+   "mr:0417-petrus-et-hermogenes": "Antiochiæ sanctorum martyrum Petri diaconi, & Hermogĕnis eius ministri:",
+   "mr:0417-elias-et-socii": "Cordŭbę sanctorum martyrum Elię presbyteri, Pauli & Isidori monachorum.",
    "mr:0417-pantagathus": "Viennæ sancti Pantagăthi Episcopi.",
    "mr:0417-innocentius": "Terdônæ S. Innocentij Episcopi & confessoris.",
    "mr:0417-stephanus-harding": "Cistertij in Gallia sancti Stephani abbatis, qui primus eremum Cistertiensem incoluit, & sanctum Bernardum cum socijs ad se venientem lætus excepit."
@@ -312,7 +316,8 @@
  "25": {
   "titulus": "Septimo Kal. Maij. Luna.",
   "elogia": {
-   "mr:0425-marcus-evangelista": "ALEXANDRIAE natalis B. Marci Euangelistæ. Hic discipulus & interpres Apostoli Petri, rogatus Romæ a fratribus, scripsit Euangelium, quo assumpto perrexit in Aegyptum, primusq. Alexandriæ Christum annuncians, constituit ecclesiam: ac postea pro fide Christi tentus, funibus vinctus, & per saxa raptatus, grauiter afflictus est: deinde reclusus in carcere, primo angelica visitatione confortatus, & demum ipso Domino sibi apparente, ad cælestia regna vocatus est octauo Nerônis anno. Romæ Litaniæ maiores ad sanctum Petrum.",
+   "mr:0425-marcus-evangelista": "ALEXANDRIAE natalis B. Marci Euangelistæ. Hic discipulus & interpres Apostoli Petri, rogatus Romæ a fratribus, scripsit Euangelium, quo assumpto perrexit in Aegyptum, primusq. Alexandriæ Christum annuncians, constituit ecclesiam: ac postea pro fide Christi tentus, funibus vinctus, & per saxa raptatus, grauiter afflictus est: deinde reclusus in carcere, primo angelica visitatione confortatus, & demum ipso Domino sibi apparente, ad cælestia regna vocatus est octauo Nerônis anno.",
+   "mr:0425-litaniae-maiores": "Romæ Litaniæ maiores ad sanctum Petrum.",
    "mr:0425-evodius-et-socii": "Syracusis sanctorum martyrum Euodij, Hermogĕnis, & Callisti.",
    "mr:0425-stephanus": "Antiochiæ sancti Stephani Episcopi & martyris, qui ab hæreticis Synodum Chalcedonensem impugnantibus multa passus, in Orontem fluuium præcipitatus est, tempore Zenonis Imperatoris.",
    "mr:0425-philo-et-agathopus": "Ibidem sanctorum Philônis & Agathopŏdis diaconorum.",

@@ -238,7 +238,7 @@
    "text": "Petri.] De eo etiam Beda, Vsuard. & vet. manuscrip. Extant eius passionis Acta, & quidem germana, ab Anastasio S. R. E. Bibliothecario Latinitate donata: retulit ea Surius in tomo 1."
   }
  ],
- "mr:0103-theopemptus-et-theona": [
+ "mr:0103-zosimus-et-athanasius": [
   {
    "mark": "i",
    "after": "Zosimi",
@@ -322,6 +322,13 @@
    "text": "Apollinaris virg.] Eius res gestas edidit Metaphrastes; de quibus lectorẽ monitũ velim, inesse ibi errorẽ, dum filia Anthemij Imperatoris dicitur, qui post Seuerum Imperauit in Occidente. Sciat potius hanc fuisse genitã Anthemio Cõsulari viro religiosissimo, qui sub Arcadio Imperatore gessit Consulatum, ad quẽ extat Ioannis Chrysostomi epistola 147. de quo & Theodoretus meminit lib. sanct. patr. c. 8. Habitus est autẽ hic velut Imperator, dum defuncto Arcadio, pro Theodosio impubere administrauit Imperiũ."
   }
  ],
+ "mr:0105-eduardus-confessor": [
+  {
+   "mark": "g",
+   "after": "Eduardi",
+   "text": "Eduardi Regis.] Cuius egregia facta cõscripsit Alredus abbas, quæ retulit Sur. in tom. 1. Hunc Alexander Papa Tertius adscripsit sanctorum numero; cuius rei gestæ extant monumẽta in appendice ad vitam eius. Habentur etiam in bibliotheca Vaticana litteræ Innocẽtij Quarti Rom. Pont. de celebratione diei festi S. Eduardi Regis, in Regist. ann. 2. nu. 235. pag. 527. Obijt idem sanctus anno Domini millesimo sexagesimosexto."
+  }
+ ],
  "mr:0105-martyres-aegypti": [
   {
    "mark": "d",
@@ -342,11 +349,6 @@
   }
  ],
  "mr:0105-syncletica": [
-  {
-   "mark": "g",
-   "after": "Eduardi",
-   "text": "Eduardi Regis.] Cuius egregia facta cõscripsit Alredus abbas, quæ retulit Sur. in tom. 1. Hunc Alexander Papa Tertius adscripsit sanctorum numero; cuius rei gestæ extant monumẽta in appendice ad vitam eius. Habentur etiam in bibliotheca Vaticana litteræ Innocẽtij Quarti Rom. Pont. de celebratione diei festi S. Eduardi Regis, in Regist. ann. 2. nu. 235. pag. 527. Obijt idem sanctus anno Domini millesimo sexagesimosexto."
-  },
   {
    "mark": "h",
    "after": "Syncleticæ",
@@ -401,7 +403,7 @@
  "mr:0106-melanius": [
   {
    "mark": "e",
-   "after": "Gallia sancti",
+   "after": "sancti",
    "text": "Melanij Episc.] De eo etiã Vsuardus. Hic reperitur interfuisse Concilio primo Aurelianensi, tẽporibus Clodouei celebrato, vt eius Acta testantur. Scribit de Melanio Gregor. Turon. de gloria confess. c. 55. & Petrus in catal. lib. 2. cap. 49. Fuit & eiusdem nominis Melanius alter Viromandẽsis Episcopus, qui eadẽ vixit ætate, eidemq; Concilio præsens fuit. Alius insuper Melanius Episcopus Rothomagensis, de quo scribit Gregorius Turonensis de gestis Franc. lib. 7. cap. 19."
   }
  ],
@@ -618,6 +620,13 @@
    "text": "Pauli primi eremitæ.] Eius vitam scripsit sanctus Hieronymus: Solutus est vinculis carnis anno sexto Constantij Imp. agẽs iam ætatis annum decimumtertium supra centesimũ: nam Antonius, qui post eius obitum vixit annos quindecim (vt idem Hieronymus scribit in chron.) migrauit ex hac vita anno vigesimoprimo Constãtij; cùm iam antea nonagenarius Paulum proxime moriturum inuisisset, ac post vixisset vsque ad annum centesimumquintum. Meminit eiusdẽ Pauli idẽ Hieronym. ad Eustochium epist. 22. Porro vitam eius, quã scripsit, misit ad Paulum Concordiensem, vt testatur in epist. 21. in fine."
   }
  ],
+ "mr:0111-alexander": [
+  {
+   "mark": "d",
+   "after": "Alexandri",
+   "text": "Alexandri Episc.] De eo etiam tabulæ Firmanæ ecclesiæ, quas Romam allatas accepimus, licèt in eis passionis tempus desideretur."
+  }
+ ],
  "mr:0111-anastasius-et-socii": [
   {
    "mark": "i",
@@ -644,6 +653,13 @@
    "text": "HYGINII Papæ.] De eo Beda pridie huius diei, Ado, & alij hac die. De eius successione agit liber de Rom. Pontificibus Damasi nomine inscriptus, Irenæus lib. 3. c. 3. Epiphan. in panar. hæres. 27. Eusebius in chron. & hist. lib: 4. c. 10. Optatus lib. 2. contra Parmen. August. epist. 165. Meminit eiusdem Cyprianus in epist. 74 ad Pompeium. Sub persecutione Antonini coronatum esse martyrio, idem lib. de Roman. Pontif Eusebius in chron. & alij omnes testantur. Cetera de ipso dixi in Annal. Eccles."
   }
  ],
+ "mr:0111-leucius": [
+  {
+   "mark": "f",
+   "after": "Episcopi",
+   "text": "Leucij Episc.] Restitutus est ex vet. manuscrip. Licèt enim Brundusinus esset Episcopus, Romæ etiam colebatur. Erat enim quinto ab Vrbe lapide ecclesia sancti Leucij, cuius meminit S. Gregorius lib. 9. Regist. epist. 73. cùmq. inde fuissent ablatæ eius reliquiæ, idem Pontifex alias eiusdẽ sancti ad se reliquias mitti iussit. Legimus Acta eius ab eadem ecclesia accepta erroribus quidẽ scatentia, ob maximam tum in personis, tũ etiam in tempore discrepantiam: Ponitur hic confessor, sicut in propriâ ecclesia colitur: cùm alioqui S. Gregorius appellet eum martyrem beatissimum."
+  }
+ ],
  "mr:0111-palaemon": [
   {
    "mark": "h",
@@ -653,24 +669,9 @@
  ],
  "mr:0111-petrus-et-socii": [
   {
-   "mark": "f",
-   "after": "& Leucij",
-   "text": "Leucij Episc.] Restitutus est ex vet. manuscrip. Licèt enim Brundusinus esset Episcopus, Romæ etiam colebatur. Erat enim quinto ab Vrbe lapide ecclesia sancti Leucij, cuius meminit S. Gregorius lib. 9. Regist. epist. 73. cùmq. inde fuissent ablatæ eius reliquiæ, idem Pontifex alias eiusdẽ sancti ad se reliquias mitti iussit. Legimus Acta eius ab eadem ecclesia accepta erroribus quidẽ scatentia, ob maximam tum in personis, tũ etiam in tempore discrepantiam: Ponitur hic confessor, sicut in propriâ ecclesia colitur: cùm alioqui S. Gregorius appellet eum martyrem beatissimum."
-  },
-  {
    "mark": "c",
    "after": "Petri",
    "text": "Petri, Seueri, & Leucij.] De his etiam hac die Beda, Vsuar. Ado, ac reliqui omnes."
-  },
-  {
-   "mark": "d",
-   "after": "Alexandri",
-   "text": "Alexandri Episc.] De eo etiam tabulæ Firmanæ ecclesiæ, quas Romam allatas accepimus, licèt in eis passionis tempus desideretur."
-  },
-  {
-   "mark": "e",
-   "after": "Saluij",
-   "text": "Saluij Episc.] Alij Saluinum appellant. Hunc Sigebert. in chron. Saluum pro Saluio dicit, occisumq. tradit anno 33. Caroli Magni Impertoris, anno Domini 801. De eodẽ Petrus in catal. lib. 2. cap. 65. In tabulis Episcoporum Ambianensium ponitur Saluius quinto loco, vt constat ex Demochare, qui eas descripsit. Confundunt hũc nonnulli cum Saluio Episcopo Albigensi, qui sub Chilperico Francorum Rege doctrina claruit & sanctitate, de quo Gregor. Turonen. hist. lib. 5. cap. 44."
   }
  ],
  "mr:0111-salvius": [
@@ -678,6 +679,13 @@
    "mark": "b",
    "after": "Saluij",
    "text": "Saluij.] De eodẽ hic Beda, ac ceteri Latinorum, necnon vet. manuscr. Meminit Possidius in Indiculo c. 3. de sermone S. Augustini habito de S. Saluio, & cap. 9. agit de alio eiusdẽ auctoris tractatu in eiusdẽ die natali habito. Ne quis autem aliqua occasione in errorem ducatur, nosse debet fuisse item in Africa alium Saluium, sed pseudomartyrem ipsumq. Donatistã ex parte Maximianistarum; quem alij Donatistarum, sed ex factione Parmeniani, post multas illatas contumelias occiderunt, in cuius honorem suarum partiũ homines basilicam erexerũt, adscriptumq. in suorum martyrum numerum coluerunt, vt scribit S. Augustinus aduersus Parmen. lib. 3. cap. vlt. & contra Cresc. lib. 4. cap. 48. & 49."
+  }
+ ],
+ "mr:0111-salvius-ambiani": [
+  {
+   "mark": "e",
+   "after": "Saluij",
+   "text": "Saluij Episc.] Alij Saluinum appellant. Hunc Sigebert. in chron. Saluum pro Saluio dicit, occisumq. tradit anno 33. Caroli Magni Impertoris, anno Domini 801. De eodẽ Petrus in catal. lib. 2. cap. 65. In tabulis Episcoporum Ambianensium ponitur Saluius quinto loco, vt constat ex Demochare, qui eas descripsit. Confundunt hũc nonnulli cum Saluio Episcopo Albigensi, qui sub Chilperico Francorum Rege doctrina claruit & sanctitate, de quo Gregor. Turonen. hist. lib. 5. cap. 44."
   }
  ],
  "mr:0111-theodosius": [
@@ -993,11 +1001,6 @@
  ],
  "mr:0116-mela": [
   {
-   "mark": "f",
-   "after": "Titiâni",
-   "text": "Titiani Episcopi.] De eodẽ hac die Vsuardus, vet. manuscr & Petrus in catal. li. 2. c. 99."
-  },
-  {
    "mark": "g",
    "after": "Rhinocolûræ",
    "text": "Rhinocolura.] Posita est in Aegypto Rhinocôlura, cuius S. Melas fuit Episcopus: meminit eiusdẽ ciuitatis Iosephus antiq. lib. 14. cap. 25. & alijs in locis. Meminit de eadem Epiphan. in panar. hæresi 66. contra Manichæos; eamdemq. alio nomine Neel dictam esse testatur a sortibus, quod illic Noe sortibus diuisit terram tribus filijs suis. Idem de eadem ciuitate agit in Ancorato, testaturq. sitam esse inter Aegyptum & Palestinam regione maris Rubri. Eiusdem nominis in Syria etiam ciuitas fuit, cuius mentionẽ facit Seneca lib. 3. de ira c. 20. & Strabo lib. 16. qui & cur sic dicta sit, historiam narrant. Meminit eiusdem etiam, quæ est in Syria, Iosephus antiq. lib. 13. cap. 24. edit. Gelen."
@@ -1013,6 +1016,13 @@
    "mark": "l",
    "after": "Priscillæ",
    "text": "Priscillæ.] Plures fuerunt huius nominis sanctæ mulieres, quarum illa antiquior, cuius mentio habetur in Actis Apost. cap. 18. & a Paulo ad Corinth. 1. cap. 16. de qua alia agitur die. Rursus autem alia reperitur Priscilla, de qua mentio fit in Actis sanctarum Pudentianæ & Praxedis, cuius cœmeterij etiam Pastor meminit in Actis sanctæ Praxedis. Alia item Priscilla reperitur in lib. de Rom. Pont. in S. Marcello Papa; licèt complures codices non habeãt ea quæ de cœmeterio nomine sanctæ Priscillæ via Salaria illic ponuntur; quod quidem Priscillæ seniori Pastor tribuit in dictis Actis S. Praxedis. Ceterum in ipso titulo Pastoris, vbi erant thermæ Nouati, quæ & Timothinæ dictæ, ipsæ balnei inferiores cellæ instar porticuum sibi concameratione coniunctæ, quæ vsque in hanc diem cernuntur penè integræ, cœmeterii loco ad sepeliẽdos sublatos occulte martyres inseruisse creduntur. Agitur autem de seniori Priscilla, cuius Pastor meminit, quæ & fuit Apostolorum discipula, mater verò Pudentis senatoris, vt Acta Pudentianæ, quæ habemus manuscrip. quæ & paulò diuersa recitat Mombrit. tom. 2. testantur."
+  }
+ ],
+ "mr:0116-titianus": [
+  {
+   "mark": "f",
+   "after": "Titiâni",
+   "text": "Titiani Episcopi.] De eodẽ hac die Vsuardus, vet. manuscr & Petrus in catal. li. 2. c. 99."
   }
  ],
  "mr:0117-antonius": [
@@ -1187,6 +1197,13 @@
    "text": "Mauri Episcopi.] Scripsit eius res gestas Petrus Damian. Legimus eas in codice manuscrip. Card. Sirleti. Accepimus a Cæsenate ecclesia Acta sanctorũ Mauri & Seueri eius ciuitatis Episcoporum. Antiqua est ecclesia Cæsenas, cuius Episcopus nomine Florianus (vt scribit Optatus Mileuit.) tempore Melchiadis Papæ interfuit Romano Cõcilio celebrato in causa Cæciliani Episcopi Carthaginen. Alius dictus Florus præsens fuit Romanæ Synodo habitæ sub Agathone Papa, vt eius Acta declarant, quæ sunt inserta in Sexta Synodo. Hic autẽ, de quo agimus, Maurus Episcopus reperitur interfuisse Rom. Concilio a S. Martino Papa & martyre celebrato, tenuisseq; in eo locum Archiepiscopi Rauennatis, vt eiusdem Synodi Acta significãt."
   }
  ],
+ "mr:0120-neophytus": [
+  {
+   "mark": "e",
+   "after": "Neophyti",
+   "text": "Neophyti martyris.] De eodem agunt etiam Græci hac die, in quorum Menologio eius passio describitur, & ad tempora Diocletiani refertur."
+  }
+ ],
  "mr:0120-sebastianus": [
   {
    "mark": "b",
@@ -1202,11 +1219,6 @@
    "mark": "d",
    "after": "Christianitatis",
    "text": "Sub titulo Christianitatis.] Qualis esse consueuisset eiusmodi titulus Christianitatis, habes exemplũ in epistola ecclesiæ Lugdunensis, quam recitat Eusebius hist. lib. 5. c. 1. his verbis: Cũ vndique per amphitheatrũ circumduceretur Attalus martyr, tabula, in qua Latinis litteris hæc erat inscriptio, præcedente: Hic est Attalus Christianus, &c. Hæc ibi. Sunt de his alia in alijs Actis martyrum exempla. Præcedere consueuit eiusmodi titulus, vt Suet. in Caio cap. 32. monstrat his verbis: Manibus abscissis atque ante pectus a collo pendentibus, præcedente titulo, qui causam pœnæ indicaret, per cœtus epulantium circumduceretur, &c."
-  },
-  {
-   "mark": "e",
-   "after": "Neophyti",
-   "text": "Neophyti martyris.] De eodem agunt etiam Græci hac die, in quorum Menologio eius passio describitur, & ad tempora Diocletiani refertur."
   }
  ],
  "mr:0121-agnes": [
@@ -1524,11 +1536,6 @@
    "mark": "e",
    "after": "Datîui",
    "text": "Datini & soc.] Beda etiam de his agit, sed mendose pro Datiuo Dotum, vt exemplaria antiqua docent."
-  },
-  {
-   "mark": "f",
-   "after": "Vitaliani",
-   "text": "Vitaliani Papa.] De eodem vet. manuscrip. liber de Roman. Pontif Beda de gestis Anglor. lib. 4. cap. 12. cetera in Annal. Ecclesiast. diximus."
   }
  ],
  "mr:0127-ioannes-chrysostomus": [
@@ -1559,6 +1566,13 @@
    "text": "Marij abb.] Alij Maurum pro Mario legunt. Sed hoc verũ est nomen: sic enim vocant hodie indigine prope Sistaricũ siue Sistaronem Ciuitatem prouinciæ Narbonensis. Eius vitam scriptam esse a Dinamio, testatur Sigeb. lib. de vir. illustr. cap. 115. & Petrus in catal. lib. 3. cap. 32."
   }
  ],
+ "mr:0127-vitalianus": [
+  {
+   "mark": "f",
+   "after": "Vitaliani",
+   "text": "Vitaliani Papa.] De eodem vet. manuscrip. liber de Roman. Pontif Beda de gestis Anglor. lib. 4. cap. 12. cetera in Annal. Ecclesiast. diximus."
+  }
+ ],
  "mr:0128-agnes": [
   {
    "mark": "a",
@@ -1587,16 +1601,18 @@
    "text": "Iacobi eremitæ. ] Scripsit eius Acta Metaphrast. quæ Lipoman. recitat tom. 7. & Surius tom. 1."
   }
  ],
+ "mr:0128-ioannes": [
+  {
+   "mark": "i",
+   "after": "præsbyteri",
+   "text": "Ioannis presbyteri. ] De eodem Beda ac ceteri. Scribit Gregorius Turonen. lib. de gloria confess. cap. 23. res gestas cuiusdam Ioannis presbyteri, non Rhemis (vt hic habetur) sed Turoni sepulti; qua ratione alius ille esse videtur ab hoc de quo agimus. De alio Ioanne idem Gregorius Turon. de gloria confess. cap. 87."
+  }
+ ],
  "mr:0128-iulianus": [
   {
    "mark": "h",
    "after": "Episcopi",
    "text": "Iuliani Episcopi. ] Migrauit ex hac vita hac die Anno Domini 1207. claruit sub Innocentio Papa Tertio. Decreto Iulij Tertij Rom. Pontif. translata est eius solemnitas in diem quintam Septembris: Agitur de eodem in Flor. Sanct. Hispan. 28. Ianuarij, & in Thesau. concion."
-  },
-  {
-   "mark": "i",
-   "after": "præsbyteri",
-   "text": "Ioannis presbyteri. ] De eodem Beda ac ceteri. Scribit Gregorius Turonen. lib. de gloria confess. cap. 23. res gestas cuiusdam Ioannis presbyteri, non Rhemis (vt hic habetur) sed Turoni sepulti; qua ratione alius ille esse videtur ab hoc de quo agimus. De alio Ioanne idem Gregorius Turon. de gloria confess. cap. 87."
   }
  ],
  "mr:0128-leonides-et-socii": [
@@ -2828,11 +2844,6 @@
    "mark": "c",
    "after": "monachorum",
    "text": "Sanctorum monachorum.] Iisdem cæsi sunt hi Sarracenorum incursionibus, quarũ mentio habetur in rebus gestis sancti Ioannis Silentiarij, quas refert Metaphrastes die 13. Maij, itemque in vita S. Sabę abb. apud eumdem die 5. Decẽbris, ac in Actis etiam sancti Euthymij abb. quæ idem recitat die 20. Ianuarii: consentiunt iisdem, quæ habentur in prato spirituali c. 21. & 99. Vna eademq; persecutio Sarracenorum sanctos monachos diuersis in locis positos vexauit, diuersisque diebus occidit: vt non mireris, si inferius de monachis cæsis a Sarracenis sæpe agatur. Scias autem, ipsum Sarracenorum principem Alemundarum ad Christi fidem tandem esse conuersum, vt scribit Niceph. hist. lib. 17. cap. 35. histor. Miscel. ex Theophane lib. 15. & alii."
-  },
-  {
-   "mark": "d",
-   "after": "Zambdæ",
-   "text": "Zambda Episcopi.] De eo scribit Euseb. in chron. & hist. lib. 7. cap. vlt. in fine, Epiphanius in panar. hæres. 66. licèt in mendoso codice Baza legatur. De eo item Niceph. Episcopus in chron. de Episc. eccles. Hierosol. & Niceph. Callist. lib. 6. cap. 34. Adscribitur hic trigesimusnonus eius sedis episcopus; successit Hymenæo, seditq. temporibus Dioelctiani Imperatoris."
   }
  ],
  "mr:0219-publius-et-socii": [
@@ -2840,6 +2851,13 @@
    "mark": "b",
    "after": "Publij",
    "text": "Publij & soc.] Agit de his etiam Beda, Vsuardus, & alij recentiores hac die."
+  }
+ ],
+ "mr:0219-zambda": [
+  {
+   "mark": "d",
+   "after": "Zambdæ",
+   "text": "Zambda Episcopi.] De eo scribit Euseb. in chron. & hist. lib. 7. cap. vlt. in fine, Epiphanius in panar. hæres. 66. licèt in mendoso codice Baza legatur. De eo item Niceph. Episcopus in chron. de Episc. eccles. Hierosol. & Niceph. Callist. lib. 6. cap. 34. Adscribitur hic trigesimusnonus eius sedis episcopus; successit Hymenæo, seditq. temporibus Dioelctiani Imperatoris."
   }
  ],
  "mr:0220-eleutherius-constantinopoli": [
@@ -3304,11 +3322,6 @@
    "mark": "g",
    "after": "Albîni",
    "text": "Albini Episcopi.] De ipso etiam Beda, & Vsuardus. Scripsit eius vitã Fortunatus presbyter, vt testatur Greg. Turon. de glor. confess. c. 96. vbi de sanctis Albino atque Martino agit; recenset eam Surius to. 2. Reperitur hic interfuisse Concilio Aurelianensi tertio, habito anno 26. Childeberti Regis Francorum, anno a Christo (secundum Fastos Onuphrij) 540. Hinc errare conuincitur Trithem. de vir illustr. ordinis sancti Benedicti lib. 3. c. 103. dum ait, eũ vixisse anno Domini 720. Alius hoc vetustior fuit sanctus Albinus, cui sanctus Maximus Episcopus Regiẽsis erexit basilicam, vt scribit Dinamius in vita sancti Maximi: est fortasse ille sanctitate celebris Episcopus Catalaunensis, discipulus S. Lupi Trecensis Episcopi, de quo habetur mentio in Actis eiusdẽ sancti Lupi in fine, apud Sur. tom. 4. die 29. Iulij. Alius insuper fuit S. Albinus Episcopus Lugdunensis, de quo inferius xvij. kalend. Octob."
-  },
-  {
-   "mark": "h",
-   "after": "Siuiardi",
-   "text": "Siutardi abb.] Huius Acta recitat Surius tom. 2. Claruit tẽporibus Theodorici Regis Francorum, cuius regni anno octauo ex hac vita migrauit."
   }
  ],
  "mr:0301-antonina": [
@@ -3346,6 +3359,13 @@
    "text": "Leonis, Datini & soc.] Restituti sunt ijdem ex dicto vetusto Martyrologio monasterij sancti Cyriaci."
   }
  ],
+ "mr:0301-siviardus": [
+  {
+   "mark": "h",
+   "after": "Siuiardi",
+   "text": "Siutardi abb.] Huius Acta recitat Surius tom. 2. Claruit tẽporibus Theodorici Regis Francorum, cuius regni anno octauo ex hac vita migrauit."
+  }
+ ],
  "mr:0301-suitbertus": [
   {
    "mark": "f",
@@ -3376,11 +3396,6 @@
  ],
  "mr:0302-lucius-et-socii": [
   {
-   "mark": "c",
-   "after": "Pauli",
-   "text": "Pauli & Heraclij.] Beda de Paulo tantũ agit; & Heraclium omittit, sed restituitur ex dictis vet. manuscrip."
-  },
-  {
    "mark": "d",
    "after": "Lucij",
    "text": "Lucij & soc.] Beda legit Lucam, pro Lucio; ponitq. seorsum socios, nominibusq. eorum deprauatis: sed vt sic poneretur vetusta vetusta dicta exemplaria monuerunt."
@@ -3403,6 +3418,13 @@
    "mark": "f",
    "after": "Longobardis",
    "text": "A Longobardis sæuissine cæsi.] Obtinuit vsus, vt Longobardi pro Langobardis dicantur: Langobardos enim a maioribus esse dictos, complurium auctoritate probatur: sic appellat eos Cornel. Tacit. lib. 2. Annal. & lib. de morib. German. Velleius Paterculus itidem in hist. lib. poster. pag. 131. nostrorum autem S. Prosper in chron. sub Consulatu Ausonij & Olybrij, sic & Paul. diac. de gest. Longob. sed in his non immoror. Quod autem ad Longobardorum Christianitatem pertinet, Procopius clarissimus historicus, qui vixit temporibus Iustiniani Imp. lib. 2. de bello Gothico, cùm agit de Lõgobardis, eos non Gentiles fuisse & idololatras, sed Christianæ fidei professores, absq. dubietate testatur. Quo autem tempore ad fidẽ Christianam venerint, nulla quidem apud Paulũ diaconum, qui eorum gesta est prosecutus, reperitur mentio. Ex his autem, quæ in dialogis Gregorius Papa scribit, colligitur, Longobardorum alios fuisse idololatras, vt hi de quibus hic agitur, quos caput capræ immolasse auctor est idem S. Gregor. dialog. lib. 3. cap. 28. (Baccho enim hircos Gentiles consueuisse immolare, testatur Varro lib. 1. de re rustic. redditq. causam. Auctor etiam est Minucius Felix in Octauio, consueuisse Gentiles immolare atque colere caput veruecis. Greg. Papa lib. 7. epist. 5. ad Brunichildem Reginam Francorum scribens conqueritur adhuc superesse in Gallijs qui animaliũ capita immolarẽt.) Alios Christianos fuisse, sed Arianos, constat ex his quæ idem narrat lib. 3. dialog. cap. 29. & in regist. lib. 2. epist. 2. Alios autem Christianos Catholicos extitisse, colligitur ex lib. 3. regist. epist. 2. & 4."
+  }
+ ],
+ "mr:0302-paulus-et-socii": [
+  {
+   "mark": "c",
+   "after": "Pauli",
+   "text": "Pauli & Heraclij.] Beda de Paulo tantũ agit; & Heraclium omittit, sed restituitur ex dictis vet. manuscrip."
   }
  ],
  "mr:0302-simplicius": [
@@ -3492,7 +3514,9 @@
    "mark": "b",
    "after": "Lucij",
    "text": "Lucij Papæ.] Agunt de eodẽ hac die Beda, Vsuardus, Ado & alij. De huius successione Euseb. in chrõ & hist. l. 7 c. 2. Optat. lib. 2. cõtra Parmen. & August. epist. 165. Extat ad Lucium Papam epist. Cypriani, tanto viro digna, 58. edit. Pam. Eiusdem meminit scribens ad Stephanum Rom. Pont. epist. 67. Huius exiliũ contigit sub Gallo & Volusiano Imperatoribus; sub quibus item, cùm postliminio reuersus esset, martyrij coronã accepit, Valeriano & Gallieno Consulibus. De his pluribus disseruimus in Annalibus. Cur autem hic ponatur S. Lucius ista passus in persecutione Valeriani, vide quæ diximus in ijsdem Annalibus, & infra 10. Augusti."
-  },
+  }
+ ],
+ "mr:0304-nongenti-martyres-romae": [
   {
    "mark": "c",
    "after": "nongentorum",
@@ -3787,11 +3811,6 @@
  ],
  "mr:0311-candidus-et-socii": [
   {
-   "mark": "a",
-   "after": "Zosimi",
-   "text": "HERACLII, & Zosimi.] Agit de his Beda hac die, additq. Alexandrum. Petrus in catal. lib. 3. c. 191. Hiradũ pro Heraclio legit, additq. tres alios martyres: sed seorsũ eos esse ponẽdos, docęt antiqua manuscr."
-  },
-  {
    "mark": "b",
    "after": "Candidi",
    "text": "Candidi, & Piperionis.] De his item Petrus in catal. lib. 3. cap. 191. vna cum prædictis, aliiq. recentiores."
@@ -3830,6 +3849,13 @@
    "mark": "e",
    "after": "Gorgonij",
    "text": "Gorgonij, & Firmi.] De his etiam Vsuardus in 2 edit. Molani consentiũtq. manuscr."
+  }
+ ],
+ "mr:0311-heraclius-et-zosimus": [
+  {
+   "mark": "a",
+   "after": "Zosimi",
+   "text": "HERACLII, & Zosimi.] Agit de his Beda hac die, additq. Alexandrum. Petrus in catal. lib. 3. c. 191. Hiradũ pro Heraclio legit, additq. tres alios martyres: sed seorsũ eos esse ponẽdos, docęt antiqua manuscr."
   }
  ],
  "mr:0311-martyres-antiochiae": [
@@ -4099,7 +4125,16 @@
    "mark": "c",
    "after": "Episcopi",
    "text": "Hilarij, & Tatiani] Agit de his item hac die Vsuardus, Petrus in catal. lib. 3. c. 203. & hist. ecclesiæ Aquileien. lib. 2."
-  },
+  }
+ ],
+ "mr:0316-iulianus": [
+  {
+   "mark": "f",
+   "after": "Iuliani",
+   "text": "Iuliani.] Græci etiam de eo hac die in Menologio, vbi & certamen eius describitur."
+  }
+ ],
+ "mr:0316-papa": [
   {
    "mark": "d",
    "after": "Papæ",
@@ -4109,13 +4144,6 @@
    "mark": "e",
    "after": "ferreis",
    "text": "Vngulis ferreis.] Erant Vngulæ bisulcæ; sic Prudentius eas frequenter appellat, vt Perist. hym. 1. *Illa virgas & secures, / Et bisulcas vngulas / Vltro fortis expectabat.* Idemq. hymno 5. *Ille vngularum duplices / Sulcos pererrat osculis.* Et hymno 10. Castas bisulcis exarandas vngulis. Dictæ sunt autem Vngulæ, quod ea instrumenta ferarum imitarentur vestigia; quarum cùm referrent exemplum, eodem etiam dicta nomine inuenies l. 1. C. de emendatione seruorum: Ferarum, inquit, vnguibus latera persecando. sed in Cod. Theod. eod. tit. sic: Ferarum vestigijs latera persecando."
-  }
- ],
- "mr:0316-iulianus": [
-  {
-   "mark": "f",
-   "after": "Iuliani",
-   "text": "Iuliani.] Græci etiam de eo hac die in Menologio, vbi & certamen eius describitur."
   }
  ],
  "mr:0316-patricius": [
@@ -4249,16 +4277,6 @@
    "mark": "a",
    "after": "Ioseph",
    "text": "IOSEPH.] De eo hac die Ado & alii, Græci autem 26. Decembris in Menologio. Huius res gestas non ab aliis,. quam a testibus præordinatis a Deo, ab ipsis, inquam, sanctis Euangelistis conscribi meruerunt. Omittimus hic de sanctissimo viro innumera sanctorũ Patrum elogia, silemus & miracula recensere. De eius ætate, virginitate, & obitu pluribus disseruimus in Annalibus Eccles. Erat eius nobile sepulchrum in valle Iosaphat, prope tomulum S. Simeonis senis, vt legitur apud Bedam lib. de locis sanctis c. 6. Sancti Ioseph vita ex diuersis auctoribus collecta habetur in thesaur. concion. tom. 2. Isidorus Isolanus scripsit de donis S. Ioseph commentariũ ad Hadrianum Sextum Rom. Pont. Extat de eodem carmen Bonad. lib. 3. monod. 16."
-  },
-  {
-   "mark": "b",
-   "after": "Quincti",
-   "text": "Quincti & soc.] Beda, Vsuardus, Ado, & alij de iisdem hac die agunt."
-  },
-  {
-   "mark": "c",
-   "after": "Pancharij",
-   "text": "Pancharij.] Græci etiam hac die in Menologio agunt de eodem."
   }
  ],
  "mr:0319-landoaldus-et-amantius": [
@@ -4266,6 +4284,20 @@
    "mark": "e",
    "after": "Landoaldi",
    "text": "Landoaldi & Amantij.] Scripsit horum res gestas Nodgerus Episcopus Leodiensis, quas habet Sur. tom. 2. Plura Molanus in indic. SS. Belgij."
+  }
+ ],
+ "mr:0319-pancharius": [
+  {
+   "mark": "c",
+   "after": "Pancharij",
+   "text": "Pancharij.] Græci etiam hac die in Menologio agunt de eodem."
+  }
+ ],
+ "mr:0319-quinctus-et-socii": [
+  {
+   "mark": "b",
+   "after": "Quincti",
+   "text": "Quincti & soc.] Beda, Vsuardus, Ado, & alij de iisdem hac die agunt."
   }
  ],
  "mr:0320-alexandra-et-socii": [
@@ -4340,11 +4372,6 @@
  ],
  "mr:0321-birillus": [
   {
-   "mark": "c",
-   "after": "Philemŏnis",
-   "text": "Philemonis & Domnini. ] De his item Græci hac die in Menologio agunt."
-  },
-  {
    "mark": "d",
    "after": "Birilli",
    "text": "Birilli Episc. ] Græci etiam de eo hac die in Menolog. Diuersus plane hic Birillus a Berillo, de quo agit S. Hieronym. de script. Eccles. quem vixisse dicit temporibus Alexandri Imp. & successorum eius."
@@ -4362,6 +4389,13 @@
    "mark": "b",
    "after": "martyrum",
    "text": "Sanctorum Martyrum.] Scribit de his sanctus Athanasius epistolâ ad Orthodoxos oẽs, quo cunctis innotesceret Catholicorum constantia, & Arianorum sæuitia: agit & de his in apologia secunda: Socrates etiam lib. 2. cap. 8. Sozom. lib. 3. cap. 5. Theodoret. lib. 2. cap. 4. Cæsi sunt hi Constantio tertiũ & Cõstante secundum Conss. anno a Christo Domino (iuxta Fastos Onuphrij) trecentesimo quadragesimosecundo."
+  }
+ ],
+ "mr:0321-philemon-et-domninus": [
+  {
+   "mark": "c",
+   "after": "Philemŏnis",
+   "text": "Philemonis & Domnini. ] De his item Græci hac die in Menologio agunt."
   }
  ],
  "mr:0321-serapion": [
@@ -5087,7 +5121,9 @@
    "mark": "c",
    "after": "est",
    "text": "Tota fere Italia ad Catholicam fidem conuersa est.] Habêt Beda, Vsuardus, Ado, & alij, totam Italiam studio sancti Ambrosij ad fidem Catholicam esse conuersam. Scias autem hæc verba non aliunde mutuata, quam a S. Hieronymo, qui dum in chronico, anno vndecimo Valentiniani Imp. agit de obitu Auxentij & electione S. Ambrosij, hæc ait: Post Auxentij seram mortẽ, Mediolani Ambrosio constituto, omnis ad fidem rectam Italiam conuertitur. Hæc Hieronymus: quæ (si consulas historiæ veritatẽ) intelliges hyperbolice dicta esse, vt interdum fieri solet. Nam Damaso Papa sedente, ceteræ partes Italiæ, excepta Gallia Cisalpina, vbi Auxentius vixerat, & Iustina Augusta Arianorum patrona hæresim illam fouebat, Catholicam fidem, Nicænumq. ipsum symbolum profitentes pacifice agebant. Iampridem enim ex eo tempore, quo Constantius Imperatore vita excesserat (vt idem ipse testatur Hieronymus contra Luciferianos) Catholici Episcopi ab exilio reuocati fuerunt, quando & S. Eusebio Episcopo Vercellensi, restituta fide Catholica, redeunte, in eius aduentu Italia (vt ait idem Hieronymus) lugubres vestes mutauit. Tunc etiã (vt idem auctor testatur) Episcopi Occidentales, qui in Conciliabulo Ariminensi lapsi fuerant, perpetrati erroris statim pœnitentes, vna cum fide Catholica, etiam sedes, indulgente Romano Pontifice, receperunt: nec alicubi sub Catholico Principe Valentiniano in Occidentali Ecclesia vexatio contigit, præterquam in Gallia Cisalpina, vbi Iustina Auxentio ceterisq. Arianis ibi degentibus quibus poterat studijs fauebat; sed defuncto Auxentio, Ambrosius creatus Episcopus illi fortiter restitit, mulierisq. insaniã pastorali zelo coercuit, ac denique collapsam Catholicam fidem ibidem, vel in finitimis locis restituit: sicq. intelligas Hieronymi verba, vt dicere velit, opera Ambrosij actum esse, vt sic tota Italia ad Catholicam fidem conuersa diceretur, quod pars illa, quæ remanserat ab hæreticis occupata, ab eo restituta, nulla iam ex parte esset hæretica."
-  },
+  }
+ ],
+ "mr:0404-isidorus": [
   {
    "mark": "d",
    "after": "Isidôri",
@@ -5401,11 +5437,6 @@
    "mark": "c",
    "after": "Apollonij",
    "text": "Apollonij & sociorum.] Vsuardus de his item hac die. Petrus in catalogo lib. 4. c. 44. Habentur horum res gestæ in Vit. Patrum parte 1. cap. 19."
-  },
-  {
-   "mark": "d",
-   "after": "Terentij",
-   "text": "Terenty & sociorum] Græci etiam de his agunt hac die in Menologio; quorum Acta recitat Metaphrastes, ex quo Lipoman. tomo 7. & Sur. tomo 2. Scribit Theodor. lector in collectaneis lib. 2. horum sãctorum martyrum reliquias translatas esse Cõstantinopolim x. Kalen. Octobr. Theodosio Minore imperante."
   }
  ],
  "mr:0410-ezechiel-propheta": [
@@ -5427,6 +5458,13 @@
    "mark": "b",
    "after": "plurimorum",
    "text": "Plurimorum sanctorum martyrum.] De his item Beda, Vsuardus, Ado, & alij; omnesq; ex Actis sancti Alexandri Papæ, quæ extant ex antiquis monumentis apud Sur. tom. 3. die 3. Maij. Habemus eadem manuscripta."
+  }
+ ],
+ "mr:0410-terentius-et-socii": [
+  {
+   "mark": "d",
+   "after": "Terentij",
+   "text": "Terenty & sociorum] Græci etiam de his agunt hac die in Menologio; quorum Acta recitat Metaphrastes, ex quo Lipoman. tomo 7. & Sur. tomo 2. Scribit Theodor. lector in collectaneis lib. 2. horum sãctorum martyrum reliquias translatas esse Cõstantinopolim x. Kalen. Octobr. Theodosio Minore imperante."
   }
  ],
  "mr:0411-antipa": [
@@ -5586,11 +5624,6 @@
    "mark": "c",
    "after": "Domnînæ",
    "text": "Domninæ.] De eadem ijdem qui supra, Beda, & alij. Habentur eius Acta iuncta simul cum rebus gestis sancti Proculi, de quo modo egimus."
-  },
-  {
-   "mark": "d",
-   "after": "Thomaĭdis",
-   "text": "Thomaidis.] Agunt de eadem hac item die Gręci in Menologio; plura de ea in Actis S. Febroniæ."
   }
  ],
  "mr:0414-fronto": [
@@ -5612,6 +5645,13 @@
    "mark": "b",
    "after": "Procŭli",
    "text": "Proculi Episc.] De eodem etiam Beda, Vsuardus, Ado, & alij hac die. Diuersus hic videtur ab illo Proculo, de quo supra xvj. kalend. Martij, de quo in rebus gestis sancti Valentini mart. Episcopi Interamnen. Extant apud Sur. to. 1. 14. Februar. De hoc autem vide Petrum in catal. lib. 1. c. 15, vbi ponitur passus sub Totila, quod si verum est, duos Valentinos Episcopos Interamnenses, duos itidem Proculos dare oportet: nam alter Valentinus passus reperitur temporibus Gẽtilium Imperatorum, vt ex eius Actis constat, in quibus de Proculo & socijs mentio habetur."
+  }
+ ],
+ "mr:0414-thomais": [
+  {
+   "mark": "d",
+   "after": "Thomaĭdis",
+   "text": "Thomaidis.] Agunt de eadem hac item die Gręci in Menologio; plura de ea in Actis S. Febroniæ."
   }
  ],
  "mr:0414-tiburtius-et-socii": [
@@ -5738,6 +5778,13 @@
    "text": "ANICETI Papæ. ] De eo item hac die Beda, Vsuardus, Ado, & alij. De eius successione Irenæus lib. 3. cap 3. Optat. lib. 2. contra Parmen. Epiph. in panar. hæres. 27. Euseb in chron. & hist. lib. 4. c. 13. & 21. August. epist. 165. Niceph. in chron. & alij recentiores. Cetera de ipso in Annal. Eccles. diximus."
   }
  ],
+ "mr:0417-elias-et-socii": [
+  {
+   "mark": "e",
+   "after": "Elię",
+   "text": "Elia & soc. ] De his agit hac die Vsuar. Scribit horum martyrium S. Eulogius lib. 3. in memor. sanct. c. 15. vbi hac die hos passos affirmat, æra octingentesima nonagesima quarta, a Christo autem anno octingentesimo quinquagesimosexto. Vnde miror cur Vasæus hos adnumeret inter martyres passos in persecutione Diocletiani."
+  }
+ ],
  "mr:0417-fortunatus-et-marcianus": [
   {
    "mark": "c",
@@ -5771,11 +5818,6 @@
    "mark": "d",
    "after": "diaconi",
    "text": "Petri & Hermogenis. ] Beda etiã, Vsuar. & Ado hac die de ijsdem."
-  },
-  {
-   "mark": "e",
-   "after": "Elię",
-   "text": "Elia & soc. ] De his agit hac die Vsuar. Scribit horum martyrium S. Eulogius lib. 3. in memor. sanct. c. 15. vbi hac die hos passos affirmat, æra octingentesima nonagesima quarta, a Christo autem anno octingentesimo quinquagesimosexto. Vnde miror cur Vasæus hos adnumeret inter martyres passos in persecutione Diocletiani."
   }
  ],
  "mr:0417-stephanus-harding": [
@@ -6186,16 +6228,18 @@
    "text": "Euodij, & soc.] De his item hac die Vsuardus, Maurolycus, & alij recentiores."
   }
  ],
+ "mr:0425-litaniae-maiores": [
+  {
+   "mark": "b",
+   "after": "Litaniæ",
+   "text": "Litaniæ maiores.] De his itẽ Beda, Vsuardus, Ado, & alij Latinorum; quorum nonnulli cum dicant institutas a S. Gregorio, sic intelligas, non vt ipsas maiores Litanias sanctus Gregorius Primus inuenerit, sed quod ad S. Petrum eas indixit. Extat decretum eiusdem Pontificis de Litaniarum maiorum annua celebritate in princ. lib. 2. registri his verbis: Solemnitas annuæ deuotionis nos, fratres dilectissimi, admonet, vt Litaniam, quæ Maior ab omnibus appellatur, solicitis ac deuotis debeamus(auxiliante Deo) mentibus celebrare, &c. Idem S. Pontifex occasione ingruentis pestilentiæ illam Litaniam instituit, quam septiformem appellauit. Extat de ea re eius constitutio data 4. Kalen. Septemb. lib. 11. cap. 2. cuius etiam meminit Greg. Turonen. de gest. Franc. lib. 10. cap.1. Paul. diac. de gestis Longobard. lib. 3. c. 11. & alij. Idem S. Gregorius, vrgente aliqua necessitate, non tantum Romanis, sed etiam externis Litanias indicebat, vt apparet ex libro 9. regist. epist. 45. Indict. 4. Cur autem hæ, de quibus hic agimus, Litaniæ maiores dictæ fuerint: constat ad minorum Litaniarum differentiam sic appellatas esse. Non enim vnæ tantum in anno, sed plures solitæ erant fieri Litaniæ pro consuetudine cuiusq; ecclesiæ, vt apparet ex epist. S. Gregor. 76. lib. 7. Indict. 2. ad Castorium, vbi habetur mentio de quatuor vel quinque solemnibus Litanijs in Rauennate ecclesia celebrari solitis. A quo autem Litaniæ primum fuerint institutæ, adhuc mihi est inexploratum: vetustissimum sane morẽ fuisse in Ecclesia Litanias peragere, certissimum est. nam quod spectat ad Ecclesiam Orientalem, S. Basilius in epist.63. ad Neocæsarienses tradit, in ea ecclesia in vsu fuisse Litanias etiam temporibus S. Gregorij cognomento Thaumaturgi, eius ciuitatis Episcopi, qui vixit temporibus Decij Imperatoris; quas postmodum in ceteris Orientis ecclesijs cõstat fuisse frequentatas, adeo vt eas solemniori pompa etiam Ariani fuerint æmulati, vt scribit Socrat. lib. 6. cap. 8. & Sozom. lib. 8. cap 8. quas tamen Arcadius Imp. edicto promulgato illis inhibuit, l. 30. de hæretic. Cod. Theod. Litaniæ etiam reperiuntur dictæ Processiones c. 17. Concilij Laodic. edit. 2. Constat autem penes Latinos vetustiorem fuisse vsum procedendi ad loca martyrũ, vt Tertul. lib. 2. ad vxorem, & Hieron. in epist. 22. ad Eustoch. Easdem itaque siue Litanias, siue Processiones dicere velimus, vnusquisque Episcopus in suis ecclesijs studiose agere consueuit. vnde de S. Honorato Episcopo Massiliensi hæc pro magna laude Gennadius cap. 99. Hic Litanias ad supplicandũ Dei clementiam cum plebe sibi credita pro viribus agit. Hæc ille. Porro percelebres, & ab vniuersa pene Ecclesia receptæ sunt illæ, quas S. Mamertus Episcopus Viennensis restituit in Gallijs, temporibus Valentiniani III. Imp. anno circiter 452. vt scribit Ado Episcopus Viennen. in chron. quæ & Rogationes appellatæ sunt: cuius piæ institutionis occasionem scribit in sermone quodã Alcimus Auitus eiusdem ecclesiæ Episcopus, successorq. Esichij, quem præcessit S. Mamertus. Extat præterea de ijsdem epistola Sidonij Apollinaris ad eũdẽ S. Mamertum scripta lib. 7. epistol. 1. alia ad Aprum 14. lib. 5. vbi (vt mittamus cetera) hæc inter alia de pristina Litaniarum obseruatione iam negligentia torpescente: Erant, inquit, quidem prius (quod salua fidei pace dictum sit) vagæ, tepentes, infrequentesq. & (vt sic dixerim) obscitabundæ supplicationes; quæ semper interpellantium prandiorũ obicibus hebetabantur: ad quas, vt nihil amplius dicam, figulo pariter & hortulano non oportuit conuenire In his autem, quas suprafatus summus sacerdos & protulit pariter & contulit, ieiunatur, oratur, psallitur, & fletur, &c. Hæc Sidonius. Ex his quidem Sidonij verbis apparet, S. Mamertum Episcopum non tam instituisse, quam restituisse, & in meliorem formam reduxisse sacras Rogationes. Sane quidem S. Augustinus, qui tempore præcessit S. Mamertum, de ijsdem Rogationibus, quæ præcedunt celebritatem Ascensionis Dominicæ, non obscure meminit nit serm. 173. de temp. in vigilia Ascens. tomo 10. pag. 338. edit. Louanien. Est eius exordium huiusmodi; Scire debemus & intelligere fratres carissimi, quia dies cõpunctionis & pœnitentiæ celebramus, &c. Circa finem autem sic: Nullus sibi de industria aliquas occupationes inquirat, per quas se de Ecclesiæ cõuẽtu subducat. Sine dubio peccatorum suorum vulnera diligit, qui in istis tribus diebus, ieiunando, orando, & psallendo, medicamenta sibi spiritualia nõ inquirit, &c. Quibus quidem eumdem de sacris Rogationibus verba facere, nullum est dubium. Extat de Rogationibus canon. 29. primi Cõcilij Aurelianensis, item cap. Rogationes. de consecrat. distinct. 3. & in Capitular. Franc. lib. 5. cap. 85. De ijsdem Cæsarius Episcopus Arelat. homil. 33. hæc habet: Tribus istis diebus, quos regulariter in toto mũdo celebrat Ecclesia, nullus se a sancto conuentu subducat, &c. Reliqua autem de Rogationibus vide apud eos qui scripserunt de diuin. offic. Aliæ Insuper Rogationes ab his sunt, quas instituit S. Gallus Episcopus Aruernensis, quæ media Quadragesima agi solitæ erant; de quibus Gregorius Turon. lib. 4. cap. 5. Celebrabantur olim in ecclesia Gallicana etiã Litaniæ noni mensis, de quibus agitur in Concilio primo Lugdun. c. 6."
+  }
+ ],
  "mr:0425-marcus-evangelista": [
   {
    "mark": "a",
    "after": "Marci",
    "text": "MARCI Euangelistæ.] De eodem hac die Beda, ac ceteri omnes Latinorum, ac Græcorum, qui eumdem etiam martyrem dicunt, describuntq. eius passionis Acta in Menologio. Agit de eo item Eusebius hist. lib. 2. cap. 14. 15. & lib.3. cap. vlt. Hieronymus de scrip. Ecclesiasticis, Isidorus de vit. & obitu sanctorum: quorum cum nullus dicat eum occubuisse martyrio, ab aliquibus dubitatum fuit, an re vera martyrium consummarit. At Gelasius, cuius præcipua est in Ecclesia Dei auctoritas, de eius martyrio expresse testatur, cum ait: Marcus a Petro Apostolo in Aegyptum directus, verbum veritatis prædicauit, & gloriose consummauit martyrium. Hæc Gelasius in Rom. Concil. in decret. de lib. authent. & apochryph. Hoc ipsum Niceph. hist. lib.2 cap. 43. Metaphrastes hac die, Procopius diaconus in encomio de eodem, quod recitat Lipom. tom.7. & Sur. tom. 2. Cetera autem de S. Marco, an idem sit cum consobrino Barnabæ, qui Ioannes Marcus dictus est, & an Latine vel Græce Euangelium scripserit, quoniam non sunt huiusmodi, quæ paucis absolui queant, satis de his disseruisse sufficiat in nostris Annalibus Ecclesiast. vbi & de alijs quæ ad Marcum pertinent, pluribus egimus."
-  },
-  {
-   "mark": "b",
-   "after": "Litaniæ",
-   "text": "Litaniæ maiores.] De his itẽ Beda, Vsuardus, Ado, & alij Latinorum; quorum nonnulli cum dicant institutas a S. Gregorio, sic intelligas, non vt ipsas maiores Litanias sanctus Gregorius Primus inuenerit, sed quod ad S. Petrum eas indixit. Extat decretum eiusdem Pontificis de Litaniarum maiorum annua celebritate in princ. lib. 2. registri his verbis: Solemnitas annuæ deuotionis nos, fratres dilectissimi, admonet, vt Litaniam, quæ Maior ab omnibus appellatur, solicitis ac deuotis debeamus(auxiliante Deo) mentibus celebrare, &c. Idem S. Pontifex occasione ingruentis pestilentiæ illam Litaniam instituit, quam septiformem appellauit. Extat de ea re eius constitutio data 4. Kalen. Septemb. lib. 11. cap. 2. cuius etiam meminit Greg. Turonen. de gest. Franc. lib. 10. cap.1. Paul. diac. de gestis Longobard. lib. 3. c. 11. & alij. Idem S. Gregorius, vrgente aliqua necessitate, non tantum Romanis, sed etiam externis Litanias indicebat, vt apparet ex libro 9. regist. epist. 45. Indict. 4. Cur autem hæ, de quibus hic agimus, Litaniæ maiores dictæ fuerint: constat ad minorum Litaniarum differentiam sic appellatas esse. Non enim vnæ tantum in anno, sed plures solitæ erant fieri Litaniæ pro consuetudine cuiusq; ecclesiæ, vt apparet ex epist. S. Gregor. 76. lib. 7. Indict. 2. ad Castorium, vbi habetur mentio de quatuor vel quinque solemnibus Litanijs in Rauennate ecclesia celebrari solitis. A quo autem Litaniæ primum fuerint institutæ, adhuc mihi est inexploratum: vetustissimum sane morẽ fuisse in Ecclesia Litanias peragere, certissimum est. nam quod spectat ad Ecclesiam Orientalem, S. Basilius in epist.63. ad Neocæsarienses tradit, in ea ecclesia in vsu fuisse Litanias etiam temporibus S. Gregorij cognomento Thaumaturgi, eius ciuitatis Episcopi, qui vixit temporibus Decij Imperatoris; quas postmodum in ceteris Orientis ecclesijs cõstat fuisse frequentatas, adeo vt eas solemniori pompa etiam Ariani fuerint æmulati, vt scribit Socrat. lib. 6. cap. 8. & Sozom. lib. 8. cap 8. quas tamen Arcadius Imp. edicto promulgato illis inhibuit, l. 30. de hæretic. Cod. Theod. Litaniæ etiam reperiuntur dictæ Processiones c. 17. Concilij Laodic. edit. 2. Constat autem penes Latinos vetustiorem fuisse vsum procedendi ad loca martyrũ, vt Tertul. lib. 2. ad vxorem, & Hieron. in epist. 22. ad Eustoch. Easdem itaque siue Litanias, siue Processiones dicere velimus, vnusquisque Episcopus in suis ecclesijs studiose agere consueuit. vnde de S. Honorato Episcopo Massiliensi hæc pro magna laude Gennadius cap. 99. Hic Litanias ad supplicandũ Dei clementiam cum plebe sibi credita pro viribus agit. Hæc ille. Porro percelebres, & ab vniuersa pene Ecclesia receptæ sunt illæ, quas S. Mamertus Episcopus Viennensis restituit in Gallijs, temporibus Valentiniani III. Imp. anno circiter 452. vt scribit Ado Episcopus Viennen. in chron. quæ & Rogationes appellatæ sunt: cuius piæ institutionis occasionem scribit in sermone quodã Alcimus Auitus eiusdem ecclesiæ Episcopus, successorq. Esichij, quem præcessit S. Mamertus. Extat præterea de ijsdem epistola Sidonij Apollinaris ad eũdẽ S. Mamertum scripta lib. 7. epistol. 1. alia ad Aprum 14. lib. 5. vbi (vt mittamus cetera) hæc inter alia de pristina Litaniarum obseruatione iam negligentia torpescente: Erant, inquit, quidem prius (quod salua fidei pace dictum sit) vagæ, tepentes, infrequentesq. & (vt sic dixerim) obscitabundæ supplicationes; quæ semper interpellantium prandiorũ obicibus hebetabantur: ad quas, vt nihil amplius dicam, figulo pariter & hortulano non oportuit conuenire In his autem, quas suprafatus summus sacerdos & protulit pariter & contulit, ieiunatur, oratur, psallitur, & fletur, &c. Hæc Sidonius. Ex his quidem Sidonij verbis apparet, S. Mamertum Episcopum non tam instituisse, quam restituisse, & in meliorem formam reduxisse sacras Rogationes. Sane quidem S. Augustinus, qui tempore præcessit S. Mamertum, de ijsdem Rogationibus, quæ præcedunt celebritatem Ascensionis Dominicæ, non obscure meminit nit serm. 173. de temp. in vigilia Ascens. tomo 10. pag. 338. edit. Louanien. Est eius exordium huiusmodi; Scire debemus & intelligere fratres carissimi, quia dies cõpunctionis & pœnitentiæ celebramus, &c. Circa finem autem sic: Nullus sibi de industria aliquas occupationes inquirat, per quas se de Ecclesiæ cõuẽtu subducat. Sine dubio peccatorum suorum vulnera diligit, qui in istis tribus diebus, ieiunando, orando, & psallendo, medicamenta sibi spiritualia nõ inquirit, &c. Quibus quidem eumdem de sacris Rogationibus verba facere, nullum est dubium. Extat de Rogationibus canon. 29. primi Cõcilij Aurelianensis, item cap. Rogationes. de consecrat. distinct. 3. & in Capitular. Franc. lib. 5. cap. 85. De ijsdem Cæsarius Episcopus Arelat. homil. 33. hæc habet: Tribus istis diebus, quos regulariter in toto mũdo celebrat Ecclesia, nullus se a sancto conuentu subducat, &c. Reliqua autem de Rogationibus vide apud eos qui scripserunt de diuin. offic. Aliæ Insuper Rogationes ab his sunt, quas instituit S. Gallus Episcopus Aruernensis, quæ media Quadragesima agi solitæ erant; de quibus Gregorius Turon. lib. 4. cap. 5. Celebrabantur olim in ecclesia Gallicana etiã Litaniæ noni mensis, de quibus agitur in Concilio primo Lugdun. c. 6."
   }
  ],
  "mr:0425-philo-et-agathopus": [
@@ -6670,6 +6714,13 @@
    "text": "Antoniæ.] De ea Beda, Vsuardus, Ado, & alij, Græci autem in Menologio pridie Id Iunij. Diuersa hæc est ab Antonina, de qua ijdem agunt pridie huius diei."
   }
  ],
+ "mr:0504-curcodomus": [
+  {
+   "mark": "n",
+   "after": "Curcodômi",
+   "text": "Curcodomi.] De eo etiam Vsuardus hac die. De eius miraculis agit Constantius in vita sancti Germani Episcopi Antisiod. lib. 1. cap. 16."
+  }
+ ],
  "mr:0504-cyriacus": [
   {
    "mark": "c",
@@ -6727,11 +6778,6 @@
    "mark": "m",
    "after": "Sacerdôtis",
    "text": "Sacerdotis Episcopi.] De quo etiam Molanus in addit.ad Vsuardum. Successit hic Agerrico, numeraturq. trigesimus Lemouicensis Episcopus in tab. Democharis, claruitq. circa annum Domini quingentesimũ decimumquintum."
-  },
-  {
-   "mark": "n",
-   "after": "Curcodômi",
-   "text": "Curcodomi.] De eo etiam Vsuardus hac die. De eius miraculis agit Constantius in vita sancti Germani Episcopi Antisiod. lib. 1. cap. 16."
   }
  ],
  "mr:0504-silvanus-et-socii": [
@@ -6811,6 +6857,13 @@
    "text": "Maximi Episc.] Græci itidẽ. De eo Sozom. hist. lib. 2. cap. 19. & lib. 3. cap. 20. 21. Theodoretus lib. 2. cap. 27, Hieronymus in chron. Nicephorus, lib. 11. cap. 26. & Nicephorus Episcopus in chronic. Hic est tertius eiusdem nominis Episcopus Hierosolymitanus: nam primus Publio, secundus Capitoni, hic autem successit Macario: sedit temporibus Constantij, cuius Imperatoris anno decimoquinto moritur."
   }
  ],
+ "mr:0505-nicetius": [
+  {
+   "mark": "k",
+   "after": "Nicetij",
+   "text": "Nicetij Episc.] De eodem hac die Vsuardus, Ado, & alij. Nicetum hunc appellat Ado in chron. an. 379. Hic interfuit Concilio Valentino in Gallijs celebrato, Gratiano tertium, & Equitio Conss. anno Domini trecentesimo septuagesimoquinto : numeratur hic decimusquartus eius sedis Episcopus in tab. Democharis."
+  }
+ ],
  "mr:0505-sacerdos-sagunti": [
   {
    "mark": "m",
@@ -6826,11 +6879,6 @@
   }
  ],
  "mr:0505-theodorus": [
-  {
-   "mark": "k",
-   "after": "Nicetij",
-   "text": "Nicetij Episc.] De eodem hac die Vsuardus, Ado, & alij. Nicetum hunc appellat Ado in chron. an. 379. Hic interfuit Concilio Valentino in Gallijs celebrato, Gratiano tertium, & Equitio Conss. anno Domini trecentesimo septuagesimoquinto : numeratur hic decimusquartus eius sedis Episcopus in tab. Democharis."
-  },
   {
    "mark": "l",
    "after": "Theodôri",
@@ -7653,6 +7701,13 @@
    "text": "PVDENTIANAE.] De ea item hac die Beda, Vsuardus, Ado, & alij. Plura de Pudentiana leguntur in Actis S. Praxedis & Nouati, quæ a Pastore presbytero scripta dicuntur. Recitat ea Ado Treuereñ ad xij. Kalend. Iulij. Habet Mombrit. Acta Pudentianæ tom. 2. Habemus eadem paulo diuersa manuscrip. in nostra bibliotheca. Meminit S. Gregorius de ecclesia S. Pudentianæ erecta in Numidia lib. 2. registr. epist. 33. An autem huius fuerit, nõ audeo affirmare: cum præsertim sciã, Pudentis, Pudentillę, & alia huiuscemodi nomina fuisse in Africa, vt constat ex Apuleij apologiis."
   }
  ],
+ "mr:0520-anastasius": [
+  {
+   "mark": "f",
+   "after": "Anastasij",
+   "text": "Anastasij Episcopi.] De eodẽ tabulæ ecclesiæ Brixianæ; meminit & Rambertus eiusdem sedis Episcopus in sermone de translatione S. Philastrii Episcopi."
+  }
+ ],
  "mr:0520-aquila": [
   {
    "mark": "d",
@@ -7665,11 +7720,6 @@
    "mark": "e",
    "after": "Austregisili",
    "text": "Austregisili Episcopi.] Agit de eodem hac die Vsuardus. Edidit eius vitam ex manuscrip. Sur. to. 3. Vincentius itẽ de eo lib. 23. cap. 26. & Sigebertus in chron. qui eum floruisse scribit temporibus Heraclii Imp. anno Domini 627. Successit hic (vt eius Acta testantur) Apollinari, seditq. annos duodecim, numeraturq. in tabul. Democh. tricesimus eius sedis Episcopus."
-  },
-  {
-   "mark": "f",
-   "after": "Anastasij",
-   "text": "Anastasij Episcopi.] De eodẽ tabulæ ecclesiæ Brixianæ; meminit & Rambertus eiusdem sedis Episcopus in sermone de translatione S. Philastrii Episcopi."
   }
  ],
  "mr:0520-basilla": [
@@ -7852,11 +7902,6 @@
    "mark": "g",
    "after": "Desiderij",
    "text": "Desiderij Episc.]De eodem Beda,& Ado hac die. Hic quippe agitur natalis dies eius, translatio autem 3. Idus Februarij, vt testatur idem Ado, dictis diebus. Tu vide quæ superius ea die notata sunt de S. Desiderio."
-  },
-  {
-   "mark": "h",
-   "after": "Michaelis",
-   "text": "Michaelis Episc.] Græci etiam de eodẽ agunt hac die in Menologio his verbis: Memoria S. Patris nostri Michaelis confessoris, Episcopi Synnadarum. Hic primum monachus, postea est factus Episcopus: qui cum esset rectæ fidei obseruantissimus, Leonis Isaurici hæresim redarguens, propter sanctarum imaginum venerationem, quam libera voce prohibebatur, in exilium missus; cum bonum certamen & cursum consummasset, migrauit ad Dominum. Hæc ibi."
   }
  ],
  "mr:0523-ephebus": [
@@ -7902,6 +7947,13 @@
    "mark": "i",
    "after": "Mercurialis",
    "text": "Mercurialis Episcopi.] De eo item vet. manuscr. Agit de Mercuriali Episcopo Limensi Petrus in catal. lib. 10. c. 107. Sed deprauate legitur, Limensi, pro Liuiensi: nam constat fuisse Episcopum Foroliuiensem: siquidem anno Domini 1576. R. D. Antonius Iannotus Foroliuiensis Episcopus eius corpus repetit in marmoreo loculo conditum, serico tectum, vbi in lamina plumbea intus posita hæc notata erat inscriptio: HIC REQVIESCIT CORPVS BEATI MERCVRIALIS EPISCOPI LIVIENSIS: OBIIT ANN. CLVI, PRID. KALEN. MAII. Habentur hæc memoriæ prodita in libello ab eodem Episcopo scripto de modo celebrandi Iubilæi, Cæsenæ impresso apud Bartholomæum Raccenium."
+  }
+ ],
+ "mr:0523-michael": [
+  {
+   "mark": "h",
+   "after": "Michaelis",
+   "text": "Michaelis Episc.] Græci etiam de eodẽ agunt hac die in Menologio his verbis: Memoria S. Patris nostri Michaelis confessoris, Episcopi Synnadarum. Hic primum monachus, postea est factus Episcopus: qui cum esset rectæ fidei obseruantissimus, Leonis Isaurici hæresim redarguens, propter sanctarum imaginum venerationem, quam libera voce prohibebatur, in exilium missus; cum bonum certamen & cursum consummasset, migrauit ad Dominum. Hæc ibi."
   }
  ],
  "mr:0523-quinctianus-et-socii": [
@@ -8021,6 +8073,13 @@
    "text": "Leonis.] Agit de eodem Vsuardus hac die, atque recentiores."
   }
  ],
+ "mr:0525-pasicrates-et-valentio": [
+  {
+   "mark": "b",
+   "after": "Pasicrătis",
+   "text": "Pasicratis & Valentionis.] Agunt de his ijdem qui supra, Beda, ac ceteri. Habetur de his mentio in Actis S. Iulij martyris apud Bedam & alios ad vj Kalend Iunij. Dorostorum in Mysia, de quo hic habetur mẽtio, alij Dorostolum dicunt, & in Thracia situm volunt, vt Theodoretus hist. lib. 5. cap. 6. Alio nomine hunc locum dictum Distram, tradit Cedrenus in compend. in Ioanne Imp."
+  }
+ ],
  "mr:0525-translatio-francisci": [
   {
    "mark": "i",
@@ -8040,11 +8099,6 @@
    "mark": "a",
    "after": "Vrbani",
    "text": "VRBANI Papæ.] De ipso item hac die Beda, Vsuardus, Ado, & alij. De huius successione Euseb. in chron. & hist. lib. 6. cap. 15. & 22. Optat. lib. 2. contra Parm. August. epist. 165. Niceph. in chron. & alij. Eius Acta, quæ extant intexta rebus gestis S. Cæciliæ, recitat Metaphrastes. Pluribus nos de eo in Annalibus Ecclesiasticis."
-  },
-  {
-   "mark": "b",
-   "after": "Pasicrătis",
-   "text": "Pasicratis & Valentionis.] Agunt de his ijdem qui supra, Beda, ac ceteri. Habetur de his mentio in Actis S. Iulij martyris apud Bedam & alios ad vj Kalend Iunij. Dorostorum in Mysia, de quo hic habetur mẽtio, alij Dorostolum dicunt, & in Thracia situm volunt, vt Theodoretus hist. lib. 5. cap. 6. Alio nomine hunc locum dictum Distram, tradit Cedrenus in compend. in Ioanne Imp."
   }
  ],
  "mr:0525-zenobius": [
@@ -8375,6 +8429,13 @@
    "text": "Flacci nobilis viri. ] In prædictis Actis SS. Nerei & Achillei legitur: Flacci Comitis; quam lectionem non improbamus. Porro vt huius vocis clarior notitia habeatur, sciendum in primis, pro diuersitate temporum, diuersi generis Comites fuisse. Ante Constantini Imp. tempora hi dicti erant Comites, qui Proconsules, Præsidesq; prouinciarum comitantes, erant in negotijs publicis obeundis illorum administri & adiutores, ijdemq; assessores eorumdem cum essent, ius dicebant, vt declarãt complures leges, l. 16. de off. præsid. l. 4. ff. de offic. assess. l. 41. §. 1. de excus. tut. l. 6. §. si quos comit. ff. de pœn. l. 5. ff. ad leg. Iul. repet. & l. 1. §. sed ff. de extra. cognition. De ijsdem Sueton. in Iulio, & in Tiberio, & Plin. lib. 9. c. 30. Ex his vnus erat Flaccus, de quo agimus, ceteriq. omnes, qui in Antiquis Actis martyrũ Comites dicti reperiuntur. A temporibus autem Constantini Imp. & non Hadriani (vt putauit Gelenius) ea vox alio sensu accipi consueuit. Idem etenim Imperator, Christiana quadam humanitate, quosdam e Magistratibus sibi subditis Comites dici voluit, quasi consocios in administratione Imperij: erantque hi triplicis ordinis, nẽpe primi, secundi, & tertij, vt scribit Eusebius in vita Constantini lib. 4. cap. 11. Mutationem magistratuum a Constantino factam esse, Zosimus etiam asseuerat lib. 2. Plura de his Alciat. lib. de magistrat. In Not. prouinc. habentur Comitiuarum diuersarũ descripta insignia: sunt de ijsdem Comitibus complures tit. in Cod. lib. xij. itemq. formulas eorumdem magistratuum habes apud Cassiodorum variar. lib. 6. & 7."
   }
  ],
+ "mr:0601-caprasius": [
+  {
+   "mark": "m",
+   "after": "Caprasij",
+   "text": "Caprasii.] De quo etiam hac die Beda, Vsuardus, Ado, & alij recentiores.Eius Acta ex vet manuscrip.recitat Sur. to.7. Meminit eiusdẽ Sidonius Apollinaris in carmine Eucharistico ad Faustum;vbi dum relegit insulæ Lerinensis sanctos, hæc de Caprasio: — Quantos illa insula planæ Miserit ad cælum montes:quæ sancta Caprasi Vita senis, &c. De eo itẽ in vita S.Honorati lib.1.Vixit tẽporibus Theodosij Imp. & Honorij eius filij."
+  }
+ ],
  "mr:0601-crescentianus": [
   {
    "mark": "k",
@@ -8382,16 +8443,18 @@
    "text": "Crescentiani.] Eius ecclesiæ antiquæ memoriæ de eius martyrio fidem faciunt."
   }
  ],
+ "mr:0601-felinus-et-gratinianus": [
+  {
+   "mark": "g",
+   "after": "Felîni",
+   "text": "Felini & Gratiniani.] De his vetera monumenta ecclesiæ Perusinæ, quæ manuscripta accepimus."
+  }
+ ],
  "mr:0601-firmus": [
   {
    "mark": "f",
    "after": "Firmi",
    "text": "Firmi. ] Itidem Græci in Menolog. de eodem hac die agunt."
-  },
-  {
-   "mark": "g",
-   "after": "Felîni",
-   "text": "Felini & Gratiniani.] De his vetera monumenta ecclesiæ Perusinæ, quæ manuscripta accepimus."
   }
  ],
  "mr:0601-fortunatus": [
@@ -8399,11 +8462,6 @@
    "mark": "l",
    "after": "Fortunati",
    "text": "Fortunati.] Eius res gestas ex manuscriptis Spoletinæ ecclesiæ acceptas legimus: est eadrum exordium: Fuit quidam vir venerabilis, &c."
-  },
-  {
-   "mark": "m",
-   "after": "Caprasij",
-   "text": "Caprasii.] De quo etiam hac die Beda, Vsuardus, Ado, & alij recentiores.Eius Acta ex vet manuscrip.recitat Sur. to.7. Meminit eiusdẽ Sidonius Apollinaris in carmine Eucharistico ad Faustum;vbi dum relegit insulæ Lerinensis sanctos, hæc de Caprasio: — Quantos illa insula planæ Miserit ad cælum montes:quæ sancta Caprasi Vita senis, &c. De eo itẽ in vita S.Honorati lib.1.Vixit tẽporibus Theodosij Imp. & Honorij eius filij."
   }
  ],
  "mr:0601-ischyrion-et-socii": [
@@ -8439,11 +8497,6 @@
    "mark": "c",
    "after": "Reueriâni",
    "text": "Reueriani Episcopi & soc.] Vsuardus itẽ hac die, Petrus lib. 5. c 73. & alij recentiores."
-  },
-  {
-   "mark": "d",
-   "after": "Thespesij",
-   "text": "Thespesij] Agũt de eodem hac die Græci in Menolog. vbi & eius martyrium pluribus describitur."
   }
  ],
  "mr:0601-secundus": [
@@ -8458,6 +8511,13 @@
    "mark": "n",
    "after": "Simeonis",
    "text": "Simeonis.] Apud Bedam & alios de eo hac die. Eius Acta ab Eueruino conscripta recitat Surius tomo.3. De eius canonizatione agitur in chron. Hirsaugien. Scribit de eodem Sigibertus in chron. anno Domini 1015. & Trithem. de vir. illust.ord. S. Benedicti lib. 3. cap. 238."
+  }
+ ],
+ "mr:0601-thespesius": [
+  {
+   "mark": "d",
+   "after": "Thespesij",
+   "text": "Thespesij] Agũt de eodem hac die Græci in Menolog. vbi & eius martyrium pluribus describitur."
   }
  ],
  "mr:0602-erasmus": [
@@ -8670,6 +8730,18 @@
    "text": "Amãtij & Alexãdri] Agit de his Vsuar. hac die, Beda vero sequẽti de Amantio: mendose autẽ loco Alexandri, ponit, Alexandrię."
   }
  ],
+ "mr:0606-artemius-et-paulina": [
+  {
+   "mark": "d",
+   "after": "Artemij",
+   "text": "Artemij & soc.] De his hac die Beda, Vsuardus, Ado, & alij. Horum res gestæ connexæ habentur cũ Actis SS. Marcellini & Petri,apud Sur.to. 3. secunda Iunij. Corpora Artemij & Paulinæ translata reperiuntur a Sergio Iuniori in titulum Equitij, vt vetus illic posita testatur inscriptio in marmore incisa."
+  },
+  {
+   "mark": "e",
+   "after": "cæsus",
+   "text": "Plumbatis cæsus.] Erat id genus tormẽtorum,quasi flagellum ex funiculis, in quorum summitatibus glandes plumbeæ erant impactæ; his terga ac collum damnati hominis verberabantur. De his Prudentius Peristeph.hym. 10. in Romano, his versibus: Tundatur,inquit,tergum crebris ictibus, (post: Plumboq; ceruix verberata extuberet. Et paulo Pulsatus ergo martyr illa grandine, &c. Porro plũbatarum verberibus viliores tantum personas torqueri consueuisse, leges indicant. nam l. 2. de quæst. Cod. Theod. hæc habet: Plumbatarum verò ictus, quos in ingenuis corporibus nõ probamus, sed decem primos tantum ordinis curiales ab immanitate huiusmodi verberũ segregamus. & l. 80. de decur. Cod. Theod. Omnis ordo curialis ab ictibus plũbatarum habeãtur immunes, Constantinus Magnus, ae filij ab huiusmodi supplicij genere exemerunt debitores, qui olim his affici cõsueuerunt, l. 4. & 7. de exact. Cod. Theod. Viguit id genus supplicij etiam temporibus Honorij Imp. qui turpissimum Iouinianum hæresiarchã contusum primum plumbo, vna cum suis gregalibus damnauit exilio, vt constat ex l. 54. dé hæret. C. Theod. Porro etsi huiusmodi plumbatarum verbera non essent ad inferendam mortem (nam ciuilium legum præscripto cædere reum vsq; ad mortem vetitum erat) complures tamen inter ictus plũbatarum efflasse spiritum reperiuntur, vt testatur Ammian. Marcel. lib. 28. Ambros. epist. 17. lib. 2 edit. Rom. cum ait: Quid respondebo postea, si compertum fuerit, data hinc auctoritate, aliquos Christianorũ aut gladio aut fustibus, aut plũbis necatos? Hæc ille. Prætermittimus recẽsere innumeros fere martyres, qui ad obitum vsq; plumbatarũ verberibus sunt affecti. Erant & plumbata spicula bellica, de quibus Veget. de re milit. lib. 1. cap. 17. lib. 2. c. 15. sed de his nihil in præsentiarũ. Erant & pondera plumbea, non ad cædendum, sed ad distrahendas iuncturarum compagines, cùm damnatis sublime suspẽsis,reuolutis bracchijs, eiusmodi pondera deorsum ad pedes alligarentur. De his Ammianus lib. 29. Expediuntur, inquit, pondera plumbea, &c. Erat & pœna liquentis plumbi, cuius est frequens mentio in Martyrologio, de qua & Horatius - nec seuerus Vnus abest, liquidumve plumbum. Constantinus ad Populum rescripsit, vt eius meatus oris & faucium, qui nefaria hortamẽte prodendæ castitatis protulerit, liquentis plumbi ingestione claudatur. l. 1. de rapt. virgin. lib. 9. tit. 24. Cod. Theod."
+  }
+ ],
  "mr:0606-claudius": [
   {
    "mark": "l",
@@ -8708,16 +8780,6 @@
    "mark": "c",
    "after": "eunûchum",
    "text": "Eunuchũ baptizauit.] De quo hæc Dorotheus in Synopsi, in fine: Eunuchus Candacis Reginæ Aethiopum in Arabia Felici, & in insula Taprobana, inq. vniuersa Erythra Euangelium Domini nostri Iesu Christi prædicauit. Fertur etiam martyrium gloriose tulisse, ibiq sepultus esse: & cœmeterium ipsius monumentum insuperabile est fidelibus, barbaros scelestos fugans, morbos pellens, & sanationes operans vsque in hodiernum diem Hęc Doroth Hieronymus in Isai. cap. 53.appellat eum Apostolũ Aethiopum agit de eodem epist. 103 ad Paulinum Ante eum S Irenæus meminit de eius Apostolatu ad Aethiopas lib. 3 cap. 12. & Cyrillus Hierosol in catech. 1. Euseb. lib. 2. cap. 1. Niceph. lib. 2. cap. 6. & alij. De fonto, in quo baptizatus est, agit S.Hieron. de locis Hebraicis. Si autem Aethiopum religionem altius repetas;habes ex Herodoto,quem citat Iosephus Antiq lib 8. cap. 4 illos circumcisionem ab Aegyptijs didicisse: sic vocat Hebræos, qui in Aegypto aliquando vixerunt."
-  },
-  {
-   "mark": "d",
-   "after": "Artemij",
-   "text": "Artemij & soc.] De his hac die Beda, Vsuardus, Ado, & alij. Horum res gestæ connexæ habentur cũ Actis SS. Marcellini & Petri,apud Sur.to. 3. secunda Iunij. Corpora Artemij & Paulinæ translata reperiuntur a Sergio Iuniori in titulum Equitij, vt vetus illic posita testatur inscriptio in marmore incisa."
-  },
-  {
-   "mark": "e",
-   "after": "cæsus",
-   "text": "Plumbatis cæsus.] Erat id genus tormẽtorum,quasi flagellum ex funiculis, in quorum summitatibus glandes plumbeæ erant impactæ; his terga ac collum damnati hominis verberabantur. De his Prudentius Peristeph.hym. 10. in Romano, his versibus: Tundatur,inquit,tergum crebris ictibus, (post: Plumboq; ceruix verberata extuberet. Et paulo Pulsatus ergo martyr illa grandine, &c. Porro plũbatarum verberibus viliores tantum personas torqueri consueuisse, leges indicant. nam l. 2. de quæst. Cod. Theod. hæc habet: Plumbatarum verò ictus, quos in ingenuis corporibus nõ probamus, sed decem primos tantum ordinis curiales ab immanitate huiusmodi verberũ segregamus. & l. 80. de decur. Cod. Theod. Omnis ordo curialis ab ictibus plũbatarum habeãtur immunes, Constantinus Magnus, ae filij ab huiusmodi supplicij genere exemerunt debitores, qui olim his affici cõsueuerunt, l. 4. & 7. de exact. Cod. Theod. Viguit id genus supplicij etiam temporibus Honorij Imp. qui turpissimum Iouinianum hæresiarchã contusum primum plumbo, vna cum suis gregalibus damnauit exilio, vt constat ex l. 54. dé hæret. C. Theod. Porro etsi huiusmodi plumbatarum verbera non essent ad inferendam mortem (nam ciuilium legum præscripto cædere reum vsq; ad mortem vetitum erat) complures tamen inter ictus plũbatarum efflasse spiritum reperiuntur, vt testatur Ammian. Marcel. lib. 28. Ambros. epist. 17. lib. 2 edit. Rom. cum ait: Quid respondebo postea, si compertum fuerit, data hinc auctoritate, aliquos Christianorũ aut gladio aut fustibus, aut plũbis necatos? Hæc ille. Prætermittimus recẽsere innumeros fere martyres, qui ad obitum vsq; plumbatarũ verberibus sunt affecti. Erant & plumbata spicula bellica, de quibus Veget. de re milit. lib. 1. cap. 17. lib. 2. c. 15. sed de his nihil in præsentiarũ. Erant & pondera plumbea, non ad cædendum, sed ad distrahendas iuncturarum compagines, cùm damnatis sublime suspẽsis,reuolutis bracchijs, eiusmodi pondera deorsum ad pedes alligarentur. De his Ammianus lib. 29. Expediuntur, inquit, pondera plumbea, &c. Erat & pœna liquentis plumbi, cuius est frequens mentio in Martyrologio, de qua & Horatius - nec seuerus Vnus abest, liquidumve plumbum. Constantinus ad Populum rescripsit, vt eius meatus oris & faucium, qui nefaria hortamẽte prodendæ castitatis protulerit, liquentis plumbi ingestione claudatur. l. 1. de rapt. virgin. lib. 9. tit. 24. Cod. Theod."
   }
  ],
  "mr:0606-viginti-martyres-tarsi": [
@@ -8823,12 +8885,14 @@
    "text": "Victorini.] Hic ille germanus S. Seuerini, de quo modo egimus, cuius & Acta iuncta habentur vitæ sancti Seuerini."
   }
  ],
- "mr:0609-iulianus": [
+ "mr:0609-columba": [
   {
    "mark": "f",
    "after": "Columbi",
    "text": "Columbi, alias Columba, vel Columbani.] De eo hac die Beda, & alij recentiores; pluribus de eo idem Beda hist. de gest. Angl. lib. 3. c. 4. & 25. vbi eumdem appellat Columbanum, Columbã autẽ in epitome anno Domini 565. quo anno ex Hibernia se contulit in Britanniã, vixitq; ibi annis trigintaduobus, vt idem testatur auctor: sicq; peruenisse videtur vsque ad annum Domini 597. de quo & Sigebert. in chron. ann. 596. & 598. vbl semper Columbanum appellat. Scripsit eius vitam Adamandus eidem æqualis, de quo Sigebert. de vir. illust. cap. 64. Nec moueat quemquã, quòd Columba hic præter morem Ecclesiæ Pascha celebrabat decimaquarta Luna. excusat enim eum Beda hist. Angl. lib. 3. c. 4. in fine, & Vualfridus apud eumdem eod. lib. 3. cap. 25. Alius ab hoc est S. Columbanus abbas Luxouiẽsis, de quo inferius ad xj. Kalend. Decembris."
-  },
+  }
+ ],
+ "mr:0609-iulianus": [
   {
    "mark": "g",
    "after": "Iuliani",
@@ -9605,7 +9669,7 @@
  "mr:0623-ioannes": [
   {
    "mark": "b",
-   "after": null,
+   "after": "Ioannis",
    "text": "Ioannis presb.] Agunt de eodem ijdẽ qui supra Beda, ac ceteri, simulq. recentiores."
   },
   {
@@ -9738,16 +9802,18 @@
    "text": "Lucia, alias Luceię, & soc.] De his Beda, Vsuardus, Ado; & Petrus in catal. lib. 6. c. 4. eorum Acta describit."
   }
  ],
+ "mr:0625-maximus": [
+  {
+   "mark": "h",
+   "after": "Maximi",
+   "text": "Maximi Episcopi.] Plura de eodem Gennad. de vir. illustr. c. 40. qui tamen dum ait eũ diem obijsse Honorio & Theodosio Impp. omnino errare videtur: nam constat peruenisse ad tempora Valentiniani & Marciani Augg. Reperitur enim interfuisse Synodo Mediolanẽsi sub Eusebio eius ciuitatis Episcopo, cuius Synodica extat ad S. Leonem Papam conscripta. Præsens fuit etiam Synodo Romanæ habitæ sub Hilaro Papa, Conss. Basilisco & Hermenerico, anno Domini 465."
+  }
+ ],
  "mr:0625-prosperus": [
   {
    "mark": "g",
    "after": "Aquitâni",
    "text": "Prosperi Episcopi.] De quo Gennadius de vir. illustr. c. 84. Honorius Augustud. & alij qui agunt de scrip. Eccles. Extat de eo epistola Cælestini Papæ ad Episcopos Galliarum. Eius scripta comprobat commendatq. Gelasius Papa in cap. Sancta Rom. dist. 15. Ado Vien. & alij tradunt hunc fuisse ab epistolis S. Leoni Papæ, ab eoq. scripta fertur famosissima illa epistola S. Leonis ad Flauianum de Incarnatione Verbi; quod non tantum Gennadius, Honorius, & alij Latinorũ, sed & Marcellinus Comes testatur in chronico sub Cõsulatu Olybrij & Rustici. Eius res gestas collectas a Ioanne Anton. Flamin. recitat Sur. tom. 3. hac die. De eius Actis aduersus Pelagianos, & laboribus pro scriptis S. Augustini susceptis, pluribus egimus in Annal. Meminit de eodẽ Cassiod. lib. 1. Instit. diuin. lect. Ne cui autem errandi detur occasio aduertendum est, vixisse ijsdem temporibus, in Gallijs alium eiusdem nominis Prosperum Episcopum Aurelianensem, successorem S. Aniani, ad quem extat scripta epistola Sidonij Apolinaris 15. lib. 6. quem illum esse opinamur, qui subscriptus habetur Concilio Valensi, atque Carpentoratensi, Migrauit S. Prosper, de quo hic agitur, ex hac vita anno Domini 466. ex Flaminij sententia, vel sexagesimoquinto, vt scribit Petrus in catal. lib 6. c. 7."
-  },
-  {
-   "mark": "h",
-   "after": "Maximi",
-   "text": "Maximi Episcopi.] Plura de eodem Gennad. de vir. illustr. c. 40. qui tamen dum ait eũ diem obijsse Honorio & Theodosio Impp. omnino errare videtur: nam constat peruenisse ad tempora Valentiniani & Marciani Augg. Reperitur enim interfuisse Synodo Mediolanẽsi sub Eusebio eius ciuitatis Episcopo, cuius Synodica extat ad S. Leonem Papam conscripta. Præsens fuit etiam Synodo Romanæ habitæ sub Hilaro Papa, Conss. Basilisco & Hermenerico, anno Domini 465."
   }
  ],
  "mr:0625-sosipater": [
@@ -10179,7 +10245,9 @@
    "mark": "c",
    "after": "Hyacinthi",
    "text": "Hyacinthi.] Græci itidem de eo in Menol. ibiq. eius passionis Acta cõpẽdio describũt."
-  },
+  }
+ ],
+ "mr:0703-irenaeus-et-mustiola": [
   {
    "mark": "d",
    "after": "Irenæi",
@@ -10612,11 +10680,6 @@
  ],
  "mr:0711-marcianus": [
   {
-   "mark": "c",
-   "after": "Sidronij",
-   "text": "Sidronij. ] De eodem hac die Vsuardus, & alij recentiores, adstipulãturq. dicta vetera manuscripta, quæ his addunt Lucianũ, Sabinũ, & Cyprianũ; sed hi duo Brixiæ ponuntur."
-  },
-  {
    "mark": "d",
    "after": "Marciani",
    "text": "Martiani. ] Græci etiam de eo hac die in Menologio, pluribusq. eius certamen describunt."
@@ -10641,6 +10704,13 @@
    "mark": "f",
    "after": "Sauîni",
    "text": "Sabini & Cypriani. ] De his tabulæ eius ecclesiæ, quibus adstipulantur prædicta vet. manuscripta."
+  }
+ ],
+ "mr:0711-sidronius": [
+  {
+   "mark": "c",
+   "after": "Sidronij",
+   "text": "Sidronij. ] De eodem hac die Vsuardus, & alij recentiores, adstipulãturq. dicta vetera manuscripta, quæ his addunt Lucianũ, Sabinũ, & Cyprianũ; sed hi duo Brixiæ ponuntur."
   }
  ],
  "mr:0712-epiphana": [
@@ -10791,11 +10861,6 @@
    "mark": "f",
    "after": "Felicis",
    "text": "Felicis Episcopi. ] Ad hunc proxime celebraturum diem natalem suæ ordinationis extat sancti Ambrosij epistola 60. lib. 8. Rom. edit. Erat is dies kal. Nouembrium, vt ibidem testatur S. Ambrosius."
-  },
-  {
-   "mark": "g",
-   "after": "Optatiâni",
-   "text": "Optatiani Episc. ] Vixit hic temporibus Valentiniani Tertij Imperatoris, cum Romanæ Ecclesiæ præesset S. Leo Papa, cuius tempore interfuit Mediolanensi Synodo sub Eusebio Episcopo Mediolanensi, cuius extat Synodica ab Episcopis qui aderant scripta ad S. Leonem, vbi in subscriptione Episcoporum pro Optatiano, Octauianus mendose legitur: Meminit eiusdem Rampertus Episcopus Brixiensis in sermone de translatione S. Philastrij, septimumq. hunc numerat à Philastrio. Huic successit Vigilius."
   }
  ],
  "mr:0714-henricus": [
@@ -10824,6 +10889,13 @@
    "mark": "h",
    "after": "Marcellini",
    "text": "Marcellini. ] De eo etiam Molan. in addit. ad Vsuard. & pluribus in Indic. Sanctorum Belgij. Agitur de ipso item in vita sancti Suitberti Episcopi, cap. 14."
+  }
+ ],
+ "mr:0714-optatianus": [
+  {
+   "mark": "g",
+   "after": "Optatiâni",
+   "text": "Optatiani Episc. ] Vixit hic temporibus Valentiniani Tertij Imperatoris, cum Romanæ Ecclesiæ præesset S. Leo Papa, cuius tempore interfuit Mediolanensi Synodo sub Eusebio Episcopo Mediolanensi, cuius extat Synodica ab Episcopis qui aderant scripta ad S. Leonem, vbi in subscriptione Episcoporum pro Optatiano, Octauianus mendose legitur: Meminit eiusdem Rampertus Episcopus Brixiensis in sermone de translatione S. Philastrij, septimumq. hunc numerat à Philastrio. Huic successit Vigilius."
   }
  ],
  "mr:0714-phocas": [
@@ -10856,14 +10928,16 @@
  ],
  "mr:0715-catulinus-et-socii": [
   {
-   "mark": "a",
-   "after": "Eutropij",
-   "text": "EVTROPII & sociorum.] De his Beda, Vsuardus, Ado, & alii. Habemus horum Acta tom. 7. vit. sanct. manuscr. in nostra bibliotheca : est eorum exordium: Ab inacrnatione Domini, &c. Alia autem prolixiora vidimus accepta ab ecclesia sanctæ Bonosæ trans Tiberim posita."
-  },
-  {
    "mark": "b",
    "after": "Catulini",
    "text": "Catulini & sociorum.] De quibus etiã Petrus in catal lib.6.c.103. Hic ille Catulinus, in cuius laudem S Augustinum tractatum habuisse, scribit Possid. in Indiculo c. 9. De basilica Fausti, cuius hic mentio habetur, meminit Conc. Carthag. 6. in princ.& Cono- African. cap. 74. Victor item de persecutione Vuan d. libro 2."
+  }
+ ],
+ "mr:0715-eutropius-et-socii": [
+  {
+   "mark": "a",
+   "after": "Eutropij",
+   "text": "EVTROPII & sociorum.] De his Beda, Vsuardus, Ado, & alii. Habemus horum Acta tom. 7. vit. sanct. manuscr. in nostra bibliotheca : est eorum exordium: Ab inacrnatione Domini, &c. Alia autem prolixiora vidimus accepta ab ecclesia sanctæ Bonosæ trans Tiberim posita."
   }
  ],
  "mr:0715-felix-papiae": [
@@ -11497,10 +11571,12 @@
    "mark": "d",
    "after": "Hyacinthi",
    "text": "Hyacinthi.] Agunt de eo etiam Beda, Vsuar. Ado, & alij recentiores: Acta vero ipsius recitat Surius tomo 4. hac die."
-  },
+  }
+ ],
+ "mr:0726-pastor": [
   {
    "mark": "e",
-   "after": "Romæ sancti",
+   "after": "sancti",
    "text": "Pastoris.] Non tantum in vet. Romano Martyrologio, sed & in antiquis manuscriptis de eo agitur hac die. Plura de ipso scripta habentur in Actis sanctarum Pudentianæ, Praxedis, Nouati, & Timothei, quorum supra meminimus. Mentio de eodem habetur in libro de Rom Pontificibus in Pio Papa. De eius obitu agitur in litteris eiusdem Pontificis ad Iustũ Episcopum Viennensem, quas esse germanas, monstrauimus in Annalibus Ecclesiast. In eis hæc de Pastore scripta habentur: Pastor Titulum condidit, & digne in Domino obijt. Hæc ibi. Habemus in nostra bibliotheca res gestas S. Pastoris, seu potius panegyrim in die natali eius alicubi in ecclesia legi solitam. Est eius exordium Sanctorum vestigia, &c. Ibi etiam ea die de alio Pastore agitur discipulo S. Erasmi Episcopi, qui passus est Romæ via Salaria, temporibus Diocletiani, atque sepultus ad Clium Cucumeris. De scriptis S. Pastoris, quorum penes Græcos vsitatior fuit lectio, in Annalibus pluribus egimus."
   },
   {
@@ -11678,6 +11754,13 @@
    "text": "Cerę. ] Ita emendatũ loco Coræ: nam non Coræ, sed Ceræ oppido in Faliscis via Aurelia, decimoseptimo ab Vrbe lapide, eiusdem S. Felicis reliquiæ asseruantur, & ab accolis eiusdem S. Felicis natalis solemni memoria celebratur, Coræ autem nequaquam."
   }
  ],
+ "mr:0729-gulielmus-pinchon": [
+  {
+   "mark": "i",
+   "after": "Gulielmi",
+   "text": "Gulielmi Episcopi.] Scripsit eius res gestas Godefridus Episcopus Bituricensis, quas recenset Sur. tom. 4. Excessit ex humanis anno Domini 1241. Retulit eum in Sanctorum numerum Innocentius Papa IIII. cuius extãt de ea re litteræ Apostolicæ, datæ anno vndecimo Pontificatus sui, vt vidimus in registro ipsius, anno 11. num. 531."
+  }
+ ],
  "mr:0729-lucilla-et-socii": [
   {
    "mark": "e",
@@ -11707,11 +11790,6 @@
   }
  ],
  "mr:0729-prosperus": [
-  {
-   "mark": "i",
-   "after": "Gulielmi",
-   "text": "Gulielmi Episcopi.] Scripsit eius res gestas Godefridus Episcopus Bituricensis, quas recenset Sur. tom. 4. Excessit ex humanis anno Domini 1241. Retulit eum in Sanctorum numerum Innocentius Papa IIII. cuius extãt de ea re litteræ Apostolicæ, datæ anno vndecimo Pontificatus sui, vt vidimus in registro ipsius, anno 11. num. 531."
-  },
   {
    "mark": "k",
    "after": "Prosperi",
@@ -11774,6 +11852,13 @@
    "text": "Calimerij Episcopi.] De eo tabulæ eccles. Mediolan. præfatio Ambrosiana, & alia monumenta eius ecclesiæ, quæ citat Galesinius: habetur mentio de eodem in Actis sanctorum Faustini & Iouitæ."
   }
  ],
+ "mr:0731-democritus-et-socii": [
+  {
+   "mark": "c",
+   "after": "Democriti",
+   "text": "Democriti & sociorum.] Beda hos ponit in Africa, sed Vsuardus & alij Synnadæ passos tradunt."
+  }
+ ],
  "mr:0731-fabius": [
   {
    "mark": "a",
@@ -11788,6 +11873,13 @@
    "text": "Firmi Episcopi.] Scribit S. Augustinus de eodem Firmo Episcopo Tagastensi lib. contra mendacium ad Consentium cap. 13. aitque: Fecit hoc Episcopus quondã Tagastensis ecclesiæ, Firmus nomine, firmior fide, &c."
   }
  ],
+ "mr:0731-germanus": [
+  {
+   "mark": "e",
+   "after": "Germani",
+   "text": "Germani Episcopi.] Agunt de eodẽ hac die Beda, & alij omnes. Scripsit eius res præclare gestas Constantius, scriptor illorum temporũ non ignobilis, cuius frequens est mentio apud Sidonium Apollinarem, & Isidorum de vir. illustr. in Paulino presbytero cap. 4. Ex eodem auctore Constantio ceteri accepisse noscuntur, vt Beda lib. de sex ætat. & de gest. Angl. lib. 1. cap. 12. & sequen. De eodem sancto Germano agit S. Prosper in chron. sub Consulatu Florentij & Dionysij, Greg. Turonen. de glor. confess. cap. 41. licet male, eum Romæ obijsse, dicat. De eodem Ado Viennen. in chron. & Sigebertus, qui ait, Herminum monachum scripsisse eius vitam versibus, & obtulisse Carolo Imperatori. Adscribitur hic septimus eius sedis Episcopus: seditq. annos 30. & dies 25. temporibus Honorij Imp. & eius successoris Valentiniani, vt liquet ex tab. ecclesiæ Antisiod. Omittimus referre innumeros recentiorũ auctorum, qui de ipso scripserunt, cum omnes nonnisi ex prædictis antiquioribus eadem referant."
+  }
+ ],
  "mr:0731-ioannes-columbini": [
   {
    "mark": "g",
@@ -11797,19 +11889,9 @@
  ],
  "mr:0731-trecenti-quinquaginta-monachi-syriae": [
   {
-   "mark": "c",
-   "after": "Democriti",
-   "text": "Democriti & sociorum.] Beda hos ponit in Africa, sed Vsuardus & alij Synnadæ passos tradunt."
-  },
-  {
    "mark": "d",
    "after": "quinquaginta",
    "text": "Trecentorum quinquaginta Monachorum.] Cæsi sunt hi temporibus Anastasij Imperatoris. Extat de ipsorum nece libellus vigintiquatuor archimandritarum ad Hormisdam Rom. Pontif. de execrandis facinoribus Petri Gnaphæi & Seueri hæresiarcharum: ibiq. hæc de his leguntur: Euntibus nobis ad mãdrã domini Simeonis pro causa Ecclesiæ, insidiati sũt nobis in itinere perditi, coinquinati: & superuenientes occiderunt ex nobis trecentos quinquaginta, quosdam autẽ vulnerauerunt; alios vero, qui potuerant ad colenda altaria fugere, ibidem peremerunt, & monasteria incenderunt, &c. Est apud nos eiusmodi libellus supplex manuscrip. itemq. alius extat de eorumdem martyrio libellus monachorum Syriæ oblatus Synodo Constantinopolitanæ sub Menna Episcopo celebratæ post Cõsulatum Belisarij, anno Domini 536. vt eiusdem Synodi Acta declarant."
-  },
-  {
-   "mark": "e",
-   "after": "Germani",
-   "text": "Germani Episcopi.] Agunt de eodẽ hac die Beda, & alij omnes. Scripsit eius res præclare gestas Constantius, scriptor illorum temporũ non ignobilis, cuius frequens est mentio apud Sidonium Apollinarem, & Isidorum de vir. illustr. in Paulino presbytero cap. 4. Ex eodem auctore Constantio ceteri accepisse noscuntur, vt Beda lib. de sex ætat. & de gest. Angl. lib. 1. cap. 12. & sequen. De eodem sancto Germano agit S. Prosper in chron. sub Consulatu Florentij & Dionysij, Greg. Turonen. de glor. confess. cap. 41. licet male, eum Romæ obijsse, dicat. De eodem Ado Viennen. in chron. & Sigebertus, qui ait, Herminum monachum scripsisse eius vitam versibus, & obtulisse Carolo Imperatori. Adscribitur hic septimus eius sedis Episcopus: seditq. annos 30. & dies 25. temporibus Honorij Imp. & eius successoris Valentiniani, vt liquet ex tab. ecclesiæ Antisiod. Omittimus referre innumeros recentiorũ auctorum, qui de ipso scripserunt, cum omnes nonnisi ex prædictis antiquioribus eadem referant."
   }
  ],
  "mr:0801-bonus-et-socii": [
@@ -12381,6 +12463,13 @@
    "text": "Commemoratio sanctorum martyrum. ] Agit de his Eusebius hist. lib. 7. cap. 10. ex epistola sancti Dionysii Episcopi Alexandrini ad Domitium & Didymum scripta, quam idem Eusebius recitat."
   }
  ],
+ "mr:0811-alexander-carbonarius": [
+  {
+   "mark": "d",
+   "after": "Alexandri",
+   "text": "Alexandri Episc.] Eius eminentem philosophiam, & nobile pro Christi fide certamen describit Greg. Nyssenus in vita S. Gregorii Thaumaturgi Episcopi Neocæsareæ."
+  }
+ ],
  "mr:0811-digna": [
   {
    "mark": "i",
@@ -12414,11 +12503,6 @@
    "mark": "c",
    "after": "Susannæ",
    "text": "Susannæ.] Beda, ac ceteri qui supra de eadem agunt hac die. Extant eius Acta, quæ ex vet. manuscrip. Mombrit. inde Sur. edidit tom. 4. Romæ Titulus S. Susannæ in Quirinali hactenus perseuerat, qui & sacrarum virginum S. Bernardi monasterio auctus, & ab Illustrissimo ac Reuerendiss. D. Hieronymo Rusticuccio S.R.E. eiusdem Tit. presbytero Cardinale magnificentissime restitutus & exornatus est. habetur de eo mentio in Concilio primo Rom. sub Symmacho Papa, & Greg. in regist. lib. 9. epist. 22. Traditur illic fuisse olim domus eius, quæ (vt eadem Acta testantur) erat in Regione sexta, in Quirinali, in Vico Mamuri, ante Forum Sallustii; de quibus ipsis locis consule P. Victorem, & Sextum Rufum."
-  },
-  {
-   "mark": "d",
-   "after": "Alexandri",
-   "text": "Alexandri Episc.] Eius eminentem philosophiam, & nobile pro Christi fide certamen describit Greg. Nyssenus in vita S. Gregorii Thaumaturgi Episcopi Neocæsareæ."
   }
  ],
  "mr:0811-taurinus": [
@@ -12569,6 +12653,13 @@
    "text": "Athanasiæ.] Agunt de eadẽ hac die Græci in Menologio. Eius autem Acta descripsit Metaphrastes, quæ Surius retulit in to. 4. hac die. In quibus dum mentio habetur de sancto Ioãnicio, qui ea quæ de ipsa essent futura præuidit, colligi potest, eam vixisse circa tempora Michaelis & Theodoræ Augustorum. Alia fuit eiusdem nominis clarissima femina, quæ Constantinopoli vixit cum sancta Matrona; de qua plura in Actis eiusdem Matronæ apud Lipom. tom. 5. Itemq. eiusdem nominis alis, de qua inferius ad septimum Idus Octobris."
   }
  ],
+ "mr:0814-callistus": [
+  {
+   "mark": "f",
+   "after": "Episcopi",
+   "text": "Callisti Episcopi]. De quo vet. monumenta ecclesiæ Tudertinæ, quæ manuscripta Romam missa accepimus."
+  }
+ ],
  "mr:0814-demetrius": [
   {
    "mark": "d",
@@ -12577,11 +12668,6 @@
   }
  ],
  "mr:0814-eusebius": [
-  {
-   "mark": "f",
-   "after": "Callisti",
-   "text": "Callisti Episcopi]. De quo vet. monumenta ecclesiæ Tudertinæ, quæ manuscripta Romam missa accepimus."
-  },
   {
    "mark": "b",
    "after": "Eusebij",
@@ -13313,11 +13399,6 @@
    "mark": "d",
    "after": "Alexandri",
    "text": "Alexandri.] De eodem hac die Beda; sed mendose legitur, Pergami, loco Bergomi. Vsuard. & Ado pluribus de eo agunt. Extant eius Acta, quæ habet Mombrit. tom. 1."
-  },
-  {
-   "mark": "e",
-   "after": "Hadriani",
-   "text": "Hadriani.] Græci etiam de eodem agunt hac die in Menologio, eiusdemq. passionis agonem describunt, prout etiam hic narratur. De genere Probi Imp. vide Nicephori Episcopi chron. de Episcopis Constantinopolitanis, in Domitio."
   }
  ],
  "mr:0826-felix": [
@@ -13325,6 +13406,13 @@
    "mark": "h",
    "after": "Felicis",
    "text": "Felicis.] Cuius res gestas legimus in manuscr. codice ab eadem ecclesia Romã misso."
+  }
+ ],
+ "mr:0826-hadrianus": [
+  {
+   "mark": "e",
+   "after": "Hadriani",
+   "text": "Hadriani.] Græci etiam de eodem agunt hac die in Menologio, eiusdemq. passionis agonem describunt, prout etiam hic narratur. De genere Probi Imp. vide Nicephori Episcopi chron. de Episcopis Constantinopolitanis, in Domitio."
   }
  ],
  "mr:0826-irenaeus-et-abundius": [
@@ -13594,6 +13682,13 @@
    "text": "Sebbi Regis.] De quo plura Beda de gest. Angl. lib. 4 c. 11. ex quo ceteri."
   }
  ],
+ "mr:0830-bonifatius-et-thecla": [
+  {
+   "mark": "e",
+   "after": "Bonifacij",
+   "text": "Bonifacij & Theclæ.] Plura de ijsdẽ martyribus leguntur in Actis sanct. Duodecim fratrũ, quę apud nos manuscripta asseruãtur."
+  }
+ ],
  "mr:0830-bononius": [
   {
    "mark": "h",
@@ -13602,11 +13697,6 @@
   }
  ],
  "mr:0830-fantinus": [
-  {
-   "mark": "e",
-   "after": "Bonifacij",
-   "text": "Bonifacij & Theclæ.] Plura de ijsdẽ martyribus leguntur in Actis sanct. Duodecim fratrũ, quę apud nos manuscripta asseruãtur."
-  },
   {
    "mark": "f",
    "after": "Fantîni",
@@ -13634,12 +13724,14 @@
    "text": "Gaudentię.] Agũt de eadẽ Beda & Vsuar. quibus adstipulantur vetera manuscripta ..."
   }
  ],
- "mr:0830-sexaginta-martyres-coloniae-sufetanae": [
+ "mr:0830-pammachius": [
   {
    "mark": "c",
    "after": "sancti",
    "text": "Pammachij.] Frequens est mentio de eo apud S Hieronymum, qui ad ipsum scribit epist. 26. 50. & 52. Fuit hic gener S. Paulæ; vxorem enim duxerat Paulinam eius filiam, vt idem S. Hieronymus scribit epist. 27. in epitaphio Paulæ; licet idem S. Hieron. in dicta epist. 26 & in cap. 1. super Amos, in Isai. c. 60. lib. 17. & in proœm. libri 18. per allusionem filium illius appellet Hic, defuncta Paulina vxore, monachismũ amplexus, xenodochium construxit in Portu Romano, de quo idem Hieron. in dict. epist. 26. Primus, inquit, inter monachos, primum sequeris Patriarcham, &c. Erexit quoque Titulum, Pammachij dictum, SS. Ioannis & Pauli. Obiit diẽ, cum vrbs Romana obsideretur a Gothis, vt idem refert in proœm. libri 1. super Ezechielem: est is annus a Christo, secundum Fastos Onuphrij, quadringentesimus decimus. Inter innumeras eius virtutes illa in primis enituit, qua solida firmitate, iunctis manibus cum S. Hieronymo, hæreticos Romam irrepentes impugnabat: meritoq. de eo S. Hieronymus in proœmio in Ioelem: Omni, inquit, arte pugnandi aduersus diabolum dimicas, &c. Eius virtutes retexit etiam epistola 30. ad Oceanum in epitaph. Fabiolæ prope finem."
-  },
+  }
+ ],
+ "mr:0830-sexaginta-martyres-coloniae-sufetanae": [
   {
    "mark": "d",
    "after": "sexaginta",
@@ -13728,6 +13820,13 @@
    "text": "Anna prophetissa.] De qua Luc. Euang. c. 2. vbi S. Ambrosius, qui & in lib. de viduis plura de eadem ; & S. Hieronymus epist. 20. ad Furiam de viduitate seruanda, & alij. Agunt de eadem hac die Beda, Vsuardus, Ado, ac ceteri Latinorum. Græci autem in Menologio ad v. Kal. Septemb."
   }
  ],
+ "mr:0901-constantius": [
+  {
+   "mark": "o",
+   "after": "Constantij",
+   "text": "Constantij Episc.] De eo scribit S. Gregor. lib. 3. dialog. c. 16. vbi demonstrat, eum vixisse temporibus S. Benedicti, rursumq. lib. 3. c. 8. vita functum refert temporibus Ioannis Papę. Scripsit vitam eius Petrus diaconus bibliothecarius Cassinensis (vt testatur Petrus diac. lib. de vir. illustr. monast. Cassin. c. 45.) sed non extat. Alter fuit Constantius, siue Constantinus (vtroque enim nomine appellatum lego) eiusdem ciuitatis Episcopus, qui interfuit Romano Concilio sub Hilaro Papa, & alio sub Felice habito, Boetio Cõsule: cui successit Asterius, qui adfuit Symmacho Papæ aduersus Laurentium schismaticum, vt constat ex Actis Conciliorum Roman. sub Symmacho."
+  }
+ ],
  "mr:0901-iosue": [
   {
    "mark": "c",
@@ -13740,6 +13839,13 @@
    "text": "Gedeonis.] De eodem vna cum Iosue hac die Beda, Vsuardus, Ado, ac ceteri recentiores. Eius Acta narrantur in lib. Iudic. c. 7. & 8 Adnumeratur inter laudatissimos viros a Paulo in epist. ad Hebr. c. 11. De eo Iosephus antiquit. lib. 5. cap. 9. Isidor. de vita & morte Sanctorum."
   }
  ],
+ "mr:0901-lupus": [
+  {
+   "mark": "m",
+   "after": "Lupi",
+   "text": "Lupi Episc.] De quo item Beda, Vsuardus, Ado. Extant eius res gestæ, quas recitat Sur. to. 5. Agunt de eodẽ Sigeb. in chron. anno Domini 616. Vincent. lib 23. c 9. & 10. Petrus in catal. lib. 8. c. 20. Adnumeratur inter Episcopos Senonenses vicesimus ordine in tabulis Democh"
+  }
+ ],
  "mr:0901-priscus": [
   {
    "mark": "f",
@@ -13747,31 +13853,18 @@
    "text": "Prisci.] Agunt de eodem hac die Beda, Vsuard. Ado, & alij; testanturq. simul, hunc fuisse ex numero septuagintaduorũ discipulorũ. Pluribus de eo Petr. in catal. lib 8. c. 17."
   }
  ],
+ "mr:0901-priscus-capuae": [
+  {
+   "mark": "n",
+   "after": "Prisci",
+   "text": "Prisci Episc.] Tam de Prisco, quam de collegis, quorum hic nomina notantur, agitur in vita S. Castrensis Episcopi, quam manuscriptam accepimus. est eius exordium: Textus sacræ historiæ edocet, &c. cuius superius meminimus, cum de ipso egimus. Quisquis fuerit eius auctor, constat quidem inscitia rerum ac temporum, nonnulla veritati contraria admiscuisse, vt ea quæ in eius principio leguntur de Valente & Valentiniano Augustis, quos dicit acerbissime Dei Ecclesiam persecutos esse, eorumq auctoritate hos sanctos Episcopos Africa pulsos, nauiq. cariosæ impositos, ac maris tempestati commissos. De Valente nulla est dubitatio, ipsum Arianorum patronum in Catholicos sæuisse: verum ille Orientale tantum administrauit Imperium, atquè Orientalium tantummodo vexauit Ecclesiam. Valentinianus autem germanus eius, qui eodẽ tempore Occidentalis Imperij regebat habenas, pius fuit & Orthodoxus; sub cuius ditione (haud dubium) erat prouincia Africana. Quæ itaque in persecutione Vuandalica facta sunt, quando etiã S. Quoduultdeus Carthaginensis Episcopus (vt scribit Victor lib. 1, de persec. Vuandal.) vna cum suis, pari discrimine nauibus fractis impositus, pelago creditus est; vel quæ id genus a successoribus Regibus Vuandalorum sunt perpetrata ea ipsa, inconsulte admodum auctor ille Valentiniano atque Valenti Impp. adscripsit. Iure itaque hæc in persecutione Vuandalica facta esse, docet Romanum Martyrologium."
+  }
+ ],
  "mr:0901-regulus": [
   {
    "mark": "l",
    "after": "Regŭli",
    "text": "Reguli.] Extant de eius martyrio Acta manuscripta, in quibus eum fuisse in Africa Episcopum, & in Italiam venientẽ, in Tuscia sub Totila occubuisse martyrio, expressum habetur. In ijsdem in fine hæc descripta habentur : Cuius dignissimam sanctitatem beatus Beda considerans etiam memoriam facere curauit in Martyrologio suo, quod versibus hexametris composuit, dicens: Septembris Regulus tenet, orditurq Kalẽdas, Regulus Antistes, sibi qui caput ense perẽptũ Portauit binis Christo stadij faciente. Cuius relliquias nunc vrbs Lucensis adorat. Hæc ibi. Porro Bedæ quod citatur Martyrologium metrice scriptum, excidisse videtur: nam quæ dicuntur Ephemerides Bedæ, alterius auctoris esse noscuntur."
-  },
-  {
-   "mark": "m",
-   "after": "Lupi",
-   "text": "Lupi Episc.] De quo item Beda, Vsuardus, Ado. Extant eius res gestæ, quas recitat Sur. to. 5. Agunt de eodẽ Sigeb. in chron. anno Domini 616. Vincent. lib 23. c 9. & 10. Petrus in catal. lib. 8. c. 20. Adnumeratur inter Episcopos Senonenses vicesimus ordine in tabulis Democh"
-  },
-  {
-   "mark": "n",
-   "after": "Prisci",
-   "text": "Prisci Episc.] Tam de Prisco, quam de collegis, quorum hic nomina notantur, agitur in vita S. Castrensis Episcopi, quam manuscriptam accepimus. est eius exordium: Textus sacræ historiæ edocet, &c. cuius superius meminimus, cum de ipso egimus. Quisquis fuerit eius auctor, constat quidem inscitia rerum ac temporum, nonnulla veritati contraria admiscuisse, vt ea quæ in eius principio leguntur de Valente & Valentiniano Augustis, quos dicit acerbissime Dei Ecclesiam persecutos esse, eorumq auctoritate hos sanctos Episcopos Africa pulsos, nauiq. cariosæ impositos, ac maris tempestati commissos. De Valente nulla est dubitatio, ipsum Arianorum patronum in Catholicos sæuisse: verum ille Orientale tantum administrauit Imperium, atquè Orientalium tantummodo vexauit Ecclesiam. Valentinianus autem germanus eius, qui eodẽ tempore Occidentalis Imperij regebat habenas, pius fuit & Orthodoxus; sub cuius ditione (haud dubium) erat prouincia Africana. Quæ itaque in persecutione Vuandalica facta sunt, quando etiã S. Quoduultdeus Carthaginensis Episcopus (vt scribit Victor lib. 1, de persec. Vuandal.) vna cum suis, pari discrimine nauibus fractis impositus, pelago creditus est; vel quæ id genus a successoribus Regibus Vuandalorum sunt perpetrata ea ipsa, inconsulte admodum auctor ille Valentiniano atque Valenti Impp. adscripsit. Iure itaque hæc in persecutione Vuandalica facta esse, docet Romanum Martyrologium."
-  },
-  {
-   "mark": "o",
-   "after": "Constantij",
-   "text": "Constantij Episc.] De eo scribit S. Gregor. lib. 3. dialog. c. 16. vbi demonstrat, eum vixisse temporibus S. Benedicti, rursumq. lib. 3. c. 8. vita functum refert temporibus Ioannis Papę. Scripsit vitam eius Petrus diaconus bibliothecarius Cassinensis (vt testatur Petrus diac. lib. de vir. illustr. monast. Cassin. c. 45.) sed non extat. Alter fuit Constantius, siue Constantinus (vtroque enim nomine appellatum lego) eiusdem ciuitatis Episcopus, qui interfuit Romano Concilio sub Hilaro Papa, & alio sub Felice habito, Boetio Cõsule: cui successit Asterius, qui adfuit Symmacho Papæ aduersus Laurentium schismaticum, vt constat ex Actis Conciliorum Roman. sub Symmacho."
-  },
-  {
-   "mark": "p",
-   "after": "Cenomănos sancti",
-   "text": "Victorij Episc.] Agunt de eodem hac die, Beda, Vsuardus, Ado, atque alij recentiores: Successit hic S. Liborio eiusdẽ sedis Episcopo, quintus ordine, seditq. annos 24. mẽses 7. dies 13. vt constat ex tab. eius ecclesiæ, quas descripsit Democh. lib. de sacrif. Missæ. Agit de eo Greg. Turonensis de glor. confess. cap. 56. Claruit temporibus Theodosij Imp. notissimus sancto Martino, vt apparet ex his quæ de eo hic Beda scribit in Martyrologio. Eius Acta manuscrip. Leobi, s extabre, tradit Molanus."
   }
  ],
  "mr:0901-sixtus": [
@@ -13793,6 +13886,13 @@
    "mark": "q",
    "after": "Verênæ",
    "text": "Verenæ] De qua Beda hac die, & alij recentiores. De alia, Verona dicta, virgine sanctimoniali, agit Molanus in Indic. Sanct. Belgij, & in addit. ad Vsuard. ad quartum Kalend. Septembris."
+  }
+ ],
+ "mr:0901-victorius": [
+  {
+   "mark": "p",
+   "after": "sancti",
+   "text": "Victorij Episc.] Agunt de eodem hac die, Beda, Vsuardus, Ado, atque alij recentiores: Successit hic S. Liborio eiusdẽ sedis Episcopo, quintus ordine, seditq. annos 24. mẽses 7. dies 13. vt constat ex tab. eius ecclesiæ, quas descripsit Democh. lib. de sacrif. Missæ. Agit de eo Greg. Turonensis de glor. confess. cap. 56. Claruit temporibus Theodosij Imp. notissimus sancto Martino, vt apparet ex his quæ de eo hic Beda scribit in Martyrologio. Eius Acta manuscrip. Leobi, s extabre, tradit Molanus."
   }
  ],
  "mr:0901-vincentius": [
@@ -14211,6 +14311,13 @@
    "text": "Sozontis. ] Agũt de eodem hac die Græci, eiusq. Acta pluribus prosecutus est Metaphrastes: extant apud Lipom. tom. 6. & Sur. tom. 5. De Pompeiopoli ciuitate, de qua hic agitur; quomodo a Pompeio restituta sit post debellatos pyratas, ijsdemq. incolẽda sit tradita, scribit Dio historiarũ lib. 36."
   }
  ],
+ "mr:0908-ammon-et-socii": [
+  {
+   "mark": "c",
+   "after": "Ammônis",
+   "text": "Ammonis & soc.] Vsuardus de iisdem hac die. Scribit de his Dionysius Alexand. apud Euseb. lib. 6. c. 34. Alius est itẽ Ammon Alexand. qui vna cum Fausto & Didio passus est tempore Diocletiani, de quibus Eusebius lib. 8 c. 25. & Niceph. li. 7. c. 16. Diuersos hos esse inter se, tum diuersitas temporum, tum sociorum ostendit."
+  }
+ ],
  "mr:0908-corbinianus": [
   {
    "mark": "g",
@@ -14230,11 +14337,6 @@
    "mark": "b",
    "after": "sancti Hadriani",
    "text": "Hadriani.] De ipsius natali die superius ad quartum Nonas Martij agitur, vt in Martyrologio Bedæ, & in antiquis manuscript. alijsq. recentioribus notatum vidimus. Vetera aliquot manuscrip. hæc habent ea die, quæ & Molanus ad Vsuard. addidit: Nicomediæ S. Hadriani, cum alijs vigintitribus, cuius corpus Romam translatum est, atque sepultum sexto Idus Septembris, vbi & eius passio est annotata. Hæc in dictis vet. manuscript. licet in vetustioribus Roman. Martyrologijs nulla prorsus mentio de Hadriano ea die habeatur; sed hàc die tantum, quando simul cũ trãslatione & passio olim celebrabatur, Cum autem die translationis Romæ etiam dies natalis eius recoleretur, inde factũ est, vt Nicomediæ poneretur. vnde Adoni & alijs eum secutis errandi manauit occasio, vt putarent hac die translationis sanctum Hadrianum occubuisse martyrio: rectius itaque Maurol. ex prædictis manuscriptis natalem eius passionis diẽ ad quartum Nonas Martij, translationem vero Romam factam hac die ponit. His omnibus subscribit etiã Galesinius in suis Not. ea die Martii. Quod vero Græci, neque hac die, neque ad quartum Nonas Martii, sed septimo Kal. Septemb. agant commemorationem S. Hadriani; existimo eam eos agere diem, qua prima est facta translatio, cum Nicomedia Constantinopolim eius corpus delatum est. Ceterà de Hadriano vide notata superius in natali ipsius die 4. Non. Martii."
-  },
-  {
-   "mark": "c",
-   "after": "Ammônis",
-   "text": "Ammonis & soc.] Vsuardus de iisdem hac die. Scribit de his Dionysius Alexand. apud Euseb. lib. 6. c. 34. Alius est itẽ Ammon Alexand. qui vna cum Fausto & Didio passus est tempore Diocletiani, de quibus Eusebius lib. 8 c. 25. & Niceph. li. 7. c. 16. Diuersos hos esse inter se, tum diuersitas temporum, tum sociorum ostendit."
   }
  ],
  "mr:0908-nativitas-beatae-mariae-virginis": [
@@ -14648,11 +14750,6 @@
    "mark": "e",
    "after": "Maximi",
    "text": "Maximi & soc.] Agunt de ijsdem etiam Græci die sequenti in Menologio."
-  },
-  {
-   "mark": "f",
-   "after": "sancti",
-   "text": "Porphyrij.] Græci itidem agunt de eodem hac die in Menologio, resq. eius gestas paucis complexi sunt."
   }
  ],
  "mr:0915-melitina": [
@@ -14681,6 +14778,13 @@
    "mark": "a",
    "after": "OCTAVA",
    "text": "OCTAVA.] De eadem Beda. Radulphide obser. can. c. 19. recenset eam inter maiores Octauas, cuius Officium Ecclesiasticum ab Innocentio Papa IV. constitutum tradunt. Vide notata superius in ipsa die Natiuitatis eius."
+  }
+ ],
+ "mr:0915-porphyrius": [
+  {
+   "mark": "f",
+   "after": "sancti",
+   "text": "Porphyrij.] Græci itidem agunt de eodem hac die in Menologio, resq. eius gestas paucis complexi sunt."
   }
  ],
  "mr:0915-valerianus": [
@@ -15376,6 +15480,13 @@
    "text": "Aderiti Episc.] Tabulæ ecclesiæ Rauen. de eodem hac die: plura de eodem Rub. lib. 1. histor. Rauen."
   }
  ],
+ "mr:0927-adolphus-et-ioannes": [
+  {
+   "mark": "d",
+   "after": "Adulphi",
+   "text": "Adulphi & Ioannis.] De his item Vsuardus hac die : pluribus S. Eulogius in Memoriali sanctorum lib. 2. c. 8. Fuerunt patria Hispalenses, passiq. sunt anno Domini octingẽtesimo quinquagesimoprimo ; Consule ibidem scholia Moralis."
+  }
+ ],
  "mr:0927-caius": [
   {
    "mark": "g",
@@ -15412,11 +15523,6 @@
   }
  ],
  "mr:0927-florentinus": [
-  {
-   "mark": "d",
-   "after": "Adulphi",
-   "text": "Adulphi & Ioannis.] De his item Vsuardus hac die : pluribus S. Eulogius in Memoriali sanctorum lib. 2. c. 8. Fuerunt patria Hispalenses, passiq. sunt anno Domini octingẽtesimo quinquagesimoprimo ; Consule ibidem scholia Moralis."
-  },
   {
    "mark": "e",
    "after": "sancti",
@@ -15463,11 +15569,6 @@
    "mark": "d",
    "after": "martyrum Marci",
    "text": "Marci & soc. ] De his etiam Græci in Menologio, passosq. tradunt in persecutione Diocletiani Imperatoris."
-  },
-  {
-   "mark": "e",
-   "after": "Maximi",
-   "text": "Maximi. ] De quo etiam vet. manuscript. f Vvenceslai. Apud Adonem de eodem agitur hac die. Eius vitam scriptam esse a Laurentio monacho Cassinensi, auctor est Petrus diac. in lib. de vir. illustr. monast. Cassin. c. 6. Plura de eo legimus in Breviario Polonorũ, in Vuitichindo Saxon. lib. 2. Aenea Silu. hist. Boem. c. 14. 15. Ioan. Dubrau. hist. Boem lib. 4. & 5. quam exscriptam habes apud Sur. to. 7. hac die."
   }
  ],
  "mr:0928-martialis-et-socii": [
@@ -15475,6 +15576,13 @@
    "mark": "c",
    "after": "Martialis",
    "text": "Martialis & soc.] De his item Beda hac die, & alii. Meminit Martialis & sociorum Lucianus in epist. quæ extat apud Cypr. 22. edit. Pamel. De Laurentio, seu Laurentino ipse Cyprianus epist. 34. An iidem sint, haud compertum habeo; cum præsertim de Laurentino agatur iterum."
+  }
+ ],
+ "mr:0928-maximus": [
+  {
+   "mark": "e",
+   "after": "Maximi",
+   "text": "Maximi. ] De quo etiam vet. manuscript. f Vvenceslai. Apud Adonem de eodem agitur hac die. Eius vitam scriptam esse a Laurentio monacho Cassinensi, auctor est Petrus diac. in lib. de vir. illustr. monast. Cassin. c. 6. Plura de eo legimus in Breviario Polonorũ, in Vuitichindo Saxon. lib. 2. Aenea Silu. hist. Boem. c. 14. 15. Ioan. Dubrau. hist. Boem lib. 4. & 5. quam exscriptam habes apud Sur. to. 7. hac die."
   }
  ],
  "mr:0928-privatus": [
@@ -15750,6 +15858,13 @@
    "text": "Maximiani Episc.] Diuersa lectio reperitur, dum in alijs codicibus legitur Episcopus Sagiensis, in alijs Vagaiensis, vel Bagaiensis; quæ lectio magis consentit his quæ de eodem S. Augustinus scribit, dum de ipso agit epist. 50. ad Bonifacium, & lib. 3. c. 43. contra Crescon. Laudat eumdem idẽ S. Augustinus epist. 238. ad Castorium, quod dispendio propriæ sedis, quam sanguine defendisset, sponte cedẽs, consuluisset paci ecclesiæ. Erat Episcopus Bagaiensis nobilissimæ sedis in Numidia, quam licet sibi Donatistæ vendicassent, ex parte tamẽ Catholicorũ Maximianus illi præfuit, vbi crudelissima passus, fuga lapsus, preces obtulit Honorio Imperatori, qui in Donatistas seuerã dedit rescripta; extant l. 4. & 5. ne sanct. baptis. Cod. Theod. & l. 43. & 44. de hæret. eod. Cod. Theod. De eodem, cum sedi cessisset, agitur in Concilio Africano can. 35. quibus iungas eam quã supra citauimus epistolam S. Augustini ad Castorium 238."
   }
  ],
+ "mr:1004-aurea": [
+  {
+   "mark": "h",
+   "after": "Aurêæ",
+   "text": "Aurea] De eadem Vsuardus. Meminit eiusdem S. Audoenus in vita S. Eligij lib. 1. cap. 17. & lib. 2. c. 53. Sigebert. in chron. anno Domini 637. Petrus in catal. lib 9. c. 23. Trithem. de viris illustr. ord. S. Bened. lib. 3. c. 85. Claruit in Gallijs temporibus Dagoberti Regis Franc. circa annũ Domini 630."
+  }
+ ],
  "mr:1004-caius-et-socii": [
   {
    "mark": "e",
@@ -15790,11 +15905,6 @@
    "mark": "g",
    "after": "Petronij",
    "text": "Petronij Episc.] De quo etiam tabulæ ecclesiæ Bononiensis, in quibus scribitur successisse S. Felici, qui in eadem sede in locum S. Eusebij subrogatus est. Ex his autem colligi potest, quibus temporibus S. Petronius eam rexerit ecclesiã. Gennadius de eo agens lib. de vir. illustr. c. 41. scribit obijsse diem Theodosio Iuniore & Valentiniano Augustis regnantibus: in eadem sententia est Ado Viennen. in chron anno 425. Ex his profecto tamquam erronea refelluntur ea quæ non dicam a Prospero, sed potius apud Prosperum errore scripta reperiuntur in chronico, de obitu S. Petronij, Consulibus Merobaude & Saturnino, anno a Christo Domino, vt illic numeratur, 306. vel rectius secundum Fastos Onuphrij 383. anno quinto Theodosij Imp. nam eius anno tertio Syagrio & Eucherio Conss. S. Eusebius Episcopus Bononiensis vna cum S Ambrosio interfuit Concilio Aquileiensi aduersus Arianos, post quẽ constat subrogatum Felicem, cui demum (vt diximus) est substitutus Petronius. Ex his etiam quæ scribit S. Eucherius ad Valerianum, tempora eiusdem S. Petronij explorata habentur; dum ait, suis temporibus claruisse in Italia S. Petronium: ipsa autem Eucherij tempora docent Acta Synodi Arausicanæ, cui interfuit; quæ habita est sub Cyri Consulatu: est enim is annus Domini 441: Petronij genus indicat Gennadius, dum ait, eius parentem, Petronium quoque dictum, Prætorij præfecturam administrasse; quem illum esse opinor, qui Sextus Petronius Probus dictus, gessit Consulatum cum Arcadio: nam & præfecturæ munere functum esse, data ad eum Imperatoris rescripta testantur. Eo etiam magistratu exornatum fuisse S. Petronium de quo agimus, affirmare videtur S Eucherius, dum ait ex plenissima mundanæ potestatis sede ad Episcopatum euectum esse. Præfecturam Prætorij fuisse amplissimam dignitatem, pluribus docet Cassiod. in proœmio Variarum. Porro si genus antiquã familiæ Petroniæ repetas, eam humili loco natam ad equestrem ordinem peruenisse, scribit Valer. Max. lib 4. c. 6. S. Petronij res gestæ extant apud Sur. tom 5. conscriptæ a Galesinio, vt ipse testatur, licet Sigonij nomine inscribantur; quem quidem de ecclesia Bononiensi egregium volumen scripsisse scimus. Multa a Vincentio, Antonino, & Petro in catalogo de S. Petronio scripta sunt, quæ censura & expurgatione non leui indigẽt. Vixit iisdem fere temporibus in Gallijs eiusdem nominis Episcopus, vt apparet ex Synodica Gallorum Episcoporum ad S Leonem Romanum Pontificem, & ex eius epistola 52. ad eos rescripta, Consulibus Herculano & Asporatio, anno Domini 452. Fortasse ille, ad quem extant duæ Sidonij Apollinaris epistolæ."
-  },
-  {
-   "mark": "h",
-   "after": "Aurêæ",
-   "text": "Aurea] De eadem Vsuardus. Meminit eiusdem S. Audoenus in vita S. Eligij lib. 1. cap. 17. & lib. 2. c. 53. Sigebert. in chron. anno Domini 637. Petrus in catal. lib 9. c. 23. Trithem. de viris illustr. ord. S. Bened. lib. 3. c. 85. Claruit in Gallijs temporibus Dagoberti Regis Franc. circa annũ Domini 630."
   }
  ],
  "mr:1004-petrus": [
@@ -16430,14 +16540,16 @@
  ],
  "mr:1014-fortunatus": [
   {
-   "mark": "f",
-   "after": "Gaudentij",
-   "text": "Gaudentij Episcopi.] Eius Acta ex priscis monumentis accepta refert Petrus in catal. lib. 9. cap. 63. Vixit temporibus Constantii Imperatoris Ariani, cuius iussu in damnationem vocis Consubstantialis coactum est Conciliabulum Ariminense; cum eidem ciuitati idem Gaudentius tunc præesset Episcopus; qui pro viribus restitit, eorumque Acta, soluta iam Synodo rescidit, quam ob causam a Proconsulis militibus trucidatus est."
-  },
-  {
    "mark": "g",
    "after": "Fortunati",
    "text": "Fortunati Episcopi.] De eodem hac die Vsuardus. De eo S. Greg lib. 1. dialog. c. 10. Claruit temporibus Iustiniani Imp. cum Totila Rex Gothorum Italiam vastaret. Agitur Tuderti de Fortunato pridie kal. Iulij, quo die ciuitatem Fortunati meritis a Gothis liberatam tradunt. De eius reliquiis translatis in Gallias tempore Othonis Imp. scribit Sigebert. in chron. anno Domini 969."
+  }
+ ],
+ "mr:1014-gaudentius": [
+  {
+   "mark": "f",
+   "after": "Gaudentij",
+   "text": "Gaudentij Episcopi.] Eius Acta ex priscis monumentis accepta refert Petrus in catal. lib. 9. cap. 63. Vixit temporibus Constantii Imperatoris Ariani, cuius iussu in damnationem vocis Consubstantialis coactum est Conciliabulum Ariminense; cum eidem ciuitati idem Gaudentius tunc præesset Episcopus; qui pro viribus restitit, eorumque Acta, soluta iam Synodo rescidit, quam ob causam a Proconsulis militibus trucidatus est."
   }
  ],
  "mr:1014-rusticus": [
@@ -16452,6 +16564,13 @@
    "mark": "e",
    "after": "Saturnini",
    "text": "Saturnini & Lupi.] Beda tantum de Lupo, sed in vet. manuscrip. de vtroque agitur; sic & recentiores etiam."
+  }
+ ],
+ "mr:1015-agileus": [
+  {
+   "mark": "c",
+   "after": "Agilêi",
+   "text": "Agilei.] Possidius in Indic. cap 9. meminit de tractatu S. Augustini habito in natali die S. Agilei. De basilica sub nomine S. Agilei est clara memoria in vita S. Fulgẽtij Episcopi Rusp. apud Sur. tom. 1. S. Gregorius Papa dono accepit huius martyris sacras reliquias a Dominico Episcopo Carthaginẽsi. Extat de his epistola eiusdem S. Gregorij in regist. lib. 10. epist. 1."
   }
  ],
  "mr:1015-antiochus": [
@@ -16487,11 +16606,6 @@
    "mark": "h",
    "after": "Heduuigis",
    "text": "Heduuigir.] Huius res præclare gestæ extant descriptæ apud Sur. to. 5. Chromer. lib. 7. & alios. Migrauit ex hac vita anno a Christo Domino 1243. & relata est inter Sanctos anno 1267. translatum est autem corpus eius anno sequenti."
-  },
-  {
-   "mark": "i",
-   "after": "Theclæ",
-   "text": "Thecla.] Habetur mentio de eadem in Actis S. Bonifacij Episcopi Moguntini apud Sur. tom. 5. die 5. Iunij, & Trithem. de viris illustr. ord. sancti Benedicti lib. 3. cap. 172."
   }
  ],
  "mr:1015-severus": [
@@ -16501,16 +16615,18 @@
    "text": "Seueri Episc.] Adnumeratur in tab. Episc. Treuir. xxix. eius sedis Episcopus. Plura de eo Constantius in vita S. Germani Episcopi Antis. lib. 2. c. 1. Beda de gest. Anglor. cap. 1. & Acta S. Lupi Trecensis Episcopi in fine. Claruit temp. Honorij & Valentiniani Impp."
   }
  ],
+ "mr:1015-thecla": [
+  {
+   "mark": "i",
+   "after": "Theclæ",
+   "text": "Thecla.] Habetur mentio de eadem in Actis S. Bonifacij Episcopi Moguntini apud Sur. tom. 5. die 5. Iunij, & Trithem. de viris illustr. ord. sancti Benedicti lib. 3. cap. 172."
+  }
+ ],
  "mr:1015-trecenti-martyres-coloniae": [
   {
    "mark": "b",
    "after": "sanctorum",
    "text": "Trecentorum Mart.] De his item Beda, Vsuardus, Ado, & alij; licet in eorum numero ab inuicem discrepent. Agit de ijsdem martyribus Gregorius Turon. de glor. martyrum cap. 62."
-  },
-  {
-   "mark": "c",
-   "after": "Agilêi",
-   "text": "Agilei.] Possidius in Indic. cap 9. meminit de tractatu S. Augustini habito in natali die S. Agilei. De basilica sub nomine S. Agilei est clara memoria in vita S. Fulgẽtij Episcopi Rusp. apud Sur. tom. 1. S. Gregorius Papa dono accepit huius martyris sacras reliquias a Dominico Episcopo Carthaginẽsi. Extat de his epistola eiusdem S. Gregorij in regist. lib. 10. epist. 1."
   }
  ],
  "mr:1016-ambrosius": [
@@ -16599,11 +16715,6 @@
  ],
  "mr:1017-mamelta": [
   {
-   "mark": "f",
-   "after": "Victoris",
-   "text": "Victoris Episcopi.] Beda de ratione temp. c. 49. appellat hunc sanctissimum & doctissimum virum; eiusdem meminit Ado in chron. anno 527. & Marian. Scot. anno 560. Vixit temporibus Iustiniani Imp. confutauitq. Paschalem Cyclũ Victorij, seu Victorini Aquitani; vt idem Beda testatur: ex quibus omnibus errare conuincitur Trithem. qui eum vixisse scribit anno 480. sub Zenone Imperatore. Errat & Sigebert. qui de vir. illustr. c. 20 ipsum Victorinum Aquitanum, iubente Honorio Papa, scripsisse testatur: nam iubente Hilaro Papa scripsit, vt tradit Gẽnadius de viris illustr. c. 88. Victoris Capuani Cyclus receptus ac cõprobatus fuit in quarta Synodo Aurelianensi canon primo & secundo. Extat eiusdem Victoris præfatio in Consonantiam Euangel. Tatiani Alexandrini."
-  },
-  {
    "mark": "b",
    "after": "Victoris",
    "text": "Victoris & soc. ] Petrus in catalog lib. 11. vet. manuscrip. & alij recentiores de ijsdem hac die."
@@ -16612,6 +16723,13 @@
    "mark": "c",
    "after": "Mameltæ",
    "text": "Mameltæ.] Græci autem de Mamelta agunt in dicto Menologio ad tertium Nonas Octobris, vbi & eius res gestas paucis describunt, prout hic etiam enarrantur."
+  }
+ ],
+ "mr:1017-victor-et-socii": [
+  {
+   "mark": "f",
+   "after": "Episcopi",
+   "text": "Victoris Episcopi.] Beda de ratione temp. c. 49. appellat hunc sanctissimum & doctissimum virum; eiusdem meminit Ado in chron. anno 527. & Marian. Scot. anno 560. Vixit temporibus Iustiniani Imp. confutauitq. Paschalem Cyclũ Victorij, seu Victorini Aquitani; vt idem Beda testatur: ex quibus omnibus errare conuincitur Trithem. qui eum vixisse scribit anno 480. sub Zenone Imperatore. Errat & Sigebert. qui de vir. illustr. c. 20 ipsum Victorinum Aquitanum, iubente Honorio Papa, scripsisse testatur: nam iubente Hilaro Papa scripsit, vt tradit Gẽnadius de viris illustr. c. 88. Victoris Capuani Cyclus receptus ac cõprobatus fuit in quarta Synodo Aurelianensi canon primo & secundo. Extat eiusdem Victoris præfatio in Consonantiam Euangel. Tatiani Alexandrini."
   }
  ],
  "mr:1018-asclepiades": [
@@ -16966,6 +17084,13 @@
    "text": "Aretæ & soc.] De his item hac die Græci in Menologio; quorum Acta Metaphrastes exacte describit: extant apud Lipom. to. 6. & Sur. tom. 5. De ijsdem Niceph. hist. lib. 17. cap. 16. Zonar. in Iustino Imp. & Cedren. anno 5. eiusdem. De Homeritis & eorum Regibus Christianis, quibuscum Iustinianus aduersus Persas fœdus inire studuit, pluribus agit Procop. lib. 1. de bello Persico."
   }
  ],
+ "mr:1024-evergislus": [
+  {
+   "mark": "c",
+   "after": "Euergisli",
+   "text": "Euergisli Episcopi.] Agunt de eodẽ Ado, & alij recentiores. Eius Acta ex veteribus codicibus edidit Sur. tom. 5. Successit hic S. Seuerino, vt constat ex tab. eius ecclesiæ, & ex vita ipsius."
+  }
+ ],
  "mr:1024-felix-et-socii": [
   {
    "mark": "a",
@@ -16995,11 +17120,6 @@
   }
  ],
  "mr:1024-proclus": [
-  {
-   "mark": "c",
-   "after": "Euergisli",
-   "text": "Euergisli Episcopi.] Agunt de eodẽ Ado, & alij recentiores. Eius Acta ex veteribus codicibus edidit Sur. tom. 5. Successit hic S. Seuerino, vt constat ex tab. eius ecclesiæ, & ex vita ipsius."
-  },
   {
    "mark": "d",
    "after": "Procli",
@@ -17032,7 +17152,9 @@
    "mark": "h",
    "after": "Frontônis",
    "text": "Frontonis Episc.] Beda, Vsuard. & alij. Meminit eiusdẽ Petrus Cluniac.lib.1.epist.2. & Petrus in catalog.lib 9. cap. 109. Extat de eodem epigramma Bonad.Santon.lib.3.monod.26."
-  },
+  }
+ ],
+ "mr:1025-gaudentius": [
   {
    "mark": "i",
    "after": "Gaudentij",
@@ -17611,11 +17733,6 @@
  ],
  "mr:1103-malachias": [
   {
-   "mark": "e",
-   "after": "Vuenefrîdæ",
-   "text": "Vuenefridæ.]Huius Acta Rupertus abbas Salopiensis conscripsit, quæ recitat Sur. in to.6. In catalog.scrip. Britan. traduntur eadem sb Elerio Cambrio scriptis mandata. Agit de eadem Molanus in addit.ad Vsuard. hac die. Quæ autem in ijsdem Actis de perẽni fonte & miraculis illic fieri solitis describuntur, maiora his accepta fidelissimo teste oculato Renerendiss. D. Thoma Episcopo Asaphensi, Romani Pontificis in obeundis Episcopalibus functionibus Suffraganeo, vitæ sanctitate, fidei confessione, atque doctrina conspicuo, nuper Romæ dolore omnium optimorum ex humanis sublato."
-  },
-  {
    "mark": "f",
    "after": "Malachîæ",
    "text": "Malachiæ Episcopi. ] Scripsit eius vitæ Acta S. Bernardus, qui eũdem viuentẽ, ac postea defunctum mirifice coluit. Extant eiusdem ad eumdem epist. 315. 316. & 317. & sermo in eiusdem festiuitate. Eccessir e vita (vt idem testatur) anno Domini millesimo centesimo quadragesimooctauo, quarto Nonas Nouembris: ob commemorationem autem defunctorum translata est eius celebritas in hanc diem, quo solemnius agi posset."
@@ -17654,6 +17771,13 @@
    "mark": "d",
    "after": "Valentini",
    "text": "Valentini & Hilarij.] Horum martyrum Acta manuscripta accepimus ab ecclesia Viterbiensi, vbi eorum capita cathedralis ecclesia magna veneratione conseruat."
+  }
+ ],
+ "mr:1103-wenefrida": [
+  {
+   "mark": "e",
+   "after": "Vuenefrîdæ",
+   "text": "Vuenefridæ.]Huius Acta Rupertus abbas Salopiensis conscripsit, quæ recitat Sur. in to.6. In catalog.scrip. Britan. traduntur eadem sb Elerio Cambrio scriptis mandata. Agit de eadem Molanus in addit.ad Vsuard. hac die. Quæ autem in ijsdem Actis de perẽni fonte & miraculis illic fieri solitis describuntur, maiora his accepta fidelissimo teste oculato Renerendiss. D. Thoma Episcopo Asaphensi, Romani Pontificis in obeundis Episcopalibus functionibus Suffraganeo, vitæ sanctitate, fidei confessione, atque doctrina conspicuo, nuper Romæ dolore omnium optimorum ex humanis sublato."
   }
  ],
  "mr:1104-amantius": [
@@ -17738,12 +17862,14 @@
    "text": "Dominatoris Episcopi.] De eodem tabulę ecclesiæ Brixian. meminitq. eiusdem Rampertus eiusdem ecclesiæ Episcopus in sermone de translatione sancti Philastrij. Numeratur hic decimusquartus post S. Philastrium Episcopus ecclesiæ Brixianæ."
   }
  ],
- "mr:1105-felix-et-eusebius": [
+ "mr:1105-elisabeth": [
   {
    "mark": "b",
    "after": "sanctæ",
    "text": "Elizabeth.] Iungitur Zachariæ marito suo Elizabeth, non ea ratione quod vna eademq. die (quod sciatur) vterque migrarit è corpore; sed cũ eius natalis certæ diei ignorantia aliquando fuerit eius memoria prætermissa; consultius visum est, in commemoratione sanctorum eam cõiungere viro suo: nefarium enim est existimatum, sanctissimã feminam, præconio Euangelij celebratam, illiberaliter nimis esse silẽtio prætermissam; quam sancti Patres præclarissimis laudibus sunt prosecuti, tum qui Lucæ caput primum sunt interpretati, tum etiam qui de Ioannis Baptistæ eius filij natali, vel Dei genitricis visitatione pro concione dixere. Quæ vero ad historiam de ipsa pertinent, collegimus in Annalium tomo primo."
-  },
+  }
+ ],
+ "mr:1105-felix-et-eusebius": [
   {
    "mark": "c",
    "after": "Felicis",
@@ -18100,11 +18226,6 @@
  ],
  "mr:1111-athenodorus": [
   {
-   "mark": "c",
-   "after": "Valentini",
-   "text": "Valentini & soc.] De ijsdem tab. ecclesiæ Rauen. Ado, & alij pluribus, Hieronym. Rub. hist. Rauen. lib. 2."
-  },
-  {
    "mark": "d",
    "after": "Athenodôri",
    "text": "Athenodori.] Agunt Græci de eodem in Menologio ad septimum Idus Decembris, ibiq. eius martyrium paucis comprehensum describitur."
@@ -18136,6 +18257,13 @@
    "mark": "g",
    "after": "Mennæ",
    "text": "Mennæ.] Scribit de eo S. Gregor. Papa lib. 3. dialogorum cap. 26. ex quo Sigebert. in chron. anno 579."
+  }
+ ],
+ "mr:1111-valentinus-et-socii": [
+  {
+   "mark": "c",
+   "after": "Valentini",
+   "text": "Valentini & soc.] De ijsdem tab. ecclesiæ Rauen. Ado, & alij pluribus, Hieronym. Rub. hist. Rauen. lib. 2."
   }
  ],
  "mr:1111-veranus": [
@@ -18315,14 +18443,16 @@
  ],
  "mr:1114-veneranda": [
   {
-   "mark": "c",
-   "after": "Venerandi",
-   "text": "Venerandi.] Eius martyrij Acta summatim complexa recitat Petrus in catal. lib. 10. cap. 60. Fuit eiusdem nominis Venerandus Episcopus Aruernẽsis, de quo Greg. Turon. histor. lib. 2. cap. 13. & de glor. confess. cap. 35. 36. & 37. poniturq. octauus eius sedis Episcopus in tabulis Democh."
-  },
-  {
    "mark": "d",
    "after": "Venerandæ",
    "text": "Venerandę.] Recenset eius res gestas idẽ Petrus in catal. lib. 10. cap. 61."
+  }
+ ],
+ "mr:1114-venerandus": [
+  {
+   "mark": "c",
+   "after": "Venerandi",
+   "text": "Venerandi.] Eius martyrij Acta summatim complexa recitat Petrus in catal. lib. 10. cap. 60. Fuit eiusdem nominis Venerandus Episcopus Aruernẽsis, de quo Greg. Turon. histor. lib. 2. cap. 13. & de glor. confess. cap. 35. 36. & 37. poniturq. octauus eius sedis Episcopus in tabulis Democh."
   }
  ],
  "mr:1115-eugenius": [
@@ -19164,6 +19294,13 @@
    "text": "ANDREAS Apostolus.] Latinorum omnia Martyrologia, & Græcorum Menologia de eodem agunt hac die. Specialis mentio fit de festiuitate S. Andreæ in Capitular. Regũ Franc. lib. 1. c. 104. lib. 2. c. 15. & lib. 6. cap. 185. necnon in Concil Mogunt. sub Carolo Magno cap. 36. Acta passionis eius, quæ feruntur nomine ecclesiæ Achaiæ, a Metaphraste descripta, recitat Lipom. tomo 1. & Sur. tom. 6. ex quibus Remig. Antisiod. in Psal. 21. & 40 S Bernard. in serm. de S. Andrea, Lanfranc. contra Bereng. Iuo Carnoten. & alij mutuati sunt exempla. Irrepsit tamen in ea Græculus ille de Spiritu sancto, quod a Patre procedat, & in Filio permaneat: sane quidem in antiquis exemplaribus manuscriptis ea verba non habentur, nec in editis a Mombrit. tom. 1. vit. sanct. De eiusdem Actis, deq. libello miraculorũ eius extat scripta historia in passionibus Apostolorum; quibus illa addita videntur a Manichæis, quæ S. Augustinus recitat lib. de fide contra Manichæos cap. 38. ea enim a prædictis Actis procul abhorrent. Quod autem ad eius prædicationem spectat: in Scythiam profectum, illisq. gentibus annunciasse Euãgelium, scribit Origen. in Genes. lib. 3. cap. 1. Sophronius apud Hieron. de script. Eccles. addit non tantum Scythis, sed & Sogdianis, Saccis, atque etiam Aethiopibus verbũ Dei prædicasse: idq. confirmat Doroth. in Synopsi, & auctor de vit. & mort. sanct. apud Isid. De Achaia ac Scythia meminit Niceph. hist. lib. 2. cap. 39 qui & lib. 8. cap. 6. ait eumdem peragrasse Cappadociam, Galatiam, & Bithyniam vsque ad mare Euxinum. Greg. Nazianz in orat. ad Arian. addit Epirum: Græcis autem annunciasse Euangelium, scribit Chrysost. in orat. in duodecim Apost. eumq. post Petrum consummasse martyrium tradit: sic enim accipias illa eiusdem Ioannis Chrysostomi verba in sermone de S. Andrea, quem recitat Metaphrast. habesq. eum apud Sur. tom. 6. quibus ait: Posterior Petro in vitam ingressus est Andréas, & prior Petrum ad Euangelium allexit, &c. Quæ verba nonnulli perperam intelligentes, dixerunt Petrũ ætate maiorem fuisse Andream: at vero Andream Petro seniorem fuisse, testatur sanctus Epiphan. in Panar. hæres. 51. De prædicatione Andreæ in Achaia meminit S. Hieronymus epist. 148. ad Marcellum in fine. Acta Apostolorum Andreæ nomine reijciuntur in primis ab Innocentio Papa in epist. ad Exuperium in fine, a Philastrio de hæres. cap. 89. ac demum a Gelasio in cap. sancta Romana. distinct. 15. De eius martyrio apud Patras meminit sanctus Paulinus Episcopus Nolan. in Natal. 9. sancti Felicis. Extat etiam elegãs carmen sapphicum sancti Damasi Papæ de Andrea crucem passo: habetur in Collectaneis poetarum Christianorum. Et ne quid de antiquis monumentis lateat, S. Petrus Chrysologus in serm. 133. de S. Andrea hæc habet in fine: Petrus namque crucem, arborem conscendit Andreas, &c. quasi significare velit, ipsum arbori fuisse affixum, illicq. subijsse supplicium crucis. id quidem videtur acceptum e commentariolo Hippolyti martyris, quod manuscript. Græce extat apud Card. Syrletum; vbi hæc legũtur de Andrea: Crucifixus est Patris in Achaia ad arborem oliuæ rectus. De eodem Apostolo consule quæ superius in eius corporis translatione diximus 9. Maij."
   }
  ],
+ "mr:1130-castulus-et-euprepis": [
+  {
+   "mark": "b",
+   "after": "Castûli",
+   "text": "Castuli & Euprepitis.] Agũt de ijsdẽ Beda, ac recentiores, consentiuntq. vet. manuscrip."
+  }
+ ],
  "mr:1130-constantius": [
   {
    "mark": "f",
@@ -19179,11 +19316,6 @@
   }
  ],
  "mr:1130-maura": [
-  {
-   "mark": "b",
-   "after": "Castûli",
-   "text": "Castuli & Euprepitis.] Agũt de ijsdẽ Beda, ac recentiores, consentiuntq. vet. manuscrip."
-  },
   {
    "mark": "c",
    "after": "Mauræ",
@@ -19230,11 +19362,6 @@
    "mark": "i",
    "after": "Castritiâni",
    "text": "Castritiani Episcopi.] Tabule eccles. Mediolan. & Galesin. hac die, qui se eius vitam contexuisse, & Ambrosiano Breuiario adscripsisse testatur."
-  },
-  {
-   "mark": "k",
-   "after": "Vrsicîni",
-   "text": "Vrsicini Episcopi.] Tabulę eccles. Brixiensis, item Galesin. qui de eodem agit hac die; sed in tabulis Remperti, quas citat Vrsicinus, desideratur, sicut & alij plerique, qui post illos eidem præfuerunt ecclesiæ."
   }
  ],
  "mr:1201-diodorus-et-marianus": [
@@ -19291,6 +19418,13 @@
    "mark": "g",
    "after": "Proculi",
    "text": "Proculi Episcopi.] De eodem Vsuardus, & alij recentiores; consentiuntq. vet. manuscript. In codice autem S. Cyriaci omnium vetustissimo sic habetur: Interamne, siue Narnis, natalis S. Proculi Episcopi & martyris. Hæc ibi: quæ quidem duplex lectio ambiguitatem de ea re tunc fuisse significat. Si etenim assentiamur Petro in catalog. libro 1. cap. 15. Interamnensem fuisse Episcopum affirmare oportet: sed cum miscet eum cum S. Valentino Episcopo & martyre; cum alio Proculo Interamnensi eum confundere videtur, de quo supra xviij. kalend. Maij. De Proculo Narniensi mentio habetur in Actis Abundij & Carpophori apud Mombrit. to. 1. sed ea erroribus scatent. In tabulis ecclesiæ Rauen. agitur hac die de S. Proculo Episcopo Rauẽnate, qui successit sancto Calocero, sextusq. numeratur eius sedis Episcopus, de quo Hieron. Rub. hist. Rauen. lib. 1."
+  }
+ ],
+ "mr:1201-ursicinus": [
+  {
+   "mark": "k",
+   "after": "Vrsicîni",
+   "text": "Vrsicini Episcopi.] Tabulę eccles. Brixiensis, item Galesin. qui de eodem agit hac die; sed in tabulis Remperti, quas citat Vrsicinus, desideratur, sicut & alij plerique, qui post illos eidem præfuerunt ecclesiæ."
   }
  ],
  "mr:1202-bibiana": [
@@ -19393,11 +19527,6 @@
  ],
  "mr:1203-claudius": [
   {
-   "mark": "a",
-   "after": "Sophonîæ",
-   "text": "SOPHONIAS Propheta.] Agunt de eodem hac item die Græci in Menologio, Epiphan. de vit. & interit. Proph. c. 19. auctor de vit. & mort. sanctor. c. 48. apud Isidor. & Doroth. in Synopsi cap. 9."
-  },
-  {
    "mark": "b",
    "after": "martyrũ Claudij",
    "text": "Claudy & soc.] Beda, Vsuardus, Ado, ac ceteri recentiores hac die. Eorum res gestæ iunctæ habentur Actis sanctorum Chrysanthi & Dariæ apud Surium tomo 5. die 25. Octobris, & Petr. in catalogo lib. 1. c. 23."
@@ -19429,6 +19558,13 @@
    "mark": "g",
    "after": "Miroclêtis",
    "text": "Mirocletis.] Tabulæ ecclesiæ Mediolan. Cláruit temporibus Constantini, & Melchiadis Papæ; interfuitq. Rom. Conc. in causa Cæciliani Episcopi Carthaginensis, vt scribit Optatus Mileuit. lib. 1. contra Parmen. Ex quo erroris arguitur chron. Mediolan. vbi ponitur Mirocles obiisse diem anno Domini 268. nam ex Optati testimonio reperitur sedisse iudex in causa Cæciliani, anni 313. Meminit eiusdẽ S. Ambrosius in Auxentium: Hic S. Anathalonis eiusdem ciuitatis Episcopi memoriam exornauit, imaginemq. eius addidit, & epigrammate laudauit. Extabant hæc antiquitatis monumenta in ecclesia sancti Geruasij. Sed de his superius actum est in Anathalone, die 25. Septembris. Ex prosapia S. Mirocletis Episcopi Mediol. ducere originem sanctum Epiphanium Episcopum Ticinensem, scribit Ennodius Ticinensis in rebus gestis eiusdem Epiphanij."
+  }
+ ],
+ "mr:1203-sophonias-propheta": [
+  {
+   "mark": "a",
+   "after": "Sophonîæ",
+   "text": "SOPHONIAS Propheta.] Agunt de eodem hac item die Græci in Menologio, Epiphan. de vit. & interit. Proph. c. 19. auctor de vit. & mort. sanctor. c. 48. apud Isidor. & Doroth. in Synopsi cap. 9."
   }
  ],
  "mr:1204-anno": [
@@ -19864,7 +20000,7 @@
  "mr:1211-victoricus-et-fuscianus": [
   {
    "mark": "c",
-   "after": null,
+   "after": "Victorici",
    "text": "Victorici & Fusciani.] Agunt de his ijdem qui supra, Beda, & alij. Eorum Acta Petrus in catal. lib. 1.cap.57. paucis describit, eademq. Mombritius recitat tom. 1."
   },
   {
@@ -19945,11 +20081,6 @@
  ],
  "mr:1214-agnellus": [
   {
-   "mark": "g",
-   "after": "Pompeij",
-   "text": "Pompeij Episc.] Tabulæ eccles. Papien. vnde & eius Acta manuscripta accepimus: plura de eodem in Actis S. Syri eiusdem ecclesiæ Episcopi."
-  },
-  {
    "mark": "h",
    "after": "Agnelli",
    "text": "Agnelli abb.] Tabulæ ecclesiæ Neapol. vbi religiosissime colitur. Extant eius Acta edita a Paulo Regio; habemus & nos manuscrip. in nostra bibliotheca, vbi & quædam a viro sancto miracula edita leguntur. Claruit temporibus Gregorij Papæ & Mauritij Imp. cum Neapolitanæ ecclesiæ præesset Fortunatus, de quo est frequens mentio in registro S. Gregorij Papæ. Legi & libellum miraculorum eius, cum essem Neapoli."
@@ -19988,6 +20119,13 @@
    "mark": "d",
    "after": "Nicasij",
    "text": "Nicasij Episcopi, Eutropiæ, & soc.] De his Vsuardus, Ado, consentiuntq. vet. manuscrip. Acta autem ipsorum ex antiquis codicibus edidit Surius to.7. Agunt de his Otho Frising. lib.4. c.28 Sigebert. in chron. anno Domini 453. Nicol. Olaus in Attila, Vincent. Spec. hist. lib.21. cap.37. Petrus in catalog. lib.1. cap.69. & Mombrit. to.2. quorum alij passos hos tradunt temporibus Vuandalicæ cladis, alij autem sub Atrila Hunnorum Rege. De Basilica S. Nicasij Rhemis agit Hincmarus in vita S. Remigij."
+  }
+ ],
+ "mr:1214-pompeius": [
+  {
+   "mark": "g",
+   "after": "Pompeij",
+   "text": "Pompeij Episc.] Tabulæ eccles. Papien. vnde & eius Acta manuscripta accepimus: plura de eodem in Actis S. Syri eiusdem ecclesiæ Episcopi."
   }
  ],
  "mr:1214-spiridion": [
@@ -20088,12 +20226,14 @@
    "text": "Valentini & soc.] De his Beda, Ado, & alij recentiores: ipsorum martyrium narrat Hieron. Rub. hist. Rauen. lib.2."
   }
  ],
- "mr:1217-ignatius": [
+ "mr:1217-begga": [
   {
    "mark": "e",
    "after": "Bèggæ",
    "text": "Begga vidua.] Tabulæ eius ecclesiæ, quibus Molanus hac die in addit. ad Vsuard. & pluribus in Indic. Sanct. Belg. vbi hæc scribit: Sancta Begga matrona patrem habuit Pipinum primum Ducem Brabantiæ & Maiorem domus in Austrasia, germanam vero sororẽ beatissimam Gertrudem. Hæc, Ansigiso viro suo perempto, Romam adijt dominam mundi & Ecclesiæ caput. Vnde cùm benedictione Papæ, & donata reliquijs reuersa, in honorem septem ecclesiarum Romanarum; Andanæ ad Mosam cœnobium Septem ecclesiarum fundauit, &c. ibi enim vixit regularibus disciplinis; & sanctitate pollens, hac die migrauit ad Dominum. Voluimus hæc ad verbum descripsisse, non tantum vt eius genus & sanctitas innotesceret, sed vt celeberrimum ac vetustissimum cultum septem Romæ ecclesiarum esse constaret. De eadem Sigebert. in chron. anno Domini 686. De eius autẽ obitu anno 698. agit."
-  },
+  }
+ ],
+ "mr:1217-ignatius": [
   {
    "mark": "f",
    "after": "translatio",
@@ -20296,6 +20436,13 @@
    "text": "Glycerij.] De quo Græci in Menologio. Meminit eiusdem Niceph. hist. lib. 7. cap 6. & Metaphrast. in Actis sanctorum Indes & Domnæ, die 26. Decembris. apud Lipom. tom. 5. & Sur. tom. 4."
   }
  ],
+ "mr:1221-ioannes-et-festus": [
+  {
+   "mark": "b",
+   "after": "Ioannis",
+   "text": "Ioannis & Festi.] De ijsdem hac die Beda, Vsuardus, Ado, & alij agunt."
+  }
+ ],
  "mr:1221-severinus": [
   {
    "mark": "f",
@@ -20304,11 +20451,6 @@
   }
  ],
  "mr:1221-themistocles": [
-  {
-   "mark": "b",
-   "after": "Ioannis",
-   "text": "Ioannis & Festi.] De ijsdem hac die Beda, Vsuardus, Ado, & alij agunt."
-  },
   {
    "mark": "c",
    "after": "Themistŏclis",
@@ -20465,6 +20607,13 @@
    "text": "VIGILIA Natiuitatis Domini.] De ea Beda, Vsuardus, Ado, Gregorius Turonensis ante hos omnes de gestis Franc. lib. 10. c. 31. Amalarius de Ord. antiph. c. 14. Microlog. c. 32. ac demum ceteri qui agunt de offic. Ecclesiast. S. Augustinus presbyterũ sibi subditum ab officio presbyterij remouendũ putauit, quod inter alia (vt ait) Vigilia Natalis Domini, qua omnes ecclesiæ solent ieiunare apud famosam mulierẽ prandere ac cœnare præsumpsisset. Scribit de his ad Xantippum Numidiæ Episcopũ epist. 236. De tremendo iudicio Dei in Eparchiũ presbyterum eamdem Vigiliam profanantem scribit Gregorius Turon. de glor. mart. c. 86. vbi & de seuera animaduersione in se ipsum diuinitus immissa, cum se paulisper somno dedisset, subdit exemplum. Ea legant, attendantq. qui sacratissima illa nocte ad iniquitates & peccata vigilant."
   }
  ],
+ "mr:1225-anastasia": [
+  {
+   "mark": "d",
+   "after": "Anastasiæ",
+   "text": "Anastasiæ.]De eadem Beda,ac ceteri Latinorum,Græci autem in Menolog. ad xj.Kalend. Ianuar. Eius martyrij Acta a Metaphr. edita descripserunt Lipom.tom.5. & Sur. tomo 6. Alia paulo diuersa in antiq.cod manuscrip. habemus, quorũ exordiũ est: Prætextati viri illustris, &c Eadem Mombrit. to.1. Præsefert eorũ Titulus Anastasiũ Bibliothecarium auctorẽ, de cuius præfatione in eadẽ Acta meminit Molan. in addit. ad Vsuardũ. legimus eamdẽ in dicto codice, quæ sic incipit:Omnia quæ a sanctis gesta sunt,&c.Duas fuisse Anastasias, superius diximus:quarũ senior passa est Valeriano Imperatore; agitur de ea v. Kal. Nouemb. Hæc autem iunior dicta,martyrio coronatur temporibus Diocletiani Imperatoris. Duas etiam Anastasias nouit Niceph histor. libr. 7. cap. 14. Fuit hæc Romæ celeberrima : vetus enim eius nomine Titulus hactenus perseuerat , cuius habetur mentio in Concilio primo Romano sub Symmacho, atque in Ord. Rom. & alijs in locis. Illa autem senior, quæ Sirmij passa dicitur, Constantinopoli erat celebris: quam olim fuisse veneficam, tradit Niceph. histor. lib.14. cap 10. in fine; vbi ait eius reliquias tempore Gennadij Episcopi Constantinopolitani Sirmio Constantinopolim translatas: id ipsum Theodorus lector lib.2. collect in fine; additq. eas esse reconditas in basilica Anastasiæ,non quidem ab ea primum ita denominata, sed a S. Gregor. Nazianz. cum illic fides collapsa excitata esset, ita dicta: quam quidem olim perexiguam in augustiorem formam a se auctam sanctus Marcianus in honorẽ Dei genitricis , & Anastasiæ martyris Deo dicandam curauit, vt Marciani Acta testantur , quæ descripsit Metaphr. habetq. Lipom tom.5. De eadem basilica & insigni miraculo illic edito agit Niceph hist. lib.15. cap. 21. & eadem quæ diximus Marciani Acta: eam vetustate consumptã ac denuo restitutam Basilius Imperator lapideo exornauit fastigio,vt tradit Cedren. in compend. hist. in Basilio Imperatore. Monemus lectorem,de vtrisque Anastasijs contigisse, vt ob commune nomen, incuria quadam , Acta communicata atque simul confusa videantur, vt quod alterius est, alteri tribuatur: Rursus apocrypha quædã, imo falsa omnino ferri ex anilibus fabulis cõgesta de sancta Anastasia, quod interfuerit sanctissimo Virginis puerperio, eo quod scilicet eadem die de ea commemoratio in Ecclesia fiat. Huius autem, de qua hic agitur, esse epistolas ad Chrysogonum, quas recitant Nicephorus, Suidas, & alij, certum est."
+  }
+ ],
  "mr:1225-eugenia": [
   {
    "mark": "e",
@@ -20499,11 +20648,6 @@
    "mark": "c",
    "after": "NATIVITAS",
    "text": "NATIVITAS.] Hac ipsa die ex antiqua Ecclesiæ Catholicæ traditione Natalem Domini celebrari solitum, pręter ea quę feruntur in Const.Clem. lib.5.cap.13. S.Augustinus testatur in Psal.132. & alij. Scimus tamen de die Natali Domini fuisse diuersas sententias, quas recenset Clemens Alexand. lib 1 Stromat. Aegyptij inter alios a ceteris discrepantes, celebrabant Natalem Christi, quo die agimus nos Domini Epiphaniã. Id etenim cõstat ex proœmio Paschalis epistolæ Theophili Episcopi Alexãdrini, ex qua Cassian collat.10.cap 1. S.Epiphanius etiam in eadem videtur perstitisse sententia; vt natus esset Dominus IESVS vndecima die mensis Tubi, ipse est apud nos dies Epiphaniæ. sic ipse in Panar. hæres 51. quam quidem opinionem refellit S. Hierony. in Ezechiel lib.1. cap.1. Porro Græcorum ceteri consentiẽtes Ecclesiæ Latinę,distinguere norunt diem Natalem Domini a solemnitate Epiphaniæ, vt apparet ex Greg Nazianz & alijs Græcis Patribus. Extat & de his homil. S Ioan. Chrysost. Græce scripta in biblioth. Sfortiana:idq.secuta est etiam ecclesia Africana, vt scribit S.Aug.contra Crescon. lib 4. cap.37. & ser 40. de diuersis. Duplici nomine hec dies dicta a Græcis reperitur,nimirũ Natiuitas, & Theophania, vt auctor est Gregor.Nazianz.orat. in Christi Natiuit. vbi Nicetas in schol Theophania (inquit) diuinitatis, Natiuitas humanitatis. Licet Latini Theophaniam dixerint Epiphaniã, vt Ordo Rom.Albin Flac de diuin offic.& ali, hos secuti. In quam autem hebdomadis diem inciderit Natalis Domini,docet sexta Synodus, quæ prima die,quam nos Dominicam appellamus, natum Dominum profitetur, cap.8."
-  },
-  {
-   "mark": "d",
-   "after": "Anastasiæ",
-   "text": "Anastasiæ.]De eadem Beda,ac ceteri Latinorum,Græci autem in Menolog. ad xj.Kalend. Ianuar. Eius martyrij Acta a Metaphr. edita descripserunt Lipom.tom.5. & Sur. tomo 6. Alia paulo diuersa in antiq.cod manuscrip. habemus, quorũ exordiũ est: Prætextati viri illustris, &c Eadem Mombrit. to.1. Præsefert eorũ Titulus Anastasiũ Bibliothecarium auctorẽ, de cuius præfatione in eadẽ Acta meminit Molan. in addit. ad Vsuardũ. legimus eamdẽ in dicto codice, quæ sic incipit:Omnia quæ a sanctis gesta sunt,&c.Duas fuisse Anastasias, superius diximus:quarũ senior passa est Valeriano Imperatore; agitur de ea v. Kal. Nouemb. Hæc autem iunior dicta,martyrio coronatur temporibus Diocletiani Imperatoris. Duas etiam Anastasias nouit Niceph histor. libr. 7. cap. 14. Fuit hæc Romæ celeberrima : vetus enim eius nomine Titulus hactenus perseuerat , cuius habetur mentio in Concilio primo Romano sub Symmacho, atque in Ord. Rom. & alijs in locis. Illa autem senior, quæ Sirmij passa dicitur, Constantinopoli erat celebris: quam olim fuisse veneficam, tradit Niceph. histor. lib.14. cap 10. in fine; vbi ait eius reliquias tempore Gennadij Episcopi Constantinopolitani Sirmio Constantinopolim translatas: id ipsum Theodorus lector lib.2. collect in fine; additq. eas esse reconditas in basilica Anastasiæ,non quidem ab ea primum ita denominata, sed a S. Gregor. Nazianz. cum illic fides collapsa excitata esset, ita dicta: quam quidem olim perexiguam in augustiorem formam a se auctam sanctus Marcianus in honorẽ Dei genitricis , & Anastasiæ martyris Deo dicandam curauit, vt Marciani Acta testantur , quæ descripsit Metaphr. habetq. Lipom tom.5. De eadem basilica & insigni miraculo illic edito agit Niceph hist. lib.15. cap. 21. & eadem quæ diximus Marciani Acta: eam vetustate consumptã ac denuo restitutam Basilius Imperator lapideo exornauit fastigio,vt tradit Cedren. in compend. hist. in Basilio Imperatore. Monemus lectorem,de vtrisque Anastasijs contigisse, vt ob commune nomen, incuria quadam , Acta communicata atque simul confusa videantur, vt quod alterius est, alteri tribuatur: Rursus apocrypha quædã, imo falsa omnino ferri ex anilibus fabulis cõgesta de sancta Anastasia, quod interfuerit sanctissimo Virginis puerperio, eo quod scilicet eadem die de ea commemoratio in Ecclesia fiat. Huius autem, de qua hic agitur, esse epistolas ad Chrysogonum, quas recitant Nicephorus, Suidas, & alij, certum est."
   }
  ],
  "mr:1226-archelaus": [

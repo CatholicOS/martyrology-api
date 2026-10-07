@@ -4,13 +4,16 @@
   "elogia": {
    "mr:0601-iuventius": "ROMAE S. Iuuentij martyris.",
    "mr:0601-pamphilus": "Cæsarêæ in Palæstina B. Pamphili presbyteri & martyris, viri admirandæ sanctitatis & doctrinæ, atq. in pauperes munifici, qui ob Christi fidem in persecutione Galerij Maximiani, primo sub Vrbano Præside cruciatus, & in carcerem trusus, deinde sub Firmiliano iterum reuocatus ad pœnas, vna cum alijs martyrium consummauit. Passi sunt etiam tunc Valens diaconus, & Paulus, alijq. nouem, quorum memoria alijs diebus celebratur.",
-   "mr:0601-reverianus-et-socii": "Augustodûni sanctorum Reueriâni Episcopi, & Pauli presbyteri, cum alijs decem, qui sub Aureliano Principe martyrio coronati sunt In Cappadocia sancti Thespesij martyris, qui sub Alexandro Imperatore, & Simplicio Præfecto, post alia tormenta decollatus est.",
+   "mr:0601-reverianus-et-socii": "Augustodûni sanctorum Reueriâni Episcopi, & Pauli presbyteri, cum alijs decem, qui sub Aureliano Principe martyrio coronati sunt",
+   "mr:0601-thespesius": "In Cappadocia sancti Thespesij martyris, qui sub Alexandro Imperatore, & Simplicio Præfecto, post alia tormenta decollatus est.",
    "mr:0601-ischyrion-et-socii": "In Aegypto sanctorum martyrum Ischyriônis doctoris militum, & aliorum quinque militum, qui sub Diocletiano Imperatore pro fide Christi diuerso mortis genere perempti sunt.",
-   "mr:0601-firmus": "Item sancti Firmi martyris, qui in persecutione Maximiani acerbissimis plagis affectus, lapidibus percussus, ac demum capite cæsus est. Perusiæ sanctorom martyrum Felîni & Gratiniâni militum, qui sub Decio varijs tormentis cruciati, martyrij palmam gloriosa morte perceperunt.",
+   "mr:0601-firmus": "Item sancti Firmi martyris, qui in persecutione Maximiani acerbissimis plagis affectus, lapidibus percussus, ac demum capite cæsus est.",
+   "mr:0601-felinus-et-gratinianus": "Perusiæ sanctorom martyrum Felîni & Gratiniâni militum, qui sub Decio varijs tormentis cruciati, martyrij palmam gloriosa morte perceperunt.",
    "mr:0601-proculus": "Bononiæ sancti Procŭli martyris, qui sub Maximiano Imperatore passus est.",
    "mr:0601-secundus": "Ameriæ sancti Secundi martyris, qui sub Diocletiano in Tiběrim proiectus, martyrium consummauit.",
    "mr:0601-crescentianus": "Apud Tiphernum in Vmbria S. Crescentiani militis Romani, sub eodem Imperatore martyrio coronati.",
-   "mr:0601-fortunatus": "In Vmbria sancti Fortunati presbyteri, virtutibus & miraculis clari In monasterio Lerinensi sancti Caprasij abbatis.",
+   "mr:0601-fortunatus": "In Vmbria sancti Fortunati presbyteri, virtutibus & miraculis clari",
+   "mr:0601-caprasius": "In monasterio Lerinensi sancti Caprasij abbatis.",
    "mr:0601-simeon": "Treuiris sancti Simeonis monachi, qui a Benedicto Papa Nono in sanctorum numerum relatus est."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -71,7 +74,8 @@
   "titulus": "Octauo Idus Iunij. Luna.",
   "elogia": {
    "mr:0606-norbertus": "SANCTI Norberti Episcopi Magdeburgensis fundatoris ordinis Præmostratensis.",
-   "mr:0606-philippus": "Cæsaræ in Palæstina natalis beati Philippi, qui fuit vnus de septem primis diaconis. Hic signis & prodigijs clarus, Samariam ad fidem Christi conuertit, & Candâcis Aethiopium Reginæ eunûchum baptizauit, ac demum apud Cæsarêam requieuit: iuxta quem tres virgines eius filię prophetissę tumulatæ iacent: nam quarta filia eius plena Spiritu sancto Ephĕsi occubuit: Romæ sancti Artemij, cum vxore sua Candida, & filia Paulina: qui Artemius ad prædicationem & miracula sancti Petri exorcistæ in Christum credens, & cum omni domo sua a sancto Marcellino presbytero baptizatus, iussu Serêni Iudicis plumbatis cæsus & gladio percussus est: vxor vero eius & filia in cryptam impulsæ, lapidibus ruderibúsq; sunt obrŭtæ.",
+   "mr:0606-philippus": "Cæsaræ in Palæstina natalis beati Philippi, qui fuit vnus de septem primis diaconis. Hic signis & prodigijs clarus, Samariam ad fidem Christi conuertit, & Candâcis Aethiopium Reginæ eunûchum baptizauit, ac demum apud Cæsarêam requieuit: iuxta quem tres virgines eius filię prophetissę tumulatæ iacent: nam quarta filia eius plena Spiritu sancto Ephĕsi occubuit:",
+   "mr:0606-artemius-et-paulina": "Romæ sancti Artemij, cum vxore sua Candida, & filia Paulina: qui Artemius ad prædicationem & miracula sancti Petri exorcistæ in Christum credens, & cum omni domo sua a sancto Marcellino presbytero baptizatus, iussu Serêni Iudicis plumbatis cæsus & gladio percussus est: vxor vero eius & filia in cryptam impulsæ, lapidibus ruderibúsq; sunt obrŭtæ.",
    "mr:0606-viginti-martyres-tarsi": "Tarsi in Cilicia sanctorum Martyrum viginti, qui temporibus Diocletiani & Maximiani sub Simplicio Iudice per diuersa tormenta glorificauerunt Deum in corporibus suis.",
    "mr:0606-amantius-et-socii": "Nouiodûni in Gallijs sanctorum martyrum Amantij, Alexandri, & sociorum.",
    "mr:0606-alexander": "Fesŭlis in Tuscia sancti Alexandri Episcopi & martyris.",
@@ -114,7 +118,8 @@
    "mr:0609-pelagia": "Apud Antiochiam sanctæ Pelagiæ virginis & martyris, quam sancti Ambrosius & Ioannes Chrysostomus magnis efferunt laudibus.",
    "mr:0609-maximianus": "Syracusis sancti Maximiani Episcopi, cuius sanctus Gregorius Papa sæpius meminit.",
    "mr:0609-richardus": "Andriæ in Apulia sancti Richardi primi eiusdem Ciuitatis Episcopi miraculis clari.",
-   "mr:0609-iulianus": "In Scotia sancti Columbi presbyteri & confessoris: Edessæ in Syria sancti Iuliani monachi, cuius pręclara gesta sanctus Ephrem diaconus scripsit."
+   "mr:0609-columba": "In Scotia sancti Columbi presbyteri & confessoris:",
+   "mr:0609-iulianus": "Edessæ in Syria sancti Iuliani monachi, cuius pręclara gesta sanctus Ephrem diaconus scripsit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -325,7 +330,8 @@
    "mr:0625-gallicanus": "Alexandriæ sancti Gallicâni martyris, viri Consularis, qui triumphalibus insulis sublimatus, & Constantino Augusto carus, a sanctis Ioanne & Paulo ad fidem Christi conuersus est: qua suscepta, cum sancto Hilarîno ad Ostia Tiberîna secêdens, hospitalitati & infirmorum seruitio totum se dedit: cuius rei fama in toto Orbe diuulgata, multi vndique illuc venientes videbant virum ex Patricio & Consule lauantem pauperum pedes, ponentem mensam, aquã manibus effundentẽ, languentibus solicite ministrantẽ, & cetera pietatis officia exhibentem. Qui postmŏdum sub Iuliano Apostata inde expulsus, Alexandriam perrexit: vbi cum a Rauciâno Iudice sacrificare cogeretur, & contemneret; percussus gladio, Christi martyr effectus est.",
    "mr:0625-febronia": "Sibapŏli in Syria sanctæ Febronię virginis & martyris, quæ in persecutione Diocletiani sub Lysimăcho Pręside, ob fidem & pudicitiam seruandam, primo virgis cæsa, & equuleo torta, deinde pectinibus laniata, atque igne succensa, demum excussis dentibus, mammisq. abscissis, capitis damnata, tot passionum ornata monilibus migrauit ad Sponsum.",
    "mr:0625-antidius": "Vesontiŏne in Gallijs S. Antidij Episcopi & martyris, qui ob fidem Christi a Vuandălis occisus fuit.",
-   "mr:0625-prosperus": "Apud Regium S. Prospĕri Aquitâni, eiusdem vrbis Episcopi, eruditione ac pietate insignis, qui aduersus Pelagianos pro fide Catholica strenue decertauit; Taurîni natalis sancti Maximi Episcopi & confessoris, doctrina & sanctitate celeberrimi.",
+   "mr:0625-prosperus": "Apud Regium S. Prospĕri Aquitâni, eiusdem vrbis Episcopi, eruditione ac pietate insignis, qui aduersus Pelagianos pro fide Catholica strenue decertauit;",
+   "mr:0625-maximus": "Taurîni natalis sancti Maximi Episcopi & confessoris, doctrina & sanctitate celeberrimi.",
    "mr:0625-adalbertus": "In Hollandia sancti Adelberti confessoris, discipuli sancti Vuillibrordi Episcopi.",
    "mr:0625-gulielmus": "In territorio Gulêti propę Nuscum sancti Gulielmi confessoris, Patris eremitarum Montis Virginis,"
   },

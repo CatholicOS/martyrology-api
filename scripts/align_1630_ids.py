@@ -11,7 +11,7 @@ the ID's (-ii). Unmatched fragments without a saint marker are merged into the
 eulogy before them. What is left is searched across the year (cross-day: a new ID
 for this day, with the twin's slug, linked by same_eulogy) or settled by the
 reviewed overrides in data/align_1630_overrides.json, keyed "M-D|<opening words>":
-  "MERGE_PREV" | "DROP" | "RUBRIC" | "mr:<id>" | {"split_at": "<text>"}
+  "MERGE_PREV" | "DROP" | "RUBRIC" | "mr:<id>" | {"split_at": "<text>" or ["<text>", …]}
   | {"coin": "<slug>", "subject_la": "...", "same_eulogy": [...], "note": "..."}
 
 Input:  data/editions/martyrologium_romanum_1630/MM.json (from digitize_1630.py)
@@ -248,9 +248,13 @@ def main():
             split = []
             for e in el:
                 o = override_for(key, e)
-                if isinstance(o, dict) and o.get("split_at", "") in e and "split_at" in o:
-                    i = e.index(o["split_at"])
-                    split += [e[:i].strip(), e[i:].strip()]
+                at = o.get("split_at") if isinstance(o, dict) else None
+                points = [at] if isinstance(at, str) else (at or [])
+                if points and all(p in e for p in points):
+                    # one or more points, in the order they come in the text
+                    cuts = sorted(e.index(p) for p in points)
+                    bounds = zip([0, *cuts], [*cuts, len(e)], strict=True)
+                    split += [e[a:b].strip() for a, b in bounds]
                 else:
                     split.append(e)
             el, rubrics = [], []

@@ -149,7 +149,7 @@
    "note": "f"
   }
  ],
- "mr:0103-theopemptus-et-theona": [
+ "mr:0103-zosimus-et-athanasius": [
   {
    "text": "T. 2. A. 305. num. 15. Inuentio a. 1064 trans. 1295. Ferrarius.",
    "note": "i"
@@ -219,6 +219,12 @@
    "note": "k"
   }
  ],
+ "mr:0105-eduardus-confessor": [
+  {
+   "text": "to. 11. ann. 1043. nu. 3. ann. 1060. nu. 5. canonizatio to. 12. an. 1161. an. 3.",
+   "note": "g"
+  }
+ ],
  "mr:0105-martyres-aegypti": [
   {
    "text": "Tom. 2. anno 302. nu. 86. & seq.",
@@ -236,10 +242,6 @@
   }
  ],
  "mr:0105-syncletica": [
-  {
-   "text": "to. 11. ann. 1043. nu. 3. ann. 1060. nu. 5. canonizatio to. 12. an. 1161. an. 3.",
-   "note": "g"
-  },
   {
    "text": "Circa ann. 310.",
    "note": "h"
@@ -439,20 +441,22 @@
    "note": "a"
   }
  ],
+ "mr:0111-leucius": [
+  {
+   "text": "cir. A.380. temp. Theodosij magni Regius",
+   "note": "f"
+  }
+ ],
  "mr:0111-palaemon": [
   {
    "text": "T.3.A.318. nu. 101.",
    "note": "h"
   }
  ],
- "mr:0111-petrus-et-socii": [
+ "mr:0111-salvius-ambiani": [
   {
    "text": "corrige ex T. 9. A. 801. nu. 26.",
    "note": "e"
-  },
-  {
-   "text": "cir. A.380. temp. Theodosij magni Regius",
-   "note": "f"
   }
  ],
  "mr:0111-theodosius": [
@@ -817,14 +821,16 @@
    "note": "f"
   }
  ],
+ "mr:0120-neophytus": [
+  {
+   "text": "Tempore Diocletiani.",
+   "note": "e"
+  }
+ ],
  "mr:0120-sebastianus": [
   {
    "text": "tom. 2. ann. 284. nu. 10. & seq. & an. 286. nu. 3. & seq. & nu. 34. & infra.",
    "note": "c"
-  },
-  {
-   "text": "Tempore Diocletiani.",
-   "note": "e"
   }
  ],
  "mr:0121-agnes": [
@@ -1051,10 +1057,6 @@
   {
    "text": "T. 2. A. 303. n. 36. & seq.",
    "note": "e"
-  },
-  {
-   "text": "T. 8. A. 655. & seq.",
-   "note": "f"
   }
  ],
  "mr:0127-ioannes-chrysostomus": [
@@ -1073,6 +1075,12 @@
   {
    "text": "T. 2. A. 175. num. 7.",
    "note": "b"
+  }
+ ],
+ "mr:0127-vitalianus": [
+  {
+   "text": "T. 8. A. 655. & seq.",
+   "note": "f"
   }
  ],
  "mr:0128-agnes": [
@@ -1943,7 +1951,9 @@
   {
    "text": "De Alemũdar. To. 7. A. 583. n. 5.",
    "note": "c"
-  },
+  }
+ ],
+ "mr:0219-zambda": [
   {
    "text": "T. 2. A 296. nu. 6.",
    "note": "d"
@@ -2243,10 +2253,6 @@
   {
    "text": "T. 3. A. 313. num. 53.",
    "note": "g"
-  },
-  {
-   "text": "obijt ann. 604.",
-   "note": "h"
   }
  ],
  "mr:0301-antonina": [
@@ -2267,6 +2273,12 @@
    "note": "d"
   }
  ],
+ "mr:0301-siviardus": [
+  {
+   "text": "obijt ann. 604.",
+   "note": "h"
+  }
+ ],
  "mr:0301-suitbertus": [
   {
    "text": "T. 8. a 695; n. 3. & seq. obiit T. 9. a 717. n. 12 de eo etiã a 754. n. 15 & an. 804. n. 8. & seq.",
@@ -2285,12 +2297,6 @@
    "note": "a"
   }
  ],
- "mr:0302-lucius-et-socii": [
-  {
-   "text": "t. 2. a. 270. num. 11.",
-   "note": "c"
-  }
- ],
  "mr:0302-martyres-romae": [
   {
    "text": "vide To. 2. ann. 225. & 226.",
@@ -2301,6 +2307,12 @@
   {
    "text": "T. 7. A. 579. n. 9.",
    "note": "e"
+  }
+ ],
+ "mr:0302-paulus-et-socii": [
+  {
+   "text": "t. 2. a. 270. num. 11.",
+   "note": "c"
   }
  ],
  "mr:0302-simplicius": [
@@ -2361,7 +2373,9 @@
   {
    "text": "T. 2. A. 257. n. 2. & seq.",
    "note": "b"
-  },
+  }
+ ],
+ "mr:0304-nongenti-martyres-romae": [
   {
    "text": "cir. A. 260 Gallienus.",
    "note": "c"
@@ -2783,7 +2797,9 @@
   {
    "text": "T.2. A 284. n. 9.",
    "note": "c"
-  },
+  }
+ ],
+ "mr:0316-papa": [
   {
    "text": "T.2. A.165. n. 10.",
    "note": "d"
@@ -2871,16 +2887,18 @@
   {
    "text": "T. 1. in appar. nu. 54. & seq. & n. 81. & infra & A. 12. n. 8. & seq.",
    "note": "a"
-  },
-  {
-   "text": "T. 3. A. 311. nu. 17.",
-   "note": "c"
   }
  ],
  "mr:0319-landoaldus-et-amantius": [
   {
    "text": "T. 8. A. 650. n. 2.",
    "note": "e"
+  }
+ ],
+ "mr:0319-pancharius": [
+  {
+   "text": "T. 3. A. 311. nu. 17.",
+   "note": "c"
   }
  ],
  "mr:0320-alexandra-et-socii": [
@@ -3393,7 +3411,9 @@
   {
    "text": "T. 5. A. 397. num. 36. & seq. & nu. 49. & Ann. A. 398. n. 54",
    "note": "b"
-  },
+  }
+ ],
+ "mr:0404-isidorus": [
   {
    "text": "T.8. a.636. n.7. & seq.",
    "note": "d"
@@ -3555,10 +3575,6 @@
   {
    "text": "cir. A.237.",
    "note": "c"
-  },
-  {
-   "text": "T.2.A.253. num. 98.",
-   "note": "d"
   }
  ],
  "mr:0410-macarius": [
@@ -3571,6 +3587,12 @@
   {
    "text": "T.2.A.132. n.1.",
    "note": "b"
+  }
+ ],
+ "mr:0410-terentius-et-socii": [
+  {
+   "text": "T.2.A.253. num. 98.",
+   "note": "d"
   }
  ],
  "mr:0411-antipa": [
@@ -3679,10 +3701,6 @@
   {
    "text": "cir. A. 539.",
    "note": "c"
-  },
-  {
-   "text": "T. 3. A 311 n. 28.",
-   "note": "d"
   }
  ],
  "mr:0414-fronto": [
@@ -3701,6 +3719,12 @@
   {
    "text": "Totilas regnare cœpit A. 542. Acta Ecclesiæ Interamñ. ponũt obijsse An. 539 ex Fer rarium.",
    "note": "b"
+  }
+ ],
+ "mr:0414-thomais": [
+  {
+   "text": "T. 3. A 311 n. 28.",
+   "note": "d"
   }
  ],
  "mr:0414-tiburtius-et-socii": [
@@ -3791,6 +3815,12 @@
    "note": "a"
   }
  ],
+ "mr:0417-elias-et-socii": [
+  {
+   "text": "T. x. A. 856 num. 30.",
+   "note": "e"
+  }
+ ],
  "mr:0417-innocentius": [
   {
    "text": "cir. A. 310",
@@ -3807,12 +3837,6 @@
   {
    "text": "Ao. 564.",
    "note": "f"
-  }
- ],
- "mr:0417-petrus-et-hermogenes": [
-  {
-   "text": "T. x. A. 856 num. 30.",
-   "note": "e"
   }
  ],
  "mr:0417-stephanus-harding": [
@@ -4097,14 +4121,16 @@
    "note": "c"
   }
  ],
+ "mr:0425-litaniae-maiores": [
+  {
+   "text": "T. 1. A. 58. num. 112.",
+   "note": "b"
+  }
+ ],
  "mr:0425-marcus-evangelista": [
   {
    "text": "T.1 An. 33. n. 13.& A. 45.n 15. & seq. & A. 64.n. 1. & seq. & n. 29. & seq. & T.5. An. 484.nu.30.",
    "note": "a"
-  },
-  {
-   "text": "T. 1. A. 58. num. 112.",
-   "note": "b"
   }
  ],
  "mr:0425-philo-et-agathopus": [
@@ -4435,6 +4461,12 @@
    "note": "g"
   }
  ],
+ "mr:0504-curcodomus": [
+  {
+   "text": "cir. A. 140. missus a Sixto cum Peregrino.",
+   "note": "n"
+  }
+ ],
  "mr:0504-cyriacus": [
   {
    "text": "T. 3. A. 309 num. 21.",
@@ -4479,10 +4511,6 @@
   {
    "text": "cir. A. 515.",
    "note": "m"
-  },
-  {
-   "text": "cir. A. 140. missus a Sixto cum Peregrino.",
-   "note": "n"
   }
  ],
  "mr:0504-silvanus-et-socii": [
@@ -4539,11 +4567,13 @@
    "note": "g"
   }
  ],
- "mr:0505-theodorus": [
+ "mr:0505-nicetius": [
   {
    "text": "cir. A. 375.",
    "note": "k"
-  },
+  }
+ ],
+ "mr:0505-theodorus": [
   {
    "text": "cir. A. 530.",
    "note": "l"
@@ -5111,6 +5141,12 @@
    "note": "a"
   }
  ],
+ "mr:0520-anastasius": [
+  {
+   "text": "cir. A. 580.",
+   "note": "f"
+  }
+ ],
  "mr:0520-aquila": [
   {
    "text": "cir. A. 258. forte hic est ille cõfessor. de quo T. 2. A. 260. nu 28.",
@@ -5121,10 +5157,6 @@
   {
    "text": "T.8. A.611. n. 2.",
    "note": "e"
-  },
-  {
-   "text": "cir. A. 580.",
-   "note": "f"
   }
  ],
  "mr:0520-basilla": [
@@ -5263,10 +5295,6 @@
   {
    "text": "T. 8. A. 613 nu. 15.",
    "note": "g"
-  },
-  {
-   "text": "A. 733. T. 9 2. 2 & An. 814. nu. 12.",
-   "note": "h"
   }
  ],
  "mr:0523-ephebus": [
@@ -5295,6 +5323,12 @@
   {
    "text": "T. 3. A. 359 n. 46. obijt A. 356.",
    "note": "i"
+  }
+ ],
+ "mr:0523-michael": [
+  {
+   "text": "A. 733. T. 9 2. 2 & An. 814. nu. 12.",
+   "note": "h"
   }
  ],
  "mr:0523-quinctianus-et-socii": [
@@ -5367,6 +5401,12 @@
    "note": "h"
   }
  ],
+ "mr:0525-pasicrates-et-valentio": [
+  {
+   "text": "A. 228. passus Iulius T. 2. A. 228. n. 2. vt habet Baron.",
+   "note": "b"
+  }
+ ],
  "mr:0525-translatio-mariae-iacobi": [
   {
    "text": "T. in appa. n.64. & 65.",
@@ -5377,10 +5417,6 @@
   {
    "text": "T. 2. A. 233. n. 1. & seq.",
    "note": "a"
-  },
-  {
-   "text": "A. 228. passus Iulius T. 2. A. 228. n. 2. vt habet Baron.",
-   "note": "b"
   }
  ],
  "mr:0525-zenobius": [
@@ -5639,26 +5675,28 @@
    "note": "a"
   }
  ],
+ "mr:0601-caprasius": [
+  {
+   "text": "cir.A. 390.",
+   "note": "m"
+  }
+ ],
  "mr:0601-crescentianus": [
   {
    "text": "T.2.A. 303 num.131.",
    "note": "k"
   }
  ],
- "mr:0601-firmus": [
-  {
-   "text": "sub Maximiano.",
-   "note": "f"
-  },
+ "mr:0601-felinus-et-gratinianus": [
   {
    "text": "T.2 A.254. num. 29.",
    "note": "g"
   }
  ],
- "mr:0601-fortunatus": [
+ "mr:0601-firmus": [
   {
-   "text": "cir.A. 390.",
-   "note": "m"
+   "text": "sub Maximiano.",
+   "note": "f"
   }
  ],
  "mr:0601-ischyrion-et-socii": [
@@ -5683,10 +5721,6 @@
   {
    "text": "T.3.A.273. num. 10.",
    "note": "c"
-  },
-  {
-   "text": "cir. A. 230.",
-   "note": "d"
   }
  ],
  "mr:0601-secundus": [
@@ -5699,6 +5733,12 @@
   {
    "text": "T.11. Ann. 1037.nu.3.",
    "note": "n"
+  }
+ ],
+ "mr:0601-thespesius": [
+  {
+   "text": "cir. A. 230.",
+   "note": "d"
   }
  ],
  "mr:0602-erasmus": [
@@ -5827,6 +5867,12 @@
    "note": "h"
   }
  ],
+ "mr:0606-artemius-et-paulina": [
+  {
+   "text": "T 2. A. 302 num. 107. & seq.",
+   "note": "d"
+  }
+ ],
  "mr:0606-claudius": [
   {
    "text": "T.6. A. 490 num 23. obitus an. 509. nu. 13.",
@@ -5859,10 +5905,6 @@
   {
    "text": "T.1 A.358. n.27.& seq",
    "note": "c"
-  },
-  {
-   "text": "T 2. A. 302 num. 107. & seq.",
-   "note": "d"
   }
  ],
  "mr:0606-viginti-martyres-tarsi": [
@@ -5935,11 +5977,13 @@
    "note": "g"
   }
  ],
- "mr:0609-iulianus": [
+ "mr:0609-columba": [
   {
    "text": "T. 7. A. 565. num. 30. & seq & T. 8. A. 690. n. 4.",
    "note": "f"
-  },
+  }
+ ],
+ "mr:0609-iulianus": [
   {
    "text": "cir. A. 350.",
    "note": "g"
@@ -6569,14 +6613,16 @@
    "note": "b"
   }
  ],
+ "mr:0625-maximus": [
+  {
+   "text": "T. 5. A. 439. n. 14. T. 6. A. 451. nu. 14.",
+   "note": "h"
+  }
+ ],
  "mr:0625-prosperus": [
   {
    "text": "plura To 5. ab A. 406. n. 53. & infra.",
    "note": "g"
-  },
-  {
-   "text": "T. 5. A. 439. n. 14. T. 6. A. 451. nu. 14.",
-   "note": "h"
   }
  ],
  "mr:0625-sosipater": [
@@ -6863,7 +6909,9 @@
   {
    "text": "T. 2. A. 108 n. 2.",
    "note": "c"
-  },
+  }
+ ],
+ "mr:0703-irenaeus-et-mustiola": [
   {
    "text": "T. 2. A. 275. n. 5.",
    "note": "d"
@@ -7263,10 +7311,6 @@
   {
    "text": "T. 5. A. 397. n. 61.",
    "note": "f"
-  },
-  {
-   "text": "cir. A. 450.",
-   "note": "g"
   }
  ],
  "mr:0714-henricus": [
@@ -7287,6 +7331,12 @@
    "note": "h"
   }
  ],
+ "mr:0714-optatianus": [
+  {
+   "text": "cir. A. 450.",
+   "note": "g"
+  }
+ ],
  "mr:0714-phocas": [
   {
    "text": "T. 2. A. 114. n. 4.",
@@ -7305,7 +7355,7 @@
    "note": "h"
   }
  ],
- "mr:0715-catulinus-et-socii": [
+ "mr:0715-eutropius-et-socii": [
   {
    "text": "T.2.A 270. n.15. & A. 275.n.4.",
    "note": "a"
@@ -7723,7 +7773,9 @@
   {
    "text": "T. 2. A. 800. n. 12.",
    "note": "d"
-  },
+  }
+ ],
+ "mr:0726-pastor": [
   {
    "text": "T. 2. A. 162. n. 1. & seq. & An. 164. n. 24.",
    "note": "e"
@@ -7845,6 +7897,12 @@
    "note": "b"
   }
  ],
+ "mr:0729-gulielmus-pinchon": [
+  {
+   "text": "obijt Ann. 1241.",
+   "note": "i"
+  }
+ ],
  "mr:0729-lucilla-et-socii": [
   {
    "text": "T. 2. A. 262. n. 57.",
@@ -7870,10 +7928,6 @@
   }
  ],
  "mr:0729-prosperus": [
-  {
-   "text": "obijt Ann. 1241.",
-   "note": "i"
-  },
   {
    "text": "T. 6. A. 463 n. 12. & seq.",
    "note": "k"
@@ -7921,6 +7975,12 @@
    "note": "f"
   }
  ],
+ "mr:0731-germanus": [
+  {
+   "text": "T. 3. A. 132 n 4. T. 5. A. 429. n. 1. & n. 9. & seq. & a. 435. nu. 15. 21. & seq. obiit Ann. 450. Democh.",
+   "note": "e"
+  }
+ ],
  "mr:0731-ignatius-de-loyola": [
   {
    "text": "* S Ignat. Ann. 1556. obiit.",
@@ -7937,10 +7997,6 @@
   {
    "text": "T. 6. A. 517. n. 56.",
    "note": "d"
-  },
-  {
-   "text": "T. 3. A. 132 n 4. T. 5. A. 429. n. 1. & n. 9. & seq. & a. 435. nu. 15. 21. & seq. obiit Ann. 450. Democh.",
-   "note": "e"
   }
  ],
  "mr:0801-bonus-et-socii": [
@@ -8335,6 +8391,12 @@
    "note": "e"
   }
  ],
+ "mr:0811-alexander-carbonarius": [
+  {
+   "text": "T. 2. A. 253. n. 22. & seq. & An. 253. n. 138.",
+   "note": "d"
+  }
+ ],
  "mr:0811-digna": [
   {
    "text": "T. 2. A. 303. n. 121.",
@@ -8363,10 +8425,6 @@
   {
    "text": "T.2.A.294. nu 1. & seq & An.295. n. 6. & seq.",
    "note": "c"
-  },
-  {
-   "text": "T. 2. A. 253. n. 22. & seq. & An. 253. n. 138.",
-   "note": "d"
   }
  ],
  "mr:0811-taurinus": [
@@ -8473,14 +8531,16 @@
    "note": "g"
   }
  ],
+ "mr:0814-callistus": [
+  {
+   "text": "obijt An. 528. off. eccl. Tudert.",
+   "note": "f"
+  }
+ ],
  "mr:0814-eusebius": [
   {
    "text": "T.3.A.357 nu. 45.",
    "note": "b"
-  },
-  {
-   "text": "obijt An. 528. off. eccl. Tudert.",
-   "note": "f"
   }
  ],
  "mr:0814-marcellus": [
@@ -8941,16 +9001,18 @@
   {
    "text": "T.2.A.297. n.16.",
    "note": "d"
-  },
-  {
-   "text": "cir. A. 316.",
-   "note": "e"
   }
  ],
  "mr:0826-felix": [
   {
    "text": "Inuentio A 1420.",
    "note": "h"
+  }
+ ],
+ "mr:0826-hadrianus": [
+  {
+   "text": "cir. A. 316.",
+   "note": "e"
   }
  ],
  "mr:0826-irenaeus-et-abundius": [
@@ -9153,16 +9215,16 @@
    "note": "k"
   }
  ],
+ "mr:0830-bonifatius-et-thecla": [
+  {
+   "text": "cir. A. 250.",
+   "note": "e"
+  }
+ ],
  "mr:0830-bononius": [
   {
    "text": "obiit An. 1026.",
    "note": "h"
-  }
- ],
- "mr:0830-fantinus": [
-  {
-   "text": "cir. A. 250.",
-   "note": "e"
   }
  ],
  "mr:0830-felix-et-adauctus": [
@@ -9177,11 +9239,13 @@
    "note": "g"
   }
  ],
- "mr:0830-sexaginta-martyres-coloniae-sufetanae": [
+ "mr:0830-pammachius": [
   {
    "text": "T. 2. A. 270. n. 15. T. 4. A. 372. nu. 43. An. 379. nu. 17. & An. 390. nu. 38. 1. 5. A. 397 n. 8. & n. 27 & An. 398. n. 15. & seq. Obit. T. 5. A. 410. nu. 30.",
    "note": "c"
-  },
+  }
+ ],
+ "mr:0830-sexaginta-martyres-coloniae-sufetanae": [
   {
    "text": "T. 5. A. 399. n. 72.",
    "note": "d"
@@ -9251,32 +9315,34 @@
    "note": "e"
   }
  ],
+ "mr:0901-constantius": [
+  {
+   "text": "T. 7. A. 572 n. 2.",
+   "note": "o"
+  }
+ ],
+ "mr:0901-lupus": [
+  {
+   "text": "T. 8. A. 611 n. 13. & seq & An 631. n. 3. & seq.",
+   "note": "m"
+  }
+ ],
  "mr:0901-priscus": [
   {
    "text": "T 1 An 46. n. 2.",
    "note": "f"
   }
  ],
+ "mr:0901-priscus-capuae": [
+  {
+   "text": "T. 6 A. 440 nu 4. & seq & An 504. nu. 37.",
+   "note": "n"
+  }
+ ],
  "mr:0901-regulus": [
   {
    "text": "cir. A. 550.",
    "note": "l"
-  },
-  {
-   "text": "T. 8. A. 611 n. 13. & seq & An 631. n. 3. & seq.",
-   "note": "m"
-  },
-  {
-   "text": "T. 6 A. 440 nu 4. & seq & An 504. nu. 37.",
-   "note": "n"
-  },
-  {
-   "text": "T. 7. A. 572 n. 2.",
-   "note": "o"
-  },
-  {
-   "text": "cir. A. 380.",
-   "note": "p"
   }
  ],
  "mr:0901-sixtus": [
@@ -9295,6 +9361,12 @@
   {
    "text": "cir. A. 388. Genebrar.",
    "note": "q"
+  }
+ ],
+ "mr:0901-victorius": [
+  {
+   "text": "cir. A. 380.",
+   "note": "p"
   }
  ],
  "mr:0902-antoninus": [
@@ -9551,6 +9623,12 @@
    "note": "c"
   }
  ],
+ "mr:0908-ammon-et-socii": [
+  {
+   "text": "T. 2. A. 253. nn. 107. & seq.",
+   "note": "c"
+  }
+ ],
  "mr:0908-corbinianus": [
   {
    "text": "T. 9. A. 716. n. 1. & An. 734. nu. 21. & seq.",
@@ -9567,10 +9645,6 @@
   {
    "text": "T. 3. A. 311. n. 17.",
    "note": "b"
-  },
-  {
-   "text": "T. 2. A. 253. nn. 107. & seq.",
-   "note": "c"
   }
  ],
  "mr:0908-nativitas-beatae-mariae-virginis": [
@@ -9871,10 +9945,6 @@
   {
    "text": "T. 3. A. 311. num. 19.",
    "note": "e"
-  },
-  {
-   "text": "T. 4. A. 362. n. 147.",
-   "note": "f"
   }
  ],
  "mr:0915-melitina": [
@@ -9893,6 +9963,12 @@
   {
    "text": "T. 1. an. 69. n. 33.",
    "note": "b"
+  }
+ ],
+ "mr:0915-porphyrius": [
+  {
+   "text": "T. 4. A. 362. n. 147.",
+   "note": "f"
   }
  ],
  "mr:0915-valerianus": [
@@ -10323,6 +10399,12 @@
    "note": "h"
   }
  ],
+ "mr:0927-adolphus-et-ioannes": [
+  {
+   "text": "T. 9. A. 821. n. 80.",
+   "note": "d"
+  }
+ ],
  "mr:0927-caius": [
   {
    "text": "cir. An. 102.",
@@ -10348,10 +10430,6 @@
   }
  ],
  "mr:0927-florentinus": [
-  {
-   "text": "T. 9. A. 821. n. 80.",
-   "note": "d"
-  },
   {
    "text": "cir. A. 407.",
    "note": "e"
@@ -10391,16 +10469,18 @@
   {
    "text": "T. 2. A. 305, n. 16.",
    "note": "d"
-  },
-  {
-   "text": "cir. A. 253. T. x. A. 938, n. 6.",
-   "note": "e"
   }
  ],
  "mr:0928-martialis-et-socii": [
   {
    "text": "T. 2. A. 253, n. 52.",
    "note": "c"
+  }
+ ],
+ "mr:0928-maximus": [
+  {
+   "text": "cir. A. 253. T. x. A. 938, n. 6.",
+   "note": "e"
   }
  ],
  "mr:0928-privatus": [
@@ -10599,6 +10679,12 @@
    "note": "d"
   }
  ],
+ "mr:1004-aurea": [
+  {
+   "text": "cir. a. 630. de eius basilica T. 8 a. A. 705. n.7.",
+   "note": "h"
+  }
+ ],
  "mr:1004-caius-et-socii": [
   {
    "text": "T.5.A.260 n.19. & seq.",
@@ -10633,10 +10719,6 @@
   {
    "text": "T.5.A.426. n.22. & A. 430.n.61.",
    "note": "g"
-  },
-  {
-   "text": "cir. a. 630. de eius basilica T. 8 a. A. 705. n.7.",
-   "note": "h"
   }
  ],
  "mr:1004-petrus": [
@@ -11043,12 +11125,14 @@
  ],
  "mr:1014-fortunatus": [
   {
-   "text": "T. 3. A. 359 n. 46.",
-   "note": "f"
-  },
-  {
    "text": "T.7.A. 537. nu. 11. & seqq.",
    "note": "g"
+  }
+ ],
+ "mr:1014-gaudentius": [
+  {
+   "text": "T. 3. A. 359 n. 46.",
+   "note": "f"
   }
  ],
  "mr:1015-antiochus": [
@@ -11069,16 +11153,16 @@
    "note": "d"
   }
  ],
- "mr:1015-hedwigis": [
-  {
-   "text": "T. 9. A. 725. n 14.",
-   "note": "i"
-  }
- ],
  "mr:1015-severus": [
   {
    "text": "T. 5. A. 435 nu. 16. & seq. T. 6 A. 479. n 15.",
    "note": "f"
+  }
+ ],
+ "mr:1015-thecla": [
+  {
+   "text": "T. 9. A. 725. n 14.",
+   "note": "i"
   }
  ],
  "mr:1015-trecenti-martyres-coloniae": [
@@ -11139,7 +11223,7 @@
    "note": "a"
   }
  ],
- "mr:1017-mamelta": [
+ "mr:1017-victor-et-socii": [
   {
    "text": "T.3.A.174 num.6.",
    "note": "f"
@@ -11393,6 +11477,12 @@
    "note": "b"
   }
  ],
+ "mr:1024-evergislus": [
+  {
+   "text": "cir. A. 403.",
+   "note": "c"
+  }
+ ],
  "mr:1024-felix-et-socii": [
   {
    "text": "T. 3. A. 302. nu. 118. & seq.",
@@ -11418,10 +11508,6 @@
   }
  ],
  "mr:1024-proclus": [
-  {
-   "text": "cir. A. 403.",
-   "note": "c"
-  },
   {
    "text": "T. 5. A. 407 nu. 12. & seq. & An. 425 nu. 10. & seq. & A 434. n. 1. & seq. & T. 6. A. 446. nu. 19.",
    "note": "d"
@@ -11815,10 +11901,6 @@
  ],
  "mr:1103-malachias": [
   {
-   "text": "cir. A. 660.",
-   "note": "e"
-  },
-  {
    "text": "T. XII. An. 1144.n. 11. & A. 1237. num. 34. & seq.",
    "note": "f"
   }
@@ -11845,6 +11927,12 @@
   {
    "text": "T.2. A.303. n. 121.",
    "note": "d"
+  }
+ ],
+ "mr:1103-wenefrida": [
+  {
+   "text": "cir. A. 660.",
+   "note": "e"
   }
  ],
  "mr:1104-amantius": [
@@ -11895,11 +11983,13 @@
    "note": "a"
   }
  ],
- "mr:1105-felix-et-eusebius": [
+ "mr:1105-elisabeth": [
   {
    "text": "T.1. in Apparat. n. 16. & A. 1. n. 56.",
    "note": "b"
-  },
+  }
+ ],
+ "mr:1105-felix-et-eusebius": [
   {
    "text": "cir. A. 100.",
    "note": "c"
@@ -12131,10 +12221,6 @@
  ],
  "mr:1111-athenodorus": [
   {
-   "text": "T. 2. A. 303. n. 122.",
-   "note": "c"
-  },
-  {
    "text": "T. 2. A. 304 n. 74.",
    "note": "d"
   }
@@ -12161,6 +12247,12 @@
   {
    "text": "T. 7. A. 572. nu. 10.",
    "note": "g"
+  }
+ ],
+ "mr:1111-valentinus-et-socii": [
+  {
+   "text": "T. 2. A. 303. n. 122.",
+   "note": "c"
   }
  ],
  "mr:1111-veranus": [
@@ -12301,12 +12393,14 @@
  ],
  "mr:1114-veneranda": [
   {
-   "text": "cir. A. 272.",
-   "note": "c"
-  },
-  {
    "text": "cir. A. 143.",
    "note": "d"
+  }
+ ],
+ "mr:1114-venerandus": [
+  {
+   "text": "cir. A. 272.",
+   "note": "c"
   }
  ],
  "mr:1115-eugenius": [
@@ -12947,10 +13041,6 @@
   {
    "text": "circ. A. 155. quia tunc successit ei Calimerus Panui.",
    "note": "i"
-  },
-  {
-   "text": "Aliqui sub Diocletiano & Maxim.",
-   "note": "k"
   }
  ],
  "mr:1201-diodorus-et-marianus": [
@@ -12987,6 +13077,12 @@
   {
    "text": "cir. A. 545. Aliqui sub Totila res est ambigua.",
    "note": "g"
+  }
+ ],
+ "mr:1201-ursicinus": [
+  {
+   "text": "Aliqui sub Diocletiano & Maxim.",
+   "note": "k"
   }
  ],
  "mr:1202-bibiana": [
@@ -13455,10 +13551,6 @@
  ],
  "mr:1214-agnellus": [
   {
-   "text": "cir. A. 120 Gualla.",
-   "note": "g"
-  },
-  {
    "text": "cir. A. 596.",
    "note": "h"
   }
@@ -13485,6 +13577,12 @@
   {
    "text": "T. 5. A. 407. n.46. & T. 6. A. 451. n.43.",
    "note": "d"
+  }
+ ],
+ "mr:1214-pompeius": [
+  {
+   "text": "cir. A. 120 Gualla.",
+   "note": "g"
   }
  ],
  "mr:1214-spiridion": [
@@ -13553,11 +13651,13 @@
    "note": "b"
   }
  ],
- "mr:1217-ignatius": [
+ "mr:1217-begga": [
   {
    "text": "T. 8. A 698 n. 9.",
    "note": "e"
-  },
+  }
+ ],
+ "mr:1217-ignatius": [
   {
    "text": "T. 5. A. 438. n. 12.",
    "note": "f"
@@ -13781,6 +13881,12 @@
    "note": "g"
   }
  ],
+ "mr:1225-anastasia": [
+  {
+   "text": "T. 2 A. 300. n. 3. & seq. & An. 303 num. 145.",
+   "note": "d"
+  }
+ ],
  "mr:1225-eugenia": [
   {
    "text": "T. 2. A. 188. & An. 262. n. 55.",
@@ -13813,10 +13919,6 @@
   {
    "text": "T. 1. in princip. fusius.",
    "note": "c"
-  },
-  {
-   "text": "T. 2 A. 300. n. 3. & seq. & An. 303 num. 145.",
-   "note": "d"
   }
  ],
  "mr:1226-archelaus": [

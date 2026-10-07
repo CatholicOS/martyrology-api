@@ -33,7 +33,8 @@
   "elogia": {
    "mr:0703-tryphon-et-socii": "ALEXANDRIAE sanctorum martyrum Tryphônis & aliorum duodecim.",
    "mr:0703-eulogius-et-socii": "Constantinopoli sanctorum Eulogij & sociorum martyrum.",
-   "mr:0703-hyacinthus": "Cæsareæ in Cappadocia sancti Hyacinthi cubicularij Traiani Imperatoris, qui accusatus quod Christianus esset, plagis varie afflictus, & in carcerem trusus, ibi consumptus fame expirauit: Clusij in Etruria sanctorum martyrum Irenæi diaconi, & Multiŏlæ matronæ, qui sub Aureliano Imperatore diuersis atrocibusq. supplicijs cruciati, coronam martyrij meruerunt.",
+   "mr:0703-hyacinthus": "Cæsareæ in Cappadocia sancti Hyacinthi cubicularij Traiani Imperatoris, qui accusatus quod Christianus esset, plagis varie afflictus, & in carcerem trusus, ibi consumptus fame expirauit:",
+   "mr:0703-irenaeus-et-mustiola": "Clusij in Etruria sanctorum martyrum Irenæi diaconi, & Multiŏlæ matronæ, qui sub Aureliano Imperatore diuersis atrocibusq. supplicijs cruciati, coronam martyrij meruerunt.",
    "mr:0703-marcus-et-mocianus": "Eodem die sanctorum martyrũ Marci & Muciâni, qui pro Christo gladio cæsi sunt: quos cum puer paruulus, ne immolarent idôlis, alta voce moneret, verberibus iussus est cædi: cumq. vehementius Christum confiteretur, vna cum quodam Paulo martyres exhortante necatus est.",
    "mr:0703-anatolius-laodiceae": "Laodicêæ in Syria sancti Anatolij Episcopi, qui non solum religiosis viris, sed & philosophis admiranda scripta reliquit.",
    "mr:0703-heliodorus": "Altini sancti Heliodôri Episcopi, doctrina & sanctitate insignis.",
@@ -140,7 +141,8 @@
   "elogia": {
    "mr:0711-pius-i": "ROMAE beati Pij Papæ & martyris, qui in persecutione Marci Aurelij Antonini martyrio coronatus est.",
    "mr:0711-ianuarius-et-pelagia": "Nicopoli in Armenia natalis sanctorum martyrum Ianuarij & Pelagię, qui equuleo, vngulis, & testarum fragmentis diebus quatuor cruciati, martyrium impleuerunt.",
-   "mr:0711-marcianus": "In territorio Senonensi sancti Sidronij martyris, Iconij sancti Marciani martyris, qui sub Perennio Præside per multa tormenta peruenit ad palmam.",
+   "mr:0711-sidronius": "In territorio Senonensi sancti Sidronij martyris,",
+   "mr:0711-marcianus": "Iconij sancti Marciani martyris, qui sub Perennio Præside per multa tormenta peruenit ad palmam.",
    "mr:0711-cindeus": "Sidæ in Pamphilia sancti Cindêi presbyteri, qui sub Diocletiano Imperatore & Stratonico Præside post multa tormenta in ignem iniectus, & nil læsus, demum in oratione reddidit spiritum.",
    "mr:0711-savinus-et-cyprianus": "Brixiæ sanctorum martyrum Sauîni & Cypriani.",
    "mr:0711-ioannes": "Bergŏmi sancti Ioannis Episcopi, qui ob tuendam Catholicam fidem ab Arianis occisus est.",
@@ -186,7 +188,8 @@
    "mr:0714-phocas": "Synôpe in Ponto sancti Phocæ martyris, eiusdem ciuitatis Episcopi, qui sub Traiano Imperatore carcerem, vincula, ferrum, ignemq. pro Christo superans, euolauit in cælum: cuius reliquiæ Viennam in Gallia delatæ, in basilica sanctorum Apostolorum conditæ sunt.",
    "mr:0714-heracla": "Alexandriæ sancti Herăclæ antistitis, ob cuius celeberrimam opinionem Africânus historiogrăphus memorat se Alexandriam ad eum visendum properasse.",
    "mr:0714-cyrus": "Carthagine sancti Cyri Episcopi, in cuius festiuitate sanctus Augustinus de eo sermonem ad populum habuit.",
-   "mr:0714-felix": "Nouocŏmi sancti Felicis primi eiusdem ciuitatis Episcopi, Brixiæ sancti Optatiâni Episcopi.",
+   "mr:0714-felix": "Nouocŏmi sancti Felicis primi eiusdem ciuitatis Episcopi,",
+   "mr:0714-optatianus": "Brixiæ sancti Optatiâni Episcopi.",
    "mr:0714-marchelmus": "Dauentriæ in Belgis sancti Marcellini presbyteri & confessoris.",
    "mr:0714-henricus": "Bambergæ sancti Henrîci Primi Imperatoris, qui cum vxore sua Chunegunde perpetuam virginitatem seruauit, & sanctum Stephanum Hungarorum Regem cum vniuerso fere eius regno ad fidem Christi suscipiendam perduxit."
   },
@@ -195,7 +198,8 @@
  "15": {
   "titulus": "Idibus Iulij. Luna.",
   "elogia": {
-   "mr:0715-catulinus-et-socii": "IN Portu Romano natalis sanctorum martyrum Eutropij, Zolîmæ, & Bonôsæ sororum: Carthagine beati Catulini diaconi, de cuius laudibus sanctus Augustinus sermonem ad populum habuit; & sanctorum Ianuarij, Florentij, Iuliæ, & Iustæ martyrum, qui positi sunt in basilica Fausti.",
+   "mr:0715-eutropius-et-socii": "IN Portu Romano natalis sanctorum martyrum Eutropij, Zolîmæ, & Bonôsæ sororum:",
+   "mr:0715-catulinus-et-socii": "Carthagine beati Catulini diaconi, de cuius laudibus sanctus Augustinus sermonem ad populum habuit; & sanctorum Ianuarij, Florentij, Iuliæ, & Iustæ martyrum, qui positi sunt in basilica Fausti.",
    "mr:0715-philippus-et-socii": "Alexandriæ sanctorum martyrum Philippi, Zenônis, Narsæi, & decem infantum.",
    "mr:0715-abudemius": "In insula Tenêdo sancti Abudemij martyris, qui sub Diocletiano passus est.",
    "mr:0715-antiochus": "Sebaste sancti Antiochi medici, qui sub Hadriano Præside capite obtruncatus est; cumq. ex eo lac pro sanguine manaret, Cyriacus carnifex conuersus ad Christum, & ipse martyrium subijt.",
@@ -356,7 +360,8 @@
    "mr:0726-anna": "DORMITIO sanctæ Annę matris Genitricis Dei MARIAE.",
    "mr:0726-erastus": "Philippis in Macedonia natalis S. Erasti, qui illic a beato Paulo Apostolo relictus Episcopus, ibidem martyrio coronatus est.",
    "mr:0726-symphronius-et-socii": "Romæ via Latina sanctorum martyrũ Symphronij, Olympij, Theoduli, & Exuperiæ, qui (vt in gestis sancti Stephani Papæ legitur) ignibus combusti, martyrij palmam adepti sunt.",
-   "mr:0726-hyacinthus": "In Portu Romano sancti Hyacinthi martyris, qui primo in ignem iniectus, deinde in profluentem præcipitatus, illæsus euasit: post hæc a Leontio Consulari sub Traiano Imperatore gladio percussus, vitam finiuit: cuius corpus Iulia matrona in prædio suo iuxta Vrbem sepeliuit Item Romæ sancti Pastôris presbyteri, cuius nomine Titulus extat in Viminâli apud sanctam Pudentianam.",
+   "mr:0726-hyacinthus": "In Portu Romano sancti Hyacinthi martyris, qui primo in ignem iniectus, deinde in profluentem præcipitatus, illæsus euasit: post hæc a Leontio Consulari sub Traiano Imperatore gladio percussus, vitam finiuit: cuius corpus Iulia matrona in prædio suo iuxta Vrbem sepeliuit",
+   "mr:0726-pastor": "Item Romæ sancti Pastôris presbyteri, cuius nomine Titulus extat in Viminâli apud sanctam Pudentianam.",
    "mr:0726-valens": "Veronę sancti Valentis Episcopi & confessoris.",
    "mr:0726-simeon": "In monasterio sancti Benedicti in agro Mantuano sancti Simeonis monachi & eremitæ, qui multis miraculis clarus, in senectute bona quieuit."
   },
@@ -401,7 +406,8 @@
    "mr:0729-callinicus": "Gangræ in Paphlagonia sancti Callinici martyris, qui virgis ferreis verberatus, alijsq. supplicijs cruciatus, tandem in fornâcem iniectus, spiritum Deo reddidit.",
    "mr:0729-olavus": "In Noruegia sancti Olaui Regis & martyris.",
    "mr:0729-lupus": "Trecis in Gallia sancti Lupi Episcopi & confessoris, qui cum beato Germano ad expugnandam Pelagianorum hæresim in Britanniam perrexit, vrbemq. Treças a furore Attilæ, Galliam omnem deuastantis, assidua oratione defendit: demum quinquagintaduobus annis sacerdotio venerabiliter functus, in pace quieuit.",
-   "mr:0729-prosperus": "In ciuitate Briocensi sancti Gulielmi Episcopi & confessoris Item depositio beati Prosperi Episcopi Aurelianensis.",
+   "mr:0729-gulielmus-pinchon": "In ciuitate Briocensi sancti Gulielmi Episcopi & confessoris",
+   "mr:0729-prosperus": "Item depositio beati Prosperi Episcopi Aurelianensis.",
    "mr:0729-faustinus": "Apud Tudertum sancti Faustini confessoris.",
    "mr:0729-seraphina": "In ciuitate Mamiensi sanctæ Seraphînæ."
   },
@@ -423,7 +429,9 @@
   "elogia": {
    "mr:0731-fabius": "CAESAREÂE passio beati Fabij martyris, qui cũ ferre vexilla præsidalia recusaret, primum diebus aliquot in carcerẽ trusus, deinde interrogatus semel & iterum, cum in confessione Christi perduraret, mox a Iudice capitali sententia condemnatur.",
    "mr:0731-calimerus": "Mediolani sancti Calimerij Episcopi & martyris, qui in Antonini persecutione comprehensus, vulneribus confossus, ceruicibusq. gladio transuerberatis, præceps in puteum deiectus, martyrij cursum cõfecit.",
-   "mr:0731-trecenti-quinquaginta-monachi-syriae": "Synnădæ in Phrygia Pacatiana sanctorum martyrum Democriti, Secũdi, & Dionysij In Syria sanctorum trecentorum quinquaginta Monachorũ martyrum, qui ob defensionem Synŏdi Chalcedonensis ab hereticis occisi sunt: Rauennæ transitus sancti Germani Antisiodorensis Episcopi, genere, fide, doctrina, & miraculorum gloria clarissimi, qui Britanniam a Pelagianorum hæresibus penitus liberauit.",
+   "mr:0731-democritus-et-socii": "Synnădæ in Phrygia Pacatiana sanctorum martyrum Democriti, Secũdi, & Dionysij",
+   "mr:0731-trecenti-quinquaginta-monachi-syriae": "In Syria sanctorum trecentorum quinquaginta Monachorũ martyrum, qui ob defensionem Synŏdi Chalcedonensis ab hereticis occisi sunt:",
+   "mr:0731-germanus": "Rauennæ transitus sancti Germani Antisiodorensis Episcopi, genere, fide, doctrina, & miraculorum gloria clarissimi, qui Britanniam a Pelagianorum hæresibus penitus liberauit.",
    "mr:0731-firmus": "Tagaste in Africa sancti Firmi Episcopi, gloria confessionis illustris.",
    "mr:0731-ioannes-columbini": "Senis in Tuscia natalis beati Ioannis Columbîni, institutoris ordinis Iesuatorum, sanctitate ac miraculis clari.",
    "mr:0731-ignatius-de-loyola": "Romę natalis S. Ignatij confessoris fundatoris Societatis Iesu sanctitate, & miraculis clari, & Catholicæ religionis vbique dilatandæ studiosissimi."

@@ -97,9 +97,13 @@
    "method": "same-day",
    "score": 0.948
   },
+  "mr:0103-zosimus-et-athanasius": {
+   "method": "same-day",
+   "score": 0.968
+  },
   "mr:0103-theopemptus-et-theona": {
    "method": "same-day",
-   "score": 0.72
+   "score": 0.952
   },
   "mr:0103-daniel": {
    "method": "same-day",
@@ -169,9 +173,13 @@
    "method": "same-day",
    "score": 0.896
   },
+  "mr:0105-eduardus-confessor": {
+   "method": "same-day",
+   "score": 0.468
+  },
   "mr:0105-syncletica": {
    "method": "same-day",
-   "score": 0.641
+   "score": 0.873
   },
   "mr:0105-aemiliana": {
    "method": "same-day",
@@ -195,7 +203,11 @@
   },
   "mr:0106-melanius": {
    "method": "same-day",
-   "score": 0.846
+   "score": 0.977
+  },
+  "mr:0106-andreas-corsini": {
+   "method": "same-day",
+   "score": 0.308
   },
   "mr:0106-nilammo": {
    "method": "same-day",
@@ -327,7 +339,19 @@
   },
   "mr:0111-petrus-et-socii": {
    "method": "same-day",
-   "score": 0.439
+   "score": 0.963
+  },
+  "mr:0111-alexander": {
+   "method": "same-day",
+   "score": 0.887
+  },
+  "mr:0111-salvius-ambiani": {
+   "method": "same-day",
+   "score": 0.769
+  },
+  "mr:0111-leucius": {
+   "method": "same-day",
+   "score": 0.884
   },
   "mr:0111-theodosius": {
    "method": "same-day",
@@ -505,9 +529,13 @@
    "method": "same-day",
    "score": 0.883
   },
+  "mr:0116-titianus": {
+   "method": "same-day",
+   "score": 0.752
+  },
   "mr:0116-mela": {
    "method": "same-day",
-   "score": 0.816
+   "score": 0.965
   },
   "mr:0116-honoratus-fundis": {
    "method": "same-day",
@@ -599,7 +627,11 @@
   },
   "mr:0120-sebastianus": {
    "method": "same-day",
-   "score": 0.908
+   "score": 0.927
+  },
+  "mr:0120-neophytus": {
+   "method": "same-day",
+   "score": 0.943
   },
   "mr:0120-maurus": {
    "method": "same-day",
@@ -779,7 +811,11 @@
   },
   "mr:0127-dativus-et-socii": {
    "method": "same-day",
-   "score": 0.862
+   "score": 0.987
+  },
+  "mr:0127-vitalianus": {
+   "method": "same-day",
+   "score": 0.863
   },
   "mr:0127-iulianus-cenomanum": {
    "method": "same-day",
@@ -819,7 +855,11 @@
   },
   "mr:0128-iulianus": {
    "method": "same-day",
-   "score": 0.82
+   "score": 0.983
+  },
+  "mr:0128-ioannes": {
+   "method": "same-day",
+   "score": 0.859
   },
   "mr:0128-iacobus": {
    "method": "same-day",
@@ -1455,7 +1495,11 @@
   },
   "mr:0219-monachi-martyres-palaestinae": {
    "method": "same-day",
-   "score": 0.82
+   "score": 0.93
+  },
+  "mr:0219-zambda": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:0219-auxibius": {
    "method": "same-day",
@@ -1743,7 +1787,11 @@
   },
   "mr:0301-albinus": {
    "method": "same-day",
-   "score": 0.746
+   "score": 0.895
+  },
+  "mr:0301-siviardus": {
+   "method": "same-day",
+   "score": 0.86
   },
   "mr:0301-translatio-herculani": {
    "method": "same-day",
@@ -1757,9 +1805,13 @@
    "method": "same-day",
    "score": 0.987
   },
+  "mr:0302-paulus-et-socii": {
+   "method": "same-day",
+   "score": 0.973
+  },
   "mr:0302-lucius-et-socii": {
    "method": "same-day",
-   "score": 0.643
+   "score": 0.961
   },
   "mr:0302-octoginta-martyres-campaniae": {
    "method": "same-day",
@@ -1804,6 +1856,10 @@
   "mr:0304-lucius-i": {
    "method": "same-day",
    "score": 0.908
+  },
+  "mr:0304-nongenti-martyres-romae": {
+   "method": "same-day",
+   "score": 0.971
   },
   "mr:0304-caius-et-socii": {
    "method": "same-day",
@@ -1973,9 +2029,13 @@
    "method": "same-day",
    "score": 1.0
   },
+  "mr:0311-heraclius-et-zosimus": {
+   "method": "same-day",
+   "score": 0.957
+  },
   "mr:0311-candidus-et-socii": {
    "method": "same-day",
-   "score": 0.707
+   "score": 0.962
   },
   "mr:0311-trophimus-et-thalus": {
    "method": "same-day",
@@ -2139,7 +2199,11 @@
   },
   "mr:0316-hilarius-et-tatianus": {
    "method": "same-day",
-   "score": 0.821
+   "score": 0.955
+  },
+  "mr:0316-papa": {
+   "method": "same-day",
+   "score": 0.914
   },
   "mr:0316-iulianus": {
    "method": "same-day",
@@ -2223,7 +2287,15 @@
   },
   "mr:0319-ioseph": {
    "method": "same-day",
-   "score": 0.501
+   "score": 0.485
+  },
+  "mr:0319-quinctus-et-socii": {
+   "method": "same-day",
+   "score": 0.97
+  },
+  "mr:0319-pancharius": {
+   "method": "same-day",
+   "score": 0.41
   },
   "mr:0319-apollonius-et-leontius": {
    "method": "same-day",
@@ -2281,9 +2353,13 @@
    "method": "same-day",
    "score": 0.971
   },
+  "mr:0321-philemon-et-domninus": {
+   "method": "same-day",
+   "score": 0.97
+  },
   "mr:0321-birillus": {
    "method": "same-day",
-   "score": 0.797
+   "score": 0.928
   },
   "mr:0321-serapion": {
    "method": "same-day",
@@ -2675,7 +2751,11 @@
   },
   "mr:0404-ambrosius": {
    "method": "same-day",
-   "score": 0.8
+   "score": 0.843
+  },
+  "mr:0404-isidorus": {
+   "method": "same-day",
+   "score": 0.831
   },
   "mr:0404-platon": {
    "method": "same-day",
@@ -2851,7 +2931,11 @@
   },
   "mr:0410-apollonius": {
    "method": "same-day",
-   "score": 0.62
+   "score": 0.971
+  },
+  "mr:0410-terentius-et-socii": {
+   "method": "same-day",
+   "score": 0.971
   },
   "mr:0410-macarius": {
    "method": "same-day",
@@ -2943,7 +3027,11 @@
   },
   "mr:0414-domnina-et-socii": {
    "method": "same-day",
-   "score": 0.749
+   "score": 0.936
+  },
+  "mr:0414-thomais": {
+   "method": "same-day",
+   "score": 0.854
   },
   "mr:0414-ardalio": {
    "method": "same-day",
@@ -3035,7 +3123,11 @@
   },
   "mr:0417-petrus-et-hermogenes": {
    "method": "same-day",
-   "score": 0.601
+   "score": 0.852
+  },
+  "mr:0417-elias-et-socii": {
+   "method": "same-day",
+   "score": 0.582
   },
   "mr:0417-pantagathus": {
    "method": "same-day",
@@ -3252,6 +3344,10 @@
   "mr:0425-marcus-evangelista": {
    "method": "same-day",
    "score": 0.954
+  },
+  "mr:0425-litaniae-maiores": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:0425-evodius-et-socii": {
    "method": "same-day",
@@ -3563,7 +3659,11 @@
   },
   "mr:0504-sacerdos": {
    "method": "same-day",
-   "score": 0.777
+   "score": 0.993
+  },
+  "mr:0504-curcodomus": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:0505-crescentiana": {
    "method": "same-day",
@@ -3601,9 +3701,13 @@
    "method": "same-day",
    "score": 0.931
   },
+  "mr:0505-nicetius": {
+   "method": "same-day",
+   "score": 0.857
+  },
   "mr:0505-theodorus": {
    "method": "same-day",
-   "score": 0.632
+   "score": 1.0
   },
   "mr:0505-sacerdos-sagunti": {
    "method": "same-day",
@@ -4071,7 +4175,11 @@
   },
   "mr:0520-austregisilius": {
    "method": "same-day",
-   "score": 0.741
+   "score": 0.9
+  },
+  "mr:0520-anastasius": {
+   "method": "same-day",
+   "score": 0.903
   },
   "mr:0520-theodorus": {
    "method": "same-day",
@@ -4175,7 +4283,11 @@
   },
   "mr:0523-desiderius-viennensis": {
    "method": "same-day",
-   "score": 0.842
+   "score": 0.992
+  },
+  "mr:0523-michael": {
+   "method": "same-day",
+   "score": 0.977
   },
   "mr:0523-mercurialis": {
    "method": "same-day",
@@ -4232,6 +4344,10 @@
   "mr:0525-urbanus-i": {
    "method": "same-day",
    "score": 0.869
+  },
+  "mr:0525-pasicrates-et-valentio": {
+   "method": "same-day",
+   "score": 0.904
   },
   "mr:0525-dionysius": {
    "method": "same-day",
@@ -4455,7 +4571,11 @@
   },
   "mr:0601-reverianus-et-socii": {
    "method": "same-day",
-   "score": 0.663
+   "score": 0.977
+  },
+  "mr:0601-thespesius": {
+   "method": "same-day",
+   "score": 0.976
   },
   "mr:0601-ischyrion-et-socii": {
    "method": "same-day",
@@ -4463,7 +4583,11 @@
   },
   "mr:0601-firmus": {
    "method": "same-day",
-   "score": 0.673
+   "score": 0.993
+  },
+  "mr:0601-felinus-et-gratinianus": {
+   "method": "same-day",
+   "score": 0.975
   },
   "mr:0601-proculus": {
    "method": "same-day",
@@ -4479,7 +4603,11 @@
   },
   "mr:0601-fortunatus": {
    "method": "same-day",
-   "score": 0.657
+   "score": 0.841
+  },
+  "mr:0601-caprasius": {
+   "method": "same-day",
+   "score": 0.874
   },
   "mr:0601-simeon": {
    "method": "same-day",
@@ -4605,6 +4733,10 @@
    "method": "same-day",
    "score": 0.873
   },
+  "mr:0606-artemius-et-paulina": {
+   "method": "same-day",
+   "score": 0.892
+  },
   "mr:0606-viginti-martyres-tarsi": {
    "method": "same-day",
    "score": 0.976
@@ -4701,9 +4833,13 @@
    "method": "same-day",
    "score": 0.87
   },
+  "mr:0609-columba": {
+   "method": "same-day",
+   "score": 0.696
+  },
   "mr:0609-iulianus": {
    "method": "same-day",
-   "score": 0.773
+   "score": 0.979
   },
   "mr:0610-getulius-et-socii": {
    "method": "same-day",
@@ -5163,7 +5299,11 @@
   },
   "mr:0625-prosperus": {
    "method": "same-day",
-   "score": 0.758
+   "score": 0.971
+  },
+  "mr:0625-maximus": {
+   "method": "same-day",
+   "score": 0.96
   },
   "mr:0625-adalbertus": {
    "method": "same-day",
@@ -5391,7 +5531,11 @@
   },
   "mr:0703-hyacinthus": {
    "method": "same-day",
-   "score": 0.718
+   "score": 0.865
+  },
+  "mr:0703-irenaeus-et-mustiola": {
+   "method": "same-day",
+   "score": 0.968
   },
   "mr:0703-marcus-et-mocianus": {
    "method": "same-day",
@@ -5625,9 +5769,13 @@
    "method": "same-day",
    "score": 0.947
   },
+  "mr:0711-sidronius": {
+   "method": "same-day",
+   "score": 1.0
+  },
   "mr:0711-marcianus": {
    "method": "same-day",
-   "score": 0.748
+   "score": 0.922
   },
   "mr:0711-cindeus": {
    "method": "same-day",
@@ -5739,7 +5887,11 @@
   },
   "mr:0714-felix": {
    "method": "same-day",
-   "score": 0.683
+   "score": 0.873
+  },
+  "mr:0714-optatianus": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:0714-marchelmus": {
    "method": "same-day",
@@ -5749,9 +5901,13 @@
    "method": "same-day",
    "score": 0.2
   },
+  "mr:0715-eutropius-et-socii": {
+   "method": "same-day",
+   "score": 0.927
+  },
   "mr:0715-catulinus-et-socii": {
    "method": "same-day",
-   "score": 0.781
+   "score": 0.982
   },
   "mr:0715-philippus-et-socii": {
    "method": "same-day",
@@ -6133,6 +6289,10 @@
    "method": "same-day",
    "score": 0.888
   },
+  "mr:0726-pastor": {
+   "method": "same-day",
+   "score": 0.966
+  },
   "mr:0726-valens": {
    "method": "same-day",
    "score": 0.946
@@ -6237,9 +6397,13 @@
    "method": "same-day",
    "score": 0.954
   },
+  "mr:0729-gulielmus-pinchon": {
+   "method": "same-day",
+   "score": 0.879
+  },
   "mr:0729-prosperus": {
    "method": "same-day",
-   "score": 0.539
+   "score": 0.841
   },
   "mr:0729-faustinus": {
    "method": "same-day",
@@ -6277,9 +6441,17 @@
    "method": "same-day",
    "score": 0.975
   },
+  "mr:0731-democritus-et-socii": {
+   "method": "same-day",
+   "score": 0.948
+  },
   "mr:0731-trecenti-quinquaginta-monachi-syriae": {
    "method": "same-day",
-   "score": 0.624
+   "score": 0.946
+  },
+  "mr:0731-germanus": {
+   "method": "same-day",
+   "score": 0.986
   },
   "mr:0731-firmus": {
    "method": "same-day",
@@ -6615,7 +6787,11 @@
   },
   "mr:0811-susanna": {
    "method": "same-day",
-   "score": 0.764
+   "score": 0.954
+  },
+  "mr:0811-alexander-carbonarius": {
+   "method": "same-day",
+   "score": 0.946
   },
   "mr:0811-rufinus": {
    "method": "same-day",
@@ -6851,7 +7027,11 @@
   },
   "mr:0819-timotheus": {
    "method": "same-day",
-   "score": 0.722
+   "score": 1.0
+  },
+  "mr:0819-thecla-et-agapius": {
+   "method": "same-day",
+   "score": 0.992
   },
   "mr:0819-magnus": {
    "method": "same-day",
@@ -7131,7 +7311,15 @@
   },
   "mr:0826-alexander": {
    "method": "same-day",
-   "score": 0.717
+   "score": 0.881
+  },
+  "mr:0826-simplicius-et-socii": {
+   "method": "same-day",
+   "score": 0.923
+  },
+  "mr:0826-hadrianus": {
+   "method": "same-day",
+   "score": 0.849
   },
   "mr:0826-victor": {
    "method": "same-day",
@@ -7277,13 +7465,21 @@
    "method": "same-day",
    "score": 0.971
   },
+  "mr:0830-pammachius": {
+   "method": "same-day",
+   "score": 0.925
+  },
   "mr:0830-sexaginta-martyres-coloniae-sufetanae": {
    "method": "same-day",
-   "score": 0.708
+   "score": 0.989
+  },
+  "mr:0830-bonifatius-et-thecla": {
+   "method": "same-day",
+   "score": 0.954
   },
   "mr:0830-fantinus": {
    "method": "same-day",
-   "score": 0.602
+   "score": 0.914
   },
   "mr:0830-fiacrius": {
    "method": "same-day",
@@ -7359,7 +7555,23 @@
   },
   "mr:0901-regulus": {
    "method": "same-day",
-   "score": 0.532
+   "score": 0.925
+  },
+  "mr:0901-lupus": {
+   "method": "same-day",
+   "score": 0.958
+  },
+  "mr:0901-priscus-capuae": {
+   "method": "same-day",
+   "score": 0.942
+  },
+  "mr:0901-constantius": {
+   "method": "same-day",
+   "score": 0.969
+  },
+  "mr:0901-victorius": {
+   "method": "same-day",
+   "score": 0.876
   },
   "mr:0901-verena": {
    "method": "same-day",
@@ -7605,6 +7817,10 @@
    "method": "same-day",
    "score": 0.376
   },
+  "mr:0908-ammon-et-socii": {
+   "method": "same-day",
+   "score": 0.946
+  },
   "mr:0908-timotheus-et-faustus": {
    "method": "same-day",
    "score": 0.968
@@ -7835,7 +8051,11 @@
   },
   "mr:0915-maximus-et-socii": {
    "method": "same-day",
-   "score": 0.558
+   "score": 0.925
+  },
+  "mr:0915-porphyrius": {
+   "method": "same-day",
+   "score": 0.854
   },
   "mr:0915-nicetas-gothus": {
    "method": "same-day",
@@ -8245,9 +8465,13 @@
    "method": "same-day",
    "score": 0.884
   },
+  "mr:0927-adolphus-et-ioannes": {
+   "method": "same-day",
+   "score": 0.621
+  },
   "mr:0927-florentinus": {
    "method": "same-day",
-   "score": 0.694
+   "score": 0.979
   },
   "mr:0927-marcus": {
    "method": "same-day",
@@ -8283,7 +8507,11 @@
   },
   "mr:0928-marcus-et-socii": {
    "method": "same-day",
-   "score": 0.769
+   "score": 0.778
+  },
+  "mr:0928-maximus": {
+   "method": "same-day",
+   "score": 0.99
   },
   "mr:0928-venceslaus": {
    "method": "same-day",
@@ -8475,7 +8703,11 @@
   },
   "mr:1004-petronius": {
    "method": "same-day",
-   "score": 0.773
+   "score": 0.957
+  },
+  "mr:1004-aurea": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:1005-placidus": {
    "method": "same-day",
@@ -8813,9 +9045,13 @@
    "method": "same-day",
    "score": 0.954
   },
+  "mr:1014-gaudentius": {
+   "method": "same-day",
+   "score": 0.956
+  },
   "mr:1014-fortunatus": {
    "method": "same-day",
-   "score": 0.73
+   "score": 0.847
   },
   "mr:1014-burchardus": {
    "method": "same-day",
@@ -8843,7 +9079,11 @@
   },
   "mr:1015-trecenti-martyres-coloniae": {
    "method": "same-day",
-   "score": 0.646
+   "score": 0.904
+  },
+  "mr:1015-agileus": {
+   "method": "same-day",
+   "score": 0.853
   },
   "mr:1015-bruno": {
    "method": "same-day",
@@ -8867,7 +9107,11 @@
   },
   "mr:1015-hedwigis": {
    "method": "same-day",
-   "score": 0.65
+   "score": 0.642
+  },
+  "mr:1015-thecla": {
+   "method": "same-day",
+   "score": 0.339
   },
   "mr:1016-ducenti-septuaginta-martyres-africae": {
    "method": "same-day",
@@ -9113,9 +9357,13 @@
    "method": "same-day",
    "score": 0.85
   },
+  "mr:1024-evergislus": {
+   "method": "same-day",
+   "score": 0.354
+  },
   "mr:1024-proclus": {
    "method": "same-day",
-   "score": 0.624
+   "score": 1.0
   },
   "mr:1024-maglorius": {
    "method": "same-day",
@@ -9159,7 +9407,11 @@
   },
   "mr:1025-fronto": {
    "method": "same-day",
-   "score": 0.822
+   "score": 0.939
+  },
+  "mr:1025-gaudentius": {
+   "method": "same-day",
+   "score": 0.94
   },
   "mr:1025-hilarius": {
    "method": "same-day",
@@ -9473,9 +9725,13 @@
    "method": "same-day",
    "score": 0.967
   },
+  "mr:1103-wenefrida": {
+   "method": "same-day",
+   "score": 0.96
+  },
   "mr:1103-malachias": {
    "method": "same-day",
-   "score": 0.813
+   "score": 0.924
   },
   "mr:1103-hubertus": {
    "method": "same-day",
@@ -9545,9 +9801,13 @@
    "method": "same-day",
    "score": 0.775
   },
+  "mr:1105-elisabeth": {
+   "method": "same-day",
+   "score": 0.976
+  },
   "mr:1105-felix-et-eusebius": {
    "method": "same-day",
-   "score": 0.746
+   "score": 0.877
   },
   "mr:1105-galatio-et-episteme": {
    "method": "same-day",
@@ -9753,9 +10013,13 @@
    "method": "same-day",
    "score": 0.962
   },
+  "mr:1111-valentinus-et-socii": {
+   "method": "same-day",
+   "score": 0.812
+  },
   "mr:1111-athenodorus": {
    "method": "same-day",
-   "score": 0.596
+   "score": 0.937
   },
   "mr:1111-veranus": {
    "method": "same-day",
@@ -9857,9 +10121,13 @@
    "method": "same-day",
    "score": 0.864
   },
+  "mr:1114-venerandus": {
+   "method": "same-day",
+   "score": 0.978
+  },
   "mr:1114-veneranda": {
    "method": "same-day",
-   "score": 0.742
+   "score": 0.957
   },
   "mr:1114-hypatius": {
    "method": "same-day",
@@ -10345,9 +10613,13 @@
    "method": "same-day",
    "score": 0.896
   },
+  "mr:1130-castulus-et-euprepis": {
+   "method": "same-day",
+   "score": 0.966
+  },
   "mr:1130-maura": {
    "method": "same-day",
-   "score": 0.676
+   "score": 0.962
   },
   "mr:1130-iustina": {
    "method": "same-day",
@@ -10399,7 +10671,11 @@
   },
   "mr:1201-castritianus": {
    "method": "same-day",
-   "score": 0.875
+   "score": 0.979
+  },
+  "mr:1201-ursicinus": {
+   "method": "same-day",
+   "score": 1.0
   },
   "mr:1201-eligius": {
    "method": "same-day",
@@ -10457,9 +10733,13 @@
    "method": "same-day",
    "score": 0.486
   },
+  "mr:1203-sophonias-propheta": {
+   "method": "same-day",
+   "score": 1.0
+  },
   "mr:1203-claudius": {
    "method": "same-day",
-   "score": 0.808
+   "score": 0.912
   },
   "mr:1203-cassianus": {
    "method": "same-day",
@@ -10809,9 +11089,13 @@
    "method": "same-day",
    "score": 0.889
   },
+  "mr:1214-pompeius": {
+   "method": "same-day",
+   "score": 0.893
+  },
   "mr:1214-agnellus": {
    "method": "same-day",
-   "score": 0.852
+   "score": 0.935
   },
   "mr:1214-matronianus": {
    "method": "same-day",
@@ -10881,9 +11165,13 @@
    "method": "same-day",
    "score": 1.0
   },
+  "mr:1217-begga": {
+   "method": "same-day",
+   "score": 0.844
+  },
   "mr:1217-ignatius": {
    "method": "same-day",
-   "score": 0.685
+   "score": 0.765
   },
   "mr:1218-rufus-et-zosimus": {
    "method": "same-day",
@@ -10977,9 +11265,13 @@
    "method": "same-day",
    "score": 0.95
   },
+  "mr:1221-ioannes-et-festus": {
+   "method": "same-day",
+   "score": 0.944
+  },
   "mr:1221-themistocles": {
    "method": "same-day",
-   "score": 0.859
+   "score": 0.957
   },
   "mr:1221-glycerius": {
    "method": "same-day",
@@ -11072,6 +11364,10 @@
   "mr:1225-nativitas-domini": {
    "method": "same-day",
    "score": 0.962
+  },
+  "mr:1225-anastasia": {
+   "method": "same-day",
+   "score": 0.904
   },
   "mr:1225-eugenia": {
    "method": "same-day",

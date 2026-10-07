@@ -3,7 +3,7 @@
 Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 `notationes_1630_overrides.json` (see the script's docstring), then rerun it.
 
-3052 notes on 2778 eulogies; 2410 margin notes on 2197 eulogies.
+3052 notes on 2850 eulogies; 2410 margin notes on 2248 eulogies.
 
 ## mark without note (10)
 
@@ -20,7 +20,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 
 ## no mark (59)
 
-- 1-11 f (Leucij Episc) → mr:0111-petrus-et-socii after “& Leucij”
+- 1-11 f (Leucij Episc) → mr:0111-leucius after “Episcopi”
 - 1-23 a (MERENTIANAE) → mr:0123-emerentiana after “None”
 - 1-23 e (Ascla) → mr:0123-ascla after “Asclæ”
 - 2-5 a (Genuini & Albini Episcoporum) → mr:0205-ingenuinus after “Genûini”
@@ -31,7 +31,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 2-28 e (Traslatio corporis sancti Augustini) → mr:0228-macarius-et-socii after “None”
 - 3-7 f (Pauli Episcopi) → mr:0307-paulus after “Episcopi”
 - 3-9 c (In rigens stagnum missi sunt) → mr:0309-quadraginta-milites-sebastes after “rigens”
-- 3-11 a (HERACLII, & Zosimi) → mr:0311-candidus-et-socii after “Zosimi”
+- 3-11 a (HERACLII, & Zosimi) → mr:0311-heraclius-et-zosimus after “Zosimi”
 - 3-22 l (Lea) → mr:0322-paulus after “None”
 - 3-26 i (Felicis Episc) → mr:0326-felix after “Episcopi”
 - 4-8 a (EDESII) → mr:0408-aedesius after “None”
@@ -57,7 +57,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 7-27 b (PANTALEONIS, alias Pantaleemonis) → mr:0727-pantaleon after “Pantaleônis”
 - 8-5 e (Emigdij Episc) → mr:0805-dedicatio-basilicae-sanctae-mariae after “None”
 - 8-13 c (Eum perimendi) → mr:0813-cassianus after “perimendi”
-- 8-14 f (Callisti Episcopi) → mr:0814-eusebius after “Callisti”
+- 8-14 f (Callisti Episcopi) → mr:0814-callistus after “Episcopi”
 - 8-17 g (Anastasij Episcopi) → mr:0817-anastasius after “Episcopi”
 - 9-14 f (Materni Episc) → mr:0914-maternus after “Episcopi”
 - 9-15 l (Albini, alias Alpini) → mr:0915-alpinus after “Albîni”
@@ -66,7 +66,7 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 10-7 i (Rosarij) → mr:1007-maria-de-rosario after “Rosarij”
 - 10-9 b (DIONYSII & soc) → mr:1009-dionysius-et-socii after “Dionysij”
 - 10-16 b (A Romano Pontifice) → mr:1016-martinianus-et-saturianus after “Pontifice”
-- 10-17 f (Victoris Episcopi) → mr:1017-mamelta after “Victoris”
+- 10-17 f (Victoris Episcopi) → mr:1017-victor-et-socii after “Episcopi”
 - 10-19 a (PTolemaei & Lucij) → mr:1019-ptolomaeus-et-lucius after “None”
 - 10-20 g (Georgij & Aurelij) → mr:1020-maximus after “None”
 - 10-20 h (Irenes) → mr:1020-maximus after “None”
@@ -90,11 +90,6 @@ Written by `scripts/notationes_1630.py`. Settle an item with an entry in
 - 4-5 note a (IRENES) ↔ mark g in the eulogy: the eulogy's letter kept
 - 6-5 note c (Bonifacy Episc) ↔ mark e in the eulogy: the eulogy's letter kept
 - 8-13 note b (Cassiani) ↔ mark d in the eulogy: the eulogy's letter kept
-
-## unanchored (2)
-
-- 6-23 b (Ioannis presb) → mr:0623-ioannes
-- 12-11 c (Victorici & Fusciani) → mr:1211-victoricus-et-fuscianus
 
 ## margin placement in doubt (114)
 
