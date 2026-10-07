@@ -3331,7 +3331,7 @@
   },
   "mr:0428-vitalis": {
    "method": "same-day",
-   "score": 0.8
+   "score": 0.788
   },
   "mr:0428-valeria": {
    "method": "same-day",
@@ -7123,7 +7123,7 @@
   },
   "mr:0826-irenaeus-et-abundius": {
    "method": "same-day",
-   "score": 0.958
+   "score": 0.954
   },
   "mr:0826-secundus": {
    "method": "same-day",
@@ -7951,7 +7951,7 @@
   },
   "mr:0918-ferreolus-viennensis": {
    "method": "same-day",
-   "score": 0.938
+   "score": 0.935
   },
   "mr:0918-sophia-et-irene": {
    "method": "same-day",
