@@ -16,6 +16,7 @@ from ..models import (
     ElogiumOut,
     EulogyOut,
     FootnoteOut,
+    MarginNoteOut,
     MetadataOut,
     MonthOut,
     RubricaOut,
@@ -55,7 +56,11 @@ def _edition_meta_out(request: Request, edition_id: str) -> EditionMetadataOut:
     )
 
 
-def elogium_out(e: Elogium, footnotes: dict[str, list[FootnoteOut]] | None = None) -> ElogiumOut:
+def elogium_out(
+    e: Elogium,
+    footnotes: dict[str, list[FootnoteOut]] | None = None,
+    marginalia: dict[str, list[MarginNoteOut]] | None = None,
+) -> ElogiumOut:
     return ElogiumOut(
         id=e.id,
         entry=e.entry,
@@ -64,15 +69,18 @@ def elogium_out(e: Elogium, footnotes: dict[str, list[FootnoteOut]] | None = Non
         anchor_day=f"{e.anchor_month:02d}-{e.anchor_day:02d}",
         text=e.text,
         footnotes=list((footnotes or {}).get(e.id or "", [])),
+        marginalia=list((marginalia or {}).get(e.id or "", [])),
     )
 
 
 def _day_content(
-    d: DayData, footnotes: dict[str, list[FootnoteOut]] | None = None
+    d: DayData,
+    footnotes: dict[str, list[FootnoteOut]] | None = None,
+    marginalia: dict[str, list[MarginNoteOut]] | None = None,
 ) -> DayContentOut:
     return DayContentOut(
         titulus=d.titulus,
-        elogia=[elogium_out(e, footnotes) for e in d.elogia],
+        elogia=[elogium_out(e, footnotes, marginalia) for e in d.elogia],
         rubricae=[RubricaOut(after=r.after, text=r.text) for r in d.rubricae],
         conclusio=d.conclusio,
     )
@@ -164,9 +172,10 @@ async def get_elogia(
         # shared-cached, since it reflects a specific curator's branch.
         request.state.cache_private = True
     notes = store.footnotes(resolution.edition_id)
+    margins = store.marginalia(resolution.edition_id)
 
     if req.day is None:
-        contents = {f"{d:02d}": _day_content(v, notes) for d, v in sorted(months.items())}
+        contents = {f"{d:02d}": _day_content(v, notes, margins) for d, v in sorted(months.items())}
         if not allowed:
             for c in contents.values():
                 redact(c.elogia)
@@ -184,7 +193,7 @@ async def get_elogia(
         )
 
     if req.slug is None:
-        c = _day_content(day_data, notes)
+        c = _day_content(day_data, notes, margins)
         if not allowed:
             redact(c.elogia)
             c.rubricae = []
@@ -206,7 +215,7 @@ async def get_elogia(
             f"'{resolution.edition_id}'.",
             type_slug="unknown-eulogy",
         )
-    elogia = [elogium_out(hit, notes)]
+    elogia = [elogium_out(hit, notes, margins)]
     # The rubrics printed right after this eulogy.
     rubricae = [
         RubricaOut(after=r.after, text=r.text) for r in day_data.rubricae if r.after == hit.id
@@ -254,6 +263,7 @@ async def get_elogium(
             if allowed:
                 request.state.cache_private = True
         notes = store.footnotes(p.edition_id).get(canonical_id, []) if allowed else []
+        margins = store.marginalia(p.edition_id).get(canonical_id, []) if allowed else []
         placements[p.edition_id] = EditionPlacementOut(
             day_printed=p.day_printed,
             entry=p.entry,
@@ -261,6 +271,7 @@ async def get_elogium(
             unnumbered=p.unnumbered,
             text=text,
             footnotes=list(notes),
+            marginalia=list(margins),
         )
     subject = {
         loc: registry.subjects(loc)[canonical_id]

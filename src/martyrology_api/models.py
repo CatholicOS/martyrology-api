@@ -49,6 +49,14 @@ class FootnoteOut(BaseModel):
     text: str
 
 
+class MarginNoteOut(BaseModel):
+    """A note printed in the margin beside a eulogy: its text, and the mark of the
+    footnote it stands beside (null when it stands beside the eulogy's text)."""
+
+    text: str
+    note: str | None
+
+
 class ElogiumOut(BaseModel):
     id: str | None
     entry: int | None
@@ -57,6 +65,7 @@ class ElogiumOut(BaseModel):
     anchor_day: str
     text: str | None
     footnotes: list[FootnoteOut] = Field(default_factory=list)
+    marginalia: list[MarginNoteOut] = Field(default_factory=list)
 
 
 class RubricaOut(BaseModel):
@@ -90,6 +99,7 @@ class EditionPlacementOut(BaseModel):
     unnumbered: bool
     text: str | None
     footnotes: list[FootnoteOut] = Field(default_factory=list)
+    marginalia: list[MarginNoteOut] = Field(default_factory=list)
 
 
 class EulogyOut(BaseModel):

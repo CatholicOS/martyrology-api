@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from martyrology_api.models import FootnoteOut
+from martyrology_api.models import FootnoteOut, MarginNoteOut
 from martyrology_api.registry import Registry
 from martyrology_api.store import Store, detect_shape, parse_month_file
 
@@ -214,6 +214,30 @@ def test_a_malformed_footnotes_file_fails_when_the_store_is_built(
     (edition / "01.json").write_text("{}", encoding="utf-8")
     (edition / "footnotes.json").write_text(json.dumps(bad), encoding="utf-8")
     with pytest.raises(ValueError, match=r"martyrologium_romanum_2004/footnotes\.json"):
+        make_store(crmedr_path, clbdr_path, [tmp_path])
+
+
+def test_marginalia_loaded_by_id(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    assert s.marginalia("martyrologium_romanum_2004") == {
+        "mr:0102-argeus-et-socii": [
+            MarginNoteOut(text="T. 2. A. 254. n. 24.", note="1"),
+            MarginNoteOut(text="cir. A. 320.", note=None),
+        ]
+    }
+    assert s.marginalia("martyrologium_romanum_1749") == {}
+    assert s.marginalia("no_such_edition") == {}
+
+
+def test_a_malformed_marginalia_file_fails_when_the_store_is_built(
+    tmp_path, crmedr_path, clbdr_path
+):
+    edition = tmp_path / "martyrologium_romanum_2004"
+    edition.mkdir()
+    (edition / "01.json").write_text("{}", encoding="utf-8")
+    bad = {"mr:0102-argeus-et-socii": [{"text": "No note field."}]}
+    (edition / "marginalia.json").write_text(json.dumps(bad), encoding="utf-8")
+    with pytest.raises(ValueError, match=r"martyrologium_romanum_2004/marginalia\.json"):
         make_store(crmedr_path, clbdr_path, [tmp_path])
 
 
