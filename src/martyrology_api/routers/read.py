@@ -1,8 +1,10 @@
+import datetime
 import re
 
 from fastapi import APIRouter, Depends, Request
 from starlette.concurrency import run_in_threadpool
 
+from .. import lunar
 from ..auth import Identity, get_identity
 from ..authz import user_ref
 from ..caching import declare_public_cache
@@ -17,6 +19,9 @@ from ..models import (
     ErratumOut,
     EulogyOut,
     FootnoteOut,
+    LunaAnnouncementOut,
+    LunaColumnOut,
+    LunaOut,
     MarginNoteOut,
     MetadataOut,
     MonthOut,
@@ -27,7 +32,7 @@ from ..models import (
 from ..problems import ApiProblem
 from ..registry import is_canonical_id, slug_of
 from ..resolver import EditionUnavailableError, Resolution, resolve
-from ..store import DayData, Elogium
+from ..store import DayData, Elogium, LunarTables
 
 router = APIRouter(dependencies=[Depends(declare_public_cache)])
 
@@ -76,17 +81,55 @@ def elogium_out(
     )
 
 
+def luna_out(
+    tables: LunarTables | None, year: int, month: int, day: int, language: str = "la"
+) -> LunaOut | None:
+    """The lunar table and margin apparatus of a printed day, with the moon announced under
+    it in `year` in the edition's language; None for an edition that prints no lunar table,
+    or a day it has no table for (29 February, unless the edition prints one)."""
+    if tables is None:
+        return None
+    v = tables.variant
+    if (month, day) == (2, 29) and v.leap != "29":
+        return None
+    m, d = lunar.printed_day(month, day, v)
+    printed = tables.misprints.get(f"{month:02d}-{day:02d}", {})
+    row = lunar.table(v)[lunar.day_of_year(m, d) - 1]
+    tabula = []
+    for k, ((e, _), age) in enumerate(zip(lunar.COLUMNS, row, strict=True)):
+        label = lunar.epact_label(e)
+        tabula.append(
+            LunaColumnOut(
+                letter=v.letters[k],
+                epact=label,
+                age=age,
+                printed=printed.get(label),
+                red=k in v.red,
+            )
+        )
+    a = lunar.announce(year, month, day, printed=True, variant=v, language=language)
+    return LunaOut(
+        rows=list(v.rows),
+        dominical_letter=lunar.dominical_letter(m, d) if v.margin else None,
+        epactae=lunar.epacts_of_day(m, d) if v.margin else None,
+        tabula=tabula,
+        annuntiatio=LunaAnnouncementOut(**a.__dict__) if a else None,
+    )
+
+
 def _day_content(
     d: DayData,
     footnotes: dict[str, list[FootnoteOut]] | None = None,
     marginalia: dict[str, list[MarginNoteOut]] | None = None,
     errata: dict[str, list[ErratumOut]] | None = None,
+    luna: LunaOut | None = None,
 ) -> DayContentOut:
     return DayContentOut(
         titulus=d.titulus,
         elogia=[elogium_out(e, footnotes, marginalia, errata) for e in d.elogia],
         rubricae=[RubricaOut(after=r.after, text=r.text) for r in d.rubricae],
         conclusio=d.conclusio,
+        luna=luna,
     )
 
 
@@ -145,6 +188,7 @@ async def get_elogia(
     request: Request,
     locale: str | None = None,
     edition: str | None = None,
+    year: int | None = None,
     identity: Identity | None = Depends(get_identity),
 ):
     req = parse_elogia_path(rest)
@@ -178,10 +222,21 @@ async def get_elogia(
     notes = store.footnotes(resolution.edition_id)
     margins = store.marginalia(resolution.edition_id)
     errata = store.errata(resolution.edition_id)
+    # The year the moon is announced for: the path's, else ?year=, else this year.
+    if year is not None and not 1 <= year <= 9999:
+        raise ApiProblem(
+            400, "Invalid year", detail="year must be 1-9999.", type_slug="invalid-year"
+        )
+    luna_year = req.year or year or datetime.datetime.now(datetime.UTC).year
+    tables = store.lunar(resolution.edition_id)
+    language = request.app.state.registry.editions[resolution.edition_id].language
 
     if req.day is None:
         contents = {
-            f"{d:02d}": _day_content(v, notes, margins, errata) for d, v in sorted(months.items())
+            f"{d:02d}": _day_content(
+                v, notes, margins, errata, luna_out(tables, luna_year, req.month, d, language)
+            )
+            for d, v in sorted(months.items())
         }
         if not allowed:
             for c in contents.values():
@@ -199,8 +254,9 @@ async def get_elogia(
             type_slug="unknown-day",
         )
 
+    luna = luna_out(tables, luna_year, req.month, req.day, language)
     if req.slug is None:
-        c = _day_content(day_data, notes, margins, errata)
+        c = _day_content(day_data, notes, margins, errata, luna)
         if not allowed:
             redact(c.elogia)
             c.rubricae = []
@@ -210,6 +266,7 @@ async def get_elogia(
             elogia=c.elogia,
             rubricae=c.rubricae,
             conclusio=c.conclusio,
+            luna=c.luna,
         )
 
     hit = next((e for e in day_data.elogia if e.id is not None and slug_of(e.id) == req.slug), None)
@@ -236,6 +293,7 @@ async def get_elogia(
         elogia=elogia,
         rubricae=rubricae,
         conclusio=day_data.conclusio,
+        luna=luna,
     )
 
 

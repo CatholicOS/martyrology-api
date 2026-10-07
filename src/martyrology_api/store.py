@@ -1,15 +1,18 @@
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
 from pydantic import TypeAdapter, ValidationError
 
+from . import lunar
 from .models import ErratumOut, FootnoteOut, MarginNoteOut
 from .registry import Registry, anchor_day, slug_of
 
 _FOOTNOTES = TypeAdapter(dict[str, list[FootnoteOut]])
 _MARGINALIA = TypeAdapter(dict[str, list[MarginNoteOut]])
 _ERRATA = TypeAdapter(dict[str, list[ErratumOut]])
+_LUNAR_MISPRINTS = TypeAdapter(dict[str, dict[str, int]])
 
 
 def load_footnotes(path: Path) -> dict[str, list[FootnoteOut]]:
@@ -35,6 +38,34 @@ def load_errata(path: Path) -> dict[str, list[ErratumOut]]:
         return _ERRATA.validate_json(path.read_bytes())
     except ValidationError as err:
         raise ValueError(f"{path}: invalid printed_errata.json: {err}") from err
+
+
+def load_lunar_misprints(path: Path) -> dict[str, dict[str, int]]:
+    """An edition's `lunar_misprints.json` ("MM-DD" → epact → the age printed), validated;
+    empty when the edition prints its lunar tables without fault (no file)."""
+    if not path.exists():
+        return {}
+    try:
+        data = _LUNAR_MISPRINTS.validate_json(path.read_bytes())
+    except ValidationError as err:
+        raise ValueError(f"{path}: invalid lunar_misprints.json: {err}") from err
+    epacts = {lunar.epact_label(e) for e, _ in lunar.COLUMNS}
+    for day, cells in data.items():
+        m = re.fullmatch(r"(\d{2})-(\d{2})", day)
+        if not m or not 1 <= int(m[1]) <= 12 or not 1 <= int(m[2]) <= 31:
+            raise ValueError(f"{path}: invalid lunar_misprints.json: bad day {day!r}")
+        bad = [e for e, age in cells.items() if e not in epacts or not 1 <= age <= 99]
+        if bad:
+            raise ValueError(f"{path}: invalid lunar_misprints.json: {day}: bad cells {bad}")
+    return data
+
+
+@dataclass(frozen=True)
+class LunarTables:
+    """How an edition prints the lunar tables, and the cells it misprints."""
+
+    variant: lunar.Variant
+    misprints: dict[str, dict[str, int]]
 
 
 @dataclass
@@ -196,6 +227,15 @@ class Store:
             for eid, d in self._dirs.items()
             if (d / "printed_errata.json").exists()
         }
+        self._lunar: dict[str, LunarTables] = {}
+        for eid, d in self._dirs.items():
+            name = (self.source(eid) or {}).get("lunar_table")
+            if name is None:
+                continue
+            if name not in lunar.VARIANTS:
+                raise ValueError(f"{d / 'source.json'}: unknown lunar_table {name!r}")
+            misprints = load_lunar_misprints(d / "lunar_misprints.json")
+            self._lunar[eid] = LunarTables(lunar.VARIANTS[name], misprints)
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -263,6 +303,13 @@ class Store:
         """The corrections the edition prints in its own errata (`printed_errata.json`),
         by canonical id. Empty when the edition has none."""
         return self._errata.get(edition_id, {})
+
+    def lunar(self, edition_id: str) -> "LunarTables | None":
+        """For an edition that prints the lunar table under each day's heading (`lunar_table`
+        in its `source.json`: the variant it follows), the variant and the cells it misprints
+        (`lunar_misprints.json`: "MM-DD" → epact → the age printed); None for an edition
+        without the table."""
+        return self._lunar.get(edition_id)
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
