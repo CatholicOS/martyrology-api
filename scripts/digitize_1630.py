@@ -244,6 +244,7 @@ def extract_days(tei):
                     add_note(days[-2], t)
                     block(days[-2], "foot", t)
             elif len(days) > 1:
+                add_note(days[-2], t)
                 block(days[-2], "foot", t)
             continue
         if tag == "note" and el.get("place") == "margin" and cur is not None:
