@@ -101,6 +101,8 @@ class LunaColumnOut(BaseModel):
     epact: str
     age: int
     printed: int | None = None
+    # printed in red (the 2004 edition tells its two F apart by colour)
+    red: bool = False
 
 
 class LunaAnnouncementOut(BaseModel):
@@ -119,12 +121,14 @@ class LunaAnnouncementOut(BaseModel):
 
 class LunaOut(BaseModel):
     """The calendar apparatus an edition prints with the day: the lunar table under the
-    heading (31 columns, in printed order), the dominical letter and the epacts whose new
-    moon falls on the day in the margin, and the announcement for a year (null before the
-    Gregorian reform)."""
+    heading (31 columns in printed order, set in `rows` of that many columns), the dominical
+    letter and the epacts whose new moon falls on the day in the margin (null for an edition
+    that prints none), and the announcement for a year (null before the Gregorian reform), in
+    the edition's language."""
 
-    dominical_letter: str
-    epactae: list[str]
+    rows: list[int]
+    dominical_letter: str | None
+    epactae: list[str] | None
     tabula: list[LunaColumnOut]
     annuntiatio: LunaAnnouncementOut | None
 
@@ -192,8 +196,9 @@ class SourceOut(BaseModel):
     isbn: str | None = None
     note: str | None = None
     # The edition prints the lunar table of the Gregorian computus under each day's
-    # heading: its days carry `luna`.
-    lunar_table: Literal["gregorian"] | None = None
+    # heading, as the editions up to 1962 ("gregorian") or as the 2004 edition
+    # ("gregorian-2004"): its days carry `luna`.
+    lunar_table: Literal["gregorian", "gregorian-2004"] | None = None
 
 
 class EditionOut(BaseModel):

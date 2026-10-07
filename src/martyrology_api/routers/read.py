@@ -32,7 +32,7 @@ from ..models import (
 from ..problems import ApiProblem
 from ..registry import is_canonical_id, slug_of
 from ..resolver import EditionUnavailableError, Resolution, resolve
-from ..store import DayData, Elogium
+from ..store import DayData, Elogium, LunarTables
 
 router = APIRouter(dependencies=[Depends(declare_public_cache)])
 
@@ -82,27 +82,36 @@ def elogium_out(
 
 
 def luna_out(
-    misprints: dict[str, dict[str, int]] | None, year: int, month: int, day: int
+    tables: LunarTables | None, year: int, month: int, day: int, language: str = "la"
 ) -> LunaOut | None:
     """The lunar table and margin apparatus of a printed day, with the moon announced under
-    it in `year` (the day as printed: in a leap year, the bissextile day is read under 24
-    February); None for an edition that prints no lunar table."""
-    if misprints is None:
+    it in `year` in the edition's language; None for an edition that prints no lunar table,
+    or a day it has no table for (29 February, unless the edition prints one)."""
+    if tables is None:
         return None
-    printed = misprints.get(f"{month:02d}-{day:02d}", {})
-    if (month, day) == (2, 29):  # not a day of the table
+    v = tables.variant
+    if (month, day) == (2, 29) and v.leap != "29":
         return None
-    row = lunar.table()[lunar.day_of_year(month, day) - 1]
+    m, d = lunar.printed_day(month, day, v)
+    printed = tables.misprints.get(f"{month:02d}-{day:02d}", {})
+    row = lunar.table(v)[lunar.day_of_year(m, d) - 1]
     tabula = []
-    for (e, letter), age in zip(lunar.COLUMNS, row, strict=True):
+    for k, ((e, _), age) in enumerate(zip(lunar.COLUMNS, row, strict=True)):
         label = lunar.epact_label(e)
         tabula.append(
-            LunaColumnOut(letter=letter, epact=label, age=age, printed=printed.get(label))
+            LunaColumnOut(
+                letter=v.letters[k],
+                epact=label,
+                age=age,
+                printed=printed.get(label),
+                red=k in v.red,
+            )
         )
-    a = lunar.announce(year, month, day, printed=True)
+    a = lunar.announce(year, month, day, printed=True, variant=v, language=language)
     return LunaOut(
-        dominical_letter=lunar.dominical_letter(month, day),
-        epactae=lunar.epacts_of_day(month, day),
+        rows=list(v.rows),
+        dominical_letter=lunar.dominical_letter(m, d) if v.margin else None,
+        epactae=lunar.epacts_of_day(m, d) if v.margin else None,
         tabula=tabula,
         annuntiatio=LunaAnnouncementOut(**a.__dict__) if a else None,
     )
@@ -219,12 +228,13 @@ async def get_elogia(
             400, "Invalid year", detail="year must be 1-9999.", type_slug="invalid-year"
         )
     luna_year = req.year or year or datetime.datetime.now(datetime.UTC).year
-    misprints = store.lunar(resolution.edition_id)
+    tables = store.lunar(resolution.edition_id)
+    language = request.app.state.registry.editions[resolution.edition_id].language
 
     if req.day is None:
         contents = {
             f"{d:02d}": _day_content(
-                v, notes, margins, errata, luna_out(misprints, luna_year, req.month, d)
+                v, notes, margins, errata, luna_out(tables, luna_year, req.month, d, language)
             )
             for d, v in sorted(months.items())
         }
@@ -244,7 +254,7 @@ async def get_elogia(
             type_slug="unknown-day",
         )
 
-    luna = luna_out(misprints, luna_year, req.month, req.day)
+    luna = luna_out(tables, luna_year, req.month, req.day, language)
     if req.slug is None:
         c = _day_content(day_data, notes, margins, errata, luna)
         if not allowed:

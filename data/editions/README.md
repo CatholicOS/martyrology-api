@@ -99,28 +99,36 @@ An edition folder may carry a `printed_errata.json`: the corrections the edition
 
 ## Lunar tables
 
-Editions from the Gregorian reform on print, under each day's heading (*Pridie Nonas Augusti. Luna.*), a table of the 30 epacts' letters, the *litteræ Martyrologii* (31 columns: `a`–`u` for the epacts j–xix, `A B C D E` for xx–xxiiij, `f` for the Arabic 25, `F` for xxv, `G H M N` for xxvj–xxix, `P` for \*), with the moon's age under each; the reader announces the age under the year's letter (*Luna vigesima prima*). In the margin they print the dominical letter and the epacts whose new moon falls on the day. The rules are the 1630 edition's *Explicatio eorum quæ … ad pronunciationem Lunæ pertinent* (pp. 30–36).
+Editions from the Gregorian reform on print, under each day's heading (*Pridie Nonas Augusti. Luna.*), a table of the 30 epacts' letters, the *litteræ Martyrologii* (31 columns: `a`–`u` for the epacts j–xix, `A B C D E` for xx–xxiiij, then the Arabic 25 and xxv, `G H M N` for xxvj–xxix, `P` for \*), with the moon's age under each; the reader announces the age under the year's letter (*Luna vigesima*). The rules are given in the editions themselves: the 1630 *Explicatio eorum quæ … ad pronunciationem Lunæ pertinent* (pp. 30–36), and the 2004 *De pronuntiatione lunæ ad libitum peragenda* (pp. 23–27; the Italian *Il giorno lunare*, pp. 33–37).
 
-These tables are wholly regular, so they are not stored: an edition that prints them declares `"lunar_table": "gregorian"` in its `source.json`, and the API computes them by the Gregorian computus (`src/martyrology_api/lunar.py`). The few cells the print gets wrong, checked against the page images, are in the edition's `lunar_misprints.json`, by day and epact, with the number printed:
+The tables are wholly regular, so they are not stored: an edition that prints them declares in its `source.json` which rules it follows, and the API computes them (`src/martyrology_api/lunar.py`). The year's golden number, epact and letter come from the same Gregorian computus for every edition; the editions differ in how they print and read the tables:
+
+| `lunar_table` | Editions | February | Leap year | The two xxv columns | Rows | Margin |
+|---|---|---|---|---|---|---|
+| `gregorian` | 1630 | a hollow month like the others: xxv and xxiiij share 5 February | the bissextile day is read under 24 February | `f` (the Arabic 25), `F` | 17 + 14 | dominical letter, new-moon epacts |
+| `gregorian-2004` | 2004 Latin, 2004 Italian (texts repository) | the new moons of vj–xxiiij fall a day later (5–23 February), rejoining the calendar on 24 February | a 29 February table repeating 28 February's | `F` in red (the Arabic 25), `F` in black (xxv) | 19 + 12 | none |
+
+(The 2004 explanation's example calls the F read with a golden number from 12 to 19 the black one; its tables print that column, the Arabic 25, in red.) The few cells a print gets wrong, checked against the page images, are in the edition's `lunar_misprints.json`, by day and epact, with the number printed:
 
 ```json
 { "07-29": { "xxv": 27, "xxvj": 28, "xxvij": 29 } }
 ```
 
-Each day of such an edition carries `luna` (here 4 August, read in 2026):
+Each day of such an edition carries `luna` (here the 1630 edition on 4 August, read in 2026):
 
 ```json
 {
+  "rows": [17, 14],
   "dominical_letter": "F",
   "epactae": ["xxj"],
-  "tabula": [{ "letter": "a", "epact": "j", "age": 10, "printed": null }, …],
+  "tabula": [{ "letter": "a", "epact": "j", "age": 10, "printed": null, "red": false }, …],
   "annuntiatio": { "year": 2026, "golden_number": 13, "epact": "xj", "letter": "l", "column": 10, "age": 20, "pronuntiatio": "Luna vigesima" }
 }
 ```
 
-`tabula` is the table in printed order, `printed` the misprinted number where there is one (`age` is always the computed age). `annuntiatio` is the moon announced under the day in a year: the year of the path (`/elogia/2026/08/04`), else `?year=`, else the current year. The year's golden number, epact and letter come from the Gregorian computus for that year (its own century's equations, not the edition's table of letters), so an old edition is read as it would be printed today; before 1583, the first whole Gregorian year, it is null. In a year with golden number 1 the moon is announced one day less than printed until January's new moon (except under `P`). The day is the printed day: in a leap year, the bissextile day is read under 24 February.
+`tabula` is the table in printed order, set in `rows`; `printed` is the misprinted number where there is one (`age` is always the computed age), `red` a column printed in red. `dominical_letter` and `epactae` are null for an edition that prints no margin apparatus. `annuntiatio` is the moon announced under the day in a year: the year of the path (`/elogia/2026/08/04`), else `?year=`, else the current year; its year's golden number, epact and letter come from the Gregorian computus for that year (its own century's equations, not the edition's table of letters), so an old edition is read as it would be printed today; before 1583, the first whole Gregorian year, it is null. In a year with golden number 1 the moon is announced one day less than printed until January's new moon (except under `P`). `pronuntiatio` is in the edition's language (*Luna vigesima*; Italian *Luna ventesima*).
 
-Only the 1630 edition declares its tables so far: the 1749 text is a modern retyping without them (its tituli end in an artifact of the retyping, the same numeral and letter for a day of the month in every month), and the 1914 English and the 2004 editions print none. `scripts/lunar_1630.py` compares the 1630 transcription with the computus (`scripts/data/lunar_1630_check.md`): 355 of 365 days agree in every cell, 5 days have misprints in the print, 3 slips of the transcription, and 2 days have no table transcribed.
+The 1749 text is a modern retyping without the tables (its tituli end in an artifact of the retyping, the same numeral and letter for a day of the month in every month), and the 1914 and 2004 English print none. `scripts/lunar_1630.py` compares the 1630 transcription with the computus (`scripts/data/lunar_1630_check.md`): 355 of 365 days agree in every cell, 5 days have misprints in the print, 3 slips of the transcription, and 2 days have no table transcribed. `scripts/lunar_2004.py` reads the 2004 Latin and Italian PDFs (not in the repository) and does the same (`scripts/data/lunar_2004_check.md`): every day agrees but one cell of the Latin (7 January) and two days of the Italian (4 February; 30 November, which repeats 29 November).
 
 ## Editions
 

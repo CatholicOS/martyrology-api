@@ -152,3 +152,60 @@ def test_announcement_edges():
     )
     assert L.ORDINALS[0] == "prima" and L.ORDINALS[20] == "vigesima prima"
     assert len(L.ORDINALS) == 30 and L.ORDINALS[29] == "trigesima"
+
+
+# ---- the 2004 edition (De pronuntiatione lunæ, pp. 23-27; the Italian, pp. 33-37)
+V2004 = L.GREGORIAN_2004
+
+
+def _row(m, d, v=V2004):
+    pm, pd = L.printed_day(m, d, v)
+    return L.table(v)[L.day_of_year(pm, pd) - 1]
+
+
+def test_2004_rows_as_printed():
+    # 25 August (Latin and Italian alike): the two F read 26 and 25
+    assert _row(8, 25) == [*range(2, 21), 21, 22, 23, 24, 25, 26, 25, 26, 27, 28, 29, 1]
+    # 13 April: the red F (the Arabic 25) 10, the black F (xxv) 9
+    assert _row(4, 13)[24:26] == [10, 9]
+    # February: the new moons of vj-xxiiij a day later, rejoining the calendar on 24 February
+    assert _row(2, 5)[L.column(24)] == 30 and L.table()[L.day_of_year(2, 5) - 1][L.column(24)] == 1
+    assert [_row(2, d)[L.column(6)] for d in (22, 23, 24, 25)] == [29, 30, 2, 3]
+    assert _row(2, 24) == L.table()[L.day_of_year(2, 24) - 1]
+    # 29 February repeats 28 February's table
+    assert _row(2, 29) == _row(2, 28)
+    # every other month as the editions before it
+    rest = [d for d in range(1, 366) if not L.day_of_year(2, 5) <= d <= L.day_of_year(2, 23)]
+    assert all(L.table(V2004)[d - 1] == L.table()[d - 1] for d in rest)
+
+
+def test_2004_letters_and_layout():
+    assert V2004.letters[24:26] == ("F", "F") and V2004.red == frozenset({24})
+    assert sum(V2004.rows) == 31 == sum(L.GREGORIAN.rows) and not V2004.margin
+
+
+@pytest.mark.parametrize(
+    ("date", "age", "letter"),
+    [
+        ((2005, 1, 1), 20, "u"),  # the book's example: golden number 11, epact xix
+        ((2005, 8, 2), 26, "u"),
+        ((2204, 1, 1), 28, "M"),  # golden number 1: one less until January's new moon
+        ((2204, 1, 2), 29, "M"),
+        ((2204, 1, 3), 1, "M"),
+        ((2011, 4, 13), 10, "F"),  # epact 25 with golden number 17
+    ],
+)
+def test_2004_worked_examples(date, age, letter):
+    a = L.announce(*date, variant=V2004)
+    assert a is not None and (a.age, a.letter) == (age, letter)
+
+
+def test_2004_leap_day_and_language():
+    # a 2004 edition has a 29 February table, read on that day
+    a = L.announce(2024, 2, 29, printed=True, variant=V2004)
+    b = L.announce(2024, 2, 28, printed=True, variant=V2004)
+    assert a is not None and b is not None and a.age == b.age
+    assert L.announce(2024, 2, 29, printed=True) is None  # the editions before it have none
+    it = L.announce(2026, 8, 4, variant=V2004, language="it-IT")
+    assert it is not None and it.pronuntiatio == f"Luna {L.ORDINALI[it.age - 1]}"
+    assert L.ORDINALI[20] == "ventunesima" and len(L.ORDINALI) == 30

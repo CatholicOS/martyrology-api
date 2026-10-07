@@ -60,6 +60,14 @@ def load_lunar_misprints(path: Path) -> dict[str, dict[str, int]]:
     return data
 
 
+@dataclass(frozen=True)
+class LunarTables:
+    """How an edition prints the lunar tables, and the cells it misprints."""
+
+    variant: lunar.Variant
+    misprints: dict[str, dict[str, int]]
+
+
 @dataclass
 class Elogium:
     id: str | None
@@ -219,11 +227,15 @@ class Store:
             for eid, d in self._dirs.items()
             if (d / "printed_errata.json").exists()
         }
-        self._lunar: dict[str, dict[str, dict[str, int]]] = {
-            eid: load_lunar_misprints(d / "lunar_misprints.json")
-            for eid, d in self._dirs.items()
-            if (self.source(eid) or {}).get("lunar_table") == "gregorian"
-        }
+        self._lunar: dict[str, LunarTables] = {}
+        for eid, d in self._dirs.items():
+            name = (self.source(eid) or {}).get("lunar_table")
+            if name is None:
+                continue
+            if name not in lunar.VARIANTS:
+                raise ValueError(f"{d / 'source.json'}: unknown lunar_table {name!r}")
+            misprints = load_lunar_misprints(d / "lunar_misprints.json")
+            self._lunar[eid] = LunarTables(lunar.VARIANTS[name], misprints)
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -292,9 +304,9 @@ class Store:
         by canonical id. Empty when the edition has none."""
         return self._errata.get(edition_id, {})
 
-    def lunar(self, edition_id: str) -> dict[str, dict[str, int]] | None:
-        """For an edition that prints the Gregorian lunar table under each day's heading
-        (`"lunar_table": "gregorian"` in its `source.json`), the cells it misprints
+    def lunar(self, edition_id: str) -> "LunarTables | None":
+        """For an edition that prints the lunar table under each day's heading (`lunar_table`
+        in its `source.json`: the variant it follows), the variant and the cells it misprints
         (`lunar_misprints.json`: "MM-DD" → epact → the age printed); None for an edition
         without the table."""
         return self._lunar.get(edition_id)

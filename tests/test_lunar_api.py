@@ -90,3 +90,50 @@ def test_a_malformed_misprints_file_fails_at_startup(tmp_path, make_client, data
     (ed / "lunar_misprints.json").write_text(json.dumps(bad), "utf-8")
     with pytest.raises(ValueError, match="lunar_misprints.json"):
         make_client(data_path=str(public))
+
+
+@pytest.fixture
+def client_2004(tmp_path, make_client, data_paths):
+    """The fixture 2004 editions, declared to print the 2004 lunar tables."""
+    private = tmp_path / "private"
+    shutil.copytree(data_paths[1], private)
+    for ed in ("martyrologium_romanum_2004", "martyrologium_romanum_2004_it_IT"):
+        (private / ed / "source.json").write_text(
+            json.dumps({"title": ed, "lunar_table": "gregorian-2004"}), "utf-8"
+        )
+    return make_client(data_path=f"{data_paths[0]}:{private}")
+
+
+def test_a_2004_day_has_its_layout_and_no_margin(client_2004):
+    b = client_2004.get("/api/v1/elogia/edition/martyrologium_romanum_2004/01/02?year=2026").json()
+    luna = b["luna"]
+    assert luna["rows"] == [19, 12]
+    assert luna["dominical_letter"] is None and luna["epactae"] is None
+    assert [c["letter"] for c in luna["tabula"][24:26]] == ["F", "F"]
+    assert [c["red"] for c in luna["tabula"][24:26]] == [True, False]
+    assert luna["annuntiatio"]["pronuntiatio"].startswith("Luna ")
+
+
+def test_a_2004_edition_reads_29_february(client_2004):
+    leap = client_2004.get("/api/v1/elogia/edition/martyrologium_romanum_2004/02/29?year=2028")
+    assert leap.status_code == 200
+    eve = client_2004.get("/api/v1/elogia/edition/martyrologium_romanum_2004/02/28?year=2028")
+    assert leap.json()["luna"]["tabula"] == eve.json()["luna"]["tabula"]
+
+
+def test_the_italian_edition_announces_in_italian(client_2004):
+    b = client_2004.get(
+        "/api/v1/elogia/edition/martyrologium_romanum_2004_it_IT/01/02?year=2026"
+    ).json()
+    age = b["luna"]["annuntiatio"]["age"]
+    assert b["luna"]["annuntiatio"]["pronuntiatio"] == f"Luna {L.ORDINALI[age - 1]}"
+
+
+def test_an_unknown_variant_fails_at_startup(tmp_path, make_client, data_paths):
+    public = tmp_path / "public"
+    shutil.copytree(data_paths[0], public)
+    ed = public / EDITION
+    src = json.loads((ed / "source.json").read_text(encoding="utf-8"))
+    (ed / "source.json").write_text(json.dumps(src | {"lunar_table": "julian"}), "utf-8")
+    with pytest.raises(ValueError, match="unknown lunar_table"):
+        make_client(data_path=str(public))
