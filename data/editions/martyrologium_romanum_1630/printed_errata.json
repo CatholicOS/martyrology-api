@@ -472,15 +472,6 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0826-alexander": [
-  {
-   "kind": "replace",
-   "printed": "cruciati",
-   "corrected": "excruciati",
-   "ref": "421.7",
-   "entry": "421.7. cruciat, excruciati."
-  }
- ],
  "mr:0826-irenaeus-et-abundius": [
   {
    "kind": "replace",
@@ -488,6 +479,15 @@
    "corrected": "cloacam",
    "ref": "410.5",
    "entry": "410.5. Clocã, Cloacam."
+  }
+ ],
+ "mr:0826-simplicius-et-socii": [
+  {
+   "kind": "replace",
+   "printed": "cruciati",
+   "corrected": "excruciati",
+   "ref": "421.7",
+   "entry": "421.7. cruciat, excruciati."
   }
  ],
  "mr:0828-hermes": [
