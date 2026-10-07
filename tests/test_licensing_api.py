@@ -155,6 +155,7 @@ ERRATA = [
         "corrected": "Argæi",
         "ref": "12.3",
         "entry": "12.3. Argei, Argæi.",
+        "position": "after",
     }
 ]
 

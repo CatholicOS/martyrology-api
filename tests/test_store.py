@@ -4,7 +4,7 @@ import pytest
 
 from martyrology_api.models import ErratumOut, FootnoteOut, MarginNoteOut
 from martyrology_api.registry import Registry
-from martyrology_api.store import Store, detect_shape, parse_month_file
+from martyrology_api.store import Store, detect_shape, load_errata, parse_month_file
 
 
 def make_store(crmedr_path, clbdr_path, data_paths) -> Store:
@@ -255,6 +255,36 @@ def test_errata_loaded_by_id(crmedr_path, clbdr_path, data_paths):
         ]
     }
     assert s.errata("martyrologium_romanum_1749") == {}
+
+
+def test_an_erratum_adds_after_its_phrase_unless_it_opens_the_eulogy(tmp_path):
+    path = tmp_path / "printed_errata.json"
+    path.write_text(
+        json.dumps(
+            {
+                "mr:0422-parmenius-et-socii": [
+                    {
+                        "kind": "add",
+                        "printed": "In Persia",
+                        "corrected": "Item",
+                        "ref": "197.12",
+                        "entry": "197.12. post, sunt, adde, Item.",
+                        "position": "before",
+                    },
+                    {
+                        "kind": "add",
+                        "printed": "Persia",
+                        "corrected": "x",
+                        "ref": "1.1",
+                        "entry": "1.1.",
+                    },
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    first, second = load_errata(path)["mr:0422-parmenius-et-socii"]
+    assert (first.position, second.position) == ("before", "after")
 
 
 def test_a_malformed_errata_file_fails_when_the_store_is_built(tmp_path, crmedr_path, clbdr_path):

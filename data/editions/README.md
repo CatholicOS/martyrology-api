@@ -94,7 +94,7 @@ An edition folder may carry a `printed_errata.json`: the corrections the edition
 }
 ```
 
-`printed` is the phrase as the text prints it, occurring exactly once as whole words. `kind` is `replace` (read it as `corrected`), `add` (add `corrected` after it) or `delete` (`corrected` is empty). `ref` is where the errata place it (printed page.line, or `vbique` for "everywhere"), and `entry` is the erratum as printed. The texts stay as printed: the errata are shown beside them, not applied. These are the edition's own corrections, distinct from the misprints the CRMEDR curators record (`crmedr/data/misprints.json`). The API returns them as each eulogy's `errata`, emptied wherever the text is redacted.
+`printed` is the phrase as the text prints it, occurring exactly once as whole words. `kind` is `replace` (read it as `corrected`), `add` (add `corrected` after it; before it when `position` is `"before"`, for an addition that opens the eulogy) or `delete` (`corrected` is empty). `ref` is where the errata place it (printed page.line, or `vbique` for "everywhere"), and `entry` is the erratum as printed. The texts stay as printed: the errata are shown beside them, not applied. These are the edition's own corrections, distinct from the misprints the CRMEDR curators record (`crmedr/data/misprints.json`). The API returns them as each eulogy's `errata`, emptied wherever the text is redacted.
 
 ## Editions
 

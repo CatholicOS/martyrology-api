@@ -59,15 +59,17 @@ class MarginNoteOut(BaseModel):
 
 class ErratumOut(BaseModel):
     """A correction the edition itself prints in its errata: `printed` occurs once in the
-    eulogy's text; `replace` reads it as `corrected`, `add` adds `corrected` after it,
-    `delete` drops it. `ref` is where the errata place it (page.line, or "vbique"), `entry`
-    the erratum as printed. The text stays as printed."""
+    eulogy's text; `replace` reads it as `corrected`, `add` adds `corrected` after it (or
+    before it, `position` "before": an addition that opens the eulogy), `delete` drops it.
+    `ref` is where the errata place it (page.line, or "vbique"), `entry` the erratum as
+    printed. The text stays as printed."""
 
     kind: Literal["replace", "add", "delete"]
     printed: str
     corrected: str
     ref: str
     entry: str
+    position: Literal["after", "before"] = "after"
 
 
 class ElogiumOut(BaseModel):

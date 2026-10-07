@@ -19,8 +19,9 @@ duplicated sheet (printed pp. 430-443 are scanned twice). What couldn't be place
 is listed in scripts/data/errata_1630_review.md; reviewed fixes go in
 scripts/data/errata_1630_overrides.json, keyed by the entry's ref ("81.20"):
 {"id": "mr:…"} the eulogy; "printed": the phrase as our text prints it;
-"corrected" (and "kind") when the erratum misquotes the print; {"drop": "<why>"}
-when it doesn't apply to this copy.
+"corrected" (and "kind") when the erratum misquotes the print; "position": "before"
+for an addition that opens the next eulogy ('post sunt, adde, Item': Item begins the
+eulogy after); {"drop": "<why>"} when it doesn't apply to this copy.
 
 Usage:
   python3 errata_1630.py data/sources/martyrologium_romanum_1630.tei.xml [repo_root]
@@ -247,6 +248,7 @@ def main():
                     "corrected": corrected,
                     "ref": ref,
                     "entry": printed_entry,
+                    **({"position": "before"} if o.get("position") == "before" else {}),
                     "_at": etext.find(phrase),
                 }
             )

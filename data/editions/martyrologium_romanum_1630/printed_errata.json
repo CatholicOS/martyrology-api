@@ -215,13 +215,14 @@
    "entry": "191.2. Berœam, Beroeam."
   }
  ],
- "mr:0422-plurimi-martyres-persidis": [
+ "mr:0422-parmenius-et-socii": [
   {
    "kind": "add",
-   "printed": "necatæ sunt.",
+   "printed": "In Persia sanctorum",
    "corrected": "Item",
    "ref": "197.12",
-   "entry": "197.12. post, sunt, adde, Item."
+   "entry": "197.12. post, sunt, adde, Item.",
+   "position": "before"
   }
  ],
  "mr:0424-saba": [
