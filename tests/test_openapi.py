@@ -42,3 +42,34 @@ def test_openapi_every_route_declares_responses(client):
                 assert "description" in response, (
                     f"{method.upper()} {path} response {status} has no description"
                 )
+
+
+def test_openapi_edition_params_enumerate_the_editions_they_accept(client):
+    """Edition parameters reference shared schemas whose enums come from the CLBDR
+    catalog and the attached texts loaded at startup: reads list the attached editions,
+    creation lists the catalogued ones without texts, other writes list the catalog."""
+    schema = client.app.openapi()
+    catalogued = set(client.app.state.registry.editions)
+    attached = client.app.state.store.available()
+    components = schema["components"]["schemas"]
+    assert components["EditionId"]["enum"] == sorted(catalogued & attached)
+    assert components["NewEditionId"]["enum"] == sorted(catalogued - attached)
+    assert components["CataloguedEditionId"]["enum"] == sorted(catalogued)
+    # The fixtures exercise all three lists distinctly.
+    assert catalogued & attached and catalogued - attached
+
+    def ref(name):
+        return {"$ref": f"#/components/schemas/{name}"}
+
+    found = {}
+    for path, operations in schema["paths"].items():
+        for method, operation in operations.items():
+            for param in operation.get("parameters", []):
+                if param["name"] in ("edition_id", "edition"):
+                    found[(method, path)] = param["schema"]
+    assert found.pop(("put", "/api/v1/editions/{edition_id}")) == ref("NewEditionId")
+    for read_path in ("/api/v1/elogia", "/api/v1/elogia/{rest}"):
+        assert found.pop(("get", read_path)) == {"anyOf": [ref("EditionId"), {"type": "null"}]}
+    assert len(found) == 6
+    for operation, param_schema in found.items():
+        assert param_schema == ref("CataloguedEditionId"), operation
