@@ -96,6 +96,12 @@ is lost, regenerate the secret in the Zitadel console.
 is false when `MARTYROLOGY_OPENFGA_API_TOKEN` is empty, which denies every
 authorization check while the stack reports healthy.
 
+**OpenFGA must be v1.10.0 or later.** The permission endpoints send OpenFGA's
+`on_duplicate` / `on_missing: "ignore"` flags so that granting an existing
+permission or revoking an absent one succeeds. An older server silently
+ignores the flags and rejects both, which the API reports as 502: it fails
+closed, but those calls stop being idempotent.
+
 **There is no OpenFGA Playground.** OpenFGA v1.15.1 panics at startup
 ("the playground only supports authn method 'none'") when the Playground is
 enabled alongside preshared auth, and preshared auth is non-negotiable here

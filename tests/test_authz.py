@@ -180,6 +180,8 @@ async def test_write_sends_a_writes_tuple_key():
         {"user": "user:u1", "relation": "editor", "object": "governance_body:cei"}
     ]
     assert seen["body"]["authorization_model_id"] == "m1"
+    assert seen["body"]["writes"]["on_duplicate"] == "ignore"
+    assert "deletes" not in seen["body"]
 
 
 @pytest.mark.asyncio
@@ -190,6 +192,7 @@ async def test_delete_sends_a_deletes_tuple_key():
     assert seen["body"]["deletes"]["tuple_keys"] == [
         {"user": "user:u1", "relation": "editor", "object": "governance_body:cei"}
     ]
+    assert seen["body"]["deletes"]["on_missing"] == "ignore"
     assert "writes" not in seen["body"]
 
 

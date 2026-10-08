@@ -15,12 +15,6 @@ VALID_RELATIONS = frozenset({"admin", "editor", "reader"})
 BODY_RE = re.compile(r"^[a-z0-9_]{1,64}$")
 USER_RE = re.compile(r"^[A-Za-z0-9_-]{1,200}$")
 
-# OpenFGA reports both "tuple already exists" and "tuple does not exist"
-# with this code. The relation is allowlisted and the object type is fixed
-# before the call, so by the time it is observed it can only mean one of
-# those two — both of which are the caller's desired end state.
-IDEMPOTENT_CODE = "write_failed_due_to_invalid_input"
-
 
 async def _authenticated(identity: Identity | None = Depends(get_identity)) -> Identity:
     if identity is None:
@@ -66,56 +60,33 @@ async def _require_body_admin(request: Request, identity: Identity, body_ref: st
 
 async def _mutate(request: Request, identity: Identity, op: str, ref: str, rel: str, obj: str):
     fn = request.app.state.authz.write if op == "grant" else request.app.state.authz.delete
-    outcome = "ok"
     try:
         await fn(ref, rel, obj)
     except AuthzError as exc:
-        if exc.code == IDEMPOTENT_CODE:
-            # OpenFGA reports both "tuple already exists" (grant) and
-            # "tuple does not exist" (revoke) with this code. That is
-            # consistent with the caller's desired end state, but not
-            # proof of it — confirm the postcondition rather than assume
-            # it. Confirm against a *direct* tuple read, not check_object:
-            # check_object evaluates the computed relation, but write/
-            # delete manipulate direct tuples, and the model unions them
-            # (e.g. editor: [user] or admin) — a computed check can
-            # disagree with the direct-tuple state in either direction.
-            # read_tuples raises AuthzError on infrastructure failure
-            # (rather than failing closed like check_object does), so a
-            # failure to confirm is itself treated as unconfirmed.
-            desired_present = op == "grant"
-            try:
-                tuples = await request.app.state.authz.read_tuples(obj, rel)
-                present = any(t.get("user") == ref for t in tuples)
-                outcome = "noop" if present == desired_present else "error:unconfirmed"
-            except AuthzError:
-                outcome = "error:unconfirmed"
-        else:
-            outcome = f"error:{exc.code or exc.status}"
-        if outcome != "noop":
-            log.warning(
-                "permission %s by %s: %s %s on %s -> %s",
-                op,
-                user_ref(identity),
-                ref,
-                rel,
-                obj,
-                outcome,
-            )
-            raise ApiProblem(
-                502,
-                "Authorization store error",
-                detail="The authorization store rejected the change.",
-                type_slug="authz-store-error",
-            ) from exc
+        # Authz.write/delete make a duplicate grant and a revoke of an
+        # absent tuple succeed, so every error here is a real rejection.
+        log.warning(
+            "permission %s by %s: %s %s on %s -> error:%s",
+            op,
+            user_ref(identity),
+            ref,
+            rel,
+            obj,
+            exc.code or exc.status,
+        )
+        raise ApiProblem(
+            502,
+            "Authorization store error",
+            detail="The authorization store rejected the change.",
+            type_slug="authz-store-error",
+        ) from exc
     log.info(
-        "permission %s by %s: %s %s on %s -> %s",
+        "permission %s by %s: %s %s on %s -> ok",
         op,
         user_ref(identity),
         ref,
         rel,
         obj,
-        outcome,
     )
 
 
