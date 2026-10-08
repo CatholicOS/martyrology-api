@@ -3,6 +3,6 @@
  "imprint": "Romae, Typis Vaticanis, 1630",
  "year": 1630,
  "rights": "Public domain",
- "note": "Transcribed from the public-domain scan (Internet Archive bub_gb_2pQUlbrbtAsC) into TEI and proofread against the page images in two passes; long s normalized to s, everything else (u/v, i/j, æ/œ, accents, abbreviation tildes, the printer's misprints) as printed. Baronius's reference letters are removed from the eulogies; his Notationes are not yet included. The closing formula is printed once, on 1 January ('Sic semper terminatur lectio Martyrologij'), and is given here for every day.",
+ "note": "Transcribed from the public-domain scan (Internet Archive bub_gb_2pQUlbrbtAsC) into TEI and proofread against the page images in two passes; long s normalized to s, everything else (u/v, i/j, æ/œ, accents, abbreviation tildes, the printer's misprints) as printed. Baronius's reference letters are removed from the eulogies; his Notationes are included as footnotes, each keyed to the eulogy and word its letter follows, and the margin notes beside them (mostly references to his Annales) as marginalia. The closing formula is printed once, on 1 January ('Sic semper terminatur lectio Martyrologij'), and is given here for every day.",
  "lunar_table": "gregorian"
 }
