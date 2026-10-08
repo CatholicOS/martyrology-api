@@ -19,6 +19,60 @@ from .writer.local import LocalGitBackend
 from .writer.service import CurationService
 
 
+def _ref(name: str) -> dict:
+    return {"$ref": f"#/components/schemas/{name}"}
+
+
+def _enumerate_editions_in_openapi(app: FastAPI, catalogued: set[str], attached: set[str]) -> None:
+    """Point every edition parameter of the generated schema at a shared schema
+    enumerating the editions that parameter can succeed with. The catalog (CLBDR) and
+    the attached texts are data loaded at startup, not code, so the enums are injected
+    here rather than declared as Python Enums. Requests are still validated by the
+    handlers, so an unlisted edition keeps its problem response instead of a 422.
+
+    - `EditionId`: catalogued and attached, the editions reads can serve.
+    - `NewEditionId`: catalogued but not attached, the editions `PUT /editions/{id}` can
+      create (one that has texts on the default branch is a 409).
+    - `CataloguedEditionId`: every catalogued edition, for the other curation writes,
+      which also reach an edition created on the curator's topic branch and not yet
+      attached to this deployment."""
+    generate = app.openapi
+    schemas = {
+        "EditionId": (
+            sorted(catalogued & attached),
+            "A martyrology edition registered in the CLBDR catalog whose texts this "
+            "deployment serves.",
+        ),
+        "NewEditionId": (
+            sorted(catalogued - attached),
+            "A martyrology edition registered in the CLBDR catalog that has no texts yet.",
+        ),
+        "CataloguedEditionId": (
+            sorted(catalogued),
+            "A martyrology edition registered in the CLBDR catalog.",
+        ),
+    }
+
+    def openapi() -> dict:
+        if app.openapi_schema is not None:
+            return app.openapi_schema
+        schema = generate()
+        components = schema.setdefault("components", {}).setdefault("schemas", {})
+        for name, (enum, description) in schemas.items():
+            components[name] = {"type": "string", "description": description, "enum": enum}
+        for path, operations in schema["paths"].items():
+            for method, operation in operations.items():
+                for param in operation.get("parameters", []):
+                    if param["in"] == "path" and param["name"] == "edition_id":
+                        creates = method == "put" and path == "/api/v1/editions/{edition_id}"
+                        param["schema"] = _ref("NewEditionId" if creates else "CataloguedEditionId")
+                    elif param["in"] == "query" and param["name"] == "edition":
+                        param["schema"] = {"anyOf": [_ref("EditionId"), {"type": "null"}]}
+        return schema
+
+    app.openapi = openapi  # type: ignore[method-assign]
+
+
 def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings()
     app = FastAPI(title="Roman Martyrology API", version=__version__)
@@ -83,6 +137,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(curation.router, prefix="/api/v1")
     app.include_router(read.router, prefix="/api/v1")
     app.include_router(admin.router, prefix="/api/v1")
+
+    _enumerate_editions_in_openapi(app, set(registry.editions), app.state.store.available())
 
     @app.get("/", tags=["service"])
     def service_document() -> dict:
