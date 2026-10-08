@@ -67,17 +67,25 @@ class Authz:
 
     MAX_READ_PAGES = 10
 
+    # Writing a tuple that exists and deleting one that does not both
+    # return 200 with these flags (OpenFGA v1.10.0+), so any error is a
+    # real rejection. Deletes are not validated against the model: a 200
+    # means the tuple is gone. An older server ignores the flags and
+    # returns 400 for both, which callers treat as a failure.
     async def write(self, user: str, relation: str, obj: str) -> None:
-        await self._mutate("writes", user, relation, obj)
+        await self._mutate("writes", ("on_duplicate", "ignore"), user, relation, obj)
 
     async def delete(self, user: str, relation: str, obj: str) -> None:
-        await self._mutate("deletes", user, relation, obj)
+        await self._mutate("deletes", ("on_missing", "ignore"), user, relation, obj)
 
-    async def _mutate(self, key: str, user: str, relation: str, obj: str) -> None:
+    async def _mutate(
+        self, key: str, flag: tuple[str, str], user: str, relation: str, obj: str
+    ) -> None:
         if not self.api_url or not self.store_id:
             raise AuthzError(0, "not_configured", "OpenFGA is not configured")
         body: dict[str, object] = {
-            "tuple_keys": [{"user": user, "relation": relation, "object": obj}]
+            "tuple_keys": [{"user": user, "relation": relation, "object": obj}],
+            flag[0]: flag[1],
         }
         payload: dict[str, object] = {key: body}
         if self.model_id:

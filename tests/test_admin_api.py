@@ -21,11 +21,7 @@ class StaticAuth:
 class FakeAuthz:
     """Admins on governance_body:cei; records every mutation.
 
-    `fail` controls write/delete (the mutation call itself). `fail_read`
-    independently controls read_tuples (the confirmation call `_mutate`
-    makes after an idempotent-coded mutation failure) so a test can make
-    the mutation fail in one way and the confirming read fail — or
-    succeed — independently.
+    `fail` controls write/delete; `fail_read` controls read_tuples.
     """
 
     def __init__(self, admins=frozenset({"user:adm"}), tuples=None, fail=None, fail_read=None):
@@ -139,13 +135,11 @@ def test_malformed_body_id_is_422(client):
 
 
 def test_duplicate_grant_is_idempotent(client):
-    # The postcondition already holds (the tuple exists), so the
-    # idempotent-coded failure is confirmed as the caller's desired
-    # end state and reported as success.
+    # Authz.write asks OpenFGA to ignore a duplicate, so a grant of an
+    # existing tuple comes back as a plain 200 from the store.
     client.app.state.authz.tuples = [
         {"user": "user:u9", "relation": "editor", "object": "governance_body:cei"}
     ]
-    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "exists")
     r = client.post(
         BASE,
         json={"user": "u9", "governance_body": "cei", "relation": "editor"},
@@ -154,10 +148,10 @@ def test_duplicate_grant_is_idempotent(client):
     assert r.status_code == 200
 
 
-def test_duplicate_grant_with_unconfirmed_postcondition_is_502(client):
-    # The idempotent-coded failure fires, but the tuple still does not
-    # exist afterward: the desired end state (grant holds) cannot be
-    # confirmed, so this must not be swallowed as success.
+def test_grant_rejected_as_invalid_input_is_502(client):
+    # With on_duplicate set, this code no longer means "already exists";
+    # from an OpenFGA older than v1.10.0, which ignores the flag, it might,
+    # but it is not proof, so it fails closed.
     client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "exists")
     r = client.post(
         BASE,
@@ -187,20 +181,17 @@ def test_revoke_removes_the_tuple(client):
 
 
 def test_revoke_of_an_absent_tuple_is_idempotent(client):
-    # The postcondition already holds (no such tuple), so the
-    # idempotent-coded failure is confirmed as the caller's desired
-    # end state and reported as success.
-    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "missing")
+    # Authz.delete asks OpenFGA to ignore a missing tuple, so a revoke of
+    # an absent tuple comes back as a plain 200 from the store.
     r = client.request(
         "DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor", headers=hdr()
     )
     assert r.status_code == 200
 
 
-def test_revoke_with_unconfirmed_postcondition_is_502(client):
-    # The idempotent-coded failure fires, but the tuple is still present
-    # afterward: the desired end state (revoke holds) cannot be confirmed,
-    # so this must not be swallowed as success.
+def test_revoke_rejected_as_invalid_input_is_502(client):
+    # The failure this must never report as success: a revoke the store
+    # rejected, whatever the code, leaves the tuple's state unknown.
     client.app.state.authz.tuples = [
         {"user": "user:u9", "relation": "editor", "object": "governance_body:cei"}
     ]
@@ -210,51 +201,6 @@ def test_revoke_with_unconfirmed_postcondition_is_502(client):
     )
     assert r.status_code == 502
     assert client.app.state.authz.deletes == []
-
-
-def test_revoke_editor_from_an_admin_holder_confirms_via_direct_tuples(client):
-    """The postcondition must be confirmed against the direct tuple, not
-    the computed relation: editor is unioned with admin (editor: [user]
-    or admin), so check_object("editor") on an admin-holder always
-    returns True even when no direct editor tuple exists. Confirming with
-    check_object would wrongly report 502 for a revoke that actually
-    succeeded; confirming with read_tuples (direct tuples only) correctly
-    reports 200."""
-    client.app.state.authz.admins = frozenset({"user:adm", "user:u9"})
-    client.app.state.authz.tuples = [
-        {"user": "user:u9", "relation": "admin", "object": "governance_body:cei"},
-    ]
-    # Sanity check: the FakeAuthz stub models the union, so check_object
-    # would (wrongly, if used as the oracle) report "editor" as present.
-    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "missing")
-    r = client.request(
-        "DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor", headers=hdr()
-    )
-    assert r.status_code == 200
-
-
-def test_duplicate_grant_confirmation_read_failure_is_502(client):
-    """If the confirming read_tuples call itself raises (infrastructure
-    failure), that is an unconfirmed outcome, not a confirmed one."""
-    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "exists")
-    client.app.state.authz.fail_read = AuthzError(500, "internal_error", "boom")
-    r = client.post(
-        BASE,
-        json={"user": "u9", "governance_body": "cei", "relation": "editor"},
-        headers=hdr(),
-    )
-    assert r.status_code == 502
-
-
-def test_revoke_confirmation_read_failure_is_502(client):
-    """Same as above, for the revoke direction: a failed confirmation read
-    must not be silently treated as a confirmed revoke."""
-    client.app.state.authz.fail = AuthzError(400, "write_failed_due_to_invalid_input", "missing")
-    client.app.state.authz.fail_read = AuthzError(500, "internal_error", "boom")
-    r = client.request(
-        "DELETE", f"{BASE}?user=u9&governance_body=cei&relation=editor", headers=hdr()
-    )
-    assert r.status_code == 502
 
 
 def test_list_returns_the_bodys_tuples(client):
