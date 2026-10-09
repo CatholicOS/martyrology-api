@@ -10,6 +10,7 @@ from ..authz import user_ref
 from ..caching import declare_public_cache
 from ..grammar import ElogiaRequest, parse_elogia_path
 from ..licensing import is_restricted, redact, texts_allowed
+from ..mentions import MentionIn, served
 from ..models import (
     DayContentOut,
     DayOut,
@@ -67,7 +68,9 @@ def elogium_out(
     footnotes: dict[str, list[FootnoteOut]] | None = None,
     marginalia: dict[str, list[MarginNoteOut]] | None = None,
     errata: dict[str, list[ErratumOut]] | None = None,
+    mentions: dict[str, list[MentionIn]] | None = None,
 ) -> ElogiumOut:
+    notes = list((footnotes or {}).get(e.id or "", []))
     return ElogiumOut(
         id=e.id,
         entry=e.entry,
@@ -75,9 +78,12 @@ def elogium_out(
         unnumbered=e.unnumbered,
         anchor_day=f"{e.anchor_month:02d}-{e.anchor_day:02d}",
         text=e.text,
-        footnotes=list((footnotes or {}).get(e.id or "", [])),
+        footnotes=notes,
         marginalia=list((marginalia or {}).get(e.id or "", [])),
         errata=list((errata or {}).get(e.id or "", [])),
+        # Read from the text served: a draft whose words moved carries none of them, and `form`
+        # is always the words this response prints.
+        mentions=served((mentions or {}).get(e.id or "", []), e.text, notes),
     )
 
 
@@ -123,10 +129,11 @@ def _day_content(
     marginalia: dict[str, list[MarginNoteOut]] | None = None,
     errata: dict[str, list[ErratumOut]] | None = None,
     luna: LunaOut | None = None,
+    mentions: dict[str, list[MentionIn]] | None = None,
 ) -> DayContentOut:
     return DayContentOut(
         titulus=d.titulus,
-        elogia=[elogium_out(e, footnotes, marginalia, errata) for e in d.elogia],
+        elogia=[elogium_out(e, footnotes, marginalia, errata, mentions) for e in d.elogia],
         rubricae=[RubricaOut(after=r.after, text=r.text) for r in d.rubricae],
         conclusio=d.conclusio,
         luna=luna,
@@ -222,6 +229,7 @@ async def get_elogia(
     notes = store.footnotes(resolution.edition_id)
     margins = store.marginalia(resolution.edition_id)
     errata = store.errata(resolution.edition_id)
+    mentions = store.mentions(resolution.edition_id)
     # The year the moon is announced for: the path's, else ?year=, else this year.
     if year is not None and not 1 <= year <= 9999:
         raise ApiProblem(
@@ -234,7 +242,12 @@ async def get_elogia(
     if req.day is None:
         contents = {
             f"{d:02d}": _day_content(
-                v, notes, margins, errata, luna_out(tables, luna_year, req.month, d, language)
+                v,
+                notes,
+                margins,
+                errata,
+                luna_out(tables, luna_year, req.month, d, language),
+                mentions,
             )
             for d, v in sorted(months.items())
         }
@@ -256,7 +269,7 @@ async def get_elogia(
 
     luna = luna_out(tables, luna_year, req.month, req.day, language)
     if req.slug is None:
-        c = _day_content(day_data, notes, margins, errata, luna)
+        c = _day_content(day_data, notes, margins, errata, luna, mentions)
         if not allowed:
             redact(c.elogia)
             c.rubricae = []
@@ -279,7 +292,7 @@ async def get_elogia(
             f"'{resolution.edition_id}'.",
             type_slug="unknown-eulogy",
         )
-    elogia = [elogium_out(hit, notes, margins, errata)]
+    elogia = [elogium_out(hit, notes, margins, errata, mentions)]
     # The rubrics printed right after this eulogy.
     rubricae = [
         RubricaOut(after=r.after, text=r.text) for r in day_data.rubricae if r.after == hit.id
@@ -330,6 +343,11 @@ async def get_elogium(
         notes = store.footnotes(p.edition_id).get(canonical_id, []) if allowed else []
         margins = store.marginalia(p.edition_id).get(canonical_id, []) if allowed else []
         errata = store.errata(p.edition_id).get(canonical_id, []) if allowed else []
+        mentions = (
+            served(store.mentions(p.edition_id).get(canonical_id, []), p.text, list(notes))
+            if allowed
+            else []
+        )
         placements[p.edition_id] = EditionPlacementOut(
             day_printed=p.day_printed,
             entry=p.entry,
@@ -339,6 +357,7 @@ async def get_elogium(
             footnotes=list(notes),
             marginalia=list(margins),
             errata=list(errata),
+            mentions=mentions,
         )
     subject = {
         loc: registry.subjects(loc)[canonical_id]

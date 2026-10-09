@@ -245,10 +245,15 @@ def test_the_store_keeps_the_mentions_that_land_and_logs_the_rest(
 
     dropped = [r.getMessage() for r in caplog.records if r.levelno == logging.WARNING]
     assert len(dropped) == 3
-    assert all(d.startswith("Mention dropped:") for d in dropped)
-    assert any("mr:0102-concordius" in d and "37-47" in d and "4b9b016f" in d for d in dropped)
-    assert any("footnote 2" in d for d in dropped)  # a footnote the eulogy lacks
-    assert any("mr:0109-nusquam" in d for d in dropped)  # a eulogy the edition does not print
+    assert all(d.startswith("Mention dropped") for d in dropped)
+    assert any(
+        "(check mismatch)" in d and "mr:0102-concordius" in d and "37-47" in d and "4b9b016f" in d
+        for d in dropped
+    )
+    # a footnote the eulogy lacks
+    assert any("(no such footnote)" in d and "footnote 2" in d for d in dropped)
+    # a eulogy the edition does not print
+    assert any("(eulogy not printed)" in d and "mr:0109-nusquam" in d for d in dropped)
     assert (
         "Mentions: 5 served, 3 dropped (offsets from martyrology-texts an unrecorded commit)."
         in caplog.text

@@ -122,20 +122,29 @@ def check_mentions(
         texts, notes = texts_of(edition_id), footnotes_of(edition_id)
         for cid, ms in by_id.items():
             for m in ms:
-                if cid in texts and lands(m, texts[cid], notes.get(cid, [])) is not None:
+                if cid not in texts:
+                    reason = "eulogy not printed"
+                elif isinstance(m.where, MentionFootnote) and m.where.footnote > len(
+                    notes.get(cid, [])
+                ):
+                    reason = "no such footnote"
+                elif lands(m, texts[cid], notes.get(cid, [])) is None:
+                    reason = "check mismatch"
+                else:
                     kept.setdefault(edition_id, {}).setdefault(cid, []).append(m)
                     served_n += 1
-                else:
-                    dropped += 1
-                    log.warning(
-                        "Mention dropped: %s %s, %s at %d-%d does not match its check %s.",
-                        edition_id,
-                        cid,
-                        _where(m),
-                        m.start,
-                        m.end,
-                        m.check,
-                    )
+                    continue
+                dropped += 1
+                log.warning(
+                    "Mention dropped (%s): %s %s, %s at %d-%d, check %s.",
+                    reason,
+                    edition_id,
+                    cid,
+                    _where(m),
+                    m.start,
+                    m.end,
+                    m.check,
+                )
     log.info(
         "Mentions: %d served, %d dropped (offsets from martyrology-texts %s).",
         served_n,

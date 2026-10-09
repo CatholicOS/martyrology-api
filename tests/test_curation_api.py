@@ -372,3 +372,19 @@ def test_admin_role_satisfies_the_gate_but_does_not_bypass_openfga(client):
     )
     assert r.status_code == 403
     assert r.json()["type"].endswith("/forbidden")
+
+
+def test_a_draft_whose_text_changed_carries_no_mentions(client):
+    # The start-up check passed on the published text; a draft's words may have moved since.
+    url = "/api/v1/elogia/edition/martyrologium_romanum_1749/01/01"
+    published = {e["id"]: e for e in client.get(url).json()["elogia"]}
+    assert [m["form"] for m in published["mr:0102-concordius"]["mentions"]] == ["Concordii"]
+    client.patch(
+        "/api/v1/editions/martyrologium_romanum_1749/elogia/mr:0102-concordius",
+        json={"text": "Draft only."},
+        headers=AUTH,
+    )
+    draft = client.get(url, headers=AUTH | {"X-Curation-Branch": "curation/jdoe/edits"}).json()
+    concordius = next(e for e in draft["elogia"] if e["id"] == "mr:0102-concordius")
+    assert concordius["text"] == "Draft only."
+    assert concordius["mentions"] == []
