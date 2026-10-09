@@ -189,7 +189,8 @@ async def _draft_months(
     return await run_in_threadpool(svc.read_month_draft, edition_id, month, branch)
 
 
-@router.get("/elogia/{rest:path}")
+# Documented, not validated: a month response is large, and the handlers build these models.
+@router.get("/elogia/{rest:path}", responses={200: {"model": DayOut | MonthOut}})
 async def get_elogia(
     rest: str,
     request: Request,
@@ -310,7 +311,7 @@ async def get_elogia(
     )
 
 
-@router.get("/elogium/{canonical_id}")
+@router.get("/elogium/{canonical_id}", responses={200: {"model": EulogyOut}})
 async def get_elogium(
     canonical_id: str,
     request: Request,

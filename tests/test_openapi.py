@@ -73,3 +73,25 @@ def test_openapi_edition_params_enumerate_the_editions_they_accept(client):
     assert len(found) == 6
     for operation, param_schema in found.items():
         assert param_schema == ref("CataloguedEditionId"), operation
+
+
+def test_openapi_documents_the_mentions_of_a_eulogy(client):
+    schema = client.app.openapi()
+    c = schema["components"]["schemas"]
+    mention = {"$ref": "#/components/schemas/MentionOut"}
+    assert c["ElogiumOut"]["properties"]["mentions"]["items"] == mention
+    assert c["EditionPlacementOut"]["properties"]["mentions"]["items"] == mention
+    m = c["MentionOut"]
+    assert set(m["required"]) == {"kind", "where", "start", "end", "form"}
+    assert "check" not in m["properties"]  # crmedr's hash is not part of the response
+    assert m["properties"]["kind"]["enum"] == ["person", "place"]
+    assert c["MentionFootnote"]["properties"]["footnote"]["minimum"] == 1
+    elogia = schema["paths"]["/api/v1/elogia/{rest}"]["get"]["responses"]["200"]
+    assert elogia["content"]["application/json"]["schema"]["anyOf"] == [
+        {"$ref": "#/components/schemas/DayOut"},
+        {"$ref": "#/components/schemas/MonthOut"},
+    ]
+    one = schema["paths"]["/api/v1/elogium/{canonical_id}"]["get"]["responses"]["200"]
+    assert one["content"]["application/json"]["schema"] == {
+        "$ref": "#/components/schemas/EulogyOut"
+    }
