@@ -4,6 +4,7 @@ one still lands on the words it names. crmedr stores no printed words: each ment
 
 import hashlib
 import logging
+from collections.abc import Callable, Collection
 from pathlib import Path
 
 from pydantic import BaseModel, Field, ValidationError
@@ -60,9 +61,12 @@ def span_check(words: str) -> str:
 
 
 def utf16_slice(s: str, start: int, end: int) -> str | None:
-    """`s[start:end]` counted in UTF-16 code units; None when the span runs past the end of `s` or
-    cuts a surrogate pair in two."""
-    units = s.encode("utf-16-le")
+    """`s[start:end]` counted in UTF-16 code units; None when the span runs past the end of `s`,
+    cuts a surrogate pair in two, or `s` holds a lone surrogate (no UTF-16 form, so no match)."""
+    try:
+        units = s.encode("utf-16-le")
+    except UnicodeEncodeError:
+        return None
     if end * 2 > len(units):
         return None
     try:
@@ -91,3 +95,68 @@ def served(ms: list[MentionIn], text: str | None, footnotes: list[FootnoteOut]) 
         if words is not None:
             out.append(MentionOut.model_validate(m.model_dump(exclude={"check"}) | {"form": words}))
     return out
+
+
+def _where(m: MentionIn) -> str:
+    return f"footnote {m.where.footnote}" if isinstance(m.where, MentionFootnote) else "text"
+
+
+def check_mentions(
+    mentions: Mentions,
+    attached: Collection[str],
+    texts_of: Callable[[str], dict[str, str | None]],
+    footnotes_of: Callable[[str], dict[str, list[FootnoteOut]]],
+    texts_commit: str | None,
+) -> Mentions:
+    """The mentions that land on the words crmedr checked, in the attached texts. Each one that
+    doesn't (its text corrected since crmedr's extraction, a footnote the eulogy lacks, a eulogy
+    the edition does not print) is logged once and dropped; an edition whose texts are not
+    attached is skipped. The count is logged at the end, with the texts commit the offsets came
+    from."""
+    kept: Mentions = {}
+    served_n = dropped = 0
+    for edition_id, by_id in mentions.items():
+        if edition_id not in attached:
+            log.info("The mentions of %s are not served: its texts are not attached.", edition_id)
+            continue
+        texts, notes = texts_of(edition_id), footnotes_of(edition_id)
+        for cid, ms in by_id.items():
+            for m in ms:
+                if cid in texts and lands(m, texts[cid], notes.get(cid, [])) is not None:
+                    kept.setdefault(edition_id, {}).setdefault(cid, []).append(m)
+                    served_n += 1
+                else:
+                    dropped += 1
+                    log.warning(
+                        "Mention dropped: %s %s, %s at %d-%d does not match its check %s.",
+                        edition_id,
+                        cid,
+                        _where(m),
+                        m.start,
+                        m.end,
+                        m.check,
+                    )
+    log.info(
+        "Mentions: %d served, %d dropped (offsets from martyrology-texts %s).",
+        served_n,
+        dropped,
+        texts_commit or "an unrecorded commit",
+    )
+    return kept
+
+
+def compare_texts_pins(extracted: str | None, deployed: str | None) -> None:
+    """Warn when crmedr took the offsets from other texts than this deployment serves: its
+    mentions then miss wherever the two differ. Either commit may be abbreviated; nothing is
+    compared when either is unknown."""
+    if (
+        extracted
+        and deployed
+        and not (extracted.startswith(deployed) or deployed.startswith(extracted))
+    ):
+        log.warning(
+            "crmedr's mentions were taken from martyrology-texts %s, but this deployment serves "
+            "%s: expect dropped mentions until the two pins agree.",
+            extracted,
+            deployed,
+        )

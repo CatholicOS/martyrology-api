@@ -6,6 +6,7 @@ from pathlib import Path
 from pydantic import TypeAdapter, ValidationError
 
 from . import lunar
+from .mentions import MentionIn, Mentions, MentionsFile, check_mentions
 from .models import ErratumOut, FootnoteOut, MarginNoteOut
 from .registry import Registry, anchor_day, slug_of
 
@@ -236,6 +237,8 @@ class Store:
                 raise ValueError(f"{d / 'source.json'}: unknown lunar_table {name!r}")
             misprints = load_lunar_misprints(d / "lunar_misprints.json")
             self._lunar[eid] = LunarTables(lunar.VARIANTS[name], misprints)
+        # Attached after start-up checks them against the texts (attach_mentions).
+        self._mentions: Mentions = {}
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -310,6 +313,28 @@ class Store:
         (`lunar_misprints.json`: "MM-DD" → epact → the age printed); None for an edition
         without the table."""
         return self._lunar.get(edition_id)
+
+    def _texts(self, edition_id: str) -> dict[str, str | None]:
+        """The edition's texts by canonical id, across its twelve months."""
+        return {
+            e.id: e.text
+            for m in range(1, 13)
+            for d in self._load_month(edition_id, m).values()
+            for e in d.elogia
+            if e.id is not None
+        }
+
+    def attach_mentions(self, file: MentionsFile) -> None:
+        """Serve crmedr's mentions: those that land on the words crmedr checked, in the texts
+        attached here (`mentions.check_mentions`, which logs the rest)."""
+        self._mentions = check_mentions(
+            file.editions, self._dirs.keys(), self._texts, self.footnotes, file.texts_commit
+        )
+
+    def mentions(self, edition_id: str) -> dict[str, list[MentionIn]]:
+        """The persons and places the edition's eulogies name, by canonical id: text first, then
+        the footnotes in order. Empty when the edition has none."""
+        return self._mentions.get(edition_id, {})
 
     def month(self, edition_id: str, month: int) -> dict[int, DayData]:
         return self._load_month(edition_id, month)
