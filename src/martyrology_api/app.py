@@ -9,6 +9,7 @@ from .authz import Authz
 from .caching import CacheHeadersMiddleware
 from .config import Settings
 from .manifest import load_manifest
+from .mentions import compare_texts_pins, load_mentions
 from .models import HealthOut
 from .problems import install_problem_handlers
 from .registry import Registry
@@ -82,6 +83,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
+    mentions = load_mentions(settings.crmedr_path / "data/mentions.json")
+    app.state.store.attach_mentions(mentions)
+    # The bundle manifest knows which texts this deployment serves; outside a bundle, nothing does.
+    manifest = load_manifest(settings.manifest_file)
+    compare_texts_pins(mentions.texts_commit, manifest.data.get("texts") if manifest else None)
     uncatalogued = sorted(app.state.store.available() - registry.editions.keys())
     if uncatalogued:
         logging.getLogger(__name__).warning(

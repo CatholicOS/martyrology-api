@@ -76,3 +76,17 @@ def test_full_year_no_crashes(client, edition_id):
 def test_catalog_size_matches_registry(client):
     items = client.get("/api/v1/elogia").json()["elogia"]
     assert len(items) > 3000  # current + deprecated CRMEDR ids
+
+
+def test_crmedrs_mentions_load_and_validate():
+    from martyrology_api.mentions import load_mentions
+
+    path = CRMEDR / "data/mentions.json"
+    if not path.exists():
+        pytest.skip("this crmedr has no mentions.json yet")
+    mentions = load_mentions(path)
+    assert {"martyrologium_romanum_2004", "martyrologium_romanum_2004_it_IT"} <= (
+        mentions.editions.keys()
+    )
+    assert sum(len(ms) for by in mentions.editions.values() for ms in by.values()) > 1000
+    assert mentions.texts_commit, "crmedr should record the martyrology-texts commit it read"

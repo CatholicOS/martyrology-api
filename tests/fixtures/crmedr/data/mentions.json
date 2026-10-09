@@ -1,0 +1,35 @@
+{
+  "$comment": "Test fixture: mentions in the fixture texts. Served: 5. Dropped: 3 (the check of \"Concordii\" over \"presbyteri\", a footnote the eulogy lacks, a eulogy the edition does not print). Not checked: 1630, whose texts are not attached. Each check is span_check of the words named in this comment.",
+  "texts": { "commit": null },
+  "editions": {
+    "martyrologium_romanum_2004": {
+      "mr:0102-concordius": [
+        { "kind": "place", "where": "text", "start": 0, "end": 17, "check": "46f1bf10", "qid": "Q13363" },
+        { "kind": "person", "where": "text", "start": 26, "end": 35, "check": "4b9b016f", "name": "Concordius", "qid": null },
+        { "kind": "person", "where": "text", "start": 37, "end": 47, "check": "4b9b016f", "name": "Stale", "qid": null }
+      ],
+      "mr:0102-argeus-et-socii": [
+        { "kind": "person", "where": { "footnote": 1 }, "start": 22, "end": 31, "check": "1ccf99a1", "name": "Narcissus", "qid": "Q1" },
+        { "kind": "person", "where": { "footnote": 2 }, "start": 0, "end": 6, "check": "18ed8b6c", "name": "Nemo", "qid": null }
+      ],
+      "mr:0109-nusquam": [
+        { "kind": "person", "where": "text", "start": 0, "end": 3, "check": "06d90109", "name": "Abc", "qid": null }
+      ]
+    },
+    "martyrologium_romanum_2004_it_IT": {
+      "mr:0102-concordius": [
+        { "kind": "place", "where": "text", "start": 0, "end": 9, "check": "06a91c1b", "qid": "Q13363" }
+      ]
+    },
+    "martyrologium_romanum_1749": {
+      "mr:0102-concordius": [
+        { "kind": "person", "where": "text", "start": 15, "end": 24, "check": "4b9b016f", "name": "Concordius", "qid": null }
+      ]
+    },
+    "martyrologium_romanum_1630": {
+      "mr:0102-concordius": [
+        { "kind": "place", "where": "text", "start": 0, "end": 7, "check": "65380b11", "qid": "Q13363" }
+      ]
+    }
+  }
+}

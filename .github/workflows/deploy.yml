@@ -144,6 +144,9 @@ jobs:
           [ -f staging/data/crmedr/data/martyrology_ids.json ] \
             || fail "staging/data/crmedr/data/martyrology_ids.json is missing"
 
+          [ -f staging/data/crmedr/data/mentions.json ] \
+            || fail "staging/data/crmedr/data/mentions.json is missing"
+
           [ -f staging/data/clbdr/data/editions.json ] \
             || fail "staging/data/clbdr/data/editions.json is missing"
 
