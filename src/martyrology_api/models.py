@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 def scope_dict(scope: str) -> dict:
@@ -72,6 +72,42 @@ class ErratumOut(BaseModel):
     position: Literal["after", "before"] = "after"
 
 
+class MentionFootnote(BaseModel):
+    """Where a mention printed in a footnote stands: the eulogy's nth footnote, counted from 1 in
+    the order its `footnotes` list them."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    footnote: int = Field(ge=1)
+
+
+class MentionBase(BaseModel):
+    """A person or place a eulogy names (crmedr `data/mentions.json`): the span from `start` to
+    `end` of its text, or of the footnote `where` names, in UTF-16 code units, the unit JavaScript
+    strings use. `qid` is the Wikidata item crmedr decided (null while undecided); `name` is a
+    person's nominative, null for a place."""
+
+    kind: Literal["person", "place"]
+    where: Literal["text"] | MentionFootnote
+    start: int = Field(ge=0)
+    end: int
+    qid: str | None = None
+    name: str | None = None
+
+    @model_validator(mode="after")
+    def _a_span(self) -> "MentionBase":
+        if self.end <= self.start:
+            raise ValueError("end must come after start")
+        return self
+
+
+class MentionOut(MentionBase):
+    """A mention as served: `form` is the words of the span as printed, read from the text served
+    with it."""
+
+    form: str
+
+
 class ElogiumOut(BaseModel):
     id: str | None
     entry: int | None
@@ -82,6 +118,7 @@ class ElogiumOut(BaseModel):
     footnotes: list[FootnoteOut] = Field(default_factory=list)
     marginalia: list[MarginNoteOut] = Field(default_factory=list)
     errata: list[ErratumOut] = Field(default_factory=list)
+    mentions: list[MentionOut] = Field(default_factory=list)
 
 
 class RubricaOut(BaseModel):
@@ -160,6 +197,7 @@ class EditionPlacementOut(BaseModel):
     footnotes: list[FootnoteOut] = Field(default_factory=list)
     marginalia: list[MarginNoteOut] = Field(default_factory=list)
     errata: list[ErratumOut] = Field(default_factory=list)
+    mentions: list[MentionOut] = Field(default_factory=list)
 
 
 class EulogyOut(BaseModel):
