@@ -91,6 +91,11 @@ def test_served_fills_form_from_the_text_and_leaves_the_check_behind():
     assert out[0].model_dump()["name"] is None  # always present, null for a place
 
 
+def test_served_gives_a_place_no_name_whatever_crmedr_wrote():
+    rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", name="Roma")
+    assert served([rome], "Natale Romæ", [])[0].name is None
+
+
 def test_served_gives_a_footnote_mention_its_footnote_as_where():
     notes = [FootnoteOut(mark="1", after=None, text="Quorum nomina: sancti Narcissus.")]
     narcissus = _m("Narcissus", where={"footnote": 1}, start=22, end=31, name="Narcissus")

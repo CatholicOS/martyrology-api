@@ -82,7 +82,7 @@ def test_openapi_documents_the_mentions_of_a_eulogy(client):
     assert c["ElogiumOut"]["properties"]["mentions"]["items"] == mention
     assert c["EditionPlacementOut"]["properties"]["mentions"]["items"] == mention
     m = c["MentionOut"]
-    assert set(m["required"]) == {"kind", "where", "start", "end", "form"}
+    assert set(m["required"]) == {"kind", "where", "start", "end", "form", "qid", "name"}
     assert "check" not in m["properties"]  # crmedr's hash is not part of the response
     assert m["properties"]["kind"]["enum"] == ["person", "place"]
     assert c["MentionFootnote"]["properties"]["footnote"]["minimum"] == 1

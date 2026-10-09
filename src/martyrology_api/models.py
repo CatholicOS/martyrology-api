@@ -105,6 +105,10 @@ class MentionOut(MentionBase):
     """A mention as served: `form` is the words of the span as printed, read from the text served
     with it."""
 
+    # The API always serves `qid` and `name` (null when undecided, or for a place): the schema
+    # lists them as required though they carry defaults.
+    model_config = ConfigDict(json_schema_serialization_defaults_required=True)
+
     form: str
 
 
