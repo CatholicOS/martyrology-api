@@ -4103,7 +4103,7 @@
    },
    "texts": {
     "mr:1009-dionysius-et-socii": "LVTETIAE Parisiorum natalis sãctorum martyrum Dionysij a Areopagitæ Episcopi, Rustici presbyteri, & Eleutherij diaconi: ex quibus Dionysius ab Apostolo Paulo baptizatus, primus Atheniẽsium Episcopus est ordinatus: deinde Romam veniẽs, a B. Clemente Romano Pontifice in Gallias prædicandi gratia directus est: & ad præfatam vrbem deueniens, cum ibi per aliquot annos commissum sibi opus fideliter prosequeretur, tandem a Præfecto Fescennino post grauissima tormentorum genera vna cum socijs gladio animaduersus, martyrium compleuit.",
-    "mr:1009-abraham": "Eodem die memoria sancti Abrahæ Patriarchæ, & omnium credentium patris.",
+    "mr:1009-abraham-patriarcha": "Eodem die memoria sancti Abrahæ Patriarchæ, & omnium credentium patris.",
     "mr:1009-domninus-iuliam": "Apud Iuliam in territorio Parmensi, via Claudia, S. Domnini martyris sub Maximiano Imperatore: qui cum vellet persecutionis rabiem declinare, a persequentibus gladio transuerberatus, gloriose occubuit.",
     "mr:1009-deusdedit": "Apud Cassinum sancti Deusdedit abbatis, qui a Sicardo tyranno in carcerem trusus, illic fame & ærumnis confectus, reddidit spiritum.",
     "mr:1009-gislenus": "In Hannonia sancti Gisleni Episcopi & confessoris, qui relicto Episcopatu, monachi vitam in monasterio a se constructo exercens, multis virtutibus claruit.",
@@ -14274,7 +14274,7 @@
      "words": "OCTAVA sancti Ioannis Baptistę."
     },
     {
-     "ref": "mr:0701-aaron",
+     "ref": "mr:0701-aaron-sacerdos",
      "kind": "eulogy",
      "lemma": null,
      "words": "In monte Hor depositio sancti Aaron primi sacerdotis …"
@@ -17865,7 +17865,7 @@
      "words": "LVTETIAE Parisiorum natalis sãctorum martyrum Dionysij a Areopagitæ …"
     },
     {
-     "ref": "mr:1009-abraham",
+     "ref": "mr:1009-abraham-patriarcha",
      "kind": "eulogy",
      "lemma": null,
      "words": "Eodem die memoria sancti Abrahæ Patriarchæ, & omnium …"
