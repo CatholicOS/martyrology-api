@@ -8257,7 +8257,7 @@
    "method": "same-day",
    "score": 0.958
   },
-  "mr:0921-matthaeus-apostolus": {
+  "mr:0921-matthaeus-apostolus-et-evangelista": {
    "method": "same-day",
    "score": 0.892
   },
@@ -11405,7 +11405,7 @@
    "method": "same-day",
    "score": 0.857
   },
-  "mr:1227-ioannes-apostolus": {
+  "mr:1227-ioannes-apostolus-et-evangelista": {
    "method": "same-day",
    "score": 0.923
   },
