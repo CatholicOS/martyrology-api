@@ -91,6 +91,18 @@ def test_served_fills_form_from_the_text_and_leaves_the_check_behind():
     assert out[0].model_dump()["name"] is None  # always present, null for a place
 
 
+def test_served_keeps_the_nth_person_of_a_name():
+    # crmedr's n: the second and third Felix of one eulogy; the first has none (served null).
+    felix2 = _m("Felix", start=7, end=12, name="Felix", n=2)
+    out = served([felix2, _m("Felix", start=14, end=19, name="Felix")], "Natale Felix, Felix.", [])
+    assert [m.model_dump()["n"] for m in out] == [2, None]
+
+
+def test_n_is_from_two():
+    with pytest.raises(ValidationError):
+        _m("Felix", name="Felix", n=1)
+
+
 def test_served_gives_a_place_no_name_whatever_crmedr_wrote():
     rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", name="Roma")
     assert served([rome], "Natale Romæ", [])[0].name is None
