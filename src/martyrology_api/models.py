@@ -85,7 +85,8 @@ class MentionBase(BaseModel):
     """A person or place a eulogy names (crmedr `data/mentions.json`): the span from `start` to
     `end` of its text, or of the footnote `where` names, in UTF-16 code units, the unit JavaScript
     strings use. `qid` is the Wikidata item crmedr decided (null while undecided); `name` is a
-    person's nominative, null for a place."""
+    person's nominative, null for a place; `n` tells apart the persons of one name in the eulogy
+    (2, 3…; null for the first)."""
 
     kind: Literal["person", "place"]
     where: Literal["text"] | MentionFootnote
@@ -93,6 +94,8 @@ class MentionBase(BaseModel):
     end: int
     qid: str | None = None
     name: str | None = None
+    # crmedr's n: the nth person of this name in the eulogy, from 2; null for the first.
+    n: int | None = Field(default=None, ge=2)
 
     @model_validator(mode="after")
     def _a_span(self) -> "MentionBase":

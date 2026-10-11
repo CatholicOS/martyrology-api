@@ -14,6 +14,7 @@ SPOLETI = {
     "end": 17,
     "qid": "Q13363",
     "name": None,
+    "n": None,
     "form": "Spoleti in Umbria",
 }
 CONCORDII = {
@@ -23,6 +24,7 @@ CONCORDII = {
     "end": 35,
     "qid": None,
     "name": "Concordius",
+    "n": None,
     "form": "Concordii",
 }
 NARCISSUS = {
@@ -32,6 +34,7 @@ NARCISSUS = {
     "end": 31,
     "qid": "Q1",
     "name": "Narcissus",
+    "n": None,
     "form": "Narcissus",
 }
 
