@@ -34,12 +34,13 @@ class CacheHeadersMiddleware(BaseHTTPMiddleware):
             body += chunk.encode() if isinstance(chunk, str) else bytes(chunk)
         etag = '"' + hashlib.md5(body, usedforsecurity=False).hexdigest() + '"'
 
+        # One day for every public response, editions included: the eulogies, IDs and subjects
+        # still change between data releases, and these URLs do not change with them, so no
+        # response may be cached as immutable. The ETag lets a client revalidate cheaply.
         if getattr(request.state, "cache_private", False) or not getattr(
             request.state, "cache_public", False
         ):
             cc = "private, max-age=0"
-        elif "/edition/" in request.url.path or "edition" in request.query_params:
-            cc = "public, max-age=31536000, immutable"
         else:
             cc = "public, max-age=86400"
 

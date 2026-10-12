@@ -22,9 +22,10 @@ def client(make_client):
     return c
 
 
-def test_edition_path_is_immutable(client):
+def test_edition_path_is_daily_not_immutable(client):
+    # The data still changes between releases under the same URL: never cached as immutable.
     r = client.get("/api/v1/elogia/edition/martyrologium_romanum_1749/01/01")
-    assert r.headers["cache-control"] == "public, max-age=31536000, immutable"
+    assert r.headers["cache-control"] == "public, max-age=86400"
     assert "etag" in r.headers
     assert r.headers["vary"] == "Authorization, Accept-Language, X-Curation-Branch"
 
@@ -79,3 +80,10 @@ def test_undeclared_router_is_private_by_default(client):
     r = client.get("/api/v1/cache-probe")
     assert r.status_code == 200
     assert r.headers["cache-control"] == "private, max-age=0"
+
+
+def test_edition_query_is_daily_not_immutable(client):
+    # The catalog of an edition (its IDs and subjects) changes with every data release.
+    r = client.get("/api/v1/elogia", params={"edition": "martyrologium_romanum_1749"})
+    assert r.status_code == 200
+    assert r.headers["cache-control"] == "public, max-age=86400"
