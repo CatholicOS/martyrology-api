@@ -113,6 +113,8 @@ Superseded by the approved design spec:
    an eulogy continues across editions, and edition-local entries (saints later removed,
    pre-reform structure) will pose identity questions for the committee.
 3. Caching/versioning: editions are immutable once published, so aggressive caching
-   with edition-versioned URLs is natural.
+   with edition-versioned URLs is natural. Until URLs carry a data version, the data still
+   changes under the same URL (curation, ID renames), so public responses are cached for one
+   day, never as immutable.
 4. Whether the API also serves the CRMEDR registry itself (making it the runtime face
    of the registry) or leaves that to raw GitHub consumption.
