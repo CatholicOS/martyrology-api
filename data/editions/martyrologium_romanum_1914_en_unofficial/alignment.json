@@ -1693,7 +1693,7 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:0305-ioannes-iosephus-a-cruce": {
+  "mr:0305-carolus-caietanus-calosirto": {
    "method": "override",
    "score": null
   },
@@ -7749,7 +7749,7 @@
    "method": "same-day",
    "score": 1.67
   },
-  "mr:1006-maria-francisca-a-vulneribus-domini": {
+  "mr:1006-anna-maria-gallo": {
    "method": "same-day",
    "score": 1.2
   },
@@ -7957,7 +7957,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:1012-seraphinus-de-monte-granario": {
+  "mr:1012-felix-de-nicola": {
    "method": "same-day",
    "score": 1.27
   },
