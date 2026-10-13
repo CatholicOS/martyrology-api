@@ -259,7 +259,7 @@
  "19": {
   "titulus": "Quartodecimo Kal. Nouemb. Luna.",
   "elogia": {
-   "mr:1019-ptolomaeus-et-lucius": "Romę natalis sanctorum martyrum Ptolomæi a & Lucij, sub M. Antonino: quorum prior (vt scribit Iustinus martyr) cum impudicam mulierem ad fidem Christi conuertisset, & castitatẽ colere docuisset, ab impuro viro viro apud Præfectum Vrbicium accusatus, multo tempore squalore carceris maceratus est, & ad vltimum cum de Christi magisterio publica confessione testaretur, iussus est duci ad mortem. Lucius quoque cum Vrbicij sententiam improbaret, & se Christianum libere fateretur, similem sententiam excepit: quibus & alius tertius adiunctus est, qui etiam eodẽ supplicio damnatus fuit a.",
+   "mr:1019-ptolomaeus-et-lucius": "Romę natalis sanctorum martyrum Ptolomæi a & Lucij, sub M. Antonino: quorum prior (vt scribit Iustinus martyr) cum impudicam mulierem ad fidem Christi conuertisset, & castitatẽ colere docuisset, ab impuro viro apud Præfectum Vrbicium accusatus, multo tempore squalore carceris maceratus est, & ad vltimum cum de Christi magisterio publica confessione testaretur, iussus est duci ad mortem. Lucius quoque cum Vrbicij sententiam improbaret, & se Christianum libere fateretur, similem sententiam excepit: quibus & alius tertius adiunctus est, qui etiam eodẽ supplicio damnatus fuit a.",
    "mr:1019-beronicus-et-socii": "Antiochiæ sanctorum martyrum Beronici, Pelagiæ virginis, & aliorum quadragintanouem.",
    "mr:1019-varus": "In Aegypto sancti Vari militis, qui sub Maximino Imperatore dum sanctas septem monachos in carcere detentos visitaret, atque reficeret, vno ex ipsis defuncto, in eius locum subrogari voluit, & cum illis sæuissima passus, martyrij palmam adeptus est.",
    "mr:1019-aquilinus": "Ebroicis sancti Aquilini Episcopi, & confessoris.",
@@ -277,7 +277,10 @@
    "mr:1020-caprasius": "Agenni in Gallia S. Caprasij martyris, qui cum rabiem persecutionis declinans, lateret in spelunca, tandem audiens qualiter beata Fides virgo pro Christo agonizaret, animatus ad tolerantiam passionum, orauit ad Dominum, vt, si eum gloria martyrij dignum iudicaret, ex lapide speluncæ limpidissima aqua manaret: quod cum Dominus præstitisset, securus ad aream certaminis properauit, & palmam martyrij sub Maximiano fortiter dimicando promeruit.",
    "mr:1020-artemius": "Antiochiæ sancti Artemij Ducis Augustalis, qui sub Constantino Magno præclaris militiæ honoribus functus, a Iuliano Apostata, quem sæuitiæ in Christianos arguerat, fustibus cædi, alijsq. tormentis affligi, ac demum capite truncari iubetur.",
    "mr:1020-martha-et-saula": "Coloniæ passio sanctarum virginum Marthæ & Saulæ cum alijs pluribus.",
-   "mr:1020-felicianus": "Apud Mindam natalis sancti Feliciani Episcopi & martyris."
+   "mr:1020-felicianus": "Apud Mindam natalis sancti Feliciani Episcopi & martyris.",
+   "mr:1020-georgius-et-aurelius": "Parisijs sanctorum Georgij diaconi, & Aurelij martyrũ.",
+   "mr:1020-irene": "In Lusitania sanctæ Irênes virginis, & martyris.",
+   "mr:1020-sindulphus": "In pago Rhemensi sancti Sindulphi confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
