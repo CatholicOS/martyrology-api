@@ -4178,13 +4178,6 @@
    "text": "Alexandri, alias Nicandri, & Theodori.] Restituti sunt hi ex eo quod diximus vet. manuscrip. exemplari. Nicandri & Theodori martyrũ corpora translata sunt a Sergio Iuniori Papa in titulum Equitij, vt vetus inscriptio marmori incisa illic posita testatur."
   }
  ],
- "mr:0317-alexandria": [
-  {
-   "mark": "c",
-   "after": "martyrum",
-   "text": "Plurimorum sanctorum mart.] Agit de his Rufin. hist lib. 2. c. 22. Socrat. lib. 5. cap. 16. & 17. Sozom. lib. 7. c. 15. & 16. Niceph. lib. 12. cap. 25 & 26. De subuersione Serapidis scripsit Sophronius æqualis S. Hieronymo insignem librum, vt ipse Hieron. testatur lib. de script. Eccles. in Sophronio. Meminit S. Augustinus de Serapidis ruina lib. de diuinat. dæmonum; de eius verò cultu & vana Aegyptiorum superstitione late de ciuitat. Dei lib. 18. cap. 5. & 6. De eiusdem templi ruina S. Hieron. ad Lætam epistol. 7. & ex externis Eunapius Sardianus. Sciendum præterea, in locum deiecti Serapidis extructã fuisse basilicam nomine S. Ioannis Baptistæ, in quam illatæ sunt eiusdem sancti reliquiæ, vt scribit Rufinus vbi supra; eam Theophilus dedicauit quarto Kal. Septembris, vt scribit Beda de sex ætat. in Iuliano: idem Acta de inuent. capitis eiusdem S. Ioãnis in princ. De origine autem eius templi consule Tacitum Annalium lib. 20."
-  }
- ],
  "mr:0317-gertrudis": [
   {
    "mark": "g",
@@ -4211,6 +4204,13 @@
    "mark": "d",
    "after": "Pauli",
    "text": "Pauli martyris.] Agunt de eodem hac die Græci in Menologio. passus reperitur circa annum Domini octingentesimum."
+  }
+ ],
+ "mr:0317-plurimi-martyres-alexandriae": [
+  {
+   "mark": "c",
+   "after": "martyrum",
+   "text": "Plurimorum sanctorum mart.] Agit de his Rufin. hist lib. 2. c. 22. Socrat. lib. 5. cap. 16. & 17. Sozom. lib. 7. c. 15. & 16. Niceph. lib. 12. cap. 25 & 26. De subuersione Serapidis scripsit Sophronius æqualis S. Hieronymo insignem librum, vt ipse Hieron. testatur lib. de script. Eccles. in Sophronio. Meminit S. Augustinus de Serapidis ruina lib. de diuinat. dæmonum; de eius verò cultu & vana Aegyptiorum superstitione late de ciuitat. Dei lib. 18. cap. 5. & 6. De eiusdem templi ruina S. Hieron. ad Lætam epistol. 7. & ex externis Eunapius Sardianus. Sciendum præterea, in locum deiecti Serapidis extructã fuisse basilicam nomine S. Ioannis Baptistæ, in quam illatæ sunt eiusdem sancti reliquiæ, vt scribit Rufinus vbi supra; eam Theophilus dedicauit quarto Kal. Septembris, vt scribit Beda de sex ætat. in Iuliano: idem Acta de inuent. capitis eiusdem S. Ioãnis in princ. De origine autem eius templi consule Tacitum Annalium lib. 20."
   }
  ],
  "mr:0318-alexander": [
@@ -9704,7 +9704,7 @@
    "text": "Iuxta Martyrum Concilia sepultum.] Huius vocis interpretationẽ Molanus mihi videtur feliciter assecutus, vt Concilij martyrũ nomine locus ille intelligatur, vbi multorũ martyrũ corpora requiescant: quemadmodum & Ecclesiæ nomen, quæ sui natura imporimportat conuentum fidelium, pro loco ipso quo ijdem conueniunt, accipi cõsueuit. Habes apud Ambrosium aduersus Symmachũ eamdem vocem in eumdem sensum vsurpatam, dum sanctarum virginum collegium appellat Concilium virginitatis. Sic & locus vbi multi collecti sunt martyres, merito martyrum Concilium fit appellatũ. In hanc sententiam Molanus citat in primis Gaudẽtium Brixianum in sermone habito in dedicatione Concilij martyrum; addit librum de Romanis Pontificibus in Damaso, necnon & Acta S. Stephani Papæ & martyris. Tu insuper egregium de hoc locum vide in S. Hieronymi epistola ad Heliodorum 3. in epitaphio Nepotiani, vbi ait: Hoc idem possumus & de isto dicere, qui Basilicas ecclesiæ, & martyrum Conciliabula diuersis floribus & arborum comis, vitiumq. pampinis obumbrauit, &c. Sicq. locum illum in lib. de Rom. Pontificibus in Damaso, vbi hæc scribuntur de Damaso: Hic multa sanctorum corpora requisiuit & inuenit, quorum etiam conchylia atque sepulchra versibus declarauit, & adornauit. Pro, Conchylia, Concilia, restituendum esse, prædicta suadent."
   }
  ],
- "mr:0623-nicomedia": [
+ "mr:0623-plurimi-martyres-nicomediae": [
   {
    "mark": "g",
    "after": "plurimorum",
