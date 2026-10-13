@@ -232,9 +232,11 @@
 "m|tom. 2. ann. 172. nu. 7. an. 173. n. 9. ": {
 "note": "1-8|d"
 },
-"m|circa ann. 500. circa ann. 505.": {
-"note": "1-8|e",
-"doubt": "low: two margin notes merged in transcription: 'circa ann. 500.' is level with the last lines of e Seuerini Episcopi; 'circa ann. 505.' is level with the first line of f Maximi Episcopi (1-8|f)"
+"m|circa ann. 500.": {
+"note": "1-8|e"
+},
+"m|circa ann. 505.": {
+"note": "1-8|f"
 },
 "m|Victor eius successor fuit in cõcil. Agr": {
 "note": "1-8|g",
