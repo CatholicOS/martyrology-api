@@ -10523,12 +10523,14 @@
  ],
  "mr:0926-eusebius": [
   {
-   "text": "T. 1. A. 318. n. 40.",
-   "note": "c"
-  },
-  {
    "text": "T. 4. A. 381. nu. 82. & T. 5. A 397. n. 92.",
    "note": "d"
+  }
+ ],
+ "mr:0926-eusebius-papa": [
+  {
+   "text": "T. 1. A. 318. n. 40.",
+   "note": "c"
   }
  ],
  "mr:0926-nilus-iunior": [
@@ -11391,7 +11393,7 @@
    "note": "a"
   }
  ],
- "mr:1017-victor-et-socii": [
+ "mr:1017-victor": [
   {
    "text": "T.3.A.174 num.6.",
    "note": "f"

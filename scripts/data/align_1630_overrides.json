@@ -225,6 +225,9 @@
   "split_at": "Item sancti Porphyrij mimi"
  },
  "9-20|Item sanctæ martyris Susannæ": "mr:0920-susanna",
+ "9-26|Item Romæ sancti Eusebij": {
+  "split_at": "Bononiæ item sancti Eusebij"
+ },
  "9-27|Cordûbæ SS. martyrum Adulphi": {
   "split_at": "Sedûni in Gallia sancti"
  },
@@ -245,6 +248,9 @@
  },
  "10-15|Cracouiæ sanctæ Heduuigis Ducissæ": {
   "split_at": "In Germania S. Theclæ"
+ },
+ "10-17|Eodem die passio sanctorum Victoris": {
+  "split_at": "In Perside sanctæ Mameltæ"
  },
  "10-22|Rhotomăgi sancti Melanij Episcopi": "mr:1022-mallonus",
  "10-24|Coloniæ sancti Euergisli Episcopi": {
