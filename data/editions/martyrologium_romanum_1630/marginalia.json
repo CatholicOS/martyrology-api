@@ -1409,6 +1409,12 @@
    "note": "d"
   }
  ],
+ "mr:0205-agatha": [
+  {
+   "text": "T. 2. A. 253. nu. 28.",
+   "note": "a"
+  }
+ ],
  "mr:0205-avitus": [
   {
    "text": "d T. 2. A. 185. nu. 3. To. 6. A. 494. nu. 67. & A. 516 n. 20. obit. A. 516. n. 9",
@@ -1417,12 +1423,8 @@
  ],
  "mr:0205-ingenuinus": [
   {
-   "text": "T. 2. A. 253. nu. 28.",
-   "note": "a"
-  },
-  {
    "text": "a T. 8. A. 638 num. 15.",
-   "note": "a"
+   "note": "e"
   }
  ],
  "mr:0205-isidorus": [
@@ -1441,18 +1443,16 @@
   {
    "text": "T.2.A.304. num.69. & seq.",
    "note": "a"
+  },
+  {
+   "text": "T 2. A. 304. num. 69.",
+   "note": "b"
   }
  ],
  "mr:0206-guarinus": [
   {
    "text": "obitus an. 1159. Ferrar.",
    "note": "h"
-  }
- ],
- "mr:0206-saturninus-et-socii": [
-  {
-   "text": "T 2. A. 304. num. 69.",
-   "note": "b"
   }
  ],
  "mr:0206-silvanus": [
@@ -1853,10 +1853,6 @@
  ],
  "mr:0216-faustinus": [
   {
-   "text": "T. 3. A. 308 n. 9. & seq.",
-   "note": "h"
-  },
-  {
    "text": "cir. A. 350.",
    "note": "i"
   }
@@ -1883,6 +1879,10 @@
   {
    "text": "T. 2. A. 197. num. 17. & T. 3. A. 308 n. 8. & seq.",
    "note": "g"
+  },
+  {
+   "text": "T. 3. A. 308 n. 9. & seq.",
+   "note": "h"
   }
  ],
  "mr:0217-donatus-et-socii": [
@@ -2267,10 +2267,6 @@
   {
    "text": "in persecutione Diocletiani",
    "note": "a"
-  },
-  {
-   "text": "T.9.A.725. n. 1. & seq.",
-   "note": "e"
   }
  ],
  "mr:0228-presbyteri-diaconi-plurimi-alexandriae": [
@@ -2283,6 +2279,12 @@
   {
    "text": "cir. A. 565.",
    "note": "d"
+  }
+ ],
+ "mr:0228-translatio-augustini": [
+  {
+   "text": "T.9.A.725. n. 1. & seq.",
+   "note": "e"
   }
  ],
  "mr:0301-albinus": [
@@ -3061,6 +3063,12 @@
    "note": "c"
   }
  ],
+ "mr:0322-lea": [
+  {
+   "text": "T 4 A. 382 n. 40.",
+   "note": "l"
+  }
+ ],
  "mr:0322-paulus": [
   {
    "text": "T.2.A.109. n.49.",
@@ -3069,10 +3077,6 @@
   {
    "text": "T. 1. An. 61. n. 2. & seq.",
    "note": "b"
-  },
-  {
-   "text": "T 4 A. 382 n. 40.",
-   "note": "l"
   }
  ],
  "mr:0323-benedictus": [
@@ -5441,7 +5445,9 @@
   {
    "text": "T. 1. A. 44. n. 74.",
    "note": "a"
-  },
+  }
+ ],
+ "mr:0524-translatio-dominici": [
   {
    "text": "An. 1233.",
    "note": "l"
@@ -6501,6 +6507,12 @@
    "note": "d"
   }
  ],
+ "mr:0620-florentina": [
+  {
+   "text": "Leãder floruit circ. A. 600. Isidorus obijt A. 636.",
+   "note": "f"
+  }
+ ],
  "mr:0620-macarius": [
   {
    "text": "T. 3. A. 348. nu. 3.",
@@ -6517,10 +6529,6 @@
   {
    "text": "T. 7. A. 536 nu. 122. obitus An. 540. nu. 2. & seq.",
    "note": "a"
-  },
-  {
-   "text": "Leãder floruit circ. A. 600. Isidorus obijt A. 636.",
-   "note": "f"
   }
  ],
  "mr:0621-albanus": [
@@ -7013,7 +7021,7 @@
    "note": "d"
   }
  ],
- "mr:0703-tryphon-et-socii": [
+ "mr:0703-thomas-apostolus": [
   {
    "text": "T. 2. A. 236 n. 5.",
    "note": "i"
@@ -8297,7 +8305,9 @@
   {
    "text": "T. 4. A. 367. n. 4.",
    "note": "a"
-  },
+  }
+ ],
+ "mr:0805-emigdius": [
   {
    "text": "T.3.A.309. nu. 4.",
    "note": "e"
@@ -8631,7 +8641,7 @@
    "note": "h"
   }
  ],
- "mr:0813-cassianus": [
+ "mr:0813-cassianus-tuderti": [
   {
    "text": "T.2 A.303 nu.121.",
    "note": "d"
@@ -11489,19 +11499,25 @@
    "note": "f"
   }
  ],
+ "mr:1020-georgius-et-aurelius": [
+  {
+   "text": "T. 2. A. 852 num. 17.",
+   "note": "g"
+  }
+ ],
+ "mr:1020-irene": [
+  {
+   "text": "An. 653",
+   "note": "h"
+  }
+ ],
  "mr:1020-maximus": [
   {
    "text": "Ann. 253.",
    "note": "a"
-  },
-  {
-   "text": "T. 2. A. 852 num. 17.",
-   "note": "g"
-  },
-  {
-   "text": "An. 653",
-   "note": "h"
-  },
+  }
+ ],
+ "mr:1020-sindulphus": [
   {
    "text": "Cir. A. 600.",
    "note": "i"
@@ -13637,6 +13653,12 @@
    "note": "b"
   }
  ],
+ "mr:1210-deusdedit": [
+  {
+   "text": "floruit cir. A 680.",
+   "note": "k"
+  }
+ ],
  "mr:1210-eulalia": [
   {
    "text": "T. 2. A. 303. n. 138.",
@@ -13646,7 +13668,7 @@
  "mr:1210-gemellus": [
   {
    "text": "cir. A 368",
-   "note": "g"
+   "note": "h"
   }
  ],
  "mr:1210-iulia": [
@@ -13671,12 +13693,6 @@
   {
    "text": "cir. A. 322",
    "note": "f"
-  }
- ],
- "mr:1210-sindulphus": [
-  {
-   "text": "floruit cir. A 680.",
-   "note": "i"
   }
  ],
  "mr:1211-damasus-i": [
@@ -14143,8 +14159,8 @@
  ],
  "mr:1226-archelaus": [
   {
-   "text": "T. 5. A. 418 n. 69. & seq",
-   "note": "d"
+   "text": "T. 2. A. 277. nu. 4.",
+   "note": "e"
   }
  ],
  "mr:1226-dionysius": [
@@ -14167,19 +14183,11 @@
  ],
  "mr:1226-theodorus": [
   {
-   "text": "T. 4. A. 382. nu. 72.",
-   "note": "g"
-  },
-  {
    "text": "cir. A. 560.",
    "note": "h"
   }
  ],
  "mr:1226-zeno": [
-  {
-   "text": "T. 2. A. 277. nu. 4.",
-   "note": "e"
-  },
   {
    "text": "T. 5. A. 399. n. 28. & seq",
    "note": "f"
@@ -14187,6 +14195,16 @@
   {
    "text": "T. 5. A. 399. n. 30",
    "note": "f"
+  },
+  {
+   "text": "T. 4. A. 382. nu. 72.",
+   "note": "g"
+  }
+ ],
+ "mr:1226-zosimus": [
+  {
+   "text": "T. 5. A. 418 n. 69. & seq",
+   "note": "d"
   }
  ],
  "mr:1227-ioannes-apostolus-et-evangelista": [

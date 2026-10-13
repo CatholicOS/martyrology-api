@@ -35,8 +35,11 @@ second note read with it that day):
   {"mark": "<letter>"}      the letter it is shown with (a misprinted letter)
   {"text": "<…>"}           its text (a transcription fix)
   "DROP"                    not a note of this day
+  {"split": "<words>", "letter": "<letter>"}  the note runs on into the next one, printed
+                            without its letter and lemma from these words on
 and, for a letter printed in a eulogy with no note found, "M-D|<letter>|mark":
-"MISSING" (the book has no note for it) or "NOT A MARK".
+"MISSING" (the book has no note for it) or "NOT A MARK". A note moved by an
+override to a eulogy of another day answers that day's mark.
 What couldn't be settled is written as a crmedr-changeset/v1 change-set
 (scripts/notationes_changeset.py), decided in the frontend's /review; --apply
 writes the exported decisions to the overrides and the placement, then rebuilds.
@@ -279,6 +282,24 @@ def move_strays(all_notes, all_marks):
             all_notes[i + 1].insert(0, notes.pop())
 
 
+def split_notes(days, all_notes, overrides):
+    """A note printed run on into the next one, whose letter and lemma weren't printed:
+    an override "M-D|x": {"split": "<the next one's first words>", "letter": "y"} cuts it
+    in two."""
+    for x, notes in zip(days, all_notes, strict=True):
+        md, seen = f"{x['month']}-{x['day']}", collections.Counter()
+        for n in list(notes):
+            seen[n["letter"]] += 1
+            k = f"#{seen[n['letter']]}" if seen[n["letter"]] > 1 else ""
+            o = overrides.get(f"{md}|{n['letter']}{k}")
+            if not (isinstance(o, dict) and "split" in o):
+                continue
+            at = n["text"].index(o["split"])
+            rest = {"letter": o["letter"], "lemma": "", "text": n["text"][at:]}
+            n["text"] = n["text"][:at].rstrip()
+            notes.insert(notes.index(n) + 1, {**rest, "segs": n["segs"][-1:], "src": n["src"]})
+
+
 def lemma_keys(lemma):
     ws = [D._w(w) for w in re.findall(r"[^\s,.&]+", lemma)]
     keys = [w for w in ws if len(w) >= 3 and not D.LEMMA_GENERIC.match(w)]
@@ -416,6 +437,7 @@ def build(tei, root=D.ROOT):
     for notes, marks in zip(all_notes, all_marks, strict=True):
         settle_letters(notes, marks)
     move_strays(all_notes, all_marks)
+    split_notes(days, all_notes, overrides)
 
     plains = [[unmark(e) for e in els] for els in elogia]
     # each day's notes with the mark each points at: [note, mark or None, relettered]
@@ -516,11 +538,11 @@ def build(tei, root=D.ROOT):
                 eid = aligned_id(plain[m[1]], m[2], aligned)
                 after = anchor_after(plain[m[1]], m[2], aligned[eid])
             key = f"{md}|{m[0]}"
-            taken = any(f["mark"] == m[0] and f["after"] == after for f in footnotes.get(eid, []))
-            if taken or f"{key}|mark" in overrides:  # a note was given to it, or settled
+            if f"{key}|mark" in overrides:  # settled
                 continue
             ops.append(
                 {
+                    "_mark": (eid, m[0], after),
                     "op": "attach_note",
                     "id": key,
                     "uid": f"{key}|mark",
@@ -538,6 +560,16 @@ def build(tei, root=D.ROOT):
                 }
             )
         review += ops
+    # a mark is answered by a note given to it, of its own day or (moved) of another
+    review = [
+        {k: v for k, v in op.items() if k != "_mark"}
+        for op in review
+        if "_mark" not in op
+        or not any(
+            f["mark"] == op["_mark"][1] and f["after"] == op["_mark"][2]
+            for f in footnotes.get(op["_mark"][0], [])
+        )
+    ]
     for eid, fs in footnotes.items():  # a note moved by an override: by its anchor's place
         if any(f["_moved"] for f in fs):
             text = aligned_text(aligned_months, eid)

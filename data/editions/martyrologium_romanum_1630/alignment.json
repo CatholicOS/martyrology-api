@@ -1091,7 +1091,7 @@
   },
   "mr:0205-ingenuinus": {
    "method": "same-day",
-   "score": 0.442
+   "score": 0.423
   },
   "mr:0206-dorothea-et-theophilus": {
    "method": "same-day",
@@ -2407,7 +2407,7 @@
   },
   "mr:0322-lea": {
    "method": "same-day",
-   "score": 0.9
+   "score": 0.905
   },
   "mr:0323-victorianus-et-socii": {
    "method": "same-day",
@@ -3835,7 +3835,7 @@
   },
   "mr:0509-beatus": {
    "method": "same-day",
-   "score": 0.857
+   "score": 0.908
   },
   "mr:0509-translatio-andreae-apostoli-lucae-et-timothei": {
    "method": "same-day",
@@ -4339,7 +4339,11 @@
   },
   "mr:0524-vincentius": {
    "method": "same-day",
-   "score": 0.715
+   "score": 0.886
+  },
+  "mr:0524-translatio-dominici": {
+   "method": "same-day",
+   "score": 0.959
   },
   "mr:0525-urbanus-i": {
    "method": "same-day",
@@ -5151,7 +5155,11 @@
   },
   "mr:0620-macarius": {
    "method": "same-day",
-   "score": 0.634
+   "score": 0.887
+  },
+  "mr:0620-florentina": {
+   "method": "same-day",
+   "score": 0.97
   },
   "mr:0621-demetria": {
    "method": "same-day",
@@ -5551,7 +5559,11 @@
   },
   "mr:0703-dathus": {
    "method": "same-day",
-   "score": 0.774
+   "score": 0.953
+  },
+  "mr:0703-thomas-apostolus": {
+   "method": "same-day",
+   "score": 0.922
   },
   "mr:0704-osee-et-aggaeus-prophetae": {
    "method": "same-day",
@@ -8027,7 +8039,7 @@
   },
   "mr:0914-maternus": {
    "method": "same-day",
-   "score": 0.911
+   "score": 0.928
   },
   "mr:0914-ioannes-chrysostomus": {
    "method": "same-day",
@@ -9245,6 +9257,18 @@
    "method": "same-day",
    "score": 0.347
   },
+  "mr:1020-georgius-et-aurelius": {
+   "method": "same-day",
+   "score": 0.398
+  },
+  "mr:1020-irene": {
+   "method": "same-day",
+   "score": 0.416
+  },
+  "mr:1020-sindulphus": {
+   "method": "same-day",
+   "score": 0.683
+  },
   "mr:1021-hilarion": {
    "method": "same-day",
    "score": 0.979
@@ -10307,7 +10331,7 @@
   },
   "mr:1120-octavius-et-socii": {
    "method": "same-day",
-   "score": 0.969
+   "score": 0.981
   },
   "mr:1120-agapius": {
    "method": "same-day",
