@@ -125,6 +125,12 @@
    "note": "g"
   }
  ],
+ "mr:0103-daniel": [
+  {
+   "text": "Inuentio a. 1064 trans. 1295. Ferrarius.",
+   "note": "k"
+  }
+ ],
  "mr:0103-florentius": [
   {
    "text": "T. 2. A. 262. num. 58.",
@@ -151,7 +157,7 @@
  ],
  "mr:0103-zosimus-et-athanasius": [
   {
-   "text": "T. 2. A. 305. num. 15. Inuentio a. 1064 trans. 1295. Ferrarius.",
+   "text": "T. 2. A. 305. num. 15.",
    "note": "i"
   },
   {
@@ -357,15 +363,27 @@
    "note": "a"
   }
  ],
+ "mr:0108-maximus": [
+  {
+   "text": "circa ann. 505.",
+   "note": "f"
+  }
+ ],
  "mr:0108-patiens": [
   {
-   "text": "Victor eius successor fuit in cõcil. Agripp. an. 359. Democh. De alio to. 6. an. 475. num. 29. & seqq. Plura to. 6. ab an. 454. & infra. & tom. 7. ann. 590. nu. 43.",
+   "text": "Victor eius successor fuit in cõcil. Agripp. an. 359. Democh. De alio to. 6. an. 475. num. 29. & seqq.",
    "note": "g"
+  }
+ ],
+ "mr:0108-severinus": [
+  {
+   "text": "Plura to. 6. ab an. 454. & infra. & tom. 7. ann. 590. nu. 43.",
+   "note": "h"
   }
  ],
  "mr:0108-severinus-neapoli": [
   {
-   "text": "circa ann. 500. circa ann. 505.",
+   "text": "circa ann. 500.",
    "note": "e"
   }
  ],
@@ -1167,7 +1185,7 @@
    "note": "g"
   },
   {
-   "text": "De Pluribus Seueris Sulpitijs vide to. 5. an. 408. nu. 51. an. 411. num. 47. & an. 431. nu. nu. 186. & seq. de hoc suté to. 8. A. 595. nu. 94.",
+   "text": "De Pluribus Seueris Sulpitijs vide to. 5. an. 408. nu. 51. an. 411. num. 47. & an. 431. nu. nu. 186. & seq. de hoc sutē to. 8. A. 595. nu. 94.",
    "note": "g"
   }
  ],
@@ -1833,6 +1851,16 @@
    "note": "e"
   }
  ],
+ "mr:0216-faustinus": [
+  {
+   "text": "T. 3. A. 308 n. 9. & seq.",
+   "note": "h"
+  },
+  {
+   "text": "cir. A. 350.",
+   "note": "i"
+  }
+ ],
  "mr:0216-iuliana": [
   {
    "text": "T. 3 A. 311 num 17.",
@@ -1853,7 +1881,7 @@
  ],
  "mr:0216-porphyrius-et-seleucus": [
   {
-   "text": "T. 1. A. 197. num. 17. &c. T. 3. A. 308 n. 8. & seq. T. 3. A. 308 n. 9. & seq. cir. A. 350.",
+   "text": "T. 2. A. 197. num. 17. & T. 3. A. 308 n. 8. & seq.",
    "note": "g"
   }
  ],
@@ -1989,7 +2017,7 @@
  ],
  "mr:0221-felix": [
   {
-   "text": "clarat. cir. A. 100 vt elicitur ex Demochare. cir. A. 600. Arnoldus Belga.",
+   "text": "clarat. cir. A. 100 vt elicitur ex Demochare.",
    "note": "f"
   }
  ],
@@ -1997,6 +2025,12 @@
   {
    "text": "T. 5. A. 438. nu. 93.",
    "note": "e"
+  }
+ ],
+ "mr:0221-paterius": [
+  {
+   "text": "cir. A. 600. Arnoldus Belga.",
+   "note": "g"
   }
  ],
  "mr:0221-petrus-mavimenus": [
@@ -2023,6 +2057,12 @@
    "note": "b"
   }
  ],
+ "mr:0222-abilius": [
+  {
+   "text": "t.2. A.100. num. 19.",
+   "note": "f"
+  }
+ ],
  "mr:0222-aristio": [
   {
    "text": "T. 1. A. 97, num. 9.",
@@ -2041,7 +2081,7 @@
  ],
  "mr:0222-martyres-arabiae": [
   {
-   "text": "T.3.A.309. num.25. t.2. A.100. num. 19.",
+   "text": "T.3.A.309. num.25.",
    "note": "e"
   }
  ],
@@ -2847,6 +2887,12 @@
    "note": "a"
   }
  ],
+ "mr:0318-anselmus": [
+  {
+   "text": "T. 11. Ann. 1079 nu. 9. & seq. obit. A. 1086. n. 7 & seq.",
+   "note": "h"
+  }
+ ],
  "mr:0318-cyrillus": [
   {
    "text": "T. 4. A. 382 n. 15. obit. An 386. n. 66 Epistolæ falso illi adscriptæ T. 5. An. 430. nu. 44 & seq.",
@@ -2867,7 +2913,7 @@
  ],
  "mr:0318-frigdianus": [
   {
-   "text": "cir. A. 578. ex Cæsare Franciotto in hist. SS. Lucẽsium; T. 11. Ann. 1079 nu. 9. & seq. obit. A. 1086. n. 7 & seq.",
+   "text": "cir. A. 578. ex Cæsare Franciotto in hist. SS. Lucẽsium;",
    "note": "g"
   }
  ],
@@ -2933,7 +2979,7 @@
  ],
  "mr:0320-nicetas": [
   {
-   "text": "T. 9. A. 733. nu. 2. & A. 735. n. 3. T. 8. A. 700. nu. 2. & T. 9. A. 719. n. 6 & seq.",
+   "text": "T. 9. A. 733. nu. 2. & A. 735. n. 3.",
    "note": "f"
   }
  ],
@@ -2941,6 +2987,12 @@
   {
    "text": "T. 1. an. 31. nu. 50.",
    "note": "d"
+  }
+ ],
+ "mr:0320-vulframnus": [
+  {
+   "text": "T. 8. A. 700. nu. 2. & T. 9. A. 719. n. 6 & seq.",
+   "note": "g"
   }
  ],
  "mr:0321-benedictus": [
@@ -2973,6 +3025,12 @@
    "note": "e"
   }
  ],
+ "mr:0322-basilius": [
+  {
+   "text": "T. 4. A. 362. n. 78. & seq.",
+   "note": "f"
+  }
+ ],
  "mr:0322-benvenutus-scotivoli": [
   {
    "text": "cir. A. 1260.",
@@ -2981,7 +3039,7 @@
  ],
  "mr:0322-callinicus-et-basilissa": [
   {
-   "text": "Galesinus ponit sub Traiano. T. 4. A. 362. n. 78. & seq.",
+   "text": "Galesinus ponit sub Traiano.",
    "note": "e"
   }
  ],
@@ -3037,7 +3095,7 @@
  ],
  "mr:0324-epigmenius": [
   {
-   "text": "T. 3. A. 303. nu. 114. & T. 4. A. 362. nu. 370.",
+   "text": "T. 3. A. 303. nu. 114. & T. 4. A. 362. nu. 270.",
    "note": "b"
   }
  ],
@@ -3943,9 +4001,15 @@
    "note": "a"
   }
  ],
+ "mr:0420-theotimus": [
+  {
+   "text": "T.5.A.400 n.73. & A. 402, n.8. & seq.",
+   "note": "c"
+  }
+ ],
  "mr:0420-victor-et-socii": [
   {
-   "text": "T.2.A.305 n.17. T.5.A.400 n.73. & A. 402, n.8. & seq.",
+   "text": "T.2.A.305 n.17.",
    "note": "b"
   }
  ],
@@ -4069,7 +4133,7 @@
  ],
  "mr:0424-alexander": [
   {
-   "text": "T. 2. A. 279. n. 36.",
+   "text": "T. 2. A. 179. n. 36.",
    "note": "c"
   }
  ],
@@ -4211,8 +4275,14 @@
  ],
  "mr:0427-tertullianus": [
   {
-   "text": "circa Ann. 476. Subrogatus Gaudẽtio qui claruit circa An. 400.",
+   "text": "circa Ann. 476.",
    "note": "d"
+  }
+ ],
+ "mr:0427-theophilus": [
+  {
+   "text": "Subrogatus Gaudẽtio qui claruit circa An. 400.",
+   "note": "e"
   }
  ],
  "mr:0428-marcus": [
@@ -4263,6 +4333,20 @@
    "note": "c"
   }
  ],
+ "mr:0429-hugo": [
+  {
+   "text": "T. 11. Ann. 1055. n. 19",
+   "note": "f"
+  },
+  {
+   "text": "A. 1074 n. 47. obitus.",
+   "note": "f"
+  },
+  {
+   "text": "T. 12. Ann. 1109. nu. 4",
+   "note": "f"
+  }
+ ],
  "mr:0429-petrus": [
   {
    "text": "An. 1252.",
@@ -4273,20 +4357,6 @@
   {
    "text": "T. 11. obit. A. 1098. n. vltimo.",
    "note": "g"
-  }
- ],
- "mr:0429-septem-martyres-corcyrae": [
-  {
-   "text": "T. 11. Ann. 1055. n. 19",
-   "note": "d"
-  },
-  {
-   "text": "A. 1074 n. 47. obitus.",
-   "note": "d"
-  },
-  {
-   "text": "T. 12. Ann. 1109. nu. 4",
-   "note": "d"
   }
  ],
  "mr:0429-tychicus": [
@@ -4489,12 +4559,6 @@
    "note": "a"
   }
  ],
- "mr:0504-paulinus": [
-  {
-   "text": "T.5.A. 397 nu. 41. An. 400. n. 3. & Ann. 405. num. 17.",
-   "note": "k"
-  }
- ],
  "mr:0504-pelagia": [
   {
    "text": "T. 2. A. 305. num. 15.",
@@ -4517,6 +4581,12 @@
   {
    "text": "T. 3. A. 309 num. 19.",
    "note": "b"
+  }
+ ],
+ "mr:0504-venerius": [
+  {
+   "text": "T.5.A. 397 nu. 41. An. 400. n. 3. & Ann. 405. num. 17.",
+   "note": "l"
   }
  ],
  "mr:0505-angelus": [
@@ -4809,7 +4879,7 @@
  ],
  "mr:0511-gengulfus": [
   {
-   "text": "circ. A. 570 in not. Sur. cir. A. 680. Genebrar. verius cir. A. 756. quia tẽpore Pipini Regis ex vita. T. 6. A. 475 nu. 12. obit. 490. n. 37,",
+   "text": "circ. A. 570 in not. Sur. cir. A. 680. Genebrar. verius cir. A. 756. quia tẽpore Pipini Regis ex vita.",
    "note": "f"
   }
  ],
@@ -4817,6 +4887,12 @@
   {
    "text": "T.1.A.993. nu.7.",
    "note": "i"
+  }
+ ],
+ "mr:0511-mamertus": [
+  {
+   "text": "T. 6. A. 475 nu. 12. obit. 490. n. 37,",
+   "note": "g"
   }
  ],
  "mr:0511-maximus-et-socii": [
@@ -4929,7 +5005,7 @@
  ],
  "mr:0514-iusta-et-heredina": [
   {
-   "text": "sub Hadriano cir. An. 130. T. 9 ab an. 817. & inf. plura.",
+   "text": "sub Hadriano cir. An. 130.",
    "note": "e"
   }
  ],
@@ -4937,6 +5013,12 @@
   {
    "text": "plura T. 3. A. 316. nu. 27. & seq. & An. 318. n. 101. & A. 328. n. 3. & seq.",
    "note": "i"
+  }
+ ],
+ "mr:0514-paschalis-i": [
+  {
+   "text": "T. 9 ab an. 817. & inf. plura.",
+   "note": "f"
   }
  ],
  "mr:0514-pontius": [
@@ -5445,7 +5527,7 @@
  ],
  "mr:0526-philippus-neri": [
   {
-   "text": "*De S. Philippo infra latius T. 8.",
+   "text": "*De S. Philippo infra latius T. 8. 23 August. in not. litt. M. & T. 1. Ann A. 57. n. 162. & in pr. obyt A. 1595.",
    "note": null
   }
  ],
@@ -5707,7 +5789,7 @@
  ],
  "mr:0601-pamphilus": [
   {
-   "text": "T.2.A. 306 nu. 3. & 4. & An. 308 nu. 2 & seq nu. 7.15.& sequ.",
+   "text": "T.2.A. 306 nu. 3. & 4. & An. 309 nu. 2 & seq nu. 7.15.& sequ.",
    "note": "b"
   }
  ],
@@ -5967,7 +6049,7 @@
  ],
  "mr:0608-sallustianus": [
   {
-   "text": "sub Hadria no circa Ann. 120. circa An. 545.",
+   "text": "sub Hadria no circa Ann. 120.",
    "note": "h"
   }
  ],
@@ -5975,6 +6057,12 @@
   {
    "text": "cir. A. 545.",
    "note": "g"
+  }
+ ],
+ "mr:0608-victorinus": [
+  {
+   "text": "circa An. 545.",
+   "note": "i"
   }
  ],
  "mr:0609-columba": [
@@ -5993,10 +6081,6 @@
   {
    "text": "Plura T. 7. pręcipuè A. 581. n. 8. A. 583. n. 14 A. 584. nu. 17 & 18. & Tom. 8. Ann. 594. num. 33.",
    "note": "e"
-  },
-  {
-   "text": "* S. Riccardus vixit circa ann.",
-   "note": "e"
   }
  ],
  "mr:0609-pelagia": [
@@ -6009,6 +6093,12 @@
   {
    "text": "Tom. 2. an. 303. n. 119.",
    "note": "a"
+  }
+ ],
+ "mr:0609-richardus": [
+  {
+   "text": "* S. Riccardus vixit circa ann. 500. Nam vnà cum sanctis Episcopis Sabino Canusino, & Rugerio Cannensi Ecclesiam sancti Michaelis in Monte Gargano consecrauit (Apparitio enim sancti Michaelis contigit A. 493.) Eius vita habetur apud Paulum Regium & apud Ferrarium ex antiquissimis monumentis Ecclesiæ Andrien. Inuentio eius corporis A. 1438. quam scripsit Franciscus de Baucio Andriæ Dux.",
+   "note": null
   }
  ],
  "mr:0610-asterius": [
@@ -6153,6 +6243,12 @@
    "note": "g"
   }
  ],
+ "mr:0614-anastasius-et-socii": [
+  {
+   "text": "T. x. A. 853 num. 68.",
+   "note": "e"
+  }
+ ],
  "mr:0614-basilius-magnus": [
   {
    "text": "Plura T. 3. A. 154 nu. 27. & sequ. & T. 4. An. 368. n. 84. & seq. & a. 369. nu. 44. & seq. & a. 370. & 371 plura obijt A. 368 n. 2. & seq.",
@@ -6179,7 +6275,7 @@
  ],
  "mr:0614-valerius-et-rufinus": [
   {
-   "text": "cir. A. 303. Rictiouarus seuiebat in Gallia eo Ann. nu. 124. T. x. A. 853 num. 68.",
+   "text": "cir. A. 303. Rictiouarus seuiebat in Gallia eo Ann. nu. 124.",
    "note": "d"
   }
  ],
@@ -7277,9 +7373,15 @@
    "note": "h"
   }
  ],
+ "mr:0713-myrope": [
+  {
+   "text": "circa. A. 253.",
+   "note": "f"
+  }
+ ],
  "mr:0713-serapion": [
   {
-   "text": "T. 2. A. 205. n. 27. circa. A. 253.",
+   "text": "T. 2. A. 205. n. 27.",
    "note": "e"
   }
  ],
@@ -7375,7 +7477,7 @@
  ],
  "mr:0716-domnio": [
   {
-   "text": "Sub Maximiano ex offic. Eccl. Bergomi. A. 306. Cir. A. 700 Fert.",
+   "text": "Sub Maximiano ex offic. Eccl. Bergomi. A. 306.",
    "note": "h"
   }
  ],
@@ -7411,10 +7513,22 @@
    "note": "g"
   }
  ],
+ "mr:0716-sisenandus": [
+  {
+   "text": "T. 10. A 851 nu. 5.",
+   "note": "f"
+  }
+ ],
  "mr:0716-valentinus": [
   {
-   "text": "circ. A. 350 nam Paulinus eius successor obiit An. 363. Hieron. in chron. T. 10. A 851 nu. 5.",
+   "text": "circ. A. 350 nam Paulinus eius successor obiit An. 363. Hieron. in chron.",
    "note": "e"
+  }
+ ],
+ "mr:0716-vitalianus": [
+  {
+   "text": "Cir. A. 700 Fert.",
+   "note": "i"
   }
  ],
  "mr:0717-alexius": [
@@ -7613,10 +7727,6 @@
   {
    "text": "T.7.A.548 n. 16.17.& seq.",
    "note": "h"
-  },
-  {
-   "text": "Plura To. 1. ab An. 32. n. 18. & infra.",
-   "note": "h"
   }
  ],
  "mr:0721-victor": [
@@ -7641,6 +7751,12 @@
   {
    "text": "T. 2. A. 132. num. 4. & T. 3. A. 327. n. 18. & seq.",
    "note": "h"
+  }
+ ],
+ "mr:0722-maria-magdalena": [
+  {
+   "text": "Plura To. 1. ab An. 32. n. 18. & infra.",
+   "note": "a"
   }
  ],
  "mr:0722-theophilus": [
@@ -7965,7 +8081,7 @@
  ],
  "mr:0731-calimerus": [
   {
-   "text": "T. 3. A. 182. n. 3.",
+   "text": "T. 2. A. 182. n. 2.",
    "note": "b"
   }
  ],
@@ -8269,6 +8385,18 @@
    "note": "i"
   }
  ],
+ "mr:0807-carpophorus-et-socii": [
+  {
+   "text": "cir. A. 303.",
+   "note": "e"
+  }
+ ],
+ "mr:0807-dometius": [
+  {
+   "text": "T. 4. A. 363. nu. 40.",
+   "note": "f"
+  }
+ ],
  "mr:0807-donatianus": [
   {
    "text": "cir. A. 70.",
@@ -8281,10 +8409,22 @@
    "note": "a"
   }
  ],
+ "mr:0807-faustus": [
+  {
+   "text": "Gallisin. cir. A. 185. Sub Cõmodo cir. An. 182.",
+   "note": "d"
+  }
+ ],
  "mr:0807-petrus-et-socii": [
   {
-   "text": "Sub Valeriano & Gallieno cir. A. 260. Gallisin. cir. A. 185. Sub Cõmodo cir. An. 182. cir. A. 303. T. 4. A. 363. nu. 40. T. 5. A. 396 n. 15. & A. 404. n.126.",
+   "text": "Sub Valeriano & Gallieno cir. A. 260.",
    "note": "c"
+  }
+ ],
+ "mr:0807-victricius": [
+  {
+   "text": "T. 5. A. 396 n. 15. & A. 404. n.126.",
+   "note": "g"
   }
  ],
  "mr:0808-aemilianus": [
@@ -10057,8 +10197,14 @@
  ],
  "mr:0917-satyrus": [
   {
-   "text": "T.4. A. 367. nu. 17. obitus A. 583. n. 14. T.2 A. 303. nu. 113.",
+   "text": "T.4. A. 367. nu. 17. obitus A. 383. n. 14.",
    "note": "k"
+  }
+ ],
+ "mr:0917-theodora": [
+  {
+   "text": "T.2 A. 303. nu. 113.",
+   "note": "l"
   }
  ],
  "mr:0918-eustorgius": [
@@ -10479,7 +10625,7 @@
  ],
  "mr:0928-maximus": [
   {
-   "text": "cir. A. 253. T. x. A. 938, n. 6.",
+   "text": "cir. A. 253.",
    "note": "e"
   }
  ],
@@ -10499,6 +10645,12 @@
   {
    "text": "cir. A. 410.",
    "note": "i"
+  }
+ ],
+ "mr:0928-venceslaus": [
+  {
+   "text": "T. x. A. 938, n. 6.",
+   "note": "f"
   }
  ],
  "mr:0929-dadas-et-socii": [
@@ -11029,7 +11181,7 @@
  ],
  "mr:1012-domnina": [
   {
-   "text": "T. 2. A. 305. nu. 17. T. 6. A. 483 n. 89. & seq.",
+   "text": "T. 2. A. 305. nu. 17.",
    "note": "c"
   }
  ],
@@ -11037,6 +11189,12 @@
   {
    "text": "Cir. A. 303.",
    "note": "b"
+  }
+ ],
+ "mr:1012-martyres-et-confessores-africae": [
+  {
+   "text": "T. 6. A. 483 n. 89. & seq.",
+   "note": "d"
   }
  ],
  "mr:1012-monas": [
@@ -11497,13 +11655,13 @@
  ],
  "mr:1024-marcus": [
   {
-   "text": "S. Martini qui obijt, A. 402. cir. A. 560.",
+   "text": "cir. A. 560.",
    "note": "g"
   }
  ],
  "mr:1024-martinus": [
   {
-   "text": "Sub Iustino Iuniore A.566. Ferrar. sed & ex Gregor. Turon. fuit discipulus",
+   "text": "Sub Iustino Iuniore A.566. Ferrar. sed & ex Gregor. Turon. fuit discipulus S. Martini qui obijt, A. 402.",
    "note": "f"
   }
  ],
@@ -11675,14 +11833,20 @@
  ],
  "mr:1029-eusebia": [
   {
-   "text": "Sub Maximiano an. 307. Guar. T. 2. A. 184. n. 1. A. 198. n. 1. & 2. & A. 199 n. 5. & seq.",
+   "text": "Sub Maximiano an. 307. Guar.",
    "note": "d"
   }
  ],
  "mr:1029-narcissus": [
   {
-   "text": "cir. an. 300 de eo iterũ sup. in Tyramnio 20 Febr.",
+   "text": "T. 2. A. 184. n. 1. A. 198. n. 1. & 2. & A. 199 n. 5. & seq.",
    "note": "e"
+  }
+ ],
+ "mr:1029-zenobius": [
+  {
+   "text": "cir. an. 300 de eo iterũ sup. in Tyramnio 20 Febr.",
+   "note": "b"
   }
  ],
  "mr:1030-claudius-et-socii": [
@@ -11983,6 +12147,12 @@
    "note": "a"
   }
  ],
+ "mr:1105-dominator": [
+  {
+   "text": "Acta. Ante Ann. 490. ex monum. ecclesiæ Brixianæ.",
+   "note": "g"
+  }
+ ],
  "mr:1105-elisabeth": [
   {
    "text": "T.1. in Apparat. n. 16. & A. 1. n. 56.",
@@ -12009,7 +12179,7 @@
  ],
  "mr:1105-magnus": [
   {
-   "text": "Tempôre Siluerij PP. cir. A. 540. Acta. Ante Ann. 490. ex monum. ecclesiæ Brixianæ.",
+   "text": "Tempôre Siluerij PP. cir. A. 540.",
    "note": "f"
   }
  ],
@@ -12067,6 +12237,12 @@
    "note": "c"
   }
  ],
+ "mr:1107-engelbertus": [
+  {
+   "text": "Passus An. 1225.",
+   "note": "g"
+  }
+ ],
  "mr:1107-florentius": [
   {
    "text": "Obiit Ann. 675.",
@@ -12095,7 +12271,7 @@
  ],
  "mr:1107-melasippus-et-socii": [
   {
-   "text": "T. 4. A. 372. n.79. Passus An. 1225.",
+   "text": "T. 4. A. 372. n.79.",
    "note": "f"
   }
  ],
@@ -12119,8 +12295,14 @@
  ],
  "mr:1108-deusdedit-i": [
   {
-   "text": "T. 8. A. 614. n. 4. & An. 615. nu. 8. obitus An. 617. nu. 1. Ordinatus A. 788. Vixit post ordinationem Annos duos & méses tres Crantzius. T. xij. An. 1109 n. 5. & seq. obitus A. 1119 n. 28.",
+   "text": "T. 8. A. 614. n. 4. & An. 615. nu. 8. obitus An. 617. nu. 1.",
    "note": "d"
+  }
+ ],
+ "mr:1108-godefridus": [
+  {
+   "text": "T. xij. An. 1109 n. 5. & seq. obitus A. 1119 n. 28.",
+   "note": "f"
   }
  ],
  "mr:1108-quattuor-coronati": [
@@ -12133,6 +12315,12 @@
   {
    "text": "T. 2. A. 303. nu. 135.",
    "note": "b"
+  }
+ ],
+ "mr:1108-willehadus": [
+  {
+   "text": "Ordinatus A. 788. Vixit post ordinationem Annos duos & méses tres Crantzius.",
+   "note": "e"
   }
  ],
  "mr:1109-agrippinus": [
@@ -12411,8 +12599,20 @@
  ],
  "mr:1115-felix": [
   {
-   "text": "In persecutione Dioclet. & Maxim. cir. A. 287. Genebrar. T. 2. A. 286. n. 31. A. 299 nu. 2. T. 3. A. 316. n. 48. & seq.",
+   "text": "In persecutione Dioclet. & Maxim. cir. A. 287. Genebrar.",
    "note": "b"
+  }
+ ],
+ "mr:1115-guria-et-samona": [
+  {
+   "text": "T. 2. A. 286. n. 31. A. 299 nu. 2.",
+   "note": "c"
+  }
+ ],
+ "mr:1115-habib": [
+  {
+   "text": "T. 3. A. 316. n. 48. & seq.",
+   "note": "d"
   }
  ],
  "mr:1115-leopoldus": [
@@ -12549,8 +12749,14 @@
  ],
  "mr:1118-thomas": [
   {
-   "text": "cir. A. 782. Iuuent. ac prim. trãslat. secund. A. 1152. Frãcisc. in histor. SS. Lucentium.",
+   "text": "cir. A. 782.",
    "note": "g"
+  }
+ ],
+ "mr:1118-translatio-frigdiani": [
+  {
+   "text": "Iuuent. ac prim. trãslat. secund. A. 1152. Frãcisc. in histor. SS. Lucentium.",
+   "note": "h"
   }
  ],
  "mr:1119-azas-et-socii": [
@@ -13103,10 +13309,22 @@
    "note": "b"
   }
  ],
+ "mr:1202-evasius": [
+  {
+   "text": "Ferr. putat post A. 843 Capreolus multo prius vixisse.",
+   "note": "k"
+  }
+ ],
  "mr:1202-lupus": [
   {
-   "text": "Ferr. putat inter Ann. 300. & 600 in humanis fuisse. T. 6. A. 451. nu. 182.",
+   "text": "Ferr. putat inter Ann. 300. & 600 in humanis fuisse.",
    "note": "g"
+  }
+ ],
+ "mr:1202-nonnus": [
+  {
+   "text": "T. 6. A. 451. nu. 182.",
+   "note": "h"
   }
  ],
  "mr:1202-petrus-chrysologus": [
@@ -13129,7 +13347,7 @@
  ],
  "mr:1202-silvanus": [
   {
-   "text": "T. 5. A. 406. n. 21. & A. 434. n. 4. & seq. Ferr. putat post A. 843 Capreolus multo prius vixisse.",
+   "text": "T. 5. A. 406. n. 21. & A. 434. n. 4. & seq.",
    "note": "i"
   }
  ],
@@ -13525,16 +13743,18 @@
   {
    "text": "T. 8. A. 654. n. 12. & A 709. n. 7.",
    "note": "d"
-  },
-  {
-   "text": "T. 8. A. 658. n. 14.",
-   "note": "d"
   }
  ],
  "mr:1213-eustratius-et-socii": [
   {
    "text": "T. 3. A. 311. n. 20. & A 316. n. 45.",
    "note": "b"
+  }
+ ],
+ "mr:1213-iudocus": [
+  {
+   "text": "T. 8. A. 658. n. 14.",
+   "note": "e"
   }
  ],
  "mr:1213-lucia": [

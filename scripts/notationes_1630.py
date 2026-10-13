@@ -98,10 +98,16 @@ def lemma_letter(lemma):
     return letter, rest.strip(" .,")
 
 
+def words_in(lemma, daytext):
+    """Is an unlettered lemma ('Iudoci.') made of the day's words?"""
+    words = [w for w in D._f(lemma).split() if len(w) >= 3 and not D.GENERIC.match(w)]
+    return bool(words) and re.search(r"\b" + re.escape(words[0][:5]), D._f(daytext)) is not None
+
+
 def note_starts(t, daytext):
     """Offsets in paragraph t where a note begins: a lettered lemma after a sentence
     end, or (at the paragraph's start) a lemma that is lettered, in capitals or made
-    of the day's words."""
+    of the day's words (lettered or not)."""
     out = set()
     for m in re.finditer(r"\]", t):
         before = t[: m.start()]
@@ -116,6 +122,7 @@ def note_starts(t, daytext):
                 lemma_letter(before)[0]
                 or re.match(r"[A-ZÆŒ]{2,}|[A-Z] [A-Z]{2,}", before)
                 or D.lemma_in(before + "]", daytext)
+                or words_in(before, daytext)
             ):
                 out.add(0)
     return sorted(out)
