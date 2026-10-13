@@ -12,6 +12,7 @@ eulogy before them. What is left is searched across the year (cross-day: a new I
 for this day, with the twin's slug, linked by same_eulogy) or settled by the
 reviewed overrides in data/align_1630_overrides.json, keyed "M-D|<opening words>":
   "MERGE_PREV" | "DROP" | "RUBRIC" | "mr:<id>" | {"split_at": "<text>" or ["<text>", …]}
+  (with "merge_prev": true, the part before the split continues the eulogy before it)
   | {"coin": "<slug>", "subject_la": "...", "same_eulogy": [...], "note": "..."}
 
 Input:  data/editions/martyrologium_romanum_1630/MM.json (from digitize_1630.py)
@@ -260,7 +261,7 @@ def main():
             el, rubrics = [], []
             for e in split:
                 o = override_for(key, e)
-                if o == "MERGE_PREV" and el:
+                if (o == "MERGE_PREV" or isinstance(o, dict) and o.get("merge_prev")) and el:
                     el[-1] += " " + e
                 elif o == "RUBRIC":
                     rubrics.append((len(el) - 1, e))

@@ -389,7 +389,7 @@ def refine(segs, ref):
 ALPHA = "abcdefghiklmnopqrstuxyz"
 LEMMA_GENERIC = re.compile(
     r"^(?:sanct|beat|episc|epis|mart|confess|uirg|abb|presb|diac|plurim|item|natal|passio|depos"
-    r"|transl|comm|socio|socia|alias|papa|imp|regis|et|de|in|sub|cum|ac)"
+    r"|transl|comm|socio|socia|alias|papa|imp|regis|(?:et|de|in|sub|cum|ac)$)"
 )
 SEP = "⁣"  # invisible separator: keeps eulogy boundaries through marker stripping
 MARK = "\ue000"  # private use: where a removed letter stood (MARK + letter), for the notes

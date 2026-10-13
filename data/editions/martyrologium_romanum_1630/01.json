@@ -83,8 +83,8 @@
    "mr:0106-macra": "In territorio Rhemensi passio sanctæ Macræ virginis, quæ in persecutione Diocletiani, iubente Rictiouâro Præside, cùm in ignem esset præcipitata, & permansisset illæsa, dehinc mamillis abscissis, & squalôre carceris afflicta, super testas etiam acutissimas ac prunas volutâta, orans migrauit ab Dominnm.",
    "mr:0106-martyres-africae": "In Africa commemoratio plurimorum sanctorum Martyrum, qui in persecutione Seuêri ad palum ligati, ignẽ consumpti sunt..",
    "mr:0106-melanius": "Rhedŏnis in Gallia sancti Melanij Episcopi & confessoris, qui post innumerabilium signa virtutum, iugiter cælo intentus, gloriosus migrauit à sæculo.",
-   "mr:0106-andreas-corsini": "Florentiæ sancti Andreæ Corsini Florentini.",
-   "mr:0106-nilammo": "Carmelitæ Episcopi Fesulâni, quem miraculis clarum Vrbanus Octauus in Sanctorum numerum retulit. Geris in Aegypto sancti Nilammônis reclusi, qui dum ad Episcopatum traheretur inuitus, in oratione spiritum Deo reddidit."
+   "mr:0106-andreas-corsini": "Florentiæ sancti Andreæ Corsini Florentini. Carmelitæ Episcopi Fesulâni, quem miraculis clarum Vrbanus Octauus in Sanctorum numerum retulit.",
+   "mr:0106-nilammo": "Geris in Aegypto sancti Nilammônis reclusi, qui dum ad Episcopatum traheretur inuitus, in oratione spiritum Deo reddidit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -305,7 +305,7 @@
  "23": {
   "titulus": "Decimo Kal. Februarij. Luna.",
   "elogia": {
-   "mr:0123-emerentiana": "ROMAE sanctæ Emerentiânæ a virginis & martyris, quæ adhuc cathecŭmĕna, dũ oraret ad sepulchrum sanctæ Agnêtis, cuius fuerat collactanea, a Gentilibus lapidata est.",
+   "mr:0123-emerentiana": "ROMAE sanctæ Emerentiânæ virginis & martyris, quæ adhuc cathecŭmĕna, dũ oraret ad sepulchrum sanctæ Agnêtis, cuius fuerat collactanea, a Gentilibus lapidata est.",
    "mr:0123-parmena": "Philippis in Macedonia sancti Parmĕnæ, qui fuit vnus de septem primis diaconis. Hic traditus gratiæ Dei, iniunctum sibi a fratribus officium prædicationis plena fide consummans, sub Traiano martyrij gloriam est adeptus.",
    "mr:0123-severianus-et-aquila": "Cæsarêæ in Mauritania sanctorum martyrum Seueriâni & Aquĭlæ vxoris eius ignibus combustorum.",
    "mr:0123-ascla": "Apud Antinŏum Aegypti vrbem S. Asclæ martyris qui post diuersa tormenta pretiosam Deo animam, in flumen præcipitatus, reddidit.",
