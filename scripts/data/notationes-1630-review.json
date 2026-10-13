@@ -1,7 +1,7 @@
 {
  "schema": "crmedr-changeset/v1",
  "generated_by": "scripts/notationes_1630.py",
- "generated_at": "2026-10-07",
+ "generated_at": "2026-10-13",
  "base": {
   "edition": "martyrologium_romanum_1630",
   "registry": "data/editions/martyrologium_romanum_1630/footnotes.json"
@@ -25,14 +25,14 @@
     "mr:0106-macra": "In territorio Rhemensi passio sanctæ Macræ virginis, quæ in persecutione Diocletiani, iubente Rictiouâro Præside, cùm in ignem esset præcipitata, & permansisset illæsa, dehinc mamillis abscissis, & squalôre carceris afflicta, super testas etiam acutissimas ac prunas volutâta, orans migrauit ab Dominnm.",
     "mr:0106-martyres-africae": "In Africa commemoratio plurimorum sanctorum Martyrum, qui in persecutione Seuêri ad palum ligati, ignẽ consumpti sunt..",
     "mr:0106-melanius": "Rhedŏnis in Gallia sancti Melanij Episcopi & confessoris, qui post innumerabilium signa virtutum, iugiter cælo intentus, gloriosus migrauit à sæculo.",
-    "mr:0106-andreas-corsini": "Florentiæ sancti Andreæ Corsini Florentini.",
-    "mr:0106-nilammo": "Carmelitæ Episcopi Fesulâni, quem miraculis clarum Vrbanus Octauus in Sanctorum numerum retulit. Geris in Aegypto sancti Nilammônis reclusi, qui dum ad Episcopatum traheretur inuitus, in oratione spiritum Deo reddidit."
+    "mr:0106-andreas-corsini": "Florentiæ sancti Andreæ Corsini Florentini. Carmelitæ Episcopi Fesulâni, quem miraculis clarum Vrbanus Octauus in Sanctorum numerum retulit.",
+    "mr:0106-nilammo": "Geris in Aegypto sancti Nilammônis reclusi, qui dum ad Episcopatum traheretur inuitus, in oratione spiritum Deo reddidit."
    },
    "notes": [
     {
      "ref": "1-6|a",
      "mark": "a",
-     "lemma": "PIPHANIA Domini"
+     "lemma": "EPIPHANIA Domini"
     },
     {
      "ref": "1-6|b",
@@ -211,90 +211,6 @@
   },
   {
    "op": "attach_note",
-   "id": "1-23|a",
-   "class": "no-mark",
-   "day": "1-23",
-   "mark": "a",
-   "lemma": "MERENTIANAE",
-   "note": "MERENTIANAE. ] De ipsa hac eadem die Beda. Vsuar. Ado, & alij. Acta passionis eius narrantur apud Ambrosium lib. 4. epist. 34. edit. Romanæ.",
-   "proposed": {
-    "id": "mr:0123-emerentiana",
-    "after": null
-   },
-   "texts": {
-    "mr:0123-emerentiana": "ROMAE sanctæ Emerentiânæ a virginis & martyris, quæ adhuc cathecŭmĕna, dũ oraret ad sepulchrum sanctæ Agnêtis, cuius fuerat collactanea, a Gentilibus lapidata est.",
-    "mr:0123-parmena": "Philippis in Macedonia sancti Parmĕnæ, qui fuit vnus de septem primis diaconis. Hic traditus gratiæ Dei, iniunctum sibi a fratribus officium prædicationis plena fide consummans, sub Traiano martyrij gloriam est adeptus.",
-    "mr:0123-severianus-et-aquila": "Cæsarêæ in Mauritania sanctorum martyrum Seueriâni & Aquĭlæ vxoris eius ignibus combustorum.",
-    "mr:0123-ascla": "Apud Antinŏum Aegypti vrbem S. Asclæ martyris qui post diuersa tormenta pretiosam Deo animam, in flumen præcipitatus, reddidit.",
-    "mr:0123-clemens-et-agathangelus": "Ancŷræ in Galatĭa S. Clementis Episcopi, qui sæpius cruciatus, tandem sub Diocletiano martyrium consummauit.",
-    "mr:0123-agathangelus": "Ibîdem sancti Agathangeli, qui eodem die sub Lucio Præside passus est.",
-    "mr:0123-ioannes-eleemosynarius": "Alexandrĭæ S. Ioannis Eleemsyonarij, eiusdem vrbis Episcopi, misericordia in pauperes celeberrimi.",
-    "mr:0123-hildephonsus": "Tolêti sancti Ildefonsi Episcopi, qui ob singularem vitæ integritatem, susceptamq. defensionem aduersus hæreticos Dei genitricis virginitatem impugnantes, ab eadem candidissima veste donatus est, ac demum sanctitate celĕbris in cælum vocatus.",
-    "mr:0123-martyrius": "In prouincia Valerĭæ sancti Martyrij monachi, cuius meminit B. Gregorius Papa."
-   },
-   "notes": [
-    {
-     "ref": "1-23|a",
-     "mark": "a",
-     "lemma": "MERENTIANAE"
-    },
-    {
-     "ref": "1-23|b",
-     "mark": "b",
-     "lemma": "Parmena"
-    },
-    {
-     "ref": "1-23|c",
-     "mark": "c",
-     "lemma": "Sub Traiano"
-    },
-    {
-     "ref": "1-23|d",
-     "mark": "d",
-     "lemma": "Seueriani & Aquilæ"
-    },
-    {
-     "ref": "1-23|e",
-     "mark": "e",
-     "lemma": "Ascla"
-    },
-    {
-     "ref": "1-23|f",
-     "mark": "f",
-     "lemma": "Clementis Episc"
-    },
-    {
-     "ref": "1-23|g",
-     "mark": "g",
-     "lemma": "Agathangeli"
-    },
-    {
-     "ref": "1-23|h",
-     "mark": "h",
-     "lemma": "Ioannis Eleemosynarij"
-    },
-    {
-     "ref": "1-23|i",
-     "mark": "i",
-     "lemma": "Ildefonsi Episc"
-    },
-    {
-     "ref": "1-23|k",
-     "mark": "k",
-     "lemma": "In prouincia Valeria"
-    },
-    {
-     "ref": "1-23|l",
-     "mark": "l",
-     "lemma": "Martyrij monachi"
-    }
-   ],
-   "scan_page": 89,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
    "id": "1-23|e",
    "class": "no-mark",
    "day": "1-23",
@@ -306,7 +222,7 @@
     "after": "Asclæ"
    },
    "texts": {
-    "mr:0123-emerentiana": "ROMAE sanctæ Emerentiânæ a virginis & martyris, quæ adhuc cathecŭmĕna, dũ oraret ad sepulchrum sanctæ Agnêtis, cuius fuerat collactanea, a Gentilibus lapidata est.",
+    "mr:0123-emerentiana": "ROMAE sanctæ Emerentiânæ virginis & martyris, quæ adhuc cathecŭmĕna, dũ oraret ad sepulchrum sanctæ Agnêtis, cuius fuerat collactanea, a Gentilibus lapidata est.",
     "mr:0123-parmena": "Philippis in Macedonia sancti Parmĕnæ, qui fuit vnus de septem primis diaconis. Hic traditus gratiæ Dei, iniunctum sibi a fratribus officium prædicationis plena fide consummans, sub Traiano martyrij gloriam est adeptus.",
     "mr:0123-severianus-et-aquila": "Cæsarêæ in Mauritania sanctorum martyrum Seueriâni & Aquĭlæ vxoris eius ignibus combustorum.",
     "mr:0123-ascla": "Apud Antinŏum Aegypti vrbem S. Asclæ martyris qui post diuersa tormenta pretiosam Deo animam, in flumen præcipitatus, reddidit.",
@@ -320,7 +236,7 @@
     {
      "ref": "1-23|a",
      "mark": "a",
-     "lemma": "MERENTIANAE"
+     "lemma": "EMERENTIANAE"
     },
     {
      "ref": "1-23|b",
@@ -1648,74 +1564,6 @@
   },
   {
    "op": "attach_note",
-   "id": "4-8|a",
-   "class": "no-mark",
-   "day": "4-8",
-   "mark": "a",
-   "lemma": "EDESII",
-   "note": "EDESII. ] De eo item Græci. Porro eius egregiũ certamen pro Christiana fide exantlatũ describit Euseb. hist. lib. 8 cap. 15. De Apphiano eius germano superius qnarto Nonas Aprilis.",
-   "proposed": {
-    "id": "mr:0408-aedesius",
-    "after": null
-   },
-   "texts": {
-    "mr:0408-aedesius": "ALEXANDRIAE sancti Aedesij a martyris, fratris beati Apphiâni; qui sub Maximiano Galerio Imperatore cùm impium Iudicem, quod Deo dicatas virgines lenonibus traderet, palam argueret, a militibus tentus, sæuissimisq. affectus supplicijs, in mare demersus est pro Christo Domino.",
-    "mr:0408-ianuarius-et-socii": "In Africa SS. martyrum Ianuarij, Maximæ, & Macariæ.",
-    "mr:0408-concessa": "Carthagine sanctæ Concessæ martyris.",
-    "mr:0408-herodion-et-socii": "Eodem die commemoratio sanctorum Herodiônis, Asyncrĭti, & Phlegontis, de quibus scribit B. Paulus Apostolus in epistola ad Romanos.",
-    "mr:0408-dionysius-corinthi": "Apud Corinthum beati Dionysij Episcopi, qui eruditione & gratia, quam habuit in verbo Dei, non solum suæ ciuitatis & prouincię populos, sed & aliarum prouinciarum & vrbium Episcopos epistolis erudiuit; Romanosq. Pontifices adeo coluit, vt eorum epistolas publice legere in ecclesia diebus Dominicis consueuerit. Claruit autem temporibus Marci Antonini Veri, & Lucij Aurelij Commodi.",
-    "mr:0408-perpetuus": "Turônis sancti Perpetui Episcopi, admirandæ sanctitatis viri.",
-    "mr:0408-redemptus": "Ferentîni in Hernicis sancti Redempti Episcopi, cuius meminit B. Gregorius Papa.",
-    "mr:0408-amantius": "Apud Comum S. Amantij Episcopi & confessoris."
-   },
-   "notes": [
-    {
-     "ref": "4-8|a",
-     "mark": "a",
-     "lemma": "EDESII"
-    },
-    {
-     "ref": "4-8|b",
-     "mark": "b",
-     "lemma": "Ianuarij & soc"
-    },
-    {
-     "ref": "4-8|c",
-     "mark": "c",
-     "lemma": "Concessæ"
-    },
-    {
-     "ref": "4-8|d",
-     "mark": "d",
-     "lemma": "Herodionis, & sociorum"
-    },
-    {
-     "ref": "4-8|e",
-     "mark": "e",
-     "lemma": "Dionysii Episcopi Corinth"
-    },
-    {
-     "ref": "4-8|f",
-     "mark": "f",
-     "lemma": "Perpetui Episcopi"
-    },
-    {
-     "ref": "4-8|g",
-     "mark": "g",
-     "lemma": "Redempti Episcopi"
-    },
-    {
-     "ref": "4-8|h",
-     "mark": "h",
-     "lemma": "Amantij Episcopi"
-    }
-   ],
-   "scan_page": 213,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
    "id": "4-11|f",
    "class": "no-mark",
    "day": "4-11",
@@ -1973,68 +1821,6 @@
     }
    ],
    "scan_page": 229,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
-   "id": "4-20|a",
-   "class": "no-mark",
-   "day": "4-20",
-   "mark": "a",
-   "lemma": "VLPICII, & Seruiliani",
-   "note": "VLPICII, & Seruiliani. ] De his item Beda, Vsuardus, Ado, & alij. Extant eorum Acta intexta cum gestis sanctorum martyrum Nerei, & Achillei, apud Sur. tom. 3. die 12. Maij. Nos autem non sub Nerua, sed sub Traiano esse passos, diximus supra in Marone, decimoseptimo Kal. Maij.",
-   "proposed": {
-    "id": "mr:0420-sulpicius-et-servitianus",
-    "after": null
-   },
-   "texts": {
-    "mr:0420-sulpicius-et-servitianus": "ROMAE sanctorum martyrum Sulpicij a & Seruiliani, qui prædicatione & miraculis beatæ Domitillæ virginis ad Christi fidem conuersi, cum nollent idolis immolare, in persecutione Traiani a Præfecto Vrbis Aniâno capite cæsi sunt.",
-    "mr:0420-victor-et-socii": "Eodem die sanctorum martyrum Victoris, Zotǐci, Zenônis, Acindǐni, Cæsarij, Seueriâni, Chrysophǒri, Theônæ, & Antonini, qui sub Diocletiano varie tentati, martyrium compleuerunt.",
-    "mr:0420-theotimus": "Tomis in Scythia sancti Theothǐmi Episcopi, quem ob insignem eius sanctitatem atque miracula etiam infideles barbari venerati sunt.",
-    "mr:0420-marcellinus": "Ebredûni in Gallijs sancti Marcellini primi eiusdem vrbis Episcopi, qui Dei monitu cum sanctis socijs Vincentio & Domnîno ex Africa veniens, maximam partem Alpium maritimarum verbo & signis admirandis, quibus vsque hodie refulget, ad fidem Christi conuertit.",
-    "mr:0420-marcianus": "Antisiodôri sancti Marciâni presbyteri.",
-    "mr:0420-theodorus": "Eodem die sancti Theodôri confessoris, ab aspera cilicij veste qua tegebatur, cognomento Trichǐnas, qui multis virtutibus, præsertim aduersus dæmones, claruit: ex cuius corpore vnguentum scaturiens, ægrotis sanitatem impertit.",
-    "mr:0420-agnes": "In Montepolitiano beatæ Agnetis virginis ordinis sancti Dominici miraculis claræ."
-   },
-   "notes": [
-    {
-     "ref": "4-20|a",
-     "mark": "a",
-     "lemma": "VLPICII, & Seruiliani"
-    },
-    {
-     "ref": "4-20|b",
-     "mark": "b",
-     "lemma": "Victoris, & soc"
-    },
-    {
-     "ref": "4-20|c",
-     "mark": "c",
-     "lemma": "Theotimi Episc"
-    },
-    {
-     "ref": "4-20|d",
-     "mark": "d",
-     "lemma": "Marcellini Episc"
-    },
-    {
-     "ref": "4-20|e",
-     "mark": "e",
-     "lemma": "Marciani"
-    },
-    {
-     "ref": "4-20|f",
-     "mark": "f",
-     "lemma": "Theodori"
-    },
-    {
-     "ref": "4-20|g",
-     "mark": "g",
-     "lemma": "Agnetis"
-    }
-   ],
-   "scan_page": 232,
    "decision": null,
    "edited": null
   },
@@ -2340,79 +2126,6 @@
   },
   {
    "op": "attach_note",
-   "id": "5-12|a",
-   "class": "no-mark",
-   "day": "5-12",
-   "mark": "a",
-   "lemma": "NERSI, & Achillei, alias Archillei",
-   "note": "NERSI, & Achillei, alias Archillei.] De his hac item die Beda, Vsuard. Ado, & alij. Eorum Acta recitat Surius to. 3. Fuit vetus Romæ Titulus nomine horum martyrum, cuius habetur mentio in regist. S. Gregorij Papæ lib 4. epist. 44. vbi idẽ Gregorius habuit homil. 28. in euãg. Erant ibidem sepulta eorumdem martyrum corpora, simulq. Flauiæ Domitillæ; quibus alludit, cum ait: Sancti isti, ad quorum tumbam consistimus, florentem mundum mentis despectu calcauerunt, &c. Quæ tria sacra corpora hoc ipso anno, quo hæc denuo cudimus, MDXCVII. quinto Id. Maij, ex diaconia S. Hadriani, quo sub Gregorio IX. translata fuetant, ac demum sub Sixto V. ab Augustino Cusano eiusdem Ecclesiæ tunc diacono Card. in altari maiore a se magnificentius extructo decentius collocata, nos testituto Titulo, S. D. N. Clemente Octauo concedente, in suum pristinum locum celebri pompa reduximus vna cum eorũ capitibus thecis auratis inclusis. Horum item sanctorum nomine appellatum est cœmeterium via Ardeatina, quod restituit Ioannes Papa, vt legitur apud Anastas. in lib. de Rom. Pontif. in Ioanne Papa Primo.",
-   "proposed": {
-    "id": "mr:0512-nereus-et-achilleus",
-    "after": null
-   },
-   "texts": {
-    "mr:0512-nereus-et-achilleus": "ROMAE via Ardeatina sanctorum martyrũ Nerĕi & Achillĕi a fratrum: qui primo cum Flauia Domitilla, cuius erant eunûchi, in insula Põtia longum pro Christo duxerunt exilium; postmŏdum grauissimis verberibus attrectati sunt: deinde cum a Minutio Rufo Consulari equuleo & flammis ad immolandum cõpellerentur, dicerentq. se a B. Petro Apostolo baptizatos, nulla ratione posse idôlis immolare, capite cæsi sunt. Horum sacræ reliquiæ simulq. Flauiæ Domitillæ ex diaconîa S. Hadriani in antiquùm eorum Titulum, vbi olim reconditæ asseruabantur nunc restauratũ, iussu Clementis Papæ VIII. solemniter translatæ sunt pridie huius diei.",
-    "mr:0512-pancratius": "Ibidẽ via Aurelia sancti Pancratij martyris, qui cum esset annorũ quatuordecim, sub Diocletiano martyrium capitis obtruncatione compleuit.",
-    "mr:0512-dionysius": "Item Romæ S Dionysij patrui eiusdem beati Pancratij.",
-    "mr:0512-philippus": "In Sicilia S. Philippi Argyriônis, qui a Romano Pontifice ad eam insulam missus, magnam illius partem ad Christum conuertit: cuius sanctitas in liberandis energumĕnis maxime declaratur.",
-    "mr:0512-epiphanius": "Salamînæ in Cypro sancti Epiphanij Episcopi, qui multiplici eruditione & sacrarum litterarum scientia excellens, vitæ quoque sanctitate, zelo Catholicæ fidei, munificentia in pauperes, & virtûte miraculorum extitit admirandus.",
-    "mr:0512-germanus": "Constantinopoli sancti Germani Episcopi, virtutibus & doctrina insiinsignis, qui Leonem Isauricum aduersus sacras imagines edictum promulgantem, magna fiducia redarguit.",
-    "mr:0512-modoaldus": "Treuiris sancti Modoaldi Episcopi.",
-    "mr:0512-dominicus": "In ciuitate Calciatensi sancti Dominici confessoris."
-   },
-   "notes": [
-    {
-     "ref": "5-12|a",
-     "mark": "a",
-     "lemma": "NERSI, & Achillei, alias Archillei"
-    },
-    {
-     "ref": "5-12|b",
-     "mark": "b",
-     "lemma": "Item via Aurelia"
-    },
-    {
-     "ref": "5-12|c",
-     "mark": "c",
-     "lemma": "Pancratij"
-    },
-    {
-     "ref": "5-12|d",
-     "mark": "d",
-     "lemma": "Dionysij"
-    },
-    {
-     "ref": "5-12|e",
-     "mark": "e",
-     "lemma": "Philippi"
-    },
-    {
-     "ref": "5-12|f",
-     "mark": "f",
-     "lemma": "Epiphanij"
-    },
-    {
-     "ref": "5-12|g",
-     "mark": "g",
-     "lemma": "Germani Episcopi"
-    },
-    {
-     "ref": "5-12|h",
-     "mark": "h",
-     "lemma": "Modoaldi Episcopi"
-    },
-    {
-     "ref": "5-12|i",
-     "mark": "i",
-     "lemma": "Dominici"
-    }
-   ],
-   "scan_page": 275,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
    "id": "5-16|e",
    "class": "no-mark",
    "day": "5-16",
@@ -2440,7 +2153,7 @@
     {
      "ref": "5-16|a",
      "mark": "a",
-     "lemma": "BALDI Episc"
+     "lemma": "VBALDI Episc"
     },
     {
      "ref": "5-16|b",
@@ -2568,90 +2281,6 @@
     }
    ],
    "scan_page": 290,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
-   "id": "5-23|a",
-   "class": "no-mark",
-   "day": "5-23",
-   "mark": "a",
-   "lemma": "DESIDSRII Episc. & soc",
-   "note": "DESIDSRII Episc. & soc.] Agunt de eodem hac die Beda, Vsuardus, Ado, Petrus in catal. lib. 5. c. 31. & alij recentiores. Sigebertus in chron. recenset eius martyrium anno Domini quadringentesimo vndecimo, eumq. passum refert vna cum Vincentio eiusdem Ecclesiæ Archidiacono: verum eũ Desiderius Lingoniensis Episcopus reperiatur interfuisse Concilio Agrippinensi, celebrato post Consulatum Amãtij & Albini, qui numeratur annus Domini (iuxta Fastos Onuphrij)trecẽtesimus quadragesimus. sextus; propter tam lõgam temporis distantiam huius martyrium non referendum ad ea tempora arbitramur Valentiniani Imp. quando Vuandali longe lateq. effusi sunt per Gallias,atque Hispanias, & in Africam vsq; venerunt; sed quando pirmũ illa gens iuncta alijs barbaris nationibus Gallias inuasit, de qua illata clade meminit S.Hieron. epist.11. ad Ageruchiam. Ponitur hic in tabulis Democharis tertius ordine eius ciuitatis Episcopus,uec alter eius nominis ibi Episcopus reperitur. De eodem extat epigramma Bonad. Sanct. lib. 2. monod.75.",
-   "proposed": {
-    "id": "mr:0523-desiderius",
-    "after": null
-   },
-   "texts": {
-    "mr:0523-desiderius": "APVD Lingõnas in Gallia passio sancti a Desiderij Episcopi, qui cum plebem suam ab exercitu Vuãdalorum vexari cerneret, ad Regem eorum pro ea supplicaturus accessit: a quo statim iugulari iussus, pro ouibus sibi creditis ceruicem libenter extendit, & percussus gladio migrauit ad Christum. Passi sunt autem cum eo & alij plures de numero gregis sui, qui apud eamdem vrbem conditi sunt.",
-    "mr:0523-epitacius-et-basileus": "In Hispania sanctorum martyrum Epitacij Episcopi, & Basilêi.",
-    "mr:0523-quinctianus-et-socii": "In Africa sanctorum martyrum Quinctiani, Lucij, & Iuliani, qui in persecutione Vuandalica passi, æternas coronas meruerunt.",
-    "mr:0523-martyres-mesopotamiae": "In Cappadocia commemoratio sanctorum martyrum, qui in persecutione Maximiani Galerij confractis cruribus necati sunt: item eorum qui eodem tempore in Mesopotamia appensi pedibus in sublime, capite verso deorsum, suffocati fumo, & lento igne consumpti, martyrium compleuerunt.",
-    "mr:0523-desiderius-viennensis": "In territorio Lugdunensi sancti Desiderij Episcopi Viennensis, qui Theodorici Regis iussu lapidibus obrutus, martyrio coronatur:",
-    "mr:0523-michael": "Synnădæ in Phrygia sancti Michaelis Episcopi.",
-    "mr:0523-mercurialis": "Ipso die S. Mercurialis Episcopi.",
-    "mr:0523-ephebus": "Neapoli in Campania S. Euphebij Episcopi.",
-    "mr:0523-eutychius": "Apud Nursiam sanctorum Eutychij & Florentij monachorum, quorum meminit B. Gregorius Papa."
-   },
-   "notes": [
-    {
-     "ref": "5-23|a",
-     "mark": "a",
-     "lemma": "DESIDSRII Episc. & soc"
-    },
-    {
-     "ref": "5-23|b",
-     "mark": "b",
-     "lemma": "Epuacij & Basilei"
-    },
-    {
-     "ref": "5-23|c",
-     "mark": "c",
-     "lemma": "Quinctiani & soc"
-    },
-    {
-     "ref": "5-23|d",
-     "mark": "d",
-     "lemma": "Commemoratio Sanct mart"
-    },
-    {
-     "ref": "5-23|e",
-     "mark": "e",
-     "lemma": "Confractis cruribus"
-    },
-    {
-     "ref": "5-23|f",
-     "mark": "f",
-     "lemma": "In Mesopot"
-    },
-    {
-     "ref": "5-23|g",
-     "mark": "g",
-     "lemma": "Desiderij Episc"
-    },
-    {
-     "ref": "5-23|h",
-     "mark": "h",
-     "lemma": "Michaelis Episc"
-    },
-    {
-     "ref": "5-23|i",
-     "mark": "i",
-     "lemma": "Mercurialis Episcopi"
-    },
-    {
-     "ref": "5-23|k",
-     "mark": "k",
-     "lemma": "Euphebij"
-    },
-    {
-     "ref": "5-23|l",
-     "mark": "l",
-     "lemma": "Eutychij & Florentij"
-    }
-   ],
-   "scan_page": 292,
    "decision": null,
    "edited": null
   },
@@ -2912,60 +2541,6 @@
   },
   {
    "op": "attach_note",
-   "id": "6-20|a",
-   "class": "no-mark",
-   "day": "6-20",
-   "mark": "a",
-   "lemma": "ILVERII Papæ",
-   "note": "ILVERII Papæ.] De quo item hac die Beda, Vsuardus, Ado, ac reliqui. Successit hic Agapeto, anno Domini 536. Egimus de eo cumulate in Annalibus Ecclesiasticis. Illic de Belisario, cuius hic habetur mentio, locupletius; vbi & de eius calamitate plura diximus.",
-   "proposed": {
-    "id": "mr:0620-silverius",
-    "after": null
-   },
-   "texts": {
-    "mr:0620-silverius": "NATALIS sancti Siluerij a Papæ & martyris, qui cum Anthimum Episcopum hęreticum ab Agapito prædecessore suo depositum restituere noluisset, agente impia Theodôra Augusta, a Bellisario in exilium pulsus ad insulam Pontiam, ibidem pro fide Catholica multis ærumnis confectus defecit.",
-    "mr:0620-novatus": "Romæ depositio S. Nouâti, filij B. Pudentis Senatoris, & fratris S. Timothĕi presbyteri, & sanctarum Christi virginum Pudentianę & Praxêdis, qui ab Apostolis eruditi sunt in fide. Horum domus in ecclesiam commutata, Pastôris Titulus appellatur.",
-    "mr:0620-paulus-et-cyriacus": "Tomis in Ponto sanctorum martyrum Pauli & Cyriaci.",
-    "mr:0620-macarius": "Petræ in Palæstina sancti Macarij Episcopi, qui ab Arianis"
-   },
-   "notes": [
-    {
-     "ref": "6-20|a",
-     "mark": "a",
-     "lemma": "ILVERII Papæ"
-    },
-    {
-     "ref": "6-20|b",
-     "mark": "b",
-     "lemma": "Ad insulam Pontiam"
-    },
-    {
-     "ref": "6-20|c",
-     "mark": "c",
-     "lemma": "Nouati"
-    },
-    {
-     "ref": "6-20|d",
-     "mark": "d",
-     "lemma": "Pauli & Cyriaci"
-    },
-    {
-     "ref": "6-20|e",
-     "mark": "e",
-     "lemma": "Macarij Episcopi"
-    },
-    {
-     "ref": "6-20|f",
-     "mark": "f",
-     "lemma": "Florentiæ"
-    }
-   ],
-   "scan_page": 339,
-   "decision": null,
-   "edited": null
-  },
-  {
-   "op": "attach_note",
    "id": "6-20|f",
    "class": "no-mark",
    "day": "6-20",
@@ -2977,7 +2552,7 @@
     "after": null
    },
    "texts": {
-    "mr:0620-silverius": "NATALIS sancti Siluerij a Papæ & martyris, qui cum Anthimum Episcopum hęreticum ab Agapito prædecessore suo depositum restituere noluisset, agente impia Theodôra Augusta, a Bellisario in exilium pulsus ad insulam Pontiam, ibidem pro fide Catholica multis ærumnis confectus defecit.",
+    "mr:0620-silverius": "NATALIS sancti Siluerij Papæ & martyris, qui cum Anthimum Episcopum hęreticum ab Agapito prædecessore suo depositum restituere noluisset, agente impia Theodôra Augusta, a Bellisario in exilium pulsus ad insulam Pontiam, ibidem pro fide Catholica multis ærumnis confectus defecit.",
     "mr:0620-novatus": "Romæ depositio S. Nouâti, filij B. Pudentis Senatoris, & fratris S. Timothĕi presbyteri, & sanctarum Christi virginum Pudentianę & Praxêdis, qui ab Apostolis eruditi sunt in fide. Horum domus in ecclesiam commutata, Pastôris Titulus appellatur.",
     "mr:0620-paulus-et-cyriacus": "Tomis in Ponto sanctorum martyrum Pauli & Cyriaci.",
     "mr:0620-macarius": "Petræ in Palæstina sancti Macarij Episcopi, qui ab Arianis"
@@ -2986,7 +2561,7 @@
     {
      "ref": "6-20|a",
      "mark": "a",
-     "lemma": "ILVERII Papæ"
+     "lemma": "SILVERII Papæ"
     },
     {
      "ref": "6-20|b",
@@ -4042,7 +3617,7 @@
     {
      "ref": "10-7|a",
      "mark": "a",
-     "lemma": "ARCI Papę"
+     "lemma": "MARCI Papę"
     },
     {
      "ref": "10-7|b",
@@ -6031,7 +5606,7 @@
      "ref": "mr:0123-emerentiana",
      "kind": "eulogy",
      "lemma": null,
-     "words": "ROMAE sanctæ Emerentiânæ a virginis & martyris, quæ …"
+     "words": "ROMAE sanctæ Emerentiânæ virginis & martyris, quæ adhuc …"
     },
     {
      "ref": "mr:0123-parmena",
@@ -10118,8 +9693,8 @@
     {
      "ref": "4-20|a",
      "kind": "note",
-     "lemma": "VLPICII, & Seruiliani",
-     "words": "VLPICII, & Seruiliani. ] De his item Beda, …"
+     "lemma": "SVLPICII, & Seruiliani",
+     "words": "SVLPICII, & Seruiliani. ] De his item Beda, …"
     },
     {
      "ref": "4-20|b",
@@ -10161,7 +9736,7 @@
      "ref": "mr:0420-sulpicius-et-servitianus",
      "kind": "eulogy",
      "lemma": null,
-     "words": "ROMAE sanctorum martyrum Sulpicij a & Seruiliani, qui …"
+     "words": "ROMAE sanctorum martyrum Sulpicij & Seruiliani, qui prædicatione …"
     },
     {
      "ref": "mr:0420-victor-et-socii",
@@ -10885,8 +10460,8 @@
     {
      "ref": "5-5|a",
      "kind": "note",
-     "lemma": "RESCENTIANAE",
-     "words": "RESCENTIANAE.] De ea vet. manuscrip. Erat olim titulus …"
+     "lemma": "CRESCENTIANAE",
+     "words": "CRESCENTIANAE.] De ea vet. manuscrip. Erat olim titulus …"
     },
     {
      "ref": "5-5|b",
@@ -11699,8 +11274,8 @@
     {
      "ref": "5-16|a",
      "kind": "note",
-     "lemma": "BALDI Episc",
-     "words": "BALDI Episc.] Habes res eius præclare gestas apud …"
+     "lemma": "VBALDI Episc",
+     "words": "VBALDI Episc.] Habes res eius præclare gestas apud …"
     },
     {
      "ref": "5-16|b",
@@ -12219,7 +11794,7 @@
      "ref": "mr:0523-desiderius",
      "kind": "eulogy",
      "lemma": null,
-     "words": "APVD Lingõnas in Gallia passio sancti a Desiderij …"
+     "words": "APVD Lingõnas in Gallia passio sancti Desiderij Episcopi, …"
     },
     {
      "ref": "mr:0523-epitacius-et-basileus",
@@ -12320,7 +11895,7 @@
      "ref": "mr:0523-desiderius",
      "kind": "eulogy",
      "lemma": null,
-     "words": "APVD Lingõnas in Gallia passio sancti a Desiderij …"
+     "words": "APVD Lingõnas in Gallia passio sancti Desiderij Episcopi, …"
     },
     {
      "ref": "mr:0523-epitacius-et-basileus",
@@ -12962,8 +12537,8 @@
     {
      "ref": "6-1|a",
      "kind": "note",
-     "lemma": "VVENTITI",
-     "words": "VVENTITI] De eo vet. manuscr. ex quibus Molan. …"
+     "lemma": "IVVENTII",
+     "words": "IVVENTII] De eo vet. manuscr. ex quibus Molan. …"
     },
     {
      "ref": "6-1|b",

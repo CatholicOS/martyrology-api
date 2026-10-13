@@ -1,5 +1,5 @@
 {
- "$comment": "Reviewed decisions for align_1630_ids.py, keyed 'M-D|<opening words of the eulogy>' (folded comparison). MERGE_PREV: a continuation the segmenter split off; RUBRIC: a rubric, not a eulogy; DROP: printing noise; mr:<id>: the ID (a spelling variant or another name of the same subject — Peregrinus/Cetheus, Dominica/Cyriaca, Margarita/Marina — that the name gate rejects, or a 1630-day deprecated ID); split_at: two eulogies run together; coin: a new deprecated ID (with same_eulogy for a eulogy 1630 prints on another day).",
+ "$comment": "Reviewed decisions for align_1630_ids.py, keyed 'M-D|<opening words of the eulogy>' (folded comparison). MERGE_PREV: a continuation the segmenter split off; RUBRIC: a rubric, not a eulogy; DROP: printing noise; mr:<id>: the ID (a spelling variant or another name of the same subject — Peregrinus/Cetheus, Dominica/Cyriaca, Margarita/Marina — that the name gate rejects, or a 1630-day deprecated ID); split_at: two eulogies run together (merge_prev: the part before the split continues the eulogy before it); coin: a new deprecated ID (with same_eulogy for a eulogy 1630 prints on another day).",
  "1-3|In Cilicia sanctorum martyrum": {
   "split_at": "Item sanctorũ Theopépti"
  },
@@ -8,6 +8,10 @@
  },
  "1-6|Rhedŏnis in Gallia sancti": {
   "split_at": "Florentiæ sancti Andreæ Corsini"
+ },
+ "1-6|Carmelitæ Episcopi Fesulâni,": {
+  "split_at": "Geris in Aegypto",
+  "merge_prev": true
  },
  "1-11|Alexandriæ sanctorum martyrum Petri,": {
   "split_at": [

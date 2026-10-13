@@ -207,11 +207,11 @@
   },
   "mr:0106-andreas-corsini": {
    "method": "same-day",
-   "score": 0.308
+   "score": 0.725
   },
   "mr:0106-nilammo": {
    "method": "same-day",
-   "score": 0.704
+   "score": 0.988
   },
   "mr:0107-relatio-pueri-iesu-de-aegypto": {
    "method": "same-day",
@@ -995,7 +995,7 @@
   },
   "mr:0202-purificatio-beatae-mariae-virginis": {
    "method": "same-day",
-   "score": 0.987
+   "score": 1.0
   },
   "mr:0202-apronianus": {
    "method": "same-day",
@@ -3207,7 +3207,7 @@
   },
   "mr:0420-sulpicius-et-servitianus": {
    "method": "same-day",
-   "score": 0.943
+   "score": 0.947
   },
   "mr:0420-victor-et-socii": {
    "method": "same-day",
@@ -5139,7 +5139,7 @@
   },
   "mr:0620-silverius": {
    "method": "same-day",
-   "score": 0.804
+   "score": 0.8
   },
   "mr:0620-novatus": {
    "method": "same-day",
