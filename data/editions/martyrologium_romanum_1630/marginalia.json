@@ -2853,12 +2853,6 @@
    "note": "f"
   }
  ],
- "mr:0317-alexandria": [
-  {
-   "text": "T. 4. a. 389. nu. 84. & seq.",
-   "note": "c"
-  }
- ],
  "mr:0317-gertrudis": [
   {
    "text": "T. 8. A. 664. n. 33.",
@@ -2881,6 +2875,12 @@
   {
    "text": "T. 9 A 733 n.1 & An 766. nu 25.",
    "note": "d"
+  }
+ ],
+ "mr:0317-plurimi-martyres-alexandriae": [
+  {
+   "text": "T. 4. a. 389. nu. 84. & seq.",
+   "note": "c"
   }
  ],
  "mr:0318-alexander": [
@@ -6645,7 +6645,7 @@
    "note": "c"
   }
  ],
- "mr:0623-nicomedia": [
+ "mr:0623-plurimi-martyres-nicomediae": [
   {
    "text": "T. 2. A. 301. n. 13. & seq.",
    "note": "g"
