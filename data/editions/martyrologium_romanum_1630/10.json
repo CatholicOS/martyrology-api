@@ -237,10 +237,11 @@
   "titulus": "Sextodecimo Kal. Nouemb. Luna.",
   "elogia": {
    "mr:1017-heron": "ANTIOCHIAE natalis sancti Herônis discipuli beati Ignatij, qui post eum factus Episcopus, viam magistri pius imitator secutus, pro commendato sibi grege amator Christi occubuit.",
-   "mr:1017-mamelta": "Eodem die passio sanctorum Victoris, Alexandri, & Mariani; In Perside sanctæ Mameltæ. martyris, quæ a cultu idolorum ad fidem angelico monitu conuersa, a Gentilibus lapidata est, & in profundum lacum demersa.",
+   "mr:1017-victor-et-socii": "Eodem die passio sanctorum Victoris, Alexandri, & Mariani;",
+   "mr:1017-mamelta": "In Perside sanctæ Mameltæ martyris, quæ a cultu idolorum ad fidem angelico monitu conuersa, a Gentilibus lapidata est, & in profundum lacum demersa.",
    "mr:1017-andreas": "Constantinopoli S. Andreæ Cretensis monachi, qui ob cultum sacrarum imaginum sub Constantino Copronymo sæpius verberatus, tandem amputato altero pede, reddidit spiritum.",
    "mr:1017-florentius": "Arausicæ in Gallia sancti Florentini Episcopi, qui multis clarus virtutibus quieuit in pace.",
-   "mr:1017-victor-et-socii": "Capuæ sancti Victoris Episcopi, eruditione & sanctitate conspicui."
+   "mr:1017-victor": "Capuæ sancti Victoris Episcopi, eruditione & sanctitate conspicui."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },

@@ -194,6 +194,11 @@
   "after": "Eumêni",
   "mark": "e"
  },
+ "9-26|c": {
+  "id": "mr:0926-eusebius-papa",
+  "after": "Eusebij",
+  "mark": "c"
+ },
  "9-26|g": {
   "id": "mr:0926-nilus-iunior",
   "after": "Nili",
@@ -215,7 +220,7 @@
   "mark": "b"
  },
  "10-17|f": {
-  "id": "mr:1017-victor-et-socii",
+  "id": "mr:1017-victor",
   "after": "Victoris",
   "mark": "f"
  },
