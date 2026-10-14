@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, get_args
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
@@ -81,12 +81,44 @@ class MentionFootnote(BaseModel):
     footnote: int = Field(ge=1)
 
 
+# crmedr's ROLES (scripts/extract_places.py), in its order: the role a place plays in a eulogy.
+PlaceRole = Literal[
+    "death",
+    "burial",
+    "translation",
+    "dedication",
+    "cult",
+    "birth",
+    "education",
+    "religious_life",
+    "ministry",
+    "foundation",
+    "exile",
+    "journey",
+    "mention",
+]
+PLACE_ROLES: tuple[str, ...] = get_args(PlaceRole)
+
+
+class PlaceRoleOut(BaseModel):
+    """The role a place plays in the eulogy (crmedr `roles`): died, buried, born, a see… there.
+    `name` / `n` say whose role it is when the eulogy has several persons, as person mentions
+    name them; null when it is everyone's."""
+
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
+
+    role: PlaceRole
+    name: str | None = None
+    n: int | None = Field(default=None, ge=2)
+
+
 class MentionBase(BaseModel):
     """A person or place a eulogy names (crmedr `data/mentions.json`): the span from `start` to
     `end` of its text, or of the footnote `where` names, in UTF-16 code units, the unit JavaScript
     strings use. `qid` is the Wikidata item crmedr decided (null while undecided); `name` is a
     person's nominative, null for a place; `n` tells apart the persons of one name in the eulogy
-    (2, 3…; null for the first)."""
+    (2, 3…; null for the first). `roles` are a place's roles in the eulogy, in crmedr's item
+    order; null for a person, or a place crmedr gave none."""
 
     kind: Literal["person", "place"]
     where: Literal["text"] | MentionFootnote
@@ -96,6 +128,8 @@ class MentionBase(BaseModel):
     name: str | None = None
     # crmedr's n: the nth person of this name in the eulogy, from 2; null for the first.
     n: int | None = Field(default=None, ge=2)
+    # crmedr's roles: what the place is to the eulogy; null for a person.
+    roles: list[PlaceRoleOut] | None = None
 
     @model_validator(mode="after")
     def _a_span(self) -> "MentionBase":

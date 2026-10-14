@@ -294,3 +294,46 @@ def test_a_texts_commit_other_than_the_one_served_is_warned_of(extracted, deploy
     assert bool(caplog.records) is warned
     if warned:
         assert extracted in caplog.text and deployed in caplog.text
+
+
+def test_served_keeps_a_places_roles_in_order():
+    rome = _m(
+        "Romæ",
+        kind="place",
+        start=7,
+        end=11,
+        qid="Q220",
+        roles=[
+            {"role": "birth"},
+            {"role": "ministry", "name": "Pionius"},
+            {"role": "burial", "name": "Felix", "n": 2},
+        ],
+    )
+    out = served([rome], "Natale Romæ", [])[0].model_dump()
+    assert out["roles"] == [
+        {"role": "birth", "name": None, "n": None},
+        {"role": "ministry", "name": "Pionius", "n": None},
+        {"role": "burial", "name": "Felix", "n": 2},
+    ]
+
+
+def test_a_place_without_roles_is_served_with_null_roles():
+    assert served([_m("Romæ", kind="place", start=7, end=11)], "Natale Romæ", [])[0].roles is None
+
+
+def test_served_gives_a_person_no_roles_whatever_crmedr_wrote():
+    felix = _m("Felix", start=7, end=12, name="Felix", roles=[{"role": "birth"}])
+    assert served([felix], "Natale Felix", [])[0].roles is None
+
+
+@pytest.mark.parametrize(
+    "bad",
+    [
+        [{"role": "nativity"}],  # not in the closed set
+        [{"role": "birth", "n": 1}],  # n is from 2
+        [{"role": "birth", "where": "text"}],  # nothing else in a role
+    ],
+)
+def test_a_malformed_role_is_refused(bad):
+    with pytest.raises(ValidationError):
+        _m(kind="place", roles=bad)
