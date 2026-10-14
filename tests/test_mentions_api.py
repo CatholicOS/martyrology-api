@@ -15,6 +15,8 @@ SPOLETI = {
     "qid": "Q13363",
     "name": None,
     "n": None,
+    # the fixture gives the opening place its role, as crmedr does
+    "roles": [{"role": "death", "name": None, "n": None}],
     "form": "Spoleti in Umbria",
 }
 CONCORDII = {
@@ -25,6 +27,7 @@ CONCORDII = {
     "qid": None,
     "name": "Concordius",
     "n": None,
+    "roles": None,
     "form": "Concordii",
 }
 NARCISSUS = {
@@ -35,6 +38,7 @@ NARCISSUS = {
     "qid": "Q1",
     "name": "Narcissus",
     "n": None,
+    "roles": None,
     "form": "Narcissus",
 }
 

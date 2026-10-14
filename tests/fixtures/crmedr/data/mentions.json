@@ -4,7 +4,7 @@
   "editions": {
     "martyrologium_romanum_2004": {
       "mr:0102-concordius": [
-        { "kind": "place", "where": "text", "start": 0, "end": 17, "check": "46f1bf10", "qid": "Q13363" },
+        { "kind": "place", "where": "text", "start": 0, "end": 17, "check": "46f1bf10", "qid": "Q13363", "roles": [{ "role": "death" }] },
         { "kind": "person", "where": "text", "start": 26, "end": 35, "check": "4b9b016f", "name": "Concordius", "qid": null },
         { "kind": "person", "where": "text", "start": 37, "end": 47, "check": "4b9b016f", "name": "Stale", "qid": null }
       ],
