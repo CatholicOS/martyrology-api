@@ -1,6 +1,6 @@
 [project]
 name = "martyrology-api"
-version = "0.18.14"
+version = "0.18.15"
 description = "Roman Martyrology API"
 requires-python = ">=3.12"
 dependencies = [
