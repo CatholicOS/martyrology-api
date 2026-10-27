@@ -41,13 +41,13 @@
    "subject_la": "Sancta Priscilla",
    "subject_en": "Saint Priscilla"
   },
-  "1-17-0": "mr:0117-antonius",
+  "1-17-0": "mr:0117-antonius-thebaidis",
   "1-18-0": {
    "coin": "cathedra-petri-apostoli",
    "subject_la": "Cathedra sancti Petri Apostoli Romae",
    "subject_en": "Chair of Saint Peter the Apostle at Rome"
   },
-  "1-23-7": "mr:0123-hildephonsus",
+  "1-23-7": "mr:0123-hildephonsus-toleti",
   "1-23-8": {
    "coin": "martyrius",
    "subject_la": "Sanctus Martyrius",
@@ -63,7 +63,7 @@
    "subject_la": "Sanctus Valerius",
    "subject_en": "Saint Valerius"
   },
-  "1-28-7": "mr:0128-ioannes",
+  "1-28-7": "mr:0128-ioannes-reomaensis",
   "1-30-7": {
    "coin": "felix-iv",
    "subject_la": "Sanctus Felix Papa",
