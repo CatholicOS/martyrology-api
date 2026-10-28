@@ -95,7 +95,8 @@ def test_openapi_documents_the_mentions_of_a_eulogy(client):
     }
     role = c["PlaceRoleOut"]
     assert role["properties"]["role"]["enum"][:2] == ["death", "burial"]
-    assert len(role["properties"]["role"]["enum"]) == 13
+    assert len(role["properties"]["role"]["enum"]) == 14
+    assert role["properties"]["role"]["enum"][10:12] == ["exile", "captivity"]
     assert "check" not in m["properties"]  # crmedr's hash is not part of the response
     assert m["properties"]["kind"]["enum"] == ["person", "place"]
     assert c["MentionFootnote"]["properties"]["footnote"]["minimum"] == 1

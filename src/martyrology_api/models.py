@@ -94,6 +94,7 @@ PlaceRole = Literal[
     "ministry",
     "foundation",
     "exile",
+    "captivity",
     "journey",
     "mention",
 ]
