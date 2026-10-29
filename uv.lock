@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.12"
 
 [[package]]
@@ -380,7 +380,7 @@ wheels = [
 
 [[package]]
 name = "martyrology-api"
-version = "0.19.1"
+version = "0.19.2"
 source = { editable = "." }
 dependencies = [
     { name = "alembic" },
