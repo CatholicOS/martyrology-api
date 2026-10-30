@@ -380,7 +380,7 @@ wheels = [
 
 [[package]]
 name = "martyrology-api"
-version = "0.19.3"
+version = "0.19.4"
 source = { editable = "." }
 dependencies = [
     { name = "alembic" },
