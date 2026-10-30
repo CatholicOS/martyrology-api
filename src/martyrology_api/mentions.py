@@ -96,8 +96,10 @@ def served(ms: list[MentionIn], text: str | None, footnotes: list[FootnoteOut]) 
             served_as = m.model_dump(exclude={"check"}) | {"form": words}
             if m.kind == "place":
                 served_as["name"] = None  # a place has no nominative, whatever crmedr wrote
+                served_as["others"] = None  # nor other persons
             else:
                 served_as["roles"] = None  # a person has no role as a place has
+                served_as["others"] = served_as["others"] or None  # null when it names one person
             out.append(MentionOut.model_validate(served_as))
     return out
 
