@@ -98,6 +98,30 @@ def test_served_keeps_the_nth_person_of_a_name():
     assert [m.model_dump()["n"] for m in out] == [2, None]
 
 
+def test_served_keeps_the_other_persons_a_mark_names():
+    # One word for two persons ("quibus nomen Anastasius"): crmedr's others.
+    other = {"name": "Anastasius", "n": 2, "qid": "Q2"}
+    both = _m("Anastasius", start=7, end=17, name="Anastasius", others=[other])
+    felix = _m("Felix", start=19, end=24, name="Felix")
+    out = served([both, felix], "Natale Anastasius, Felix.", [])
+    assert out[0].model_dump()["others"] == [other]
+    assert out[1].model_dump()["others"] is None  # always present, null when it names one person
+
+
+def test_served_gives_a_place_no_other_persons():
+    rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", others=[{"name": "Roma"}])
+    assert served([rome], "Natale Romæ", [])[0].others is None
+
+
+@pytest.mark.parametrize(
+    "other",
+    [{"name": "Felix", "n": 1}, {"name": "Felix", "place": "Roma"}, {"n": 2}],
+)
+def test_a_malformed_other_person_is_refused(other):
+    with pytest.raises(ValidationError):
+        _m("Felix", name="Felix", others=[other])
+
+
 def test_n_is_from_two():
     with pytest.raises(ValidationError):
         _m("Felix", name="Felix", n=1)

@@ -113,13 +113,26 @@ class PlaceRoleOut(BaseModel):
     n: int | None = Field(default=None, ge=2)
 
 
+class MentionPersonOut(BaseModel):
+    """Another person a person mention names (crmedr `others`): one word can name two persons
+    ("quibus nomen Anastasius"). `name` and `n` as a person mention has them; `qid` null while
+    undecided."""
+
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
+
+    name: str
+    n: int | None = Field(default=None, ge=2)
+    qid: str | None = None
+
+
 class MentionBase(BaseModel):
     """A person or place a eulogy names (crmedr `data/mentions.json`): the span from `start` to
     `end` of its text, or of the footnote `where` names, in UTF-16 code units, the unit JavaScript
     strings use. `qid` is the Wikidata item crmedr decided (null while undecided); `name` is a
     person's nominative, null for a place; `n` tells apart the persons of one name in the eulogy
     (2, 3…; null for the first). `roles` are a place's roles in the eulogy, in crmedr's item
-    order; null for a person, or a place crmedr gave none."""
+    order; null for a person, or a place crmedr gave none. `others` are the other persons a person
+    mention names, in no particular order; null when it names one person, and for a place."""
 
     kind: Literal["person", "place"]
     where: Literal["text"] | MentionFootnote
@@ -131,6 +144,8 @@ class MentionBase(BaseModel):
     n: int | None = Field(default=None, ge=2)
     # crmedr's roles: what the place is to the eulogy; null for a person.
     roles: list[PlaceRoleOut] | None = None
+    # crmedr's others: the other persons one person mention names.
+    others: list[MentionPersonOut] | None = None
 
     @model_validator(mode="after")
     def _a_span(self) -> "MentionBase":

@@ -92,7 +92,11 @@ def test_openapi_documents_the_mentions_of_a_eulogy(client):
         "name",
         "n",
         "roles",
+        "others",
     }
+    other = c["MentionPersonOut"]
+    assert set(other["required"]) == {"name", "n", "qid"}
+    assert other["properties"]["n"]["anyOf"][0]["minimum"] == 2
     role = c["PlaceRoleOut"]
     assert role["properties"]["role"]["enum"][:2] == ["death", "burial"]
     assert len(role["properties"]["role"]["enum"]) == 14
