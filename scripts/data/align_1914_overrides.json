@@ -155,14 +155,14 @@
    "subject_en": "First Finding of the Head of Saint John the Baptist"
   },
   "2-28-2": "mr:0228-presbyteri-diaconi-plurimi-alexandriae",
-  "3-1-5": "mr:0301-suitbertus",
+  "3-1-5": "mr:0301-suitbertus-werdae",
   "3-1-7": {
    "coin": "translatio-herculani",
    "subject_la": "Translatio sancti Herculani",
    "subject_en": "Translation of Saint Herculanus"
   },
   "3-2-4": "mr:0302-octoginta-martyres-campaniae",
-  "3-2-6": "mr:0302-ceadda",
+  "3-2-6": "mr:0302-ceadda-lichfeldiae",
   "3-3-1": "mr:0303-emetherius-et-cheledonius",
   "3-5-5": "mr:0305-carolus-caietanus-calosirto",
   "3-6-0": {
@@ -1282,7 +1282,7 @@
   "3-11-7": "mr:0311-firminus",
   "3-15-0": "mr:0315-longinus",
   "3-16-7": "mr:0316-abraham",
-  "3-18-7": "mr:0318-anselmus",
+  "3-18-7": "mr:0318-anselmus-lucensis",
   "3-19-4": "mr:0319-landoaldus-et-amantius",
   "3-22-5": "mr:0322-octavianus-et-socii",
   "3-22-7": "mr:0322-catharina-suecica",
