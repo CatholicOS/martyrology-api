@@ -9,7 +9,8 @@
         { "kind": "person", "where": "text", "start": 37, "end": 47, "check": "4b9b016f", "name": "Stale", "qid": null }
       ],
       "mr:0102-argeus-et-socii": [
-        { "kind": "person", "where": { "footnote": 1 }, "start": 22, "end": 31, "check": "1ccf99a1", "name": "Narcissus", "qid": "Q1" },
+        { "kind": "person", "where": { "footnote": 1 }, "start": 22, "end": 31, "check": "1ccf99a1", "name": "Narcissus", "qid": "Q1",
+          "others": [{ "name": "Narcissus", "n": 2, "qid": "Q2" }] },
         { "kind": "person", "where": { "footnote": 2 }, "start": 0, "end": 6, "check": "18ed8b6c", "name": "Nemo", "qid": null }
       ],
       "mr:0109-nusquam": [

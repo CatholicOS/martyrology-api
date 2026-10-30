@@ -41,7 +41,8 @@ NARCISSUS = {
     "name": "Narcissus",
     "n": None,
     "roles": None,
-    "others": None,
+    # the fixture's mark names a second Narcissus too, as one word can name two persons
+    "others": [{"name": "Narcissus", "n": 2, "qid": "Q2"}],
     "form": "Narcissus",
 }
 

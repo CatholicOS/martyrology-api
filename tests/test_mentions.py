@@ -108,6 +108,11 @@ def test_served_keeps_the_other_persons_a_mark_names():
     assert out[1].model_dump()["others"] is None  # always present, null when it names one person
 
 
+def test_served_gives_an_empty_list_of_other_persons_as_null():
+    alone = _m("Felix", start=7, end=12, name="Felix", others=[])
+    assert served([alone], "Natale Felix.", [])[0].others is None
+
+
 def test_served_gives_a_place_no_other_persons():
     rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", others=[{"name": "Roma"}])
     assert served([rome], "Natale Romæ", [])[0].others is None
