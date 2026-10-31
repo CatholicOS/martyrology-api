@@ -339,18 +339,18 @@
    "subject_la": "Translatio sancti Stephani Protomartyris",
    "subject_en": "Translation of Saint Stephen the First Martyr"
   },
-  "5-8-2": "mr:0508-acacius",
+  "5-8-2": "mr:0508-acacius-byzantii",
   "5-9-7": {
    "coin": "translatio-nicolai",
    "subject_la": "Translatio sancti Nicolai Episcopi",
    "subject_en": "Translation of Saint Nicholas"
   },
   "5-10-0": "mr:0510-antoninus",
-  "5-11-0": "mr:0511-anthimus",
-  "5-11-7": "mr:0511-maiolus",
+  "5-11-0": "mr:0511-anthimus-romae",
+  "5-11-7": "mr:0511-maiolus-cluniacensis",
   "5-11-9": "mr:0511-franciscus-de-geronimo",
   "5-12-0": "mr:0512-nereus-et-achilleus",
-  "5-12-1": "mr:0512-pancratius",
+  "5-12-1": "mr:0512-pancratius-romae",
   "5-13-5": {
    "coin": "ioannes-silentiarius",
    "subject_la": "Sanctus Ioannes Silentiarius",
@@ -384,13 +384,13 @@
   "5-17-3": "mr:0517-heraclius-et-paulus",
   "5-18-6": "mr:0518-felix-de-cantalicio",
   "5-19-1": "mr:0519-pudentiana",
-  "5-19-7": "mr:0519-ivo",
+  "5-19-7": "mr:0519-ivo-trecorii",
   "5-21-7": {
    "coin": "episcopi-et-presbyteri-alexandriae",
    "subject_la": "Sancti Episcopi et Presbyteri",
    "subject_en": "Holy Bishops and Priests"
   },
-  "5-22-8": "mr:0522-atto",
+  "5-22-8": "mr:0522-atto-pistorii",
   "5-22-9": {
    "coin": "helena",
    "subject_la": "Sancta Helena",
@@ -401,7 +401,7 @@
    "subject_la": "Sanctus Mercurialis",
    "subject_en": "Saint Mercurialis"
   },
-  "5-25-8": "mr:0525-leo",
+  "5-25-8": "mr:0525-leo-mentuniaci",
   "5-25-9": {
    "coin": "translatio-francisci",
    "subject_la": "Translatio sancti Francisci",
@@ -1321,7 +1321,7 @@
   "4-30-8": "mr:0430-severus",
   "5-2-2": "mr:0502-hesperus-et-zoes",
   "5-4-2": "mr:0504-triginta-novem-martyres-phaenonis",
-  "5-5-9": "mr:0505-hilarius",
+  "5-5-9": "mr:0505-hilarius-lirinensis",
   "5-7-5": "mr:0507-benedictus-ii",
   "5-11-2": "mr:0511-maximus-et-socii",
   "5-11-8": "mr:0511-illuminatus",

@@ -302,7 +302,7 @@
    "entry": "ibid. 9. Cartheiæ, & Buphasius, Cartheiæ, & Euphrasius,"
   }
  ],
- "mr:0517-restituta": [
+ "mr:0517-restituta-africae": [
   {
    "kind": "replace",
    "printed": "Neapoli in Campania",
@@ -311,7 +311,7 @@
    "entry": "245.10. dele, Neapoli in Campania. & pone, Eodem die."
   }
  ],
- "mr:0527-iulius": [
+ "mr:0527-iulius-dorostori": [
   {
    "kind": "add",
    "printed": "Mysia",
