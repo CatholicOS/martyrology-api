@@ -3,13 +3,13 @@
  "edition": "martyrologium_romanum_1914_en_unofficial",
  "errata": [
   {
-   "id": "mr:0903-basilissa",
+   "id": "mr:0903-basilissa-nicomediae",
    "source": "Basillissa",
    "correction": "Basilissa",
    "note": "doubled l in the saint's name"
   },
   {
-   "id": "mr:0904-rosalia",
+   "id": "mr:0904-rosalia-panormi",
    "source": "Charlemange",
    "correction": "Charlemagne",
    "note": "misspelling of Charlemagne"
