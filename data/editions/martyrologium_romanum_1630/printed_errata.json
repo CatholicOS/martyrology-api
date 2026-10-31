@@ -152,7 +152,7 @@
    "entry": "160.15. Aureliani, Aurelianis."
   }
  ],
- "mr:0403-richardus": [
+ "mr:0403-richardus-cicestriae": [
   {
    "kind": "replace",
    "printed": "Cicestrensis",
@@ -188,7 +188,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0411-barsanuphius": [
+ "mr:0411-barsanuphius-gazae": [
   {
    "kind": "replace",
    "printed": "anachoretæ",
@@ -197,7 +197,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0416-fructuosus": [
+ "mr:0416-fructuosus-dumiensis": [
   {
    "kind": "replace",
    "printed": "Brachăræ",
@@ -243,7 +243,7 @@
    "entry": "204.7. post, intra, dele, vnum."
   }
  ],
- "mr:0428-vitalis": [
+ "mr:0428-vitalis-ravennae": [
   {
    "kind": "replace",
    "printed": "hone state",
