@@ -905,7 +905,7 @@
   },
   "10-9-6": "mr:1009-andronicus-et-athanasia",
   "10-10-3": "mr:1010-victor-et-mallosus",
-  "10-11-6": "mr:1011-canicus",
+  "10-11-6": "mr:1011-canicus-ossoriae",
   "10-11-10": {
    "coin": "placidia",
    "subject_la": "Sancta Placidia",
@@ -958,7 +958,7 @@
    "subject_la": "Sancta Irene",
    "subject_en": "Saint Irene"
   },
-  "10-22-7": "mr:1022-mallonus",
+  "10-22-7": "mr:1022-mallonus-rothomagi",
   "10-24-5": {
    "coin": "marcus",
    "subject_la": "Sanctus Marcus",
@@ -980,7 +980,7 @@
    "subject_la": "Sanctus Quodvultdeus",
    "subject_en": "Saint Quodvultdeus"
   },
-  "10-26-6": "mr:1026-fulcus",
+  "10-26-6": "mr:1026-fulcus-papiae",
   "10-26-7": {
    "coin": "bernwardus",
    "subject_la": "Sanctus Bernwardus",
@@ -992,7 +992,7 @@
    "subject_en": "Saint Gaudiosus"
   },
   "10-31-1": "mr:1031-nemesius-et-lucilla",
-  "10-31-6": "mr:1031-wolfgangus",
+  "10-31-6": "mr:1031-wolfgangus-ratisbonae",
   "11-1-0": "mr:1101-omnes-sancti",
   "11-2-0": "mr:1102-omnium-fidelium-defunctorum",
   "11-2-10": "mr:1102-marcianus",
