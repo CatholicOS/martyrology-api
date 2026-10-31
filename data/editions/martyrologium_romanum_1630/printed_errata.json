@@ -455,7 +455,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0818-agapitus": [
+ "mr:0818-agapitus-praenestis": [
   {
    "kind": "replace",
    "printed": "Imperatorio",
@@ -464,7 +464,7 @@
    "entry": "404.6. Imperatorio, Imperatoris."
   }
  ],
- "mr:0819-donatus": [
+ "mr:0819-donatus-sistariensis": [
   {
    "kind": "replace",
    "printed": "anachoreticam",
@@ -491,7 +491,7 @@
    "entry": "421.7. cruciat, excruciati."
   }
  ],
- "mr:0828-hermes": [
+ "mr:0828-hermes-romae": [
   {
    "kind": "replace",
    "printed": "custoditę",

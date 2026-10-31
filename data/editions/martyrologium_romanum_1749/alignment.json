@@ -4885,15 +4885,15 @@
    "method": "override",
    "score": null
   },
-  "mr:0801-eusebius": {
+  "mr:0801-eusebius-vercellarum": {
    "method": "same-day",
    "score": 1.98
   },
-  "mr:0801-felix": {
+  "mr:0801-felix-gerundae": {
    "method": "same-day",
    "score": 1.95
   },
-  "mr:0801-ethelwoldus": {
+  "mr:0801-ethelwoldus-vintoniae": {
    "method": "same-day",
    "score": 2.15
   },
@@ -4909,7 +4909,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0802-rutilius": {
+  "mr:0802-rutilius-africae": {
    "method": "override",
    "score": null
   },
@@ -4917,7 +4917,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0803-asprenas": {
+  "mr:0803-asprenas-neapoli": {
    "method": "same-day",
    "score": 2.4
   },
@@ -4925,7 +4925,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0803-euphronius": {
+  "mr:0803-euphronius-augustoduni": {
    "method": "override",
    "score": null
   },
@@ -4941,7 +4941,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0804-eleutherius": {
+  "mr:0804-eleutherius-tarsiae": {
    "method": "same-day",
    "score": 2.05
   },
@@ -4949,7 +4949,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0804-euphronius": {
+  "mr:0804-euphronius-turonum": {
    "method": "override",
    "score": null
   },
@@ -4957,11 +4957,11 @@
    "method": "same-day",
    "score": 1.67
   },
-  "mr:0805-memmius": {
+  "mr:0805-memmius-catalauni": {
    "method": "same-day",
    "score": 2.12
   },
-  "mr:0805-emigdius": {
+  "mr:0805-emigdius-asculi": {
    "method": "same-day",
    "score": 1.77
   },
@@ -4973,11 +4973,11 @@
    "method": "override",
    "score": null
   },
-  "mr:0805-cassianus": {
+  "mr:0805-cassianus-augustoduni": {
    "method": "override",
    "score": null
   },
-  "mr:0805-nonna": {
+  "mr:0805-nonna-nazianzi": {
    "method": "override",
    "score": null
   },
@@ -4985,7 +4985,7 @@
    "method": "same-day",
    "score": 0.86
   },
-  "mr:0806-hormisda": {
+  "mr:0806-hormisda-papa": {
    "method": "override",
    "score": null
   },
@@ -5005,11 +5005,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0807-victricius": {
+  "mr:0807-victricius-rothomagi": {
    "method": "same-day",
    "score": 2.0
   },
-  "mr:0807-donatianus": {
+  "mr:0807-donatianus-catalauni": {
    "method": "override",
    "score": null
   },
@@ -5017,7 +5017,7 @@
    "method": "same-day",
    "score": 1.9
   },
-  "mr:0808-marinus": {
+  "mr:0808-marinus-tarsi": {
    "method": "same-day",
    "score": 2.32
   },
@@ -5025,15 +5025,15 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0808-aemilianus": {
+  "mr:0808-aemilianus-cyzici": {
    "method": "same-day",
    "score": 2.96
   },
-  "mr:0808-severus": {
+  "mr:0808-severus-viennae": {
    "method": "override",
    "score": null
   },
-  "mr:0809-romanus": {
+  "mr:0809-romanus-romae": {
    "method": "same-day",
    "score": 1.92
   },
@@ -5045,7 +5045,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0810-laurentius": {
+  "mr:0810-laurentius-romae": {
    "method": "same-day",
    "score": 1.57
   },
@@ -5053,15 +5053,15 @@
    "method": "same-day",
    "score": 3.04
   },
-  "mr:0811-tiburtius": {
+  "mr:0811-tiburtius-romae": {
    "method": "same-day",
    "score": 2.03
   },
-  "mr:0811-susanna": {
+  "mr:0811-susanna-romae": {
    "method": "same-day",
    "score": 2.04
   },
-  "mr:0811-clara": {
+  "mr:0811-clara-assisii": {
    "method": "same-day",
    "score": 1.69
   },
@@ -5069,19 +5069,19 @@
    "method": "same-day",
    "score": 2.34
   },
-  "mr:0811-rufinus": {
+  "mr:0811-rufinus-asisii": {
    "method": "same-day",
    "score": 1.83
   },
-  "mr:0811-taurinus": {
+  "mr:0811-taurinus-ebroicensis": {
    "method": "same-day",
    "score": 2.14
   },
-  "mr:0811-gaugericus": {
+  "mr:0811-gaugericus-cameracensis": {
    "method": "same-day",
    "score": 1.69
   },
-  "mr:0811-equitius": {
+  "mr:0811-equitius-valeriae": {
    "method": "override",
    "score": null
   },
@@ -5109,7 +5109,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0812-herculanus": {
+  "mr:0812-herculanus-brixiae": {
    "method": "same-day",
    "score": 2.72
   },
@@ -5117,7 +5117,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0813-cassianus": {
+  "mr:0813-cassianus-fori-cornelii": {
    "method": "same-day",
    "score": 1.78
   },
@@ -5125,7 +5125,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0813-vigbertus": {
+  "mr:0813-vigbertus-friteslariae": {
    "method": "same-day",
    "score": 1.98
   },
@@ -5137,11 +5137,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0814-eusebius": {
+  "mr:0814-eusebius-romae": {
    "method": "same-day",
    "score": 1.81
   },
-  "mr:0814-marcellus": {
+  "mr:0814-marcellus-apameae": {
    "method": "same-day",
    "score": 3.43
   },
@@ -5149,7 +5149,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0814-ursicinus": {
+  "mr:0814-ursicinus-illyrici": {
    "method": "same-day",
    "score": 2.12
   },
@@ -5161,15 +5161,15 @@
    "method": "same-day",
    "score": 1.22
   },
-  "mr:0815-hyacinthus": {
+  "mr:0815-hyacinthus-cracoviae": {
    "method": "same-day",
    "score": 1.84
   },
-  "mr:0815-stephanus": {
+  "mr:0815-stephanus-albae-regalis": {
    "method": "same-day",
    "score": 2.24
   },
-  "mr:0815-tarsicius": {
+  "mr:0815-tarsicius-romae": {
    "method": "same-day",
    "score": 1.35
   },
@@ -5193,11 +5193,11 @@
    "method": "override",
    "score": null
   },
-  "mr:0816-arsacius": {
+  "mr:0816-arsacius-nicomediae": {
    "method": "same-day",
    "score": 1.85
   },
-  "mr:0816-rochus": {
+  "mr:0816-rochus-langobardiae": {
    "method": "override",
    "score": null
   },
@@ -5205,11 +5205,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0817-myron": {
+  "mr:0817-myron-cyzici": {
    "method": "same-day",
    "score": 3.11
   },
-  "mr:0817-mamas": {
+  "mr:0817-mamas-caesareae": {
    "method": "same-day",
    "score": 1.59
   },
@@ -5217,7 +5217,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0817-eusebius": {
+  "mr:0817-eusebius-papa": {
    "method": "same-day",
    "score": 1.69
   },
@@ -5225,15 +5225,15 @@
    "method": "override",
    "score": null
   },
-  "mr:0818-agapitus": {
+  "mr:0818-agapitus-praenestis": {
    "method": "same-day",
    "score": 1.81
   },
-  "mr:0818-firminus": {
+  "mr:0818-firminus-metarum": {
    "method": "same-day",
    "score": 3.09
   },
-  "mr:0818-helena": {
+  "mr:0818-helena-romae": {
    "method": "same-day",
    "score": 1.66
   },
@@ -5249,19 +5249,19 @@
    "method": "same-day",
    "score": 2.21
   },
-  "mr:0819-timotheus": {
+  "mr:0819-timotheus-gazae": {
    "method": "override",
    "score": null
   },
-  "mr:0819-magnus": {
+  "mr:0819-magnus-fabrateriae": {
    "method": "override",
    "score": null
   },
-  "mr:0819-ludovicus": {
+  "mr:0819-ludovicus-tolosae": {
    "method": "same-day",
    "score": 1.59
   },
-  "mr:0819-donatus": {
+  "mr:0819-donatus-sistariensis": {
    "method": "same-day",
    "score": 1.95
   },
@@ -5273,11 +5273,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0819-sebaldus": {
+  "mr:0819-sebaldus-norimbergae": {
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0820-bernardus": {
+  "mr:0820-bernardus-claravallensis": {
    "method": "same-day",
    "score": 1.82
   },
@@ -5293,11 +5293,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0820-philibertus": {
+  "mr:0820-philibertus-nigri-monasterii": {
    "method": "same-day",
    "score": 1.95
   },
-  "mr:0820-maximus": {
+  "mr:0820-maximus-cainonis": {
    "method": "same-day",
    "score": 1.51
   },
@@ -5305,7 +5305,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0821-cyriaca": {
+  "mr:0821-cyriaca-romae": {
    "method": "same-day",
    "score": 2.15
   },
@@ -5313,11 +5313,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0821-luxorius": {
+  "mr:0821-luxorius-fori-traiani": {
    "method": "same-day",
    "score": 2.07
   },
-  "mr:0821-privatus": {
+  "mr:0821-privatus-gabalorum": {
    "method": "same-day",
    "score": 1.71
   },
@@ -5325,11 +5325,11 @@
    "method": "same-day",
    "score": 1.92
   },
-  "mr:0821-euprepius": {
+  "mr:0821-euprepius-veronae": {
    "method": "same-day",
    "score": 2.31
   },
-  "mr:0821-quadratus": {
+  "mr:0821-quadratus-uticae": {
    "method": "same-day",
    "score": 1.9
   },
@@ -5337,7 +5337,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0822-timotheus": {
+  "mr:0822-timotheus-romae": {
    "method": "same-day",
    "score": 1.96
   },
@@ -5345,7 +5345,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0822-symphorianus": {
+  "mr:0822-symphorianus-augustoduni": {
    "method": "same-day",
    "score": 1.81
   },
@@ -5377,11 +5377,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0823-luppus": {
+  "mr:0823-luppus-novarum": {
    "method": "override",
    "score": null
   },
-  "mr:0823-zachaeus": {
+  "mr:0823-zachaeus-hierosolymorum": {
    "method": "same-day",
    "score": 2.73
   },
@@ -5389,7 +5389,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0823-flavianus": {
+  "mr:0823-flavianus-augustoduni": {
    "method": "same-day",
    "score": 2.47
   },
@@ -5397,7 +5397,7 @@
    "method": "same-day",
    "score": 1.76
   },
-  "mr:0824-rosa": {
+  "mr:0824-rosa-limae": {
    "method": "same-day",
    "score": 2.13
   },
@@ -5409,7 +5409,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0824-tatio": {
+  "mr:0824-tatio-claudiopoli": {
    "method": "same-day",
    "score": 2.01
   },
@@ -5421,7 +5421,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0824-audoenus": {
+  "mr:0824-audoenus-rothomagensis": {
    "method": "override",
    "score": null
   },
@@ -5441,7 +5441,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0825-genesius": {
+  "mr:0825-genesius-arelatis": {
    "method": "same-day",
    "score": 1.84
   },
@@ -5449,11 +5449,11 @@
    "method": "override",
    "score": null
   },
-  "mr:0825-geruntius": {
+  "mr:0825-geruntius-italicae": {
    "method": "same-day",
    "score": 2.35
   },
-  "mr:0825-gregorius": {
+  "mr:0825-gregorius-ultraiecti": {
    "method": "same-day",
    "score": 1.55
   },
@@ -5473,7 +5473,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0826-alexander": {
+  "mr:0826-alexander-bergomi": {
    "method": "same-day",
    "score": 2.04
   },
@@ -5481,7 +5481,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0826-victor": {
+  "mr:0826-victor-caesareae": {
    "method": "same-day",
    "score": 2.24
   },
@@ -5493,11 +5493,11 @@
    "method": "override",
    "score": null
   },
-  "mr:0827-narnus": {
+  "mr:0827-narnus-bergomi": {
    "method": "same-day",
    "score": 1.13
   },
-  "mr:0827-rufus": {
+  "mr:0827-rufus-capuae": {
    "method": "override",
    "score": null
   },
@@ -5513,7 +5513,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0827-caesarius": {
+  "mr:0827-caesarius-arelatis": {
    "method": "same-day",
    "score": 1.58
   },
@@ -5521,39 +5521,39 @@
    "method": "override",
    "score": null
   },
-  "mr:0827-ioannes": {
+  "mr:0827-ioannes-papiae": {
    "method": "same-day",
    "score": 2.4
   },
-  "mr:0827-licerius": {
+  "mr:0827-licerius-conserani": {
    "method": "same-day",
    "score": 2.03
   },
-  "mr:0827-poemen": {
+  "mr:0827-poemen-thebaidis": {
    "method": "override",
    "score": null
   },
-  "mr:0828-augustinus": {
+  "mr:0828-augustinus-hipponensis": {
    "method": "same-day",
    "score": 1.63
   },
-  "mr:0828-hermes": {
+  "mr:0828-hermes-romae": {
    "method": "same-day",
    "score": 1.71
   },
-  "mr:0828-iulianus": {
+  "mr:0828-iulianus-brivatis": {
    "method": "same-day",
    "score": 2.3
   },
-  "mr:0828-pelagius": {
+  "mr:0828-pelagius-constantiae": {
    "method": "same-day",
    "score": 2.18
   },
-  "mr:0828-alexander": {
+  "mr:0828-alexander-constantinopoli": {
    "method": "same-day",
    "score": 2.21
   },
-  "mr:0828-vivianus": {
+  "mr:0828-vivianus-santonum": {
    "method": "same-day",
    "score": 3.42
   },
@@ -5565,7 +5565,7 @@
    "method": "same-day",
    "score": 1.65
   },
-  "mr:0829-sabina": {
+  "mr:0829-sabina-romae": {
    "method": "same-day",
    "score": 1.91
   },
@@ -5573,19 +5573,19 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0829-adelphus": {
+  "mr:0829-adelphus-metarum": {
    "method": "same-day",
    "score": 3.11
   },
-  "mr:0829-medericus": {
+  "mr:0829-medericus-augustodunensis": {
    "method": "same-day",
    "score": 2.22
   },
-  "mr:0829-sebbus": {
+  "mr:0829-sebbus-londinii": {
    "method": "override",
    "score": null
   },
-  "mr:0829-basilla": {
+  "mr:0829-basilla-sirmii": {
    "method": "override",
    "score": null
   },
@@ -5605,19 +5605,19 @@
    "method": "same-day",
    "score": 2.11
   },
-  "mr:0830-bononius": {
+  "mr:0830-bononius-lucedii": {
    "method": "same-day",
    "score": 2.08
   },
-  "mr:0830-pammachius": {
+  "mr:0830-pammachius-romae": {
    "method": "override",
    "score": null
   },
-  "mr:0830-fantinus": {
+  "mr:0830-fantinus-iunior": {
    "method": "same-day",
    "score": 2.0
   },
-  "mr:0830-fiacrius": {
+  "mr:0830-fiacrius-meldensis": {
    "method": "override",
    "score": null
   },
@@ -5625,7 +5625,7 @@
    "method": "same-day",
    "score": 1.96
   },
-  "mr:0831-paulinus": {
+  "mr:0831-paulinus-trevirorum": {
    "method": "override",
    "score": null
   },
@@ -5633,11 +5633,11 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0831-aidanus": {
+  "mr:0831-aidanus-lindisfarnae": {
    "method": "same-day",
    "score": 1.26
   },
-  "mr:0831-aristidis": {
+  "mr:0831-aristidis-athenarum": {
    "method": "override",
    "score": null
   },
@@ -9625,7 +9625,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0804-ia": {
+  "mr:0804-ia-persidis": {
    "method": "override",
    "score": null
   },
@@ -9633,7 +9633,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0818-leo": {
+  "mr:0818-leo-myrae": {
    "method": "override",
    "score": null
   },
@@ -10533,7 +10533,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0802-maximus": {
+  "mr:0802-maximus-patavii": {
    "method": "override",
    "score": null
   },
@@ -10541,7 +10541,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0803-petrus": {
+  "mr:0803-petrus-anagniae": {
    "method": "override",
    "score": null
   },
@@ -10557,11 +10557,11 @@
    "method": "override",
    "score": null
   },
-  "mr:0805-oswaldus": {
+  "mr:0805-oswaldus-salopiensis": {
    "method": "override",
    "score": null
   },
-  "mr:0805-paridis": {
+  "mr:0805-paridis-theani": {
    "method": "override",
    "score": null
   },
@@ -10589,7 +10589,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0813-radegundis": {
+  "mr:0813-radegundis-pictaviensis": {
    "method": "override",
    "score": null
   },
@@ -10641,7 +10641,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0830-petrus": {
+  "mr:0830-petrus-trebiae": {
    "method": "override",
    "score": null
   },
@@ -12825,19 +12825,19 @@
    "method": "override",
    "score": null
   },
-  "mr:0806-dominicus": {
+  "mr:0806-dominicus-bononiae": {
    "method": "override",
    "score": null
   },
-  "mr:0812-euplus": {
+  "mr:0812-euplus-catanae": {
    "method": "override",
    "score": null
   },
-  "mr:0815-alypius": {
+  "mr:0815-alypius-thagastensis": {
    "method": "override",
    "score": null
   },
-  "mr:0825-mena": {
+  "mr:0825-mena-constantinopoli": {
    "method": "override",
    "score": null
   },

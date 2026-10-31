@@ -662,7 +662,7 @@
    "subject_la": "Sanctus Protasius",
    "subject_en": "Saint Protasius"
   },
-  "8-5-7": "mr:0805-paridis",
+  "8-5-7": "mr:0805-paridis-theani",
   "8-8-5": {
    "coin": "myron",
    "subject_la": "Sanctus Myron",
@@ -678,13 +678,13 @@
    "subject_la": "Sancta Digna",
    "subject_en": "Saint Digna"
   },
-  "8-12-1": "mr:0812-euplus",
+  "8-12-1": "mr:0812-euplus-catanae",
   "8-14-3": {
    "coin": "demetrius",
    "subject_la": "Sanctus Demetrius",
    "subject_en": "Saint Demetrius"
   },
-  "8-15-2": "mr:0815-alypius",
+  "8-15-2": "mr:0815-alypius-thagastensis",
   "8-16-9": {
    "coin": "serena",
    "subject_la": "Sancta Serena",
@@ -710,22 +710,22 @@
    "subject_la": "Sanctus Paternus",
    "subject_en": "Saint Paternus"
   },
-  "8-23-7": "mr:0823-luppus",
+  "8-23-7": "mr:0823-luppus-novarum",
   "8-23-12": "mr:0823-sidonius-apollinaris",
-  "8-24-8": "mr:0824-audoenus",
+  "8-24-8": "mr:0824-audoenus-rothomagensis",
   "8-24-9": {
    "coin": "patricius",
    "subject_la": "Sanctus Patricius",
    "subject_en": "Saint Patrick"
   },
-  "8-25-7": "mr:0825-mena",
+  "8-25-7": "mr:0825-mena-constantinopoli",
   "8-26-8": {
    "coin": "felix",
    "subject_la": "Sanctus Felix",
    "subject_en": "Saint Felix"
   },
-  "8-27-10": "mr:0827-poemen",
-  "8-29-7": "mr:0829-medericus",
+  "8-27-10": "mr:0827-poemen-thebaidis",
+  "8-29-7": "mr:0829-medericus-augustodunensis",
   "8-29-10": {
    "coin": "sabina-virgo",
    "subject_la": "Sancta Sabina",
@@ -1360,8 +1360,8 @@
   "8-4-0": "mr:0804-dominicus",
   "8-5-2": "mr:0805-afra",
   "8-6-6": "mr:0806-iacobus",
-  "8-7-8": "mr:0807-albertus",
-  "8-9-1": "mr:0809-romanus",
+  "8-7-8": "mr:0807-albertus-saxoferrati",
+  "8-9-1": "mr:0809-romanus-romae",
   "8-12-7": "mr:0812-eusebius",
   "8-13-2": "mr:0813-cassianus-tuderti",
   "8-13-3": "mr:0813-centolla-et-helena",

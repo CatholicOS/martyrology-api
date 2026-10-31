@@ -8135,19 +8135,19 @@
    "note": "a"
   }
  ],
- "mr:0801-ethelwoldus": [
+ "mr:0801-ethelwoldus-vintoniae": [
   {
    "text": "T. X. A. 984. n. 5.",
    "note": "l"
   }
  ],
- "mr:0801-eusebius": [
+ "mr:0801-eusebius-vercellarum": [
   {
    "text": "T. 3. A. 311 num. 42. A. 327. nu. 20. A. 318. n. 22. & An. 355. T. 4. A. 371 nu. 116. & seq. & T. 5. A. 397. n. 52",
    "note": "h"
   }
  ],
- "mr:0801-felix": [
+ "mr:0801-felix-gerundae": [
   {
    "text": "Cir. A. 390.",
    "note": "g"
@@ -8171,13 +8171,13 @@
    "note": "k"
   }
  ],
- "mr:0802-maximus": [
+ "mr:0802-maximus-patavii": [
   {
    "text": "cir. A. 156.",
    "note": "d"
   }
  ],
- "mr:0802-rutilius": [
+ "mr:0802-rutilius-africae": [
   {
    "text": "T. 2. A. 205. n. 18.",
    "note": "c"
@@ -8195,13 +8195,13 @@
    "note": "b"
   }
  ],
- "mr:0803-asprenas": [
+ "mr:0803-asprenas-neapoli": [
   {
    "text": "T. 1. An. 46. n. 2.",
    "note": "d"
   }
  ],
- "mr:0803-euphronius": [
+ "mr:0803-euphronius-augustoduni": [
   {
    "text": "T. 7. A. 570. nu. 23. Conc. Lud.",
    "note": "e"
@@ -8231,7 +8231,7 @@
    "note": "c"
   }
  ],
- "mr:0803-petrus": [
+ "mr:0803-petrus-anagniae": [
   {
    "text": "T. 11. Ann. 1071. n. 33.",
    "note": "f"
@@ -8259,19 +8259,19 @@
    "note": "a"
   }
  ],
- "mr:0804-eleutherius": [
+ "mr:0804-eleutherius-tarsiae": [
   {
    "text": "T. 3. A. 311. n. 19.",
    "note": "d"
   }
  ],
- "mr:0804-euphronius": [
+ "mr:0804-euphronius-turonum": [
   {
    "text": "T.7. A. 559. n. 16. obitus A. 574. n. 10.",
    "note": "h"
   }
  ],
- "mr:0804-ia": [
+ "mr:0804-ia-persidis": [
   {
    "text": "cir. A. 343.",
    "note": "e"
@@ -8295,7 +8295,7 @@
    "note": "d"
   }
  ],
- "mr:0805-cassianus": [
+ "mr:0805-cassianus-augustoduni": [
   {
    "text": "ante A. 400",
    "note": "i"
@@ -8307,7 +8307,7 @@
    "note": "a"
   }
  ],
- "mr:0805-emigdius": [
+ "mr:0805-emigdius-asculi": [
   {
    "text": "T.3.A.309. nu. 4.",
    "note": "e"
@@ -8319,25 +8319,25 @@
    "note": "f"
   }
  ],
- "mr:0805-memmius": [
+ "mr:0805-memmius-catalauni": [
   {
    "text": "T.1 An.46. n. 2.",
    "note": "h"
   }
  ],
- "mr:0805-nonna": [
+ "mr:0805-nonna-nazianzi": [
   {
    "text": "Nazianz. natus est A. 324. vt putat Baron. T.3.A.340 n.36.",
    "note": "m"
   }
  ],
- "mr:0805-oswaldus": [
+ "mr:0805-oswaldus-salopiensis": [
   {
    "text": "T.8.A.642. n.4. & seq.",
    "note": "l"
   }
  ],
- "mr:0805-paridis": [
+ "mr:0805-paridis-theani": [
   {
    "text": "Obijt ann. 346. ex offic. Eccl. Thean.",
    "note": "k"
@@ -8355,7 +8355,7 @@
    "note": "c"
   }
  ],
- "mr:0806-hormisda": [
+ "mr:0806-hormisda-papa": [
   {
    "text": "T 7 A. 518. pluries obi tus A. 523. n. 3. & seq.",
    "note": "e"
@@ -8407,7 +8407,7 @@
    "note": "f"
   }
  ],
- "mr:0807-donatianus": [
+ "mr:0807-donatianus-catalauni": [
   {
    "text": "cir. A. 70.",
    "note": "h"
@@ -8431,13 +8431,13 @@
    "note": "c"
   }
  ],
- "mr:0807-victricius": [
+ "mr:0807-victricius-rothomagi": [
   {
    "text": "T. 5. A. 396 n. 15. & A. 404. n.126.",
    "note": "g"
   }
  ],
- "mr:0808-aemilianus": [
+ "mr:0808-aemilianus-cyzici": [
   {
    "text": "T.9.A 731. nu.7. & A. 814.n.11.",
    "note": "f"
@@ -8455,13 +8455,13 @@
    "note": "e"
   }
  ],
- "mr:0808-marinus": [
+ "mr:0808-marinus-tarsi": [
   {
    "text": "T. 2. A. 285. n. 14.",
    "note": "c"
   }
  ],
- "mr:0808-severus": [
+ "mr:0808-severus-viennae": [
   {
    "text": "cir. A. 452.",
    "note": "h"
@@ -8491,7 +8491,7 @@
    "note": "e"
   }
  ],
- "mr:0809-romanus": [
+ "mr:0809-romanus-romae": [
   {
    "text": "An. 261.",
    "note": "b"
@@ -8521,7 +8521,7 @@
    "note": "g"
   }
  ],
- "mr:0810-laurentius": [
+ "mr:0810-laurentius-romae": [
   {
    "text": "T. 2. A. 261. n. 6. & seq.",
    "note": "a"
@@ -8553,37 +8553,37 @@
    "note": "i"
   }
  ],
- "mr:0811-equitius": [
+ "mr:0811-equitius-valeriae": [
   {
    "text": "T. 6. A. 504. n. 11. & seq",
    "note": "h"
   }
  ],
- "mr:0811-gaugericus": [
+ "mr:0811-gaugericus-cameracensis": [
   {
    "text": "T.8.A. 615. n. 12.",
    "note": "g"
   }
  ],
- "mr:0811-rufinus": [
+ "mr:0811-rufinus-asisii": [
   {
    "text": "cir. A. 237.",
    "note": "e"
   }
  ],
- "mr:0811-susanna": [
+ "mr:0811-susanna-romae": [
   {
    "text": "T.2.A.294. nu 1. & seq & An.295. n. 6. & seq.",
    "note": "c"
   }
  ],
- "mr:0811-taurinus": [
+ "mr:0811-taurinus-ebroicensis": [
   {
    "text": "T.1.An. 95. n. 7.",
    "note": "f"
   }
  ],
- "mr:0811-tiburtius": [
+ "mr:0811-tiburtius-romae": [
   {
    "text": "T.2.A. 286 n. 5. & seq & a nu. 16 & infra.",
    "note": "a"
@@ -8601,7 +8601,7 @@
    "note": "a"
   }
  ],
- "mr:0812-euplus": [
+ "mr:0812-euplus-catanae": [
   {
    "text": "Fusius T. 2. A. 303. nu. 146. & seq.",
    "note": "b"
@@ -8619,7 +8619,7 @@
    "note": "g"
   }
  ],
- "mr:0812-herculanus": [
+ "mr:0812-herculanus-brixiae": [
   {
    "text": "Capreolus cir. A. 363. sed Ferrar. non placet.",
    "note": "k"
@@ -8663,13 +8663,13 @@
    "note": "f"
   }
  ],
- "mr:0813-radegundis": [
+ "mr:0813-radegundis-pictaviensis": [
   {
    "text": "T.7 A.317 nu.98. & a. 559. nu. 23. & a. 566. n. 43.&seq.",
    "note": "h"
   }
  ],
- "mr:0813-vigbertus": [
+ "mr:0813-vigbertus-friteslariae": [
   {
    "text": "T.8. A.695 n.1. obitus A.697. n.11",
    "note": "g"
@@ -8687,25 +8687,25 @@
    "note": "f"
   }
  ],
- "mr:0814-eusebius": [
+ "mr:0814-eusebius-romae": [
   {
    "text": "T.3.A.357 nu. 45.",
    "note": "b"
   }
  ],
- "mr:0814-marcellus": [
+ "mr:0814-marcellus-apameae": [
   {
    "text": "T.2.A.131. n. 4. T.4.A.389. nu. 106.",
    "note": "e"
   }
  ],
- "mr:0814-ursicinus": [
+ "mr:0814-ursicinus-illyrici": [
   {
    "text": "T.3. A 308 n. 27.",
    "note": "c"
   }
  ],
- "mr:0815-alypius": [
+ "mr:0815-alypius-thagastensis": [
   {
    "text": "T.4.A.385. n.2.& seq. & T.5 An. 409. n. 16. & seq.",
    "note": "d"
@@ -8723,7 +8723,7 @@
    "note": "a"
   }
  ],
- "mr:0815-tarsicius": [
+ "mr:0815-tarsicius-romae": [
   {
    "text": "T. 2. A. 260. n. 5.",
    "note": "b"
@@ -8735,7 +8735,7 @@
    "note": "e"
   }
  ],
- "mr:0816-arsacius": [
+ "mr:0816-arsacius-nicomediae": [
   {
    "text": "T. 3. A. 316 n. 35. & A. 324. n. 101. & An. 358. nu. 5.",
    "note": "h"
@@ -8759,7 +8759,7 @@
    "note": "a"
   }
  ],
- "mr:0816-rochus": [
+ "mr:0816-rochus-langobardiae": [
   {
    "text": "obiit ann. 1327.",
    "note": "i"
@@ -8799,13 +8799,13 @@
    "note": "b"
   }
  ],
- "mr:0817-mamas": [
+ "mr:0817-mamas-caesareae": [
   {
    "text": "T. 2. A. 275. nu 8.",
    "note": "c"
   }
  ],
- "mr:0817-myron": [
+ "mr:0817-myron-cyzici": [
   {
    "text": "T. 2. A. 254 n. 26.",
    "note": "d"
@@ -8817,19 +8817,19 @@
    "note": "f"
   }
  ],
- "mr:0818-agapitus": [
+ "mr:0818-agapitus-praenestis": [
   {
    "text": "T.2. A.275 n. 5.",
    "note": "a"
   }
  ],
- "mr:0818-firminus": [
+ "mr:0818-firminus-metarum": [
   {
    "text": "T.6. A. 506 nn. 3.",
    "note": "f"
   }
  ],
- "mr:0818-helena": [
+ "mr:0818-helena-romae": [
   {
    "text": "To. 3. plura præcipue & An. 306. n. 12. & seq. T. 3. A. 326 n. 39. & 59. & seq.",
    "note": "g"
@@ -8853,25 +8853,25 @@
    "note": "a"
   }
  ],
- "mr:0819-ludovicus": [
+ "mr:0819-ludovicus-tolosae": [
   {
    "text": "obiit Ann. 1197.",
    "note": "f"
   }
  ],
- "mr:0819-magnus": [
+ "mr:0819-magnus-fabrateriae": [
   {
    "text": "T. 2. A. 254. num. 39.",
    "note": "e"
   }
  ],
- "mr:0819-timotheus": [
+ "mr:0819-timotheus-gazae": [
   {
    "text": "T. 2. A. 303. num. 55. & A. 305. n. 81",
    "note": "d"
   }
  ],
- "mr:0820-bernardus": [
+ "mr:0820-bernardus-claravallensis": [
   {
    "text": "T. 12. Ann. 1127. & deinceps pluries.",
    "note": "a"
@@ -8889,13 +8889,13 @@
    "note": "c"
   }
  ],
- "mr:0820-maximus": [
+ "mr:0820-maximus-cainonis": [
   {
    "text": "cir. A.400.",
    "note": "k"
   }
  ],
- "mr:0820-philibertus": [
+ "mr:0820-philibertus-nigri-monasterii": [
   {
    "text": "cir. A. 680. Trithem.",
    "note": "h"
@@ -8931,25 +8931,25 @@
    "note": "h"
   }
  ],
- "mr:0821-cyriaca": [
+ "mr:0821-cyriaca-romae": [
   {
    "text": "T.2.A.262 n.57.",
    "note": "a"
   }
  ],
- "mr:0821-euprepius": [
+ "mr:0821-euprepius-veronae": [
   {
    "text": "T.1. A.46. nu.2.",
    "note": "i"
   }
  ],
- "mr:0821-luxorius": [
+ "mr:0821-luxorius-fori-traiani": [
   {
    "text": "T.2.A.303. n.145.",
    "note": "d"
   }
  ],
- "mr:0821-privatus": [
+ "mr:0821-privatus-gabalorum": [
   {
    "text": "T.2.A.262. n.58 & an. 280. nu.2.",
    "note": "e"
@@ -8985,13 +8985,13 @@
    "note": "f"
   }
  ],
- "mr:0822-symphorianus": [
+ "mr:0822-symphorianus-augustoduni": [
   {
    "text": "T.2.A.273 num. 2. 6. & seq.",
    "note": "d"
   }
  ],
- "mr:0822-timotheus": [
+ "mr:0822-timotheus-romae": [
   {
    "text": "correctio ex T.3.An. 312.nn.93. & seq.",
    "note": "b"
@@ -9047,13 +9047,13 @@
    "note": "i"
   }
  ],
- "mr:0823-zachaeus": [
+ "mr:0823-zachaeus-hierosolymorum": [
   {
    "text": "T. 2. A. 113 nu. vnico.",
    "note": "g"
   }
  ],
- "mr:0824-audoenus": [
+ "mr:0824-audoenus-rothomagensis": [
   {
    "text": "T. 8 A. 651. n. 14 obit. A. 677. n. 5.",
    "note": "g"
@@ -9083,7 +9083,7 @@
    "note": "b"
   }
  ],
- "mr:0824-tatio": [
+ "mr:0824-tatio-claudiopoli": [
   {
    "text": "T. 2. A. 305. n. 16.",
    "note": "d"
@@ -9105,7 +9105,7 @@
    "note": "d"
   }
  ],
- "mr:0825-genesius": [
+ "mr:0825-genesius-arelatis": [
   {
    "text": "T 2 A 303 nu.130.",
    "note": "g"
@@ -9117,13 +9117,13 @@
    "note": "e"
   }
  ],
- "mr:0825-geruntius": [
+ "mr:0825-geruntius-italicae": [
   {
    "text": "Tempore Apostolorum.",
    "note": "f"
   }
  ],
- "mr:0825-gregorius": [
+ "mr:0825-gregorius-ultraiecti": [
   {
    "text": "obijt Ann. 784.",
    "note": "l"
@@ -9135,7 +9135,7 @@
    "note": "c"
   }
  ],
- "mr:0825-mena": [
+ "mr:0825-mena-constantinopoli": [
   {
    "text": "T 7 A 536 nu 30. seq.",
    "note": "k"
@@ -9147,7 +9147,7 @@
    "note": "m"
   }
  ],
- "mr:0826-alexander": [
+ "mr:0826-alexander-bergomi": [
   {
    "text": "T.2.A.297. n.16.",
    "note": "d"
@@ -9183,7 +9183,7 @@
    "note": "c"
   }
  ],
- "mr:0826-victor": [
+ "mr:0826-victor-caesareae": [
   {
    "text": "cir. A. 950. Vasæus vide T. x. A. 938. nu. 1.",
    "note": "f"
@@ -9201,7 +9201,7 @@
    "note": "f"
   }
  ],
- "mr:0827-caesarius": [
+ "mr:0827-caesarius-arelatis": [
   {
    "text": "De eo T. 1. An 34. nu. 313. T. 6. A. 413. nu 43 au. 463 n 6. obiit cir. A. 554 Barralius in chro nolog. Liri nen.",
    "note": "h"
@@ -9213,7 +9213,7 @@
    "note": "e"
   }
  ],
- "mr:0827-ioannes": [
+ "mr:0827-ioannes-papiae": [
   {
    "text": "cir. A. 800. Ferr.",
    "note": "k"
@@ -9225,13 +9225,13 @@
    "note": "n"
   }
  ],
- "mr:0827-narnus": [
+ "mr:0827-narnus-bergomi": [
   {
    "text": "cir. an. 75. Guarner. ĩ vita.",
    "note": "g"
   }
  ],
- "mr:0827-rufus": [
+ "mr:0827-rufus-capuae": [
   {
    "text": "T.1.An.44. num.27.",
    "note": "a"
@@ -9249,13 +9249,13 @@
    "note": "i"
   }
  ],
- "mr:0828-alexander": [
+ "mr:0828-alexander-constantinopoli": [
   {
    "text": "T.3 A 317 num. 17. & A. 340. nu. 15.",
    "note": "g"
   }
  ],
- "mr:0828-augustinus": [
+ "mr:0828-augustinus-hipponensis": [
   {
    "text": "Plura T. 4. & 5. Conuersio T. 4. A. 385. nu 2. Baptizatur A. 384. nu. 72. Ordinatur presbyter A. 391. num. 21. obijt To. 5. A. 430. nu 74. & seq.",
    "note": "a"
@@ -9275,7 +9275,7 @@
    "note": "f"
   }
  ],
- "mr:0828-hermes": [
+ "mr:0828-hermes-romae": [
   {
    "text": "T. 2. A. 132. n. 2. & 19. A. 229. n. 3.",
    "note": "c"
@@ -9285,7 +9285,7 @@
    "note": "c"
   }
  ],
- "mr:0828-iulianus": [
+ "mr:0828-iulianus-brivatis": [
   {
    "text": "T.2.A.303. num.130.",
    "note": "d"
@@ -9297,19 +9297,19 @@
    "note": "i"
   }
  ],
- "mr:0828-pelagius": [
+ "mr:0828-pelagius-constantiae": [
   {
    "text": "T.2.A.284. n.9.",
    "note": "e"
   }
  ],
- "mr:0828-vivianus": [
+ "mr:0828-vivianus-santonum": [
   {
    "text": "cir. A.490.",
    "note": "h"
   }
  ],
- "mr:0829-adelphus": [
+ "mr:0829-adelphus-metarum": [
   {
    "text": "h Præcessit Firminũ qui vixit cir. A. 488. ex Democ.",
    "note": "h"
@@ -9341,13 +9341,13 @@
    "note": "b"
   }
  ],
- "mr:0829-medericus": [
+ "mr:0829-medericus-augustodunensis": [
   {
    "text": "eius corpus leuatũ An. 984. Trith.",
    "note": "i"
   }
  ],
- "mr:0829-sabina": [
+ "mr:0829-sabina-romae": [
   {
    "text": "T.2. A.133. nu. 2. & T. 5. An. 432. num. 36.",
    "note": "c"
@@ -9359,7 +9359,7 @@
    "note": "m"
   }
  ],
- "mr:0829-sebbus": [
+ "mr:0829-sebbus-londinii": [
   {
    "text": "T. 8. A. 672. n. 11. & seq.",
    "note": "k"
@@ -9371,7 +9371,7 @@
    "note": "e"
   }
  ],
- "mr:0830-bononius": [
+ "mr:0830-bononius-lucedii": [
   {
    "text": "obiit An. 1026.",
    "note": "h"
@@ -9383,13 +9383,13 @@
    "note": "a"
   }
  ],
- "mr:0830-fiacrius": [
+ "mr:0830-fiacrius-meldensis": [
   {
    "text": "cir. A. 640.",
    "note": "g"
   }
  ],
- "mr:0830-pammachius": [
+ "mr:0830-pammachius-romae": [
   {
    "text": "T. 2. A. 270. n. 15. T. 4. A. 372. nu. 43. An. 379. nu. 17. & An. 390. nu. 38. 1. 5. A. 397 n. 8. & n. 27 & An. 398. n. 15. & seq. Obit. T. 5. A. 410. nu. 30.",
    "note": "c"
@@ -9401,7 +9401,7 @@
    "note": "d"
   }
  ],
- "mr:0831-aidanus": [
+ "mr:0831-aidanus-lindisfarnae": [
   {
    "text": "T. 8. A. 634. n. 16. & seq.",
    "note": "g"
@@ -9413,7 +9413,7 @@
    "note": "h"
   }
  ],
- "mr:0831-aristidis": [
+ "mr:0831-aristidis-athenarum": [
   {
    "text": "T. 2. A. 109. n. 49. & 50. 125. nu. 1. & An. 128. n. 1. & 2.",
    "note": "e"
@@ -9431,7 +9431,7 @@
    "note": "f"
   }
  ],
- "mr:0831-paulinus": [
+ "mr:0831-paulinus-trevirorum": [
   {
    "text": "T.3.A.316 n.104.& a. 359 n. 109.",
    "note": "a"

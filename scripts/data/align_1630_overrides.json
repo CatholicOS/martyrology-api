@@ -173,7 +173,7 @@
   "coin": "hyacinthus",
   "subject_la": "Sanctus Hyacinthus",
   "same_eulogy": [
-   "mr:0815-hyacinthus",
+   "mr:0815-hyacinthus-cracoviae",
    "mr:0817-hyacinthus"
   ]
  },
@@ -184,12 +184,12 @@
   "coin": "stephanus",
   "subject_la": "Sanctus Stephanus",
   "same_eulogy": [
-   "mr:0816-stephanus",
+   "mr:0816-stephanus-albae-regalis",
    "mr:0902-stephanus"
   ]
  },
  "8-21|Eodem die sanctorum martyrum Bonôsi": "mr:0821-bonosus-et-maximianus",
- "8-21|In territorio Gaualitâno S. Priuâti": "mr:0821-privatus",
+ "8-21|In territorio Gaualitâno S. Priuâti": "mr:0821-privatus-gabalorum",
  "8-23|Aruernis sancti Sidonij Episcopi": "mr:0823-sidonius-apollinaris",
  "8-26|Bergŏmi in Gallia Cisalpina": {
   "split_at": [
