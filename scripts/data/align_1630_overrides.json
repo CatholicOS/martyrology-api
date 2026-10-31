@@ -133,7 +133,7 @@
  "7-3|Cæsareæ in Cappadocia sancti": {
   "split_at": "Clusij in Etruria sanctorum"
  },
- "7-6|In Campania sanctæ Dominicæ virginis": "mr:0706-cyriaca",
+ "7-6|In Campania sanctæ Dominicæ virginis": "mr:0706-cyriaca-nicomediae",
  "7-7|Eosdem in perquirendis": "MERGE_PREV",
  "7-11|ROMAE beati Pij Papæ": "mr:0711-pius-i",
  "7-11|In territorio Senonensi sancti": {
@@ -148,7 +148,7 @@
  "7-16|Santis in Gallia sanctorum martyrum Raineldis": "mr:0716-reinildis-et-socii",
  "7-17|Sperâti autem reliquiæ": "MERGE_PREV",
  "7-17|Venetijs Translatio sanctę Marînę": "mr:0717-translatio-marinae",
- "7-20|ANTIOCHIAE passio S. Margarîtæ": "mr:0720-marina",
+ "7-20|ANTIOCHIAE passio S. Margarîtæ": "mr:0720-marina-antiochiae",
  "7-26|DORMITIO sanctæ Annę": "mr:0726-anna",
  "7-26|In Portu Romano sancti": {
   "split_at": "Item Romæ sancti Pastôris"

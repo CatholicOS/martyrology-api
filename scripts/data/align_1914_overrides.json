@@ -564,14 +564,14 @@
    "subject_la": "Sancta Philomena",
    "subject_en": "Saint Philomena"
   },
-  "7-7-8": "mr:0707-odo",
+  "7-7-8": "mr:0707-odo-urgelli",
   "7-7-10": {
    "coin": "petrus-fourier",
    "subject_la": "Beatus Petrus Fourier",
    "subject_en": "Blessed Peter Fourier"
   },
   "7-9-4": "mr:0709-nicolaus-pieck-et-socii",
-  "7-10-6": "mr:0710-amalberga",
+  "7-10-6": "mr:0710-amalberga-tamisiae",
   "7-11-0": "mr:0711-pius-i",
   "7-11-8": {
    "coin": "sabinus",
@@ -606,7 +606,7 @@
    "subject_en": "Saint Severa"
   },
   "7-21-7": "mr:0721-simeon-salus",
-  "7-22-6": "mr:0722-wandregisilus",
+  "7-22-6": "mr:0722-wandregisilus-fontanellensis",
   "7-22-7": {
    "coin": "iosephus",
    "subject_la": "Sanctus Iosephus",
@@ -638,7 +638,7 @@
    "subject_la": "Sanctus Peregrinus",
    "subject_en": "Saint Peregrinus"
   },
-  "7-29-5": "mr:0729-olavus",
+  "7-29-5": "mr:0729-olavus-nidarosiae",
   "7-29-7": "mr:0729-gulielmus-pinchon",
   "7-29-10": {
    "coin": "seraphina",
