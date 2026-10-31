@@ -71,7 +71,7 @@
    "entry": "108.11. post Gregorij, adde, Magni, & dele Papæ."
   }
  ],
- "mr:0305-gerasimus": [
+ "mr:0305-gerasimus-iordanis": [
   {
    "kind": "replace",
    "printed": "anachorêtæ",
@@ -80,7 +80,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0306-victorinus": [
+ "mr:0306-victorinus-nicomediae": [
   {
    "kind": "replace",
    "printed": "Claudio",
@@ -98,7 +98,7 @@
    "entry": "120.3. post, Prædicatorum, adde, nobilitate generis."
   }
  ],
- "mr:0309-francisca": [
+ "mr:0309-francisca-romae": [
   {
    "kind": "delete",
    "printed": "vitæ",
@@ -107,7 +107,7 @@
    "entry": "123.19. post, generis. dele, vitæ."
   }
  ],
- "mr:0317-gertrudis": [
+ "mr:0317-gertrudis-nivellae": [
   {
    "kind": "replace",
    "printed": "Nauigellæ",
@@ -134,7 +134,7 @@
    "entry": "150.3. Carthaginensis, Carthaginiensis."
   }
  ],
- "mr:0322-paulus": [
+ "mr:0322-paulus-narbonis": [
   {
    "kind": "replace",
    "printed": "Paulo Apostolo",
