@@ -211,16 +211,16 @@
    "Apud Cenomănos sancti Victorij"
   ]
  },
- "9-2|Eôdem die passio sanctorum Euodij": "mr:0902-theodota",
- "9-3|Corinthi natalis sanctę Phębes": "mr:0903-phoebes",
+ "9-2|Eôdem die passio sanctorum Euodij": "mr:0902-theodota-niceae",
+ "9-3|Corinthi natalis sanctę Phębes": "mr:0903-phoebes-cenchrearum",
  "9-5|Item in Portu Romano natalis sancti Herculâni": "mr:0905-acontus-et-socii",
  "9-8|Nicomediæ sancti Hadriani martyris,": {
   "split_at": "Alexandriæ sanctorum rum martyrum"
  },
- "9-9|In Scotia sancti Querâni abbatis": "mr:0909-ciaranus",
+ "9-9|In Scotia sancti Querâni abbatis": "mr:0909-ciaranus-clauanensis",
  "9-9|Interiecto autem tempore": "MERGE_PREV",
  "9-12|ALEXANDRIAE natalis sanctorum martyrum Hieronidis": "mr:0912-cronidis-et-socii",
- "9-15|Lugdûni sancti Albîni Episcopi": "mr:0915-alpinus",
+ "9-15|Lugdûni sancti Albîni Episcopi": "mr:0915-alpinus-lugduni",
  "9-15|Hadrianopoli sanctorum martyrum Maximi,": {
   "split_at": "Item sancti Porphyrij mimi"
  },
@@ -231,7 +231,7 @@
  "9-27|Cordûbæ SS. martyrum Adulphi": {
   "split_at": "Sedûni in Gallia sancti"
  },
- "9-28|In Germania sanctæ Liŏbę virginis": "mr:0928-leoba",
+ "9-28|In Germania sanctæ Liŏbę virginis": "mr:0928-leoba-moguntiae",
  "9-28|Antiochiæ Pisidiæ sanctorum martyrum": {
   "split_at": "Eodem die passio sancti Maximi"
  },
