@@ -320,7 +320,7 @@
    "entry": "259.5. post, Mysia, adde, Passio."
   }
  ],
- "mr:0601-caprasius": [
+ "mr:0601-caprasius-lirinensis": [
   {
    "kind": "replace",
    "printed": "Lerinensi",
@@ -347,7 +347,7 @@
    "entry": "301.8. Vrsiceni. Vrciceni."
   }
  ],
- "mr:0622-paulinus": [
+ "mr:0622-paulinus-nolae": [
   {
    "kind": "replace",
    "printed": "redimento",
@@ -356,7 +356,7 @@
    "entry": "303.5. redimento, redimendo."
   }
  ],
- "mr:0625-prosperus": [
+ "mr:0625-prosperus-regii-lepidi": [
   {
    "kind": "replace",
    "printed": "Regium",
