@@ -257,6 +257,13 @@ class EditionPlacementOut(BaseModel):
     mentions: list[MentionOut] = Field(default_factory=list)
 
 
+class EulogyItemOut(BaseModel):
+    """What a eulogy that does not commemorate a single person commemorates as a whole."""
+
+    wikidata: str
+    kind: Literal["group", "feast", "dedication", "translation"]
+
+
 class EulogyOut(BaseModel):
     id: str
     subject: dict[str, str]
@@ -265,6 +272,8 @@ class EulogyOut(BaseModel):
     editions: dict[str, EditionPlacementOut]
     # The same eulogy printed by another edition on another day (other IDs).
     same_eulogy: list[str] = []
+    # Its Wikidata item as a whole (a group, feast, church, translation); null for most.
+    item: EulogyItemOut | None = None
 
 
 class GovernanceOut(BaseModel):
