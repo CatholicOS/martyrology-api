@@ -104,7 +104,7 @@
   "mark": "i"
  },
  "5-2|a": {
-  "id": "mr:0502-athanasius",
+  "id": "mr:0502-athanasius-alexandriae",
   "after": "Athanasij",
   "mark": "a"
  },
@@ -114,7 +114,7 @@
   "mark": "f"
  },
  "5-11|h": {
-  "id": "mr:0511-mamertus",
+  "id": "mr:0511-mamertus-viennae",
   "after": "instituit",
   "mark": "h"
  },
@@ -124,7 +124,7 @@
   "mark": "e"
  },
  "5-21|i": {
-  "id": "mr:0521-hospicius",
+  "id": "mr:0521-hospicius-nicaeae",
   "after": "Hospitij",
   "mark": "i"
  },
