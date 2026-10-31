@@ -995,7 +995,7 @@
   "10-31-6": "mr:1031-wolfgangus-ratisbonae",
   "11-1-0": "mr:1101-omnes-sancti",
   "11-2-0": "mr:1102-omnium-fidelium-defunctorum",
-  "11-2-10": "mr:1102-marcianus",
+  "11-2-10": "mr:1102-marcianus-cyrrhi",
   "11-5-8": {
    "coin": "laetus",
    "subject_la": "Sanctus Laetus",
@@ -1021,9 +1021,9 @@
    "subject_la": "Sanctus Rufus",
    "subject_en": "Saint Rufus"
   },
-  "11-12-8": "mr:1112-aemilianus",
-  "11-13-2": "mr:1113-mitria",
-  "11-13-6": "mr:1113-brictius",
+  "11-12-8": "mr:1112-aemilianus-cucullae",
+  "11-13-2": "mr:1113-mitria-aquarum-sextiarum",
+  "11-13-6": "mr:1113-brictius-turonum",
   "11-14-7": "mr:1114-martyres-emessae",
   "11-14-9": "mr:1114-laurentius-o-toole",
   "11-15-7": {
@@ -1038,7 +1038,7 @@
    "subject_en": "Saint Eugenius"
   },
   "11-18-2": "mr:1118-oriculus-et-socii",
-  "11-18-4": "mr:1118-odo",
+  "11-18-4": "mr:1118-odo-cluniacensis",
   "11-18-6": {
    "coin": "translatio-frigdiani",
    "subject_la": "Translatio sancti Frigdiani",
@@ -1055,7 +1055,7 @@
    "subject_la": "Sancti Bassus et socii",
    "subject_en": "Saints Bassus and Companions"
   },
-  "11-20-11": "mr:1120-bernwardus",
+  "11-20-11": "mr:1120-bernwardus-hildesiae",
   "11-22-2": {
    "coin": "maurus",
    "subject_la": "Sanctus Maurus",
@@ -1066,7 +1066,7 @@
    "subject_la": "Sancti Marcus et Stephanus",
    "subject_en": "Saints Mark and Stephen"
   },
-  "11-23-6": "mr:1123-trudo",
+  "11-23-6": "mr:1123-trudo-sarchinii",
   "11-23-7": {
    "coin": "ioannes-bonus",
    "subject_la": "Beatus Ioannes Bonus",
@@ -1415,7 +1415,7 @@
   "11-7-7": "mr:1107-achilleus",
   "11-7-9": "mr:1107-rufus",
   "11-9-2": "mr:1109-orestes",
-  "11-12-9": "mr:1112-nilus",
+  "11-12-9": "mr:1112-nilus-ancyrae",
   "11-12-10": "mr:1112-theodorus-studita",
   "11-14-8": "mr:1114-iucundus",
   "11-15-0": "mr:1115-gertrudis-magna",
