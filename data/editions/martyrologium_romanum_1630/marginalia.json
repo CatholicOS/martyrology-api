@@ -6907,13 +6907,13 @@
    "note": "e"
   }
  ],
- "mr:0701-domitianus": [
+ "mr:0701-domitianus-bebronnensis": [
   {
    "text": "Fuit in Cõcil. 5. Aurelian. cir. A. 512.",
    "note": "h"
   }
  ],
- "mr:0701-eparchius": [
+ "mr:0701-eparchius-engolismae": [
   {
    "text": "T. 7. A. 584. n. 13.",
    "note": "k"
@@ -6931,7 +6931,7 @@
    "note": "c"
   }
  ],
- "mr:0701-martinus": [
+ "mr:0701-martinus-viennae": [
   {
    "text": "An. 101.",
    "note": "f"
@@ -6943,7 +6943,7 @@
    "note": "l"
   }
  ],
- "mr:0701-theodoricus": [
+ "mr:0701-theodoricus-remensis": [
   {
    "text": "cir. A. 520.",
    "note": "i"
@@ -6967,7 +6967,7 @@
    "note": "b"
   }
  ],
- "mr:0702-swithinus": [
+ "mr:0702-swithinus-vintoniae": [
   {
    "text": "T. X. A. 847. n. 19. A. 855. nu. 37. obit. A. 862. n. 69.",
    "note": "e"
@@ -7003,7 +7003,7 @@
    "note": "b"
   }
  ],
- "mr:0703-heliodorus": [
+ "mr:0703-heliodorus-altini": [
   {
    "text": "T. 4 A 381 nu. 83. T. 5. A. 398 nu. 81.",
    "note": "g"
@@ -7041,7 +7041,7 @@
    "note": "g"
   }
  ],
- "mr:0704-laurianus": [
+ "mr:0704-laurianus-vistini": [
   {
    "text": "T.7.A. 548 n.8.",
    "note": "c"
@@ -7059,7 +7059,7 @@
    "note": "i"
   }
  ],
- "mr:0704-udalricus": [
+ "mr:0704-udalricus-augustae-vindelicorum": [
   {
    "text": "T. 1. A. 924. n 9. & seq; & A 940. n. 4. canoniz. A. 943. n. 1. & seq.",
    "note": "h"
@@ -7071,7 +7071,7 @@
    "note": "d"
   }
  ],
- "mr:0705-cyprilla": [
+ "mr:0705-cyprilla-cyrenes": [
   {
    "text": "T. 3. A. 310. nu. 25.",
    "note": "c"
@@ -7089,13 +7089,13 @@
    "note": "a"
   }
  ],
- "mr:0706-cyriaca": [
+ "mr:0706-cyriaca-nicomediae": [
   {
    "text": "T. 1. A. 303 n. 180.",
    "note": "g"
   }
  ],
- "mr:0706-goaris": [
+ "mr:0706-goaris-aquitaniae": [
   {
    "text": "cir. an. 600.",
    "note": "i"
@@ -7113,7 +7113,7 @@
    "note": null
   }
  ],
- "mr:0706-romulus": [
+ "mr:0706-romulus-faesularum": [
   {
    "text": "T. 1. A. 46. n. 2. & A. 98. n. 11.",
    "note": "f"
@@ -7125,7 +7125,7 @@
    "note": "d"
   }
  ],
- "mr:0707-aedilburga": [
+ "mr:0707-aedilburga-farensis": [
   {
    "text": "cir. A. 660",
    "note": "k"
@@ -7147,7 +7147,7 @@
    "note": "a"
   }
  ],
- "mr:0707-hedda": [
+ "mr:0707-hedda-vintoniae": [
   {
    "text": "T. 8. A. 705. n. 15.",
    "note": "i"
@@ -7171,7 +7171,7 @@
    "note": "c"
   }
  ],
- "mr:0707-willibaldus": [
+ "mr:0707-willibaldus-dryopoli": [
   {
    "text": "T. 9. A. 725. n. 13. A. 738. n. 1. & seq. & A. 742. n. 15.",
    "note": "f"
@@ -7183,7 +7183,7 @@
    "note": "a"
   }
  ],
- "mr:0708-kilianus": [
+ "mr:0708-kilianus-herbipoli": [
   {
    "text": "T.8.A.686. n. 8. & seq. martyriũ A. 689. nu. 10. & seq. & n. 19. & seq.",
    "note": "e"
@@ -7195,7 +7195,7 @@
    "note": "d"
   }
  ],
- "mr:0708-procopius": [
+ "mr:0708-procopius-caesareae": [
   {
    "text": "T.2.A.302. nu.85. T.3.A. 308. nu.8. & seq.",
    "note": "c"
@@ -7237,7 +7237,7 @@
    "note": "a"
   }
  ],
- "mr:0710-amalberga": [
+ "mr:0710-amalberga-tamisiae": [
   {
    "text": "obijt Ann. 772.",
    "note": "g"
@@ -7265,7 +7265,7 @@
    "note": "b"
   }
  ],
- "mr:0711-abundius": [
+ "mr:0711-abundius-cordubae": [
   {
    "text": "T. 2. A. 854. nn 7.",
    "note": "h"
@@ -7283,7 +7283,7 @@
    "note": "g"
   }
  ],
- "mr:0711-marcianus": [
+ "mr:0711-marcianus-iconii": [
   {
    "text": "Forte fuit sub Perennio de quo T. 2. A. 243 nu. 4 T. 2. A. 301. nu. 17.",
    "note": "d"
@@ -7359,7 +7359,7 @@
    "note": "f"
   }
  ],
- "mr:0712-viventiolus": [
+ "mr:0712-viventiolus-lugduni": [
   {
    "text": "T. 6. A. 509. nu. 13.",
    "note": "i"
@@ -7371,7 +7371,7 @@
    "note": "a"
   }
  ],
- "mr:0713-eugenius": [
+ "mr:0713-eugenius-carthaginensis": [
   {
    "text": "T. 6. A. 480. n. 5. & An. 484. per totũ. obitus A. 495. nu. 36.",
    "note": "g"
@@ -7381,25 +7381,25 @@
    "note": "h"
   }
  ],
- "mr:0713-myrope": [
+ "mr:0713-myrope-chii": [
   {
    "text": "circa. A. 253.",
    "note": "f"
   }
  ],
- "mr:0713-serapion": [
+ "mr:0713-serapion-alexandriae": [
   {
    "text": "T. 2. A. 205. n. 27.",
    "note": "e"
   }
  ],
- "mr:0713-sila": [
+ "mr:0713-sila-discipulus": [
   {
    "text": "T. 1. A. 51. nu. 14. & seq. & n. 56. & seq. & n. 64. & seq.",
    "note": "d"
   }
  ],
- "mr:0713-turiavus": [
+ "mr:0713-turiavus-dolensis": [
   {
    "text": "circ. a. 580.",
    "note": "i"
@@ -7435,13 +7435,13 @@
    "note": "d"
   }
  ],
- "mr:0714-marchelmus": [
+ "mr:0714-marchelmus-daventriae": [
   {
    "text": "T. 8. A. 697. n. 72.",
    "note": "h"
   }
  ],
- "mr:0714-optatianus": [
+ "mr:0714-optatianus-brixiae": [
   {
    "text": "cir. A. 450.",
    "note": "g"
@@ -7453,13 +7453,13 @@
    "note": "c"
   }
  ],
- "mr:0715-abudemius": [
+ "mr:0715-abudemius-tenedi": [
   {
    "text": "Sub Diocletiano.",
    "note": "d"
   }
  ],
- "mr:0715-athanasius": [
+ "mr:0715-athanasius-neapolis": [
   {
    "text": "T. 10. A. 871 n. 4. & seq.",
    "note": "h"
@@ -7471,13 +7471,13 @@
    "note": "a"
   }
  ],
- "mr:0715-iacobus": [
+ "mr:0715-iacobus-nisibi": [
   {
    "text": "T. 3 A. 325. n 16. A. 338. n. 25",
    "note": "g"
   }
  ],
- "mr:0716-athenogenes": [
+ "mr:0716-athenogenes-sebastes": [
   {
    "text": "T. 3. A. 311. n. 20. 26. & 27.",
    "note": "b"
@@ -7521,7 +7521,7 @@
    "note": "g"
   }
  ],
- "mr:0716-sisenandus": [
+ "mr:0716-sisenandus-cordubae": [
   {
    "text": "T. 10. A 851 nu. 5.",
    "note": "f"
@@ -7539,13 +7539,13 @@
    "note": "i"
   }
  ],
- "mr:0717-alexius": [
+ "mr:0717-alexius-romae": [
   {
    "text": "cir. A. 388. Petrus de natalitiq. de eius patrocinio T.11. Ann. 1004. nu.8 & seq. T. 4. A. 382. n. 44.",
    "note": "a"
   }
  ],
- "mr:0717-ennodius": [
+ "mr:0717-ennodius-papiae": [
   {
    "text": "Plura T. 6.",
    "note": "h"
@@ -7565,7 +7565,7 @@
    "note": "g"
   }
  ],
- "mr:0717-marcellina": [
+ "mr:0717-marcellina-mediolani": [
   {
    "text": "T.4. A. 353 n. 17. T.4. A. 377 n. 2. T. 5. A. 397 n. 49.",
    "note": "k"
@@ -7581,7 +7581,7 @@
    "note": "c"
   }
  ],
- "mr:0717-theodosius": [
+ "mr:0717-theodosius-autissiodori": [
   {
    "text": "T. 6. A. 507 n. 23.",
    "note": "i"
@@ -7593,25 +7593,25 @@
    "note": "l"
   }
  ],
- "mr:0718-aemilianus": [
+ "mr:0718-aemilianus-dorostori": [
   {
    "text": "T. 4. A. 362. nu. 87.",
    "note": "c"
   }
  ],
- "mr:0718-arnulphus": [
+ "mr:0718-arnulphus-metarum": [
   {
    "text": "T. 8. A. 631. nu. 6.",
    "note": "h"
   }
  ],
- "mr:0718-bruno": [
+ "mr:0718-bruno-signiae": [
   {
    "text": "To. 11. An. 1079. nu. 4. To. 12. Ao. 1111. n. 34. & seq.",
    "note": "i"
   }
  ],
- "mr:0718-fridericus": [
+ "mr:0718-fridericus-ultraiecti": [
   {
    "text": "T. 9. A. 838 nu. 4.",
    "note": "d"
@@ -7623,13 +7623,13 @@
    "note": "b"
   }
  ],
- "mr:0718-maternus": [
+ "mr:0718-maternus-mediolani": [
   {
    "text": "T. 2. A. 303. num. 132.",
    "note": "f"
   }
  ],
- "mr:0718-philastrius": [
+ "mr:0718-philastrius-brixiae": [
   {
    "text": "T. 4. A. 374. n. 9. & An. 381. nu. 83.",
    "note": "g"
@@ -7647,13 +7647,13 @@
    "note": "g"
   }
  ],
- "mr:0719-aurea": [
+ "mr:0719-aurea-cordubae": [
   {
    "text": "T. x. A. 856. num. 30.",
    "note": "c"
   }
  ],
- "mr:0719-epaphra": [
+ "mr:0719-epaphra-colossarum": [
   {
    "text": "T. 1. A. 59. num. 12.",
    "note": "a"
@@ -7665,7 +7665,7 @@
    "note": "b"
   }
  ],
- "mr:0719-macrina": [
+ "mr:0719-macrina-annisae": [
   {
    "text": "T. 4. A 369. n. 43.",
    "note": "h"
@@ -7677,19 +7677,19 @@
    "note": "d"
   }
  ],
- "mr:0719-symmachus": [
+ "mr:0719-symmachus-papa": [
   {
    "text": "T. 6. A. 498. & sequen. obitus An. 513 n. 6.",
    "note": "e"
   }
  ],
- "mr:0720-ioseph": [
+ "mr:0720-ioseph-iustus": [
   {
    "text": "T. 1. An. 58. n. 115.",
    "note": "c"
   }
  ],
- "mr:0720-paulus": [
+ "mr:0720-paulus-cordubae": [
   {
    "text": "T. x. A. 851. nu. 5.",
    "note": "e"
@@ -7707,7 +7707,7 @@
    "note": "f"
   }
  ],
- "mr:0721-arbogastus": [
+ "mr:0721-arbogastus-argentorati": [
   {
    "text": "cir. A. 610.",
    "note": "g"
@@ -7725,7 +7725,7 @@
    "note": "d"
   }
  ],
- "mr:0721-praxedes": [
+ "mr:0721-praxedes-romae": [
   {
    "text": "T. 2. A. 159. n. 8. & An. 164. nu. 24.",
    "note": "a"
@@ -7737,7 +7737,7 @@
    "note": "h"
   }
  ],
- "mr:0721-victor": [
+ "mr:0721-victor-massiliae": [
   {
    "text": "sub Diocletiano & Maximiano.",
    "note": "c"
@@ -7749,7 +7749,7 @@
    "note": "f"
   }
  ],
- "mr:0722-cyrillus": [
+ "mr:0722-cyrillus-antiochiae": [
   {
    "text": "T. 2. A. 283. nu. 9 & An. 299. nu. 4.",
    "note": "e"
@@ -7773,13 +7773,13 @@
    "note": "d"
   }
  ],
- "mr:0722-wandregisilus": [
+ "mr:0722-wandregisilus-fontanellensis": [
   {
    "text": "T. 8. A. 605. n. 13.",
    "note": "g"
   }
  ],
- "mr:0723-apollinaris": [
+ "mr:0723-apollinaris-ravennae": [
   {
    "text": "T. 1. A. 4. u n. 87. & 46. n. 2. A. 75. n. 5.",
    "note": "a"
@@ -7833,13 +7833,13 @@
    "note": "e"
   }
  ],
- "mr:0725-christophorus": [
+ "mr:0725-christophorus-lyciae": [
   {
    "text": "T. 2. A. 254. nu. 22.",
    "note": "b"
   }
  ],
- "mr:0725-cucuphas": [
+ "mr:0725-cucuphas-barcinonis": [
   {
    "text": "T. 2. A. 303. n. 142.",
    "note": "c"
@@ -7857,7 +7857,7 @@
    "note": "a"
   }
  ],
- "mr:0725-magnericus": [
+ "mr:0725-magnericus-trevirorum": [
   {
    "text": "cir. A. 505.",
    "note": "h"
@@ -7869,7 +7869,7 @@
    "note": "d"
   }
  ],
- "mr:0725-theodemirus": [
+ "mr:0725-theodemirus-carmonensis": [
   {
    "text": "Tx. A. 858 nu. 5.",
    "note": "g"
@@ -7887,7 +7887,7 @@
    "note": "a"
   }
  ],
- "mr:0726-erastus": [
+ "mr:0726-erastus-corinthi": [
   {
    "text": "T. 1 An. 58 n.62. & A. 59. nu.10.",
    "note": "b"
@@ -7909,7 +7909,7 @@
    "note": "f"
   }
  ],
- "mr:0726-simeon": [
+ "mr:0726-simeon-mantuae": [
   {
    "text": "T. 11. Ann. 1016. nu.4. & seq.",
    "note": "h"
@@ -7933,7 +7933,7 @@
    "note": "g"
   }
  ],
- "mr:0727-anthusa": [
+ "mr:0727-anthusa-mantineonis": [
   {
    "text": "T. 9. A. 721 n. 7.",
    "note": "h"
@@ -7991,7 +7991,7 @@
    "note": "c"
   }
  ],
- "mr:0728-samson": [
+ "mr:0728-samson-doli": [
   {
    "text": "cir. A 600.",
    "note": "i"
@@ -8003,7 +8003,7 @@
    "note": "a"
   }
  ],
- "mr:0729-callinicus": [
+ "mr:0729-callinicus-gangrae": [
   {
    "text": "T. 2. A. 254 num. 22.",
    "note": "f"
@@ -8015,7 +8015,7 @@
    "note": "l"
   }
  ],
- "mr:0729-felix": [
+ "mr:0729-felix-romae": [
   {
    "text": "T. 3. A. 357. n. 46. & seq",
    "note": "b"
@@ -8033,25 +8033,25 @@
    "note": "e"
   }
  ],
- "mr:0729-lupus": [
+ "mr:0729-lupus-trecis": [
   {
    "text": "T. 5. A. 426. n. 21. & seq. & A. 429. n. 10. & seq. & T. 6. A. 451. n. 40. & seq. obitus an. 479. n. 14.",
    "note": "h"
   }
  ],
- "mr:0729-martha": [
+ "mr:0729-martha-bethaniae": [
   {
    "text": "Plura To. 1. præsertim An. 35. n. 5.",
    "note": "a"
   }
  ],
- "mr:0729-olavus": [
+ "mr:0729-olavus-nidarosiae": [
   {
    "text": "T. 11. Ann. 1028. nu 7. & seq.",
    "note": "g"
   }
  ],
- "mr:0729-prosperus": [
+ "mr:0729-prosperus-aureliani": [
   {
    "text": "T. 6. A. 463 n. 12. & seq.",
    "note": "k"
@@ -8069,7 +8069,7 @@
    "note": "a"
   }
  ],
- "mr:0730-iulitta": [
+ "mr:0730-iulitta-caesareae": [
   {
    "text": "T. 2. A. 304 n. 66. & seq",
    "note": "d"
@@ -8081,13 +8081,13 @@
    "note": "b"
   }
  ],
- "mr:0730-ursus": [
+ "mr:0730-ursus-autissiodori": [
   {
    "text": "cir. A. 450.",
    "note": "e"
   }
  ],
- "mr:0731-calimerus": [
+ "mr:0731-calimerus-mediolani": [
   {
    "text": "T. 2. A. 182. n. 2.",
    "note": "b"
@@ -8099,7 +8099,7 @@
    "note": "f"
   }
  ],
- "mr:0731-germanus": [
+ "mr:0731-germanus-autissiodorensis": [
   {
    "text": "T. 3. A. 132 n 4. T. 5. A. 429. n. 1. & n. 9. & seq. & a. 435. nu. 15. 21. & seq. obiit Ann. 450. Democh.",
    "note": "e"
