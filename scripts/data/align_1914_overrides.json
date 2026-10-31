@@ -475,7 +475,7 @@
    "subject_la": "Sancta Aquilina",
    "subject_en": "Saint Aquilina"
   },
-  "6-13-4": "mr:0613-cetheus",
+  "6-13-4": "mr:0613-cetheus-peregrinus",
   "6-14-7": {
    "coin": "quinctianus",
    "subject_la": "Sanctus Quinctianus",
@@ -492,20 +492,20 @@
    "subject_la": "Sanctus Martinus",
    "subject_en": "Saint Martin"
   },
-  "6-22-0": "mr:0622-paulinus",
+  "6-22-0": "mr:0622-paulinus-nolae",
   "6-23-1": {
    "coin": "ioannes",
    "subject_la": "Sanctus Joannes",
    "subject_en": "Saint John"
   },
-  "6-23-6": "mr:0623-ediltrudis",
+  "6-23-6": "mr:0623-ediltrudis-eliensis",
   "6-24-2": "mr:0624-faustus-et-socii",
   "6-24-7": {
    "coin": "ioannes-therestus",
    "subject_la": "Sanctus Joannes Therestus",
    "subject_en": "Saint John Therestus"
   },
-  "6-25-6": "mr:0625-maximus",
+  "6-25-6": "mr:0625-maximus-augustae-taurinorum",
   "6-26-6": {
    "coin": "perseveranda",
    "subject_la": "Sancta Perseveranda",
@@ -1341,7 +1341,7 @@
   "6-10-9": "mr:0610-maximus",
   "6-13-2": "mr:0613-fortunatus-et-lucianus",
   "6-14-2": "mr:0614-marcianus",
-  "6-15-5": "mr:0615-landelinus",
+  "6-15-5": "mr:0615-landelinus-crispinii",
   "6-16-7": "mr:0616-ioannes-franciscus-regis",
   "6-17-9": "mr:0617-bessarion",
   "6-20-4": "mr:0620-florentina",

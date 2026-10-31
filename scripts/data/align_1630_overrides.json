@@ -119,10 +119,10 @@
  "6-9|In Scotia sancti Columbi": {
   "split_at": "Edessæ in Syria sancti"
  },
- "6-13|In Pelignis S. Peregrini Episcopi": "mr:0613-cetheus",
+ "6-13|In Pelignis S. Peregrini Episcopi": "mr:0613-cetheus-peregrinus",
  "6-14|CÆSAREAE in Cappadocia ordinatio S. Basilij": "mr:0614-basilius-magnus",
  "6-22|Claruit autem non solum": "MERGE_PREV",
- "6-22|Eodem die sancti Nicææ Romatianæ": "mr:0622-nicetas",
+ "6-22|Eodem die sancti Nicææ Romatianæ": "mr:0622-nicetas-remesianae",
  "6-23|VIGILIA sancti Ioannis Baptistæ": {
   "split_at": "Romæ sancti Ioannis"
  },

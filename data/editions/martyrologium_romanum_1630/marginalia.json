@@ -5763,7 +5763,7 @@
    "note": "a"
   }
  ],
- "mr:0601-caprasius": [
+ "mr:0601-caprasius-lirinensis": [
   {
    "text": "cir.A. 390.",
    "note": "m"
@@ -5799,7 +5799,7 @@
    "note": "b"
   }
  ],
- "mr:0601-proculus": [
+ "mr:0601-proculus-bononiae": [
   {
    "text": "T.2.A. 303 num. 122.",
    "note": "h"
@@ -5817,7 +5817,7 @@
    "note": "i"
   }
  ],
- "mr:0601-simeon": [
+ "mr:0601-simeon-trevirorum": [
   {
    "text": "T.11. Ann. 1037.nu.3.",
    "note": "n"
@@ -5829,7 +5829,7 @@
    "note": "d"
   }
  ],
- "mr:0602-erasmus": [
+ "mr:0602-erasmus-formiarum": [
   {
    "text": "T. 2. A. 303. num. 119.",
    "note": "b"
@@ -5853,31 +5853,31 @@
    "note": "c"
   }
  ],
- "mr:0603-caecilius": [
+ "mr:0603-caecilius-carthaginensis": [
   {
    "text": "T. 2. A. 211 n. 2. & seq. Ann. 250. n. 6. & 10.",
    "note": "e"
   }
  ],
- "mr:0603-clotildis": [
+ "mr:0603-clotildis-turonum": [
   {
    "text": "T. 7. A. 553 num. 257.",
    "note": "h"
   }
  ],
- "mr:0603-davinus": [
+ "mr:0603-davinus-lucae": [
   {
    "text": "T. xi. obijt Ann. 1050. num. 17.",
    "note": "g"
   }
  ],
- "mr:0603-isaac": [
+ "mr:0603-isaac-tabanensis": [
   {
    "text": "T. x. A. 851. num. 4.",
    "note": "d"
   }
  ],
- "mr:0603-lifardus": [
+ "mr:0603-lifardus-magduni": [
   {
    "text": "cir. A. 510.",
    "note": "f"
@@ -5901,31 +5901,31 @@
    "note": "c"
   }
  ],
- "mr:0604-metrophanes": [
+ "mr:0604-metrophanes-byzantinus": [
   {
    "text": "T. 3. A. 314 num. 94. T. 5. A. 439 num. 3.",
    "note": "g"
   }
  ],
- "mr:0604-optatus": [
+ "mr:0604-optatus-milevi": [
   {
    "text": "Plura T. 3. præsertim A. 306. nu. 28. & seq. T. 4. A. 378 num. 14.",
    "note": "h"
   }
  ],
- "mr:0604-quirinus": [
+ "mr:0604-quirinus-sisciacensis": [
   {
    "text": "T. 3. A. 308 num. 27.",
    "note": "b"
   }
  ],
- "mr:0605-bonifatius": [
+ "mr:0605-bonifatius-docci": [
   {
    "text": "T. 9. A. 755. num 51. & seq. & plura eodem Tom. 9.",
    "note": "e"
   }
  ],
- "mr:0605-dorotheus": [
+ "mr:0605-dorotheus-tyri": [
   {
    "text": "T. 1. An. 33 num. 40. T. 2. A. 283 n. 9. & T. 4. Ann. 363. num. 39.",
    "note": "d"
@@ -5943,13 +5943,13 @@
    "note": "a"
   }
  ],
- "mr:0605-sancius": [
+ "mr:0605-sancius-cordubae": [
   {
    "text": "T. x. A. 851 num. 4.",
    "note": "f"
   }
  ],
- "mr:0606-alexander": [
+ "mr:0606-alexander-bononiensis": [
   {
    "text": "cir. A. 585. ex Cattano",
    "note": "h"
@@ -5961,7 +5961,7 @@
    "note": "d"
   }
  ],
- "mr:0606-claudius": [
+ "mr:0606-claudius-condatiscensis": [
   {
    "text": "T.6. A. 490 num 23. obitus an. 509. nu. 13.",
    "note": "l"
@@ -5979,7 +5979,7 @@
    "note": "k"
   }
  ],
- "mr:0606-norbertus": [
+ "mr:0606-norbertus-magdeburgi": [
   {
    "text": "T.12. An. 1126 n.16. Ann.1131. n. 2.& seq. obitus An. 1134.",
    "note": "a"
@@ -6017,19 +6017,19 @@
    "note": "d"
   }
  ],
- "mr:0607-robertus": [
+ "mr:0607-robertus-novi-monasterii": [
   {
    "text": "T.12. Ann. 1159 num. vltimo.",
    "note": "e"
   }
  ],
- "mr:0608-clodulphus": [
+ "mr:0608-clodulphus-metarum": [
   {
    "text": "cir. A. 640.",
    "note": "f"
   }
  ],
- "mr:0608-gildardus": [
+ "mr:0608-gildardus-rothomagi": [
   {
    "text": "T. 6. A. 507. num. 27.",
    "note": "d"
@@ -6041,13 +6041,13 @@
    "note": "e"
   }
  ],
- "mr:0608-maximinus": [
+ "mr:0608-maximinus-aquarum-sextiarum": [
   {
    "text": "T. 1. An. 35 num. 5.",
    "note": "a"
   }
  ],
- "mr:0608-medardus": [
+ "mr:0608-medardus-veromanduorum": [
   {
    "text": "T. 7. A. 527 num. 89. & Ann. 564. n.32.& seq",
    "note": "c"
@@ -6071,7 +6071,7 @@
    "note": "i"
   }
  ],
- "mr:0609-columba": [
+ "mr:0609-columba-colum-cille": [
   {
    "text": "T. 7. A. 565. num. 30. & seq & T. 8. A. 690. n. 4.",
    "note": "f"
@@ -6083,7 +6083,7 @@
    "note": "g"
   }
  ],
- "mr:0609-maximianus": [
+ "mr:0609-maximianus-syracusis": [
   {
    "text": "Plura T. 7. pręcipuè A. 581. n. 8. A. 583. n. 14 A. 584. nu. 17 & 18. & Tom. 8. Ann. 594. num. 33.",
    "note": "e"
@@ -6101,7 +6101,7 @@
    "note": "a"
   }
  ],
- "mr:0609-richardus": [
+ "mr:0609-richardus-andriae": [
   {
    "text": "* S. Riccardus vixit circa ann. 500. Nam vnà cum sanctis Episcopis Sabino Canusino, & Rugerio Cannensi Ecclesiam sancti Michaelis in Monte Gargano consecrauit (Apparitio enim sancti Michaelis contigit A. 493.) Eius vita habetur apud Paulum Regium & apud Ferrarium ex antiquissimis monumentis Ecclesiæ Andrien. Inuentio eius corporis A. 1438. quam scripsit Franciscus de Baucio Andriæ Dux.",
    "note": null
@@ -6119,7 +6119,7 @@
    "note": "b"
   }
  ],
- "mr:0610-censurius": [
+ "mr:0610-censurius-autissiodori": [
   {
    "text": "T. 5. A. 439. nu. 9. & A. 435. n. 22.",
    "note": "i"
@@ -6149,7 +6149,7 @@
    "note": "d"
   }
  ],
- "mr:0611-barnabas": [
+ "mr:0611-barnabas-apostolus": [
   {
    "text": "T. 1. An. 34. num. 167. & seq. An. 44. num. 74. & seq. & A. 51. n. 51. & seq.",
    "note": "a"
@@ -6165,7 +6165,7 @@
    "note": "c"
   }
  ],
- "mr:0611-parisius": [
+ "mr:0611-parisius-tarvisii": [
   {
    "text": "obijt Ann. 1267.",
    "note": "d"
@@ -6189,7 +6189,7 @@
    "note": "c"
   }
  ],
- "mr:0612-basilides": [
+ "mr:0612-basilides-lorii": [
   {
    "text": "T. 2. A. 303 num. 3. & 5.",
    "note": "a"
@@ -6201,13 +6201,13 @@
    "note": "d"
   }
  ],
- "mr:0612-onuphrius": [
+ "mr:0612-onuphrius-aegypti": [
   {
    "text": "cir. A. 370.",
    "note": "f"
   }
  ],
- "mr:0613-antonius": [
+ "mr:0613-antonius-patavii": [
   {
    "text": "obijt Ann. 1231.",
    "note": "a"
@@ -6219,31 +6219,31 @@
    "note": "d"
   }
  ],
- "mr:0613-cetheus": [
+ "mr:0613-cetheus-peregrinus": [
   {
    "text": "cir. A. 590.",
    "note": "f"
   }
  ],
- "mr:0613-fandila": [
+ "mr:0613-fandila-cordubae": [
   {
    "text": "T. x A. 853. nu. 66.",
    "note": "g"
   }
  ],
- "mr:0613-felicula": [
+ "mr:0613-felicula-romae": [
   {
    "text": "cir. An. 65.",
    "note": "b"
   }
  ],
- "mr:0613-triphyllius": [
+ "mr:0613-triphyllius-leucosiae": [
   {
    "text": "T. 3. A. 325. n 38.",
    "note": "h"
   }
  ],
- "mr:0614-aetherius": [
+ "mr:0614-aetherius-viennae": [
   {
    "text": "T. 2. A. 205. nu. 30.",
    "note": "g"
@@ -6267,7 +6267,7 @@
    "note": "c"
   }
  ],
- "mr:0614-methodius": [
+ "mr:0614-methodius-constantinopoli": [
   {
    "text": "T. 2. A. 109. n. 53 & 54. plura T 9 A. 834. nu. 13 & seq. A 829 nu. 13. A. 842. n 15. & T. x. A 843. n. 3. & seq. obitus Ann. 847. n. 60.",
    "note": "f"
@@ -6285,7 +6285,7 @@
    "note": "d"
   }
  ],
- "mr:0615-abraham": [
+ "mr:0615-abraham-arvernae": [
   {
    "text": "T. 6. A. 480 nu. 13.",
    "note": "h"
@@ -6295,7 +6295,7 @@
    "note": "h"
   }
  ],
- "mr:0615-benildis": [
+ "mr:0615-benildis-cordubae": [
   {
    "text": "T. x. A. 853 nu. 71.",
    "note": "d"
@@ -6307,13 +6307,13 @@
    "note": "e"
   }
  ],
- "mr:0615-hesychius": [
+ "mr:0615-hesychius-dorostori": [
   {
    "text": "T. 2. A. 228 nu. 3.",
    "note": "c"
   }
  ],
- "mr:0615-landelinus": [
+ "mr:0615-landelinus-crispinii": [
   {
    "text": "T. 8. A. 650, nu 2.",
    "note": "g"
@@ -6325,7 +6325,7 @@
    "note": "f"
   }
  ],
- "mr:0615-vitus": [
+ "mr:0615-vitus-lucaniae": [
   {
    "text": "T. 1. A. 55. n. 12. & seq.",
    "note": "a"
@@ -6335,7 +6335,7 @@
    "note": "a"
   }
  ],
- "mr:0616-aurelianus": [
+ "mr:0616-aurelianus-arelatensis": [
   {
    "text": "T.7.A.550 n. 12.",
    "note": "e"
@@ -6347,7 +6347,7 @@
    "note": "c"
   }
  ],
- "mr:0616-benno": [
+ "mr:0616-benno-misnae": [
   {
    "text": "T.1. Ann. 1117 nu. 6.",
    "note": "g"
@@ -6359,7 +6359,7 @@
    "note": "a"
   }
  ],
- "mr:0616-lutgardis": [
+ "mr:0616-lutgardis-aquiriae": [
   {
    "text": "obijt Ann. 1246.",
    "note": "h"
@@ -6371,13 +6371,13 @@
    "note": "b"
   }
  ],
- "mr:0616-tychon": [
+ "mr:0616-tychon-amathuntis": [
   {
    "text": "cir. A. 400.",
    "note": "d"
   }
  ],
- "mr:0617-avitus": [
+ "mr:0617-avitus-aureliani": [
   {
    "text": "T 7. A. 542. num. 7.",
    "note": "h"
@@ -6419,7 +6419,7 @@
    "note": "c"
   }
  ],
- "mr:0617-rainerius": [
+ "mr:0617-rainerius-pisarum": [
   {
    "text": "Obijt Ann 1161",
    "note": "l"
@@ -6431,25 +6431,25 @@
    "note": "d"
   }
  ],
- "mr:0618-amandus": [
+ "mr:0618-amandus-burdigalae": [
   {
    "text": "T. 5. A. 431 n. 195.",
    "note": "f"
   }
  ],
- "mr:0618-calogerus": [
+ "mr:0618-calogerus-thermarum-selinuntiarum": [
   {
    "text": "T. 7. A. 526. n. 28.",
    "note": "g"
   }
  ],
- "mr:0618-elisabeth": [
+ "mr:0618-elisabeth-schonaviae": [
   {
    "text": "obijt Ann. 1165.",
    "note": "h"
   }
  ],
- "mr:0618-leontius": [
+ "mr:0618-leontius-tripoli": [
   {
    "text": "T. 1. An. 80. nu. 3.",
    "note": "c"
@@ -6489,7 +6489,7 @@
    "note": "b"
   }
  ],
- "mr:0619-romualdus": [
+ "mr:0619-romualdus-ravennae": [
   {
    "text": "T. 11. Ann. 1027. n. 14. obitus.",
    "note": "g"
@@ -6549,7 +6549,7 @@
    "note": "e"
   }
  ],
- "mr:0621-leutfridus": [
+ "mr:0621-leutfridus-ebroicensis": [
   {
    "text": "cir. A. 570.",
    "note": "i"
@@ -6567,7 +6567,7 @@
    "note": "g"
   }
  ],
- "mr:0622-albanus": [
+ "mr:0622-albanus-verulamii": [
   {
    "text": "T. 2. A. 213. num. 10. & an. 303 nu. 144.",
    "note": "d"
@@ -6601,7 +6601,7 @@
    "note": "e"
   }
  ],
- "mr:0622-nicetas": [
+ "mr:0622-nicetas-remesianae": [
   {
    "text": "cir. A. 418.",
    "note": "f"
@@ -6611,7 +6611,7 @@
    "note": "f"
   }
  ],
- "mr:0622-paulinus": [
+ "mr:0622-paulinus-nolae": [
   {
    "text": "Plura T. 4. & præsertim A. 394. n. 72. & seq obitus T. 5. A. 431. nu. 189. & infra.",
    "note": "a"
@@ -6623,7 +6623,7 @@
    "note": "d"
   }
  ],
- "mr:0623-ediltrudis": [
+ "mr:0623-ediltrudis-eliensis": [
   {
    "text": "cir. A. 680. Forte hac est illa de qua T. 8. A. 626. n. 32.",
    "note": "i"
@@ -6675,13 +6675,13 @@
    "note": "b"
   }
  ],
- "mr:0624-simplicius": [
+ "mr:0624-simplicius-augustoduni": [
   {
    "text": "T. 3 A. 347 num. 11.",
    "note": "f"
   }
  ],
- "mr:0625-adalbertus": [
+ "mr:0625-adalbertus-egmundae": [
   {
    "text": "T. 8. A. 697. n. 1.",
    "note": "i"
@@ -6705,7 +6705,7 @@
    "note": "c"
   }
  ],
- "mr:0625-gulielmus": [
+ "mr:0625-gulielmus-guleti": [
   {
    "text": "obijt Ann. 1143.",
    "note": "k"
@@ -6717,13 +6717,13 @@
    "note": "b"
   }
  ],
- "mr:0625-maximus": [
+ "mr:0625-maximus-augustae-taurinorum": [
   {
    "text": "T. 5. A. 439. n. 14. T. 6. A. 451. nu. 14.",
    "note": "h"
   }
  ],
- "mr:0625-prosperus": [
+ "mr:0625-prosperus-regii-lepidi": [
   {
    "text": "plura To 5. ab A. 406. n. 53. & infra.",
    "note": "g"
@@ -6735,7 +6735,7 @@
    "note": "a"
   }
  ],
- "mr:0626-anthelmus": [
+ "mr:0626-anthelmus-bellicii": [
   {
    "text": "T. 12. Ann. 1161 § idẽ quoque.",
    "note": "g"
@@ -6747,19 +6747,19 @@
    "note": "a"
   }
  ],
- "mr:0626-maxentius": [
+ "mr:0626-maxentius-pictaviensis": [
   {
    "text": "T. 6. A. 507 num. 19.",
    "note": "h"
   }
  ],
- "mr:0626-pelagius": [
+ "mr:0626-pelagius-cordubae": [
   {
    "text": "T. x. A. 925 n. 1. & seq.",
    "note": "c"
   }
  ],
- "mr:0626-salvius": [
+ "mr:0626-salvius-valentianae": [
   {
    "text": "T. 9. A. 801. n. 26.",
    "note": "e"
@@ -6769,7 +6769,7 @@
    "note": "f"
   }
  ],
- "mr:0626-vigilius": [
+ "mr:0626-vigilius-tridenti": [
   {
    "text": "T. 5. A. 400 n. 1. & n. 14. & seq.",
    "note": "b"
@@ -6793,19 +6793,19 @@
    "note": "g"
   }
  ],
- "mr:0627-samson": [
+ "mr:0627-samson-constantinopoli": [
   {
    "text": "T.7. A. 541. nu. 22. Floruit tẽpore Anastasij cir. A. 490.",
    "note": "e"
   }
  ],
- "mr:0627-zoilus": [
+ "mr:0627-zoilus-cordubae": [
   {
    "text": "cir. A. 300.",
    "note": "b"
   }
  ],
- "mr:0628-argimirus": [
+ "mr:0628-argimirus-cordubae": [
   {
    "text": "h T.2.A.856. num. 30.",
    "note": "h"
@@ -6817,7 +6817,7 @@
    "note": "g"
   }
  ],
- "mr:0628-irenaeus": [
+ "mr:0628-irenaeus-lugdunensis": [
   {
    "text": "c T. 2. A. 205 nu. 38. & seq. & T. 4. An. 381. n. 100.",
    "note": "c"
@@ -6851,7 +6851,7 @@
    "note": "e"
   }
  ],
- "mr:0629-cassius": [
+ "mr:0629-cassius-narniae": [
   {
    "text": "T.7 A. 543 nu. 1. obitus A. 558. num. 14 & 15.",
    "note": "d"
@@ -6869,7 +6869,7 @@
    "note": "a"
   }
  ],
- "mr:0630-basilides": [
+ "mr:0630-basilides-alexandriae": [
   {
    "text": "T. 2. A. 205. n. 8. & seq.",
    "note": "d"
@@ -6885,7 +6885,7 @@
    "note": "e"
   }
  ],
- "mr:0630-martialis": [
+ "mr:0630-martialis-lemovicum": [
   {
    "text": "T. 1. A. 74. num. 15.",
    "note": "b"
