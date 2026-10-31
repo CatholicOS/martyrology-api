@@ -245,7 +245,7 @@
   "mark": "a"
  },
  "12-10|g": {
-  "id": "mr:1210-gemellus",
+  "id": "mr:1210-gemellus-ancyrae",
   "after": "Gemelli",
   "mark": "h"
  },
@@ -280,7 +280,7 @@
   "mark": "a"
  },
  "12-26|d": {
-  "id": "mr:1226-zosimus",
+  "id": "mr:1226-zosimus-papa",
   "after": "Zosĭmi",
   "mark": "d"
  },
@@ -290,12 +290,12 @@
   "mark": "e"
  },
  "12-26|f": {
-  "id": "mr:1226-zeno",
+  "id": "mr:1226-zeno-maiumae",
   "after": "Maiûmę",
   "mark": "f"
  },
  "12-26|g": {
-  "id": "mr:1226-zeno",
+  "id": "mr:1226-zeno-maiumae",
   "after": "Zenônis",
   "mark": "g"
  },

@@ -1104,20 +1104,20 @@
    "subject_la": "Sancta Natalia",
    "subject_en": "Saint Natalia"
   },
-  "12-2-0": "mr:1202-bibiana",
+  "12-2-0": "mr:1202-bibiana-romae",
   "12-2-5": "MERGE_PREV",
   "12-2-9": {
    "coin": "evasius",
    "subject_la": "Sanctus Evasius",
    "subject_en": "Saint Evasius"
   },
-  "12-3-8": "mr:1203-lucius",
+  "12-3-8": "mr:1203-lucius-curiae",
   "12-3-9": {
    "coin": "galganus",
    "subject_la": "Sanctus Galganus",
    "subject_en": "Saint Galganus"
   },
-  "12-4-6": "mr:1204-anno",
+  "12-4-6": "mr:1204-anno-coloniae",
   "12-4-7": {
    "coin": "maruthas",
    "subject_la": "Sanctus Maruthas",
@@ -1213,13 +1213,13 @@
    "subject_en": "Saint Theodore"
   },
   "12-29-0": "mr:1229-thomas-becket",
-  "12-30-3": "mr:1230-anysius",
+  "12-30-3": "mr:1230-anysius-thessalonicensis",
   "12-30-5": {
    "coin": "liberius",
    "subject_la": "Sanctus Liberius",
    "subject_en": "Saint Liberius"
   },
-  "12-31-7": "mr:1231-melania",
+  "12-31-7": "mr:1231-melania-hierosolymorum",
   "1-17-4": {
    "coin": "antonius-merulus-et-ioannes",
    "subject_la": "Beati Antonius, Merulus et Ioannes",
@@ -1431,7 +1431,7 @@
   "12-3-4": "mr:1203-agricola",
   "12-3-6": "mr:1203-mirocles",
   "12-5-7": "mr:1205-ioannes-thaumaturgus",
-  "12-8-1": "mr:1208-eutychianus",
+  "12-8-1": "mr:1208-eutychianus-papa",
   "12-8-7": "mr:1208-ordinatio-zenonis",
   "12-9-2": "mr:1209-restitutus",
   "12-18-0": "mr:1218-rufus-et-zosimus",
