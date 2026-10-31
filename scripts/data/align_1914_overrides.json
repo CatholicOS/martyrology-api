@@ -85,8 +85,8 @@
    "subject_la": "Sanctus Apronianus",
    "subject_en": "Saint Apronian"
   },
-  "2-3-1": "mr:0203-celerinus",
-  "2-3-6": "mr:0203-ansgarius",
+  "2-3-1": "mr:0203-celerinus-carthaginis",
+  "2-3-6": "mr:0203-ansgarius-hamburgensis",
   "2-4-4": {
    "coin": "rembertus",
    "subject_la": "Sanctus Rembertus",
@@ -125,7 +125,7 @@
    "subject_la": "Sanctus Iosephus",
    "subject_en": "Saint Joseph"
   },
-  "2-16-1": "mr:0216-iuliana",
+  "2-16-1": "mr:0216-iuliana-campaniae",
   "2-16-4": "mr:0216-porphyrius-et-seleucus",
   "2-16-5": {
    "coin": "gregorius-x",
