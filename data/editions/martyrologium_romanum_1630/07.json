@@ -23,7 +23,7 @@
    "mr:0702-tres-milites-romae": "Item Romæ passio sanctorum trium Militum, qui in martyrio beati Pauli Apostoli ad Christum conuersi, cum eo cælestis gloriæ participes fieri meruerunt.",
    "mr:0702-ariston-et-socii": "Eodem die sanctorum martyrum Aristŏnis, Crescentiani, Eutychiani, Vrbani, Vitalis, Iusti, Felicissimi, Felicis, Marciæ, & Symphorosæ, qui omnes apud Campaniam, cum Diocletiani Imperatoris persecutio desæuiret, martyrio coronati sunt.",
    "mr:0702-swithinus-vintoniae": "Vuintoniæ in Anglia sancti Suuithûni Episcopi, cuius sanctitas gratia miraculorum effulsit.",
-   "mr:0702-otho": "Bambergę S.Othônis Episcopi, qui Pomerânis Euangelium prædicans, eosdem conuertit ad fidem.",
+   "mr:0702-otho-bambergae": "Bambergę S.Othônis Episcopi, qui Pomerânis Euangelium prædicans, eosdem conuertit ad fidem.",
    "mr:0702-monegundis-turonum": "Turônis depositio sanctæ Monegundis religiosæ feminæ."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -184,15 +184,15 @@
  "14": {
   "titulus": "Pridie Idus Iulij. Luna.",
   "elogia": {
-   "mr:0714-bonaventura": "LVGDÛNI depositio sancti Bonauenturæ Cardinalis & Episcopi Albanensis, confessoris & Doctoris, ordinis Minorum, doctrina & vitæ sanctitate celeberrimi.",
+   "mr:0714-bonaventura-albanensis": "LVGDÛNI depositio sancti Bonauenturæ Cardinalis & Episcopi Albanensis, confessoris & Doctoris, ordinis Minorum, doctrina & vitæ sanctitate celeberrimi.",
    "mr:0714-iustus": "Romæ sancti Iusti militis sub Claudio Tribuno, qui, apparente sibi diuinitus Cruce, credidit in Christum, & mox baptizatus omnia sua pauperibus erogauit: tentus deinde à Magnetio Præfecto, verberari neruis, galea ignita contĕgi, & in rogum immitti iussus, nec in capillo quidem læsus, in confessione Domini reddidit spiritum.",
    "mr:0714-phocas": "Synôpe in Ponto sancti Phocæ martyris, eiusdem ciuitatis Episcopi, qui sub Traiano Imperatore carcerem, vincula, ferrum, ignemq. pro Christo superans, euolauit in cælum: cuius reliquiæ Viennam in Gallia delatæ, in basilica sanctorum Apostolorum conditæ sunt.",
-   "mr:0714-heracla": "Alexandriæ sancti Herăclæ antistitis, ob cuius celeberrimam opinionem Africânus historiogrăphus memorat se Alexandriam ad eum visendum properasse.",
+   "mr:0714-heracla-alexandriae": "Alexandriæ sancti Herăclæ antistitis, ob cuius celeberrimam opinionem Africânus historiogrăphus memorat se Alexandriam ad eum visendum properasse.",
    "mr:0714-cyrus": "Carthagine sancti Cyri Episcopi, in cuius festiuitate sanctus Augustinus de eo sermonem ad populum habuit.",
-   "mr:0714-felix": "Nouocŏmi sancti Felicis primi eiusdem ciuitatis Episcopi,",
+   "mr:0714-felix-comi": "Nouocŏmi sancti Felicis primi eiusdem ciuitatis Episcopi,",
    "mr:0714-optatianus-brixiae": "Brixiæ sancti Optatiâni Episcopi.",
    "mr:0714-marchelmus-daventriae": "Dauentriæ in Belgis sancti Marcellini presbyteri & confessoris.",
-   "mr:0714-henricus": "Bambergæ sancti Henrîci Primi Imperatoris, qui cum vxore sua Chunegunde perpetuam virginitatem seruauit, & sanctum Stephanum Hungarorum Regem cum vniuerso fere eius regno ad fidem Christi suscipiendam perduxit."
+   "mr:0714-henricus-imperator": "Bambergæ sancti Henrîci Primi Imperatoris, qui cum vxore sua Chunegunde perpetuam virginitatem seruauit, & sanctum Stephanum Hungarorum Regem cum vniuerso fere eius regno ad fidem Christi suscipiendam perduxit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -322,7 +322,7 @@
    "mr:0723-apollonius-et-eugenius": "Item sanctorum martyrum Apollonij & Eugenij.",
    "mr:0723-trophimus-et-theophilus": "Eodem die natalis sanctorum martyrum Trophimi & Theophili, qui sub Diocletiano Imperatore lapidibus cæsi, & igne incensi, demum gladio percussi, marmartyrio coronantur.",
    "mr:0723-plurimi-martyres-bulgariae": "In Bulgaria sanctorum plurimorum Martyrum, quos Nicephorus impius Imperator, ecclesias Dei deuastans, diuerso mortis genere, ense, laqueo, sagittis, diutino carcere, & fame necari fecit.",
-   "mr:0723-liborius": "Cenomanis in Gallia sancti Liborij Episcopi & confessoris.",
+   "mr:0723-liborius-cenomanorum": "Cenomanis in Gallia sancti Liborij Episcopi & confessoris.",
    "mr:0723-romula-et-socii": "Romæ sanctarum virginum Romulæ, Redemptæ, & Herundinis, de quibus scribit S. Gregorius Papa."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -358,7 +358,7 @@
  "26": {
   "titulus": "Septimo Kal. Augusti. Luna.",
   "elogia": {
-   "mr:0726-anna": "DORMITIO sanctæ Annę matris Genitricis Dei MARIAE.",
+   "mr:0726-anna-mater-mariae": "DORMITIO sanctæ Annę matris Genitricis Dei MARIAE.",
    "mr:0726-erastus-corinthi": "Philippis in Macedonia natalis S. Erasti, qui illic a beato Paulo Apostolo relictus Episcopus, ibidem martyrio coronatus est.",
    "mr:0726-symphronius-et-socii": "Romæ via Latina sanctorum martyrũ Symphronij, Olympij, Theoduli, & Exuperiæ, qui (vt in gestis sancti Stephani Papæ legitur) ignibus combusti, martyrij palmam adepti sunt.",
    "mr:0726-hyacinthus": "In Portu Romano sancti Hyacinthi martyris, qui primo in ignem iniectus, deinde in profluentem præcipitatus, illæsus euasit: post hæc a Leontio Consulari sub Traiano Imperatore gladio percussus, vitam finiuit: cuius corpus Iulia matrona in prædio suo iuxta Vrbem sepeliuit",

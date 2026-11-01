@@ -34,7 +34,7 @@
   "drop": "the erratum reads 'doctoris, doctoris': both readings alike (probably meant ductoris); the print has dôctoris"
  },
  "278.5": {
-  "id": "mr:0607-paulus",
+  "id": "mr:0607-paulus-constantinopolitanus",
   "printed": "Cucŭsum",
   "corrected": "Cucusam"
  },
@@ -74,7 +74,7 @@
   "id": "mr:1002-eleutherius-nicomediae"
  },
  "496.5": {
-  "id": "mr:1008-simeon"
+  "id": "mr:1008-simeon-senex"
  },
  "518.12": {
   "id": "mr:1021-malchus-maroneae",

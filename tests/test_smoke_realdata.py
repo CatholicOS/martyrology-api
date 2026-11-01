@@ -53,7 +53,7 @@ def test_year_resolver_hits_1630(client):
     assert r.status_code == 200
     b = r.json()
     assert b["metadata"]["edition"] == "martyrologium_romanum_1630"
-    assert b["elogia"][0]["id"] == "mr:0804-dominicus"
+    assert b["elogia"][0]["id"] == "mr:0804-dominicus-bononiae"
 
 
 @pytest.mark.parametrize(

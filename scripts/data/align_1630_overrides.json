@@ -33,7 +33,7 @@
   "split_at": "In monasterio Rhemensi depositio"
  },
  "2-1|Eodem die sancti Ephræm": "mr:0201-ephraem",
- "2-13|Andegăui depositio S. Lucinij": "mr:0213-licinius",
+ "2-13|Andegăui depositio S. Lucinij": "mr:0213-licinius-andegavi",
  "2-15|Romæ S. Gratônis martyris": "mr:0215-crato",
  "2-19|In Palæstina commemoratio sanctorum": {
   "split_at": "Hierosolymis sancti Zambdæ Episcopi."
@@ -66,7 +66,7 @@
  "3-21|Eodem die sanctorum martyrum": {
   "split_at": "Catănæ sancti Birilli, qui"
  },
- "3-22|In Suetia sanctæ Catherinæ": "mr:0322-catharina",
+ "3-22|In Suetia sanctæ Catherinæ": "mr:0322-catharina-fieschi",
  "3-28|Romæ S. Sixti Tertij Papæ": "mr:0328-xystus-iii",
  "4-4|Mediolani depositio sancti Ambrosij": {
   "split_at": "Hispăli in Hispania sancti Isidôri"
@@ -149,7 +149,7 @@
  "7-17|Sperâti autem reliquiæ": "MERGE_PREV",
  "7-17|Venetijs Translatio sanctę Marînę": "mr:0717-translatio-marinae",
  "7-20|ANTIOCHIAE passio S. Margarîtæ": "mr:0720-marina-antiochiae",
- "7-26|DORMITIO sanctæ Annę": "mr:0726-anna",
+ "7-26|DORMITIO sanctæ Annę": "mr:0726-anna-mater-mariae",
  "7-26|In Portu Romano sancti": {
   "split_at": "Item Romæ sancti Pastôris"
  },
@@ -174,7 +174,7 @@
   "subject_la": "Sanctus Hyacinthus",
   "same_eulogy": [
    "mr:0815-hyacinthus-cracoviae",
-   "mr:0817-hyacinthus"
+   "mr:0817-hyacinthus-cracoviae"
   ]
  },
  "8-19|In Palæstina sancti Timothęi": {
@@ -185,7 +185,7 @@
   "subject_la": "Sanctus Stephanus",
   "same_eulogy": [
    "mr:0816-stephanus-albae-regalis",
-   "mr:0902-stephanus"
+   "mr:0902-stephanus-albae-regalis"
   ]
  },
  "8-21|Eodem die sanctorum martyrum Bonôsi": "mr:0821-bonosus-et-maximianus",

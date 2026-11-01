@@ -42,7 +42,7 @@
  "4": {
   "titulus": "Quarto Nonas Maij. Luna.",
   "elogia": {
-   "mr:0504-monica": "APVD Ostia Tiberîna natalis S. Monicæ matris B.August.cuius ille pręclaram vitam in lib. 9. Confessionum testatam reliquit.",
+   "mr:0504-monica-ostiae": "APVD Ostia Tiberîna natalis S. Monicæ matris B.August.cuius ille pręclaram vitam in lib. 9. Confessionum testatam reliquit.",
    "mr:0504-silvanus-et-socii": "In metallo Phennensi Palæstinę natalis B.Siluâni Gazzæ Episc. qui in Diocletiani persecutione Galerij Maximiani Cæsaris mandato cum plurimis suis clericis martyrio coronatus est.",
    "mr:0504-cyriacus": "Item sanctorum vndequadraginta Martyrum, qui ibidem ad metalla damnati, post ferri candentis adustionem, & alia tormenta, simul capite cæsi sunt Hierosolŷmis S.Cyriâci Episc.qui cum loca sancta visitaret, sub Iuliano Apostâta cæsus est.",
    "mr:0504-porphyrius": "In Vmbrîa S Porphyrij martyris.",
@@ -50,8 +50,8 @@
    "mr:0504-florianus-lauriaci": "Lauriâci in Norîco Ripensi S. Floriani martyris, qui sub Diocletiano Imperatore, Aquilini Præsidis iussu, ligato ad collum saxo in flumen Anîsum præcipitatus est.",
    "mr:0504-pelagia": "Tarsi sanctæ Pelagiæ virginis, quæ sub Diocletiano in bouem æneum candentem inclusa, martyrium compleuit.",
    "mr:0504-paulinus": "Coloniæ sancti Paulini martyris.",
-   "mr:0504-venerius": "Mediolani sancti Venerij Episcopi, cuius virtutes sanctus Ioannes Chrysostomus in epistola ad eum scripta testatas reliquit.",
-   "mr:0504-sacerdos": "In territorio Petragoricensi sancti Sacerdôtis Episcopi Lemouicensis,",
+   "mr:0504-venerius-mediolani": "Mediolani sancti Venerij Episcopi, cuius virtutes sanctus Ioannes Chrysostomus in epistola ad eum scripta testatas reliquit.",
+   "mr:0504-sacerdos-lemovicum": "In territorio Petragoricensi sancti Sacerdôtis Episcopi Lemouicensis,",
    "mr:0504-curcodomus": "Antisiodori sancti Curcodômi diaconi."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -95,7 +95,7 @@
  "7": {
   "titulus": "Nonis Maij Luna.",
   "elogia": {
-   "mr:0507-stanislaus": "CRACOVIAE in Polonia natalis S. Stanislai Episc. & martyris, qui a Boleslao impio Rege necatus est.",
+   "mr:0507-stanislaus-cracoviensis": "CRACOVIAE in Polonia natalis S. Stanislai Episc. & martyris, qui a Boleslao impio Rege necatus est.",
    "mr:0507-domitilla-romae": "Tarracînæ in Campania natalis beatę Flauiæ Domitillæ virginis & martyris: quæ cum esset Flauij Clementis Consulis sororis filia, & a S. Clemente sacro velamine consecrata, in persecutione Domitiani ob testimonium Christi cum alijs plurimis in insulam Pontiam exilio deportata, longum ibi martyrium duxit: nouissime vero Tarracinam deducta, cum doctrina & miraculis plurimos ad fidem Christi conuertisset, iussu Iudicis incenso cubiculo, in quo simul cum suis virginibus Euphrosy̆na & Theodôra morabatur, cursum gloriosi martyrij consummauit. Celebratur etiam vna cum SS.martyribus Nerĕo, & Achillĕo die duodecima Maij.",
    "mr:0507-iuvenalis": "Eodem die S.Iuuenâlis martyris.",
    "mr:0507-flavius-et-socii": "Nicomediæ sanctorum martyrum Flauij Augusti, & Augustini fratrum.",
@@ -113,7 +113,7 @@
    "mr:0508-apparitio-michaelis": "IN monte Gargâno Apparitio S. Michaelis Archangeli.",
    "mr:0508-victor-mediolani": "Mediolani natalis sancti Victoris martyris, qui natione Maurus, & a primæua ætate Christianus, cum esset in castris Imperialibus miles, compellente Maximiano, vt idôlis sacrificaret, in confessione Domini fortissime perseuêrans, primo grauiter fustibus cæsus, sed Deo protegente doloris expers, deinde liquenti plumbo perfusus, sed nihil penitus læsus, nouissime gloriosi martyrij cursum capitis abscissione compleuit.",
    "mr:0508-acacius-byzantii": "Constantinopoli S. Acathij centurionis, qui in persecutione Diocletiani & Maximiani a Firmo tribuno delatus quod Christianus esset, & a Bibiâno Iudice Perinthi seuissime tortus, Byzantij demum a Flaccîno Proconsule capitis damnatus est: cuius corpus ad Scyllacium litus diuinitus postea delatum, ibi honorifice asseruatur.",
-   "mr:0508-dionysius": "Viennæ S. Dionysij Episcopi & confessoris.",
+   "mr:0508-dionysius-viennae": "Viennæ S. Dionysij Episcopi & confessoris.",
    "mr:0508-helladius-autissiodori": "Antisiodori S. Helladij Episc. In territorio Bisuntino sancti Petri Episcopi.",
    "mr:0508-wiro-ruraemundae": "In Scotia sancti Vuirônis Episcopi."
   },
@@ -180,8 +180,8 @@
   "titulus": "Tertio Idus Maij. Luna.",
   "elogia": {
    "mr:0513-dedicatio-sanctae-mariae-ad-martyres": "ROMAE Dedicatio Ecclesiæ Sanctæ MARIAE ad Martyres, quam B. Bonifacius Papa IIII. expurgato deorum omnium veteri fano, quod Panthĕon vocabatur, in honorem Beatæ semper Virginis MARIAE & omnium Marty̆rum dedicauit, tempore Phocæ Imperatoris.",
-   "mr:0513-mucius": "Constantinopoli B. Mucij presbyteri & martyris, qui sub Diocletiano Imperatore, & Laodicĭo Proconsule, primo Amphipŏli multis pœnis atque cruciatibus ob Christi confessionem afflictus, postea Byzantium vsque perductus, capitali sententia occubuit.",
-   "mr:0513-glyceria": "Heraclêæ sanctæ Glycerię martyris Romanæ, quæ sub Antonino Imperatore & Sabîno Præside passa est.",
+   "mr:0513-mucius-byzantii": "Constantinopoli B. Mucij presbyteri & martyris, qui sub Diocletiano Imperatore, & Laodicĭo Proconsule, primo Amphipŏli multis pœnis atque cruciatibus ob Christi confessionem afflictus, postea Byzantium vsque perductus, capitali sententia occubuit.",
+   "mr:0513-glyceria-heracleae": "Heraclêæ sanctæ Glycerię martyris Romanæ, quæ sub Antonino Imperatore & Sabîno Præside passa est.",
    "mr:0513-martyres-alexandriae": "Alexandriæ commemoratio plurimorum sanctorum martyrum, qui ob fidem Catholicam ab Arianis in ecclesia Theônæ occisi sunt.",
    "mr:0513-servatius-tungrensis": "Apud Traiectum sancti Seruatij Tungrensis ecclesiæ Episcopi; ad cuius meritum omnibus demonstrandum, cum tempore hiemis omnia in circuitu nix repleret, sepulchrum eius numquam operuit, donec industria ciuium basilica super illud ædificata est.",
    "mr:0513-ioannes-silentiarius": "In Palæstina S. Ioannis Silentiarij."
@@ -197,8 +197,8 @@
    "mr:0514-iusta-et-heredina": "In Sardinia sanctarum martyrum Iustæ, Iustinæ, & Henedinæ.",
    "mr:0514-paschalis-i": "Romæ S. Paschalis Papæ, qui plurima sanctorum martyrum corpora e cryptis leuauit, & in diuersis ecclesijs honorifice collocauit.",
    "mr:0514-bonifatius": "Ferenti in Tuscia S. Bonifacij Episcopi, qui (vt refert B. Gregorius Papa) a pueritia sanctitate & miraculis claruit.",
-   "mr:0514-pomponius": "Neapoli in Campania S. Pomponij Episcopi.",
-   "mr:0514-pachomius": "In Aegypto S. Pachomij abbatis, qui plurima in ea regione monasteria erexit, & regulam Monachorum scripsit, quã Angelo dictante didicerat."
+   "mr:0514-pomponius-neapoli": "Neapoli in Campania S. Pomponij Episcopi.",
+   "mr:0514-pachomius-thebaidis": "In Aegypto S. Pachomij abbatis, qui plurima in ea regione monasteria erexit, & regulam Monachorum scripsit, quã Angelo dictante didicerat."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -206,12 +206,12 @@
   "titulus": "Idibus Maij. Luna.",
   "elogia": {
    "mr:0515-torquatus-et-socii": "IN Hispania sanctorum Torquati, Ctesiphontis, Secundi, Iandaletij, Cæcilij, Hesichij, & Euphrasij, qui Romæ a sanctis Apostolis Episcopi ordinati, & ad prædicandum verbum Dei in Hispanias directi sunt: cumq. varijs vrbibus euangelizassent, & innumeras multitudines Christi fidei subiugassent, in ea prouincia diuersis locis quieuerunt, Torquâtus Acci, Ctesiphon Vergij, Secundus Abŭlę, Iandaletius Vrci, Cæcilius Illibĕri, Hesichius Cartêiæ, & Euphasius Illiturgi.",
-   "mr:0515-mancius": "Ebŏræ in Lusitania S. Mancij martyris.",
+   "mr:0515-mancius-eborae": "Ebŏræ in Lusitania S. Mancij martyris.",
    "mr:0515-isidorus-chii": "In insula Chio natalis B. Isidôri martyris, in cuius basilica extat puteus, in quem fertur fuisse iniectus, de cuius aqua infirmi sæpius potati sanantur.",
    "mr:0515-petrus-et-socii": "Lampsăci in Hellesponto passio SS. Petri, Andreæ, Pauli, & Dionysiæ.",
    "mr:0515-simplicius-sardiniae": "Faustinæ in Sardinia S. Simplicij Episcopi & martyris, qui Diocletiani tempore sub Barbaro Præside perfossus lancea martyrium consummauit.",
    "mr:0515-cassius-et-victorinus": "Aruernis sanctorum martyrum Cassij, Victorini, Maximi, & sociorum.",
-   "mr:0515-dympna": "In Brabantia sanctæ Dympnæ virginis & martyris, filiæ Regis Hiberniæ, quæ pro fide Christi & virginitate seruanda, a patre iussa est decollari."
+   "mr:0515-dympna-ghelae": "In Brabantia sanctæ Dympnæ virginis & martyris, filiæ Regis Hiberniæ, quæ pro fide Christi & virginitate seruanda, a patre iussa est decollari."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -225,7 +225,7 @@
    "mr:0516-quadraginta-quattuor-monachi-palaestinae": "In Palæstina passio sanctorum Monachorum a Sarracênis in Laura sanctis Sabæ interfectorum.",
    "mr:0516-audas-et-socii": "In Perside sanctorum martyrum Audæ Episcopi, septem presbyterorum, nouem Diaconorum, & septem Virginum, qui sub Isdegerde Rege varijs tormentorum generibus cruciati, gloriosum martyrium compleuerunt.",
    "mr:0516-honoratus-ambiani": "Ambiâni in Gallia sancti Honorati Episcopi.",
-   "mr:0516-domnolus": "Apud Cenomănos sancti Domnŏli Episcopi.",
+   "mr:0516-domnolus-parisiensis": "Apud Cenomănos sancti Domnŏli Episcopi.",
    "mr:0516-fidolus-trecis": "Trecis sancti Fidŏli confessoris.",
    "mr:0516-brendanus-clonfertiae": "In Scotia sancti Brandâni abbatis.",
    "mr:0516-maxima": "Apud Forum Iulij sanctæ Maximæ virginis, quæ multis clara virtutibus in pace quieuit."
@@ -235,7 +235,7 @@
  "17": {
   "titulus": "Sextodecimo kal. Iunij. Luna.",
   "elogia": {
-   "mr:0517-torpes": "PISIS in Tuscia sancti Torpêtis martyris, qui magnus in officio Neronis primum fuit, vnusq. ex his, de quibus Paulus Apostolus ab vrbe Roma ad Philippenses scribit: Salutant vos omnes sancti, maxime autem qui de Cæsaris domo sunt. sed postea pro fide Christi, iubente Satellĭco, alapis cæditur, verberibus durissime afficitur, ac bestijs deuorandus traditur, sed minime læditur: tandem martyrium suum decollatione compleuit tertio kal. Maij: eius tamen festiuitas hac die recolitur ob sui corporis translationem.",
+   "mr:0517-torpes-pisarum": "PISIS in Tuscia sancti Torpêtis martyris, qui magnus in officio Neronis primum fuit, vnusq. ex his, de quibus Paulus Apostolus ab vrbe Roma ad Philippenses scribit: Salutant vos omnes sancti, maxime autem qui de Cæsaris domo sunt. sed postea pro fide Christi, iubente Satellĭco, alapis cæditur, verberibus durissime afficitur, ac bestijs deuorandus traditur, sed minime læditur: tandem martyrium suum decollatione compleuit tertio kal. Maij: eius tamen festiuitas hac die recolitur ob sui corporis translationem.",
    "mr:0517-restituta-africae": "Neapoli in Campania sanctæ Restitûtæ virginis & martyris; quæ, Valeriano imperante, a Procŭlo Iudice in Africa varie torta, & in nauicula pice & stupa referta, vt in mari combureretur, imposita, immisso igne, cum in incensores flamma conuerteretur, ipsa in oratione spiritum Deo reddidit: cuius corpuscum eâdem nauicula Dei nutu ad Aenariam insulam prope Neapolim deuectum, a Christianis magna veneratione susceptum est, ac postmodum in eius honorem Constantinus Magnus basilicam Neapoli erigendam curauit.",
    "mr:0517-heraclius-et-paulus": "Nouiodûni sanctorum martyrum Heradij, Pauli, & Aquilini, cum duobus alijs.",
    "mr:0517-solocho": "Chalcedŏne sanctorum martyrum Solochâni & sociorum militum sub Maximiano Imperatore.",
@@ -289,7 +289,7 @@
   "elogia": {
    "mr:0521-timotheus-mauretaniae": "IN Mauritania Cæsariensi natalis sanctorum martyrum Timothĕi, Polij, & Eutychij diaconorum, qui in eadem regione verbum Dei disseminantes, pariter coronari meruerunt.",
    "mr:0521-polyeuctus-caesareae": "Cæsarêæ in Cappadocia natalis sanctorum martyrum Polyeucti, Victorij, & Donati.",
-   "mr:0521-secundinus": "Cordubæ sancti Secundini martyris.",
+   "mr:0521-secundinus-cordubae": "Cordubæ sancti Secundini martyris.",
    "mr:0521-synesius-et-theopompus": "Eodem die sanctorum martyrum Synesij, & Theopompi.",
    "mr:0521-nicostratus-et-antiochus": "Cæsareæ Philippi natalis sanctorum martyrum Nicostrăti & Antiŏchi tribunorum, cum alijs militibus.",
    "mr:0521-valens": "Eodem die S. Valentis Episcopi, qui cum tribus pueris necatus est.",
@@ -373,7 +373,7 @@
    "mr:0526-quadratus": "In Africa S. Quadrati martyris, in cuius solemnitate sanctus Augustinus sermonem habuit.",
    "mr:0526-felicissima-tuderti": "Tuderti natalis sanctorum martyrum Felicissimi, Heraclij, & Paulini.",
    "mr:0526-priscus-autissiodorensis": "In territorio Antisiodorensi passio S. Prisci martyris, cum ingenti multitudine Christi fidelium.",
-   "mr:0526-augustinus-cantuariae": "Cantuariæ in Anglia sancti Augustini Episcopi, qui illuc vna cum alijs a B. Gregorio Papa missus, genti Anglorum Christi Euangelium prædicauit, ibiq. virtutibus & miraculis gloriosus obdormiuit in Domino.",
+   "mr:0526-augustinus-cantuariensis": "Cantuariæ in Anglia sancti Augustini Episcopi, qui illuc vna cum alijs a B. Gregorio Papa missus, genti Anglorum Christi Euangelium prædicauit, ibiq. virtutibus & miraculis gloriosus obdormiuit in Domino.",
    "mr:0526-philippus-neri": "Romæ S. Philippi Nerij Congregationis Oratorij fundatoris, Virginitatis, & Prophetiæ dono insignis."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -399,7 +399,7 @@
    "mr:0528-crescens-et-socii": "Item passio sanctorum Crescentis, Dioscoridis, Pauli, & Helladij.",
    "mr:0528-monachi-thecuae": "Thecŭe in Palæstina sanctorum Monachorum martyrum, qui tempore Theodosij Iunioris a Sarracênis occisi sunt: quorum sacras reliquias accolæ colligentes, summa veneratione illas habuerunt.",
    "mr:0528-germanus-augustodunensis": "Lutetiæ Parisiorum sancti Germâni Episcopi & confessoris, qui quantæ sanctitatis, quantiq. meriti fuerit, quibus etiam miraculis claruerit, Fortunatus Episcopus litterarum monimentis consignauit.",
-   "mr:0528-senator": "Mediolani S. Senatoris Episcopi, virtutibus & eruditione clarissimi.",
+   "mr:0528-senator-mediolani": "Mediolani S. Senatoris Episcopi, virtutibus & eruditione clarissimi.",
    "mr:0528-iustus-urgelli": "Vrgellæ in Hispania Tarraconensi sancti Iusti Episcopi.",
    "mr:0528-podius": "Florentiæ sancti Podij Episcopi & confessoris."
   },
@@ -425,7 +425,7 @@
    "mr:0530-felix-i": "ROMAE via Aurelia natalis sancti Felicis Papę & martyris; qui sub Aureliano Principe martyrio coronatus est.",
    "mr:0530-gabinus-turri-lybisonis": "Turribus in Sardinia sanctorum martyrum Gabini & Crispuli.",
    "mr:0530-sycus-et-palatinus": "Antiochiæ sanctorum Syci & Palatini, qui pro Christi nomine multa tormenta passi sunt.",
-   "mr:0530-exsuperantius": "Rauennæ sancti Exuperantij Episcopi & confessoris.",
+   "mr:0530-exsuperantius-ravennae": "Rauennæ sancti Exuperantij Episcopi & confessoris.",
    "mr:0530-anastasius-papiae": "Papiæ sancti Anastasij Episcopi.",
    "mr:0530-basilius-et-emmelia": "Cæsareæ in Cappadocia sanctorum Basilij & Emmeliæ coniugis eius, parentum sancti Basilij Magni: qui tempore Galerij Maximiani extorres facti, Ponticas solitudines incoluere, & post persecutionem, filijs suarum virtutum relictis heredibus, in pace quieuerunt."
   },
