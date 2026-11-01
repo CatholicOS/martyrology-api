@@ -2725,7 +2725,7 @@
    "method": "override",
    "score": null
   },
-  "mr:0501-ioseph-sponsus-mariae": {
+  "mr:0501-ioseph-opifex": {
    "method": "same-day",
    "score": 1.75
   },
@@ -4405,7 +4405,7 @@
    "method": "coined-deprecated",
    "score": null
   },
-  "mr:0713-henricus-gronae": {
+  "mr:0713-henricus-imperator": {
    "method": "same-day",
    "score": 1.63
   },
@@ -6497,7 +6497,7 @@
    "method": "same-day",
    "score": 2.33
   },
-  "mr:1006-fideus-aginni": {
+  "mr:1006-fides-aginni": {
    "method": "override",
    "score": null
   },
