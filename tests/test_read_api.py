@@ -160,3 +160,12 @@ def test_elogium_same_eulogy_and_placements(client):
     twin = client.get("/api/v1/elogium/mr:0106-durando").json()
     assert twin["editions"]["martyrologium_romanum_2004_it_IT"]["day_printed"] == "01-06"
     assert "martyrologium_romanum_2004" not in twin["editions"]
+
+
+def test_eulogy_item_served(client):
+    body = client.get("/api/v1/elogium/mr:0102-argeus-et-socii").json()
+    assert body["item"] == {"wikidata": "Q85977003", "kind": "group"}
+
+
+def test_eulogy_without_item_is_null(client):
+    assert client.get("/api/v1/elogium/mr:0105-durando").json()["item"] is None

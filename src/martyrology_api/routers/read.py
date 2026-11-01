@@ -18,6 +18,7 @@ from ..models import (
     EditionPlacementOut,
     ElogiumOut,
     ErratumOut,
+    EulogyItemOut,
     EulogyOut,
     FootnoteOut,
     LunaAnnouncementOut,
@@ -372,4 +373,5 @@ async def get_elogium(
         deprecated=entry.deprecated,
         editions=placements,
         same_eulogy=list(entry.same_eulogy),
+        item=EulogyItemOut(**entry.item) if entry.item else None,
     )

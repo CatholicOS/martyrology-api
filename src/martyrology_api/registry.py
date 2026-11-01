@@ -46,6 +46,9 @@ class IdEntry:
     )
     # The same eulogy printed by another edition on another day.
     same_eulogy: tuple[str, ...] = ()
+    # What a eulogy that does not commemorate a single person commemorates as a whole:
+    # {"wikidata": QID, "kind": group|feast|dedication|translation} (crmedr data/eulogy_items.json).
+    item: Mapping[str, str] | None = field(default=None, hash=False, compare=False)
 
     def in_edition(self, edition_id: str) -> "IdEntry | None":
         """This eulogy as `edition_id` prints it, or None if it does not print it."""
@@ -126,6 +129,7 @@ class Registry:
                 unnumbered=e.get("unnumbered", False),
                 editions=e.get("editions", {}),
                 same_eulogy=tuple(e.get("same_eulogy", [])),
+                item=e.get("item"),
             )
         dep_raw = json.loads((crmedr_path / "data/deprecated_ids.json").read_text())
         for e in dep_raw:
