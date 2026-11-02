@@ -126,15 +126,16 @@ class MentionPersonOut(BaseModel):
 
 
 class MentionBase(BaseModel):
-    """A person or place a eulogy names (crmedr `data/mentions.json`): the span from `start` to
-    `end` of its text, or of the footnote `where` names, in UTF-16 code units, the unit JavaScript
-    strings use. `qid` is the Wikidata item crmedr decided (null while undecided); `name` is a
-    person's nominative, null for a place; `n` tells apart the persons of one name in the eulogy
-    (2, 3…; null for the first). `roles` are a place's roles in the eulogy, in crmedr's item
-    order; null for a person, or a place crmedr gave none. `others` are the other persons a person
-    mention names, in no particular order; null when it names one person, and for a place."""
+    """A person, place or event (a council or synod) a eulogy names (crmedr `data/mentions.json`):
+    the span from `start` to `end` of its text, or of the footnote `where` names, in UTF-16 code
+    units, the unit JavaScript strings use. `qid` is the Wikidata item crmedr decided (null while
+    undecided); `name` is a person's nominative, null for a place or event; `n` tells apart the
+    persons of one name in the eulogy (2, 3…; null for the first). `roles` are a place's roles in
+    the eulogy, in crmedr's item order; null for a person or event, or a place crmedr gave none.
+    `others` are the other persons a person mention names, in no particular order; null when it
+    names one person, and for a place or event."""
 
-    kind: Literal["person", "place"]
+    kind: Literal["person", "place", "event"]
     where: Literal["text"] | MentionFootnote
     start: int = Field(ge=0)
     end: int

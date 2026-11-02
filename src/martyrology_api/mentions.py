@@ -1,12 +1,12 @@
-"""The persons and places the eulogies name (crmedr `data/mentions.json`), and the check that each
-one still lands on the words it names. crmedr stores no printed words: each mention carries a
-`check` of them, and the API reads the words from its own texts."""
+"""The persons, places and events (councils, synods) the eulogies name (crmedr
+`data/mentions.json`), and the check that each one still lands on the words it names. crmedr
+stores no printed words: each mention carries a `check` of them, and the API reads the words
+from its own texts."""
 
 import hashlib
 import logging
 from collections.abc import Callable, Collection
 from pathlib import Path
-from typing import Literal
 
 from pydantic import BaseModel, Field, ValidationError
 
@@ -16,10 +16,8 @@ log = logging.getLogger(__name__)
 
 
 class MentionIn(MentionBase):
-    """A mention as crmedr writes it: `check` is `span_check` of the words it covers. An `event`
-    (a council or synod) is read but not served until the reader can show one."""
+    """A mention as crmedr writes it: `check` is `span_check` of the words it covers."""
 
-    kind: Literal["person", "place", "event"]
     check: str = Field(pattern=r"^[0-9a-f]{8}$")
 
 
@@ -94,14 +92,16 @@ def served(ms: list[MentionIn], text: str | None, footnotes: list[FootnoteOut]) 
     """The mentions that land in this text, as served: each with the words it covers as `form`."""
     out = []
     for m in ms:
-        if m.kind == "event":
-            continue
         words = lands(m, text, footnotes)
         if words is not None:
             served_as = m.model_dump(exclude={"check"}) | {"form": words}
-            if m.kind == "place":
-                served_as["name"] = None  # a place has no nominative, whatever crmedr wrote
+            if m.kind in ("place", "event"):
+                served_as["name"] = (
+                    None  # a place or event has no nominative, whatever crmedr wrote
+                )
                 served_as["others"] = None  # nor other persons
+                if m.kind == "event":
+                    served_as["roles"] = None  # nor an event roles
             else:
                 served_as["roles"] = None  # a person has no role as a place has
                 served_as["others"] = served_as["others"] or None  # null when it names one person

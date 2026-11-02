@@ -102,7 +102,7 @@ def test_openapi_documents_the_mentions_of_a_eulogy(client):
     assert len(role["properties"]["role"]["enum"]) == 14
     assert role["properties"]["role"]["enum"][10:12] == ["exile", "captivity"]
     assert "check" not in m["properties"]  # crmedr's hash is not part of the response
-    assert m["properties"]["kind"]["enum"] == ["person", "place"]
+    assert m["properties"]["kind"]["enum"] == ["person", "place", "event"]
     assert c["MentionFootnote"]["properties"]["footnote"]["minimum"] == 1
     elogia = schema["paths"]["/api/v1/elogia/{rest}"]["get"]["responses"]["200"]
     assert elogia["content"]["application/json"]["schema"]["anyOf"] == [
