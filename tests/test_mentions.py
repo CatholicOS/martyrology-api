@@ -163,6 +163,13 @@ def test_a_mentioned_person_is_served_with_role_and_commemorated_in():
     assert got == [("mentioned", ids), ("mentioned", []), (None, None), (None, None)]
 
 
+def test_a_mentioned_person_without_commemorated_in_is_served_an_empty_list():
+    out = served(
+        [_m("Felix", start=7, end=12, name="Felix", role="mentioned")], "Natale Felix", []
+    )[0]
+    assert out.commemorated_in == []
+
+
 @pytest.mark.parametrize("kind", ["place", "event"])
 def test_a_place_has_no_role_or_commemorated_in(kind):
     rome = _m("Romæ", kind=kind, start=7, end=11, role="mentioned", commemorated_in=["abc-def"])

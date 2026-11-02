@@ -109,6 +109,8 @@ def served(ms: list[MentionIn], text: str | None, footnotes: list[FootnoteOut]) 
                 served_as["others"] = served_as["others"] or None  # null when it names one person
                 if served_as["role"] != "mentioned":
                     served_as["commemorated_in"] = None  # only a mentioned person has them
+                elif served_as["commemorated_in"] is None:
+                    served_as["commemorated_in"] = []  # a mentioned person always has the list
             out.append(MentionOut.model_validate(served_as))
     return out
 
