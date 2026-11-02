@@ -93,6 +93,8 @@ def test_openapi_documents_the_mentions_of_a_eulogy(client):
         "n",
         "roles",
         "others",
+        "role",
+        "commemorated_in",
     }
     other = c["MentionPersonOut"]
     assert set(other["required"]) == {"name", "n", "qid"}

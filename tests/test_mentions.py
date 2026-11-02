@@ -152,6 +152,29 @@ def test_an_event_mark_is_served_with_no_name_roles_or_other_persons():
     assert (out[0].name, out[0].roles, out[0].others) == (None, None, None)
 
 
+def test_a_mentioned_person_is_served_with_role_and_commemorated_in():
+    ids = ["abc-def", "ghi-jkl"]
+    mentioned = _m("Felix", start=7, end=12, name="Felix", role="mentioned", commemorated_in=ids)
+    nowhere = _m("Felix", start=14, end=19, name="Felix", role="mentioned", commemorated_in=[])
+    plain = _m("Felix", start=21, end=26, name="Felix")
+    stray = _m("Felix", start=28, end=33, name="Felix", commemorated_in=ids)
+    out = served([mentioned, nowhere, plain, stray], "Natale Felix, Felix, Felix, Felix.", [])
+    got = [(m.role, m.commemorated_in) for m in out]
+    assert got == [("mentioned", ids), ("mentioned", []), (None, None), (None, None)]
+
+
+@pytest.mark.parametrize("kind", ["place", "event"])
+def test_a_place_has_no_role_or_commemorated_in(kind):
+    rome = _m("Romæ", kind=kind, start=7, end=11, role="mentioned", commemorated_in=["abc-def"])
+    out = served([rome], "Natale Romæ", [])[0]
+    assert (out.role, out.commemorated_in) == (None, None)
+
+
+def test_a_role_other_than_mentioned_is_refused():
+    with pytest.raises(ValidationError):
+        _m("Felix", role="commemorated")
+
+
 def test_served_gives_a_place_no_name_whatever_crmedr_wrote():
     rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", name="Roma")
     assert served([rome], "Natale Romæ", [])[0].name is None
