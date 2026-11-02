@@ -132,11 +132,24 @@ def test_n_is_from_two():
         _m("Felix", name="Felix", n=1)
 
 
-def test_an_event_mark_is_read_but_not_yet_served():
-    council = _m("Concílio Ephesíno", kind="event", start=3, end=20, qid="Q184332")
+def test_an_event_mark_is_served_with_no_name_roles_or_other_persons():
+    council = _m(
+        "Concílio Ephesíno",
+        kind="event",
+        start=3,
+        end=20,
+        qid="Q184332",
+        name="Concilium",
+        roles=[{"role": "mention"}],
+        others=[{"name": "Cyrillus"}],
+    )
     rome = _m("Romæ", kind="place", start=24, end=28, qid="Q220")
     out = served([council, rome], "in Concílio Ephesíno et Romæ", [])
-    assert [m.kind for m in out] == ["place"]
+    assert [(m.kind, m.form, m.qid) for m in out] == [
+        ("event", "Concílio Ephesíno", "Q184332"),
+        ("place", "Romæ", "Q220"),
+    ]
+    assert (out[0].name, out[0].roles, out[0].others) == (None, None, None)
 
 
 def test_served_gives_a_place_no_name_whatever_crmedr_wrote():
