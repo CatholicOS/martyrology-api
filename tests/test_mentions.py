@@ -132,6 +132,13 @@ def test_n_is_from_two():
         _m("Felix", name="Felix", n=1)
 
 
+def test_an_event_mark_is_read_but_not_yet_served():
+    council = _m("Concílio Ephesíno", kind="event", start=3, end=20, qid="Q184332")
+    rome = _m("Romæ", kind="place", start=24, end=28, qid="Q220")
+    out = served([council, rome], "in Concílio Ephesíno et Romæ", [])
+    assert [m.kind for m in out] == ["place"]
+
+
 def test_served_gives_a_place_no_name_whatever_crmedr_wrote():
     rome = _m("Romæ", kind="place", start=7, end=11, qid="Q220", name="Roma")
     assert served([rome], "Natale Romæ", [])[0].name is None
@@ -160,7 +167,7 @@ def test_served_gives_a_footnote_mention_its_footnote_as_where():
         {"start": -1},
         {"check": "4729EA69"},  # lowercase hex only
         {"check": "4729ea6"},  # eight digits
-        {"kind": "event"},
+        {"kind": "relic"},  # person, place or event only
         {"where": {"footnote": 0}},  # footnotes count from 1
         {"where": {"footnote": 1, "mark": "a"}},  # nothing else in `where`
         {"where": "margin"},

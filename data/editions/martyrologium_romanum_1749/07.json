@@ -24,7 +24,7 @@
    "mr:0702-tres-milites-romae": "Item Romae passio sanctorum trium militum, qui, ad Christum conversi in martyrio beati Pauli Apostoli, cum eo participes fieri caelestis gloriae meruerunt.",
    "mr:0702-ariston-et-socii": "Eodem die sanctorum Martyrum Aristonis, Crescentiani, Eutychiani, Urbani, Vitalis, Justi, Felicissimi, Felicis, Marciae et Symphorosae; qui omnes apud Campaniam, cum Diocletiani Imperatoris persecutio desaeviret, martyrio coronati sunt.",
    "mr:0702-swithinus-vintoniae": "Wintoniae, in Anglia, sancti Swithuni Episcopi, cujus sanctitas miraculis effulsit.",
-   "mr:0702-otho": "Bambergae sancti Othonis Episcopi, qui Pomeranis Evangelium praedicavit, et eos ad fidem convertit.",
+   "mr:0702-otho-bambergae": "Bambergae sancti Othonis Episcopi, qui Pomeranis Evangelium praedicavit, et eos ad fidem convertit.",
    "mr:0702-bernardinus-realino": "Lyciis, in Apulia, sancti Bernardini Realino, Confessoris, qui magistratus munere egregie functus, Societatem Jesu ingressus et sacerdotio auctus, caritate ac miraculis inclaruit.",
    "mr:0702-monegundis-turonum": "Turonis, in Gallia, depositio sanctae Monegundis, religiosae feminae."
   },
@@ -111,7 +111,7 @@
  "8": {
   "titulus": "8 Julii Octavo Idus Julii. vij. C",
   "elogia": {
-   "mr:0708-elisabeth": "Sanctae Elisabeth Viduae, Lusitanorum Reginae, quae ad regnum caeleste quarto Nonas hujus mensis transivit.",
+   "mr:0708-elisabeth-stremontii": "Sanctae Elisabeth Viduae, Lusitanorum Reginae, quae ad regnum caeleste quarto Nonas hujus mensis transivit.",
    "mr:0708-aquila-et-prisca": "In Asia minore sanctorum Aquilae et Priscillae uxoris, de quibus in Actibus Apostolorum scribitur.",
    "mr:0708-kilianus-herbipoli": "Herbipoli, in Germania, sancti Chiliani Episcopi, qui, a Romano Pontifice ad praedicandum Evangelium missus, ibi, cum multos ad Christum perduxisset, una cum Sociis Colomanno Presbytero, et Totnano Diacono, trucidatus est.",
    "mr:0708-quinquaginta-milites-portus": "In Portu Romano sanctorum quinquaginta militum Martyrum, qui, in sanctae Bonosae confessione ad fidem adducti, et a beato Felice Papa Primo baptizati, in Aureliani Imperatoris persecutione occisi sunt.",
@@ -197,13 +197,13 @@
  "14": {
   "titulus": "14 Julii Pridie Idus Julii. xj. B",
   "elogia": {
-   "mr:0714-bonaventura": "Sancti Bonaventurae, ex Ordine Minorum, Cardinalis et Episcopi Albanensis, Confessoris et Ecclesiae Doctoris; qui sequenti die migravit ad Dominum.",
+   "mr:0714-bonaventura-albanensis": "Sancti Bonaventurae, ex Ordine Minorum, Cardinalis et Episcopi Albanensis, Confessoris et Ecclesiae Doctoris; qui sequenti die migravit ad Dominum.",
    "mr:0714-camillus-de-lellis": "Romae natalis sancti Camilli de Lellis, Presbyteri et Confessoris, Clericorum Regularium infirmis ministrantium Institutoris; quem, virtutibus et miraculis clarum, Summus Pontifex Benedictus Decimus quartus in Sanctorum numero recensuit, et Leo Decimus tertius caelestem hospitalium et infirmorum Patronum renuntiavit. Ipsius tamen festivitas quintodecimo Kalendas Augusti recolitur.",
    "mr:0714-iustus": "Item Romae sancti Justi militis, qui, sub Claudio Tribuno, apparente sibi divinitus Cruce, credidit in Christum, et, mox baptizatus, omnia sua pauperibus erogavit; tentus deinde a Magnetio Praefecto, atque verberari nervis, galea ignita contegi et in rogum immitti jussus ac ne in capillo quidem laesus, in Domini confessione reddidit spiritum.",
    "mr:0714-phocas": "Synope, in Ponto, sancti Phocae Martyris, ejusdem civitatis Episcopi, qui, sub Trajano Imperatore, carcerem, vincula, ferrum ignemque pro Christo superans, evolavit in caelum. Ejus reliquiae postea Viennam, in Gallia, sunt delatae, et in Basilica sanctorum Apostolorum conditae.",
-   "mr:0714-heracla": "Alexandriae sancti Heraclae Antistitis, ob cujus celeberrimam opinionem, Africanus historiographus memorat se Alexandriam, ad eum visendum, properasse.",
+   "mr:0714-heracla-alexandriae": "Alexandriae sancti Heraclae Antistitis, ob cujus celeberrimam opinionem, Africanus historiographus memorat se Alexandriam, ad eum visendum, properasse.",
    "mr:0714-cyrus": "Carthagine sancti Cyri Episcopi, in cujus festivitate sanctus Augustinus de eo sermonem ad populum habuit.",
-   "mr:0714-felix": "Novocomi sancti Felicis, qui fuit primus ejusdem civitatis Episcopus.",
+   "mr:0714-felix-comi": "Novocomi sancti Felicis, qui fuit primus ejusdem civitatis Episcopus.",
    "mr:0714-optatianus-brixiae": "Brixiae sancti Optatiani Episcopi.",
    "mr:0714-marchelmus-daventriae": "Daventriae, in Belgis, sancti Marcellini, Presbyteri et Confessoris.",
    "mr:0714-franciscus-solano": "Limae, in Peruvia, sancti Francisci Solani, Sacerdotis ex Ordine Minorum et Confessoris; qui, praedicatione, signis et virtutibus apud Indos occidentales illustris, migravit ad Dominum, atque a Benedicto Decimo tertio, Pontifice Maximo, Sanctorum fastis adscriptus est."
@@ -213,7 +213,7 @@
  "15": {
   "titulus": "15 Julii Idibus Julii. x. C",
   "elogia": {
-   "mr:0715-henricus": "Sancti Henrici Primi, Imperatoris Romanorum et Confessoris, cujus dies natalis tertio Idus mensis hujus recensetur.",
+   "mr:0715-henricus-imperator": "Sancti Henrici Primi, Imperatoris Romanorum et Confessoris, cujus dies natalis tertio Idus mensis hujus recensetur.",
    "mr:0715-bonaventura-albanensis": "Lugduni, in Gallia, depositio sancti Bonaventurae, Cardinalis et Episcopi Albanensis, Confessoris et Ecclesiae Doctoris, ex Ordine Minorum, doctrina et vitae sanctitate celeberrimi. Ipsius tamen festivitas pridie hujus diei recolitur.",
    "mr:0715-felix-papiae": "Papiae sancti Felicis, Episcopi et Martyris.",
    "mr:0715-eutropius-et-socii": "In Portu Romano natalis sanctorum Martyrum Eutropii, atque Zosimae et Bonosae sororum.",
@@ -342,7 +342,7 @@
   "titulus": "23 Julii Decimo Kalendas Augusti. ij. D",
   "elogia": {
    "mr:0723-apollinaris-ravennae": "Ravennae natalis sancti Apollinaris Episcopi, qui, ab Apostolo Petro Romae ordinatus et Ravennam missus, pro fide Christi diversas et multiplices poenas perpessus est; postea, Evangelium in Aemilia praedicans, plurimos ab idolorum cultu revocavit; tandem, Ravennam reversus, gloriosum martyrium, sub Vespasiano Caesare, complevit.",
-   "mr:0723-liborius": "Cenomanis, in Gallia, sancti Liborii, Episcopi et Confessoris.",
+   "mr:0723-liborius-cenomanorum": "Cenomanis, in Gallia, sancti Liborii, Episcopi et Confessoris.",
    "mr:0723-birgitta-romae": "Romae natalis sanctae Birgittae Viduae, quae, post multas sanctarum locorum peregrinationes, divino afflata Spiritu, quievit. Ipsius autem festivitas octavo Idus Octobris celebratur.",
    "mr:0723-rasyphus": "Ibidem sancti Rasyphi Martyris.",
    "mr:0723-primitiva": "Item Romae passio sanctae Primitivae, Virginis et Martyris.",
@@ -384,7 +384,7 @@
  "26": {
   "titulus": "26 Julii Septimo Kalendas Augusti. xxix. G",
   "elogia": {
-   "mr:0726-anna": "Dormitio sanctae Annae, quae mater exstitit Immaculatae Virginis Genitricis Dei Mariae.",
+   "mr:0726-anna-mater-mariae": "Dormitio sanctae Annae, quae mater exstitit Immaculatae Virginis Genitricis Dei Mariae.",
    "mr:0726-erastus-corinthi": "Philippis, in Macedonia, natalis sancti Erasti, qui, illic a beato Paulo Apostolo relictus Episcopus, ibidem martyrio coronatus est.",
    "mr:0726-symphronius-et-socii": "Romae, via Latina, sanctorum Martyrum Symphronii, Olympii, Theoduli et Exsuperiae; qui (ut in gestis sancti Stephani Papae legitur), ignibus combusti, martyrii palmam adepti sunt.",
    "mr:0726-hyacinthus": "In Portu Romano sancti Hyacinthi Martyris, qui, primo in ignem injectus, deinde in profluentem praecipitatus, illaesus evasit; post haec, sub Trajano Imperatore, a Leontio Consulari percussus gladio, vitam finivit. Ipsius corpus Julia Matrona in praedio suo, juxta Urbem, sepelivit.",

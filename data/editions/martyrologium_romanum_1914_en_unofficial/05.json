@@ -41,7 +41,7 @@
  "4": {
   "titulus": "The Fourth Day of May",
   "elogia": {
-   "mr:0504-monica": "At Ostia, the birthday of St. Monica, mother of blessed Augustine, who has left us in the ninth book of his Confessions a beautiful sketch of her life.",
+   "mr:0504-monica-ostiae": "At Ostia, the birthday of St. Monica, mother of blessed Augustine, who has left us in the ninth book of his Confessions a beautiful sketch of her life.",
    "mr:0504-silvanus-et-socii": "At the metal mines of Phennes, in Palestine, the birthday of the blessed Silvanus, bishop of Gaza, who was crowned with martyrdom with many of his clerics by the command of Caesar Galerius Maximian, in the persecution of Diocletian.",
    "mr:0504-triginta-novem-martyres-phaenonis": "Also, thirty-nine holy martyrs, who were beheaded together after having been condemned to work in the same mines, to be branded with a hot iron, and to undergo other torments.",
    "mr:0504-cyriacus": "At Jerusalem, in the reign of Julian the Apostate, St. Cyriacus, bishop, who was murdered as he was visiting the holy places.",
@@ -50,9 +50,9 @@
    "mr:0504-florianus-lauriaci": "At Lorch, in Austria, under the emperor Diocletian and the governor Aquilinus, the martyr St. Florian, who was precipitated into the river Enns, with a stone tied to his neck.",
    "mr:0504-pelagia": "At Tarsus, St. Pelagia, virgin, who endured martyrdom under Diocletian by being shut up within a red-hot brazen ox.",
    "mr:0504-paulinus": "At Cologne, St. Paulinus, martyr.",
-   "mr:0504-venerius": "At Milan, St. Venerius, bishop, whose virtues are attested by St. John Chrysostom in the epistle which he wrote to him.",
-   "mr:0504-sacerdos": "In the province of Perigord, St. Sacerdos, bishop of Limoges.",
-   "mr:0504-godehardus": "At Hildesheim, in Saxony, St. Godard, bishop and confessor, ranked among the Saints by Innocent II.",
+   "mr:0504-venerius-mediolani": "At Milan, St. Venerius, bishop, whose virtues are attested by St. John Chrysostom in the epistle which he wrote to him.",
+   "mr:0504-sacerdos-lemovicum": "In the province of Perigord, St. Sacerdos, bishop of Limoges.",
+   "mr:0504-godehardus-altensis": "At Hildesheim, in Saxony, St. Godard, bishop and confessor, ranked among the Saints by Innocent II.",
    "mr:0504-curcodomus": "At Auxerre, St. Curcodomus, deacon."
   },
   "conclusio": null
@@ -97,7 +97,7 @@
  "7": {
   "titulus": "The Seventh Day of May",
   "elogia": {
-   "mr:0507-stanislaus": "At Cracow, in Poland, the birthday of St. Stanislaus, bishop and martyr, who was murdered by the wicked king Boleslas.",
+   "mr:0507-stanislaus-cracoviensis": "At Cracow, in Poland, the birthday of St. Stanislaus, bishop and martyr, who was murdered by the wicked king Boleslas.",
    "mr:0507-domitilla-romae": "At Terracina, in Campania, the birthday of blessed Flavia Domitilla, virgin and martyr, niece of the Consul Flavius Clemens. She received the religious veil at the hands of St. Clement, and in the persecution of Domitian was exiled with many others to the island of Pontia, where she endured a long martyrdom for Christ. Taken afterwards to Terracina, she converted many to the faith of Christ by her teaching and miracles. The judge ordered the chamber in which she was with the virgins Euphrosina and Theodora, to be set on fire, and she thus consummated her glorious martyrdom. She is also mentioned with the holy martyrs Nereus and Achilleus, on the 12th of this month.",
    "mr:0507-iuvenalis": "The same day, St. Juvenal, martyr.",
    "mr:0507-flavius-et-socii": "At Nicomedia, the holy martyrs Flavius, Augustus, and Augustine, brothers.",
@@ -115,7 +115,7 @@
    "mr:0508-apparitio-michaelis": "On Mount Gargano, the apparition of the Archangel St. Michael.",
    "mr:0508-victor-mediolani": "At Milan, the birthday of the holy martyr Victor, a Moor. He became a Christian in his youth, and served as soldier in the imperial army. When Maximian wished to force him to offer sacrifice to idols, he persevered with the greatest fortitude in the confession of the Lord. Being first beaten with rods, but without experiencing any pain, through the protection of God, and then having melted lead poured over him, which did him no injury whatever, he at length terminated the career of his glorious martyrdom by being beheaded.",
    "mr:0508-acacius-byzantii": "At Constantinople, in the persecution of Diocletian and Maximian, St. Acathius, a centurion, who, being denounced as a Christian by the tribune Firmus, and cruelly tortured at Perinthus by the judge Bibian, was finally condemned to death at Byzantium by the proconsul Flaccinus. His body was afterwards miraculously brought to the shore of Syllacium, where it is preserved with due honor.",
-   "mr:0508-dionysius": "At Vienne, St. Denis, bishop and confessor.",
+   "mr:0508-dionysius-viennae": "At Vienne, St. Denis, bishop and confessor.",
    "mr:0508-helladius-autissiodori": "At Auxerre, St. Helladius, bishop.",
    "mr:0508-petrus": "In the diocese of Besancon, St. Peter, bishop.",
    "mr:0508-wiro-ruraemundae": "In Ireland, St. Wiro, bishop."
@@ -139,7 +139,7 @@
  "10": {
   "titulus": "The Tenth Day of May",
   "elogia": {
-   "mr:0510-antoninus": "St. Antoninus, confessor and archbishop of Florence, whose birthday is the 2d of May.",
+   "mr:0510-antoninus-florentiae": "St. Antoninus, confessor and archbishop of Florence, whose birthday is the 2d of May.",
    "mr:0510-gordianus-romae": "At Rome, on the Latin road, the birthday of the holy martyrs Gordian and Epimachus. In the time of Julian the Apostate, the former was a long time scourged and finally decapitated for confessing the name of Christ. He was buried at night by the Christians, in a crypt to which, shortly before, the remains of the blessed martyr Epimachus had been translated from Alexandria, where he had been martyred for the faith of Christ.",
    "mr:0510-iob-patiens": "In the land of Hus, the holy prophet Job, a man of wonderful patience.",
    "mr:0510-calepodius": "At Rome, the blessed priest and martyr Calepodius, who was killed with the sword, by order of the emperor Alexander. His body was dragged through the city and thrown into the Tiber. It was afterwards found and buried by Pope Callistus. The consul Palmatius was also beheaded with his wife, his sons, and forty-two of both sexes belonging to his household; likewise, the senator Simplicius with his wife, and sixty-eight of his house; Felix also with his wife Blanda. The heads of all these martyrs were exposed over different gates of the city, to terrify the Christians.",
@@ -187,8 +187,8 @@
   "titulus": "The Thirteenth Day of May",
   "elogia": {
    "mr:0513-dedicatio-sanctae-mariae-ad-martyres": "At Rome, in the time of the emperor Phocas, the dedication of the church of St. Mary of the Martyrs, formerly a temple of all the gods, called Pantheon, which was purified and dedicated by the blessed pope Boniface IV. to the honor of the blessed Mary ever Virgin, and of all the martyrs.",
-   "mr:0513-mucius": "At Constantinople, under the emperor Diocletian and the proconsul Laudicius, the blessed Lucius, a priest and martyr, who first at Amphipolis endured many tribulations and torments for the confession of Christ, and then being led to Byzantium, suffered capital punishment.",
-   "mr:0513-glyceria": "At Heraclea, the martyr St. Glyceria, a native of Rome, who suffered under the emperor Antoninus and the governor Sabinus.",
+   "mr:0513-mucius-byzantii": "At Constantinople, under the emperor Diocletian and the proconsul Laudicius, the blessed Lucius, a priest and martyr, who first at Amphipolis endured many tribulations and torments for the confession of Christ, and then being led to Byzantium, suffered capital punishment.",
+   "mr:0513-glyceria-heracleae": "At Heraclea, the martyr St. Glyceria, a native of Rome, who suffered under the emperor Antoninus and the governor Sabinus.",
    "mr:0513-martyres-alexandriae": "At Alexandria, the commemoration of many holy martyrs, who were killed by the Arians for the Catholic faith in the church of St. Theonas.",
    "mr:0513-servatius-tungrensis": "At Maestricht, St. Servatius, bishop of Tongres, whose grave, as a public sign of his merit, was free from snow during winter (though everything around was covered with it), until the inhabitants built a church over it.",
    "mr:0513-ioannes-silentiarius": "In Palestine, St. John the Silent.",
@@ -205,8 +205,8 @@
    "mr:0514-iusta-et-heredina": "In Sardinia, the holy martyrs Justa, Justina, and Henedina.",
    "mr:0514-paschalis-i": "At Rome, pope St. Paschal, who took up from the crypts many bodies of the holy martyrs, and placed them honorably in various churches.",
    "mr:0514-bonifatius": "At Ferentino, in Tuscany, the holy bishop Boniface, who was renowned from his childhood for holiness and miracles, as is related by the blessed pope Gregory.",
-   "mr:0514-pomponius": "At Naples, in Campania, St. Pomponius, bishop.",
-   "mr:0514-pachomius": "In Egypt, St. Pachomius, an abbot, who erected many monasteries in that country, and wrote a monastic rule, which was dictated to him by an angel."
+   "mr:0514-pomponius-neapoli": "At Naples, in Campania, St. Pomponius, bishop.",
+   "mr:0514-pachomius-thebaidis": "In Egypt, St. Pachomius, an abbot, who erected many monasteries in that country, and wrote a monastic rule, which was dictated to him by an angel."
   },
   "conclusio": null
  },
@@ -215,12 +215,12 @@
   "elogia": {
    "mr:0515-ioannes-baptista-de-la-salle": "At Rouen, St. John Baptist de la Salle, confessor, who deserved well both of religion and society by his labors for the education of youth, especially of the poor, and by the founding of the Society of the Brothers of the Christian Schools.",
    "mr:0515-torquatus-et-socii": "In Spain, the Saints Torquatus, Ctesiphon, Secundus, Indaletius, Caecilius, Hesychius, and Euphrasius, who were consecrated bishops at Rome by the holy apostles, and sent to Spain to preach the word of God. When they had evangelized various cities, and brought innumerable multitudes under the yoke of Christ, they rested in peace in various parts of that country: Torquatus at Cadiz, Ctesiphon at Vierco, Secundus at Avila, Indaletius at Portilla, Caecilius at Elvira, Hesychius at Gibraltar, and Euphrasius at Anduxar.",
-   "mr:0515-mancius": "At Evora, in Portugal, St. Mancius, martyr.",
+   "mr:0515-mancius-eborae": "At Evora, in Portugal, St. Mancius, martyr.",
    "mr:0515-isidorus-chii": "In the island of Chio, the birthday of blessed Isidore, martyr, in whose church is a well into which he is said to have been thrown. By drinking of the water from this well, the sick are frequently cured.",
    "mr:0515-petrus-et-socii": "At Lampsacum, in Hellespont, the martyrdom of the Saints Peter, Andrew, Paul, and Dionysia.",
    "mr:0515-simplicius-sardiniae": "At Fausina, in Sardinia, in the time of Diocletian and the governor Barbarus, St. Simplicius, a bishop, who consummated his martyrdom by being transpierced with a lance.",
    "mr:0515-cassius-et-victorinus": "At Clermont, in Auvergne, the holy martyrs Cassius, Victorinus, Maximus, and their companions.",
-   "mr:0515-dympna": "In Brabant, St. Dympna, virgin and martyr, daughter of an Irish king. By order of her father, she was beheaded for the faith of Christ and the preservation of her virginity."
+   "mr:0515-dympna-ghelae": "In Brabant, St. Dympna, virgin and martyr, daughter of an Irish king. By order of her father, she was beheaded for the faith of Christ and the preservation of her virginity."
   },
   "conclusio": null
  },
@@ -235,7 +235,7 @@
    "mr:0516-audas-et-socii": "In Persia, the holy martyrs Audas, a bishop, seven priests, nine deacons and seven virgins, who endured various kinds of torments under king Isdegerdes, and thus gloriously consummated their martyrdom.",
    "mr:0516-ioannes-nepomucenus": "At Prague, in Bohemia, St. John Nepomucen, a canon of the metropolitan church, who, being tempted in vain to betray the secret of confession, was cast into the river Moldau, and thus won the palm of martyrdom.",
    "mr:0516-honoratus-ambiani": "At Amiens, in France, the bishop St. Honoratus.",
-   "mr:0516-domnolus": "At Le Mans, St. Domnolus, bishop.",
+   "mr:0516-domnolus-parisiensis": "At Le Mans, St. Domnolus, bishop.",
    "mr:0516-possidius-calamensis": "At Mirandola, in Aemilia, St. Possidius, bishop of Calamae, disciple of St. Augustine, and the writer of his glorious life.",
    "mr:0516-fidolus-trecis": "At Troyes, St. Fidolus, confessor.",
    "mr:0516-brendanus-clonfertiae": "In Ireland, St. Brendan, abbot.",
@@ -247,12 +247,12 @@
   "titulus": "The Seventeenth Day of May",
   "elogia": {
    "mr:0517-paschalis-baylon": "At Villareal, in the kingdom of Valencia, St. Pascal, of the Order of Minorites, a man remarkable for innocence of life and the spirit of penance. Pope Leo XIII. declared him heavenly patron of Eucharistic Congresses and Societies formed in honor of the Most Blessed Sacrament.",
-   "mr:0517-torpes": "At Pisa, in Tuscany, the holy martyr Torpes, who filled a high office in the court of Nero, and was one of those of whom the apostle St. Paul wrote from Rome to the Philippians: “All the saints salute you, especially those that are of the house of Caesar.” For the faith of Christ, he was, by order of Satellicus, buffeted, cruelly scourged and delivered to the beasts to be devoured, but being uninjured, he at last terminated his martyrdom by decapitation on the 29th of April. His feast, however, is kept on this day, on account of the translation of his body.",
+   "mr:0517-torpes-pisarum": "At Pisa, in Tuscany, the holy martyr Torpes, who filled a high office in the court of Nero, and was one of those of whom the apostle St. Paul wrote from Rome to the Philippians: “All the saints salute you, especially those that are of the house of Caesar.” For the faith of Christ, he was, by order of Satellicus, buffeted, cruelly scourged and delivered to the beasts to be devoured, but being uninjured, he at last terminated his martyrdom by decapitation on the 29th of April. His feast, however, is kept on this day, on account of the translation of his body.",
    "mr:0517-restituta-africae": "The same day, St. Restituta, virgin and martyr, who was subjected to various kinds of tortures in Africa by the judge Proculus, in the reign of Valerian, and then put in a boat filled with pitch and tow, to be burnt to death on the sea. But the flame turned on those who had kindled it, and the saint yielded her spirit to God in prayer. Her body was, by divine providence, carried in the boat to the island of Ischia, near Naples, where it was received by the Christians with great veneration. A church was afterwards erected in her honor in that city by Constantine the Great.",
    "mr:0517-heraclius-et-paulus": "At Noyon, the holy martyrs Heradius, Paul, and Aquilinus, with two others.",
    "mr:0517-solocho": "At Chalcedon, the holy martyrs Solochanus and his companions, soldiers under the emperor Maximian.",
    "mr:0517-adrio-alexandriae": "At Alexandria, the holy martyrs Adrio, Victor and Basilla.",
-   "mr:0517-bruno": "At Wurzburg, St. Bruno, bishop and confessor."
+   "mr:0517-bruno-herbipoli": "At Wurzburg, St. Bruno, bishop and confessor."
   },
   "conclusio": null
  },
@@ -303,7 +303,7 @@
   "elogia": {
    "mr:0521-timotheus-mauretaniae": "In Mauritania (Morocco), the birthday of the holy martyrs Timothy, Polius, and Eutychius, deacons, who merited to be crowned together for dispensing the word of God in that region.",
    "mr:0521-polyeuctus-caesareae": "At Caesarea, in Cappadocia, the birthday of the holy martyrs Polieuctus, Victorius, and Donatus.",
-   "mr:0521-secundinus": "At Cordova, St. Secundinus, martyr.",
+   "mr:0521-secundinus-cordubae": "At Cordova, St. Secundinus, martyr.",
    "mr:0521-synesius-et-theopompus": "The same day, the holy martyrs Synesius and Theopompus.",
    "mr:0521-nicostratus-et-antiochus": "At Caesarea Philippi, the holy martyrs Nicostratus and Antiochus, tribunes, with other soldiers.",
    "mr:0521-valens": "The same day St. Valens, bishop, who was put to death with three boys.",
@@ -393,7 +393,7 @@
    "mr:0526-quadratus": "In Africa, St. Quadratus, martyr, on whose festival St. Augustine preached a sermon.",
    "mr:0526-felicissima-tuderti": "At Todi, the birthday of the holy martyrs Felicissimus, Heraclius, and Paulinus.",
    "mr:0526-priscus-autissiodorensis": "In the territory of Auxerre, the passion of St. Priscus, martyr, with a great multitude of Christians.",
-   "mr:0526-augustinus-cantuariae": "At Canterbury, in England, St. Augustine, bishop, who was sent thither with others by the blessed pope Gregory and preached the Gospel of Christ to the English nation. Celebrated for virtues and miracles, he went peacefully to his rest in the Lord."
+   "mr:0526-augustinus-cantuariensis": "At Canterbury, in England, St. Augustine, bishop, who was sent thither with others by the blessed pope Gregory and preached the Gospel of Christ to the English nation. Celebrated for virtues and miracles, he went peacefully to his rest in the Lord."
   },
   "conclusio": null
  },
@@ -412,14 +412,14 @@
  "28": {
   "titulus": "The Twenty-eighth Day of May",
   "elogia": {
-   "mr:0528-augustinus": "At Canterbury, in England, St. Augustine, bishop, mentioned on the 26th of this month.",
+   "mr:0528-augustinus-cantuariensis": "At Canterbury, in England, St. Augustine, bishop, mentioned on the 26th of this month.",
    "mr:0528-aemilius-et-socii": "In Sardinia, the holy martyrs Aemilius, Felix, Priam, and Lucian, who were crowned after having combated for Christ.",
    "mr:0528-caraunus-carnuti": "At Chartres, in France, under the emperor Domitian, St. Caraunus, martyr, who was beheaded, and thus acquired the glory of martyrdom.",
    "mr:0528-heliconidis-corinthi": "At Corinth, St. Helconides, martyr, who was first subjected to torments in the reign of the emperor Gordian, under the governor Perennius, and then again tortured under his successor Justin. But being liberated by an angel, she had her breasts cut off, was exposed to wild beasts and to fire, and at length terminated her martyrdom by decapitation.",
    "mr:0528-crescens-et-socii": "Also, the martyrdom of the Saints Crescens, Dioscorides, Paul, and Helladius.",
    "mr:0528-monachi-thecuae": "At Thecua, in Palestine, the saintly monks who became martyrs by being killed by the Saracens, in the time of Theodosius the Younger. Their sacred remains were gathered by the inhabitants of the place and preserved with the greatest veneration.",
    "mr:0528-germanus-augustodunensis": "At Paris, St. Germanus, bishop and confessor, whose celebrity for holiness, merit, and miracles, has been transmitted to us by the writings of bishop Fortunatus.",
-   "mr:0528-senator": "At Milan, St. Senator, bishop, very renowned for virtues and learning.",
+   "mr:0528-senator-mediolani": "At Milan, St. Senator, bishop, very renowned for virtues and learning.",
    "mr:0528-iustus-urgelli": "At Urgel, in Spain, St. Justus, bishop.",
    "mr:0528-podius": "At Florence, St. Podius, bishop and confessor."
   },
@@ -446,7 +446,7 @@
    "mr:0530-felix-i": "At Rome, on the Aurelian road, the birthday of St. Felix, pope and martyr, who was crowned with martyrdom under the emperor Aurelian.",
    "mr:0530-gabinus-turri-lybisonis": "At Torres, in Sardinia, the holy martyrs Gabinus and Crispulus.",
    "mr:0530-sycus-et-palatinus": "At Antioch, the Saints Sycus and Palatinus, who endured many torments for the name of Christ.",
-   "mr:0530-exsuperantius": "At Ravenna, St. Exuperantius, bishop and confessor.",
+   "mr:0530-exsuperantius-ravennae": "At Ravenna, St. Exuperantius, bishop and confessor.",
    "mr:0530-anastasius-papiae": "At Pavia, St. Anastasius, bishop.",
    "mr:0530-basilius-et-emmelia": "At Caesarea, in Cappadocia, the Saints Basil and his wife Emmelia, parents of St. Basil the Great, who lived in exile in the fastnesses of Pontus during the reign of Galerius Maximian, and after the persecution rested in peace, leaving their children the heirs of their virtues.",
    "mr:0530-ferdinandus-iii": "At Seville, in Spain, St. Ferdinand III., King of Castile and Leon, surnamed the Saint, on account of his eminent virtues, and celebrated for his zeal in propagating the faith. Having conquered the Moors, he quitted his kingdom on earth to pass happily to that of heaven."

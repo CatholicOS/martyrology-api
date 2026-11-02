@@ -3,7 +3,7 @@
   "titulus": "Kalendis Februarij. Luna.",
   "elogia": {
    "mr:0201-ignatius": "NATALIS sancti Ignatij Episcopi & martyris, qui tertius post beatum Apostolum Petrum Antiochênam rexit ecclesiam, atque in persecutione Traiani damnatus ad bestias, Romam vinctus mittitur, iubente Traiano, vbi, circumsedente Senatu, immanissimis pœnarum supplicijs primo affectus, leonibus dehinc obijcitur; quorum dentibus præfocatus, hostia Christi efficitur.",
-   "mr:0201-pionius": "Smyrnæ sancti Pionij presbyteri & martyris, qui post apologias pro fide Christiana conscriptas, post squalorem carceris, vbi multos fratrum ad martyrij tolerantiam suis exhortationibus roborauit, cruciatibus multis vexatus, clauis confixus, & ardenti rogo superpositus, beatum pro Christo finem sortitus est: cum quo & alij quindecim passi sunt.",
+   "mr:0201-pionius-smyrnae": "Smyrnæ sancti Pionij presbyteri & martyris, qui post apologias pro fide Christiana conscriptas, post squalorem carceris, vbi multos fratrum ad martyrij tolerantiam suis exhortationibus roborauit, cruciatibus multis vexatus, clauis confixus, & ardenti rogo superpositus, beatum pro Christo finem sortitus est: cum quo & alij quindecim passi sunt.",
    "mr:0201-severus-ravennae": "Rauennæ sancti Seuêri Episcopi, qui ob præclara merita signo columbæ fuit electus.",
    "mr:0201-paulus-augustae-tricastinorum": "In Gallia ciuitate Tricastîna sancti Pauli Episcopi, cuius vita virtutibus claruit, & mors pretiosa miraculis commendatur.",
    "mr:0201-ephraem": "Eodem die sancti Ephræm Edessênę ecclesiæ diaconi, qui post multos labores pro fide Christi susceptos, sub Valente Imperatore sanctitate & doctrina conspicuus quieuit in Domino.",
@@ -17,7 +17,7 @@
    "mr:0202-purificatio-beatae-mariae-virginis": "PVRIFICATIO beatæ Mariæ Virginis, quæ a Græcis Hypapante Domini appellatur.",
    "mr:0202-apronianus": "Romæ via Salaria passio sancti Aproniani commentariensis, qui adhuc Gentîlis, cum sanctum Sisinium e carcere educeret, vt Laodicio Præfecto præsentaret, vocemq; e cælo factam audiret, Venite benedicti Patris mei, percipite regnum, quod vobis paratum est a constitutione mundi; credens baptizatur, & postea in confessione Domini finem vitæ capitali sententia accepit.",
    "mr:0202-fortunatius-et-socii": "Item Romæ sanctorum martyrum Fortunati, Feliciani, Firmi, & Candidi.",
-   "mr:0202-cornelius": "Cæsarêæ in Palæstina sancti Cornelij centurionis, quem beatus Petrus Apostolus baptizauit, & apud præfatam vrbem Episcopali honore sublimauit.",
+   "mr:0202-cornelius-centurio": "Cæsarêæ in Palæstina sancti Cornelij centurionis, quem beatus Petrus Apostolus baptizauit, & apud præfatam vrbem Episcopali honore sublimauit.",
    "mr:0202-flosculus-aureliani": "Aurelianis sancti Flosculi Episcopi.",
    "mr:0202-laurentius-cantuariae": "Cantuariæ in Anglia natalis sancti Laurentij Episcopi, qui post sanctum Augustinum eam ecclesiam gubernauit, & Regem ipsum ad fidem conuertit."
   },
@@ -134,7 +134,7 @@
    "mr:0211-lucius-et-socii": "Hadrianopoli sanctorum martyrum Lucij Episcopi, & sociorum eius; qui sub Constantio ab Arianis multa perpessus, in vinculis martyrium consummauit: ceteri vero nobiliores ciuium, cum Arianos in Sardicensi Concilio tunc damnatos recipere noluissent, a Philagrio Comite capitalem sententiam exceperunt.",
    "mr:0211-desiderius": "Lugduni sancti Desiderij Episcopi Viennensis & martyris.",
    "mr:0211-calocerus": "Rauennæ sancti Caloceri Episcopi & confessoris.",
-   "mr:0211-lazarus": "Mediolani sancti Lazari Episcopi.",
+   "mr:0211-lazarus-mediolani": "Mediolani sancti Lazari Episcopi.",
    "mr:0211-castrensis-volturni": "Capuæ sancti Castrensis Episcopi.",
    "mr:0211-severinus-agaunensis": "In castro Nantoniensi sancti Seuerini abbatis monasterij Agaunensis, cuius precibus cultor Dei Rex Clodoueus a diutina infirmitate liberatus est.",
    "mr:0211-ionas": "In Aegypto sancti Ionæ monachi virtutibus clari."
@@ -163,7 +163,7 @@
    "mr:0213-iulianus": "Lugdûni S. Iuliani martyris.",
    "mr:0213-benignus-tuderti": "Tuderti sancti Benigni martyris.",
    "mr:0213-gregorius-ii": "Romæ S. Gregorij Papę Secundi, qui Leonis Isaurici impietati acerrime restitit, & sanctum Bonifacium ad prædicandum Euangelium in Germaniam misit.",
-   "mr:0213-licinius": "Andegăui depositio S. Lucinij Episcopi, venerabilis sanctitatis viri.",
+   "mr:0213-licinius-andegavi": "Andegăui depositio S. Lucinij Episcopi, venerabilis sanctitatis viri.",
    "mr:0213-stephanus-lugduni": "Lugduni S. Stephani Episcopi & confessoris.",
    "mr:0213-stephanus-reate": "Reâte S. Stephani abbatis, miræ patientiæ viri: in cuius transitu (vt refert beatus Gregorius Papa) sancti Angeli, ceteris etiam videntibus, adfuêrunt."
   },
@@ -203,7 +203,7 @@
  "16": {
   "titulus": "Quartodecimo Kal. Martij. Luna.",
   "elogia": {
-   "mr:0216-onesimus": "NATALIS beati Onesimi, de quo S. Paulus Apostolus ad Philemŏnem scribit, quem etiam post sanctum Timothĕum Ephesiorum Episcopum ordinauit, predicationisque verbum illi commisit: Hic vinctus Romam perductus, ac pro fide Christi lapidatus, primo ibidem sepultus fuit; inde ad locum vbi Episcopus fuerat ordinatus, corpus eius delatum est.",
+   "mr:0216-onesimus-discipulus": "NATALIS beati Onesimi, de quo S. Paulus Apostolus ad Philemŏnem scribit, quem etiam post sanctum Timothĕum Ephesiorum Episcopum ordinauit, predicationisque verbum illi commisit: Hic vinctus Romam perductus, ac pro fide Christi lapidatus, primo ibidem sepultus fuit; inde ad locum vbi Episcopus fuerat ordinatus, corpus eius delatum est.",
    "mr:0216-iuliana-campaniae": "Cumis in Campania Translatio sanctæ Iulianę virginis & martyris, quæ Nicomediæ sub Maximiano Imperatore primum a patre suo Africano grauiter cęsa, deinde ab Euilasio Pręfecto, cui nubĕre recusarat, varie cruciata, & postmodum in carcerem detrusa, vbi palam cum diabolo conflixit; demum flammas ignium, & ollam feruentem superans, capitis decollatione martyrium consummauit.",
    "mr:0216-iulianus-et-socii": "In Aegypto sancti Iuliani martyris, cum alijs quinque millibus.",
    "mr:0216-elias-et-socii": "Cæsarêæ in Palæstina sanctorum martyrum Aegyptiorum Eliæ, Hieremiæ, Esaiæ, Samuelis, & Danielis, qui cum spontanee ministrassent confessoribus in Cilicia ad metalla damnatis, inde reuertentes, comprehensi, & a Firmiliano Præside sub Galerio Maximiano Imp. sæuissime torti, gladio demum percussi sunt.",
@@ -228,10 +228,10 @@
  "18": {
   "titulus": "Duodecimo Kal. Martij. Luna.",
   "elogia": {
-   "mr:0218-simeon": "HIEROSOLYMIS natalis B. Simeonis Episcopi & martyris, qui filius Cleophæ, & propinquus Saluatoris secundum carnem fuisse traditur. Hic Hierosolymorum Episcopus post Iacôbum fratrem Domini ordinatus ordinatus in persecutione Traiani multis supplicijs affectus, martyrio consummatus est, omnibus qui aderant, & iudice ipso mirantibus, vt centum viginti annorum senex crucis supplicium fortiter constanterq. pertulisset.",
+   "mr:0218-simeon-hierosolymorum": "HIEROSOLYMIS natalis B. Simeonis Episcopi & martyris, qui filius Cleophæ, & propinquus Saluatoris secundum carnem fuisse traditur. Hic Hierosolymorum Episcopus post Iacôbum fratrem Domini ordinatus ordinatus in persecutione Traiani multis supplicijs affectus, martyrio consummatus est, omnibus qui aderant, & iudice ipso mirantibus, vt centum viginti annorum senex crucis supplicium fortiter constanterq. pertulisset.",
    "mr:0218-maximus-et-socii": "Apud Ostia Tiberîna sanctorum martyrum Maximi & Claudij fratrum, & Præpedignæ vxoris Claudij, cum duobus filijs Alexandro & Cutĭa: qui cum essent præclarissimi generis, iubente Diocletiano, tenti sunt, atque in exilium deportati, deinde incendio concremati odoriferum martyrij sacrificium Deo ipsi obtulerunt; quorum reliquiæ in flumen proiectæ, & a Christianis perquisitæ, iuxta eamdem ciuitatem sepultæ sunt.",
    "mr:0218-lucius-et-socii": "In Africa sanctorum martyrũ Lucij, Siluâni, Rutŭli, Classĭci, Secundîni, Fructŭli, & Maximi.",
-   "mr:0218-flavianus": "Constãtinopoli sancti Flauiâni Episcopi, qui cum fidem Catholicam Ephĕsi propugnaret, ab impij Dioscŏri factione pugnis & calcibus percussus, atque in exilium actus, post triduum vitam finiuit.",
+   "mr:0218-flavianus-constantinopolitanus": "Constãtinopoli sancti Flauiâni Episcopi, qui cum fidem Catholicam Ephĕsi propugnaret, ab impij Dioscŏri factione pugnis & calcibus percussus, atque in exilium actus, post triduum vitam finiuit.",
    "mr:0218-helladius-toletanus": "Tolêti sancti Helladij Episcopi & confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -269,7 +269,7 @@
    "mr:0221-verulus-et-socii": "Adrumêti in Africa sanctorum martyrum Verŭli, Secundini, Syricij, Felicis, Seruuli, Saturnini, Fortunati, & aliorum sexdecim, qui in persecutione Vuandalica ob Catholicæ fidei confessionem martyrio coronati sunt.",
    "mr:0221-severianus": "Scythopoli in Palæstina sancti Seueriani Episcopi & martyris.",
    "mr:0221-petrus-mavimenus": "Damasci sancti Petri Mauimêni, qui cùm diceret Arabibus quibusdam ad se ægrotum venientibus: Omnis, qui fidem Christianam Catholicam non amplectitur, damnatus est, sicut & Mahŭmet pseudopropheta vester; ab illis necatus est.",
-   "mr:0221-maximianus": "Rauennæ sancti Maximiani Episcopi & confessoris.",
+   "mr:0221-maximianus-ravennae": "Rauennæ sancti Maximiani Episcopi & confessoris.",
    "mr:0221-felix": "Metis sancti Felicis Episcopi.",
    "mr:0221-paterius": "Brixiæ sancti Paterij Episcopi."
   },
@@ -329,7 +329,7 @@
    "mr:0225-victorinus-et-socii": "IN Aegypto natalis sanctorum martyrum Victorîni, Victoris, Nicephŏri, Claudiani, Dioscŏri, Serapiônis, & Papĭæ, sub Numeriâno Imperatore: quorum duo primi pro confessione fidei exquisita suppliciorum genera constanter tolerantes, capite plectuntur; Nicephorus post craticulas candentes, ignesq. superatos, minutâtim concîsus est. Claudianus & Dioscorus flammis incensi, Serapĭon verò & Papias gladio cæsi sunt.",
    "mr:0225-donatus-et-socii": "In Africa sanctorum martyrum Donati, Iusti, Herênæ, & sociorum.",
    "mr:0225-felix-iii": "Romæ natalis sancti Felicis Papæ Tertij, qui sancti Gregorij Papæ atăuus fuit; de quo is refert, quod sanctæ Tharfillæ nepti apparens, illam ad cælestia regna vocauit.",
-   "mr:0225-tarasius": "Constantinopoli sancti Tharasij Episcopi, eruditione & pietate insignis, ad quem extat Hadriani Papæ Primi epistola pro defensione Sanctarum imaginum.",
+   "mr:0225-tarasius-constantinopoli": "Constantinopoli sancti Tharasij Episcopi, eruditione & pietate insignis, ad quem extat Hadriani Papæ Primi epistola pro defensione Sanctarum imaginum.",
    "mr:0225-caesarius-nazianzenus": "Nazianzi sancti Cæsarij, fratris beati Gregorij Theologi, quem idem Gregorius inter agmina beatorum se vidisse testatur,"
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
@@ -337,7 +337,7 @@
  "26": {
   "titulus": "Quarto Kal. Martij. Luna.",
   "elogia": {
-   "mr:0226-nestor": "PERGE in Pamphilia natalis beati Nestŏris Episcopi, qui in persecutione Decij cùm die noctuq. orationi insisteret, postulans vt grex Christi custodiretur, comprehensus, ac nomen Domini mira libertate & alacritate confessus, iussu Præsidis Polliônis equuleo crudelissime tortus est, ac demum cùm se Christo semper adhæsurum constanter profiteretur, crucis suspendio victor migrauit in cælum.",
+   "mr:0226-nestor-magydensis": "PERGE in Pamphilia natalis beati Nestŏris Episcopi, qui in persecutione Decij cùm die noctuq. orationi insisteret, postulans vt grex Christi custodiretur, comprehensus, ac nomen Domini mira libertate & alacritate confessus, iussu Præsidis Polliônis equuleo crudelissime tortus est, ac demum cùm se Christo semper adhæsurum constanter profiteretur, crucis suspendio victor migrauit in cælum.",
    "mr:0226-papias-et-socii": "Ibidem passio sanctorum Papię, Diodôri, Conŏnis, & Claudiani, qui S. Nestŏrem martyrio pręcesserunt.",
    "mr:0226-fortunatus-et-socii": "Item sanctorum martyrum Fortunati, Felicis, & aliorum vigintiseptem.",
    "mr:0226-alexander-alexandrinus": "Alexandrię sancti Alexandri Episcopi, gloriosi senis, qui post beatum Petrum eiusdem ciuitatis Episcopum, Arium presbyterum suum hæretica impietate deprauatum, & diuina veritate conuictum, de Ecclesia eiecit, ac postea inter trecentos decem & octo Patres in Nicæno Concilio eumdem damnauit.",
@@ -354,7 +354,7 @@
    "mr:0227-alexander-et-socii": "ROMAE natalis sanctorum martyrum Alexandri, Abundij, Antigŏni, & Fortunati.",
    "mr:0227-iulianus-et-eunus": "Alexandriæ passio sancti Iuliani martyris: qui cùm ita podâgra constrictus esset, vt neque incedere, neque stare posset; vna cum duobus famulis, qui eum in sella gestabant, Iudici offertur; quorum alter fidem negauit, alter nomine Eunus cum Iuliano in confessione Christi perdûrans, ambo simul camelis impositi, per totam vrbem circumduci iubentur, & flagris laniari, ac tandem inceso rogo, hinc inde spectante populo, combûri.",
    "mr:0227-besa-alexandriae": "Ibidem sancti Besæ militis, qui cum insultantes in prædictos martyres cohibêret, delatus ad Iudicem, pro fide constanter agens, capite truncatus est.",
-   "mr:0227-leander": "Hispâli in Hispania natalis sancti Leandri eiusdem ciuitatis Episcopi, cuius prædicatione & industria Visigothorum gens, adiuuante Reccarêdo eorum Rege, ab Ariana impietate ad Catholicam fidem conuersa est.",
+   "mr:0227-leander-hispali": "Hispâli in Hispania natalis sancti Leandri eiusdem ciuitatis Episcopi, cuius prædicatione & industria Visigothorum gens, adiuuante Reccarêdo eorum Rege, ab Ariana impietate ad Catholicam fidem conuersa est.",
    "mr:0227-basilius-et-procopius-decapolita": "Constantinopoli sanctorum confessorum Basilij & Procopij, qui tempore Leonis Imperatoris pro cultu sanctarum imaginum strenue decertarunt.",
    "mr:0227-baldomerus-lugduni": "Lugdûni sancti Baldomêri viri Dei, cuius sepulchrum crebris miraculis illustratur."
   },

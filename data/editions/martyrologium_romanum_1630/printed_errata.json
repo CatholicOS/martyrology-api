@@ -53,7 +53,7 @@
    "entry": "84.4. comminarent, comminarentur."
   }
  ],
- "mr:0218-flavianus": [
+ "mr:0218-flavianus-constantinopolitanus": [
   {
    "kind": "add",
    "printed": "actus",
@@ -116,7 +116,7 @@
    "entry": "ibid. 14. Nauigellæ, Niuigellæ."
   }
  ],
- "mr:0317-ioseph": [
+ "mr:0317-ioseph-ab-arimathaea": [
   {
    "kind": "replace",
    "printed": "ab Arimathia",
@@ -125,7 +125,7 @@
    "entry": "142.1. ab Arimathia, ab Arimathæa."
   }
  ],
- "mr:0322-deogratias": [
+ "mr:0322-deogratias-carthaginis": [
   {
    "kind": "replace",
    "printed": "Carthaginensis",
@@ -179,7 +179,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0407-aphraates": [
+ "mr:0407-aphraates-antiochiae": [
   {
    "kind": "replace",
    "printed": "anachorêtæ",
@@ -252,7 +252,7 @@
    "entry": "207.3. hone state, honestate."
   }
  ],
- "mr:0430-severus": [
+ "mr:0430-severus-neapoli": [
   {
    "kind": "replace",
    "printed": "arguere",
@@ -329,7 +329,7 @@
    "entry": "Anachoretæ, & Lerinensis, vbique, Anachoritæ, & Lirinensis."
   }
  ],
- "mr:0607-paulus": [
+ "mr:0607-paulus-constantinopolitanus": [
   {
    "kind": "replace",
    "printed": "Cucŭsum",
@@ -554,7 +554,7 @@
    "entry": "487.6. & alij ignibus, dele, &."
   }
  ],
- "mr:1008-simeon": [
+ "mr:1008-simeon-senex": [
   {
    "kind": "replace",
    "printed": "diei",

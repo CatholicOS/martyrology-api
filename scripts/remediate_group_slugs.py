@@ -483,12 +483,12 @@ SPECIAL = {
     ),  # Christmas Proclamation (Kalenda)
     "mr:0912-martyres-lugduni": (
         "RESLUG",
-        "mr:0912-sacerdos",
+        "mr:0912-sacerdos-lugdunensis",
         "Sanctus Sacerdos",
     ),  # St Sacerdos, Bp of Lyon
     "mr:0504-martyres-interritorio": (
         "RESLUG",
-        "mr:0504-sacerdos",
+        "mr:0504-sacerdos-lemovicum",
         "Sanctus Sacerdos",
     ),  # same St Sacerdos
 }

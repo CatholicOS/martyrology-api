@@ -75,7 +75,7 @@ An edition folder may carry a `marginalia.json`: the notes the print sets in the
 
 ```json
 {
-  "mr:0804-dominicus": [
+  "mr:0804-dominicus-bononiae": [
     { "text": "To. 12. An. 1170 n. 62.", "note": "a" }
   ]
 }
