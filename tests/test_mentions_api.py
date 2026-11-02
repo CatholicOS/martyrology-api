@@ -18,6 +18,8 @@ SPOLETI = {
     # the fixture gives the opening place its role, as crmedr does
     "roles": [{"role": "death", "name": None, "n": None}],
     "others": None,
+    "role": None,
+    "commemorated_in": None,
     "form": "Spoleti in Umbria",
 }
 CONCORDII = {
@@ -30,6 +32,8 @@ CONCORDII = {
     "n": None,
     "roles": None,
     "others": None,
+    "role": None,
+    "commemorated_in": None,
     "form": "Concordii",
 }
 NARCISSUS = {
@@ -43,6 +47,8 @@ NARCISSUS = {
     "roles": None,
     # the fixture's mark names a second Narcissus too, as one word can name two persons
     "others": [{"name": "Narcissus", "n": 2, "qid": "Q2"}],
+    "role": None,
+    "commemorated_in": None,
     "form": "Narcissus",
 }
 

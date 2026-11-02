@@ -100,11 +100,17 @@ def served(ms: list[MentionIn], text: str | None, footnotes: list[FootnoteOut]) 
                     None  # a place or event has no nominative, whatever crmedr wrote
                 )
                 served_as["others"] = None  # nor other persons
+                served_as["role"] = None  # nor a mentioned role
+                served_as["commemorated_in"] = None
                 if m.kind == "event":
                     served_as["roles"] = None  # nor an event roles
             else:
                 served_as["roles"] = None  # a person has no role as a place has
                 served_as["others"] = served_as["others"] or None  # null when it names one person
+                if served_as["role"] != "mentioned":
+                    served_as["commemorated_in"] = None  # only a mentioned person has them
+                elif served_as["commemorated_in"] is None:
+                    served_as["commemorated_in"] = []  # a mentioned person always has the list
             out.append(MentionOut.model_validate(served_as))
     return out
 

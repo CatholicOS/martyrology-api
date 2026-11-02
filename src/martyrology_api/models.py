@@ -133,7 +133,10 @@ class MentionBase(BaseModel):
     persons of one name in the eulogy (2, 3…; null for the first). `roles` are a place's roles in
     the eulogy, in crmedr's item order; null for a person or event, or a place crmedr gave none.
     `others` are the other persons a person mention names, in no particular order; null when it
-    names one person, and for a place or event."""
+    names one person, and for a place or event. `role` is "mentioned" on the mark of a person the
+    eulogy only mentions (null for a person it commemorates, and for a place or event);
+    `commemorated_in` then lists the canonical IDs of the eulogies that commemorate the same
+    person, empty when none does (null whenever `role` is null)."""
 
     kind: Literal["person", "place", "event"]
     where: Literal["text"] | MentionFootnote
@@ -147,6 +150,10 @@ class MentionBase(BaseModel):
     roles: list[PlaceRoleOut] | None = None
     # crmedr's others: the other persons one person mention names.
     others: list[MentionPersonOut] | None = None
+    # crmedr's role: "mentioned" for a person the eulogy only mentions; null otherwise.
+    role: Literal["mentioned"] | None = None
+    # crmedr's commemorated_in: where a mentioned person is commemorated (canonical IDs).
+    commemorated_in: list[str] | None = None
 
     @model_validator(mode="after")
     def _a_span(self) -> "MentionBase":
