@@ -101,7 +101,7 @@
    "method": "same-day",
    "score": 0.968
   },
-  "mr:0103-theopemptus-et-theona": {
+  "mr:0103-theopemptus-et-theonas": {
    "method": "same-day",
    "score": 0.952
   },
@@ -1053,7 +1053,7 @@
    "method": "same-day",
    "score": 0.966
   },
-  "mr:0204-philea-et-philoromus": {
+  "mr:0204-phileas-et-philoromus": {
    "method": "same-day",
    "score": 0.95
   },
@@ -5821,7 +5821,7 @@
    "method": "same-day",
    "score": 0.828
   },
-  "mr:0712-fortunatus-et-hermagora": {
+  "mr:0712-fortunatus-et-hermagoras": {
    "method": "same-day",
    "score": 0.896
   },
@@ -7953,7 +7953,7 @@
    "method": "same-day",
    "score": 0.891
   },
-  "mr:0912-cronidis-et-socii": {
+  "mr:0912-cronides-et-socii": {
    "method": "override",
    "score": null
   },
@@ -9385,7 +9385,7 @@
    "method": "same-day",
    "score": 0.915
   },
-  "mr:1024-aretha-et-socii": {
+  "mr:1024-arethas-et-socii": {
    "method": "same-day",
    "score": 0.85
   },
@@ -10185,7 +10185,7 @@
    "method": "same-day",
    "score": 0.92
   },
-  "mr:1115-guria-et-samona": {
+  "mr:1115-gurias-et-samonas": {
    "method": "same-day",
    "score": 0.87
   },
