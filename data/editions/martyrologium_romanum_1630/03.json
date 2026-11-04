@@ -55,7 +55,7 @@
  "5": {
   "titulus": "Tertio Nonas Martij. Luna.",
   "elogia": {
-   "mr:0305-phoca-sinopes": "ANTIOCHIAE natalis sancti Phocæ martyris, qui post multas, quas pro nomine Redemptoris passus est iniurias, qualiter de antiquo illo serpente triumphauerit, hodie quoque populis eo miraculo declaratur, quod si quispiam a serpente morsus fuerit, vt ianuam basilicæ martyris credens attigerit, confestim euacuata virtute veneni sanatur.",
+   "mr:0305-phocas-sinopes": "ANTIOCHIAE natalis sancti Phocæ martyris, qui post multas, quas pro nomine Redemptoris passus est iniurias, qualiter de antiquo illo serpente triumphauerit, hodie quoque populis eo miraculo declaratur, quod si quispiam a serpente morsus fuerit, vt ianuam basilicæ martyris credens attigerit, confestim euacuata virtute veneni sanatur.",
    "mr:0305-hadrianus-caesareae": "Cæsareæ in Palæstina sancti Hadriani martyris, qui primo in persecutione Diocletiani iussu Firmiliani Præsidis ob Christi fidem leoni obiectus, deinde gladio iugulatus, martyrij coronam accepit.",
    "mr:0305-eusebius-et-socii": "Eodem die passio sanctorum Eusebij Palatini, & aliorum nouem martyrum.",
    "mr:0305-theophilus-caesariensis": "Cæsareæ in Palæstina S. Theophili Episcopi, qui sub Seuero Principe sapientia & vitæ integritate conspicuus emicuit.",
@@ -202,7 +202,7 @@
   "elogia": {
    "mr:0316-cyriacus-romae": "ROMAE passio S. Cyriaci diaconi, qui post longam carceris macerationem liquata pice perfusus; & in catasta extensus, attractus etiam neruis, & fustibus cæsus, ad vltimum cum Largo & Smaragdo, & alijs viginti, iubente Maximiano, capite truncatus est. Horum tamen festiuitas sexto Idus Augusti recolitur, quo die a B. Marcello Papa eorum corpora sunt leuata, ac venerabiliter tumulata.",
    "mr:0316-hilarius-et-tatianus": "Aquileię natalis B. Hilarij Episcopi, & Tatiani diaconi, qui sub Numeriano Imperatore & Beronio Præside, post equuleum atque alia tormenta, vna cum Felice, Largo, & Dionysio martyrium terminarunt,",
-   "mr:0316-papa-seleuciae": "In Lycaonia S. Papæ martyris, qui ob Christi fidem verberibus cæsus, vngulis ferreis laceratus, clauatis calceis incedere iussus est; deinde arbori alligatus, migrans ad Dominum, eamdem arborem ex sterili reddidit fructuosam.",
+   "mr:0316-papas-seleuciae": "In Lycaonia S. Papæ martyris, qui ob Christi fidem verberibus cæsus, vngulis ferreis laceratus, clauatis calceis incedere iussus est; deinde arbori alligatus, migrans ad Dominum, eamdem arborem ex sterili reddidit fructuosam.",
    "mr:0316-iulianus-anazarbi": "Anazarbi in Cilicia S. Iuliani martyris, qui sub Marciano Præside diutissime cruciatus, demum in sacco vna cum serpentibus inclusus, in mare demersus est.",
    "mr:0316-agapitus": "Rauennæ sancti Agapiti Episcopi & confessoris.",
    "mr:0316-heribertus-coloniae-agrippinae": "Coloniæ sancti Heriberti Episcopi, sanctitate celebris.",
@@ -328,7 +328,7 @@
    "mr:0325-annuntiatio-beatissimae-virginis-genitricis": "ANNVNCIATIO Beatissimæ Virginis genitricis Dei MARIAE.",
    "mr:0325-quirinus-romae": "Romę sancti Quirini martyris, qui sub Claudio Imperatore post facultatũ amissionem, post carceris squalorem, post multorum verberum afflictionem, gladio interfectus est, & in Tiberim proiectus: quem Christiani in insula Lycaonia inuenientes, in cœmeterio Pontiani condiderunt.",
    "mr:0325-irenaeus-sirmii": "Ibidem sanctorum ducentorum sexagintaduorum martyrum. Sirmij passio sancti Irenæi, Episcopi & martyris, qui tempore Maximiani Imperatoris sub Præside Probo primum tormentis acerrimis vexatus, deinde diebus plurimis in carcere cruciatus, nouissime abscisso capite consummatus est.",
-   "mr:0325-dula-nicomediae": "Nicomediæ sanctę Dulę ancillę cuiusdam militis, quę pro castitate seruanda occisa, martyrij coronam promeruit.",
+   "mr:0325-dulas-nicomediae": "Nicomediæ sanctę Dulę ancillę cuiusdam militis, quę pro castitate seruanda occisa, martyrij coronam promeruit.",
    "mr:0325-bonus-latro": "Hierosolymis commemoratio sancti Latronis, qui in cruce Christum confessus, ab eo meruit audire: Hodie mecum eris in paradiso.",
    "mr:0325-pelagius": "Laodicêę sancti Pelagij Episcopi, qui ob fidem Catholicam tempore Valentis exilium & alia passus, quieuit in Domino.",
    "mr:0325-barontius-et-desiderius": "Pistorij sanctorum confessorum Barontij & Desiderij.",

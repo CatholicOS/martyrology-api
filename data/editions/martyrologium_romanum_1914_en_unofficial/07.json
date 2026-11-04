@@ -87,7 +87,7 @@
    "mr:0706-romulus-faesularum": "At Fiesoli, in Tuscany, St. Romulus, bishop and martyr, disciple of the blessed apostle Peter, who commissioned him to preach the Gospel. After announcing Christ in many parts of Italy, he returned to Fiesoli, and was crowned with martyrdom with other Christians in the reign of Domitian.",
    "mr:0706-cyriaca-nicomediae": "In Campania, St. Dominica, virgin and martyr, in the time of the emperor Diocletian. For having destroyed idols, she was condemned to the beasts, but being uninjured by them, she was beheaded and departed for heaven. Her body is kept with great veneration at Tropea, in Calabria.",
    "mr:0706-lucia-et-socii": "The same day, St. Lucia, martyr, a native of Campania. Being arrested and severely tortured by the lieutenant-governor Rictiovarus, she converted him to Christ. To them were added Antoninus, Severinus, Diodorus, Dion, and seventeen others, who shared their sufferings and their crowns.",
-   "mr:0706-goaris-aquitaniae": "In the vicinity of Treves, St. Goar, priest and confessor."
+   "mr:0706-goar-aquitaniae": "In the vicinity of Treves, St. Goar, priest and confessor."
   },
   "conclusio": null
  },
@@ -170,7 +170,7 @@
    "mr:0712-ioannes-gualbertus": "In the monastery of Passignano, near Florence, the abbot St. John Gualbert, founder of the Vallumbrosan Order.",
    "mr:0712-nabor-et-felix": "At Milan, the holy martyrs Nabor and Felix, who suffered in the persecution of Maximian.",
    "mr:0712-iason": "In Cyprus, St. Jason, one of the first disciples of Christ.",
-   "mr:0712-fortunatus-et-hermagora": "At Aquileia, the birthday of St. Hermagoras, disciple of the blessed evangelist Mark, and first bishop of that city. Whilst occupied in performing miraculous cures, in preaching frequently and bringing souls to repentance, he suffered many kinds of torments, and finally by capital punishment, merited an immortal triumph with his deacon Fortunatus.",
+   "mr:0712-fortunatus-et-hermagoras": "At Aquileia, the birthday of St. Hermagoras, disciple of the blessed evangelist Mark, and first bishop of that city. Whilst occupied in performing miraculous cures, in preaching frequently and bringing souls to repentance, he suffered many kinds of torments, and finally by capital punishment, merited an immortal triumph with his deacon Fortunatus.",
    "mr:0712-paulinus": "At Lucca, in Tuscany, blessed Paulinus, who was consecrated first bishop of that city by St. Peter. Under Nero, after many combats, he terminated his martyrdom with some companions, at the foot of Mount Pisa.",
    "mr:0712-proclus-et-hilarion": "The same day, the Saints Proclus and Hilarion, who won the palm of martyrdom after most bitter torments, in the time of the emperor Trajan and the governor Maximus.",
    "mr:0712-epiphana": "At Lentini, St. Epiphana, who, after having her breasts cut off, died in the time of the emperor Diocletian and the governor Tertillus.",
@@ -184,8 +184,8 @@
   "titulus": "The Thirteenth Day of July",
   "elogia": {
    "mr:0713-anacletus": "At Rome, St. Anacletus, pope and martyr, who governed the Church of God after St. Clement, and shed lustre on it by a glorious martyrdom.",
-   "mr:0713-esdra-scriba": "The same day, the holy prophets Joel and Esdras.",
-   "mr:0713-sila-discipulus": "In Macedonia, blessed Silas, one of the first Christians. By the Apostles he was destined for the churches of the Gentiles with Paul and Barnabas. Filled with the grace of God, he zealously discharged the office of preaching, and after glorifying Christ by his sufferings, rested in peace.",
+   "mr:0713-esdras-scriba": "The same day, the holy prophets Joel and Esdras.",
+   "mr:0713-silas-discipulus": "In Macedonia, blessed Silas, one of the first Christians. By the Apostles he was destined for the churches of the Gentiles with Paul and Barnabas. Filled with the grace of God, he zealously discharged the office of preaching, and after glorifying Christ by his sufferings, rested in peace.",
    "mr:0713-serapion-alexandriae": "Also, St. Serapion, martyr, who obtained the crown of martyrdom by fire, in the time of the emperor Severus and the governor Aquila.",
    "mr:0713-myrope-chii": "In the island of Chio, in the time of the emperor Decius and the governor Numerian, the martyr St. Myrops. Being clubbed to death, he went to our Lord.",
    "mr:0713-eugenius-carthaginensis": "In Africa, the holy confessors Eugenius, the faithful and virtuous bishop of Carthage, and all the clergy of that church, to the number of about five hundred or more, among whom were many small children employed as lectors. In the persecution of the Vandals, under the Arian king Hunneric, they were subjected to scourging and starvation, and driven into a most painful banishment, which they bore with joy for God’s sake. In their number were also two distinguished personages, the archdeacon Salutaris, and Muritta, occupying the second rank among the ministers of the church. Both had three times confessed the faith, and were illustrious by their sturdy perseverance in Christianity.",
@@ -277,7 +277,7 @@
   "titulus": "The Nineteenth Day of July",
   "elogia": {
    "mr:0719-vincentius-a-paulo": "St. VINCENT DE PAUL, confessor, who slept in the Lord on the 27th of September. Leo XIII. declared him heavenly patron before the throne of God of all charitable organizations throughout the Catholic world owing in any manner their origin to him.",
-   "mr:0719-epaphra-colossarum": "The same day, the birthday of St. Epaphras, whom the apostle St. Paul calls his fellow-prisoner. By the same apostle he was consecrated bishop of Colossae, where becoming renowned for his virtues, he received the palm of martyrdom for defending courageously the flock committed to his charge. His body lies at Rome in the basilica of St. Mary the Greater.",
+   "mr:0719-epaphras-colossarum": "The same day, the birthday of St. Epaphras, whom the apostle St. Paul calls his fellow-prisoner. By the same apostle he was consecrated bishop of Colossae, where becoming renowned for his virtues, he received the palm of martyrdom for defending courageously the flock committed to his charge. His body lies at Rome in the basilica of St. Mary the Greater.",
    "mr:0719-iusta-et-rufina": "At Seville, in Spain, the martyrdom of the holy virgins Justa and Rufina. Arrested by the governor Diogenian, they were stretched on the rack and lacerated with iron claws, then imprisoned, and subjected to starvation and various tortures. Lastly Justa breathed her last in prison, and Rufina had her neck broken while confessing Christ.",
    "mr:0719-aurea-cordubae": "At Cordova, St. Aurea, virgin, who repented of a fault she had committed, and in a second combat overcame the enemy by the shedding of her blood.",
    "mr:0719-martinus": "At Treves, St. Martin, bishop and martyr.",

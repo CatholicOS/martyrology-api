@@ -55,7 +55,7 @@
  "5": {
   "titulus": "5 Martii Tertio Nonas Martii. vij. G",
   "elogia": {
-   "mr:0305-phoca-sinopes": "Antiochiae natalis sancti Phocae Martyris, qui, post multas, quas pro nomine Redemptoris passus est, injurias, qualiter de antiquo illo serpente triumphaverit, hodie quoque populis eo miraculo declaratur, quod, si quispiam a serpente morsus fuerit, hic, ut januam Basilicae Martyris credens attigerit, confestim, evacuata veneni virtute, sanatur.",
+   "mr:0305-phocas-sinopes": "Antiochiae natalis sancti Phocae Martyris, qui, post multas, quas pro nomine Redemptoris passus est, injurias, qualiter de antiquo illo serpente triumphaverit, hodie quoque populis eo miraculo declaratur, quod, si quispiam a serpente morsus fuerit, hic, ut januam Basilicae Martyris credens attigerit, confestim, evacuata veneni virtute, sanatur.",
    "mr:0305-hadrianus-caesareae": "Caesareae, in Palaestina, sancti Hadriani Martyris, qui in persecutione Diocletiani Imperatoris, jussu Firmiliani Praesidis, prius ob Christi fidem leoni objectus, deinde gladio jugulatus, martyrii coronam accepit.",
    "mr:0305-eusebius-et-socii": "Eodem die passio sanctorum Eusebii Palatini, et aliorum novem Martyrum.",
    "mr:0305-theophilus-caesariensis": "Caesareae, in Palaestina, sancti Theophili Episcopi, qui sub Severo Principe, sapientia et vitae integritate conspicuus, emicuit.",
@@ -213,7 +213,7 @@
   "elogia": {
    "mr:0316-cyriacus-romae": "Romae passio sancti Cyriaci Diaconi, qui, post longam carceris macerationem, liquata pice perfusus et in catasta extensus, attractus etiam nervis et fustibus caesus, ad ultimum, cum Largo et Smaragdo et aliis viginti, jubente Maximiano, capite truncatus est. Sanctorum vero Cyriaci, Largi et Smaragdi festivitas sexto Idus Augusti recolitur, quo die a beato Marcello Papa corpora eorumdem viginti trium Martyrum levata sunt ac venerabiliter tumulata.",
    "mr:0316-hilarius-et-tatianus": "Aquilejae natalis beati Hilarii Episcopi, et Tatiani Diaconi, qui, sub Numeriano Imperatore et Beronio Praeside, post equuleum atque alia tormenta, una cum Felice, Largo et Dionysio, martyrium terminarunt.",
-   "mr:0316-papa-seleuciae": "In Lycaonia sancti Papae Martyris, qui, ob Christi fidem, verberibus caesus, ungulis ferreis laceratus, clavatis calceis incedere jussus est; deinde arbori alligatus, eamdem arborem, migrans ad Dominum, ex sterili reddidit fructuosam.",
+   "mr:0316-papas-seleuciae": "In Lycaonia sancti Papae Martyris, qui, ob Christi fidem, verberibus caesus, ungulis ferreis laceratus, clavatis calceis incedere jussus est; deinde arbori alligatus, eamdem arborem, migrans ad Dominum, ex sterili reddidit fructuosam.",
    "mr:0316-iulianus-anazarbi": "Anazarbi, in Cilicia, sancti Juliani Martyris, qui, sub Marciano Praeside, diutissime cruciatus, demum, in sacco una cum serpentibus inclusus, in mare demersus est.",
    "mr:0316-ioannes-de-brebeuf": "In dicione Canadensi sanctorum Martyrum Joannis de Brebeuf, Gabrielis Lalemant, Antonii Daniel, Caroli Garnier et Natalis Chabanel, Presbyterorum Societatis Jesu, qui in Huronica Missione, hac aliisque diebus, post multos labores et saevissimos cruciatus, mortem pro Christo fortiter obierunt.",
    "mr:0316-agapitus": "Ravennae sancti Agapiti, Episcopi et Confessoris.",
@@ -348,7 +348,7 @@
    "mr:0325-quirinus-romae": "Romae sancti Quirini Martyris, qui, sub Claudio Imperatore, post facultatum amissionem, post carceris squalorem, post multorum verberum afflictionem, gladio interfectus est et in Tiberim projectus; quem Christiani, cum in insula Lycaonia (quae postea sancti Bartholomaei dicta est) invenissent, in coemeterio Pontiani condiderunt.",
    "mr:0325-ducenti-sexaginta-duo-martyres-romae": "Item Romae sanctorum ducentorum sexaginta duorum Martyrum.",
    "mr:0325-irenaeus-sirmii": "Sirmii passio sancti Irenaei, Episcopi et Martyris; qui, tempore Maximiani Imperatoris, sub Praeside Probo, primum tormentis acerrimis vexatus, deinde diebus plurimis cruciatus in carcere, novissime, abscisso capite, consummatus est.",
-   "mr:0325-dula-nicomediae": "Nicomediae sanctae Dulae, cujusdam militis ancillae, quae, ob castitatem servandam occisa, martyrii coronam promeruit.",
+   "mr:0325-dulas-nicomediae": "Nicomediae sanctae Dulae, cujusdam militis ancillae, quae, ob castitatem servandam occisa, martyrii coronam promeruit.",
    "mr:0325-pelagius": "Laodiceae, ad Libanum, sancti Pelagii Episcopi, qui, ob fidem catholicam, tempore Valentis, exsilium et alia passus est; ac tandem, in sedem suam restitutus, quievit in Domino.",
    "mr:0325-hermelandus-fontanellensis": "In Antro, insula Ligeris fluminis, sancti Hermelandi Abbatis, cujus gloriosa conversatio insigni miraculorum praeconio commendatur.",
    "mr:0325-barontius-et-desiderius": "Pistorii, in Tuscia, sanctorum Confessorum Barontii et Desiderii.",

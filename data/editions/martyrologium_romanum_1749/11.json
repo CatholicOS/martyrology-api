@@ -172,13 +172,13 @@
   "titulus": "11 Novembris Tertio Idus Novembris. xiv. F",
   "elogia": {
    "mr:1111-martinus-turonensis": "Turonis, in Gallia, natalis beati Martini, Episcopi et Confessoris; cujus vita tantis exstitit miraculis gloriosa, ut trium mortuorum suscitator esse meruerit.",
-   "mr:1111-menna-mareotidem": "Cotyaei, in Phrygia, insignis passio sancti Mennae, Agyptii militis, qui, in persecutione Diocletiani, postquam, abjecto militiae cingulo, meruit caelesti Regi secreta conversatione in eremo militare, processit in publicum, et, se Christianum libera voce declarans, primo diris cruciatibus examinatur; novissime, fixis in oratione genibus, Domino Jesu Christo gratias agens, gladio caesus est, ac multis post mortem miraculis claruit.",
+   "mr:1111-mennas-mareotidem": "Cotyaei, in Phrygia, insignis passio sancti Mennae, Agyptii militis, qui, in persecutione Diocletiani, postquam, abjecto militiae cingulo, meruit caelesti Regi secreta conversatione in eremo militare, processit in publicum, et, se Christianum libera voce declarans, primo diris cruciatibus examinatur; novissime, fixis in oratione genibus, Domino Jesu Christo gratias agens, gladio caesus est, ac multis post mortem miraculis claruit.",
    "mr:1111-valentinus-et-socii": "Ravennae sanctorum Martyrum Valentini, Feliciani et Victorini; qui in Diocletiani persecutione coronati sunt.",
    "mr:1111-athenodorus": "In Mesopotamia sancti Athenodori Martyris, qui, sub eodem Diocletiano et Eleusio Praeside, ignibus cruciatus et aliis suppliciis tortus, demum capitis damnatus est, et, cum carnifex corruisset neque ullus alius gladio illum ferire ausus esset, orans obdormivit in Domino.",
    "mr:1111-veranus-lirinensis": "Lugduni, in Gallia, sancti Verani Episcopi, cujus vita fuit fide et virtutum meritis illustris.",
    "mr:1111-theodorus-studita": "Constantinopoli sancti Theodori, Abbatis Studitae, qui, pro fide catholica adversus Iconoclastas strenue pugnans, factus est apud universam Ecclesiam catholicam celebris.",
    "mr:1111-bartholomaeus-cryptae-ferratae": "In monasterio Cryptae Ferratae, in agro Tusculano, sancti Bartholomaei Abbatis, qui fuit socius beati Nili, ejusque vitam conscripsit.",
-   "mr:1111-menna-samnii": "In provincia Samnii beati Mennae solitarii, cujus virtutes et miracula sanctus Gregorius Papa commemorat."
+   "mr:1111-mennas-samnii": "In provincia Samnii beati Mennae solitarii, cujus virtutes et miracula sanctus Gregorius Papa commemorat."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -204,7 +204,7 @@
   "elogia": {
    "mr:1113-didacus-compluti": "Sancti Didaci, ex Ordine Minorum, Confessoris; cujus dies natalis recolitur pridie hujus diei.",
    "mr:1113-valentinus-et-socii": "Ravennae natalis sanctorum Martyrum Valentini, Solutoris et Victoris; qui sub Diocletiano Imperatore passi sunt.",
-   "mr:1113-mitria-aquarum-sextiarum": "Aquis, in provincia Narbonensi, beati Mitrii, clarissimi Martyris.",
+   "mr:1113-mitrias-aquarum-sextiarum": "Aquis, in provincia Narbonensi, beati Mitrii, clarissimi Martyris.",
    "mr:1113-antoninus-et-socii": "Caesareae, in Palaestina, passio sanctorum Antonini, Zebinae, Germani et Ennathae Virginis. Haec, sub Galerio Maximiano Imperatore, verberibus caesa, igne cremata est; illi vero, cum intrepidi ac libera voce Firmilianum Praesidem, diis immolantem, impietatis arguerent, capite caesi sunt.",
    "mr:1113-arcadius-et-socii": "In Africa sanctorum Martyrum Hispanorum Arcadii, Paschasii, Probi et Eutychiani; qui, in persecutione Wandalica, cum in Arianam perfidiam nullatenus declinare paterentur, hinc a Genserico, Rege Ariano, primum proscripti, deinde acti in exsilium atque atrocissimis suppliciis cruciati, postremum diverso mortis genere interempti sunt. Tunc et Paulilli pueruli, germani sanctorum Paschasii et Eutychiani, constantia enituit; qui, cum de fide catholica nullatenus posset avelli, fustibus diu caesus est, atque ad infimam servitutem damnatus.",
    "mr:1113-nicolaus-i": "Romae sancti Nicolai Papae Primi, vigore apostolico praestantis.",
@@ -238,7 +238,7 @@
    "mr:1115-eugenius": "Eodem die natalis sancti Eugenii, Episcopi Toletani et Martyris; qui fuit beati Dionysii Areopagitae discipulus, et in territorio Parisiensi, consummato martyrii cursu, beatae passionis coronam percepit a Domino. Ipsius autem corpus Toletum, in Hispania, postea fuit translatum.",
    "mr:1115-felix-nolae": "Nolae, in Campania, beati Felicis, Episcopi et Martyris; qui, a quintodecimo aetatis suae anno, miraculis claruit, et, sub Marciano Praeside, cum aliis triginta Sociis, agonem martyrii complevit.",
    "mr:1115-habib-edessae": "Edessae, in Mesopotamia, passio sancti Abibi Diaconi, qui sub Licinio Imperatore et Lysania Praeside, unguibus laceratus, in ignem conjectus est.",
-   "mr:1115-guria-et-samona": "Ibidem sanctorum Martyrum Guriae et Samonae, sub Diocletiano Imperatore et Antonino Praeside.",
+   "mr:1115-gurias-et-samonas": "Ibidem sanctorum Martyrum Guriae et Samonae, sub Diocletiano Imperatore et Antonino Praeside.",
    "mr:1115-secundus-et-socii": "In Africa sanctorum Martyrum Secundi, Fidentiani et Varici.",
    "mr:1115-maclovius-alethensis": "Apud Arcum, in territorio Santonensi, natalis sancti Machuti, Aletensis in Gallia Episcopi; qui, in Anglia natus, a primaevo aetatis suae tirocinio miraculis emicuit.",
    "mr:1115-luperius": "Veronae sancti Luperii, Episcopi et Confessoris.",

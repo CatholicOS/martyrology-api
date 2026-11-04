@@ -82,7 +82,7 @@
    "mr:0706-romulus-faesularum": "Fesŭlis in Tuscia sancti Romŭli Episcopi & martyris, discipuli beati Petri Apostoli; qui ab eodem missus ad prædicandum Euangeliũ, cum in multis Italiæ locis Christum annunciasset, rediens Fesulas, sub Domitiano Principe martyrio coronatus est cum alijs socijs.",
    "mr:0706-cyriaca-nicomediae": "In Campania sanctæ Dominicæ virginis & martyris, quę sub Diocletiano Imperatore cum fregisset idŏla, ad bestias damnata, sed ab illis nil læsa, demum capite obtruncata migrauit ad Dominum: cuius corpus Tropêæ in Calabria summa veneratione asseruatur.",
    "mr:0706-lucia-et-socii": "Eodem die sanctæ Luciæ martyris, quæ natione Campâna, à Rixio Vicario tenta, & acriter cruciata, eundem conuertit ad Christum: quibus adiuncti sunt Antoninus, Seuerinus, Diodôrus, Dion, & alij decem & septem, qui in passione collêgæ, & in corona fuere confortes.",
-   "mr:0706-goaris-aquitaniae": "In pago Treuirensi sancti Goâris presbyteri & confessoris."
+   "mr:0706-goar-aquitaniae": "In pago Treuirensi sancti Goâris presbyteri & confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum, & Confessorum, atque sanctarum Virginum. ℟. Deo gratias."
  },
@@ -158,7 +158,7 @@
    "mr:0712-nabor-et-felix": "MEDIOLANI sanctorum martyrum Nabŏris & Felicis, qui in persecutione Maximiani passi sũt.",
    "mr:0712-ioannes-gualbertus": "In Monasterio Passiniano, prope Florentiam sancti Ioannis Gualberti abbatis, institutoris ordinis Vallisumbrosæ.",
    "mr:0712-iason": "In Cypro beati Iasŏnis antiqui Christi discipuli.",
-   "mr:0712-fortunatus-et-hermagora": "Aquileiæ natalis sancti Hermagŏræ, discipuli beati Marci Euangelistæ, & primi eiusdem ciuitatis Episcopi: qui inter miracula sanitatum, & prædicationis instantiam, ac populorum conuersionem, plurima pœnarum genera expertus, tandem vna cum Fortunato diacono, suo capitali supplicio perpetuum meruit triumphum.",
+   "mr:0712-fortunatus-et-hermagoras": "Aquileiæ natalis sancti Hermagŏræ, discipuli beati Marci Euangelistæ, & primi eiusdem ciuitatis Episcopi: qui inter miracula sanitatum, & prædicationis instantiam, ac populorum conuersionem, plurima pœnarum genera expertus, tandem vna cum Fortunato diacono, suo capitali supplicio perpetuum meruit triumphum.",
    "mr:0712-paulinus": "Lucæ in Tuscia beati Paulini, qui à sancto Petro primus eiusdẽ ciuitatis Episcopus ordinatus, sub Nerone ad radices montis Pisani post multos agônes martyrium suum cum alijs socijs cõsummauit.",
    "mr:0712-proclus-et-hilarion": "Eodem die passio sanctorum Procli & Hilariŏnis, qui sub Traiano Imperatore & Maximo Præside per acerbissima tormẽta ad palmam martyrij peruenerunt.",
    "mr:0712-epiphana": "Apud Leontînos sanctæ Epiphănæ, quæ sub Diocletiano Imperatore & Tertyllo Præside vberibus pręcisis reddidit spiritum.",
@@ -173,7 +173,7 @@
   "elogia": {
    "mr:0713-anacletus": "ROMAE sãcti Anaclêti Papæ & martyris, qui post sanctum Clementem Ecclesiam Dei regens, eam glorioso martyrio decorauit.",
    "mr:0713-ioel-et-esdras-prophetae": "Eodem die sanctorum Ioêlis & Esdræ Prophetarum.",
-   "mr:0713-sila-discipulus": "In Macedonia beati Silæ, qui cum esset vnus de primis fratribus, & ab Apostolis ad ecclesias Gentium vna cũ Paulo & Barnăba destinatus, prædicationis officium gratia Dei plenus instanter consummauit, atque in passionibus suis Christum clarificãs, postmodum requieuit.",
+   "mr:0713-silas-discipulus": "In Macedonia beati Silæ, qui cum esset vnus de primis fratribus, & ab Apostolis ad ecclesias Gentium vna cũ Paulo & Barnăba destinatus, prædicationis officium gratia Dei plenus instanter consummauit, atque in passionibus suis Christum clarificãs, postmodum requieuit.",
    "mr:0713-serapion-alexandriae": "Item sancti Serapiônis martyris, qui sub Seuero Imperatore & Aquila Præside per ignem peruenit ad coronam martyrij.",
    "mr:0713-myrope-chii": "In insula Chio sanctæ Myrŏpis martyris, quæ sub Decio Imperatore & Numeriano Præside vectibus contusa, migrauit ad Dominum.",
    "mr:0713-eugenius-carthaginensis": "In Africa sanctorum confessorum Eugenij Carthaginensis Episcopi, fide ac virtutibus gloriosi, & vniuersi cleri eiusdem ecclesiæ, qui fere quingenti, vel eo amplius in persecutione Vuandalica sub Hunnerico Rege Ariano cæde inediaq. macerati (inter quos plurimi erant lectores infantuli) gaudentes in Domino procul exilio crudeli extrusi sunt. Erant etiam in eis nobilissimi archidiaconus nomine Salutâris, & Muritta secundus in officio ministrorum, qui tertio confessores effecti; gloriosæ in Christo perseuerantiæ titulo illustrati sunt.",
@@ -260,7 +260,7 @@
  "19": {
   "titulus": "Quartodecimo Kal. Augusti. Luna.",
   "elogia": {
-   "mr:0719-epaphra-colossarum": "NATALIS sancti Epaphræ, quem Sanctus Paulus Apostolus concaptiuum appellat. Hic ab eodem Apostolo Colossis Episcopus ordinatus, clarus virtutibus ibidem martyrij palmam pro ouibus sibi commendatis virili agône percepit: cuius corpus Romæ in Basilica Sanctæ MARIAE Maioris conditum est.",
+   "mr:0719-epaphras-colossarum": "NATALIS sancti Epaphræ, quem Sanctus Paulus Apostolus concaptiuum appellat. Hic ab eodem Apostolo Colossis Episcopus ordinatus, clarus virtutibus ibidem martyrij palmam pro ouibus sibi commendatis virili agône percepit: cuius corpus Romæ in Basilica Sanctæ MARIAE Maioris conditum est.",
    "mr:0719-iusta-et-rufina": "Hispali in Hispania passio sanctarum virginum Iustæ & Ruffinæ, quæ a Præside Diogeniâno comprehensæ, primo equulei extensione, & vngularum laniatione vexatæ, post carcere, inedia, & varijs torsionibus afflictæ; tandem Iusta in carcere spiritum exhalauit, Ruffinæ vero ceruix in confessione Domini confracta est.",
    "mr:0719-aurea-cordubae": "Cordubæ sanctæ Aureæ virginis, quæ aliquando lapsa, sed facti pœnitens, iterato certamine hostem effuso sanguine superauit.",
    "mr:0719-martinus": "Treuiris sancti Martini Episcopi & martyris.",

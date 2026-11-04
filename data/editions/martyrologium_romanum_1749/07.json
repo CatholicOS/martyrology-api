@@ -87,7 +87,7 @@
    "mr:0706-cyriaca-nicomediae": "In Campania sanctae Dominicae, Virginis et Martyris, quae, sub Diocletiano Imperatore, cum fregisset idola, hinc ad bestias damnata, sed ab illis nil laesa, demum, capite obtruncata, migravit ad Dominum. Ipsius vero corpus Tropeae, in Calabria, summa veneratione asservatur.",
    "mr:0706-lucia-et-socii": "Eodem die sanctae Luciae Martyris, quae, natione Campana, a Rixio Varo Vicario tenta et acriter cruciata, eumdem convertit ad Christum; quibus adjuncti sunt Antoninus, Severinus, Diodorus, Dion, et alii decem et septem, qui in passione collegae et in corona fuere consortes.",
    "mr:0706-maria-goretti": "Neptuni, in Latio, sanctae Mariae Goretti, piissimae adolescentis, in defendenda virginitate crudelissime necatae, quam Pius Papa Duodecimus sanctarum Martyrum catalogo solemniter accensuit.",
-   "mr:0706-goaris-aquitaniae": "In pago Trevirensi sancti Goaris, Presbyteri et Confessoris."
+   "mr:0706-goar-aquitaniae": "In pago Trevirensi sancti Goaris, Presbyteri et Confessoris."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -171,7 +171,7 @@
    "mr:0712-nabor-et-felix": "Laudae, in Insubria, sanctorum Martyrum Naboris et Felicis, qui, in persecutione Maximiani, post varia tormenta, capitis decollatione martyrium compleverunt; eorumque corpora a beata Savina Mediolanum advecta sunt, ibique honorifice sepulta.",
    "mr:0712-iason": "In Cypro beati Jasonis, qui fuit unus ex antiquis Christi discipulis.",
    "mr:0712-paulinus": "Lucae, in Tuscia, beati Paulini, qui a sancto Petro Apostolo primus ejusdem civitatis Episcopus est ordinatus; et, sub Nerone, ad radices montis Pisani, post multos agones, martyrium suum cum aliis Sociis consummavit.",
-   "mr:0712-fortunatus-et-hermagora": "Aquilejae natalis sancti Hermagorae, qui exstitit discipulus beati Marci Evangelistae, et primus ejusdem civitatis Episcopus. Hic, inter miracula sanitatum, et praedicationis instantiam, ac populorum conversionem, plurima poenarum genera expertus, tandem, una cum Diacono suo Fortunato, capitali supplicio perpetuum meruit obtinere triumphum.",
+   "mr:0712-fortunatus-et-hermagoras": "Aquilejae natalis sancti Hermagorae, qui exstitit discipulus beati Marci Evangelistae, et primus ejusdem civitatis Episcopus. Hic, inter miracula sanitatum, et praedicationis instantiam, ac populorum conversionem, plurima poenarum genera expertus, tandem, una cum Diacono suo Fortunato, capitali supplicio perpetuum meruit obtinere triumphum.",
    "mr:0712-proclus-et-hilarion": "Eodem die passio sanctorum Procli et Hilarionis, qui, sub Trajano Imperatore et Maximo Praeside, per acerbissima tormenta ad palmam martyrii pervenerunt.",
    "mr:0712-marciana": "Toleti, in Hispania, sanctae Marcianae, Virginis et Martyris; quae pro fide Christi, objecta bestiis atque a tauro discerpta, martyrio coronatur.",
    "mr:0712-epiphana": "Apud Leontinos, in Sicilia, sanctae Epiphanae, quae sub Diocletiano Imperatore et Tertyllo Praeside, uberibus praecisis, reddidit spiritum.",
@@ -186,7 +186,7 @@
    "mr:0713-anacletus": "Romae sancti Anacleti, Papae et Martyris, qui, post sanctum Clementem Ecclesiam Dei regens, eam glorioso martyrio decoravit.",
    "mr:0713-henricus-imperator": "Bambergae natalis sancti Henrici Primi, Imperatoris Romanorum et Confessoris, qui cum sancta Cunegunde, uxore sua, perpetuam virginitatem servavit, et sanctum Stephanum, Hungarorum Regem, cum universo fere ipsius regno, ad fidem Christi suscipiendam perduxit. Ejus autem festivitas Idibus mensis hujus celebratur.",
    "mr:0713-ioel-et-esdras-prophetae": "In Palaestina sanctorum Joelis et Esdrae Prophetarum.",
-   "mr:0713-sila-discipulus": "In Macedonia beati Silae, qui, cum esset unus de primis fratribus et ab Apostolis ad Ecclesias Gentium, una cum Paulo et Barnaba, destinatus, praedicationis officium, gratia Dei plenus, instanter consummavit, atque, in passionibus suis Christum clarificans, postmodum requievit.",
+   "mr:0713-silas-discipulus": "In Macedonia beati Silae, qui, cum esset unus de primis fratribus et ab Apostolis ad Ecclesias Gentium, una cum Paulo et Barnaba, destinatus, praedicationis officium, gratia Dei plenus, instanter consummavit, atque, in passionibus suis Christum clarificans, postmodum requievit.",
    "mr:0713-serapion-alexandriae": "Item sancti Serapionis Martyris, qui, sub Severo Imperatore et Aquila Praeside, per ignem pervenit ad coronam martyrii.",
    "mr:0713-myrope-chii": "In insula Chio sanctae Myropis Martyris, quae sub Decio Imperatore et Numeriano Praeside, vectibus contusa, migravit ad Dominum.",
    "mr:0713-eugenius-carthaginensis": "In Africa sanctorum Confessorum Eugenii, Carthaginensis Episcopi, fide ac virtutibus gloriosi, et universi cleri ejusdem Ecclesiae, qui fere quingenti, vel eo amplius, in persecutione Wandalica, sub Ariano Rege Hunnerico, caede inediaque macerati (inter quos plurimi erant Lectores infantuli), gaudentes in Domino, exsilio crudeli procul extrusi sunt. Erant etiam nobilissimi in eis Archidiaconus, nomine Salutaris, et Muritta, secundus in officio ministrorum; qui, tertio Confessores effecti, ambo gloriose in Christo, perseverantiae titulo, illustrati sunt.",
@@ -281,7 +281,7 @@
   "titulus": "19 Julii Quartodecimo Kalendas Augusti. vj. G",
   "elogia": {
    "mr:0719-vincentius-a-paulo": "Sancti Vincentii a Paulo, Presbyteri et Confessoris, Congregationis Presbyterorum Missionis et Puellarum Caritatis Fundatoris, caelestis omnium caritatis Societatum Patroni; qui in Domino obdormivit quinto Kalendas Octobris.",
-   "mr:0719-epaphra-colossarum": "Colossis, in Phrygia, natalis sancti Epaphrae, quem sanctus Paulus Apostolus concaptivum appellat. Hic, ab eodem Apostolo Colossis Episcopus ordinatus, ibidem, clarus virtutibus, martyrii palmam, pro ovibus sibi commendatis, virili agone percepit; cujus corpus Romae, in Basilica sanctae Mariae Majoris, conditum est.",
+   "mr:0719-epaphras-colossarum": "Colossis, in Phrygia, natalis sancti Epaphrae, quem sanctus Paulus Apostolus concaptivum appellat. Hic, ab eodem Apostolo Colossis Episcopus ordinatus, ibidem, clarus virtutibus, martyrii palmam, pro ovibus sibi commendatis, virili agone percepit; cujus corpus Romae, in Basilica sanctae Mariae Majoris, conditum est.",
    "mr:0719-martinus": "Treviris sancti Martini, Episcopi et Martyris.",
    "mr:0719-iusta-et-rufina": "Hispali, in Hispania, passio sanctarum Virginum Justae et Rufinae, quae, a Praeside Diogeniano comprehensae, primo equulei extensione et ungularum laniatione vexatae, postea carcere, inedia et variis torsionibus sunt afflictae; tandem Justa in carcere spiritum exhalavit, Rufinae vero cervix, in confessione Domini, confracta est.",
    "mr:0719-aurea-cordubae": "Cordubae, in Hispania, sanctae Aureae Virginis, beatorum Adulphi et Joannis Martyrum sororis; quae aliquando in apostasiae crimen a Mahumetano Judice inducta est, sed mox, facti poenitens, iterato certamine, hostem effuso sanguine superavit.",
