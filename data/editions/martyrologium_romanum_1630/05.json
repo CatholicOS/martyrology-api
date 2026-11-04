@@ -123,7 +123,7 @@
   "titulus": "Septimo Idus Maij. Luna.",
   "elogia": {
    "mr:0509-gregorius-nazianzenus": "NAZIANZI natalis beati Gregorij Episcopi, ob singularem diuinarum rerum doctrinam cognomento Theologi: qui collapsam Constantinopoli Catholicam fidem restituit, hæresesq. insurgentes cõpressit.",
-   "mr:0509-herma-discipulus": "Romæ sãcti Hermæ, cuius Apostolus Paulus in epistola ad Romanos meminit. Hic digne semetipsũ sacrificans, acceptabilisq. Deo hostia factus, virtutibus clarus cælestia regna petiuit.",
+   "mr:0509-hermas-discipulus": "Romæ sãcti Hermæ, cuius Apostolus Paulus in epistola ad Romanos meminit. Hic digne semetipsũ sacrificans, acceptabilisq. Deo hostia factus, virtutibus clarus cælestia regna petiuit.",
    "mr:0509-trecenti-decem-martyres-persidis": "In Perside sanctorum martyrum trecentorum & decem. Callij via Flaminia passio sancti Gerontij Episcopi Ficodensis.",
    "mr:0509-beatus-vindocini": "In castro Vindecino depositio sancti Beati confessoris.",
    "mr:0509-translatio-andreae-apostoli-lucae-et-timothei": "Constantinopoli Translatio sanctorum Andreæ Apostoli, & Lucæ Euangelistæ de Achaia, & Timothĕi discipuli B. Pauli Apostoli ab Ephĕso: corpus autem sancti Andreæ longo post tempore Amalphim delatum, ibi pio fidelium concursu honoratur: ex cuius sepulchro liquor ad languores curandos iugiter manat.",
@@ -140,7 +140,7 @@
    "mr:0510-calepodius": "Romæ beati Calepodij presbyteri & martyris, quem Alexander Imperator gladio fecit occidi, & corpus eius per ciuitatem trahi, atque in Tibĕrim iactari; quod inuentum Callistus Papa sepeliuit. Decollatus est etiam Palmatius Consul cum vxore & filijs, & alijs promiscui sexus quadragintaduobus de domo sua: Simplicius quoque Senator cum vxore, & sexagintaocto de familia sua: item & Felix cum vxore sua Blanda: quorum capita suspensa sunt per diuersas portas Vrbis ad exemplum Christianorum.",
    "mr:0510-quartus-et-quinctus": "Item Romæ via Latina ad Centum aulas natalis sanctorum martyrum Quarti & Quincti, quorum corpora Capuam trãslata sunt.",
    "mr:0510-alphius-et-socii": "Apud Leontînos in Sicilia sanctorum martyrum Alphij, Philadelphi, & Cyrîni.",
-   "mr:0510-dioscoridis-myrae": "Smyrnæ sancti Dioscoridis martyris.",
+   "mr:0510-dioscorides-myrae": "Smyrnæ sancti Dioscoridis martyris.",
    "mr:0510-cataldus-tarenti": "Apud Tarentum sancti Cataldi Episcopi miraculis clari.",
    "mr:0510-nazarius-et-celsus": "Mediolani Inuentio sanctorum martyrum Nazarij & Celsi, quando beatus Ambrosius Episcopus sancti Nazarij corpus recenti adhuc sanguine conspersum reperit, atque ad basilicam Apostolorum transtulit, vna cum corpore beati Celsi pueri, quem idem ipse nutrierat, & Anolînus in Neronis persecutione simul cum eo gladio feriri iusserat quarto kalendas Augusti, quo die festiuitas eorum martyrij celebratur.",
    "mr:0510-isidorus-agricola": "Matrîti S. Isidori Agricolæ, quem miraculis clarum Gregorius XV. vna cum SS. Ignatio, Francisco, Teresia, & Philippo in Sanctorum numerum retulit."
@@ -437,7 +437,7 @@
    "mr:0531-petronilla-romae": "ROMAE sanctæ Petronillæ virginis, filiæ beati Petri Apostoli, quæ Flacci nobilis viri coniugium spernens, acceptis triduanis ad delibarandum inducijs, interim ieiunijs & orationibus vacans, tertia die mox vt Christi sacramentum accepit, emisit spiritum.",
    "mr:0531-cantius-et-socii": "Aquileię SS. martyrum Cantij, Cantiani, & Cantianillæ fratrum; qui cum essent ex illustri Aniciorum progenie; sub Diocletiano & Maximiano Imperatoribus ob Christianæ fidei constantiam vna cum pædagôgo suo Proto capite plexi sunt.",
    "mr:0531-crescentianus": "Turribus in Sardinia sancti Crescentiani martyris.",
-   "mr:0531-hermia-comanae": "Apud Comânos in Ponto sancti Hermiæ militis, qui sub Antonino Imperatore ab innumeris & sæuissimis tormentis ope diuina liberatus, carnificem ad Christum conuertit, & eiusdem martyrij coronæ participem fecit, quam tamen ipse primus gladio obtruncatus accepit.",
+   "mr:0531-hermias-comanae": "Apud Comânos in Ponto sancti Hermiæ militis, qui sub Antonino Imperatore ab innumeris & sæuissimis tormentis ope diuina liberatus, carnificem ad Christum conuertit, & eiusdem martyrij coronæ participem fecit, quam tamen ipse primus gladio obtruncatus accepit.",
    "mr:0531-lupicinus": "Veronæ sancti Lupicini Episcopi.",
    "mr:0531-paschasius": "Romæ sancti Paschasij diaconi & confessoris, cuius meminit beatus Gregorius Papa."
   },

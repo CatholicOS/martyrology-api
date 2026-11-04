@@ -70,7 +70,7 @@
    "mr:0805-cantidius-et-socii": "Item sanctorum Martyrum Aegyptiorum Cantidii, Cantidiani et Sobelis.",
    "mr:0805-afra-augustae-vindelicorum": "Augustae Vindelicorum natalis sanctae Afrae Martyris, quae, cum esset pagana, per doctrinam sancti Narcissi Episcopi ad Christum est conversa, et, cum omnibus domus suae membris, ab eodem Episcopo baptizata; postmodum vero, ob Christi confessionem igni tradita, martyrium suum, septem diebus antequam beata Hilaria mater ac tres ancillae eodem cruciatus genere coronarentur, feliciter explevit.",
    "mr:0805-cassianus-augustoduni": "Augustoduni beati Cassiani Episcopi.",
-   "mr:0805-paridis-theani": "Apud Theanum, in Campania, sancti Paridis Episcopi.",
+   "mr:0805-paris-theani": "Apud Theanum, in Campania, sancti Paridis Episcopi.",
    "mr:0805-oswaldus-salopiensis": "In Anglia sancti Oswaldi Regis, cujus gesta sanctus Beda Venerabilis commemorat.",
    "mr:0805-nonna-nazianzi": "Eodem die sanctae Nonnae, quae fuit mater beatorum Gregorii Nazianzeni, Caesarii et Gorgoniae."
   },
@@ -85,7 +85,7 @@
    "mr:0806-dominicus-de-guzman": "Bononiae natalis sancti Dominici Confessoris, qui Ordinis Fratrum Praedicatorum Fundator exstitit. Hic vir, sanctitate et doctrina clarissimus, virginitatem perpetuo illibatam custodivit, et, ob singularem meritorum gratiam, tres mortuos suscitavit; cumque praedicatione sua compressisset haereses, ac plurimos ad religiosam et piam vitam instituisset, in pace quievit. Ejus autem festivitas pridie Nonas mensis hujus celebratur, ex constitutione Pauli Papae Quarti.",
    "mr:0806-stephanus-et-socii": "In monasterio sancti Petri de Cardegna, Ordinis sancti Benedicti, apud Burgos, in Hispania, passio ducentorum Monachorum cum Stephano Abbate, qui a Saracenis pro Jesu Christi fide interfecti sunt, atque ibidem in claustro a Christianis sepulti.",
    "mr:0806-iustus-et-pastor": "Compluti, in Hispania, sanctorum Martyrum Justi et Pastoris fratrum, qui, cum adhuc pueri litteris imbuerentur, sponte ad martyrium, projectis in schola tabulis, cucurrerunt; et mox, a Daciano Praeside teneri jussi et fustibus caedi, ambo, cum se mutuis exhortationibus constantissime corroborarent, extra civitatem perducti sunt, et ibi a carnifice jugulati.",
-   "mr:0806-hormisda-papa": "Romae sancti Hormisdae, Papae et Confessoris.",
+   "mr:0806-hormisdas-papa": "Romae sancti Hormisdae, Papae et Confessoris.",
    "mr:0806-iacobus": "Amidae, in Mesopotamia, sancti Jacobi Eremitae, miraculis clari."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
@@ -379,7 +379,7 @@
    "mr:0825-iulianus": "In Syria sancti Juliani Martyris.",
    "mr:0825-maginus-tarraconensis": "Tarracone, in Hispania, sancti Magini Martyris.",
    "mr:0825-geruntius-italicae": "Italicae, in Hispania, sancti Geruntii Episcopi, qui, Apostolorum tempore, Evangelium in ea provincia praedicavit, et, post multos labores, in carcere quievit.",
-   "mr:0825-mena-constantinopoli": "Constantinopoli sancti Mennae Episcopi.",
+   "mr:0825-menas-constantinopoli": "Constantinopoli sancti Mennae Episcopi.",
    "mr:0825-gregorius-ultraiecti": "Trajecti sancti Gregorii Episcopi.",
    "mr:0825-thomas-cantelupe": "Apud Montem Faliscum, in Etruria, sancti Thomae Confessoris, qui Herfordiensis Ecclesiae, in Anglia, Episcopus exstitit.",
    "mr:0825-patricia": "Neapoli, in Campania, sanctae Patriciae Virginis."
@@ -484,7 +484,7 @@
    "mr:0831-optatus": "Antisiodori sancti Optati, Episcopi et Confessoris.",
    "mr:0831-aidanus-lindisfarnae": "In Anglia sancti Aidani, Episcopi Lindisfarnensis; cujus animam, cum sanctus Cuthbertus, cujus memoria tertiodecimo Kalendas Aprilis colitur, tunc ovium pastor, in caelum ferri vidisset, relictis ovibus, factus est Monachus.",
    "mr:0831-amatus": "Apud Nuscum sancti Amati Episcopi.",
-   "mr:0831-aristidis-athenarum": "Athenis sancti Aristidis, fide et sapientia clarissimi, qui Hadriano Principi egregium de religione Christiana volumen obtulit, nostri dogmatis continens rationem; et quod Christus Jesus solus esset Deus, praesente ipso Imperatore, luculentissime peroravit."
+   "mr:0831-aristides-athenarum": "Athenis sancti Aristidis, fide et sapientia clarissimi, qui Hadriano Principi egregium de religione Christiana volumen obtulit, nostri dogmatis continens rationem; et quod Christus Jesus solus esset Deus, praesente ipso Imperatore, luculentissime peroravit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  }

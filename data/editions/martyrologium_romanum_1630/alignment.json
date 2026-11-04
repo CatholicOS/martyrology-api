@@ -533,7 +533,7 @@
    "method": "same-day",
    "score": 0.752
   },
-  "mr:0116-mela-rhinocorurae": {
+  "mr:0116-melas-rhinocorurae": {
    "method": "same-day",
    "score": 0.965
   },
@@ -725,7 +725,7 @@
    "method": "same-day",
    "score": 0.877
   },
-  "mr:0124-babyla-antiochiae": {
+  "mr:0124-babylas-antiochiae": {
    "method": "same-day",
    "score": 0.965
   },
@@ -1725,7 +1725,7 @@
    "method": "same-day",
    "score": 0.927
   },
-  "mr:0227-besa-alexandriae": {
+  "mr:0227-besas-alexandriae": {
    "method": "same-day",
    "score": 0.958
   },
@@ -1877,7 +1877,7 @@
    "method": "same-day",
    "score": 0.984
   },
-  "mr:0305-phoca-sinopes": {
+  "mr:0305-phocas-sinopes": {
    "method": "same-day",
    "score": 0.969
   },
@@ -2201,7 +2201,7 @@
    "method": "same-day",
    "score": 0.955
   },
-  "mr:0316-papa-seleuciae": {
+  "mr:0316-papas-seleuciae": {
    "method": "same-day",
    "score": 0.914
   },
@@ -2489,7 +2489,7 @@
    "method": "same-day",
    "score": 0.801
   },
-  "mr:0325-dula-nicomediae": {
+  "mr:0325-dulas-nicomediae": {
    "method": "same-day",
    "score": 0.897
   },
@@ -2945,7 +2945,7 @@
    "method": "same-day",
    "score": 0.355
   },
-  "mr:0411-antipa-pergami": {
+  "mr:0411-antipas-pergami": {
    "method": "same-day",
    "score": 0.924
   },
@@ -3273,7 +3273,7 @@
    "method": "same-day",
    "score": 0.945
   },
-  "mr:0422-leonida-alexandriae": {
+  "mr:0422-leonidas-alexandriae": {
    "method": "same-day",
    "score": 0.986
   },
@@ -3825,7 +3825,7 @@
    "method": "same-day",
    "score": 0.784
   },
-  "mr:0509-herma-discipulus": {
+  "mr:0509-hermas-discipulus": {
    "method": "same-day",
    "score": 0.935
   },
@@ -3869,7 +3869,7 @@
    "method": "same-day",
    "score": 0.958
   },
-  "mr:0510-dioscoridis-myrae": {
+  "mr:0510-dioscorides-myrae": {
    "method": "same-day",
    "score": 1.0
   },
@@ -4553,7 +4553,7 @@
    "method": "same-day",
    "score": 0.98
   },
-  "mr:0531-hermia-comanae": {
+  "mr:0531-hermias-comanae": {
    "method": "same-day",
    "score": 0.909
   },
@@ -5661,7 +5661,7 @@
    "method": "same-day",
    "score": 0.942
   },
-  "mr:0706-goaris-aquitaniae": {
+  "mr:0706-goar-aquitaniae": {
    "method": "same-day",
    "score": 0.966
   },
@@ -5857,7 +5857,7 @@
    "method": "same-day",
    "score": 0.788
   },
-  "mr:0713-sila-discipulus": {
+  "mr:0713-silas-discipulus": {
    "method": "same-day",
    "score": 0.954
   },
@@ -6061,7 +6061,7 @@
    "method": "same-day",
    "score": 0.889
   },
-  "mr:0719-epaphra-colossarum": {
+  "mr:0719-epaphras-colossarum": {
    "method": "same-day",
    "score": 0.877
   },
@@ -6641,7 +6641,7 @@
    "method": "same-day",
    "score": 1.0
   },
-  "mr:0805-paridis-theani": {
+  "mr:0805-paris-theani": {
    "method": "same-day",
    "score": 0.837
   },
@@ -6669,7 +6669,7 @@
    "method": "same-day",
    "score": 0.665
   },
-  "mr:0806-hormisda-papa": {
+  "mr:0806-hormisdas-papa": {
    "method": "same-day",
    "score": 0.878
   },
@@ -7297,7 +7297,7 @@
    "method": "same-day",
    "score": 0.821
   },
-  "mr:0825-mena-constantinopoli": {
+  "mr:0825-menas-constantinopoli": {
    "method": "same-day",
    "score": 1.0
   },
@@ -7517,7 +7517,7 @@
    "method": "same-day",
    "score": 0.87
   },
-  "mr:0831-aristidis-athenarum": {
+  "mr:0831-aristides-athenarum": {
    "method": "same-day",
    "score": 0.967
   },
@@ -8393,7 +8393,7 @@
    "method": "same-day",
    "score": 0.777
   },
-  "mr:0925-cleopha-discipulus": {
+  "mr:0925-cleophas-discipulus": {
    "method": "same-day",
    "score": 0.899
   },
@@ -8545,7 +8545,7 @@
    "method": "same-day",
    "score": 1.0
   },
-  "mr:0928-eustochius-bethlehem": {
+  "mr:0928-eustochium-bethlehem": {
    "method": "same-day",
    "score": 0.782
   },
@@ -8945,7 +8945,7 @@
    "method": "same-day",
    "score": 0.971
   },
-  "mr:1011-sarmata-thebaidis": {
+  "mr:1011-sarmatas-thebaidis": {
    "method": "same-day",
    "score": 0.912
   },
@@ -10041,7 +10041,7 @@
    "method": "same-day",
    "score": 0.893
   },
-  "mr:1111-menna-mareotidem": {
+  "mr:1111-mennas-mareotidem": {
    "method": "same-day",
    "score": 0.962
   },
@@ -10061,7 +10061,7 @@
    "method": "same-day",
    "score": 0.905
   },
-  "mr:1111-menna-samnii": {
+  "mr:1111-mennas-samnii": {
    "method": "same-day",
    "score": 0.985
   },
@@ -10113,7 +10113,7 @@
    "method": "same-day",
    "score": 0.982
   },
-  "mr:1113-mitria-aquarum-sextiarum": {
+  "mr:1113-mitrias-aquarum-sextiarum": {
    "method": "same-day",
    "score": 0.976
   },

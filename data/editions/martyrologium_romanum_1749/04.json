@@ -140,13 +140,13 @@
   "titulus": "11 Aprilis Tertio Idus Aprilis. xiv. F",
   "elogia": {
    "mr:0411-leo-i": "Sancti Leonis Papae Primi, cognomento Magni, Confessoris et Ecclesiae Doctoris, cujus dies natalis recolitur quarto Idus Novembris.",
-   "mr:0411-antipa-pergami": "Pergami, in Asia, sancti Antipae, testis fidelis, cujus meminit sanctus Joannes in Apocalypsi. Ipse autem Antipas, sub Domitiano Imperatore, in bovem aeneum candentem conjectus, martyrium consummavit.",
+   "mr:0411-antipas-pergami": "Pergami, in Asia, sancti Antipae, testis fidelis, cujus meminit sanctus Joannes in Apocalypsi. Ipse autem Antipas, sub Domitiano Imperatore, in bovem aeneum candentem conjectus, martyrium consummavit.",
    "mr:0411-domnio-salonae": "Salonae, in Dalmatia, sanctorum Martyrum Domnionis Episcopi, cum militibus octo.",
    "mr:0411-philippus-gortynae": "Gortynae, in Creta, sancti Philippi Episcopi, vita et doctrina clarissimi, qui, temporibus Marci Antonini Veri et Lucii Aurelii Commodi, Ecclesiam sibi creditam regens, a furore Gentilium et ab haereticorum insidiis eamdem tutatus est.",
    "mr:0411-eustorgius": "Nicomediae sancti Eustorgii Presbyteri.",
    "mr:0411-isaac-spoleti": "Spoleti sancti Isaac, Monachi et Confessoris, cujus virtutes sanctus Gregorius Papa commemorat.",
    "mr:0411-barsanuphius-gazae": "Apud Gazam, in Palaestina, sancti Barsanuphii Anachoretae, sub Justiniano Imperatore.",
-   "mr:0411-gemma-galganus": "Lucae, in Etruria, sanctae Gemmae Galgani, Virginis, contemplatione Dominicae Passionis et vitae sanctitate mirabilis, quam Pius Papa Duodecimus in Sanctarum numerum retulit."
+   "mr:0411-gemma-galgani": "Lucae, in Etruria, sanctae Gemmae Galgani, Virginis, contemplatione Dominicae Passionis et vitae sanctitate mirabilis, quam Pius Papa Duodecimus in Sanctarum numerum retulit."
   },
   "conclusio": "Et alibi aliorum plurimorum sanctorum Martyrum et Confessorum, atque sanctarum Virginum. R. Deo gratias."
  },
@@ -296,7 +296,7 @@
    "mr:0422-apelles-et-lucius": "Smyrnae sanctorum Apellis et Lucii, ex primis Christi discipulis.",
    "mr:0422-plurimi-martyres-persidis": "Eodem die sanctorum plurimorum Martyrum, qui, sequenti anno post obitum Simeonis, annuo item die quo passionis Dominicae memoria celebrabatur, per totam Persidis regionem, pro Christi nomine, sub Rege Sapore, gladio caedi jussi sunt. In quo fidei certamine passus est Azades eunuchus, Regi carissimus; Milles Episcopus, sanctitate et miraculorum virtute insignis; Acepsimas Episcopus, cum Presbytero suo Jacobo, item Aithala et Josepho Presbyteris, Azadane et Abdieso Diaconis, et compluribus aliis Clericis; Mareas quoque et Bicor Episcopi, cum aliis viginti Episcopis, et Clericis fere ducentis quinquaginta, Monachis etiam et sacris Virginibus plurimis. Has inter Virgines fuit etiam sancti Simeonis Episcopi soror, nomine Tarbula, cum pedissequa sua; quae, stipitibus alligatae serraque scissae, crudelissime necatae sunt.",
    "mr:0422-parmenius-et-socii": "Item in Perside sanctorum Parmenii, Helimenae et Chrysoteli Presbyterorum, Lucae et Mucii Diaconorum, quorum triumphus martyrii in passione sanctorum Abdon et Sennen habetur.",
-   "mr:0422-leonida-alexandriae": "Alexandriae natalis sancti Leonidas Martyris, qui sub Severo passus est.",
+   "mr:0422-leonidas-alexandriae": "Alexandriae natalis sancti Leonidas Martyris, qui sub Severo passus est.",
    "mr:0422-epipodius-lugduni": "Lugduni, in Gallia, sancti Epipodii, qui, in persecutione Antonini Veri, cum Alexandro collega tentus, ibidem, post dira tormenta, martyrium abscissione capitis complevit.",
    "mr:0422-agapitus-i": "Constantinopoli sancti Agapiti Papae Primi, cujus sanctitas a beato Gregorio Magno commendatur. Ipsius autem corpus, postea Romam relatum, in Vaticano conditum est.",
    "mr:0422-leo-senonum": "Apud Senonas sancti Leonis, Episcopi et Confessoris.",

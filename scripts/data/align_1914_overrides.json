@@ -662,7 +662,7 @@
    "subject_la": "Sanctus Protasius",
    "subject_en": "Saint Protasius"
   },
-  "8-5-7": "mr:0805-paridis-theani",
+  "8-5-7": "mr:0805-paris-theani",
   "8-8-5": {
    "coin": "myron",
    "subject_la": "Sanctus Myron",
@@ -718,7 +718,7 @@
    "subject_la": "Sanctus Patricius",
    "subject_en": "Saint Patrick"
   },
-  "8-25-7": "mr:0825-mena-constantinopoli",
+  "8-25-7": "mr:0825-menas-constantinopoli",
   "8-26-8": {
    "coin": "felix",
    "subject_la": "Sanctus Felix",
@@ -1014,7 +1014,7 @@
    "subject_la": "Sancta Theoctiste",
    "subject_en": "Saint Theoctiste"
   },
-  "11-11-1": "mr:1111-menna-mareotidem",
+  "11-11-1": "mr:1111-mennas-mareotidem",
   "11-12-5": "mr:1112-iosaphat-kuncewicz",
   "11-12-6": {
    "coin": "rufus",
@@ -1022,7 +1022,7 @@
    "subject_en": "Saint Rufus"
   },
   "11-12-8": "mr:1112-aemilianus-cucullae",
-  "11-13-2": "mr:1113-mitria-aquarum-sextiarum",
+  "11-13-2": "mr:1113-mitrias-aquarum-sextiarum",
   "11-13-6": "mr:1113-brictius-turonum",
   "11-14-7": "mr:1114-martyres-emessae",
   "11-14-9": "mr:1114-laurentius-o-toole",
