@@ -1,3 +1,6 @@
+import threading
+from collections.abc import Callable
+
 from fastapi import APIRouter, Depends, Request, Response
 
 from ..auth import Identity, get_identity
@@ -120,14 +123,44 @@ def get_catalog(request: Request, locale: str = "la", edition: str | None = None
     # registered editions (or none) by the registry's languages (or none, for an unknown one).
     lang = locale.split("-")[0].lower()
     key = (edition, lang if lang in registry.locales() else None)
-    cache: dict[tuple[str | None, str | None], bytes] = request.app.state.catalog_cache
-    body = cache.get(key)
-    if body is None:
-        body = (
+    cache: CatalogCache = request.app.state.catalog_cache
+    body = cache.get(
+        key,
+        lambda: (
             _catalog(registry, request.app.state.store, locale, edition).model_dump_json().encode()
-        )
-        cache[key] = body
+        ),
+    )
     return Response(content=body, media_type="application/json")
+
+
+class CatalogCache:
+    """Serialized catalogs by (edition, language), each built at most once.
+
+    A hit reads the dict without locking. A miss takes that key's lock and looks again before
+    building, so a burst of requests for a catalog not yet built (just after a start, say) builds
+    it once while the rest wait for it; other keys build in parallel.
+    """
+
+    def __init__(self) -> None:
+        self._bodies: dict[tuple[str | None, str | None], bytes] = {}
+        self._locks: dict[tuple[str | None, str | None], threading.Lock] = {}
+        self._guard = threading.Lock()
+
+    def get(self, key: tuple[str | None, str | None], build: Callable[[], bytes]) -> bytes:
+        body = self._bodies.get(key)
+        if body is not None:
+            return body
+        with self._guard:
+            lock = self._locks.setdefault(key, threading.Lock())
+        with lock:
+            body = self._bodies.get(key)
+            if body is None:
+                body = build()
+                self._bodies[key] = body
+        return body
+
+    def keys(self) -> set[tuple[str | None, str | None]]:
+        return set(self._bodies)
 
 
 def _catalog(registry: Registry, store: Store, locale: str, edition: str | None) -> CatalogOut:

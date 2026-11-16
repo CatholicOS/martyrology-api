@@ -1,3 +1,7 @@
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+
 import pytest
 from pydantic import ValidationError
 
@@ -118,10 +122,51 @@ def test_catalog_cache_keyed_by_language_not_locale_string(client, monkeypatch):
     items = {i["id"]: i for i in unknown[0].json()["elogia"]}
     assert items["mr:0102-concordius"]["subject"] is None
     assert len(builds) == 2
-    cache = client.app.state.catalog_cache
-    assert set(cache) == {(None, "en"), (None, None)}
+    assert client.app.state.catalog_cache.keys() == {(None, "en"), (None, None)}
 
 
 def test_catalog_unknown_edition_not_cached(client):
     assert client.get("/api/v1/elogia?edition=nope").status_code == 404
-    assert client.app.state.catalog_cache == {}
+    assert client.app.state.catalog_cache.keys() == set()
+
+
+def test_catalog_built_once_under_a_cold_burst(client, monkeypatch):
+    # Concurrent requests for a catalog not yet built: one builds it, the others wait for it.
+    from martyrology_api.routers import discovery
+
+    builds = []
+    build = discovery._catalog
+
+    def slow_build(*a):
+        builds.append(a[2:])
+        time.sleep(0.2)  # long enough for every request to reach the cache before it is filled
+        return build(*a)
+
+    monkeypatch.setattr(discovery, "_catalog", slow_build)
+    url = "/api/v1/elogia?edition=martyrologium_romanum_1749&locale=la"
+    with ThreadPoolExecutor(12) as ex:
+        responses = list(ex.map(lambda _: client.get(url), range(12)))
+    assert all(r.status_code == 200 for r in responses)
+    assert len({r.content for r in responses}) == 1
+    assert len(builds) == 1
+
+
+def test_catalog_cache_builds_other_keys_in_parallel():
+    # A build in progress for one key does not hold up a miss on another.
+    from martyrology_api.routers.discovery import CatalogCache
+
+    cache = CatalogCache()
+    both_building = threading.Barrier(2, timeout=5)
+
+    def build(body: bytes):
+        def run() -> bytes:
+            both_building.wait()  # raises BrokenBarrierError if the builds were serialized
+            return body
+
+        return run
+
+    with ThreadPoolExecutor(2) as ex:
+        a = ex.submit(cache.get, ("a", None), build(b"A"))
+        b = ex.submit(cache.get, ("b", None), build(b"B"))
+        assert (a.result(), b.result()) == (b"A", b"B")
+    assert cache.get(("a", None), lambda: b"rebuilt") == b"A"
