@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, Request, Response
 
 from ..auth import Identity, get_identity
 from ..caching import declare_public_cache
@@ -18,7 +18,7 @@ from ..models import (
     scope_dict,
 )
 from ..problems import ApiProblem
-from ..registry import EditionMeta
+from ..registry import EditionMeta, Registry
 from ..store import Store
 
 router = APIRouter(dependencies=[Depends(declare_public_cache)])
@@ -104,10 +104,9 @@ async def get_access(
     )
 
 
-@router.get("/elogia")
-def get_catalog(request: Request, locale: str = "la", edition: str | None = None) -> CatalogOut:
+@router.get("/elogia", response_model=CatalogOut)
+def get_catalog(request: Request, locale: str = "la", edition: str | None = None) -> Response:
     registry = request.app.state.registry
-    store = request.app.state.store
     if edition is not None and edition not in registry.editions:
         raise ApiProblem(
             404,
@@ -115,6 +114,23 @@ def get_catalog(request: Request, locale: str = "la", edition: str | None = None
             detail=f"'{edition}' is not a registered martyrology edition.",
             type_slug="unknown-edition",
         )
+    # The catalog depends only on the edition and the language its subjects are given in, and the
+    # registry and the texts never change while the service runs: each one is built and serialized
+    # once (about a megabyte, 6000+ entries) and then served as is. The key is bounded: the
+    # registered editions (or none) by the registry's languages (or none, for an unknown one).
+    lang = locale.split("-")[0].lower()
+    key = (edition, lang if lang in registry.locales() else None)
+    cache: dict[tuple[str | None, str | None], bytes] = request.app.state.catalog_cache
+    body = cache.get(key)
+    if body is None:
+        body = (
+            _catalog(registry, request.app.state.store, locale, edition).model_dump_json().encode()
+        )
+        cache[key] = body
+    return Response(content=body, media_type="application/json")
+
+
+def _catalog(registry: Registry, store: Store, locale: str, edition: str | None) -> CatalogOut:
     subjects = registry.subjects(locale)
     items = []
     for e in sorted(

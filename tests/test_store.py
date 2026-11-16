@@ -1,10 +1,19 @@
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 import pytest
 
 from martyrology_api.models import ErratumOut, FootnoteOut, MarginNoteOut
-from martyrology_api.registry import Registry
-from martyrology_api.store import Store, detect_shape, load_errata, parse_month_file
+from martyrology_api.registry import Registry, anchor_day
+from martyrology_api.store import (
+    DayData,
+    Elogium,
+    Placement,
+    Store,
+    detect_shape,
+    load_errata,
+    parse_month_file,
+)
 
 
 def make_store(crmedr_path, clbdr_path, data_paths) -> Store:
@@ -313,3 +322,88 @@ def test_null_rubricae_parse_as_empty(crmedr_path, clbdr_path):
         }
     }
     assert parse_month_file(raw, 1, "day-structured", reg)[1].rubricae == []
+
+
+def _placements_by_scan(s: Store, canonical_id: str) -> list:
+    """The search `Store.placements` made before its index: each edition's months, anchor month
+    first, scanned for the id; kept here as the reference the index must agree with."""
+    am, _ = anchor_day(canonical_id)
+    out = []
+    for edition_id in sorted(s._dirs):
+        for m in [am] + [m for m in range(1, 13) if m != am]:
+            found = next(
+                (
+                    (f"{m:02d}-{dd.day:02d}", e)
+                    for dd in s.month(edition_id, m).values()
+                    for e in dd.elogia
+                    if e.id == canonical_id
+                ),
+                None,
+            )
+            if found:
+                printed, e = found
+                out.append(
+                    Placement(edition_id, printed, e.entry, e.asterisk, e.unnumbered, e.text)
+                )
+                break
+    return out
+
+
+def test_placements_index_agrees_with_scan(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    ids = list(s.registry.entries)
+    assert ids
+    for cid in ids:
+        assert s.placements(cid) == _placements_by_scan(s, cid), cid
+
+
+def _elogium(cid: str, month: int, day: int, text: str) -> Elogium:
+    return Elogium(
+        id=cid,
+        text=text,
+        entry=1,
+        asterisk=False,
+        unnumbered=False,
+        anchor_month=month,
+        anchor_day=day,
+    )
+
+
+def test_placements_prefers_anchor_month(crmedr_path, clbdr_path, data_paths):
+    # An edition printing the eulogy twice: the printing in the anchor month (March) wins over an
+    # earlier one; an edition printing it only elsewhere gives its first printing in the year.
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    s._dirs = {
+        "ed_twice": s._dirs[next(iter(s._dirs))],
+        "ed_elsewhere": s._dirs[next(iter(s._dirs))],
+    }
+    for ed in s._dirs:
+        for m in range(1, 13):
+            s._months[(ed, m)] = {}
+    cid = "mr:0304-exemplum"
+    s._months[("ed_twice", 1)] = {9: DayData(1, 9, None, [_elogium(cid, 1, 9, "January")], None)}
+    s._months[("ed_twice", 3)] = {4: DayData(3, 4, None, [_elogium(cid, 3, 4, "March")], None)}
+    s._months[("ed_elsewhere", 7)] = {2: DayData(7, 2, None, [_elogium(cid, 7, 2, "July")], None)}
+    s._months[("ed_elsewhere", 9)] = {5: DayData(9, 5, None, [_elogium(cid, 9, 5, "Sept")], None)}
+    got = {p.edition_id: (p.day_printed, p.text) for p in s.placements(cid)}
+    assert got == {"ed_twice": ("03-04", "March"), "ed_elsewhere": ("07-02", "July")}
+    assert s.placements(cid) == _placements_by_scan(s, cid)
+    assert s.placements("mr:0304-nusquam") == []
+
+
+def test_placements_index_built_once_under_concurrency(crmedr_path, clbdr_path, data_paths):
+    s = make_store(crmedr_path, clbdr_path, data_paths)
+    builds = 0
+    load = s._load_month
+
+    def counting_load(edition_id, month):
+        nonlocal builds
+        if month == 1:
+            builds += 1
+        return load(edition_id, month)
+
+    s._load_month = counting_load  # type: ignore[method-assign]
+    with ThreadPoolExecutor(16) as ex:
+        results = list(ex.map(lambda _: s.placements("mr:0102-concordius"), range(64)))
+    assert all(r == results[0] for r in results)
+    assert builds == len(s._dirs)  # one pass: each edition's January loaded once

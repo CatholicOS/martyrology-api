@@ -83,6 +83,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.registry = registry
     app.state.store = Store(settings.data_path_list, registry)
+    app.state.catalog_cache = {}  # GET /elogia, serialized: see routers/discovery.get_catalog
     mentions = load_mentions(settings.crmedr_path / "data/mentions.json")
     app.state.store.attach_mentions(mentions)
     # The bundle manifest knows which texts this deployment serves; outside a bundle, nothing does.

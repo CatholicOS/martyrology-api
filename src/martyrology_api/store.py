@@ -1,5 +1,6 @@
 import json
 import re
+import threading
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -239,6 +240,10 @@ class Store:
             self._lunar[eid] = LunarTables(lunar.VARIANTS[name], misprints)
         # Attached after start-up checks them against the texts (attach_mentions).
         self._mentions: Mentions = {}
+        # Built on first use by _placement_index; the lock keeps concurrent first requests
+        # (handlers run in a thread pool) from each building it.
+        self._placements: dict[str, dict[str, list[tuple[int, str, Elogium]]]] | None = None
+        self._placements_lock = threading.Lock()
 
     def available(self) -> set[str]:
         return set(self._dirs)
@@ -351,32 +356,48 @@ class Store:
                 return e
         return None
 
+    def _placement_index(self) -> dict[str, dict[str, list[tuple[int, str, Elogium]]]]:
+        """Every printing of every canonical id: id → edition → (month, "MM-DD" printed,
+        eulogy), each list in reading order (month, then day, then place on the day).
+
+        Built once, on first use, in one pass over the texts. The texts never change while the
+        service runs, and without it `placements` searched every month of every edition for one
+        id, so the catalog (one lookup per registry id) cost seconds of CPU per request.
+        """
+        index = self._placements
+        if index is not None:
+            return index
+        with self._placements_lock:
+            if self._placements is None:
+                built: dict[str, dict[str, list[tuple[int, str, Elogium]]]] = {}
+                for edition_id in self._dirs:
+                    for m in range(1, 13):
+                        for dd in self._load_month(edition_id, m).values():
+                            for e in dd.elogia:
+                                if e.id is not None:
+                                    built.setdefault(e.id, {}).setdefault(edition_id, []).append(
+                                        (m, f"{m:02d}-{dd.day:02d}", e)
+                                    )
+                self._placements = built
+            return self._placements
+
     def placements(self, canonical_id: str) -> list[Placement]:
+        """Where each edition prints the eulogy, by edition id in order: in the month of the
+        id's anchor day when the edition prints it there, else its first printing in the year."""
         am, _ = anchor_day(canonical_id)
+        by_edition = self._placement_index().get(canonical_id, {})
         out: list[Placement] = []
-        for edition_id in sorted(self._dirs):
-            months = [am] + [m for m in range(1, 13) if m != am]
-            for m in months:
-                found = next(
-                    (
-                        (f"{m:02d}-{dd.day:02d}", e)
-                        for dd in self._load_month(edition_id, m).values()
-                        for e in dd.elogia
-                        if e.id == canonical_id
-                    ),
-                    None,
+        for edition_id in sorted(by_edition):
+            hits = by_edition[edition_id]
+            _, printed, e = next((h for h in hits if h[0] == am), hits[0])
+            out.append(
+                Placement(
+                    edition_id=edition_id,
+                    day_printed=printed,
+                    entry=e.entry,
+                    asterisk=e.asterisk,
+                    unnumbered=e.unnumbered,
+                    text=e.text,
                 )
-                if found:
-                    printed, e = found
-                    out.append(
-                        Placement(
-                            edition_id=edition_id,
-                            day_printed=printed,
-                            entry=e.entry,
-                            asterisk=e.asterisk,
-                            unnumbered=e.unnumbered,
-                            text=e.text,
-                        )
-                    )
-                    break
+            )
         return out

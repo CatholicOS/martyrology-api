@@ -84,3 +84,44 @@ def test_catalog_with_edition(client):
     assert items["mr:0102-concordius"]["day_printed"] == "01-01"
     assert items["mr:0101-basilius"]["present"] is False
     assert client.get("/api/v1/elogia?edition=nope").status_code == 404
+
+
+def test_catalog_built_once_per_edition_and_language(client, monkeypatch):
+    # Served from the serialized cache after the first request: the same bytes, and the same
+    # ETag, without building the 6000-entry catalog again.
+    from martyrology_api.routers import discovery
+
+    builds = []
+    build = discovery._catalog
+    monkeypatch.setattr(discovery, "_catalog", lambda *a: builds.append(a[2:]) or build(*a))
+    url = "/api/v1/elogia?edition=martyrologium_romanum_1749&locale=en"
+    first, second = client.get(url), client.get(url)
+    assert first.status_code == second.status_code == 200
+    assert first.content == second.content
+    assert first.headers["etag"] == second.headers["etag"]
+    assert first.headers["content-type"] == "application/json"
+    assert len(builds) == 1
+
+
+def test_catalog_cache_keyed_by_language_not_locale_string(client, monkeypatch):
+    # Locales naming the same language share an entry, and so do the languages the registry has
+    # no subjects in, so arbitrary ?locale= values cannot grow the cache.
+    from martyrology_api.routers import discovery
+
+    builds = []
+    build = discovery._catalog
+    monkeypatch.setattr(discovery, "_catalog", lambda *a: builds.append(a[2:]) or build(*a))
+    en = [client.get(f"/api/v1/elogia?locale={loc}") for loc in ("en", "en-US", "EN-gb")]
+    assert len({r.content for r in en}) == 1
+    unknown = [client.get(f"/api/v1/elogia?locale={loc}") for loc in ("xx", "zz-ZZ", "qq")]
+    assert len({r.content for r in unknown}) == 1
+    items = {i["id"]: i for i in unknown[0].json()["elogia"]}
+    assert items["mr:0102-concordius"]["subject"] is None
+    assert len(builds) == 2
+    cache = client.app.state.catalog_cache
+    assert set(cache) == {(None, "en"), (None, None)}
+
+
+def test_catalog_unknown_edition_not_cached(client):
+    assert client.get("/api/v1/elogia?edition=nope").status_code == 404
+    assert client.app.state.catalog_cache == {}
